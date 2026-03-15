@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Probability Notes",
+    "repo": "YOUR_USERNAME/probability-notes",
+    "main_tex": "main.tex",
+    "output_pdf": "probability-notes.pdf"
+  },
+  {
+    "title": "PDE Notes",
+    "repo": "YOUR_USERNAME/pde-notes",
+    "main_tex": "main.tex",
+    "output_pdf": "pde-notes.pdf"
+  }
+]
