@@ -32,10 +32,10 @@ jobs:
         run: |
           python scripts/build_notes.py
 
-      - name: Commit updated PDFs
+      - name: Commit updated PDFs and books.json
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add pdf/
-          git commit -m "update compiled PDFs" || echo "no changes"
+          git add pdf/ books.json
+          git commit -m "update compiled PDFs and books.json" || echo "no changes"
           git push
