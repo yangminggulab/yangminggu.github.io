@@ -1,19 +1,20 @@
 import os
+import json
 import requests
 import subprocess
 import shutil
 from pathlib import Path
 
 USERNAME = "yangminggulab"
-TOKEN = os.getenv("GITHUB_TOKEN")  # 本地或 GitHub Actions 里设置环境变量
+TOKEN = os.getenv("GITHUB_TOKEN")
 
 WORK_DIR = Path("temp_repos")
 OUTPUT_DIR = Path("pdf")
 
 if WORK_DIR.exists():
     shutil.rmtree(WORK_DIR)
-WORK_DIR.mkdir()
 
+WORK_DIR.mkdir()
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 print("Fetching repositories...")
@@ -21,6 +22,7 @@ print("Fetching repositories...")
 headers = {
     "Accept": "application/vnd.github.v3+json",
 }
+
 if TOKEN:
     headers["Authorization"] = f"token {TOKEN}"
 
@@ -43,8 +45,10 @@ while True:
     repos.extend(page_data)
     page += 1
 
+
 matched_repos = 0
 compiled = 0
+books = []
 
 for repo in repos:
     name = repo["name"]
@@ -66,26 +70,22 @@ for repo in repos:
             stderr=subprocess.DEVNULL,
         )
     except subprocess.CalledProcessError:
-        print("  -> clone failed, skipping")
+        print("  -> clone failed")
         continue
 
     main_candidates = list(repo_path.rglob("main.tex"))
 
     if not main_candidates:
-        print("  -> no main.tex found, skipping")
+        print("  -> no main.tex found")
         continue
 
     main_tex = main_candidates[0]
     tex_dir = main_tex.parent
 
-    print(f"  -> found main.tex at: {main_tex.relative_to(repo_path)}")
-    print(f"  -> compiling {main_tex.name}")
+    print(f"  -> compiling {main_tex}")
 
-    # 宽容点：
-    # 1. 用 -f
-    # 2. 不用 check=True
-    # 3. 只要最后真的生成 pdf 就算成功
-    result = subprocess.run(
+    # 宽容编译
+    subprocess.run(
         [
             "latexmk",
             "-xelatex",
@@ -93,20 +93,37 @@ for repo in repos:
             "-f",
             main_tex.name
         ],
-        cwd=tex_dir,
+        cwd=tex_dir
     )
 
     pdf_path = main_tex.with_suffix(".pdf")
 
-    if pdf_path.exists():
-        output_pdf = OUTPUT_DIR / f"{name}.pdf"
-        shutil.copy(pdf_path, output_pdf)
-        print(f"  -> saved to {output_pdf}")
-        compiled += 1
-    else:
-        print(f"  -> compile failed (return code {result.returncode}), skipping")
+    if not pdf_path.exists():
+        print("  -> pdf not produced")
+        continue
+
+    output_pdf = OUTPUT_DIR / f"{name}.pdf"
+
+    shutil.copy(pdf_path, output_pdf)
+
+    print(f"  -> saved to {output_pdf}")
+
+    books.append({
+        "file": f"{name}.pdf",
+        "title": name.replace("dx-", "").replace("-", " ").title(),
+        "subtitle": "",
+        "desc": "Auto-compiled from LaTeX"
+    })
+
+    compiled += 1
+
+
+# 生成 books.json
+with open("books.json", "w", encoding="utf-8") as f:
+    json.dump(books, f, ensure_ascii=False, indent=2)
 
 print("\n========== SUMMARY ==========")
 print(f"Matched dx repos: {matched_repos}")
 print(f"Compiled PDFs: {compiled}")
+print("books.json generated.")
 print("Done.")
