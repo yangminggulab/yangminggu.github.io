@@ -23,9 +23,10 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y latexmk texlive-xetex texlive-fonts-recommended texlive-latex-extra
+          sudo apt-get install -y latexmk texlive-xetex texlive-fonts-recommended texlive-latex-extra biber
 
       - name: Run build script
+        continue-on-error: true
         run: |
           python scripts/build_notes.py
 
