@@ -23,10 +23,12 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y latexmk texlive-xetex texlive-fonts-recommended texlive-latex-extra biber
+          sudo apt-get install -y texlive-full
 
       - name: Run build script
         continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/build_notes.py
 
