@@ -18,7 +18,7 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: 主文件.tex
+          root_file: main.tex
           working_directory: dx-PDE
           latexmk_use_xelatex: true
 
