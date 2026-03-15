@@ -11,37 +11,28 @@ jobs:
       - name: Checkout website repo
         uses: actions/checkout@v4
 
-      - name: Clone notes repo
-        run: |
-          git clone https://github.com/yangminggulab/dx-PDE.git
-
-      - name: Compile LaTeX with XeLaTeX
-        continue-on-error: true
-        uses: xu-cheng/latex-action@v3
+      - name: Install Python
+        uses: actions/setup-python@v5
         with:
-          root_file: main.tex
-          working_directory: dx-PDE
-          latexmk_use_xelatex: true
-          args: -f
+          python-version: '3.11'
 
-      - name: List generated files
+      - name: Install Python dependencies
         run: |
-          echo "===== dx-PDE contents ====="
-          ls -lah dx-PDE
+          pip install -r requirements.txt
 
-      - name: Move PDF to site
+      - name: Install LaTeX
         run: |
-          mkdir -p pdf
-          if [ -f "dx-PDE/main.pdf" ]; then
-            cp "dx-PDE/main.pdf" "pdf/dx-pde.pdf"
-          else
-            echo "PDF not generated, skip copy"
-          fi
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-xetex texlive-fonts-recommended texlive-latex-extra
 
-      - name: Commit PDF
+      - name: Run build script
+        run: |
+          python scripts/build_notes.py
+
+      - name: Commit updated PDFs
         run: |
           git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add pdf/dx-pde.pdf || true
-          git diff --cached --quiet || git commit -m "update dx-pde.pdf"
+          git config --global user.email "github-actions@github.com"
+          git add pdf/
+          git commit -m "update compiled PDFs" || echo "no changes"
           git push
