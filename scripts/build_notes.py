@@ -23,8 +23,8 @@ repos = requests.get(url).json()
 for repo in repos:
     name = repo["name"]
 
-    # 只处理 dx- 开头的仓库
-    if not name.startswith("dx-"):
+    # 更宽松：只要是 dx 开头就处理
+    if not name.lower().startswith("dx"):
         continue
 
     clone_url = repo["clone_url"]
@@ -42,13 +42,18 @@ for repo in repos:
         print(f"Failed to clone {name}, skipping")
         continue
 
-    main_tex = repo_path / "main.tex"
+    # 递归搜索 main.tex，而不是只看根目录
+    main_candidates = list(repo_path.rglob("main.tex"))
 
-    # 没有 main.tex 就跳过
-    if not main_tex.exists():
+    if not main_candidates:
         print("No main.tex found, skipping")
         continue
 
+    # 先用找到的第一个 main.tex
+    main_tex = main_candidates[0]
+    tex_dir = main_tex.parent
+
+    print(f"Found main.tex at: {main_tex.relative_to(repo_path)}")
     print("Compiling LaTeX...")
 
     # LaTeX 编译：宽容模式
@@ -60,14 +65,14 @@ for repo in repos:
             "-f",
             "main.tex"
         ],
-        cwd=repo_path
+        cwd=tex_dir
     )
 
     if result.returncode != 0:
         print(f"LaTeX compilation failed for {name}, skipping")
         continue
 
-    pdf_file = repo_path / "main.pdf"
+    pdf_file = tex_dir / "main.pdf"
 
     # 即使编译命令跑过，也可能没生成 PDF
     if pdf_file.exists():
