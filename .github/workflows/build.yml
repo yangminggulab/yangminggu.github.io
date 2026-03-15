@@ -20,6 +20,7 @@ jobs:
         with:
           root_file: 主文件.tex
           working_directory: dx-PDE
+          latexmk_use_xelatex: true
 
       - name: Move PDF to site
         run: |
