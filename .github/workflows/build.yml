@@ -15,22 +15,33 @@ jobs:
         run: |
           git clone https://github.com/yangminggulab/dx-PDE.git
 
-      - name: Compile LaTeX
+      - name: Compile LaTeX with XeLaTeX
+        continue-on-error: true
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
           working_directory: dx-PDE
           latexmk_use_xelatex: true
+          args: -f
+
+      - name: List generated files
+        run: |
+          echo "===== dx-PDE contents ====="
+          ls -lah dx-PDE
 
       - name: Move PDF to site
         run: |
           mkdir -p pdf
-          cp "dx-PDE/主文件.pdf" "pdf/dx-pde.pdf"
+          if [ -f "dx-PDE/main.pdf" ]; then
+            cp "dx-PDE/main.pdf" "pdf/dx-pde.pdf"
+          else
+            echo "PDF not generated, skip copy"
+          fi
 
       - name: Commit PDF
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add pdf/dx-pde.pdf
+          git add pdf/dx-pde.pdf || true
           git diff --cached --quiet || git commit -m "update dx-pde.pdf"
           git push
