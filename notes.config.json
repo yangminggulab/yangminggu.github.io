@@ -1,14 +1,8 @@
 [
   {
-    "title": "Probability Notes",
-    "repo": "YOUR_USERNAME/probability-notes",
-    "main_tex": "main.tex",
-    "output_pdf": "probability-notes.pdf"
-  },
-  {
     "title": "PDE Notes",
-    "repo": "YOUR_USERNAME/pde-notes",
-    "main_tex": "main.tex",
-    "output_pdf": "pde-notes.pdf"
+    "repo": "yangminggulab/dx-PDE",
+    "main_tex": "主文件.tex",
+    "output_pdf": "dx-pde.pdf"
   }
 ]
