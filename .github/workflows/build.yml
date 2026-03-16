@@ -36,6 +36,7 @@ jobs:
             biber
 
       - name: Run build script
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -45,7 +46,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git pull --rebase
           git add pdf/ books.json build_state.json
           git commit -m "update compiled PDFs and books.json" || echo "no changes"
+          git pull --rebase
           git push
