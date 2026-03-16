@@ -23,7 +23,13 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-full
+          sudo apt-get install -y \
+            latexmk \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-lang-chinese \
+            biber
 
       - name: Run build script
         continue-on-error: true
