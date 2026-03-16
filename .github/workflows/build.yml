@@ -47,4 +47,5 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add pdf/ books.json build_state.json
           git commit -m "update compiled PDFs and books.json" || echo "no changes"
+          git pull --rebase
           git push
