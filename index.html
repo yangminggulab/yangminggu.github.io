@@ -27,7 +27,135 @@
     .subtitle {
       font-size: 24px;
       color: #555;
-      margin-bottom: 50px;
+      margin-bottom: 28px;
+    }
+
+    .search-wrap {
+      max-width: 900px;
+      margin: 0 auto 42px;
+      position: relative;
+    }
+
+    .search-shell {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 24px;
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08),
+        0 2px 10px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .search-shell.focused {
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.12),
+        0 4px 16px rgba(0, 0, 0, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+    }
+
+    .search-icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      opacity: 0.55;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 22px;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    .search-input::placeholder {
+      color: #888;
+    }
+
+    .search-meta {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .search-results {
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      display: none;
+      max-height: 560px;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .search-results.show {
+      display: block;
+    }
+
+    .result-empty {
+      padding: 22px 20px 26px;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .result-item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background 0.18s ease;
+    }
+
+    .result-item:hover {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    .result-type {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .result-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .result-meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .result-snippet {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .result-snippet mark {
+      background: #ffeaa7;
+      color: inherit;
+      padding: 0 2px;
+      border-radius: 4px;
     }
 
     .bookshelf {
@@ -110,12 +238,63 @@
       color: #888;
       font-size: 15px;
     }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 26px 18px 56px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .search-bar {
+        padding: 15px 16px;
+      }
+
+      .search-input {
+        font-size: 18px;
+      }
+
+      .result-title {
+        font-size: 17px;
+      }
+
+      .bookshelf {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 24px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>阳明谷</h1>
     <div class="subtitle">My mathematical notes library</div>
+
+    <div class="search-wrap">
+      <div id="searchShell" class="search-shell">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input
+            id="searchInput"
+            class="search-input"
+            type="text"
+            placeholder="搜索笔记内容，例如 Real Analysis"
+            autocomplete="off"
+          />
+        </div>
+        <div id="searchMeta" class="search-meta">输入关键词后会在索引中精确匹配</div>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
 
     <div id="bookshelf" class="bookshelf"></div>
 
@@ -133,6 +312,8 @@
       ["#6d4c41", "#3e2723"]
     ];
 
+    let searchIndex = [];
+
     function formatTitle(name) {
       return name
         .replace(/^dx[-_]?/i, "")
@@ -142,6 +323,130 @@
 
     function formatUpperSpine(name) {
       return formatTitle(name).replace(/ /g, "<br>");
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function makeSnippet(content, query, radius = 45) {
+      if (!content) return "";
+      const lower = content.toLowerCase();
+      const q = query.toLowerCase();
+      const index = lower.indexOf(q);
+
+      if (index === -1) {
+        return escapeHtml(content.slice(0, radius * 2).trim());
+      }
+
+      const start = Math.max(0, index - radius);
+      const end = Math.min(content.length, index + q.length + radius);
+
+      let snippet = content.slice(start, end).trim();
+      if (start > 0) snippet = "..." + snippet;
+      if (end < content.length) snippet = snippet + "...";
+
+      const escaped = escapeHtml(snippet);
+      const safeQuery = escapeHtml(content.slice(index, index + q.length));
+      return escaped.replace(
+        new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
+        "<mark>$&</mark>"
+      );
+    }
+
+    function scoreItem(item, query) {
+      const q = query.toLowerCase();
+      let score = 0;
+
+      if ((item.blockTitle || "").toLowerCase().includes(q)) score += 100;
+      if ((item.subsectionTitle || "").toLowerCase().includes(q)) score += 70;
+      if ((item.sectionTitle || "").toLowerCase().includes(q)) score += 55;
+      if ((item.noteTitle || "").toLowerCase().includes(q)) score += 40;
+      if ((item.docTitle || "").toLowerCase().includes(q)) score += 30;
+      if ((item.content || "").toLowerCase().includes(q)) score += 20;
+
+      return score;
+    }
+
+    function searchNotes(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return [];
+
+      return searchIndex
+        .map(item => {
+          const score = scoreItem(item, q);
+          if (score <= 0) return null;
+
+          return {
+            ...item,
+            score,
+            snippet: makeSnippet(item.content || item.blockTitle || "", q)
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return (a.order || 0) - (b.order || 0);
+        })
+        .slice(0, 12);
+    }
+
+    function renderSearchResults(query) {
+      const meta = document.getElementById("searchMeta");
+      const box = document.getElementById("searchResults");
+
+      if (!query.trim()) {
+        box.classList.remove("show");
+        box.innerHTML = "";
+        meta.textContent = "输入关键词后会在索引中精确匹配";
+        return;
+      }
+
+      const results = searchNotes(query);
+      box.classList.add("show");
+
+      if (results.length === 0) {
+        meta.textContent = "没有找到匹配结果";
+        box.innerHTML = `
+          <div class="result-empty">
+            没有找到和 “${escapeHtml(query)}” 对应的内容。
+          </div>
+        `;
+        return;
+      }
+
+      meta.textContent = `找到 ${results.length} 条结果`;
+
+      box.innerHTML = results.map(item => {
+        const title =
+          item.blockTitle ||
+          item.subsectionTitle ||
+          item.sectionTitle ||
+          item.noteTitle ||
+          "Untitled";
+
+        const metaText = [
+          item.noteTitle,
+          item.sectionTitle,
+          item.subsectionTitle
+        ].filter(Boolean).join(" · ");
+
+        const href = item.pdfPath || "#";
+
+        return `
+          <a class="result-item" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
+            <div class="result-type">${escapeHtml(item.blockType || "text")}</div>
+            <div class="result-title">${escapeHtml(title)}</div>
+            <div class="result-meta">${escapeHtml(metaText)}</div>
+            <div class="result-snippet">${item.snippet}</div>
+          </a>
+        `;
+      }).join("");
     }
 
     async function loadBooks() {
@@ -181,7 +486,49 @@
       });
     }
 
-    loadBooks();
+    async function loadSearchIndex() {
+      try {
+        const res = await fetch("search-index.json");
+        if (!res.ok) {
+          throw new Error("search-index.json not found");
+        }
+        searchIndex = await res.json();
+      } catch (error) {
+        console.error("[search] Failed to load search-index.json", error);
+        searchIndex = [];
+      }
+    }
+
+    function bindSearchEvents() {
+      const input = document.getElementById("searchInput");
+      const shell = document.getElementById("searchShell");
+
+      input.addEventListener("focus", () => {
+        shell.classList.add("focused");
+      });
+
+      input.addEventListener("blur", () => {
+        shell.classList.remove("focused");
+      });
+
+      input.addEventListener("input", (e) => {
+        renderSearchResults(e.target.value);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+          e.preventDefault();
+          input.focus();
+        }
+      });
+    }
+
+    async function init() {
+      await Promise.all([loadBooks(), loadSearchIndex()]);
+      bindSearchEvents();
+    }
+
+    init();
   </script>
 </body>
 </html>
