@@ -18,22 +18,12 @@ interface SearchIndexItem extends LatexBlock {
 
 const PROJECT_ROOT = process.cwd();
 
-/**
- * 你先把这里改成你自己的 tex 文件列表。
- * 以后我们再把它改成自动扫描。
- */
 const NOTE_SOURCES: NoteSource[] = [
   {
-    id: "probability-ch5",
-    title: "概率论第五章",
-    texPath: "notes/probability/ch5/main.tex",
-    pdfPath: "/pdfs/probability-ch5.pdf",
-  },
-  {
-    id: "heat-equation",
-    title: "热方程笔记",
-    texPath: "notes/pde/heat-equation/main.tex",
-    pdfPath: "/pdfs/heat-equation.pdf",
+    id: "real-analysis",
+    title: "Real Analysis",
+    texPath: "notes/real-analysis/main.tex",
+    pdfPath: "/pdfs/real-analysis.pdf",
   },
 ];
 
