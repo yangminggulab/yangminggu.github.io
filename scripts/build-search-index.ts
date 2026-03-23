@@ -1,232 +1,375 @@
 import fs from "fs";
 import path from "path";
-import { parseLatexToBlocks, type LatexBlock } from "../src/lib/latex-parser";
+import { fileURLToPath } from "url";
 
-/**
- * =========================
- * 这部分：类型定义
- * =========================
- * 这一块基本没有问题。
- * 它只是约定数据长什么样，不太会导致“搜索不出来”。
- */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-interface NoteSource {
-  id: string;
+type ManifestItem = {
+  repo: string;
   title: string;
-  texPath: string;
-  pdfPath?: string;
-}
+  pdf: string;
+  main_tex: string;
+  synctex?: string;
+};
 
-interface SearchIndexItem extends LatexBlock {
-  noteId: string;
-  noteTitle: string;
-  texPath: string;
-  pdfPath?: string;
-}
+type SearchBlock = {
+  id: string;
+  repo: string;
+  title: string;
+  pdf: string;
+  main_tex: string;
+  synctex?: string;
+  section: string;
+  subsection: string;
+  kind: string;
+  blockTitle: string;
+  previewType: string;
+  previewTitle: string;
+  rawContent: string;
+  content: string;
+  text: string;
+  sourcePath: string;
+  startLine: number;
+  endLine: number;
+};
 
-/**
- * =========================
- * 这部分：项目根目录
- * =========================
- * 这一块通常也没有问题。
- * process.cwd() 一般就是当前仓库根目录。
- */
-const PROJECT_ROOT = process.cwd();
+type SharedState = {
+  currentSection: string;
+  currentSubsection: string;
+  counter: number;
+};
 
-/**
- * =========================
- * 这部分：NOTE_SOURCES
- * =========================
- * 这是【高风险区域 1】。
- * 最容易出问题的地方之一。
- *
- * 你要重点检查：
- * 1. texPath 是否真的是仓库里的真实路径
- * 2. pdfPath 是否和你网站实际 PDF 路径一致
- *
- * 你当前很可能有两个问题：
- * - texPath: "notes/real-analysis/main.tex"
- *   这个路径很可能不对，因为你仓库截图里未必有 notes 目录
- *
- * - pdfPath: "/pdfs/real-analysis.pdf"
- *   这个路径也可能不对，因为你仓库里看起来是 pdf/ 不是 pdfs/
- *
- * 建议你之后优先改这里排查。
- */
-const NOTE_SOURCES: NoteSource[] = [
-  {
-    id: "real-analysis",
-    title: "Real Analysis",
+const ROOT_DIR = path.resolve(__dirname, "..");
+const MANIFEST_PATH = path.join(ROOT_DIR, "notes_manifest.json");
+const OUTPUT_DIR = path.join(ROOT_DIR, "public");
+const OUTPUT_PATH = path.join(OUTPUT_DIR, "search-index.json");
 
-    // 【重点检查】这个路径必须是仓库根目录出发的真实相对路径
-    // 比如如果真实文件在 来源/real-analysis/main.tex
-    // 就要改成 "来源/real-analysis/main.tex"
-    texPath: "notes/real-analysis/main.tex",
+const CARD_ENVIRONMENTS = new Set([
+  "definition",
+  "theorem",
+  "lemma",
+  "proposition",
+  "corollary",
+  "example",
+  "note",
+  "remark",
+  "homework",
+  "solution",
+  "dxtips",
+  "tip",
+]);
 
-    // 【重点检查】如果你网站里实际目录是 /pdf/xxx.pdf
-    // 这里就应该写 "/pdf/real-analysis.pdf"，不是 "/pdfs/..."
-    pdfPath: "/pdfs/real-analysis.pdf",
-  },
-];
-
-/**
- * =========================
- * 这部分：创建目录
- * =========================
- * 这一块逻辑本身没有问题。
- * 但你当前项目里“要不要创建 public 目录”是值得怀疑的。
- * 因为你的网站是静态 GitHub Pages，不一定需要 public/。
- */
-function ensureDirExists(dirPath: string): void {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+function latexToPlainText(input: string): string {
+  let s = input;
+  s = s.replace(/(^|[^\\])%.*/gm, "$1");
+  s = s.replace(/\\begin\{[^}]+\}/g, " ");
+  s = s.replace(/\\end\{[^}]+\}/g, " ");
+  for (let i = 0; i < 4; i++) {
+    s = s.replace(/\\[a-zA-Z*]+(?:\[[^\]]*\])?\{([^{}]*)\}/g, "$1");
   }
+  s = s.replace(/\\[a-zA-Z@]+[*]?(?:\[[^\]]*\])?/g, " ");
+  s = s.replace(/\$\$[\s\S]*?\$\$/g, " ");
+  s = s.replace(/\$[^$]*\$/g, " ");
+  s = s.replace(/\\\[[\s\S]*?\\\]/g, " ");
+  s = s.replace(/\\\([\s\S]*?\\\)/g, " ");
+  s = s.replace(/[{}]/g, " ");
+  s = s.replace(/\s+/g, " ").trim();
+  return s;
 }
 
-/**
- * =========================
- * 这部分：读取文本文件
- * =========================
- * 这一块基本没问题。
- * 只要传进来的路径是对的，就能正常读。
- */
-function readTextFile(absPath: string): string {
-  return fs.readFileSync(absPath, "utf-8");
+function extractCommandArg(line: string, cmd: string): string | null {
+  const re = new RegExp(`\\\\${cmd}\\*?(?:\$begin:math:display$\[\^\\$end:math:display$]*\\])?\\{([^}]*)\\}`);
+  const m = line.match(re);
+  return m ? m[1].trim() : null;
 }
 
-/**
- * =========================
- * 这部分：给单篇笔记建立索引
- * =========================
- * 这是【高风险区域 2】。
- * 它本身逻辑没什么大问题，但非常依赖：
- * 1. texPath 路径正确
- * 2. latex-parser.ts 能正确切块
- *
- * 如果这里出问题，常见表现是：
- * - 直接提示文件不存在
- * - 生成出来 blocks.length = 0
- */
-function buildIndexForOneNote(note: NoteSource): SearchIndexItem[] {
-  const absTexPath = path.join(PROJECT_ROOT, note.texPath);
+function extractEnvironmentName(line: string): string | null {
+  const m = line.match(/\\begin\{([^}]+)\}/);
+  return m ? m[1].trim() : null;
+}
 
-  /**
-   * 【建议保留这个日志】
-   * 用来检查程序实际去找的绝对路径到底是什么。
-   * 如果路径不对，你会很容易看出来。
-   */
-  console.log("[search-index] absTexPath =", absTexPath);
+function extractIncludeTarget(line: string): string | null {
+  const m = line.match(/\\(?:input|include)\{([^}]+)\}/);
+  return m ? m[1].trim() : null;
+}
 
-  /**
-   * 【重点检查】
-   * 如果你看到控制台输出：
-   * Skipped missing file: ...
-   * 那几乎肯定就是 texPath 写错了。
-   */
-  if (!fs.existsSync(absTexPath)) {
-    console.warn(`[search-index] Skipped missing file: ${note.texPath}`);
-    return [];
+function resolveIncludedTexPath(baseDir: string, target: string): string {
+  let p = target.trim();
+  if (!p.endsWith(".tex")) p += ".tex";
+  return path.resolve(baseDir, p);
+}
+
+function extractEnvironmentDisplayTitle(raw: string, envName: string): string {
+  const escapedEnv = envName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = raw.match(new RegExp(`\\\\begin\\{${escapedEnv}\\}\$begin:math:display$\(\[\^\\$end:math:display$]+)\\]`));
+  if (m) {
+    const title = latexToPlainText(m[1]);
+    if (title) return title;
+  }
+  return "";
+}
+
+function makeBlockTitle(
+  kind: string,
+  raw: string,
+  text: string,
+  currentSection: string,
+  currentSubsection: string,
+): string {
+  const envTitle = extractEnvironmentDisplayTitle(raw, kind);
+  if (envTitle) return envTitle;
+  if (currentSubsection) return currentSubsection;
+  if (currentSection) return currentSection;
+
+  const kindLabelMap: Record<string, string> = {
+    definition: "Definition",
+    theorem: "Theorem",
+    lemma: "Lemma",
+    proposition: "Proposition",
+    corollary: "Corollary",
+    example: "Example",
+    note: "Note",
+    remark: "Remark",
+    homework: "Homework",
+    solution: "Solution",
+    dxtips: "Tip",
+    tip: "Tip",
+    paragraph: "Text",
+  };
+
+  if (kind !== "paragraph") return kindLabelMap[kind] || kind;
+  return text.slice(0, 36) || "Text";
+}
+
+function makePreviewType(kind: string): string {
+  if (kind === "dxtips" || kind === "tip") return "tip";
+  if (kind === "definition") return "definition";
+  if (["theorem", "lemma", "proposition", "corollary"].includes(kind)) return "theorem";
+  if (kind === "example") return "example";
+  if (kind === "note" || kind === "remark") return "note";
+  if (kind === "homework") return "homework";
+  if (kind === "solution") return "solution";
+  return "text";
+}
+
+function shouldKeepParagraph(raw: string, text: string): boolean {
+  if (!text || text.length < 45) return false;
+  const slashCount = (raw.match(/\\/g) || []).length;
+  if (slashCount > 8) return false;
+  return true;
+}
+
+function extractBlocksFromTex(
+  tex: string,
+  item: ManifestItem,
+  filePath: string,
+  visited = new Set<string>(),
+  state?: SharedState,
+  bodyOnly = false
+): SearchBlock[] {
+  const absPath = path.resolve(filePath);
+  if (visited.has(absPath)) return [];
+  visited.add(absPath);
+
+  const sharedState: SharedState = state ?? {
+    currentSection: "",
+    currentSubsection: "",
+    counter: 0,
+  };
+
+  const lines = tex.split(/\r?\n/);
+  const blocks: SearchBlock[] = [];
+
+  let paragraphBuffer: string[] = [];
+  let paragraphStartLine = 0;
+  let envBuffer: string[] = [];
+  let envStartLine = 0;
+  let inEnv = false;
+  let currentEnv = "";
+  let inDocument = !bodyOnly;
+
+  const pushBlock = (kind: string, raw: string, text: string, startLine: number, endLine: number) => {
+    sharedState.counter += 1;
+    const blockTitle = makeBlockTitle(
+      kind, raw, text, sharedState.currentSection, sharedState.currentSubsection
+    );
+
+    blocks.push({
+      id: `${item.repo}-${sharedState.counter}`,
+      repo: item.repo,
+      title: item.title,
+      pdf: item.pdf,
+      main_tex: item.main_tex,
+      synctex: item.synctex,
+      section: sharedState.currentSection,
+      subsection: sharedState.currentSubsection,
+      kind,
+      blockTitle,
+      previewType: makePreviewType(kind),
+      previewTitle: blockTitle,
+      rawContent: raw,
+      content: raw,
+      text,
+      sourcePath: absPath,
+      startLine,
+      endLine,
+    });
+  };
+
+  const flushParagraph = (endLine: number) => {
+    const raw = paragraphBuffer.join("\n").trim();
+    const startLine = paragraphStartLine;
+    paragraphBuffer = [];
+    paragraphStartLine = 0;
+    if (!raw) return;
+    const text = latexToPlainText(raw);
+    if (!shouldKeepParagraph(raw, text)) return;
+    pushBlock("paragraph", raw, text, startLine, endLine);
+  };
+
+  const flushEnv = (endLine: number) => {
+    const raw = envBuffer.join("\n").trim();
+    const startLine = envStartLine;
+    envBuffer = [];
+    envStartLine = 0;
+    inEnv = false;
+    if (!raw) {
+      currentEnv = "";
+      return;
+    }
+    const text = latexToPlainText(raw);
+    if (!text || text.length < 5) {
+      currentEnv = "";
+      return;
+    }
+    if (CARD_ENVIRONMENTS.has(currentEnv)) {
+      pushBlock(currentEnv, raw, text, startLine, endLine);
+    }
+    currentEnv = "";
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    const lineNo = i + 1;
+
+    if (bodyOnly && !inDocument) {
+      if (/^\\begin\{document\}/.test(trimmed)) inDocument = true;
+      continue;
+    }
+
+    if (bodyOnly && /^\\end\{document\}/.test(trimmed)) {
+      if (inEnv) flushEnv(lineNo - 1);
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      break;
+    }
+
+    const sec = extractCommandArg(trimmed, "section");
+    if (sec !== null && !inEnv) {
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      sharedState.currentSection = latexToPlainText(sec);
+      sharedState.currentSubsection = "";
+      continue;
+    }
+
+    const subsec = extractCommandArg(trimmed, "subsection");
+    if (subsec !== null && !inEnv) {
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      sharedState.currentSubsection = latexToPlainText(subsec);
+      continue;
+    }
+
+    const includeTarget = extractIncludeTarget(trimmed);
+    if (!inEnv && includeTarget) {
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      const childPath = resolveIncludedTexPath(path.dirname(absPath), includeTarget);
+      if (fs.existsSync(childPath)) {
+        const childTex = fs.readFileSync(childPath, "utf-8");
+        const childBlocks = extractBlocksFromTex(
+          childTex, item, childPath, visited, sharedState, false
+        );
+        blocks.push(...childBlocks);
+      }
+      continue;
+    }
+
+    const envName = extractEnvironmentName(trimmed);
+    if (!inEnv && envName) {
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      inEnv = true;
+      currentEnv = envName;
+      envStartLine = lineNo;
+      envBuffer.push(line);
+      continue;
+    }
+
+    if (inEnv) {
+      envBuffer.push(line);
+      const escapedEnv = currentEnv.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      if (trimmed.match(new RegExp(String.raw`\\end\{${escapedEnv}\}`))) {
+        flushEnv(lineNo);
+      }
+      continue;
+    }
+
+    if (trimmed === "") {
+      if (paragraphBuffer.length > 0) flushParagraph(lineNo - 1);
+      continue;
+    }
+
+    if (paragraphBuffer.length === 0) paragraphStartLine = lineNo;
+    paragraphBuffer.push(line);
   }
 
-  const texContent = readTextFile(absTexPath);
+  if (inEnv) flushEnv(lines.length);
+  if (paragraphBuffer.length > 0) flushParagraph(lines.length);
 
-  const blocks = parseLatexToBlocks(texContent, {
-    docTitle: note.title,
-    sourcePath: note.texPath,
-  });
-
-  /**
-   * 【建议保留这个日志】
-   * 如果这里 blocks.length 是 0，
-   * 说明问题不在路径，而更可能在 latex-parser.ts。
-   */
-  console.log(`[search-index] Parsed ${blocks.length} blocks from ${note.title}`);
-
-  return blocks.map((block) => ({
-    ...block,
-    noteId: note.id,
-    noteTitle: note.title,
-    texPath: note.texPath,
-    pdfPath: note.pdfPath,
-  }));
+  return blocks;
 }
 
-/**
- * =========================
- * 这部分：写出 search-index.json
- * =========================
- * 这是【高风险区域 3】。
- * 也是你现在最可能真的有问题的地方。
- *
- * 你当前代码是写到：
- *   public/search-index.json
- *
- * 但你的前端 index.html 里写的是：
- *   fetch("search-index.json")
- *
- * 这意味着网页在找“仓库根目录/search-index.json”，
- * 而不是 public/search-index.json。
- *
- * 所以如果你现在网页搜不出来，
- * 这一块非常可能就是原因之一。
- *
- * 对你当前 GitHub Pages 静态站，更建议直接写到根目录：
- *
- *   const outputPath = path.join(PROJECT_ROOT, "search-index.json");
- *
- * 而不是 public/ 目录。
- */
-function writeSearchIndex(items: SearchIndexItem[]): void {
-  const outputDir = path.join(PROJECT_ROOT, "public");
-  const outputPath = path.join(outputDir, "search-index.json");
-
-  /**
-   * 【建议保留这个日志】
-   * 看看最终文件到底被写到哪了。
-   */
-  console.log("[search-index] outputDir =", outputDir);
-  console.log("[search-index] outputPath =", outputPath);
-
-  ensureDirExists(outputDir);
-
-  fs.writeFileSync(outputPath, JSON.stringify(items, null, 2), "utf-8");
-
-  console.log(`[search-index] Wrote ${items.length} blocks to public/search-index.json`);
-}
-
-/**
- * =========================
- * 这部分：主流程 main
- * =========================
- * 这一块整体逻辑基本没有问题。
- * 它就是：
- * 1. 遍历 NOTE_SOURCES
- * 2. 一篇一篇建索引
- * 3. 汇总写出 JSON
- *
- * 如果出问题，往往不是 main 本身有错，
- * 而是：
- * - NOTE_SOURCES 路径错
- * - parser 没切出块
- * - 输出位置不对
- */
-function main(): void {
-  const allItems: SearchIndexItem[] = [];
-
-  for (const note of NOTE_SOURCES) {
-    const items = buildIndexForOneNote(note);
-    allItems.push(...items);
-    console.log(`[search-index] Indexed ${note.title}: ${items.length} blocks`);
+function main() {
+  if (!fs.existsSync(MANIFEST_PATH)) {
+    console.error(`[search-index] Missing manifest: ${MANIFEST_PATH}`);
+    process.exit(1);
   }
 
-  /**
-   * 【建议保留这个日志】
-   * 看看最终总共有多少条。
-   * 如果这里是 0，说明前面某一步出了问题。
-   */
-  console.log(`[search-index] Total blocks = ${allItems.length}`);
+  const rawManifest = fs.readFileSync(MANIFEST_PATH, "utf-8");
+  const manifest = JSON.parse(rawManifest) as ManifestItem[];
+  const allBlocks: SearchBlock[] = [];
 
-  writeSearchIndex(allItems);
+  console.log(`[search-index] manifestPath = ${MANIFEST_PATH}`);
+  console.log(`[search-index] manifest entries = ${manifest.length}`);
+
+  for (const item of manifest) {
+    const absTexPath = path.isAbsolute(item.main_tex)
+      ? item.main_tex
+      : path.resolve(ROOT_DIR, item.main_tex);
+
+    console.log(`\n[search-index] title = ${item.title}`);
+    console.log(`[search-index] absTexPath = ${absTexPath}`);
+
+    if (!fs.existsSync(absTexPath)) {
+      console.log(`[search-index] Skipped missing file: ${item.main_tex}`);
+      continue;
+    }
+
+    const tex = fs.readFileSync(absTexPath, "utf-8");
+    const blocks = extractBlocksFromTex(
+      tex, item, absTexPath, new Set<string>(), undefined, true
+    );
+
+    console.log(`[search-index] Indexed ${item.title}: ${blocks.length} blocks`);
+    allBlocks.push(...blocks);
+  }
+
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(allBlocks, null, 2), "utf-8");
+
+  console.log(`\n[search-index] Total blocks = ${allBlocks.length}`);
+  console.log(`[search-index] outputDir = ${OUTPUT_DIR}`);
+  console.log(`[search-index] outputPath = ${OUTPUT_PATH}`);
+  console.log(`[search-index] Wrote ${allBlocks.length} blocks to public/search-index.json`);
 }
 
 main();

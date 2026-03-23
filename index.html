@@ -141,21 +141,87 @@
     .result-meta {
       font-size: 14px;
       color: #666;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       line-height: 1.5;
     }
 
-    .result-snippet {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.7;
-    }
-
-    .result-snippet mark {
+    .preview-body mark {
       background: #ffeaa7;
       color: inherit;
       padding: 0 2px;
       border-radius: 4px;
+    }
+
+    .preview-card {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .preview-card.tip {
+      background: #faf7ff;
+      border-left: 6px solid #7c4dff;
+    }
+
+    .preview-card.definition {
+      background: #fffdf7;
+      border-left: 6px solid #d4a017;
+    }
+
+    .preview-card.theorem {
+      background: #f7fbff;
+      border-left: 6px solid #2f6fed;
+    }
+
+    .preview-card.example {
+      background: #f7fff8;
+      border-left: 6px solid #2e8b57;
+    }
+
+    .preview-card.note {
+      background: #fffaf5;
+      border-left: 6px solid #cc7a00;
+    }
+
+    .preview-card.homework {
+      background: #fff8f8;
+      border-left: 6px solid #c43d3d;
+    }
+
+    .preview-card.solution {
+      background: #f8fffb;
+      border-left: 6px solid #1d8f5a;
+    }
+
+    .preview-card.text {
+      background: #ffffff;
+      border-left: 6px solid #bdbdbd;
+    }
+
+    .preview-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.72;
+      margin-bottom: 8px;
+    }
+
+    .preview-body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #333;
+      white-space: pre-wrap;
+    }
+
+    .preview-image {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: white;
     }
 
     .bookshelf {
@@ -301,234 +367,248 @@
     <div class="footer">Built with GitHub Pages · Updated by GitHub Actions</div>
   </div>
 
-  <script>
-    const colors = [
-      ["#2c4da0", "#1d2f73"],
-      ["#8d1f3d", "#5d1025"],
-      ["#4e7c51", "#284d2a"],
-      ["#8a6419", "#5b3d0b"],
-      ["#5d4e9e", "#34296e"],
-      ["#00796b", "#004d40"],
-      ["#6d4c41", "#3e2723"]
-    ];
+<script>
+  const colors = [
+    ["#2c4da0", "#1d2f73"],
+    ["#8d1f3d", "#5d1025"],
+    ["#4e7c51", "#284d2a"],
+    ["#8a6419", "#5b3d0b"],
+    ["#5d4e9e", "#34296e"],
+    ["#00796b", "#004d40"],
+    ["#6d4c41", "#3e2723"]
+  ];
 
-    let searchIndex = [];
+  let searchIndex = [];
 
-    function formatTitle(name) {
-      return name
-        .replace(/^dx[-_]?/i, "")
-        .replace(/[-_]/g, " ")
-        .replace(/\b\w/g, c => c.toUpperCase());
+  function formatTitle(name) {
+    return name
+      .replace(/^dx[-_]?/i, "")
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function formatUpperSpine(name) {
+    return formatTitle(name).replace(/ /g, "<br>");
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function countOccurrences(text, query) {
+    if (!text || !query) return 0;
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const matches = text.toLowerCase().match(new RegExp(escaped, "g"));
+    return matches ? matches.length : 0;
+  }
+
+  function makeSnippet(content, query, radius = 60) {
+    if (!content) return "";
+    const lower = content.toLowerCase();
+    const q = query.toLowerCase();
+    const index = lower.indexOf(q);
+
+    if (index === -1) {
+      return escapeHtml(content.slice(0, radius * 2).trim());
     }
 
-    function formatUpperSpine(name) {
-      return formatTitle(name).replace(/ /g, "<br>");
+    const start = Math.max(0, index - radius);
+    const end = Math.min(content.length, index + q.length + radius);
+
+    let snippet = content.slice(start, end).trim();
+    if (start > 0) snippet = "..." + snippet;
+    if (end < content.length) snippet = snippet + "...";
+
+    const escaped = escapeHtml(snippet);
+    const matchedText = snippet.slice(
+      Math.max(0, index - start),
+      Math.max(0, index - start) + q.length
+    );
+    const safeQuery = escapeHtml(matchedText);
+
+    return escaped.replace(
+      new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
+      "<mark>$&</mark>"
+    );
+  }
+
+  function scoreItem(item, query) {
+
+    const textHits = countOccurrences(item.text || "", query);
+
+    let score = 0;
+
+    score += textHits * 10;
+
+    if ((item.kind || "") === "definition") {
+      score += 100000;
     }
 
-    function escapeHtml(str) {
-      return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+    return score;
+  }
+
+  function searchNotes(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+
+    return searchIndex
+      .map(item => {
+        const score = scoreItem(item, q);
+        if (score <= 0) return null;
+
+        return {
+          ...item,
+          score,
+          snippet: makeSnippet(item.text || item.blockTitle || "", q)
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return String(a.id || "").localeCompare(String(b.id || ""));
+      })
+      .slice(0, 12);
+  }
+
+  function renderSearchResults(query) {
+    const meta = document.getElementById("searchMeta");
+    const box = document.getElementById("searchResults");
+
+    if (!query.trim()) {
+      box.classList.remove("show");
+      box.innerHTML = "";
+      meta.textContent = "输入关键词后会在索引中精确匹配";
+      return;
     }
 
-    function makeSnippet(content, query, radius = 45) {
-      if (!content) return "";
-      const lower = content.toLowerCase();
-      const q = query.toLowerCase();
-      const index = lower.indexOf(q);
+    const results = searchNotes(query);
+    box.classList.add("show");
 
-      if (index === -1) {
-        return escapeHtml(content.slice(0, radius * 2).trim());
-      }
-
-      const start = Math.max(0, index - radius);
-      const end = Math.min(content.length, index + q.length + radius);
-
-      let snippet = content.slice(start, end).trim();
-      if (start > 0) snippet = "..." + snippet;
-      if (end < content.length) snippet = snippet + "...";
-
-      const escaped = escapeHtml(snippet);
-      const safeQuery = escapeHtml(content.slice(index, index + q.length));
-      return escaped.replace(
-        new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
-        "<mark>$&</mark>"
-      );
+    if (results.length === 0) {
+      meta.textContent = "没有找到匹配结果";
+      box.innerHTML = `
+        <div class="result-empty">
+          没有找到和 “${escapeHtml(query)}” 对应的内容。
+        </div>
+      `;
+      return;
     }
 
-    function scoreItem(item, query) {
-      const q = query.toLowerCase();
-      let score = 0;
+    meta.textContent = `找到 ${results.length} 条结果`;
 
-      if ((item.blockTitle || "").toLowerCase().includes(q)) score += 100;
-      if ((item.subsectionTitle || "").toLowerCase().includes(q)) score += 70;
-      if ((item.sectionTitle || "").toLowerCase().includes(q)) score += 55;
-      if ((item.noteTitle || "").toLowerCase().includes(q)) score += 40;
-      if ((item.docTitle || "").toLowerCase().includes(q)) score += 30;
-      if ((item.content || "").toLowerCase().includes(q)) score += 20;
+    box.innerHTML = results.map(item => {
+      const title =
+        item.previewTitle ||
+        item.blockTitle ||
+        item.title ||
+        "Untitled";
 
-      return score;
-    }
+      const metaText = [item.title].filter(Boolean).join(" · ");
 
-    function searchNotes(query) {
-      const q = query.trim().toLowerCase();
-      if (!q) return [];
+      const page = item.pdfLocator && item.pdfLocator.page ? item.pdfLocator.page : 1;
+      const href = item.pdf ? `${item.pdf}#page=${page}` : "#";
+      const previewClass = `preview-card ${item.previewType || "text"}`;
 
-      return searchIndex
-        .map(item => {
-          const score = scoreItem(item, q);
-          if (score <= 0) return null;
+      const previewHtml = item.previewImage
+        ? `<img class="preview-image" src="${escapeHtml(item.previewImage)}" alt="${escapeHtml(title)}" />`
+        : `<div class="${escapeHtml(previewClass)}"><div class="preview-label">${escapeHtml(item.previewTitle || title)}</div><div class="preview-body">${item.snippet}</div></div>`;
 
-          return {
-            ...item,
-            score,
-            snippet: makeSnippet(item.content || item.blockTitle || "", q)
-          };
-        })
-        .filter(Boolean)
-        .sort((a, b) => {
-          if (b.score !== a.score) return b.score - a.score;
-          return (a.order || 0) - (b.order || 0);
-        })
-        .slice(0, 12);
-    }
+      return `
+        <a class="result-item" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
+          <div class="result-type">${escapeHtml(item.kind || "text")}</div>
+          <div class="result-title">${escapeHtml(title)}</div>
+          <div class="result-meta">${escapeHtml(metaText)} · 第 ${escapeHtml(String(page))} 页</div>
+          ${previewHtml}
+        </a>
+      `;
+    }).join("");
+  }
 
-    function renderSearchResults(query) {
-      const meta = document.getElementById("searchMeta");
-      const box = document.getElementById("searchResults");
+  async function loadBooks() {
+    const res = await fetch("books.json");
+    const books = await res.json();
 
-      if (!query.trim()) {
-        box.classList.remove("show");
-        box.innerHTML = "";
-        meta.textContent = "输入关键词后会在索引中精确匹配";
-        return;
-      }
+    const shelf = document.getElementById("bookshelf");
+    shelf.innerHTML = "";
 
-      const results = searchNotes(query);
-      box.classList.add("show");
+    books.forEach((book, i) => {
+      const color = colors[i % colors.length];
+      const title = book.title || formatTitle(book.file);
+      const spine = formatUpperSpine(book.file.replace(/\.pdf$/i, ""));
+      const desc = book.desc || "Auto-compiled from LaTeX";
+      const href = `pdf/${book.file}`;
 
-      if (results.length === 0) {
-        meta.textContent = "没有找到匹配结果";
-        box.innerHTML = `
-          <div class="result-empty">
-            没有找到和 “${escapeHtml(query)}” 对应的内容。
-          </div>
-        `;
-        return;
-      }
+      const a = document.createElement("a");
+      a.className = "book-item";
+      a.href = href;
+      a.target = "_blank";
 
-      meta.textContent = `找到 ${results.length} 条结果`;
-
-      box.innerHTML = results.map(item => {
-        const title =
-          item.blockTitle ||
-          item.subsectionTitle ||
-          item.sectionTitle ||
-          item.noteTitle ||
-          "Untitled";
-
-        const metaText = [
-          item.noteTitle,
-          item.sectionTitle,
-          item.subsectionTitle
-        ].filter(Boolean).join(" · ");
-
-        const href = item.pdfPath || "#";
-
-        return `
-          <a class="result-item" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
-            <div class="result-type">${escapeHtml(item.blockType || "text")}</div>
-            <div class="result-title">${escapeHtml(title)}</div>
-            <div class="result-meta">${escapeHtml(metaText)}</div>
-            <div class="result-snippet">${item.snippet}</div>
-          </a>
-        `;
-      }).join("");
-    }
-
-    async function loadBooks() {
-      const res = await fetch("books.json");
-      const books = await res.json();
-
-      const shelf = document.getElementById("bookshelf");
-      shelf.innerHTML = "";
-
-      books.forEach((book, i) => {
-        const color = colors[i % colors.length];
-        const title = book.title || formatTitle(book.file);
-        const spine = formatUpperSpine(book.file.replace(/\.pdf$/i, ""));
-        const desc = book.desc || "Auto-compiled from LaTeX";
-        const href = `pdf/${book.file}`;
-
-        const a = document.createElement("a");
-        a.className = "book-item";
-        a.href = href;
-        a.target = "_blank";
-
-        a.innerHTML = `
-          <div class="book" style="background: linear-gradient(180deg, ${color[0]}, ${color[1]});">
-            <div class="book-content">
-              <div class="book-title">${spine}</div>
-              <div class="book-footer">
-                ${desc}<br>
-                Click to open PDF
-              </div>
+      a.innerHTML = `
+        <div class="book" style="background: linear-gradient(180deg, ${color[0]}, ${color[1]});">
+          <div class="book-content">
+            <div class="book-title">${spine}</div>
+            <div class="book-footer">
+              ${desc}<br>
+              Click to open PDF
             </div>
           </div>
-          <div class="book-name">${title}</div>
-          <div class="book-desc">${book.subtitle || ""}</div>
-        `;
+        </div>
+        <div class="book-name">${title}</div>
+        <div class="book-desc">${book.subtitle || ""}</div>
+      `;
 
-        shelf.appendChild(a);
-      });
-    }
+      shelf.appendChild(a);
+    });
+  }
 
-    async function loadSearchIndex() {
-      try {
-        const res = await fetch("search-index.json");
-        if (!res.ok) {
-          throw new Error("search-index.json not found");
-        }
-        searchIndex = await res.json();
-      } catch (error) {
-        console.error("[search] Failed to load search-index.json", error);
-        searchIndex = [];
+  async function loadSearchIndex() {
+    try {
+      const res = await fetch("./public/search-index.previews.json");
+      if (!res.ok) {
+        throw new Error("search-index.previews.json not found");
       }
+      searchIndex = await res.json();
+    } catch (error) {
+      console.error("[search] Failed to load search-index.previews.json", error);
+      searchIndex = [];
     }
+  }
 
-    function bindSearchEvents() {
-      const input = document.getElementById("searchInput");
-      const shell = document.getElementById("searchShell");
+  function bindSearchEvents() {
+    const input = document.getElementById("searchInput");
+    const shell = document.getElementById("searchShell");
 
-      input.addEventListener("focus", () => {
-        shell.classList.add("focused");
-      });
+    input.addEventListener("focus", () => {
+      shell.classList.add("focused");
+    });
 
-      input.addEventListener("blur", () => {
-        shell.classList.remove("focused");
-      });
+    input.addEventListener("blur", () => {
+      shell.classList.remove("focused");
+    });
 
-      input.addEventListener("input", (e) => {
-        renderSearchResults(e.target.value);
-      });
+    input.addEventListener("input", (e) => {
+      renderSearchResults(e.target.value);
+    });
 
-      document.addEventListener("keydown", (e) => {
-        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-          e.preventDefault();
-          input.focus();
-        }
-      });
-    }
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        input.focus();
+      }
+    });
+  }
 
-    async function init() {
-      await Promise.all([loadBooks(), loadSearchIndex()]);
-      bindSearchEvents();
-    }
+  async function init() {
+    await Promise.all([loadBooks(), loadSearchIndex()]);
+    bindSearchEvents();
+  }
 
-    init();
-  </script>
+  init();
+</script>
 </body>
 </html>
