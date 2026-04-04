@@ -226,6 +226,7 @@
     background: #6b4fa0;
   }
 
+
   .admin-btn:hover {
     transform: scale(1.04);
   }
@@ -632,7 +633,7 @@
 
     <div class="search-row">
       <div class="admin-bar">
-        <button id="adminBtn" class="admin-btn" onclick="toggleAdmin()">管理员登录</button>
+        <button id="adminBtn" class="admin-btn" onclick="toggleAdmin()">管理员</button>
         <button class="admin-btn video-btn" onclick="openVideoGallery()">视频</button>
       </div>
       <div class="search-wrap">
@@ -701,7 +702,7 @@
         btn.textContent = "已登录";
         btn.classList.add("active");
       } else {
-        btn.textContent = "管理员登录";
+        btn.textContent = "管理员";
         btn.classList.remove("active");
       }
     }
