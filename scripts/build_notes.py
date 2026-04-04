@@ -121,18 +121,28 @@ for repo in repos:
 
     if need_compile:
         print(f"  -> compiling {main_tex}")
-        subprocess.run(
-            [
-                "latexmk",
-                "-xelatex",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-f",
-                main_tex.name,
-            ],
-            cwd=tex_dir,
-            check=False,
-        )
+        log_path = tex_dir / "build.log"
+        with open(log_path, "w") as log_f:
+            result = subprocess.run(
+                [
+                    "latexmk",
+                    "-xelatex",
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-f",
+                    main_tex.name,
+                ],
+                cwd=tex_dir,
+                check=False,
+                stdout=log_f,
+                stderr=subprocess.STDOUT,
+            )
+        print(f"  -> latexmk exit code: {result.returncode}")
+        if result.returncode != 0:
+            print("  -> COMPILE FAILED, last 40 lines of log:")
+            lines = log_path.read_text(errors="replace").splitlines()
+            for line in lines[-40:]:
+                print(f"     {line}")
         compiled += 1
     else:
         print("  -> no update, skipping compile")
