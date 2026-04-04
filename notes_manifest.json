@@ -3,56 +3,56 @@
     "repo": "dx--probability-theory",
     "title": " Probability Theory",
     "pdf": "pdf/dx--probability-theory.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx--probability-theory/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx--probability-theory/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx--probability-theory/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-complex-analysis",
     "title": "Complex Analysis",
     "pdf": "pdf/dx-complex-analysis.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-complex-analysis/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-complex-analysis/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-complex-analysis/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-functional-analysis",
     "title": "Functional Analysis",
     "pdf": "pdf/dx-functional-analysis.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-functional-analysis/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-functional-analysis/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-functional-analysis/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-PDE",
     "title": "Pde",
     "pdf": "pdf/dx-PDE.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-PDE/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-PDE/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-PDE/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-real-analysis",
     "title": "Real Analysis",
     "pdf": "pdf/dx-real-analysis.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-real-analysis/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-real-analysis/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-real-analysis/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-sql/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": null
   },
   {
     "repo": "dx-topology",
     "title": "Topology",
     "pdf": "pdf/dx-topology.pdf",
-    "main_tex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-topology/main.tex",
-    "synctex": "/Users/liubike/PycharmProjects/yangminggu.github.io/temp_repos/dx-topology/main.synctex.gz"
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-topology/main.tex",
+    "synctex": null
   }
 ]
