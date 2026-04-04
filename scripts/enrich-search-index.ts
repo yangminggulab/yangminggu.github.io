@@ -33,35 +33,39 @@ const ROOT_DIR = path.resolve(__dirname, "..");
 const INPUT_PATH = path.join(ROOT_DIR, "public", "search-index.json");
 const OUTPUT_PATH = path.join(ROOT_DIR, "public", "search-index.enriched.json");
 
-// 设为 null 表示处理所有仓库
-const ONLY_REPO: string | null = null;
-
 function parseSynctexOutput(output: string): PdfLocator | null {
-  const lines = output.split(/\r?\n/);
+  const chunks = output.split("Output:");
+  const results: PdfLocator[] = [];
 
-  let page: number | null = null;
-  let x: number | null = null;
-  let y: number | null = null;
-  let h: number | null = null;
-  let v: number | null = null;
-  let W: number | null = null;
-  let H: number | null = null;
+  for (const chunk of chunks.slice(1)) {
+    const lines = chunk.split(/\r?\n/);
 
-  for (const line of lines) {
-    const trimmed = line.trim();
+    let page: number | null = null;
+    let x: number | null = null;
+    let y: number | null = null;
+    let h: number | null = null;
+    let v: number | null = null;
+    let W: number | null = null;
+    let H: number | null = null;
 
-    if (trimmed.startsWith("Page:")) page = Number(trimmed.slice(5).trim());
-    else if (trimmed.startsWith("x:")) x = Number(trimmed.slice(2).trim());
-    else if (trimmed.startsWith("y:")) y = Number(trimmed.slice(2).trim());
-    else if (trimmed.startsWith("h:")) h = Number(trimmed.slice(2).trim());
-    else if (trimmed.startsWith("v:")) v = Number(trimmed.slice(2).trim());
-    else if (trimmed.startsWith("W:")) W = Number(trimmed.slice(2).trim());
-    else if (trimmed.startsWith("H:")) H = Number(trimmed.slice(2).trim());
+    for (const line of lines) {
+      const trimmed = line.trim();
+
+      if (trimmed.startsWith("Page:")) page = Number(trimmed.slice(5).trim());
+      else if (trimmed.startsWith("x:")) x = Number(trimmed.slice(2).trim());
+      else if (trimmed.startsWith("y:")) y = Number(trimmed.slice(2).trim());
+      else if (trimmed.startsWith("h:")) h = Number(trimmed.slice(2).trim());
+      else if (trimmed.startsWith("v:")) v = Number(trimmed.slice(2).trim());
+      else if (trimmed.startsWith("W:")) W = Number(trimmed.slice(2).trim());
+      else if (trimmed.startsWith("H:")) H = Number(trimmed.slice(2).trim());
+    }
+
+    if (page != null && !Number.isNaN(page)) {
+      results.push({ page, x, y, h, v, W, H });
+    }
   }
 
-  if (page == null || Number.isNaN(page)) return null;
-
-  return { page, x, y, h, v, W, H };
+  return results.length > 0 ? results[0] : null;
 }
 
 function resolveBestPdfPath(block: SearchBlock): string | null {
@@ -104,11 +108,6 @@ function main() {
   const enriched: SearchBlock[] = [];
 
   for (const block of blocks) {
-    if (ONLY_REPO && block.repo !== ONLY_REPO) {
-      enriched.push(block);
-      continue;
-    }
-
     try {
       if (!block.sourcePath || !block.startLine || !block.synctex) {
         enriched.push({
@@ -144,20 +143,22 @@ function main() {
 
       const synctexDir = path.dirname(synctexAbs);
 
-      const args = [
-        "view",
-        "-i",
-        `${block.startLine}:1:${block.sourcePath}`,
-        "-o",
-        pdfPath,
-        "-d",
-        synctexDir,
-      ];
-
-      const result = spawnSync("synctex", args, {
-        encoding: "utf-8",
-        cwd: synctexDir,
-      });
+      const result = spawnSync(
+        "synctex",
+        [
+          "view",
+          "-i",
+          `${block.startLine}:1:${block.sourcePath}`,
+          "-o",
+          pdfPath,
+          "-d",
+          synctexDir,
+        ],
+        {
+          encoding: "utf-8",
+          cwd: synctexDir,
+        }
+      );
 
       const output = `${result.stdout ?? ""}\n${result.stderr ?? ""}`;
       const pos = parseSynctexOutput(output);

@@ -1,15 +1,14 @@
 import json
 import subprocess
+from collections import Counter
 from pathlib import Path
 
-import fitz  # pip install pymupdf
+import fitz
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_PATH = BASE_DIR / "public" / "search-index.enriched.json"
 OUTPUT_DIR = BASE_DIR / "public" / "search-previews"
 OUTPUT_PATH = BASE_DIR / "public" / "search-index.previews.json"
-
-ONLY_REPO = None
 
 FRAME_KINDS = {
     "definition", "theorem", "example", "note", "remark",
@@ -20,26 +19,12 @@ TEXT_LEFT = 72
 TEXT_RIGHT_MARGIN = 72
 
 TOP_PAD_BY_KIND = {
-    "definition": 90,
-    "theorem": 90,
-    "example": 70,
-    "note": 70,
-    "remark": 70,
-    "proposition": 90,
-    "lemma": 90,
-    "corollary": 90,
-    "dxtips": 90,
+    "definition": 90, "theorem": 90, "example": 70, "note": 70,
+    "remark": 70, "proposition": 90, "lemma": 90, "corollary": 90, "dxtips": 90,
 }
 BOTTOM_PAD_BY_KIND = {
-    "definition": 32,
-    "theorem": 32,
-    "example": 28,
-    "note": 28,
-    "remark": 28,
-    "proposition": 32,
-    "lemma": 32,
-    "corollary": 32,
-    "dxtips": 32,
+    "definition": 32, "theorem": 32, "example": 28, "note": 28,
+    "remark": 28, "proposition": 32, "lemma": 32, "corollary": 32, "dxtips": 32,
 }
 
 
@@ -48,40 +33,44 @@ def pt_to_pdf_y(page_height: float, y_top_like: float, h: float) -> float:
 
 
 def parse_synctex_output(output: str):
-    lines = output.splitlines()
-    page = x = y = h = v = W = H = None
-    for line in lines:
-        s = line.strip()
-        if s.startswith("Page:"):
-            page = int(s.split(":", 1)[1].strip())
-        elif s.startswith("x:"):
-            x = float(s.split(":", 1)[1].strip())
-        elif s.startswith("y:"):
-            y = float(s.split(":", 1)[1].strip())
-        elif s.startswith("h:"):
-            h = float(s.split(":", 1)[1].strip())
-        elif s.startswith("v:"):
-            v = float(s.split(":", 1)[1].strip())
-        elif s.startswith("W:"):
-            W = float(s.split(":", 1)[1].strip())
-        elif s.startswith("H:"):
-            H = float(s.split(":", 1)[1].strip())
-    if page is None:
-        return None
-    return {"page": page, "x": x, "y": y, "h": h, "v": v, "W": W, "H": H}
+    chunks = output.split("Output:")
+    results = []
+    for chunk in chunks[1:]:
+        page = x = y = h = v = W = H = None
+        for line in chunk.splitlines():
+            s = line.strip()
+            if s.startswith("Page:"):
+                page = int(s.split(":", 1)[1].strip())
+            elif s.startswith("x:"):
+                x = float(s.split(":", 1)[1].strip())
+            elif s.startswith("y:"):
+                y = float(s.split(":", 1)[1].strip())
+            elif s.startswith("h:"):
+                h = float(s.split(":", 1)[1].strip())
+            elif s.startswith("v:"):
+                v = float(s.split(":", 1)[1].strip())
+            elif s.startswith("W:"):
+                W = float(s.split(":", 1)[1].strip())
+            elif s.startswith("H:"):
+                H = float(s.split(":", 1)[1].strip())
+        if page is not None:
+            results.append({"page": page, "x": x, "y": y, "h": h, "v": v, "W": W, "H": H})
+    return results[0] if results else None
 
 
 def synctex_view(synctex_path: Path, pdf_path: Path, source_path: str, line_no: int):
-    synctex_dir = synctex_path.parent
-    args = [
-        "synctex", "view",
-        "-i", f"{line_no}:1:{source_path}",
-        "-o", str(pdf_path),
-        "-d", str(synctex_dir),
-    ]
-    result = subprocess.run(args, capture_output=True, text=True, cwd=synctex_dir)
-    output = (result.stdout or "") + "\n" + (result.stderr or "")
-    return parse_synctex_output(output)
+    result = subprocess.run(
+        [
+            "synctex", "view",
+            "-i", f"{line_no}:1:{source_path}",
+            "-o", str(pdf_path),
+            "-d", str(synctex_path.parent),
+        ],
+        capture_output=True,
+        text=True,
+        cwd=synctex_path.parent,
+    )
+    return parse_synctex_output((result.stdout or "") + "\n" + (result.stderr or ""))
 
 
 def resolve_best_pdf_path(block):
@@ -89,10 +78,9 @@ def resolve_best_pdf_path(block):
     if debug_pdf_path and Path(debug_pdf_path).exists():
         return Path(debug_pdf_path)
 
-    if block.get("synctex"):
-        synctex_abs = Path(block["synctex"])
-        synctex_dir = synctex_abs.parent
-        main_pdf = synctex_dir / "main.pdf"
+    synctex = block.get("synctex")
+    if synctex:
+        main_pdf = Path(synctex).parent / "main.pdf"
         if main_pdf.exists():
             return main_pdf
 
@@ -135,31 +123,33 @@ def main():
         raise FileNotFoundError(f"Missing {INPUT_PATH}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
     blocks = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
+
     updated = []
+    docs = {}
+    reason_counter = Counter()
+    success_count = 0
 
     for block in blocks:
-        if ONLY_REPO and block.get("repo") != ONLY_REPO:
-            updated.append(block)
-            continue
-
         kind = block.get("kind", "")
 
         if kind not in FRAME_KINDS:
             block["previewImage"] = None
             block["previewDebug"] = "non-frame block fallback to text"
+            reason_counter[block["previewDebug"]] += 1
             updated.append(block)
             continue
 
-        synctex_path = Path(block["synctex"]) if block.get("synctex") else None
+        synctex = block.get("synctex")
         source_path = block.get("sourcePath")
         start_line = block.get("startLine")
         end_line = block.get("endLine")
 
+        synctex_path = Path(synctex) if synctex else None
         if not synctex_path or not synctex_path.exists() or not source_path or not start_line:
             block["previewImage"] = None
             block["previewDebug"] = "missing synctex/sourcePath/startLine"
+            reason_counter[block["previewDebug"]] += 1
             updated.append(block)
             continue
 
@@ -167,6 +157,7 @@ def main():
         if not pdf_path:
             block["previewImage"] = None
             block["previewDebug"] = "no usable pdf found"
+            reason_counter[block["previewDebug"]] += 1
             updated.append(block)
             continue
 
@@ -175,12 +166,14 @@ def main():
             if not start_loc:
                 block["previewImage"] = None
                 block["previewDebug"] = "start synctex mapping failed"
+                reason_counter[block["previewDebug"]] += 1
                 updated.append(block)
                 continue
 
             if not end_line:
                 block["previewImage"] = None
                 block["previewDebug"] = "missing endLine for frame block"
+                reason_counter[block["previewDebug"]] += 1
                 updated.append(block)
                 continue
 
@@ -188,38 +181,43 @@ def main():
             if not end_loc or int(end_loc["page"]) != int(start_loc["page"]):
                 block["previewImage"] = None
                 block["previewDebug"] = "end synctex mapping failed or cross-page block"
+                reason_counter[block["previewDebug"]] += 1
                 updated.append(block)
                 continue
 
-            doc = fitz.open(pdf_path)
-            page_index = int(start_loc["page"]) - 1
-            page = doc.load_page(page_index)
+            pdf_key = str(pdf_path)
+            if pdf_key not in docs:
+                docs[pdf_key] = fitz.open(pdf_path)
 
+            doc = docs[pdf_key]
+            page = doc.load_page(int(start_loc["page"]) - 1)
             rect = make_block_rect(page, start_loc, end_loc, kind)
 
-            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), clip=rect, alpha=False)
             out_name = f"{block['id']}.png"
             out_path = OUTPUT_DIR / out_name
-            pix.save(out_path)
+            page.get_pixmap(matrix=fitz.Matrix(2, 2), clip=rect, alpha=False).save(out_path)
 
-            block["previewImage"] = f"public/search-previews/{out_name}"
+            block["previewImage"] = f"/public/search-previews/{out_name}"
             block["previewClip"] = {
                 "page": start_loc["page"],
-                "x0": rect.x0,
-                "y0": rect.y0,
-                "x1": rect.x1,
-                "y1": rect.y1,
+                "x0": rect.x0, "y0": rect.y0, "x1": rect.x1, "y1": rect.y1,
             }
-            doc.close()
+            success_count += 1
 
         except Exception as e:
             block["previewImage"] = None
             block["previewDebug"] = str(e)
+            reason_counter[block["previewDebug"]] += 1
 
         updated.append(block)
 
+    for doc in docs.values():
+        doc.close()
+
     OUTPUT_PATH.write_text(json.dumps(updated, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote: {OUTPUT_PATH}")
+    print(f"preview success = {success_count}")
+    print(f"preview failure reasons = {dict(reason_counter)}")
 
 
 if __name__ == "__main__":
