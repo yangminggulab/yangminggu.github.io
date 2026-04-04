@@ -40,6 +40,13 @@ jobs:
           packages: latexmk texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-chinese biber
           version: 1.0
 
+      - name: Install elegantbook class
+        run: |
+          mkdir -p ~/texmf/tex/latex/elegantbook
+          curl -L https://raw.githubusercontent.com/ElegantLaTeX/ElegantBook/master/elegantbook.cls \
+            -o ~/texmf/tex/latex/elegantbook/elegantbook.cls
+          texhash ~/texmf
+
       - name: Run Python build script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
