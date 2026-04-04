@@ -7,15 +7,9 @@ from pathlib import Path
 
 USERNAME = "yangminggulab"
 TOKEN = os.getenv("GITHUB_TOKEN")
-
-# 这个脚本负责：
-# 1. 拉取/复用本地 dx 仓库
-# 2. 编译 main.tex 为 PDF
-# 3. 生成 books.json / build_state.json / notes_manifest.json
-# 4. 现在额外开启 SyncTeX，给后面做 source -> PDF 定位做准备
+FORCE_REBUILD = os.getenv("FORCE_REBUILD", "0") == "1"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 WORK_DIR = BASE_DIR / "temp_repos"
 OUTPUT_DIR = BASE_DIR / "pdf"
 STATE_FILE = BASE_DIR / "build_state.json"
@@ -33,16 +27,12 @@ else:
 
 print("Fetching repositories...")
 
-headers = {
-    "Accept": "application/vnd.github.v3+json",
-}
-
+headers = {"Accept": "application/vnd.github.v3+json"}
 if TOKEN:
     headers["Authorization"] = f"token {TOKEN}"
 
 repos = []
 page = 1
-
 while True:
     url = f"https://api.github.com/users/{USERNAME}/repos?type=owner&per_page=100&page={page}"
     response = requests.get(url, headers=headers, timeout=30)
@@ -70,18 +60,16 @@ for pdf_file in OUTPUT_DIR.glob("*.pdf"):
         "file": pdf_file.name,
         "title": pdf_file.stem.replace("dx-", "").replace("-", " ").title(),
         "subtitle": "",
-        "desc": "Auto-compiled from LaTeX"
+        "desc": "Auto-compiled from LaTeX",
     }
 
 for repo in repos:
     name = repo["name"]
-
     if not name.lower().startswith("dx"):
         continue
 
     matched_repos += 1
     latest_commit = repo["pushed_at"]
-
     clone_url = repo["clone_url"]
     repo_path = WORK_DIR / name
 
@@ -92,18 +80,17 @@ for repo in repos:
             subprocess.run(
                 ["git", "clone", "--depth", "1", clone_url, str(repo_path)],
                 check=True,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
             )
             print("  -> cloned")
         except subprocess.CalledProcessError:
             print("  -> clone failed")
             continue
     else:
-        print("  -> repo already exists, reuse local copy")
+        print("  -> repo exists, pulling latest")
+        subprocess.run(["git", "fetch", "--depth", "1", "origin"], cwd=repo_path, check=False)
+        subprocess.run(["git", "reset", "--hard", "origin/HEAD"], cwd=repo_path, check=False)
 
     main_candidates = list(repo_path.rglob("main.tex"))
-
     if not main_candidates:
         print("  -> no main.tex found")
         continue
@@ -114,81 +101,107 @@ for repo in repos:
 
     main_tex = main_candidates[0]
     tex_dir = main_tex.parent
+    pdf_name = f"{name}.pdf"
 
     print(f"  -> selected main.tex: {main_tex}")
 
-    pdf_name = f"{name}.pdf"
+    pdf_candidates = [
+        tex_dir / f"{main_tex.stem}.pdf",
+        tex_dir / "main.pdf",
+    ]
+    existing_pdf_path = next((p for p in pdf_candidates if p.exists()), None)
+    existing_synctex = list(tex_dir.glob("*.synctex.gz"))
 
-    # 先预设 synctex 路径，后面编译后会生成
-    synctex_path = main_tex.with_suffix(".synctex.gz")
+    need_compile = (
+            FORCE_REBUILD
+            or not (name in state and state[name] == latest_commit)
+            or existing_pdf_path is None
+            or len(existing_synctex) == 0
+    )
+
+    if need_compile:
+        print(f"  -> compiling {main_tex}")
+        subprocess.run(
+            [
+                "latexmk",
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-f",
+                main_tex.name,
+            ],
+            cwd=tex_dir,
+            check=False,
+        )
+        compiled += 1
+    else:
+        print("  -> no update, skipping compile")
+
+    print("  -> files after compile/check:")
+    for p in sorted(tex_dir.iterdir()):
+        if p.is_file() and (
+            p.suffix == ".pdf"
+            or p.suffix == ".tex"
+            or ".synctex" in p.name
+        ):
+            print(f"     {p.name}")
+
+    pdf_candidates = [
+        tex_dir / f"{main_tex.stem}.pdf",
+        tex_dir / "main.pdf",
+    ]
+    pdf_path = next((p for p in pdf_candidates if p.exists()), None)
+
+    synctex_candidates = list(tex_dir.glob("*.synctex.gz"))
+    print("  -> synctex candidates found:")
+    for p in synctex_candidates:
+        print(f"     {p.name}")
+
+    synctex_path = None
+    preferred_names = [
+        f"{main_tex.name}.synctex.gz",
+        f"{main_tex.stem}.synctex.gz",
+    ]
+    for pref in preferred_names:
+        candidate = tex_dir / pref
+        if candidate.exists():
+            synctex_path = candidate
+            break
+    if synctex_path is None and synctex_candidates:
+        synctex_path = synctex_candidates[0]
 
     manifest_item = {
         "repo": name,
         "title": name.replace("dx-", "").replace("-", " ").title(),
         "pdf": f"pdf/{pdf_name}",
         "main_tex": str(main_tex),
-        "synctex": str(synctex_path),
+        "synctex": str(synctex_path) if synctex_path else None,
     }
     manifest.append(manifest_item)
 
-    if name in state and state[name] == latest_commit:
-        print("  -> no update, skipping compile")
-        if pdf_name in existing_books:
-            books.append(existing_books[pdf_name])
-        else:
-            books.append({
-                "file": pdf_name,
-                "title": name.replace("dx-", "").replace("-", " ").title(),
-                "subtitle": "",
-                "desc": "Auto-compiled from LaTeX"
-            })
-        continue
-
-    print(f"  -> compiling {main_tex}")
-
-    subprocess.run(
-        [
-            "latexmk",
-            "-xelatex",
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-f",
-            main_tex.name
-        ],
-        cwd=tex_dir
-    )
-
-    pdf_path = main_tex.with_suffix(".pdf")
-    synctex_path = main_tex.with_suffix(".synctex.gz")
-
-    if not pdf_path.exists():
+    if pdf_path and pdf_path.exists():
+        output_pdf = OUTPUT_DIR / pdf_name
+        shutil.copy(pdf_path, output_pdf)
+        print(f"  -> saved to {output_pdf}")
+        state[name] = latest_commit
+    else:
         print("  -> pdf not produced")
-        continue
 
-    output_pdf = OUTPUT_DIR / pdf_name
-    shutil.copy(pdf_path, output_pdf)
-
-    print(f"  -> saved to {output_pdf}")
-
-    if synctex_path.exists():
-        print(f"  -> synctex generated: {synctex_path.name}")
+    if synctex_path and synctex_path.exists():
+        print(f"  -> synctex chosen: {synctex_path.name}")
     else:
         print("  -> warning: synctex not produced")
 
-    book_info = {
+    books.append({
         "file": pdf_name,
         "title": name.replace("dx-", "").replace("-", " ").title(),
         "subtitle": "",
-        "desc": "Auto-compiled from LaTeX"
-    }
-
-    books.append(book_info)
-    state[name] = latest_commit
-    compiled += 1
+        "desc": "Auto-compiled from LaTeX",
+    })
 
 existing_names = {book["file"] for book in books}
-for pdf_name, book_info in existing_books.items():
-    if pdf_name not in existing_names:
+for old_pdf_name, book_info in existing_books.items():
+    if old_pdf_name not in existing_names:
         books.append(book_info)
 
 books.sort(key=lambda x: x["title"].lower())
@@ -203,6 +216,17 @@ with open(STATE_FILE, "w", encoding="utf-8") as f:
 with open(MANIFEST_FILE, "w", encoding="utf-8") as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2)
 
+VIDEO_DIR = BASE_DIR / "video"
+VIDEOS_FILE = VIDEO_DIR / "videos.json"
+
+video_entries = []
+if VIDEO_DIR.exists():
+    for vf in sorted(VIDEO_DIR.glob("*.mp4")):
+        video_entries.append({"file": f"video/{vf.name}", "name": vf.name})
+
+with open(VIDEOS_FILE, "w", encoding="utf-8") as f:
+    json.dump(video_entries, f, ensure_ascii=False, indent=2)
+
 print("\n========== SUMMARY ==========")
 print(f"Matched dx repos: {matched_repos}")
 print(f"Compiled PDFs: {compiled}")
@@ -210,4 +234,5 @@ print(f"Manifest entries: {len(manifest)}")
 print(f"books.json generated at: {BOOKS_FILE}")
 print(f"build_state.json generated at: {STATE_FILE}")
 print(f"notes_manifest.json generated at: {MANIFEST_FILE}")
+print(f"videos.json: {len(video_entries)} videos found")
 print("Done.")

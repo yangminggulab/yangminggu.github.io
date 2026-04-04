@@ -4,611 +4,1229 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>阳明谷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: #f3f3f3;
-      color: #222;
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f3f3f3;
+    color: #222;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin: 0 0 20px;
+    font-weight: 800;
+    font-family: "Ma Shan Zheng", cursive;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 18px;
+    font-family: "Ma Shan Zheng", cursive;
+    line-height: 1.9;
+  }
+
+  .search-row {
+    position: relative;
+    max-width: 900px;
+    margin: 49px auto 42px;
+  }
+
+  .admin-bar {
+    position: absolute;
+    right: calc(100% + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .admin-btn.video-btn {
+    background: #1a6fd4;
+  }
+
+  .admin-btn.video-btn:hover {
+    background: #1558b0;
+  }
+
+  .video-thumb-wrap {
+    position: relative;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .video-thumb-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+
+  .video-play-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .video-thumb-wrap:hover .video-play-icon {
+    background: rgba(0, 0, 0, 0.32);
+  }
+
+  .video-play-icon::after {
+    content: none;
+  }
+
+  .video-viewer {
+    display: none;
+  }
+
+  .video-viewer-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .video-back-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1a6fd4;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .video-back-btn:hover {
+    text-decoration: underline;
+  }
+
+  .video-viewer-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .video-viewer video {
+    width: 100%;
+    border-radius: 12px;
+    background: #000;
+    display: block;
+  }
+
+  .video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 40px 20px;
+  }
+
+  .video-modal.open {
+    display: block;
+  }
+
+  .video-modal-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+  }
+
+  .video-modal-title {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .video-modal-close {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+  }
+
+  .video-modal-close:hover {
+    color: #222;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .video-card {
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .video-card video {
+    width: 100%;
+    display: block;
+  }
+
+  .video-card-name {
+    padding: 8px 12px 10px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .video-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 500px) {
+    .video-grid { grid-template-columns: 1fr; }
+    .video-modal-inner { padding: 20px 16px; }
+  }
+
+  .admin-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #111;
+    color: #fff;
+    white-space: nowrap;
+    transition: background 0.25s ease, transform 0.15s ease;
+  }
+
+  .admin-btn.active {
+    background: #6b4fa0;
+  }
+
+  .admin-btn:hover {
+    transform: scale(1.04);
+  }
+
+  .hero-wrap {
+    position: absolute;
+    top: 5px;
+    right: 260px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-carousel {
+    width: 460px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #111;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  }
+
+  .hero-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .hero-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .hero-slide video,
+  .hero-carousel > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #111;
+  }
+
+  .hero-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .hero-dot.active {
+    background: #fff;
+    transform: scale(1.35);
+  }
+
+  .hero-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .hero-carousel {
+    cursor: pointer;
+  }
+
+  .search-wrap {
+    position: relative;
+    z-index: 20;
+  }
+
+  .search-shell {
+    position: relative;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.08),
+      0 2px 10px rgba(0, 0, 0, 0.04);
+    overflow: visible;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .search-shell.focused {
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.12),
+      0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+  }
+
+  .search-icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    opacity: 0.55;
+  }
+
+  .search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 22px;
+    color: #111;
+    line-height: 1.4;
+  }
+
+  .search-input::placeholder {
+    color: #888;
+  }
+
+  .search-meta {
+    padding: 0 20px 16px;
+    font-size: 14px;
+    color: #777;
+  }
+
+  .search-meta:empty {
+    display: none;
+  }
+
+  .search-results {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    z-index: 30;
+    display: none;
+    max-height: 560px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    box-shadow:
+      0 22px 50px rgba(0, 0, 0, 0.12),
+      0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .search-results.show {
+    display: block;
+  }
+
+  .result-empty {
+    padding: 22px 20px 26px;
+    color: #666;
+    font-size: 15px;
+  }
+
+  .result-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background 0.18s ease;
+  }
+
+  .result-item:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .result-type {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 8px;
+  }
+
+  .result-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+    line-height: 1.35;
+  }
+
+  .result-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .preview-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    white-space: pre-wrap;
+  }
+
+  .preview-body mark {
+    background: #ffeaa7;
+    color: inherit;
+    padding: 0 2px;
+    border-radius: 4px;
+  }
+
+  .preview-image {
+    width: 100%;
+    display: block;
+    background: white;
+  }
+
+  .bookshelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 42px;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .bookshelf.dimmed {
+    filter: blur(6px);
+    opacity: 0.42;
+    transform: scale(1.01);
+    pointer-events: none;
+  }
+
+  .book-item {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .book {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(180deg, #2c4da0, #1d2f73);
+  }
+
+  .book:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 22px 40px rgba(0,0,0,0.22);
+  }
+
+  .book::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 100%;
+    background: rgba(255,255,255,0.18);
+  }
+
+  .book-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 28px 30px 34px;
+    color: white;
+  }
+
+  .book-title {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+  .book-footer {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  .book-name {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .book-desc {
+    text-align: center;
+    margin-top: 6px;
+    color: #666;
+    font-size: 16px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 80px;
+    color: #888;
+    font-size: 15px;
+  }
+
+  @media (max-width: 1200px) {
+    .admin-bar {
+      padding-right: 0;
     }
 
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 40px 40px 80px;
+    .hero-wrap {
+      position: static;
+      width: 100%;
+      margin-bottom: 20px;
+      gap: 10px;
     }
 
-    h1 {
-      font-size: 64px;
-      margin: 0 0 10px;
-      font-weight: 800;
-    }
-
-    .subtitle {
-      font-size: 24px;
-      color: #555;
-      margin-bottom: 28px;
+    .hero-carousel {
+      flex: 1;
+      height: 240px;
     }
 
     .search-wrap {
-      max-width: 900px;
-      margin: 0 auto 42px;
-      position: relative;
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 26px 18px 56px;
     }
 
-    .search-shell {
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      border-radius: 24px;
-      box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.08),
-        0 2px 10px rgba(0, 0, 0, 0.04);
-      overflow: hidden;
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    .search-row {
+      position: static;
     }
 
-    .search-shell.focused {
-      box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.12),
-        0 4px 16px rgba(0, 0, 0, 0.06);
-      transform: translateY(-1px);
+    .admin-bar {
+      position: absolute;
+      right: 18px;
+      top: 50px;
+      left: auto;
+      transform: translateY(-50%);
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 16px;
     }
 
     .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 18px 20px;
-    }
-
-    .search-icon {
-      width: 22px;
-      height: 22px;
-      flex: 0 0 22px;
-      opacity: 0.55;
+      padding: 15px 16px;
     }
 
     .search-input {
-      border: none;
-      outline: none;
-      background: transparent;
-      width: 100%;
-      font-size: 22px;
-      color: #111;
-      line-height: 1.4;
-    }
-
-    .search-input::placeholder {
-      color: #888;
-    }
-
-    .search-meta {
-      padding: 0 20px 16px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    .search-results {
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      display: none;
-      max-height: 560px;
-      overflow-y: auto;
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .search-results.show {
-      display: block;
-    }
-
-    .result-empty {
-      padding: 22px 20px 26px;
-      color: #666;
-      font-size: 15px;
-    }
-
-    .result-item {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      padding: 18px 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      transition: background 0.18s ease;
-    }
-
-    .result-item:hover {
-      background: rgba(0, 0, 0, 0.03);
-    }
-
-    .result-type {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 8px;
+      font-size: 18px;
     }
 
     .result-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 6px;
-      line-height: 1.35;
-    }
-
-    .result-meta {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .preview-body mark {
-      background: #ffeaa7;
-      color: inherit;
-      padding: 0 2px;
-      border-radius: 4px;
-    }
-
-    .preview-card {
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 16px;
-      padding: 14px 16px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    }
-
-    .preview-card.tip {
-      background: #faf7ff;
-      border-left: 6px solid #7c4dff;
-    }
-
-    .preview-card.definition {
-      background: #fffdf7;
-      border-left: 6px solid #d4a017;
-    }
-
-    .preview-card.theorem {
-      background: #f7fbff;
-      border-left: 6px solid #2f6fed;
-    }
-
-    .preview-card.example {
-      background: #f7fff8;
-      border-left: 6px solid #2e8b57;
-    }
-
-    .preview-card.note {
-      background: #fffaf5;
-      border-left: 6px solid #cc7a00;
-    }
-
-    .preview-card.homework {
-      background: #fff8f8;
-      border-left: 6px solid #c43d3d;
-    }
-
-    .preview-card.solution {
-      background: #f8fffb;
-      border-left: 6px solid #1d8f5a;
-    }
-
-    .preview-card.text {
-      background: #ffffff;
-      border-left: 6px solid #bdbdbd;
-    }
-
-    .preview-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      opacity: 0.72;
-      margin-bottom: 8px;
-    }
-
-    .preview-body {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #333;
-      white-space: pre-wrap;
-    }
-
-    .preview-image {
-      width: 100%;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      background: white;
+      font-size: 17px;
     }
 
     .bookshelf {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 42px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 24px;
     }
-
-    .book-item {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .book {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      background: linear-gradient(180deg, #2c4da0, #1d2f73);
-    }
-
-    .book:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 30px rgba(0,0,0,0.18);
-    }
-
-    .book::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 22px;
-      height: 100%;
-      background: rgba(255,255,255,0.18);
-    }
-
-    .book-content {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 28px 28px 30px 34px;
-      color: white;
-    }
-
-    .book-title {
-      font-size: 28px;
-      line-height: 1.15;
-      font-weight: 800;
-      text-transform: uppercase;
-      word-break: break-word;
-    }
-
-    .book-footer {
-      font-size: 18px;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
-
-    .book-name {
-      text-align: center;
-      margin-top: 16px;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .book-desc {
-      text-align: center;
-      margin-top: 6px;
-      color: #666;
-      font-size: 16px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 80px;
-      color: #888;
-      font-size: 15px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 26px 18px 56px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-
-      .search-bar {
-        padding: 15px 16px;
-      }
-
-      .search-input {
-        font-size: 18px;
-      }
-
-      .result-title {
-        font-size: 17px;
-      }
-
-      .bookshelf {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 24px;
-      }
-    }
-  </style>
+  }
+ </style>
 </head>
 <body>
   <div class="container">
     <h1>阳明谷</h1>
-    <div class="subtitle">My mathematical notes library</div>
+    <div class="subtitle">躲天意，避因果，诸般枷锁困真我。<br>顺天意，承因果，今日方知我是我。</div>
 
-    <div class="search-wrap">
-      <div id="searchShell" class="search-shell">
-        <div class="search-bar">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <input
-            id="searchInput"
-            class="search-input"
-            type="text"
-            placeholder="搜索笔记内容，例如 Real Analysis"
-            autocomplete="off"
-          />
+    <div class="hero-wrap">
+      <div class="hero-carousel" id="heroCarousel">
+        <div class="hero-track" id="heroTrack">
+          <div class="hero-slide">
+            <video src="video/1.mp4" muted playsinline preload="auto"></video>
+          </div>
+          <div class="hero-slide">
+            <video src="video/2.mp4" muted playsinline preload="auto"></video>
+          </div>
+          <div class="hero-slide">
+            <video src="video/3.mp4" muted playsinline preload="auto"></video>
+          </div>
+          <div class="hero-slide">
+            <video src="video/4.mp4" muted playsinline preload="auto"></video>
+          </div>
         </div>
-        <div id="searchMeta" class="search-meta">输入关键词后会在索引中精确匹配</div>
-        <div id="searchResults" class="search-results"></div>
+      </div>
+      <div class="hero-dots" id="heroDots"></div>
+    </div>
+
+    <div class="search-row">
+      <div class="admin-bar">
+        <button id="adminBtn" class="admin-btn" onclick="toggleAdmin()">管理员登录</button>
+        <button class="admin-btn video-btn" onclick="openVideoGallery()">视频</button>
+      </div>
+      <div class="search-wrap">
+        <div id="searchShell" class="search-shell">
+          <div class="search-bar">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <input
+              id="searchInput"
+              class="search-input"
+              type="text"
+              placeholder="搜索笔记内容，例如 Real Analysis"
+              autocomplete="off"
+            />
+          </div>
+          <div id="searchMeta" class="search-meta"></div>
+          <div id="searchResults" class="search-results"></div>
+        </div>
       </div>
     </div>
 
     <div id="bookshelf" class="bookshelf"></div>
-
     <div class="footer">Built with GitHub Pages · Updated by GitHub Actions</div>
   </div>
 
-<script>
-  const colors = [
-    ["#2c4da0", "#1d2f73"],
-    ["#8d1f3d", "#5d1025"],
-    ["#4e7c51", "#284d2a"],
-    ["#8a6419", "#5b3d0b"],
-    ["#5d4e9e", "#34296e"],
-    ["#00796b", "#004d40"],
-    ["#6d4c41", "#3e2723"]
-  ];
+  <div id="videoModal" class="video-modal" onclick="if(event.target===this)closeVideoGallery()">
+    <div class="video-modal-inner">
+      <button class="video-modal-close" onclick="closeVideoGallery()">✕</button>
 
-  let searchIndex = [];
+      <div id="videoGallery">
+        <div class="video-modal-title">数学可视化</div>
+        <div id="videoGrid" class="video-grid"></div>
+      </div>
 
-  function formatTitle(name) {
-    return name
-      .replace(/^dx[-_]?/i, "")
-      .replace(/[-_]/g, " ")
-      .replace(/\b\w/g, c => c.toUpperCase());
-  }
-
-  function formatUpperSpine(name) {
-    return formatTitle(name).replace(/ /g, "<br>");
-  }
-
-  function escapeHtml(str) {
-    return String(str)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#39;");
-  }
-
-  function countOccurrences(text, query) {
-    if (!text || !query) return 0;
-    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const matches = text.toLowerCase().match(new RegExp(escaped, "g"));
-    return matches ? matches.length : 0;
-  }
-
-  function makeSnippet(content, query, radius = 60) {
-    if (!content) return "";
-    const lower = content.toLowerCase();
-    const q = query.toLowerCase();
-    const index = lower.indexOf(q);
-
-    if (index === -1) {
-      return escapeHtml(content.slice(0, radius * 2).trim());
-    }
-
-    const start = Math.max(0, index - radius);
-    const end = Math.min(content.length, index + q.length + radius);
-
-    let snippet = content.slice(start, end).trim();
-    if (start > 0) snippet = "..." + snippet;
-    if (end < content.length) snippet = snippet + "...";
-
-    const escaped = escapeHtml(snippet);
-    const matchedText = snippet.slice(
-      Math.max(0, index - start),
-      Math.max(0, index - start) + q.length
-    );
-    const safeQuery = escapeHtml(matchedText);
-
-    return escaped.replace(
-      new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
-      "<mark>$&</mark>"
-    );
-  }
-
-  function scoreItem(item, query) {
-
-    const textHits = countOccurrences(item.text || "", query);
-
-    let score = 0;
-
-    score += textHits * 10;
-
-    if ((item.kind || "") === "definition") {
-      score += 100000;
-    }
-
-    return score;
-  }
-
-  function searchNotes(query) {
-    const q = query.trim().toLowerCase();
-    if (!q) return [];
-
-    return searchIndex
-      .map(item => {
-        const score = scoreItem(item, q);
-        if (score <= 0) return null;
-
-        return {
-          ...item,
-          score,
-          snippet: makeSnippet(item.text || item.blockTitle || "", q)
-        };
-      })
-      .filter(Boolean)
-      .sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
-        return String(a.id || "").localeCompare(String(b.id || ""));
-      })
-      .slice(0, 12);
-  }
-
-  function renderSearchResults(query) {
-    const meta = document.getElementById("searchMeta");
-    const box = document.getElementById("searchResults");
-
-    if (!query.trim()) {
-      box.classList.remove("show");
-      box.innerHTML = "";
-      meta.textContent = "输入关键词后会在索引中精确匹配";
-      return;
-    }
-
-    const results = searchNotes(query);
-    box.classList.add("show");
-
-    if (results.length === 0) {
-      meta.textContent = "没有找到匹配结果";
-      box.innerHTML = `
-        <div class="result-empty">
-          没有找到和 “${escapeHtml(query)}” 对应的内容。
+      <div id="videoViewer" class="video-viewer">
+        <div class="video-viewer-header">
+          <button class="video-back-btn" onclick="closeVideoViewer()">← 返回</button>
+          <span id="viewerName" class="video-viewer-name"></span>
         </div>
-      `;
-      return;
+        <video id="viewerVideo" controls></video>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = "lbkymg";
+    const colors = [
+      ["#2c4da0", "#1d2f73"],
+      ["#8d1f3d", "#5d1025"],
+      ["#4e7c51", "#284d2a"],
+      ["#8a6419", "#5b3d0b"],
+      ["#5d4e9e", "#34296e"],
+      ["#00796b", "#004d40"],
+      ["#6d4c41", "#3e2723"]
+    ];
+
+    let searchIndex = [];
+    let visibilityMap = {};
+    let isAdmin = localStorage.getItem("isAdmin") === "true";
+
+    function updateAdminBtn() {
+      const btn = document.getElementById("adminBtn");
+      if (!btn) return;
+      if (isAdmin) {
+        btn.textContent = "已登录";
+        btn.classList.add("active");
+      } else {
+        btn.textContent = "管理员登录";
+        btn.classList.remove("active");
+      }
     }
 
-    meta.textContent = `找到 ${results.length} 条结果`;
+    function canViewRepo(repo) {
+      return isAdmin || visibilityMap[repo] !== false;
+    }
 
-    box.innerHTML = results.map(item => {
-      const title =
-        item.previewTitle ||
-        item.blockTitle ||
-        item.title ||
-        "Untitled";
+    async function loadVisibility() {
+      try {
+        const res = await fetch("/visibility.json");
+        if (!res.ok) throw new Error("visibility.json not found");
+        visibilityMap = await res.json();
+      } catch (error) {
+        console.error("[visibility] Failed to load visibility.json", error);
+        visibilityMap = {};
+      }
+    }
 
-      const metaText = [item.title].filter(Boolean).join(" · ");
+    function toggleAdmin() {
+      if (isAdmin) {
+        isAdmin = false;
+        localStorage.removeItem("isAdmin");
+        location.reload();
+      } else {
+        const pwd = prompt("请输入管理员密码");
+        if (pwd === ADMIN_PASSWORD) {
+          isAdmin = true;
+          localStorage.setItem("isAdmin", "true");
+          location.reload();
+        } else if (pwd !== null) {
+          alert("密码错误");
+        }
+      }
+    }
 
-      const page = item.pdfLocator && item.pdfLocator.page ? item.pdfLocator.page : 1;
-      const href = item.pdf ? `${item.pdf}#page=${page}` : "#";
-      const previewClass = `preview-card ${item.previewType || "text"}`;
+    let videosLoaded = false;
+    let videoData = [];
 
-      const previewHtml = item.previewImage
-        ? `<img class="preview-image" src="${escapeHtml(item.previewImage)}" alt="${escapeHtml(title)}" />`
-        : `<div class="${escapeHtml(previewClass)}"><div class="preview-label">${escapeHtml(item.previewTitle || title)}</div><div class="preview-body">${item.snippet}</div></div>`;
+    async function openVideoGallery() {
+      const modal = document.getElementById("videoModal");
+      const grid = document.getElementById("videoGrid");
 
-      return `
-        <a class="result-item" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
-          <div class="result-type">${escapeHtml(item.kind || "text")}</div>
-          <div class="result-title">${escapeHtml(title)}</div>
-          <div class="result-meta">${escapeHtml(metaText)} · 第 ${escapeHtml(String(page))} 页</div>
-          ${previewHtml}
-        </a>
-      `;
-    }).join("");
-  }
+      document.getElementById("videoGallery").style.display = "block";
+      document.getElementById("videoViewer").style.display = "none";
 
-  async function loadBooks() {
-    const res = await fetch("books.json");
-    const books = await res.json();
-
-    const shelf = document.getElementById("bookshelf");
-    shelf.innerHTML = "";
-
-    books.forEach((book, i) => {
-      const color = colors[i % colors.length];
-      const title = book.title || formatTitle(book.file);
-      const spine = formatUpperSpine(book.file.replace(/\.pdf$/i, ""));
-      const desc = book.desc || "Auto-compiled from LaTeX";
-      const href = `pdf/${book.file}`;
-
-      const a = document.createElement("a");
-      a.className = "book-item";
-      a.href = href;
-      a.target = "_blank";
-
-      a.innerHTML = `
-        <div class="book" style="background: linear-gradient(180deg, ${color[0]}, ${color[1]});">
-          <div class="book-content">
-            <div class="book-title">${spine}</div>
-            <div class="book-footer">
-              ${desc}<br>
-              Click to open PDF
+      if (!videosLoaded) {
+        try {
+          const resp = await fetch("video/videos.json");
+          videoData = await resp.json();
+          grid.innerHTML = videoData.map((v, i) => `
+            <div class="video-card" onclick="openVideoViewer(${i})">
+              <div class="video-thumb-wrap">
+                <video class="video-thumb-video" id="thumb-${i}" src="${v.file}" muted preload="metadata"></video>
+                <div class="video-play-icon"></div>
+              </div>
+              <div class="video-card-name">${v.name}</div>
             </div>
-          </div>
-        </div>
-        <div class="book-name">${title}</div>
-        <div class="book-desc">${book.subtitle || ""}</div>
-      `;
-
-      shelf.appendChild(a);
-    });
-  }
-
-  async function loadSearchIndex() {
-    try {
-      const res = await fetch("./public/search-index.previews.json");
-      if (!res.ok) {
-        throw new Error("search-index.previews.json not found");
+          `).join("");
+          videoData.forEach((_, i) => {
+            const vid = document.getElementById(`thumb-${i}`);
+            vid.addEventListener("loadedmetadata", () => {
+              vid.currentTime = Math.min(3, vid.duration - 0.1);
+            });
+          });
+          videosLoaded = true;
+        } catch (e) {
+          grid.innerHTML = "<p style='color:#888;padding:16px'>暂无视频</p>";
+        }
       }
-      searchIndex = await res.json();
-    } catch (error) {
-      console.error("[search] Failed to load search-index.previews.json", error);
-      searchIndex = [];
+
+      modal.classList.add("open");
     }
-  }
 
-  function bindSearchEvents() {
-    const input = document.getElementById("searchInput");
-    const shell = document.getElementById("searchShell");
+    function openVideoViewer(index) {
+      const v = videoData[index];
+      const viewer = document.getElementById("videoViewer");
+      const viewerVideo = document.getElementById("viewerVideo");
+      document.getElementById("viewerName").textContent = v.name;
+      viewerVideo.muted = false;
+      viewerVideo.src = v.file;
+      document.getElementById("videoGallery").style.display = "none";
+      viewer.style.display = "block";
+    }
 
-    input.addEventListener("focus", () => {
-      shell.classList.add("focused");
+    function closeVideoViewer() {
+      const viewerVideo = document.getElementById("viewerVideo");
+      viewerVideo.pause();
+      viewerVideo.src = "";
+      document.getElementById("videoViewer").style.display = "none";
+      document.getElementById("videoGallery").style.display = "block";
+    }
+
+    function closeVideoGallery() {
+      const viewerVideo = document.getElementById("viewerVideo");
+      viewerVideo.pause();
+      viewerVideo.src = "";
+      document.getElementById("videoModal").classList.remove("open");
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeVideoGallery();
     });
 
-    input.addEventListener("blur", () => {
-      shell.classList.remove("focused");
-    });
+    function formatTitle(name) {
+      return name
+        .replace(/^dx[-_]?/i, "")
+        .replace(/[-_]/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase());
+    }
 
-    input.addEventListener("input", (e) => {
-      renderSearchResults(e.target.value);
-    });
+    function formatUpperSpine(name) {
+      return formatTitle(name);
+    }
 
-    document.addEventListener("keydown", (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        input.focus();
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function countOccurrences(text, query) {
+      if (!text || !query) return 0;
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const matches = text.toLowerCase().match(new RegExp(escaped, "g"));
+      return matches ? matches.length : 0;
+    }
+
+    function makeSnippet(content, query, radius = 60) {
+      if (!content) return "";
+      const lower = content.toLowerCase();
+      const q = query.toLowerCase();
+      const index = lower.indexOf(q);
+
+      if (index === -1) {
+        return escapeHtml(content.slice(0, radius * 2).trim());
       }
-    });
-  }
 
-  async function init() {
-    await Promise.all([loadBooks(), loadSearchIndex()]);
-    bindSearchEvents();
-  }
+      const start = Math.max(0, index - radius);
+      const end = Math.min(content.length, index + q.length + radius);
+      let snippet = content.slice(start, end).trim();
 
-  init();
-</script>
+      if (start > 0) snippet = "..." + snippet;
+      if (end < content.length) snippet += "...";
+
+      const escaped = escapeHtml(snippet);
+      const matchedText = snippet.slice(
+        Math.max(0, index - start),
+        Math.max(0, index - start) + q.length
+      );
+      const safeQuery = escapeHtml(matchedText);
+
+      return escaped.replace(
+        new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
+        "<mark>$&</mark>"
+      );
+    }
+
+    function scoreItem(item, query) {
+      const text = (item.text || "").toLowerCase();
+      const blockTitle = (item.blockTitle || "").toLowerCase();
+      const section = (item.section || "").toLowerCase();
+      const subsection = (item.subsection || "").toLowerCase();
+      const kind = (item.kind || "").toLowerCase();
+
+      const textHits = countOccurrences(text, query);
+      const titleHits = countOccurrences(blockTitle, query);
+      const sectionHits = countOccurrences(section, query);
+      const subsectionHits = countOccurrences(subsection, query);
+
+      if (!(textHits > 0 || titleHits > 0 || sectionHits > 0 || subsectionHits > 0)) {
+        return 0;
+      }
+
+      let score = 0;
+
+      if (["definition", "theorem", "lemma", "proposition"].includes(kind)) {
+        score += 40;
+      } else if (["corollary", "example", "remark", "note", "dxtips"].includes(kind)) {
+        score += 22;
+      }
+
+      if (textHits > 0) score += 28 + textHits * 12;
+      score += titleHits * 8;
+      score += subsectionHits * 6;
+      score += sectionHits * 4;
+
+      const len = (item.text || "").length;
+      if (len <= 180) score += 10;
+      else if (len <= 320) score += 6;
+      else if (len >= 1400) score -= 15;
+      else if (len >= 900) score -= 8;
+
+      return score;
+    }
+
+    function searchNotes(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) return [];
+
+      const sortedResults = searchIndex
+        .filter(item => canViewRepo(item.repo))
+        .map(item => {
+          const score = scoreItem(item, q);
+          if (score < 35) return null;
+          return {
+            ...item,
+            score,
+            snippet: makeSnippet(item.text || item.blockTitle || "", q)
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) =>
+          b.score !== a.score
+            ? b.score - a.score
+            : String(a.id || "").localeCompare(String(b.id || ""))
+        );
+
+      const limited = [];
+      const repoCount = new Map();
+
+      for (const item of sortedResults) {
+        const repo = item.repo || "unknown";
+        const n = repoCount.get(repo) || 0;
+        if (n >= 3) continue;
+        repoCount.set(repo, n + 1);
+        limited.push(item);
+        if (limited.length >= 12) break;
+      }
+
+      return limited;
+    }
+
+    function renderSearchResults(query) {
+      const meta = document.getElementById("searchMeta");
+      const box = document.getElementById("searchResults");
+      const shelf = document.getElementById("bookshelf");
+      const trimmed = query.trim();
+
+      if (!trimmed) {
+        box.classList.remove("show");
+        box.innerHTML = "";
+        meta.textContent = "";
+        shelf.classList.remove("dimmed");
+        return;
+      }
+
+      shelf.classList.add("dimmed");
+      const results = searchNotes(trimmed);
+      box.classList.add("show");
+
+      if (results.length === 0) {
+        meta.textContent = "没有找到匹配结果";
+        box.innerHTML = `<div class="result-empty">没有找到和 “${escapeHtml(trimmed)}” 对应的内容。</div>`;
+        return;
+      }
+
+      meta.textContent = `找到 ${results.length} 条结果`;
+
+      box.innerHTML = results.map(item => {
+        const title = item.previewTitle || item.blockTitle || item.title || "Untitled";
+        const metaText = [item.title].filter(Boolean).join(" · ");
+        const page = item.previewClip?.page || item.pdfLocator?.page || 1;
+        const href = item.pdf ? `${item.pdf}#page=${page}` : "#";
+
+        const previewHtml = item.previewImage
+          ? `<img class="preview-image" src="${escapeHtml(item.previewImage)}" alt="${escapeHtml(title)}" />`
+          : `<div class="preview-body">${item.snippet}</div>`;
+
+        return `
+          <a class="result-item" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
+            <div class="result-type">${escapeHtml(item.kind || "text")}</div>
+            <div class="result-title">${escapeHtml(title)}<\/div>
+            <div class="result-meta">${escapeHtml(metaText)} · 第 ${escapeHtml(String(page))} 页<\/div>
+            ${previewHtml}
+          <\/a>
+        `;
+      }).join("");
+    }
+
+    async function loadBooks() {
+      const res = await fetch("/books.json");
+      if (!res.ok) throw new Error("books.json not found");
+      const books = await res.json();
+
+      const shelf = document.getElementById("bookshelf");
+      shelf.innerHTML = "";
+
+      books
+        .filter(book => canViewRepo(book.file.replace(/\.pdf$/i, "")))
+        .forEach((book, i) => {
+          const color = colors[i % colors.length];
+          const title = book.title || formatTitle(book.file);
+          const spine = formatUpperSpine(book.file.replace(/\.pdf$/i, ""));
+          const desc = book.desc || "Auto-compiled from LaTeX";
+          const href = `/pdf/${book.file}`;
+
+          const a = document.createElement("a");
+          a.className = "book-item";
+          a.href = href;
+          a.target = "_blank";
+
+          a.innerHTML = `
+            <div class="book" style="background: linear-gradient(180deg, ${color[0]}, ${color[1]});">
+              <div class="book-content">
+                <div class="book-title">${spine}<\/div>
+                <div class="book-footer">${desc}<br>Click to open PDF<\/div>
+              <\/div>
+            <\/div>
+            <div class="book-name">${title}<\/div>
+            <div class="book-desc">${book.subtitle || ""}<\/div>
+          `;
+
+          shelf.appendChild(a);
+        });
+    }
+
+    async function loadSearchIndex() {
+      try {
+        const res = await fetch("/public/search-index.previews.json");
+        if (!res.ok) throw new Error("search-index.previews.json not found");
+        searchIndex = await res.json();
+      } catch (error) {
+        console.error("[search] Failed to load search-index.previews.json", error);
+        searchIndex = [];
+      }
+    }
+
+    function bindSearchEvents() {
+      const input = document.getElementById("searchInput");
+      const shell = document.getElementById("searchShell");
+
+      input.addEventListener("focus", () => shell.classList.add("focused"));
+      input.addEventListener("blur", () => shell.classList.remove("focused"));
+      input.addEventListener("input", (e) => renderSearchResults(e.target.value));
+
+      document.addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+          e.preventDefault();
+          input.focus();
+        }
+      });
+    }
+
+    function initHeroCarousel() {
+      const track = document.getElementById("heroTrack");
+      const dotsWrap = document.getElementById("heroDots");
+      if (!track || !dotsWrap) return;
+
+      const slides = [...track.querySelectorAll(".hero-slide")];
+      const videos = slides.map(slide => slide.querySelector("video")).filter(Boolean);
+      if (videos.length === 0) return;
+
+      let current = 0;
+      let switching = false;
+
+      dotsWrap.innerHTML = videos
+        .map((_, i) => `<span class="hero-dot ${i === 0 ? "active" : ""}"></span>`)
+        .join("");
+
+      // 在末尾追加第一张的克隆，实现无缝正向循环
+      const cloneSlide = slides[0].cloneNode(true);
+      track.appendChild(cloneSlide);
+      const cloneVideo = cloneSlide.querySelector("video");
+      if (cloneVideo) {
+        cloneVideo.muted = true;
+        cloneVideo.setAttribute("muted", "");
+        cloneVideo.playsInline = true;
+      }
+
+      const dots = [...dotsWrap.querySelectorAll(".hero-dot")];
+
+      function updateDots(idx) {
+        const i = idx !== undefined ? idx : current;
+        dots.forEach((dot, j) => dot.classList.toggle("active", j === i));
+      }
+
+      function moveTrack(animated) {
+        track.style.transition = animated === false ? "none" : "transform 0.5s ease";
+        track.style.transform = `translateX(-${current * 100}%)`;
+      }
+
+      function pauseInactive() {
+        videos.forEach((video, i) => {
+          if (i !== current) video.pause();
+        });
+        if (cloneVideo) cloneVideo.pause();
+      }
+
+      function preloadNext() {
+        const nextVideo = videos[(current + 1) % videos.length];
+        if (nextVideo) nextVideo.preload = "auto";
+      }
+
+      function playCurrent() {
+        const video = videos[current];
+        if (!video) return;
+
+        moveTrack();
+        updateDots();
+        pauseInactive();
+        preloadNext();
+
+        video.currentTime = 0;
+        video.play().catch(err => console.error("[hero] play failed:", err));
+      }
+
+      function goTo(index) {
+        if (switching) return;
+        switching = true;
+
+        if (index >= videos.length) {
+          // 滑到克隆的第一张（位置 videos.length），动画向左
+          current = videos.length;
+          moveTrack();
+          updateDots(0);
+          if (cloneVideo) { cloneVideo.currentTime = 0; cloneVideo.play().catch(() => {}); }
+
+          // 动画结束后瞬移回真正的第一张
+          setTimeout(() => {
+            current = 0;
+            moveTrack(false);
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+              track.style.transition = "transform 0.5s ease";
+            }));
+            if (cloneVideo) cloneVideo.pause();
+            videos[0].currentTime = 0;
+            videos[0].play().catch(() => {});
+            pauseInactive();
+            switching = false;
+          }, 520);
+          return;
+        }
+
+        current = ((index % videos.length) + videos.length) % videos.length;
+        playCurrent();
+        setTimeout(() => { switching = false; }, 350);
+      }
+
+      videos.forEach((video, i) => {
+        video.muted = true;
+        video.playsInline = true;
+        video.preload = "auto";
+        video.autoplay = i === 0;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+
+        video.addEventListener("ended", () => {
+          if (i === current) {
+            goTo(current + 1);
+          }
+        });
+
+        video.addEventListener("error", () => {
+          console.error(`[hero] video ${i + 1} failed`);
+        });
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => goTo(i));
+      });
+
+      playCurrent();
+
+      // 触摸滑动切换
+      const carousel = document.getElementById("heroCarousel");
+      let touchStartX = 0;
+      carousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      carousel.addEventListener("touchend", (e) => {
+        const delta = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 40) {
+          goTo(delta > 0 ? current + 1 : current - 1);
+        }
+      }, { passive: true });
+
+      // 触控板横向滑动切换
+      let wheelCooling = false;
+      carousel.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        if (wheelCooling) return;
+        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        if (Math.abs(delta) < 8) return;
+        wheelCooling = true;
+        goTo(delta > 0 ? current + 1 : current - 1);
+        setTimeout(() => { wheelCooling = false; }, 600);
+      }, { passive: false });
+
+      // 点击全屏
+      carousel.addEventListener("click", (e) => {
+        // 点 dot 不触发全屏
+        if (e.target.classList.contains("hero-dot")) return;
+
+        const video = videos[current];
+        if (!video) return;
+
+        const target = video.requestFullscreen
+          ? video
+          : carousel;
+
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          (target.requestFullscreen || target.webkitRequestFullscreen || target.mozRequestFullScreen).call(target);
+        }
+      });
+    }
+
+    async function init() {
+      try {
+        updateAdminBtn();
+        await loadVisibility();
+        await Promise.all([loadBooks(), loadSearchIndex()]);
+        bindSearchEvents();
+        initHeroCarousel();
+      } catch (e) {
+        console.error("[init] failed", e);
+      }
+    }
+
+    init();
+  </script>
 </body>
 </html>
