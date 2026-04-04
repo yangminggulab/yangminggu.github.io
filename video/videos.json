@@ -2,5 +2,49 @@
   {
     "file": "video/1.mp4",
     "name": "1.mp4"
+  },
+  {
+    "file": "video/2.mp4",
+    "name": "2.mp4"
+  },
+  {
+    "file": "video/3.mp4",
+    "name": "3.mp4"
+  },
+  {
+    "file": "video/4.mp4",
+    "name": "4.mp4"
+  },
+  {
+    "file": "video/三种边界条件.mp4",
+    "name": "三种边界条件.mp4"
+  },
+  {
+    "file": "video/协方差的意义.mp4",
+    "name": "协方差的意义.mp4"
+  },
+  {
+    "file": "video/固定点压缩映射.mp4",
+    "name": "固定点压缩映射.mp4"
+  },
+  {
+    "file": "video/复平面基础.mp4",
+    "name": "复平面基础.mp4"
+  },
+  {
+    "file": "video/复数直观理解.mp4",
+    "name": "复数直观理解.mp4"
+  },
+  {
+    "file": "video/波函数.mp4",
+    "name": "波函数.mp4"
+  },
+  {
+    "file": "video/特征线.mp4",
+    "name": "特征线.mp4"
+  },
+  {
+    "file": "video/罗宾边界条件补充.mp4",
+    "name": "罗宾边界条件补充.mp4"
   }
 ]
