@@ -52,6 +52,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/build_notes.py
 
+      - name: Check synctex generation
+        run: |
+          echo "=== synctex files in temp_repos ==="
+          find temp_repos -name "*.synctex.gz" 2>/dev/null && echo "(listed above)" || echo "NONE FOUND"
+          echo "=== notes_manifest.json synctex fields ==="
+          python3 -c "
+          import json
+          m = json.load(open('notes_manifest.json'))
+          for item in m:
+              s = item.get('synctex')
+              exists = __import__('os').path.exists(s) if s else False
+              print(f\"  {item['repo']}: synctex={'SET' if s else 'NULL'}, exists={exists}\")
+          "
+
       - name: Build search index
         run: npx tsx scripts/build-search-index.ts
 
