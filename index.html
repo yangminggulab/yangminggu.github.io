@@ -37,15 +37,14 @@
 
   .search-row {
     position: relative;
-    max-width: 900px;
-    margin: 49px auto 42px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 49px 0 42px;
   }
 
   .admin-bar {
-    position: absolute;
-    right: calc(100% + 16px);
-    top: 50%;
-    transform: translateY(-50%);
+    flex-shrink: 0;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -179,7 +178,7 @@
 
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
   }
 
@@ -302,6 +301,8 @@
   .search-wrap {
     position: relative;
     z-index: 20;
+    flex: 1;
+    max-width: 900px;
   }
 
   .search-shell {
@@ -566,17 +567,6 @@
       padding: 26px 18px 56px;
     }
 
-    .search-row {
-      position: static;
-    }
-
-    .admin-bar {
-      position: absolute;
-      right: 18px;
-      top: 50px;
-      left: auto;
-      transform: translateY(-50%);
-    }
 
     h1 {
       font-size: 42px;
@@ -633,7 +623,7 @@
 
     <div class="search-row">
       <div class="admin-bar">
-        <button id="adminBtn" class="admin-btn" onclick="toggleAdmin()">管理员</button>
+        <button id="adminBtn" class="admin-btn" onclick="toggleAdmin()">管理员登录</button>
         <button class="admin-btn video-btn" onclick="openVideoGallery()">视频</button>
       </div>
       <div class="search-wrap">
@@ -987,9 +977,19 @@
     }
 
     async function loadBooks() {
-      const res = await fetch("/books.json");
-      if (!res.ok) throw new Error("books.json not found");
-      const books = await res.json();
+      const [booksRes, stateRes] = await Promise.all([
+        fetch("/books.json"),
+        fetch("/build_state.json").catch(() => null),
+      ]);
+      if (!booksRes.ok) throw new Error("books.json not found");
+      const books = await booksRes.json();
+      const state = stateRes?.ok ? await stateRes.json() : {};
+
+      books.sort((a, b) => {
+        const ta = state[a.file.replace(/\.pdf$/i, "")] || "";
+        const tb = state[b.file.replace(/\.pdf$/i, "")] || "";
+        return tb.localeCompare(ta);
+      });
 
       const shelf = document.getElementById("bookshelf");
       shelf.innerHTML = "";
