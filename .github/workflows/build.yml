@@ -40,6 +40,9 @@ jobs:
           packages: latexmk texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-chinese biber fonts-noto-cjk fonts-noto-cjk-extra
           version: 1.1
 
+      - name: Rebuild XeLaTeX format
+        run: fmtutil-user --byfmt xelatex
+
       - name: Install elegantbook class
         run: |
           mkdir -p ~/texmf/tex/latex/elegantbook
