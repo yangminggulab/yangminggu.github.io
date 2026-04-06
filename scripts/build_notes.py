@@ -126,6 +126,13 @@ for repo in repos:
 
     if need_compile:
         print(f"  -> compiling {main_tex}")
+        print(f"  -> main.tex first 10 lines:")
+        try:
+            for i, line in enumerate(main_tex.read_text(errors="replace").splitlines()[:10], 1):
+                print(f"     {i}: {line}")
+        except Exception as e:
+            print(f"     (could not read: {e})")
+
         log_path = tex_dir / "build.log"
         with open(log_path, "w") as log_f:
             result = subprocess.run(
@@ -144,10 +151,19 @@ for repo in repos:
             )
         print(f"  -> latexmk exit code: {result.returncode}")
         if result.returncode != 0:
-            print("  -> COMPILE FAILED, last 40 lines of log:")
-            lines = log_path.read_text(errors="replace").splitlines()
-            for line in lines[-40:]:
-                print(f"     {line}")
+            log_text = log_path.read_text(errors="replace") if log_path.exists() else ""
+            main_log = tex_dir / "main.log"
+            if main_log.exists():
+                log_text = main_log.read_text(errors="replace")
+                print("  -> COMPILE FAILED, last 60 lines of main.log:")
+                for line in log_text.splitlines()[-60:]:
+                    print(f"     {line}")
+            elif log_text:
+                print("  -> COMPILE FAILED, last 40 lines of build.log:")
+                for line in log_text.splitlines()[-40:]:
+                    print(f"     {line}")
+            else:
+                print("  -> COMPILE FAILED, no log file produced (xelatex crashed at startup)")
         compiled += 1
     else:
         print("  -> no update, skipping compile")
