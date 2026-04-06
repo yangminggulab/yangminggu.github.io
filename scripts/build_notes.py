@@ -201,6 +201,7 @@ for repo in repos:
         state[name] = latest_commit
     else:
         print("  -> pdf not produced")
+        continue
 
     if synctex_path and synctex_path.exists():
         print(f"  -> synctex chosen: {synctex_path.name}")
