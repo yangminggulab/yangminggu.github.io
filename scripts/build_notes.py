@@ -55,7 +55,12 @@ books = []
 manifest = []
 
 existing_books = {}
+seen_lower = set()
 for pdf_file in OUTPUT_DIR.glob("*.pdf"):
+    key = pdf_file.name.lower()
+    if key in seen_lower:
+        continue
+    seen_lower.add(key)
     existing_books[pdf_file.name] = {
         "file": pdf_file.name,
         "title": pdf_file.stem.replace("dx-", "").replace("-", " ").title(),
