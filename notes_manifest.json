@@ -28,6 +28,13 @@
     "synctex": null
   },
   {
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/home/runner/work/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": null
+  },
+  {
     "repo": "dx-PDE",
     "title": "Pde",
     "pdf": "pdf/dx-PDE.pdf",
