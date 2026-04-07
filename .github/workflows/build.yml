@@ -8,66 +8,36 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: ghcr.io/xu-cheng/texlive-full
     permissions:
       contents: write
 
     steps:
+      - name: Install Python and Node
+        run: apk add --no-cache python3 py3-pip nodejs npm
+
       - name: Checkout website repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Install Python dependencies
-        run: python -m pip install -r requirements.txt
+        run: pip3 install -r requirements.txt --break-system-packages
 
       - name: Install Node dependencies
         run: npm install
 
-      - name: Cache LaTeX packages
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: latexmk texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-chinese biber fonts-noto-cjk fonts-noto-cjk-extra
-          version: 1.3
-
-      - name: Build TeX format files
-        run: sudo fmtutil-sys --missing
-
       - name: Install elegantbook class
         run: |
-          mkdir -p ~/texmf/tex/latex/elegantbook
+          mkdir -p /root/texmf/tex/latex/elegantbook
           curl -L https://raw.githubusercontent.com/ElegantLaTeX/ElegantBook/master/elegantbook.cls \
-            -o ~/texmf/tex/latex/elegantbook/elegantbook.cls
-          texhash ~/texmf
+            -o /root/texmf/tex/latex/elegantbook/elegantbook.cls
+          texhash /root/texmf
 
       - name: Run Python build script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/build_notes.py
-
-      - name: Check synctex generation
-        run: |
-          echo "=== synctex files in temp_repos ==="
-          find temp_repos -name "*.synctex.gz" 2>/dev/null && echo "(listed above)" || echo "NONE FOUND"
-          echo "=== notes_manifest.json synctex fields ==="
-          python3 -c "
-          import json
-          m = json.load(open('notes_manifest.json'))
-          for item in m:
-              s = item.get('synctex')
-              exists = __import__('os').path.exists(s) if s else False
-              print(f\"  {item['repo']}: synctex={'SET' if s else 'NULL'}, exists={exists}\")
-          "
+        run: python3 scripts/build_notes.py
 
       - name: Build search index
         run: npx tsx scripts/build-search-index.ts
@@ -76,12 +46,102 @@ jobs:
         run: npx tsx scripts/enrich-search-index.ts
 
       - name: Render search previews
-        run: python scripts/render_search_previews.py
+        run: python3 scripts/render_search_previews.py
+
+      - name: Build diagnostics
+        if: always()
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          from pathlib import Path
+          from collections import Counter
+
+          SEP = "=" * 60
+
+          # ── 1. TeX environment ──────────────────────────────────────
+          print(SEP)
+          print("1. TEX ENVIRONMENT")
+          for f in ["~/.latexmkrc", "/etc/latexmkrc"]:
+              p = Path(f).expanduser()
+              print(f"  {f}: {'EXISTS → ' + p.read_text()[:200] if p.exists() else 'not found'}")
+
+          # ── 2. Per-repo compile results ─────────────────────────────
+          print(SEP)
+          print("2. PER-REPO COMPILE RESULTS")
+          temp = Path("temp_repos")
+          manifest = json.loads(Path("notes_manifest.json").read_text()) if Path("notes_manifest.json").exists() else []
+          repos_in_manifest = {x["repo"] for x in manifest}
+
+          for repo_dir in sorted(temp.iterdir()) if temp.exists() else []:
+              if not repo_dir.is_dir():
+                  continue
+              pdf = list(repo_dir.glob("*.pdf")) + list(repo_dir.glob("**/*.pdf"))
+              stx = list(repo_dir.glob("*.synctex*")) + list(repo_dir.glob("**/*.synctex*"))
+              log = repo_dir / "main.log"
+              errors = []
+              if log.exists():
+                  for line in log.read_text(errors="replace").splitlines():
+                      if line.startswith("!"):
+                          errors.append(line)
+              status = []
+              status.append("PDF=" + (pdf[0].name if pdf else "MISSING"))
+              status.append("SYNCTEX=" + (stx[0].name if stx else "MISSING"))
+              if errors:
+                  status.append(f"ERRORS({len(errors)})")
+              in_manifest = "in_manifest" if repo_dir.name in repos_in_manifest else "NOT_IN_MANIFEST"
+              print(f"  {repo_dir.name}: {', '.join(status)}, {in_manifest}")
+              for e in errors[:3]:
+                  print(f"    {e}")
+
+          # ── 3. Manifest summary ─────────────────────────────────────
+          print(SEP)
+          print("3. MANIFEST SUMMARY")
+          for item in manifest:
+              s = item.get("synctex")
+              exists = os.path.exists(s) if s else False
+              print(f"  {item['repo']}: synctex={'SET,exists=' + str(exists) if s else 'NULL'}")
+
+          # ── 4. Search index ─────────────────────────────────────────
+          print(SEP)
+          print("4. SEARCH INDEX")
+          for fname, label in [
+              ("public/search-index.json", "search-index"),
+              ("public/search-index.enriched.json", "enriched"),
+              ("public/search-index.previews.json", "previews"),
+          ]:
+              p = Path(fname)
+              if not p.exists():
+                  print(f"  {label}: MISSING")
+                  continue
+              data = json.loads(p.read_text())
+              if label == "previews":
+                  reasons = Counter(x.get("previewDebug", "success") for x in data)
+                  print(f"  {label}: {len(data)} blocks")
+                  for k, v in reasons.most_common():
+                      print(f"    {k}: {v}")
+              elif label == "enriched":
+                  reasons = Counter(x.get("debugReason", "ok") for x in data)
+                  print(f"  {label}: {len(data)} blocks")
+                  for k, v in reasons.most_common():
+                      print(f"    {k}: {v}")
+              else:
+                  print(f"  {label}: {len(data)} blocks")
+
+          # ── 5. Preview images ───────────────────────────────────────
+          print(SEP)
+          print("5. PREVIEW IMAGES")
+          img_dir = Path("public/search-previews")
+          imgs = list(img_dir.glob("*.png")) if img_dir.exists() else []
+          print(f"  {len(imgs)} PNG files in public/search-previews/")
+
+          print(SEP)
+          EOF
 
       - name: Commit updated files
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git config --global --add safe.directory /__w/yangminggu.github.io/yangminggu.github.io
           git add -A index.html pdf books.json build_state.json notes_manifest.json public video/videos.json
           echo "== git status before commit =="
           git status --short
