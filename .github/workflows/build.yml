@@ -41,7 +41,7 @@ jobs:
           version: 1.2
 
       - name: Build TeX format files
-        run: fmtutil-user --missing
+        run: sudo fmtutil-sys --missing
 
       - name: Install elegantbook class
         run: |
