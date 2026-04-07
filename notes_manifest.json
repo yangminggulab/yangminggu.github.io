@@ -35,6 +35,13 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz"
   },
   {
+    "repo": "dx-Numerical-ODEs",
+    "title": "Numerical Odes",
+    "pdf": "pdf/dx-Numerical-ODEs.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Numerical-ODEs/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Numerical-ODEs/main.synctex.gz"
+  },
+  {
     "repo": "dx-PDE",
     "title": "Pde",
     "pdf": "pdf/dx-PDE.pdf",
