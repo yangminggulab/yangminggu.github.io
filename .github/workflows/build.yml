@@ -38,7 +38,7 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: latexmk texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-chinese biber fonts-noto-cjk fonts-noto-cjk-extra
-          version: 1.2
+          version: 1.3
 
       - name: Build TeX format files
         run: sudo fmtutil-sys --missing
