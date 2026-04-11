@@ -2,5 +2,7 @@
   "dx-sql": false,
   "dx-Mathematical-Statistics": false,
   "dx-ML": false,
-  "dx-Numerical-ODEs":false
+  "dx-Numerical-ODEs":false,
+  "dx-python-pandas":false
+  
 }
