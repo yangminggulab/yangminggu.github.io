@@ -49,6 +49,13 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-PDE/main.synctex.gz"
   },
   {
+    "repo": "dx-python-pandas",
+    "title": "Python Pandas",
+    "pdf": "pdf/dx-python-pandas.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-python-pandas/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-python-pandas/main.synctex.gz"
+  },
+  {
     "repo": "dx-real-analysis",
     "title": "Real Analysis",
     "pdf": "pdf/dx-real-analysis.pdf",
