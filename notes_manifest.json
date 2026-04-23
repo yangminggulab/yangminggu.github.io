@@ -49,31 +49,10 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-PDE/main.synctex.gz"
   },
   {
-    "repo": "dx-python-pandas",
-    "title": "Python Pandas",
-    "pdf": "pdf/dx-python-pandas.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-python-pandas/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-python-pandas/main.synctex.gz"
-  },
-  {
-    "repo": "dx-real-analysis",
-    "title": "Real Analysis",
-    "pdf": "pdf/dx-real-analysis.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-real-analysis/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-real-analysis/main.synctex.gz"
-  },
-  {
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz"
-  },
-  {
-    "repo": "dx-topology",
-    "title": "Topology",
-    "pdf": "pdf/dx-topology.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-topology/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-topology/main.synctex.gz"
   }
 ]
