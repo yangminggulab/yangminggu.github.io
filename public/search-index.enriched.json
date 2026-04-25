@@ -43654,6 +43654,254 @@
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "渐进相对效率",
+    "previewType": "note",
+    "previewTitle": "渐进相对效率",
+    "rawContent": "\\begin{note}\n    设 $(X_1, X_2, \\cdots, X_n)^\\mathrm{T}$ 为来自于分布 $F(x,\\theta)$ 的样本，$\\hat{\\theta}_{1n}$ 和 $\\hat{\\theta}_{2n}$ 为 $\\theta$ 的两个不同的估计量，分别满足\n\\[\n\\sqrt{n}(\\hat{\\theta}_{1n} - \\theta) \\xrightarrow{L} N(0, \\sigma_1^2), \\qquad \\sqrt{n}(\\hat{\\theta}_{2n} - \\theta) \\xrightarrow{L} N(0, \\sigma_2^2),\n\\]\n称 $\\sigma_1^2/\\sigma_2^2$ 为 $\\hat{\\theta}_{2n}$ 相对于 $\\hat{\\theta}_{1n}$ 的\\textbf{渐近效率}．\n\\end{note}",
+    "content": "\\begin{note}\n    设 $(X_1, X_2, \\cdots, X_n)^\\mathrm{T}$ 为来自于分布 $F(x,\\theta)$ 的样本，$\\hat{\\theta}_{1n}$ 和 $\\hat{\\theta}_{2n}$ 为 $\\theta$ 的两个不同的估计量，分别满足\n\\[\n\\sqrt{n}(\\hat{\\theta}_{1n} - \\theta) \\xrightarrow{L} N(0, \\sigma_1^2), \\qquad \\sqrt{n}(\\hat{\\theta}_{2n} - \\theta) \\xrightarrow{L} N(0, \\sigma_2^2),\n\\]\n称 $\\sigma_1^2/\\sigma_2^2$ 为 $\\hat{\\theta}_{2n}$ 相对于 $\\hat{\\theta}_{1n}$ 的\\textbf{渐近效率}．\n\\end{note}",
+    "text": "设 为来自于分布 的样本， 和 为 的两个不同的估计量，分别满足 称 为 相对于 的渐近效率．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 535,
+    "endLine": 541,
+    "pdfLocator": {
+      "page": 25,
+      "x": 56.692924,
+      "y": 152.169296,
+      "h": 56.692924,
+      "v": 152.169296,
+      "W": -22.139221,
+      "H": 12.901418
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-102",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "渐进相对效率",
+    "previewType": "theorem",
+    "previewTitle": "渐进相对效率",
+    "rawContent": "\\begin{theorem}[渐近效率]\n\n\n进一步，设 $\\hat{\\theta}_n$ 为 $\\theta$ 的基于样本 $(X_1, X_2, \\cdots, X_n)^\\mathrm{T}$ 的估计量，满足 $\\sqrt{n}(\\hat{\\theta}_n - \\theta) \\xrightarrow{L} N(0, \\sigma_1^2)$．若样本容量 $n$ 的整函数 $m = m(n)$ 满足\n\\[\n\\lim_{n \\to \\infty} \\frac{m(n)}{n} = \\gamma \\quad (\\gamma > 0),\n\\]\n则\n\\[\n\\sqrt{n}\\!\\left(\\hat{\\theta}_{m(n)} - \\theta\\right) \\xrightarrow{L} N\\!\\left(0,\\ \\frac{\\sigma_1^2}{\\gamma}\\right).\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[渐近效率]\n\n\n进一步，设 $\\hat{\\theta}_n$ 为 $\\theta$ 的基于样本 $(X_1, X_2, \\cdots, X_n)^\\mathrm{T}$ 的估计量，满足 $\\sqrt{n}(\\hat{\\theta}_n - \\theta) \\xrightarrow{L} N(0, \\sigma_1^2)$．若样本容量 $n$ 的整函数 $m = m(n)$ 满足\n\\[\n\\lim_{n \\to \\infty} \\frac{m(n)}{n} = \\gamma \\quad (\\gamma > 0),\n\\]\n则\n\\[\n\\sqrt{n}\\!\\left(\\hat{\\theta}_{m(n)} - \\theta\\right) \\xrightarrow{L} N\\!\\left(0,\\ \\frac{\\sigma_1^2}{\\gamma}\\right).\n\\]\n\\end{theorem}",
+    "text": "[渐近效率] 进一步，设 为 的基于样本 的估计量，满足 ．若样本容量 的整函数 满足 则",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 542,
+    "endLine": 553,
+    "pdfLocator": {
+      "page": 25,
+      "x": 56.692924,
+      "y": 324.968262,
+      "h": 56.692924,
+      "v": 324.968262,
+      "W": 105.834717,
+      "H": 16.441458
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-103",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "渐进相对效率",
+    "previewType": "tip",
+    "previewTitle": "渐进相对效率",
+    "rawContent": "\\begin{dxtips}\n    渐近效率本质上是在回答一个问题：两个估计量，谁用更少的数据就能达到同样的精度？\n  \n    \\textbf{核心直觉}\n\n$\\hat{\\theta}_{2n}$ 相对于 $\\hat{\\theta}_{1n}$ 的渐近效率是 $e = \\sigma_1^2/\\sigma_2^2$．这个比值的含义是：用 $\\hat{\\theta}_{1n}$ 需要 $n$ 个样本才能达到的精度，用 $\\hat{\\theta}_{2n}$ 只需要 $en$ 个样本就够了．定理 3.4.7 正是在严格化这句话——如果把样本量从 $n$ 缩减到 $m(n) \\approx \\gamma n$，估计量的渐近方差就从 $\\sigma_1^2$ 膨胀到 $\\sigma_1^2/\\gamma$．\n\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    渐近效率本质上是在回答一个问题：两个估计量，谁用更少的数据就能达到同样的精度？\n  \n    \\textbf{核心直觉}\n\n$\\hat{\\theta}_{2n}$ 相对于 $\\hat{\\theta}_{1n}$ 的渐近效率是 $e = \\sigma_1^2/\\sigma_2^2$．这个比值的含义是：用 $\\hat{\\theta}_{1n}$ 需要 $n$ 个样本才能达到的精度，用 $\\hat{\\theta}_{2n}$ 只需要 $en$ 个样本就够了．定理 3.4.7 正是在严格化这句话——如果把样本量从 $n$ 缩减到 $m(n) \\approx \\gamma n$，估计量的渐近方差就从 $\\sigma_1^2$ 膨胀到 $\\sigma_1^2/\\gamma$．\n\n\\end{dxtips}",
+    "text": "渐近效率本质上是在回答一个问题：两个估计量，谁用更少的数据就能达到同样的精度？ 核心直觉 相对于 的渐近效率是 ．这个比值的含义是：用 需要 个样本才能达到的精度，用 只需要 个样本就够了．定理 3.4.7 正是在严格化这句话——如果把样本量从 缩减到 ，估计量的渐近方差就从 膨胀到 ．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 554,
+    "endLine": 561,
+    "pdfLocator": {
+      "page": 25,
+      "x": 66.655563,
+      "y": 372.285278,
+      "h": 56.692924,
+      "v": 374.19809,
+      "W": 452.547119,
+      "H": 9.623899
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-104",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "区间估计",
+    "kind": "definition",
+    "blockTitle": "区间估计",
+    "previewType": "definition",
+    "previewTitle": "区间估计",
+    "rawContent": "\\begin{definition}[置信区间]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim f(x;\\theta)$，$\\theta \\in \\Theta$，$0 < \\alpha < 1$ 为一个给定的数．若统计量 $\\theta_1(\\boldsymbol{X}) = \\theta_1(X_1, X_2, \\cdots, X_n)$，$\\theta_2(\\boldsymbol{X}) = \\theta_2(X_1, X_2, \\cdots, X_n)$ 满足 $\\theta_1(\\boldsymbol{X}) \\leqslant \\theta_2(\\boldsymbol{X})$，并且\n\\[\nP_\\theta\\{\\theta_1(\\boldsymbol{X}) \\leqslant \\theta \\leqslant \\theta_2(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信区间}．若\n\\[\nP_\\theta\\{\\theta \\leqslant \\theta_2(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $\\theta_2(\\boldsymbol{X})$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信上限}．若\n\\[\nP_\\theta\\{\\theta \\geqslant \\theta_1(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $\\theta_1(\\boldsymbol{X})$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信下限}．\n\\end{definition}",
+    "content": "\\begin{definition}[置信区间]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim f(x;\\theta)$，$\\theta \\in \\Theta$，$0 < \\alpha < 1$ 为一个给定的数．若统计量 $\\theta_1(\\boldsymbol{X}) = \\theta_1(X_1, X_2, \\cdots, X_n)$，$\\theta_2(\\boldsymbol{X}) = \\theta_2(X_1, X_2, \\cdots, X_n)$ 满足 $\\theta_1(\\boldsymbol{X}) \\leqslant \\theta_2(\\boldsymbol{X})$，并且\n\\[\nP_\\theta\\{\\theta_1(\\boldsymbol{X}) \\leqslant \\theta \\leqslant \\theta_2(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信区间}．若\n\\[\nP_\\theta\\{\\theta \\leqslant \\theta_2(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $\\theta_2(\\boldsymbol{X})$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信上限}．若\n\\[\nP_\\theta\\{\\theta \\geqslant \\theta_1(\\boldsymbol{X})\\} \\geqslant 1 - \\alpha, \\quad \\forall \\theta \\in \\Theta,\n\\]\n则称 $\\theta_1(\\boldsymbol{X})$ 是参数 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的\\textbf{置信下限}．\n\\end{definition}",
+    "text": "[置信区间] 设 i.i.d.， ， ， 为一个给定的数．若统计量 ， 满足 ，并且 则称 是参数 的置信度为 的置信区间．若 则称 是参数 的置信度为 的置信上限．若 则称 是参数 的置信度为 的置信下限．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 576,
+    "endLine": 590,
+    "pdfLocator": {
+      "page": 25,
+      "x": 66.655563,
+      "y": 676.508911,
+      "h": 56.692924,
+      "v": 678.999573,
+      "W": 452.547119,
+      "H": 9.96264
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-105",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "区间估计",
+    "kind": "dxtips",
+    "blockTitle": "区间估计",
+    "previewType": "tip",
+    "previewTitle": "区间估计",
+    "rawContent": "\\begin{dxtips}\n    置信区间回答的问题是：能否用数据构造一个区间，使其大概率覆盖未知参数 $\\theta$？约可靠需要的区间长度越长，区间长度越长精度就越低\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    置信区间回答的问题是：能否用数据构造一个区间，使其大概率覆盖未知参数 $\\theta$？约可靠需要的区间长度越长，区间长度越长精度就越低\n\\end{dxtips}",
+    "text": "置信区间回答的问题是：能否用数据构造一个区间，使其大概率覆盖未知参数 ？约可靠需要的区间长度越长，区间长度越长精度就越低",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 591,
+    "endLine": 593,
+    "pdfLocator": {
+      "page": 26,
+      "x": 66.655563,
+      "y": 188.27951,
+      "h": 56.692924,
+      "v": 190.192322,
+      "W": 452.547119,
+      "H": 9.803219
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-106",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "区间估计",
+    "kind": "note",
+    "blockTitle": "区间估计",
+    "previewType": "note",
+    "previewTitle": "区间估计",
+    "rawContent": "\\begin{note}\n\n\n$\\theta$ 是固定的未知常数，而 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 是随机的，随样本变化．置信度 $1-\\alpha$ 的正确含义是：在相同条件下重复抽样，每次用同样的方法构造区间，其中至少有 $100(1-\\alpha)\\%$ 的区间会包含真实的 $\\theta$．\n\n注意一个常见误解：置信度 $1-\\alpha$ \\textbf{并非}指\"$\\theta$ 有 $1-\\alpha$ 的概率落在该区间内\"——$\\theta$ 是常数而非随机变量，随机的是区间本身，而非 $\\theta$．\n\n置信上限与置信下限对应单侧约束：置信上限关心 $\\theta$ 不超过某值，置信下限关心 $\\theta$ 不低于某值，双侧约束即为通常的置信区间．\n\\end{note}",
+    "content": "\\begin{note}\n\n\n$\\theta$ 是固定的未知常数，而 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 是随机的，随样本变化．置信度 $1-\\alpha$ 的正确含义是：在相同条件下重复抽样，每次用同样的方法构造区间，其中至少有 $100(1-\\alpha)\\%$ 的区间会包含真实的 $\\theta$．\n\n注意一个常见误解：置信度 $1-\\alpha$ \\textbf{并非}指\"$\\theta$ 有 $1-\\alpha$ 的概率落在该区间内\"——$\\theta$ 是常数而非随机变量，随机的是区间本身，而非 $\\theta$．\n\n置信上限与置信下限对应单侧约束：置信上限关心 $\\theta$ 不超过某值，置信下限关心 $\\theta$ 不低于某值，双侧约束即为通常的置信区间．\n\\end{note}",
+    "text": "是固定的未知常数，而 是随机的，随样本变化．置信度 的正确含义是：在相同条件下重复抽样，每次用同样的方法构造区间，其中至少有 的区间会包含真实的 ． 注意一个常见误解：置信度 并非指\" 有 的概率落在该区间内\"—— 是常数而非随机变量，随机的是区间本身，而非 ． 置信上限与置信下限对应单侧约束：置信上限关心 不超过某值，置信下限关心 不低于某值，双侧约束即为通常的置信区间．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 594,
+    "endLine": 602,
+    "pdfLocator": {
+      "page": 26,
+      "x": 56.692924,
+      "y": 225.489838,
+      "h": 34.553703,
+      "v": 227.043991,
+      "W": 504.028992,
+      "H": 14.455572
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-107",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "区间估计",
+    "kind": "theorem",
+    "blockTitle": "区间估计",
+    "previewType": "theorem",
+    "previewTitle": "区间估计",
+    "rawContent": "\\begin{theorem}[枢轴量方法]\n构造置信区间的枢轴量方法概括如下：\n\\begin{enumerate}\n    \\item 找一个与被估计量 $\\theta$ 有关的统计量 $T = T(\\boldsymbol{X})$，通常可选取一个点估计量；\n    \\item 构造 $T$ 和被估计量 $\\theta$ 的一个函数 $G(T, \\theta)$，使得其分布与未知参数无关，$G(T, \\theta)$ 称为\\textbf{枢轴量}；\n    \\item 选取 $G(T, \\theta)$ 的一个取值范围 $S$，满足 $P(G(T,\\theta) \\in S) = 1 - \\alpha$，此时 $S$ 与未知参数无关；\n    \\item 将 $G(T, \\theta) \\in S$ 作等价变换，化为 $\\theta_1(\\boldsymbol{X}) \\leqslant \\theta \\leqslant \\theta_2(\\boldsymbol{X})$ 的形式，则 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 即是置信度为 $100(1-\\alpha)\\%$ 的置信区间．\n\\end{enumerate}\n\\end{theorem}",
+    "content": "\\begin{theorem}[枢轴量方法]\n构造置信区间的枢轴量方法概括如下：\n\\begin{enumerate}\n    \\item 找一个与被估计量 $\\theta$ 有关的统计量 $T = T(\\boldsymbol{X})$，通常可选取一个点估计量；\n    \\item 构造 $T$ 和被估计量 $\\theta$ 的一个函数 $G(T, \\theta)$，使得其分布与未知参数无关，$G(T, \\theta)$ 称为\\textbf{枢轴量}；\n    \\item 选取 $G(T, \\theta)$ 的一个取值范围 $S$，满足 $P(G(T,\\theta) \\in S) = 1 - \\alpha$，此时 $S$ 与未知参数无关；\n    \\item 将 $G(T, \\theta) \\in S$ 作等价变换，化为 $\\theta_1(\\boldsymbol{X}) \\leqslant \\theta \\leqslant \\theta_2(\\boldsymbol{X})$ 的形式，则 $[\\theta_1(\\boldsymbol{X}), \\theta_2(\\boldsymbol{X})]$ 即是置信度为 $100(1-\\alpha)\\%$ 的置信区间．\n\\end{enumerate}\n\\end{theorem}",
+    "text": "[枢轴量方法] 构造置信区间的枢轴量方法概括如下： 找一个与被估计量 有关的统计量 ，通常可选取一个点估计量； 构造 和被估计量 的一个函数 ，使得其分布与未知参数无关， 称为枢轴量； 选取 的一个取值范围 ，满足 ，此时 与未知参数无关； 将 作等价变换，化为 的形式，则 即是置信度为 的置信区间．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 603,
+    "endLine": 611,
+    "pdfLocator": {
+      "page": 26,
+      "x": 66.655563,
+      "y": 367.422211,
+      "h": 56.692924,
+      "v": 368.856812,
+      "W": 452.547119,
+      "H": 8.926517
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-108",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "渐进相对效率",
+    "subsection": "区间估计",
+    "kind": "note",
+    "blockTitle": "区间估计",
+    "previewType": "note",
+    "previewTitle": "区间估计",
+    "rawContent": "\\begin{note}\n``枢轴''的意思是转动的轴心，$G(T,\\theta)$ 充当的角色正是如此：它一边连着数据（通过 $\\overline{X}$），一边连着未知参数（通过 $\\mu$），但它自己的分布是固定已知的．可以把它想象成一个翻译器：左边输入数据，右边输出关于 $\\mu$ 的约束，中间的概率计算完全不需要知道 $\\mu$．\n\\end{note}",
+    "content": "\\begin{note}\n``枢轴''的意思是转动的轴心，$G(T,\\theta)$ 充当的角色正是如此：它一边连着数据（通过 $\\overline{X}$），一边连着未知参数（通过 $\\mu$），但它自己的分布是固定已知的．可以把它想象成一个翻译器：左边输入数据，右边输出关于 $\\mu$ 的约束，中间的概率计算完全不需要知道 $\\mu$．\n\\end{note}",
+    "text": "``枢轴''的意思是转动的轴心， 充当的角色正是如此：它一边连着数据（通过 ），一边连着未知参数（通过 ），但它自己的分布是固定已知的．可以把它想象成一个翻译器：左边输入数据，右边输出关于 的约束，中间的概率计算完全不需要知道 ．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第三章.tex",
+    "startLine": 612,
+    "endLine": 614,
+    "pdfLocator": {
+      "page": 26,
+      "x": 56.692924,
+      "y": 466.799561,
+      "h": 56.692924,
+      "v": 466.799561,
+      "W": -22.139221,
+      "H": 12.901418
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-109",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
     "section": "第一周作业",
     "subsection": "",
     "kind": "homework",
@@ -43667,7 +43915,7 @@
     "startLine": 3,
     "endLine": 16,
     "pdfLocator": {
-      "page": 26,
+      "page": 27,
       "x": 56.19479,
       "y": 162.45105,
       "h": 39.337566,
@@ -43679,7 +43927,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-102",
+    "id": "dx-Mathematical-Statistics-110",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43698,7 +43946,7 @@
     "startLine": 17,
     "endLine": 50,
     "pdfLocator": {
-      "page": 26,
+      "page": 27,
       "x": 56.692924,
       "y": 266.054962,
       "h": 56.692924,
@@ -43710,7 +43958,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-103",
+    "id": "dx-Mathematical-Statistics-111",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43729,7 +43977,7 @@
     "startLine": 51,
     "endLine": 60,
     "pdfLocator": {
-      "page": 26,
+      "page": 27,
       "x": 56.19479,
       "y": 634.893555,
       "h": 39.337566,
@@ -43741,7 +43989,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-104",
+    "id": "dx-Mathematical-Statistics-112",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43760,7 +44008,7 @@
     "startLine": 61,
     "endLine": 75,
     "pdfLocator": {
-      "page": 26,
+      "page": 27,
       "x": 69.146225,
       "y": 707.722778,
       "h": 56.692924,
@@ -43772,7 +44020,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-105",
+    "id": "dx-Mathematical-Statistics-113",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43791,7 +44039,7 @@
     "startLine": 76,
     "endLine": 78,
     "pdfLocator": {
-      "page": 27,
+      "page": 28,
       "x": 56.19479,
       "y": 146.323883,
       "h": 39.337566,
@@ -43803,7 +44051,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-106",
+    "id": "dx-Mathematical-Statistics-114",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43822,7 +44070,7 @@
     "startLine": 86,
     "endLine": 104,
     "pdfLocator": {
-      "page": 27,
+      "page": 28,
       "x": 24.625675,
       "y": 388.584656,
       "h": 24.625675,
@@ -43834,7 +44082,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-107",
+    "id": "dx-Mathematical-Statistics-115",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43853,7 +44101,7 @@
     "startLine": 105,
     "endLine": 113,
     "pdfLocator": {
-      "page": 27,
+      "page": 28,
       "x": 56.692924,
       "y": 668.868347,
       "h": 56.692924,
@@ -43865,7 +44113,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-108",
+    "id": "dx-Mathematical-Statistics-116",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43884,7 +44132,7 @@
     "startLine": 114,
     "endLine": 120,
     "pdfLocator": {
-      "page": 27,
+      "page": 28,
       "x": 53.704132,
       "y": 738.806274,
       "h": 39.337566,
@@ -43896,7 +44144,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-109",
+    "id": "dx-Mathematical-Statistics-117",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43915,7 +44163,7 @@
     "startLine": 121,
     "endLine": 160,
     "pdfLocator": {
-      "page": 27,
+      "page": 28,
       "x": 56.692924,
       "y": 56.676338,
       "h": 56.692924,
@@ -43927,7 +44175,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-110",
+    "id": "dx-Mathematical-Statistics-118",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43946,7 +44194,7 @@
     "startLine": 161,
     "endLine": 171,
     "pdfLocator": {
-      "page": 28,
+      "page": 29,
       "x": 56.19479,
       "y": 387.569763,
       "h": 39.337566,
@@ -43958,7 +44206,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-111",
+    "id": "dx-Mathematical-Statistics-119",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -43977,7 +44225,7 @@
     "startLine": 172,
     "endLine": 219,
     "pdfLocator": {
-      "page": 28,
+      "page": 29,
       "x": 69.146225,
       "y": 492.936859,
       "h": 56.692924,
@@ -43989,7 +44237,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-112",
+    "id": "dx-Mathematical-Statistics-120",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44008,7 +44256,7 @@
     "startLine": 220,
     "endLine": 230,
     "pdfLocator": {
-      "page": 29,
+      "page": 30,
       "x": 56.692924,
       "y": 268.891571,
       "h": 56.692924,
@@ -44020,7 +44268,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-113",
+    "id": "dx-Mathematical-Statistics-121",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44039,7 +44287,7 @@
     "startLine": 233,
     "endLine": 235,
     "pdfLocator": {
-      "page": 29,
+      "page": 30,
       "x": 56.19479,
       "y": 319.197937,
       "h": 39.337566,
@@ -44051,7 +44299,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-114",
+    "id": "dx-Mathematical-Statistics-122",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44070,7 +44318,7 @@
     "startLine": 236,
     "endLine": 277,
     "pdfLocator": {
-      "page": 29,
+      "page": 30,
       "x": 69.146225,
       "y": 334.739685,
       "h": 56.692924,
@@ -44082,7 +44330,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-115",
+    "id": "dx-Mathematical-Statistics-123",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44101,7 +44349,7 @@
     "startLine": 278,
     "endLine": 280,
     "pdfLocator": {
-      "page": 29,
+      "page": 30,
       "x": 66.655563,
       "y": 753.500488,
       "h": 56.692924,
@@ -44113,7 +44361,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-116",
+    "id": "dx-Mathematical-Statistics-124",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44132,7 +44380,7 @@
     "startLine": 281,
     "endLine": 287,
     "pdfLocator": {
-      "page": 30,
+      "page": 31,
       "x": 56.19479,
       "y": 81.962631,
       "h": 39.337566,
@@ -44144,7 +44392,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-117",
+    "id": "dx-Mathematical-Statistics-125",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44163,7 +44411,7 @@
     "startLine": 288,
     "endLine": 341,
     "pdfLocator": {
-      "page": 30,
+      "page": 31,
       "x": 69.146225,
       "y": 136.358765,
       "h": 56.692924,
@@ -44175,7 +44423,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-118",
+    "id": "dx-Mathematical-Statistics-126",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44194,7 +44442,7 @@
     "startLine": 342,
     "endLine": 344,
     "pdfLocator": {
-      "page": 30,
+      "page": 31,
       "x": 56.19479,
       "y": 592.039734,
       "h": 39.337566,
@@ -44206,7 +44454,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-119",
+    "id": "dx-Mathematical-Statistics-127",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44225,7 +44473,7 @@
     "startLine": 348,
     "endLine": 350,
     "pdfLocator": {
-      "page": 30,
+      "page": 31,
       "x": 56.19479,
       "y": 684.303894,
       "h": 39.337566,
@@ -44237,7 +44485,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-120",
+    "id": "dx-Mathematical-Statistics-128",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44256,7 +44504,7 @@
     "startLine": 351,
     "endLine": 377,
     "pdfLocator": {
-      "page": 30,
+      "page": 31,
       "x": 69.146225,
       "y": 699.845642,
       "h": 56.692924,
@@ -44268,7 +44516,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-121",
+    "id": "dx-Mathematical-Statistics-129",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44287,7 +44535,7 @@
     "startLine": 378,
     "endLine": 384,
     "pdfLocator": {
-      "page": 31,
+      "page": 32,
       "x": 56.19479,
       "y": 394.705963,
       "h": 39.337566,
@@ -44299,7 +44547,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-122",
+    "id": "dx-Mathematical-Statistics-130",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44318,7 +44566,7 @@
     "startLine": 385,
     "endLine": 387,
     "pdfLocator": {
-      "page": 31,
+      "page": 32,
       "x": 56.692924,
       "y": 475.772034,
       "h": 56.692924,
@@ -44330,7 +44578,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-123",
+    "id": "dx-Mathematical-Statistics-131",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44349,7 +44597,7 @@
     "startLine": 388,
     "endLine": 464,
     "pdfLocator": {
-      "page": 31,
+      "page": 32,
       "x": 69.146225,
       "y": 494.422058,
       "h": 56.692924,
@@ -44361,7 +44609,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-124",
+    "id": "dx-Mathematical-Statistics-132",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44380,7 +44628,7 @@
     "startLine": 465,
     "endLine": 471,
     "pdfLocator": {
-      "page": 32,
+      "page": 33,
       "x": 66.655563,
       "y": 445.442108,
       "h": 56.692924,
@@ -44392,7 +44640,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-125",
+    "id": "dx-Mathematical-Statistics-133",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44411,7 +44659,7 @@
     "startLine": 472,
     "endLine": 515,
     "pdfLocator": {
-      "page": 32,
+      "page": 33,
       "x": 69.146225,
       "y": 501.153229,
       "h": 56.692924,
@@ -44423,7 +44671,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-126",
+    "id": "dx-Mathematical-Statistics-134",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44442,7 +44690,7 @@
     "startLine": 516,
     "endLine": 522,
     "pdfLocator": {
-      "page": 33,
+      "page": 34,
       "x": 56.19479,
       "y": 195.459213,
       "h": 39.337566,
@@ -44454,7 +44702,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-127",
+    "id": "dx-Mathematical-Statistics-135",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44473,7 +44721,7 @@
     "startLine": 523,
     "endLine": 590,
     "pdfLocator": {
-      "page": 33,
+      "page": 34,
       "x": 69.146225,
       "y": 249.855347,
       "h": 56.692924,
@@ -44485,7 +44733,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-128",
+    "id": "dx-Mathematical-Statistics-136",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44504,7 +44752,7 @@
     "startLine": 591,
     "endLine": 593,
     "pdfLocator": {
-      "page": 33,
+      "page": 34,
       "x": 66.655563,
       "y": 672.397583,
       "h": 56.692924,
@@ -44516,7 +44764,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-129",
+    "id": "dx-Mathematical-Statistics-137",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44535,7 +44783,7 @@
     "startLine": 594,
     "endLine": 597,
     "pdfLocator": {
-      "page": 33,
+      "page": 34,
       "x": 53.704132,
       "y": 706.589478,
       "h": 39.337566,
@@ -44547,7 +44795,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-130",
+    "id": "dx-Mathematical-Statistics-138",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44566,7 +44814,7 @@
     "startLine": 646,
     "endLine": 650,
     "pdfLocator": {
-      "page": 34,
+      "page": 35,
       "x": 56.19479,
       "y": 510.780762,
       "h": 39.337566,
@@ -44578,7 +44826,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-131",
+    "id": "dx-Mathematical-Statistics-139",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44597,7 +44845,7 @@
     "startLine": 743,
     "endLine": 762,
     "pdfLocator": {
-      "page": 35,
+      "page": 36,
       "x": 69.146225,
       "y": 480.039551,
       "h": 56.692924,
@@ -44609,7 +44857,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-132",
+    "id": "dx-Mathematical-Statistics-140",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44628,7 +44876,7 @@
     "startLine": 763,
     "endLine": 765,
     "pdfLocator": {
-      "page": 35,
+      "page": 36,
       "x": 66.37661,
       "y": 637.543579,
       "h": 56.692924,
@@ -44640,7 +44888,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-133",
+    "id": "dx-Mathematical-Statistics-141",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44659,7 +44907,7 @@
     "startLine": 766,
     "endLine": 774,
     "pdfLocator": {
-      "page": 35,
+      "page": 36,
       "x": 56.19479,
       "y": 656.193665,
       "h": 39.337566,
@@ -44671,7 +44919,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-134",
+    "id": "dx-Mathematical-Statistics-142",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44690,7 +44938,7 @@
     "startLine": 775,
     "endLine": 777,
     "pdfLocator": {
-      "page": 35,
+      "page": 36,
       "x": 66.655563,
       "y": 765.790955,
       "h": 56.692924,
@@ -44702,7 +44950,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-135",
+    "id": "dx-Mathematical-Statistics-143",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44721,7 +44969,7 @@
     "startLine": 819,
     "endLine": 821,
     "pdfLocator": {
-      "page": 36,
+      "page": 37,
       "x": 56.19479,
       "y": 453.059113,
       "h": 39.337566,
@@ -44733,7 +44981,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-136",
+    "id": "dx-Mathematical-Statistics-144",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44752,7 +45000,7 @@
     "startLine": 904,
     "endLine": 944,
     "pdfLocator": {
-      "page": 37,
+      "page": 38,
       "x": 56.692924,
       "y": 359.944122,
       "h": 56.692924,
@@ -44764,7 +45012,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-137",
+    "id": "dx-Mathematical-Statistics-145",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44783,7 +45031,7 @@
     "startLine": 945,
     "endLine": 947,
     "pdfLocator": {
-      "page": 37,
+      "page": 38,
       "x": 66.655563,
       "y": 715.653687,
       "h": 56.692924,
@@ -44795,7 +45043,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-138",
+    "id": "dx-Mathematical-Statistics-146",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44814,7 +45062,7 @@
     "startLine": 948,
     "endLine": 954,
     "pdfLocator": {
-      "page": 37,
+      "page": 38,
       "x": 56.19479,
       "y": 734.303772,
       "h": 39.337566,
@@ -44826,7 +45074,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-139",
+    "id": "dx-Mathematical-Statistics-147",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44845,7 +45093,7 @@
     "startLine": 955,
     "endLine": 983,
     "pdfLocator": {
-      "page": 38,
+      "page": 39,
       "x": 69.146225,
       "y": 81.962631,
       "h": 56.692924,
@@ -44857,7 +45105,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-140",
+    "id": "dx-Mathematical-Statistics-148",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44876,7 +45124,7 @@
     "startLine": 984,
     "endLine": 993,
     "pdfLocator": {
-      "page": 38,
+      "page": 39,
       "x": 66.655563,
       "y": 381.731079,
       "h": 56.692924,
@@ -44888,7 +45136,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-141",
+    "id": "dx-Mathematical-Statistics-149",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44907,7 +45155,7 @@
     "startLine": 994,
     "endLine": 1000,
     "pdfLocator": {
-      "page": 38,
+      "page": 39,
       "x": 56.19479,
       "y": 482.886444,
       "h": 39.337566,
@@ -44919,7 +45167,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-142",
+    "id": "dx-Mathematical-Statistics-150",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44938,7 +45186,7 @@
     "startLine": 1001,
     "endLine": 1018,
     "pdfLocator": {
-      "page": 38,
+      "page": 39,
       "x": 69.146225,
       "y": 537.282593,
       "h": 56.692924,
@@ -44950,7 +45198,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-143",
+    "id": "dx-Mathematical-Statistics-151",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -44969,7 +45217,7 @@
     "startLine": 1019,
     "endLine": 1036,
     "pdfLocator": {
-      "page": 38,
+      "page": 39,
       "x": 56.19479,
       "y": 708.241882,
       "h": 39.337566,
@@ -44981,7 +45229,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-144",
+    "id": "dx-Mathematical-Statistics-152",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45000,7 +45248,7 @@
     "startLine": 1037,
     "endLine": 1090,
     "pdfLocator": {
-      "page": 39,
+      "page": 40,
       "x": 69.146225,
       "y": 159.671402,
       "h": 56.692924,
@@ -45012,7 +45260,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-145",
+    "id": "dx-Mathematical-Statistics-153",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45031,7 +45279,7 @@
     "startLine": 1092,
     "endLine": 1102,
     "pdfLocator": {
-      "page": 39,
+      "page": 40,
       "x": 56.19479,
       "y": 644.653503,
       "h": 39.337566,
@@ -45043,7 +45291,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-146",
+    "id": "dx-Mathematical-Statistics-154",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45062,7 +45310,7 @@
     "startLine": 1104,
     "endLine": 1137,
     "pdfLocator": {
-      "page": 39,
+      "page": 40,
       "x": 69.146225,
       "y": 737.259033,
       "h": 56.692924,
@@ -45074,7 +45322,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-147",
+    "id": "dx-Mathematical-Statistics-155",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45093,7 +45341,7 @@
     "startLine": 1138,
     "endLine": 1140,
     "pdfLocator": {
-      "page": 40,
+      "page": 41,
       "x": 66.655563,
       "y": 363.412323,
       "h": 56.692924,
@@ -45105,7 +45353,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-148",
+    "id": "dx-Mathematical-Statistics-156",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45124,7 +45372,7 @@
     "startLine": 1141,
     "endLine": 1147,
     "pdfLocator": {
-      "page": 40,
+      "page": 41,
       "x": 56.19479,
       "y": 413.145905,
       "h": 39.337566,
@@ -45136,7 +45384,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-149",
+    "id": "dx-Mathematical-Statistics-157",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45155,7 +45403,7 @@
     "startLine": 1148,
     "endLine": 1150,
     "pdfLocator": {
-      "page": 40,
+      "page": 41,
       "x": 66.655563,
       "y": 511.085663,
       "h": 56.692924,
@@ -45167,7 +45415,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-150",
+    "id": "dx-Mathematical-Statistics-158",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45186,7 +45434,7 @@
     "startLine": 1151,
     "endLine": 1176,
     "pdfLocator": {
-      "page": 40,
+      "page": 41,
       "x": 69.146225,
       "y": 545.277527,
       "h": 56.692924,
@@ -45198,7 +45446,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-151",
+    "id": "dx-Mathematical-Statistics-159",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45217,7 +45465,7 @@
     "startLine": 1177,
     "endLine": 1195,
     "pdfLocator": {
-      "page": 41,
+      "page": 42,
       "x": 53.704132,
       "y": 81.962631,
       "h": 39.337566,
@@ -45229,7 +45477,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-152",
+    "id": "dx-Mathematical-Statistics-160",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45248,7 +45496,7 @@
     "startLine": 1196,
     "endLine": 1198,
     "pdfLocator": {
-      "page": 41,
+      "page": 42,
       "x": 66.655563,
       "y": 292.462738,
       "h": 56.692924,
@@ -45260,7 +45508,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-153",
+    "id": "dx-Mathematical-Statistics-161",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45279,7 +45527,7 @@
     "startLine": 1199,
     "endLine": 1251,
     "pdfLocator": {
-      "page": 41,
+      "page": 42,
       "x": 56.692924,
       "y": 308.004486,
       "h": 56.692924,
@@ -45291,7 +45539,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-154",
+    "id": "dx-Mathematical-Statistics-162",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45310,7 +45558,7 @@
     "startLine": 1252,
     "endLine": 1258,
     "pdfLocator": {
-      "page": 42,
+      "page": 43,
       "x": 56.19479,
       "y": 81.962631,
       "h": 39.337566,
@@ -45322,7 +45570,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-155",
+    "id": "dx-Mathematical-Statistics-163",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45341,7 +45589,7 @@
     "startLine": 1259,
     "endLine": 1293,
     "pdfLocator": {
-      "page": 42,
+      "page": 43,
       "x": 69.146225,
       "y": 142.185303,
       "h": 56.692924,
@@ -45353,7 +45601,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-156",
+    "id": "dx-Mathematical-Statistics-164",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45372,259 +45620,11 @@
     "startLine": 1294,
     "endLine": 1296,
     "pdfLocator": {
-      "page": 42,
+      "page": 43,
       "x": 56.19479,
       "y": 481.03302,
       "h": 39.337566,
       "v": 483.523682,
-      "W": 499.245117,
-      "H": 10.460772
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-157",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "solution",
-    "blockTitle": "第三次作业",
-    "previewType": "solution",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{solution}\n设总体服从泊松分布 \\(P(\\lambda)\\)。\n\n由泊松分布的性质，\n\\[\nE(X)=\\lambda,\\qquad E(X^2)=\\lambda^2+\\lambda.\n\\]\n\n\\begin{enumerate}\n    \\item 用一阶矩求矩估计量\n\n    由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n    \\[\n    \\bar X=E(X)=\\lambda.\n    \\]\n    因而 \\(\\lambda\\) 的一阶矩估计量为\n    \\[\n    \\hat\\lambda_1=\\bar X.\n    \\]\n\n    \\item 用二阶矩求矩估计量\n\n    令样本二阶原点矩等于总体二阶原点矩，即\n    \\[\n    \\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=\\lambda^2+\\lambda.\n    \\]\n    于是 \\(\\lambda\\) 满足方程\n    \\[\n    \\lambda^2+\\lambda-\\frac{1}{n}\\sum_{i=1}^n X_i^2=0.\n    \\]\n    解得\n    \\[\n    \\hat\\lambda_2=\\frac{-1+\\sqrt{1+4\\left(\\frac{1}{n}\\sum_{i=1}^n X_i^2\\right)}}{2}.\n    \\]\n    由于 \\(\\lambda>0\\)，舍去负根。\n\\end{enumerate}\n\\begin{dxtips}\n    也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。\t•\t\n\\end{dxtips}\n\\end{solution}",
-    "content": "\\begin{solution}\n设总体服从泊松分布 \\(P(\\lambda)\\)。\n\n由泊松分布的性质，\n\\[\nE(X)=\\lambda,\\qquad E(X^2)=\\lambda^2+\\lambda.\n\\]\n\n\\begin{enumerate}\n    \\item 用一阶矩求矩估计量\n\n    由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n    \\[\n    \\bar X=E(X)=\\lambda.\n    \\]\n    因而 \\(\\lambda\\) 的一阶矩估计量为\n    \\[\n    \\hat\\lambda_1=\\bar X.\n    \\]\n\n    \\item 用二阶矩求矩估计量\n\n    令样本二阶原点矩等于总体二阶原点矩，即\n    \\[\n    \\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=\\lambda^2+\\lambda.\n    \\]\n    于是 \\(\\lambda\\) 满足方程\n    \\[\n    \\lambda^2+\\lambda-\\frac{1}{n}\\sum_{i=1}^n X_i^2=0.\n    \\]\n    解得\n    \\[\n    \\hat\\lambda_2=\\frac{-1+\\sqrt{1+4\\left(\\frac{1}{n}\\sum_{i=1}^n X_i^2\\right)}}{2}.\n    \\]\n    由于 \\(\\lambda>0\\)，舍去负根。\n\\end{enumerate}\n\\begin{dxtips}\n    也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。\t•\t\n\\end{dxtips}\n\\end{solution}",
-    "text": "设总体服从泊松分布 。 由泊松分布的性质， 用一阶矩求矩估计量 由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即 因而 的一阶矩估计量为 用二阶矩求矩估计量 令样本二阶原点矩等于总体二阶原点矩，即 于是 满足方程 解得 由于 ，舍去负根。 也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。 •",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1297,
-    "endLine": 1336,
-    "pdfLocator": {
-      "page": 42,
-      "x": 69.146225,
-      "y": 496.574768,
-      "h": 56.692924,
-      "v": 499.06543,
-      "W": 481.889771,
-      "H": 10.14196
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-158",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第三次作业",
-    "previewType": "homework",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{homework}[2]\n（二项分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim B(k,p)\\)，求 \\(p\\) 的矩估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[2]\n（二项分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim B(k,p)\\)，求 \\(p\\) 的矩估计量。\n\\end{homework}",
-    "text": "[2] （二项分布）设 i.i.d., ，求 的矩估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1337,
-    "endLine": 1339,
-    "pdfLocator": {
-      "page": 43,
-      "x": 56.19479,
-      "y": 212.786591,
-      "h": 39.337566,
-      "v": 215.277252,
-      "W": 499.245117,
-      "H": 10.460772
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-159",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "solution",
-    "blockTitle": "第三次作业",
-    "previewType": "solution",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{solution}\n由 \\(X_1\\sim B(k,p)\\) 知\n\\[\nE(X)=kp.\n\\]\n由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n\\[\n\\bar X=kp.\n\\]\n解得 \\(p\\) 的矩估计量为\n\\[\n\\hat p=\\frac{\\bar X}{k}.\n\\]\n\\end{solution}",
-    "content": "\\begin{solution}\n由 \\(X_1\\sim B(k,p)\\) 知\n\\[\nE(X)=kp.\n\\]\n由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n\\[\n\\bar X=kp.\n\\]\n解得 \\(p\\) 的矩估计量为\n\\[\n\\hat p=\\frac{\\bar X}{k}.\n\\]\n\\end{solution}",
-    "text": "由 知 由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即 解得 的矩估计量为",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1340,
-    "endLine": 1353,
-    "pdfLocator": {
-      "page": 43,
-      "x": 69.146225,
-      "y": 228.328339,
-      "h": 56.692924,
-      "v": 230.819,
-      "W": 481.889771,
-      "H": 10.082187
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-160",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "dxtips",
-    "blockTitle": "第三次作业",
-    "previewType": "tip",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{dxtips}\n    有几个参数列几个方程其实k是已经知道的就p一个未知数\n\\end{dxtips}",
-    "content": "\\begin{dxtips}\n    有几个参数列几个方程其实k是已经知道的就p一个未知数\n\\end{dxtips}",
-    "text": "有几个参数列几个方程其实k是已经知道的就p一个未知数",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1354,
-    "endLine": 1356,
-    "pdfLocator": {
-      "page": 43,
-      "x": 66.655563,
-      "y": 377.856781,
-      "h": 56.692924,
-      "v": 380.018646,
-      "W": 452.547119,
-      "H": 10.022398
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-161",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第三次作业",
-    "previewType": "homework",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{homework}[3]\n（均匀分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim U(\\theta_1,\\theta_2)\\)，求 \\(\\theta_1,\\theta_2\\) 的矩估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[3]\n（均匀分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim U(\\theta_1,\\theta_2)\\)，求 \\(\\theta_1,\\theta_2\\) 的矩估计量。\n\\end{homework}",
-    "text": "[3] （均匀分布）设 i.i.d., ，求 的矩估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1357,
-    "endLine": 1359,
-    "pdfLocator": {
-      "page": 43,
-      "x": 56.19479,
-      "y": 396.506836,
-      "h": 39.337566,
-      "v": 398.997498,
-      "W": 499.245117,
-      "H": 10.460772
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-162",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "solution",
-    "blockTitle": "第三次作业",
-    "previewType": "solution",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{solution}\n由 \\(X_1\\sim U(\\theta_1,\\theta_2)\\) 知\n\\[\nE(X)=\\frac{\\theta_1+\\theta_2}{2},\\qquad E(X^2)=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即\n\\[\n\\bar X=\\frac{\\theta_1+\\theta_2}{2},\\qquad \\frac{1}{n}\\sum_{i=1}^n X_i^2=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n记\n\\[\nm_2=\\frac{1}{n}\\sum_{i=1}^n X_i^2,\n\\]\n则\n\\[\n\\theta_1+\\theta_2=2\\bar X,\\qquad \\theta_1^2+\\theta_1\\theta_2+\\theta_2^2=3m_2.\n\\]\n又因为\n\\[\n(\\theta_1+\\theta_2)^2=\\theta_1^2+2\\theta_1\\theta_2+\\theta_2^2,\n\\]\n故\n\\[\n\\theta_1\\theta_2=(\\theta_1+\\theta_2)^2-(\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2)=4\\bar X^2-3m_2.\n\\]\n于是 \\(\\theta_1,\\theta_2\\) 是方程\n\\[\nt^2-2\\bar Xt+(4\\bar X^2-3m_2)=0\n\\]\n的两根，解得矩估计量\n\\[\n\\hat\\theta_1=\\bar X-\\sqrt{3\\left(m_2-\\bar X^2\\right)},\\qquad\n\\hat\\theta_2=\\bar X+\\sqrt{3\\left(m_2-\\bar X^2\\right)}.\n\\]\n\\end{solution}",
-    "content": "\\begin{solution}\n由 \\(X_1\\sim U(\\theta_1,\\theta_2)\\) 知\n\\[\nE(X)=\\frac{\\theta_1+\\theta_2}{2},\\qquad E(X^2)=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即\n\\[\n\\bar X=\\frac{\\theta_1+\\theta_2}{2},\\qquad \\frac{1}{n}\\sum_{i=1}^n X_i^2=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n记\n\\[\nm_2=\\frac{1}{n}\\sum_{i=1}^n X_i^2,\n\\]\n则\n\\[\n\\theta_1+\\theta_2=2\\bar X,\\qquad \\theta_1^2+\\theta_1\\theta_2+\\theta_2^2=3m_2.\n\\]\n又因为\n\\[\n(\\theta_1+\\theta_2)^2=\\theta_1^2+2\\theta_1\\theta_2+\\theta_2^2,\n\\]\n故\n\\[\n\\theta_1\\theta_2=(\\theta_1+\\theta_2)^2-(\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2)=4\\bar X^2-3m_2.\n\\]\n于是 \\(\\theta_1,\\theta_2\\) 是方程\n\\[\nt^2-2\\bar Xt+(4\\bar X^2-3m_2)=0\n\\]\n的两根，解得矩估计量\n\\[\n\\hat\\theta_1=\\bar X-\\sqrt{3\\left(m_2-\\bar X^2\\right)},\\qquad\n\\hat\\theta_2=\\bar X+\\sqrt{3\\left(m_2-\\bar X^2\\right)}.\n\\]\n\\end{solution}",
-    "text": "由 知 由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即 记 则 又因为 故 于是 是方程 的两根，解得矩估计量",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1361,
-    "endLine": 1395,
-    "pdfLocator": {
-      "page": 43,
-      "x": 69.146225,
-      "y": 412.048615,
-      "h": 56.692924,
-      "v": 414.539276,
-      "W": 481.889771,
-      "H": 10.082187
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-163",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "第三次作业",
-    "previewType": "note",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{note}\n用的是一元二次方程的根与系数关系，也叫\\textbf{韦达定理}。\n\n如果\n\\[\nt^2-St+P=0\n\\]\n的两根是 \\(r_1,r_2\\)，那么\n\\[\nr_1+r_2=S,\\qquad r_1r_2=P.\n\\]\n\\end{note}",
-    "content": "\\begin{note}\n用的是一元二次方程的根与系数关系，也叫\\textbf{韦达定理}。\n\n如果\n\\[\nt^2-St+P=0\n\\]\n的两根是 \\(r_1,r_2\\)，那么\n\\[\nr_1+r_2=S,\\qquad r_1r_2=P.\n\\]\n\\end{note}",
-    "text": "用的是一元二次方程的根与系数关系，也叫韦达定理。 如果 的两根是 ，那么",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1396,
-    "endLine": 1407,
-    "pdfLocator": {
-      "page": 43,
-      "x": 56.692924,
-      "y": 746.108276,
-      "h": 34.553703,
-      "v": 748.021057,
-      "W": 504.028992,
-      "H": 14.814228
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-164",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第三次作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第三次作业",
-    "previewType": "homework",
-    "previewTitle": "第三次作业",
-    "rawContent": "\\begin{homework}[5]\n（双边指数分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim f(x)\\)，\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right),\n\\]\n求 \\(\\sigma\\) 的矩估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[5]\n（双边指数分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim f(x)\\)，\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right),\n\\]\n求 \\(\\sigma\\) 的矩估计量。\n\\end{homework}",
-    "text": "[5] （双边指数分布）设 i.i.d., ， 求 的矩估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 1408,
-    "endLine": 1414,
-    "pdfLocator": {
-      "page": 44,
-      "x": 56.19479,
-      "y": 159.671402,
-      "h": 39.337566,
-      "v": 162.162064,
       "W": 499.245117,
       "H": 10.460772
     },
@@ -45644,6 +45644,254 @@
     "blockTitle": "第三次作业",
     "previewType": "solution",
     "previewTitle": "第三次作业",
+    "rawContent": "\\begin{solution}\n设总体服从泊松分布 \\(P(\\lambda)\\)。\n\n由泊松分布的性质，\n\\[\nE(X)=\\lambda,\\qquad E(X^2)=\\lambda^2+\\lambda.\n\\]\n\n\\begin{enumerate}\n    \\item 用一阶矩求矩估计量\n\n    由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n    \\[\n    \\bar X=E(X)=\\lambda.\n    \\]\n    因而 \\(\\lambda\\) 的一阶矩估计量为\n    \\[\n    \\hat\\lambda_1=\\bar X.\n    \\]\n\n    \\item 用二阶矩求矩估计量\n\n    令样本二阶原点矩等于总体二阶原点矩，即\n    \\[\n    \\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=\\lambda^2+\\lambda.\n    \\]\n    于是 \\(\\lambda\\) 满足方程\n    \\[\n    \\lambda^2+\\lambda-\\frac{1}{n}\\sum_{i=1}^n X_i^2=0.\n    \\]\n    解得\n    \\[\n    \\hat\\lambda_2=\\frac{-1+\\sqrt{1+4\\left(\\frac{1}{n}\\sum_{i=1}^n X_i^2\\right)}}{2}.\n    \\]\n    由于 \\(\\lambda>0\\)，舍去负根。\n\\end{enumerate}\n\\begin{dxtips}\n    也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。\t•\t\n\\end{dxtips}\n\\end{solution}",
+    "content": "\\begin{solution}\n设总体服从泊松分布 \\(P(\\lambda)\\)。\n\n由泊松分布的性质，\n\\[\nE(X)=\\lambda,\\qquad E(X^2)=\\lambda^2+\\lambda.\n\\]\n\n\\begin{enumerate}\n    \\item 用一阶矩求矩估计量\n\n    由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n    \\[\n    \\bar X=E(X)=\\lambda.\n    \\]\n    因而 \\(\\lambda\\) 的一阶矩估计量为\n    \\[\n    \\hat\\lambda_1=\\bar X.\n    \\]\n\n    \\item 用二阶矩求矩估计量\n\n    令样本二阶原点矩等于总体二阶原点矩，即\n    \\[\n    \\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=\\lambda^2+\\lambda.\n    \\]\n    于是 \\(\\lambda\\) 满足方程\n    \\[\n    \\lambda^2+\\lambda-\\frac{1}{n}\\sum_{i=1}^n X_i^2=0.\n    \\]\n    解得\n    \\[\n    \\hat\\lambda_2=\\frac{-1+\\sqrt{1+4\\left(\\frac{1}{n}\\sum_{i=1}^n X_i^2\\right)}}{2}.\n    \\]\n    由于 \\(\\lambda>0\\)，舍去负根。\n\\end{enumerate}\n\\begin{dxtips}\n    也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。\t•\t\n\\end{dxtips}\n\\end{solution}",
+    "text": "设总体服从泊松分布 。 由泊松分布的性质， 用一阶矩求矩估计量 由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即 因而 的一阶矩估计量为 用二阶矩求矩估计量 令样本二阶原点矩等于总体二阶原点矩，即 于是 满足方程 解得 由于 ，舍去负根。 也就是解方程把应该的期望与方差与实际的期望也就是平均数和方差也就是平方和建立等式然后解方程xi都可以视作已经知道的。 •",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1297,
+    "endLine": 1336,
+    "pdfLocator": {
+      "page": 43,
+      "x": 69.146225,
+      "y": 496.574768,
+      "h": 56.692924,
+      "v": 499.06543,
+      "W": 481.889771,
+      "H": 10.14196
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-166",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第三次作业",
+    "previewType": "homework",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{homework}[2]\n（二项分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim B(k,p)\\)，求 \\(p\\) 的矩估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n（二项分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim B(k,p)\\)，求 \\(p\\) 的矩估计量。\n\\end{homework}",
+    "text": "[2] （二项分布）设 i.i.d., ，求 的矩估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1337,
+    "endLine": 1339,
+    "pdfLocator": {
+      "page": 44,
+      "x": 56.19479,
+      "y": 212.786591,
+      "h": 39.337566,
+      "v": 215.277252,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-167",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "solution",
+    "blockTitle": "第三次作业",
+    "previewType": "solution",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{solution}\n由 \\(X_1\\sim B(k,p)\\) 知\n\\[\nE(X)=kp.\n\\]\n由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n\\[\n\\bar X=kp.\n\\]\n解得 \\(p\\) 的矩估计量为\n\\[\n\\hat p=\\frac{\\bar X}{k}.\n\\]\n\\end{solution}",
+    "content": "\\begin{solution}\n由 \\(X_1\\sim B(k,p)\\) 知\n\\[\nE(X)=kp.\n\\]\n由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即\n\\[\n\\bar X=kp.\n\\]\n解得 \\(p\\) 的矩估计量为\n\\[\n\\hat p=\\frac{\\bar X}{k}.\n\\]\n\\end{solution}",
+    "text": "由 知 由矩估计法，令样本一阶原点矩等于总体一阶原点矩，即 解得 的矩估计量为",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1340,
+    "endLine": 1353,
+    "pdfLocator": {
+      "page": 44,
+      "x": 69.146225,
+      "y": 228.328339,
+      "h": 56.692924,
+      "v": 230.819,
+      "W": 481.889771,
+      "H": 10.082187
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-168",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "第三次作业",
+    "previewType": "tip",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{dxtips}\n    有几个参数列几个方程其实k是已经知道的就p一个未知数\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    有几个参数列几个方程其实k是已经知道的就p一个未知数\n\\end{dxtips}",
+    "text": "有几个参数列几个方程其实k是已经知道的就p一个未知数",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1354,
+    "endLine": 1356,
+    "pdfLocator": {
+      "page": 44,
+      "x": 66.655563,
+      "y": 377.856781,
+      "h": 56.692924,
+      "v": 380.018646,
+      "W": 452.547119,
+      "H": 10.022398
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-169",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第三次作业",
+    "previewType": "homework",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{homework}[3]\n（均匀分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim U(\\theta_1,\\theta_2)\\)，求 \\(\\theta_1,\\theta_2\\) 的矩估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[3]\n（均匀分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim U(\\theta_1,\\theta_2)\\)，求 \\(\\theta_1,\\theta_2\\) 的矩估计量。\n\\end{homework}",
+    "text": "[3] （均匀分布）设 i.i.d., ，求 的矩估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1357,
+    "endLine": 1359,
+    "pdfLocator": {
+      "page": 44,
+      "x": 56.19479,
+      "y": 396.506836,
+      "h": 39.337566,
+      "v": 398.997498,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-170",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "solution",
+    "blockTitle": "第三次作业",
+    "previewType": "solution",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{solution}\n由 \\(X_1\\sim U(\\theta_1,\\theta_2)\\) 知\n\\[\nE(X)=\\frac{\\theta_1+\\theta_2}{2},\\qquad E(X^2)=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即\n\\[\n\\bar X=\\frac{\\theta_1+\\theta_2}{2},\\qquad \\frac{1}{n}\\sum_{i=1}^n X_i^2=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n记\n\\[\nm_2=\\frac{1}{n}\\sum_{i=1}^n X_i^2,\n\\]\n则\n\\[\n\\theta_1+\\theta_2=2\\bar X,\\qquad \\theta_1^2+\\theta_1\\theta_2+\\theta_2^2=3m_2.\n\\]\n又因为\n\\[\n(\\theta_1+\\theta_2)^2=\\theta_1^2+2\\theta_1\\theta_2+\\theta_2^2,\n\\]\n故\n\\[\n\\theta_1\\theta_2=(\\theta_1+\\theta_2)^2-(\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2)=4\\bar X^2-3m_2.\n\\]\n于是 \\(\\theta_1,\\theta_2\\) 是方程\n\\[\nt^2-2\\bar Xt+(4\\bar X^2-3m_2)=0\n\\]\n的两根，解得矩估计量\n\\[\n\\hat\\theta_1=\\bar X-\\sqrt{3\\left(m_2-\\bar X^2\\right)},\\qquad\n\\hat\\theta_2=\\bar X+\\sqrt{3\\left(m_2-\\bar X^2\\right)}.\n\\]\n\\end{solution}",
+    "content": "\\begin{solution}\n由 \\(X_1\\sim U(\\theta_1,\\theta_2)\\) 知\n\\[\nE(X)=\\frac{\\theta_1+\\theta_2}{2},\\qquad E(X^2)=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即\n\\[\n\\bar X=\\frac{\\theta_1+\\theta_2}{2},\\qquad \\frac{1}{n}\\sum_{i=1}^n X_i^2=\\frac{\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2}{3}.\n\\]\n记\n\\[\nm_2=\\frac{1}{n}\\sum_{i=1}^n X_i^2,\n\\]\n则\n\\[\n\\theta_1+\\theta_2=2\\bar X,\\qquad \\theta_1^2+\\theta_1\\theta_2+\\theta_2^2=3m_2.\n\\]\n又因为\n\\[\n(\\theta_1+\\theta_2)^2=\\theta_1^2+2\\theta_1\\theta_2+\\theta_2^2,\n\\]\n故\n\\[\n\\theta_1\\theta_2=(\\theta_1+\\theta_2)^2-(\\theta_1^2+\\theta_1\\theta_2+\\theta_2^2)=4\\bar X^2-3m_2.\n\\]\n于是 \\(\\theta_1,\\theta_2\\) 是方程\n\\[\nt^2-2\\bar Xt+(4\\bar X^2-3m_2)=0\n\\]\n的两根，解得矩估计量\n\\[\n\\hat\\theta_1=\\bar X-\\sqrt{3\\left(m_2-\\bar X^2\\right)},\\qquad\n\\hat\\theta_2=\\bar X+\\sqrt{3\\left(m_2-\\bar X^2\\right)}.\n\\]\n\\end{solution}",
+    "text": "由 知 由矩估计法，令样本一阶、二阶原点矩分别等于总体一阶、二阶原点矩，即 记 则 又因为 故 于是 是方程 的两根，解得矩估计量",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1361,
+    "endLine": 1395,
+    "pdfLocator": {
+      "page": 44,
+      "x": 69.146225,
+      "y": 412.048615,
+      "h": 56.692924,
+      "v": 414.539276,
+      "W": 481.889771,
+      "H": 10.082187
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-171",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "第三次作业",
+    "previewType": "note",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{note}\n用的是一元二次方程的根与系数关系，也叫\\textbf{韦达定理}。\n\n如果\n\\[\nt^2-St+P=0\n\\]\n的两根是 \\(r_1,r_2\\)，那么\n\\[\nr_1+r_2=S,\\qquad r_1r_2=P.\n\\]\n\\end{note}",
+    "content": "\\begin{note}\n用的是一元二次方程的根与系数关系，也叫\\textbf{韦达定理}。\n\n如果\n\\[\nt^2-St+P=0\n\\]\n的两根是 \\(r_1,r_2\\)，那么\n\\[\nr_1+r_2=S,\\qquad r_1r_2=P.\n\\]\n\\end{note}",
+    "text": "用的是一元二次方程的根与系数关系，也叫韦达定理。 如果 的两根是 ，那么",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1396,
+    "endLine": 1407,
+    "pdfLocator": {
+      "page": 44,
+      "x": 56.692924,
+      "y": 746.108276,
+      "h": 34.553703,
+      "v": 748.021057,
+      "W": 504.028992,
+      "H": 14.814228
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-172",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第三次作业",
+    "previewType": "homework",
+    "previewTitle": "第三次作业",
+    "rawContent": "\\begin{homework}[5]\n（双边指数分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim f(x)\\)，\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right),\n\\]\n求 \\(\\sigma\\) 的矩估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[5]\n（双边指数分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d., \\(X_1\\sim f(x)\\)，\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right),\n\\]\n求 \\(\\sigma\\) 的矩估计量。\n\\end{homework}",
+    "text": "[5] （双边指数分布）设 i.i.d., ， 求 的矩估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 1408,
+    "endLine": 1414,
+    "pdfLocator": {
+      "page": 45,
+      "x": 56.19479,
+      "y": 159.671402,
+      "h": 39.337566,
+      "v": 162.162064,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-173",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第三次作业",
+    "subsection": "",
+    "kind": "solution",
+    "blockTitle": "第三次作业",
+    "previewType": "solution",
+    "previewTitle": "第三次作业",
     "rawContent": "\\begin{solution}\n由密度函数\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right)\n\\]\n可知该分布关于 \\(0\\) 对称，且\n\\[\nE(X)=0,\\qquad E(X^2)=2\\sigma^2.\n\\]\n由于 \\(E(X)\\) 不含参数 \\(\\sigma\\)，故取二阶原点矩作矩估计。令\n\\[\n\\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=2\\sigma^2,\n\\]\n解得\n\\[\n\\hat{\\sigma}\n=\\sqrt{\\frac{1}{2n}\\sum_{i=1}^n X_i^2 }.\n\\]\n故 \\(\\sigma\\) 的矩估计量为\n\\[\n\\hat{\\sigma}=\\sqrt{\\frac{1}{2n}\\sum_{i=1}^n X_i^2 }.\n\\]\n\\end{solution}",
     "content": "\\begin{solution}\n由密度函数\n\\[\nf(x)=\\frac{1}{2\\sigma}\\exp\\!\\left(-\\frac{|x|}{\\sigma}\\right)\n\\]\n可知该分布关于 \\(0\\) 对称，且\n\\[\nE(X)=0,\\qquad E(X^2)=2\\sigma^2.\n\\]\n由于 \\(E(X)\\) 不含参数 \\(\\sigma\\)，故取二阶原点矩作矩估计。令\n\\[\n\\frac{1}{n}\\sum_{i=1}^n X_i^2=E(X^2)=2\\sigma^2,\n\\]\n解得\n\\[\n\\hat{\\sigma}\n=\\sqrt{\\frac{1}{2n}\\sum_{i=1}^n X_i^2 }.\n\\]\n故 \\(\\sigma\\) 的矩估计量为\n\\[\n\\hat{\\sigma}=\\sqrt{\\frac{1}{2n}\\sum_{i=1}^n X_i^2 }.\n\\]\n\\end{solution}",
     "text": "由密度函数 可知该分布关于 对称，且 由于 不含参数 ，故取二阶原点矩作矩估计。令 解得 故 的矩估计量为",
@@ -45651,7 +45899,7 @@
     "startLine": 1415,
     "endLine": 1437,
     "pdfLocator": {
-      "page": 44,
+      "page": 45,
       "x": 69.146225,
       "y": 219.238312,
       "h": 56.692924,
@@ -45663,7 +45911,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-166",
+    "id": "dx-Mathematical-Statistics-174",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45682,7 +45930,7 @@
     "startLine": 1439,
     "endLine": 1449,
     "pdfLocator": {
-      "page": 44,
+      "page": 45,
       "x": 56.19479,
       "y": 502.908081,
       "h": 39.337566,
@@ -45694,7 +45942,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-167",
+    "id": "dx-Mathematical-Statistics-175",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45713,7 +45961,7 @@
     "startLine": 1450,
     "endLine": 1459,
     "pdfLocator": {
-      "page": 44,
+      "page": 45,
       "x": 69.146225,
       "y": 590.69281,
       "h": 56.692924,
@@ -45725,7 +45973,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-168",
+    "id": "dx-Mathematical-Statistics-176",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45744,7 +45992,7 @@
     "startLine": 1460,
     "endLine": 1466,
     "pdfLocator": {
-      "page": 44,
+      "page": 45,
       "x": 56.19479,
       "y": 720.768127,
       "h": 39.337566,
@@ -45756,7 +46004,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-169",
+    "id": "dx-Mathematical-Statistics-177",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45775,7 +46023,7 @@
     "startLine": 1478,
     "endLine": 1488,
     "pdfLocator": {
-      "page": 45,
+      "page": 46,
       "x": 56.19479,
       "y": 240.217773,
       "h": 39.337566,
@@ -45787,7 +46035,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-170",
+    "id": "dx-Mathematical-Statistics-178",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45806,7 +46054,7 @@
     "startLine": 1489,
     "endLine": 1491,
     "pdfLocator": {
-      "page": 45,
+      "page": 46,
       "x": 66.655563,
       "y": 345.910248,
       "h": 56.692924,
@@ -45818,7 +46066,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-171",
+    "id": "dx-Mathematical-Statistics-179",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45837,7 +46085,7 @@
     "startLine": 1492,
     "endLine": 1505,
     "pdfLocator": {
-      "page": 45,
+      "page": 46,
       "x": 69.146225,
       "y": 380.102051,
       "h": 56.692924,
@@ -45849,7 +46097,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-172",
+    "id": "dx-Mathematical-Statistics-180",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45868,7 +46116,7 @@
     "startLine": 1506,
     "endLine": 1524,
     "pdfLocator": {
-      "page": 45,
+      "page": 46,
       "x": 56.19479,
       "y": 547.042603,
       "h": 39.337566,
@@ -45880,7 +46128,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-173",
+    "id": "dx-Mathematical-Statistics-181",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45899,7 +46147,7 @@
     "startLine": 1525,
     "endLine": 1536,
     "pdfLocator": {
-      "page": 45,
+      "page": 46,
       "x": 66.655563,
       "y": 735.000916,
       "h": 56.692924,
@@ -45911,7 +46159,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-174",
+    "id": "dx-Mathematical-Statistics-182",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45930,7 +46178,7 @@
     "startLine": 1566,
     "endLine": 1576,
     "pdfLocator": {
-      "page": 46,
+      "page": 47,
       "x": 56.19479,
       "y": 446.738007,
       "h": 39.337566,
@@ -45942,7 +46190,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-175",
+    "id": "dx-Mathematical-Statistics-183",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45961,7 +46209,7 @@
     "startLine": 1577,
     "endLine": 1579,
     "pdfLocator": {
-      "page": 46,
+      "page": 47,
       "x": 66.655563,
       "y": 559.002563,
       "h": 56.692924,
@@ -45973,7 +46221,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-176",
+    "id": "dx-Mathematical-Statistics-184",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -45992,7 +46240,7 @@
     "startLine": 1580,
     "endLine": 1597,
     "pdfLocator": {
-      "page": 46,
+      "page": 47,
       "x": 69.146225,
       "y": 593.194397,
       "h": 56.692924,
@@ -46004,7 +46252,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-177",
+    "id": "dx-Mathematical-Statistics-185",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46023,7 +46271,7 @@
     "startLine": 1598,
     "endLine": 1605,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 56.19479,
       "y": 81.962631,
       "h": 39.337566,
@@ -46035,7 +46283,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-178",
+    "id": "dx-Mathematical-Statistics-186",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46054,7 +46302,7 @@
     "startLine": 1606,
     "endLine": 1611,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 66.655563,
       "y": 161.836502,
       "h": 56.692924,
@@ -46066,7 +46314,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-179",
+    "id": "dx-Mathematical-Statistics-187",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46085,7 +46333,7 @@
     "startLine": 1612,
     "endLine": 1636,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 69.146225,
       "y": 263.880066,
       "h": 56.692924,
@@ -46097,7 +46345,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-180",
+    "id": "dx-Mathematical-Statistics-188",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46116,7 +46364,7 @@
     "startLine": 1637,
     "endLine": 1639,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 66.655563,
       "y": 546.467102,
       "h": 56.692924,
@@ -46128,7 +46376,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-181",
+    "id": "dx-Mathematical-Statistics-189",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46147,7 +46395,7 @@
     "startLine": 1640,
     "endLine": 1655,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 56.692924,
       "y": 583.677429,
       "h": 56.692924,
@@ -46159,7 +46407,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-182",
+    "id": "dx-Mathematical-Statistics-190",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46178,7 +46426,7 @@
     "startLine": 1656,
     "endLine": 1687,
     "pdfLocator": {
-      "page": 47,
+      "page": 48,
       "x": 53.704132,
       "y": 739.859131,
       "h": 39.337566,
@@ -46190,7 +46438,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-183",
+    "id": "dx-Mathematical-Statistics-191",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46209,7 +46457,7 @@
     "startLine": 1688,
     "endLine": 1707,
     "pdfLocator": {
-      "page": 48,
+      "page": 49,
       "x": 66.655563,
       "y": 378.901642,
       "h": 56.692924,
@@ -46221,7 +46469,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-184",
+    "id": "dx-Mathematical-Statistics-192",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46240,7 +46488,7 @@
     "startLine": 1709,
     "endLine": 1728,
     "pdfLocator": {
-      "page": 48,
+      "page": 49,
       "x": 53.704132,
       "y": 580.096375,
       "h": 34.553703,
@@ -46252,7 +46500,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-185",
+    "id": "dx-Mathematical-Statistics-193",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46271,7 +46519,7 @@
     "startLine": 1729,
     "endLine": 1731,
     "pdfLocator": {
-      "page": 48,
+      "page": 49,
       "x": 56.19479,
       "y": 764.345642,
       "h": 39.337566,
@@ -46283,7 +46531,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-186",
+    "id": "dx-Mathematical-Statistics-194",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46302,7 +46550,7 @@
     "startLine": 1732,
     "endLine": 1752,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 69.146225,
       "y": 81.962631,
       "h": 56.692924,
@@ -46314,7 +46562,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-187",
+    "id": "dx-Mathematical-Statistics-195",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46333,7 +46581,7 @@
     "startLine": 1753,
     "endLine": 1755,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 56.692924,
       "y": 315.821167,
       "h": 34.553703,
@@ -46345,7 +46593,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-188",
+    "id": "dx-Mathematical-Statistics-196",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46364,7 +46612,7 @@
     "startLine": 1756,
     "endLine": 1759,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 66.655563,
       "y": 368.523682,
       "h": 56.692924,
@@ -46376,7 +46624,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-189",
+    "id": "dx-Mathematical-Statistics-197",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46395,7 +46643,7 @@
     "startLine": 1760,
     "endLine": 1762,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 56.19479,
       "y": 390.450989,
       "h": 39.337566,
@@ -46407,7 +46655,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-190",
+    "id": "dx-Mathematical-Statistics-198",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46426,7 +46674,7 @@
     "startLine": 1763,
     "endLine": 1769,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 69.146225,
       "y": 413.378479,
       "h": 56.692924,
@@ -46438,7 +46686,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-191",
+    "id": "dx-Mathematical-Statistics-199",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46457,7 +46705,7 @@
     "startLine": 1770,
     "endLine": 1772,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 56.692924,
       "y": 552.912354,
       "h": 56.692924,
@@ -46469,7 +46717,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-192",
+    "id": "dx-Mathematical-Statistics-200",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46488,7 +46736,7 @@
     "startLine": 1773,
     "endLine": 1784,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 56.19479,
       "y": 574.580872,
       "h": 34.553703,
@@ -46500,7 +46748,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-193",
+    "id": "dx-Mathematical-Statistics-201",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46519,7 +46767,7 @@
     "startLine": 1785,
     "endLine": 1787,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 56.19479,
       "y": 675.602295,
       "h": 39.337566,
@@ -46531,7 +46779,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-194",
+    "id": "dx-Mathematical-Statistics-202",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46550,7 +46798,7 @@
     "startLine": 1788,
     "endLine": 1798,
     "pdfLocator": {
-      "page": 49,
+      "page": 50,
       "x": 69.146225,
       "y": 691.143982,
       "h": 56.692924,
@@ -46562,7 +46810,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-195",
+    "id": "dx-Mathematical-Statistics-203",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46581,7 +46829,7 @@
     "startLine": 1799,
     "endLine": 1801,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 56.19479,
       "y": 113.046143,
       "h": 39.337566,
@@ -46593,7 +46841,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-196",
+    "id": "dx-Mathematical-Statistics-204",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46612,7 +46860,7 @@
     "startLine": 1802,
     "endLine": 1815,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 69.146225,
       "y": 128.587891,
       "h": 56.692924,
@@ -46624,7 +46872,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-197",
+    "id": "dx-Mathematical-Statistics-205",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46643,7 +46891,7 @@
     "startLine": 1817,
     "endLine": 1824,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 56.692924,
       "y": 325.88559,
       "h": 56.692924,
@@ -46655,7 +46903,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-198",
+    "id": "dx-Mathematical-Statistics-206",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46674,7 +46922,7 @@
     "startLine": 1825,
     "endLine": 1827,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 56.692924,
       "y": 347.554138,
       "h": 56.692924,
@@ -46686,7 +46934,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-199",
+    "id": "dx-Mathematical-Statistics-207",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46705,7 +46953,7 @@
     "startLine": 1828,
     "endLine": 1830,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 56.19479,
       "y": 378.637634,
       "h": 39.337566,
@@ -46717,7 +46965,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-200",
+    "id": "dx-Mathematical-Statistics-208",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46736,7 +46984,7 @@
     "startLine": 1831,
     "endLine": 1840,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 69.146225,
       "y": 394.179382,
       "h": 56.692924,
@@ -46748,7 +46996,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-201",
+    "id": "dx-Mathematical-Statistics-209",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46767,7 +47015,7 @@
     "startLine": 1841,
     "endLine": 1843,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 56.19479,
       "y": 471.888153,
       "h": 39.337566,
@@ -46779,7 +47027,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-202",
+    "id": "dx-Mathematical-Statistics-210",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46798,7 +47046,7 @@
     "startLine": 1844,
     "endLine": 1871,
     "pdfLocator": {
-      "page": 50,
+      "page": 51,
       "x": 69.146225,
       "y": 489.033417,
       "h": 56.692924,
@@ -46810,7 +47058,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-203",
+    "id": "dx-Mathematical-Statistics-211",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46829,7 +47077,7 @@
     "startLine": 1872,
     "endLine": 1887,
     "pdfLocator": {
-      "page": 51,
+      "page": 52,
       "x": 56.692924,
       "y": 124.106987,
       "h": 56.692924,
@@ -46841,7 +47089,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-204",
+    "id": "dx-Mathematical-Statistics-212",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46860,7 +47108,7 @@
     "startLine": 1888,
     "endLine": 1893,
     "pdfLocator": {
-      "page": 51,
+      "page": 52,
       "x": 56.19479,
       "y": 295.675537,
       "h": 39.337566,
@@ -46872,7 +47120,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-205",
+    "id": "dx-Mathematical-Statistics-213",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46891,7 +47139,7 @@
     "startLine": 1923,
     "endLine": 1925,
     "pdfLocator": {
-      "page": 51,
+      "page": 52,
       "x": 66.655563,
       "y": 674.031921,
       "h": 56.692924,
@@ -46903,7 +47151,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-206",
+    "id": "dx-Mathematical-Statistics-214",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46922,7 +47170,7 @@
     "startLine": 1927,
     "endLine": 1938,
     "pdfLocator": {
-      "page": 51,
+      "page": 52,
       "x": 56.19479,
       "y": 749.768005,
       "h": 39.337566,
@@ -46934,7 +47182,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-207",
+    "id": "dx-Mathematical-Statistics-215",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46953,7 +47201,7 @@
     "startLine": 1939,
     "endLine": 1967,
     "pdfLocator": {
-      "page": 52,
+      "page": 53,
       "x": 69.146225,
       "y": 173.996185,
       "h": 56.692924,
@@ -46965,7 +47213,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-208",
+    "id": "dx-Mathematical-Statistics-216",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -46984,7 +47232,7 @@
     "startLine": 1968,
     "endLine": 1983,
     "pdfLocator": {
-      "page": 52,
+      "page": 53,
       "x": 56.692924,
       "y": 666.738953,
       "h": 56.692924,
@@ -46996,7 +47244,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-209",
+    "id": "dx-Mathematical-Statistics-217",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47015,7 +47263,7 @@
     "startLine": 1984,
     "endLine": 1990,
     "pdfLocator": {
-      "page": 52,
+      "page": 53,
       "x": 69.146225,
       "y": 723.887695,
       "h": 56.692924,
@@ -47027,7 +47275,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-210",
+    "id": "dx-Mathematical-Statistics-218",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47046,7 +47294,7 @@
     "startLine": 1992,
     "endLine": 1998,
     "pdfLocator": {
-      "page": 53,
+      "page": 54,
       "x": 56.19479,
       "y": 141.380981,
       "h": 39.337566,
@@ -47058,7 +47306,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-211",
+    "id": "dx-Mathematical-Statistics-219",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47077,7 +47325,7 @@
     "startLine": 1999,
     "endLine": 2045,
     "pdfLocator": {
-      "page": 53,
+      "page": 54,
       "x": 69.146225,
       "y": 188.006256,
       "h": 56.692924,
@@ -47089,7 +47337,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-212",
+    "id": "dx-Mathematical-Statistics-220",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47108,7 +47356,7 @@
     "startLine": 2046,
     "endLine": 2062,
     "pdfLocator": {
-      "page": 53,
+      "page": 54,
       "x": 56.692924,
       "y": 749.533325,
       "h": 56.692924,
@@ -47120,7 +47368,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-213",
+    "id": "dx-Mathematical-Statistics-221",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47139,7 +47387,7 @@
     "startLine": 2063,
     "endLine": 2065,
     "pdfLocator": {
-      "page": 54,
+      "page": 55,
       "x": 53.704132,
       "y": 233.643066,
       "h": 39.337566,
@@ -47151,7 +47399,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-214",
+    "id": "dx-Mathematical-Statistics-222",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47170,7 +47418,7 @@
     "startLine": 2066,
     "endLine": 2073,
     "pdfLocator": {
-      "page": 54,
+      "page": 55,
       "x": 56.692924,
       "y": 374.649109,
       "h": 56.692924,
@@ -47182,7 +47430,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-215",
+    "id": "dx-Mathematical-Statistics-223",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47201,7 +47449,7 @@
     "startLine": 2074,
     "endLine": 2113,
     "pdfLocator": {
-      "page": 54,
+      "page": 55,
       "x": 69.146225,
       "y": 393.299194,
       "h": 56.692924,
@@ -47213,7 +47461,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-216",
+    "id": "dx-Mathematical-Statistics-224",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47232,7 +47480,7 @@
     "startLine": 2114,
     "endLine": 2116,
     "pdfLocator": {
-      "page": 55,
+      "page": 56,
       "x": 66.655563,
       "y": 223.070068,
       "h": 56.692924,
@@ -47244,7 +47492,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-217",
+    "id": "dx-Mathematical-Statistics-225",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47263,7 +47511,7 @@
     "startLine": 2117,
     "endLine": 2126,
     "pdfLocator": {
-      "page": 55,
+      "page": 56,
       "x": 56.19479,
       "y": 241.720123,
       "h": 39.337566,
@@ -47275,7 +47523,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-218",
+    "id": "dx-Mathematical-Statistics-226",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47294,7 +47542,7 @@
     "startLine": 2169,
     "endLine": 2171,
     "pdfLocator": {
-      "page": 55,
+      "page": 56,
       "x": 53.704132,
       "y": 744.023193,
       "h": 39.337566,
@@ -47306,7 +47554,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-219",
+    "id": "dx-Mathematical-Statistics-227",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47325,7 +47573,7 @@
     "startLine": 2238,
     "endLine": 2240,
     "pdfLocator": {
-      "page": 56,
+      "page": 57,
       "x": 89.898407,
       "y": 711.36145,
       "h": 56.692924,
@@ -47337,7 +47585,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-220",
+    "id": "dx-Mathematical-Statistics-228",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47356,7 +47604,7 @@
     "startLine": 5,
     "endLine": 14,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 53.704132,
       "y": 189.858307,
       "h": 39.337566,
@@ -47368,7 +47616,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-221",
+    "id": "dx-Mathematical-Statistics-229",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47387,7 +47635,7 @@
     "startLine": 16,
     "endLine": 22,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 53.704132,
       "y": 254.398926,
       "h": 39.337566,
@@ -47399,7 +47647,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-222",
+    "id": "dx-Mathematical-Statistics-230",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47418,7 +47666,7 @@
     "startLine": 24,
     "endLine": 34,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 324.336823,
       "h": 39.337566,
@@ -47430,7 +47678,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-223",
+    "id": "dx-Mathematical-Statistics-231",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47449,7 +47697,7 @@
     "startLine": 37,
     "endLine": 39,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 469.131042,
       "h": 39.337566,
@@ -47461,7 +47709,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-224",
+    "id": "dx-Mathematical-Statistics-232",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47480,7 +47728,7 @@
     "startLine": 41,
     "endLine": 47,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 484.672791,
       "h": 39.337566,
@@ -47492,7 +47740,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-225",
+    "id": "dx-Mathematical-Statistics-233",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47511,7 +47759,7 @@
     "startLine": 49,
     "endLine": 51,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 539.06897,
       "h": 39.337566,
@@ -47523,7 +47771,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-226",
+    "id": "dx-Mathematical-Statistics-234",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47542,7 +47790,7 @@
     "startLine": 55,
     "endLine": 61,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 631.333069,
       "h": 39.337566,
@@ -47554,7 +47802,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-227",
+    "id": "dx-Mathematical-Statistics-235",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47573,7 +47821,7 @@
     "startLine": 63,
     "endLine": 69,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 56.19479,
       "y": 677.958374,
       "h": 39.337566,
@@ -47585,7 +47833,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-228",
+    "id": "dx-Mathematical-Statistics-236",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47604,7 +47852,7 @@
     "startLine": 71,
     "endLine": 76,
     "pdfLocator": {
-      "page": 60,
+      "page": 62,
       "x": 53.704132,
       "y": 732.354492,
       "h": 39.337566,
@@ -47616,7 +47864,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-229",
+    "id": "dx-Mathematical-Statistics-237",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47635,7 +47883,7 @@
     "startLine": 79,
     "endLine": 89,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 106.958893,
       "h": 39.337566,
@@ -47647,7 +47895,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-230",
+    "id": "dx-Mathematical-Statistics-238",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47666,7 +47914,7 @@
     "startLine": 91,
     "endLine": 102,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 184.667664,
       "h": 39.337566,
@@ -47678,7 +47926,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-231",
+    "id": "dx-Mathematical-Statistics-239",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47697,7 +47945,7 @@
     "startLine": 104,
     "endLine": 106,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 294.525421,
       "h": 39.337566,
@@ -47709,7 +47957,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-232",
+    "id": "dx-Mathematical-Statistics-240",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47728,7 +47976,7 @@
     "startLine": 107,
     "endLine": 113,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 310.067169,
       "h": 39.337566,
@@ -47740,7 +47988,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-233",
+    "id": "dx-Mathematical-Statistics-241",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47759,7 +48007,7 @@
     "startLine": 114,
     "endLine": 120,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 348.92157,
       "h": 39.337566,
@@ -47771,7 +48019,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-234",
+    "id": "dx-Mathematical-Statistics-242",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47790,7 +48038,7 @@
     "startLine": 121,
     "endLine": 138,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 403.317688,
       "h": 39.337566,
@@ -47802,7 +48050,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-235",
+    "id": "dx-Mathematical-Statistics-243",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47821,7 +48069,7 @@
     "startLine": 140,
     "endLine": 150,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 600.27948,
       "h": 39.337566,
@@ -47833,7 +48081,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-236",
+    "id": "dx-Mathematical-Statistics-244",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47852,7 +48100,7 @@
     "startLine": 151,
     "endLine": 157,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 56.19479,
       "y": 692.785461,
       "h": 39.337566,
@@ -47864,7 +48112,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-237",
+    "id": "dx-Mathematical-Statistics-245",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47883,7 +48131,7 @@
     "startLine": 159,
     "endLine": 177,
     "pdfLocator": {
-      "page": 61,
+      "page": 63,
       "x": 53.704132,
       "y": 757.893921,
       "h": 39.337566,
@@ -47895,7 +48143,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-238",
+    "id": "dx-Mathematical-Statistics-246",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47914,7 +48162,7 @@
     "startLine": 179,
     "endLine": 185,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 243.950226,
       "h": 39.337566,
@@ -47926,7 +48174,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-239",
+    "id": "dx-Mathematical-Statistics-247",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47945,7 +48193,7 @@
     "startLine": 186,
     "endLine": 188,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 304.172913,
       "h": 39.337566,
@@ -47957,7 +48205,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-240",
+    "id": "dx-Mathematical-Statistics-248",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47976,7 +48224,7 @@
     "startLine": 190,
     "endLine": 192,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 319.714661,
       "h": 39.337566,
@@ -47988,7 +48236,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-241",
+    "id": "dx-Mathematical-Statistics-249",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48007,7 +48255,7 @@
     "startLine": 194,
     "endLine": 196,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 335.256409,
       "h": 39.337566,
@@ -48019,7 +48267,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-242",
+    "id": "dx-Mathematical-Statistics-250",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48038,7 +48286,7 @@
     "startLine": 200,
     "endLine": 206,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 350.798157,
       "h": 39.337566,
@@ -48050,7 +48298,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-243",
+    "id": "dx-Mathematical-Statistics-251",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48069,7 +48317,7 @@
     "startLine": 208,
     "endLine": 215,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 459.680176,
       "h": 39.337566,
@@ -48081,7 +48329,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-244",
+    "id": "dx-Mathematical-Statistics-252",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48100,7 +48348,7 @@
     "startLine": 217,
     "endLine": 223,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 497.498016,
       "h": 39.337566,
@@ -48112,7 +48360,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-245",
+    "id": "dx-Mathematical-Statistics-253",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48131,259 +48379,11 @@
     "startLine": 224,
     "endLine": 234,
     "pdfLocator": {
-      "page": 62,
+      "page": 64,
       "x": 56.19479,
       "y": 564.03894,
       "h": 39.337566,
       "v": 566.529602,
-      "W": 499.245117,
-      "H": 10.460772
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-246",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[11]\n（截尾几何分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，为来自截尾几何分布总体 \\(X\\) 的样本：\n\\[\nP\\{X=k\\}=\\theta^{k-1}(1-\\theta),\\qquad k=1,2,\\cdots,r;\n\\]\n\\[\nP\\{X=r+1\\}=\\theta^r.\n\\]\n记\n\\[\nM=\\#\\{\\,i: X_i=r+1,\\ i=1,2,\\cdots,n\\,\\},\n\\]\n试证明 \\(\\theta\\) 的 MLE 为\n\\[\n\\hat{\\theta}\n=\n\\frac{\\sum_{i=1}^n X_i-n}{\\sum_{i=1}^n X_i-M}.\n\\]\n\\end{homework}",
-    "content": "\\begin{homework}[11]\n（截尾几何分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，为来自截尾几何分布总体 \\(X\\) 的样本：\n\\[\nP\\{X=k\\}=\\theta^{k-1}(1-\\theta),\\qquad k=1,2,\\cdots,r;\n\\]\n\\[\nP\\{X=r+1\\}=\\theta^r.\n\\]\n记\n\\[\nM=\\#\\{\\,i: X_i=r+1,\\ i=1,2,\\cdots,n\\,\\},\n\\]\n试证明 \\(\\theta\\) 的 MLE 为\n\\[\n\\hat{\\theta}\n=\n\\frac{\\sum_{i=1}^n X_i-n}{\\sum_{i=1}^n X_i-M}.\n\\]\n\\end{homework}",
-    "text": "[11] （截尾几何分布）设 i.i.d.，为来自截尾几何分布总体 的样本： 记 试证明 的 MLE 为",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 236,
-    "endLine": 254,
-    "pdfLocator": {
-      "page": 62,
-      "x": 56.19479,
-      "y": 636.9953,
-      "h": 39.337566,
-      "v": 638.987793,
-      "W": 499.245117,
-      "H": 9.962625
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-247",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[12]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim f(x,\\theta_1,\\theta_2)\\)，\n\\[\nf(x,\\theta_1,\\theta_2)=\n\\begin{cases}\n\\dfrac{\\theta_1}{\\theta_2}x^{\\theta_1-1}\\exp\\!\\left(-\\dfrac{x^{\\theta_1}}{\\theta_2}\\right), & x\\ge 0,\\\\[1ex]\n0, & \\text{其他},\n\\end{cases}\n\\]\n其中 \\(\\theta_1\\) 已知，求 \\(\\theta_2\\) 的最大似然估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[12]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim f(x,\\theta_1,\\theta_2)\\)，\n\\[\nf(x,\\theta_1,\\theta_2)=\n\\begin{cases}\n\\dfrac{\\theta_1}{\\theta_2}x^{\\theta_1-1}\\exp\\!\\left(-\\dfrac{x^{\\theta_1}}{\\theta_2}\\right), & x\\ge 0,\\\\[1ex]\n0, & \\text{其他},\n\\end{cases}\n\\]\n其中 \\(\\theta_1\\) 已知，求 \\(\\theta_2\\) 的最大似然估计量。\n\\end{homework}",
-    "text": "[12] 设 i.i.d.， ， 其中 已知，求 的最大似然估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 256,
-    "endLine": 266,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 81.962631,
-      "h": 39.337566,
-      "v": 84.453293,
-      "W": 499.245117,
-      "H": 10.042343
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-248",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[18]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim N(\\mu,\\sigma^2)\\)，其中 \\(\\sigma^2\\) 已知，\\(\\mu\\) 的先验分布为 \\(N(\\nu,\\tau^2)\\)。\n\n\\begin{enumerate}\n    \\item 求 \\(\\mu\\) 的后验分布；\n    \\item 求 \\(\\mu\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
-    "content": "\\begin{homework}[18]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim N(\\mu,\\sigma^2)\\)，其中 \\(\\sigma^2\\) 已知，\\(\\mu\\) 的先验分布为 \\(N(\\nu,\\tau^2)\\)。\n\n\\begin{enumerate}\n    \\item 求 \\(\\mu\\) 的后验分布；\n    \\item 求 \\(\\mu\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
-    "text": "[18] 设 i.i.d.， ，其中 已知， 的先验分布为 。 求 的后验分布； 求 的后验均值估计。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 267,
-    "endLine": 274,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 161.545349,
-      "h": 39.337566,
-      "v": 164.036011,
-      "W": 499.245117,
-      "H": 10.600278
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-249",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[20]\n（帕雷托（Pareto）分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim U(0,\\theta)\\)，其中 \\(\\theta\\) 的先验分布为 \\(\\mathrm{Pareto}(a,b)\\)，其概率密度为\n\\[\n\\pi(\\theta)=\\frac{ba^b}{\\theta^{b+1}},\\qquad a<\\theta<\\infty,\\ a>0,\\ b>0.\n\\]\n\n\\begin{enumerate}\n    \\item 求 \\(\\theta\\) 的后验分布；\n    \\item 求 \\(\\theta\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
-    "content": "\\begin{homework}[20]\n（帕雷托（Pareto）分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim U(0,\\theta)\\)，其中 \\(\\theta\\) 的先验分布为 \\(\\mathrm{Pareto}(a,b)\\)，其概率密度为\n\\[\n\\pi(\\theta)=\\frac{ba^b}{\\theta^{b+1}},\\qquad a<\\theta<\\infty,\\ a>0,\\ b>0.\n\\]\n\n\\begin{enumerate}\n    \\item 求 \\(\\theta\\) 的后验分布；\n    \\item 求 \\(\\theta\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
-    "text": "[20] （帕雷托（Pareto）分布）设 i.i.d.， ，其中 的先验分布为 ，其概率密度为 求 的后验分布； 求 的后验均值估计。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 276,
-    "endLine": 286,
-    "pdfLocator": {
-      "page": 63,
-      "x": 53.704132,
-      "y": 208.170624,
-      "h": 39.337566,
-      "v": 210.661285,
-      "W": 499.245117,
-      "H": 10.460772
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-250",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[1]\n（泊松分布）设 $X \\sim P(\\lambda)$，试求样本量为 $1$ 时 $g(\\lambda) = e^{-2\\lambda}$ 的无偏估计量，并说明该估计的不合理性。\n\\end{homework}",
-    "content": "\\begin{homework}[1]\n（泊松分布）设 $X \\sim P(\\lambda)$，试求样本量为 $1$ 时 $g(\\lambda) = e^{-2\\lambda}$ 的无偏估计量，并说明该估计的不合理性。\n\\end{homework}",
-    "text": "[1] （泊松分布）设 ，试求样本量为 时 的无偏估计量，并说明该估计的不合理性。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 287,
-    "endLine": 289,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 296.175842,
-      "h": 39.337566,
-      "v": 298.666504,
-      "W": 499.245117,
-      "H": 10.948961
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-251",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[2]\n（二项分布）设 $X \\sim B(n,p)$，证明 $g(p) = \\dfrac{1}{1+p^2}$ 不存在无偏估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[2]\n（二项分布）设 $X \\sim B(n,p)$，证明 $g(p) = \\dfrac{1}{1+p^2}$ 不存在无偏估计量。\n\\end{homework}",
-    "text": "[2] （二项分布）设 ，证明 不存在无偏估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 291,
-    "endLine": 293,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 312.822937,
-      "h": 39.337566,
-      "v": 321.593994,
-      "W": 499.245117,
-      "H": 21.931232
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-252",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[3]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, 1)$，证明 $g(\\mu) = |\\mu|$ 没有无偏估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[3]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, 1)$，证明 $g(\\mu) = |\\mu|$ 没有无偏估计量。\n\\end{homework}",
-    "text": "[3] 设 i.i.d.， ，证明 没有无偏估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 295,
-    "endLine": 297,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 330.450775,
-      "h": 39.337566,
-      "v": 332.941437,
-      "W": 499.245117,
-      "H": 10.351182
-    },
-    "debugExitStatus": 0,
-    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
-  },
-  {
-    "id": "dx-Mathematical-Statistics-253",
-    "repo": "dx-Mathematical-Statistics",
-    "title": "Mathematical Statistics",
-    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
-    "section": "第五周作业",
-    "subsection": "",
-    "kind": "homework",
-    "blockTitle": "第五周作业",
-    "previewType": "homework",
-    "previewTitle": "第五周作业",
-    "rawContent": "\\begin{homework}[4]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta_1, \\theta_2)$，求 $\\theta_1, \\theta_2$ 的无偏估计量。\n\\end{homework}",
-    "content": "\\begin{homework}[4]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta_1, \\theta_2)$，求 $\\theta_1, \\theta_2$ 的无偏估计量。\n\\end{homework}",
-    "text": "[4] （均匀分布）设 i.i.d.， ，求 的无偏估计量。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 299,
-    "endLine": 301,
-    "pdfLocator": {
-      "page": 63,
-      "x": 56.19479,
-      "y": 345.992554,
-      "h": 39.337566,
-      "v": 348.483215,
       "W": 499.245117,
       "H": 10.460772
     },
@@ -48403,6 +48403,254 @@
     "blockTitle": "第五周作业",
     "previewType": "homework",
     "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[11]\n（截尾几何分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，为来自截尾几何分布总体 \\(X\\) 的样本：\n\\[\nP\\{X=k\\}=\\theta^{k-1}(1-\\theta),\\qquad k=1,2,\\cdots,r;\n\\]\n\\[\nP\\{X=r+1\\}=\\theta^r.\n\\]\n记\n\\[\nM=\\#\\{\\,i: X_i=r+1,\\ i=1,2,\\cdots,n\\,\\},\n\\]\n试证明 \\(\\theta\\) 的 MLE 为\n\\[\n\\hat{\\theta}\n=\n\\frac{\\sum_{i=1}^n X_i-n}{\\sum_{i=1}^n X_i-M}.\n\\]\n\\end{homework}",
+    "content": "\\begin{homework}[11]\n（截尾几何分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，为来自截尾几何分布总体 \\(X\\) 的样本：\n\\[\nP\\{X=k\\}=\\theta^{k-1}(1-\\theta),\\qquad k=1,2,\\cdots,r;\n\\]\n\\[\nP\\{X=r+1\\}=\\theta^r.\n\\]\n记\n\\[\nM=\\#\\{\\,i: X_i=r+1,\\ i=1,2,\\cdots,n\\,\\},\n\\]\n试证明 \\(\\theta\\) 的 MLE 为\n\\[\n\\hat{\\theta}\n=\n\\frac{\\sum_{i=1}^n X_i-n}{\\sum_{i=1}^n X_i-M}.\n\\]\n\\end{homework}",
+    "text": "[11] （截尾几何分布）设 i.i.d.，为来自截尾几何分布总体 的样本： 记 试证明 的 MLE 为",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 236,
+    "endLine": 254,
+    "pdfLocator": {
+      "page": 64,
+      "x": 56.19479,
+      "y": 636.9953,
+      "h": 39.337566,
+      "v": 638.987793,
+      "W": 499.245117,
+      "H": 9.962625
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-255",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[12]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim f(x,\\theta_1,\\theta_2)\\)，\n\\[\nf(x,\\theta_1,\\theta_2)=\n\\begin{cases}\n\\dfrac{\\theta_1}{\\theta_2}x^{\\theta_1-1}\\exp\\!\\left(-\\dfrac{x^{\\theta_1}}{\\theta_2}\\right), & x\\ge 0,\\\\[1ex]\n0, & \\text{其他},\n\\end{cases}\n\\]\n其中 \\(\\theta_1\\) 已知，求 \\(\\theta_2\\) 的最大似然估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[12]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim f(x,\\theta_1,\\theta_2)\\)，\n\\[\nf(x,\\theta_1,\\theta_2)=\n\\begin{cases}\n\\dfrac{\\theta_1}{\\theta_2}x^{\\theta_1-1}\\exp\\!\\left(-\\dfrac{x^{\\theta_1}}{\\theta_2}\\right), & x\\ge 0,\\\\[1ex]\n0, & \\text{其他},\n\\end{cases}\n\\]\n其中 \\(\\theta_1\\) 已知，求 \\(\\theta_2\\) 的最大似然估计量。\n\\end{homework}",
+    "text": "[12] 设 i.i.d.， ， 其中 已知，求 的最大似然估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 256,
+    "endLine": 266,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 81.962631,
+      "h": 39.337566,
+      "v": 84.453293,
+      "W": 499.245117,
+      "H": 10.042343
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-256",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[18]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim N(\\mu,\\sigma^2)\\)，其中 \\(\\sigma^2\\) 已知，\\(\\mu\\) 的先验分布为 \\(N(\\nu,\\tau^2)\\)。\n\n\\begin{enumerate}\n    \\item 求 \\(\\mu\\) 的后验分布；\n    \\item 求 \\(\\mu\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[18]\n设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim N(\\mu,\\sigma^2)\\)，其中 \\(\\sigma^2\\) 已知，\\(\\mu\\) 的先验分布为 \\(N(\\nu,\\tau^2)\\)。\n\n\\begin{enumerate}\n    \\item 求 \\(\\mu\\) 的后验分布；\n    \\item 求 \\(\\mu\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
+    "text": "[18] 设 i.i.d.， ，其中 已知， 的先验分布为 。 求 的后验分布； 求 的后验均值估计。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 267,
+    "endLine": 274,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 161.545349,
+      "h": 39.337566,
+      "v": 164.036011,
+      "W": 499.245117,
+      "H": 10.600278
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-257",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[20]\n（帕雷托（Pareto）分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim U(0,\\theta)\\)，其中 \\(\\theta\\) 的先验分布为 \\(\\mathrm{Pareto}(a,b)\\)，其概率密度为\n\\[\n\\pi(\\theta)=\\frac{ba^b}{\\theta^{b+1}},\\qquad a<\\theta<\\infty,\\ a>0,\\ b>0.\n\\]\n\n\\begin{enumerate}\n    \\item 求 \\(\\theta\\) 的后验分布；\n    \\item 求 \\(\\theta\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[20]\n（帕雷托（Pareto）分布）设 \\(X_1,X_2,\\cdots,X_n\\) i.i.d.，\\(X_1\\sim U(0,\\theta)\\)，其中 \\(\\theta\\) 的先验分布为 \\(\\mathrm{Pareto}(a,b)\\)，其概率密度为\n\\[\n\\pi(\\theta)=\\frac{ba^b}{\\theta^{b+1}},\\qquad a<\\theta<\\infty,\\ a>0,\\ b>0.\n\\]\n\n\\begin{enumerate}\n    \\item 求 \\(\\theta\\) 的后验分布；\n    \\item 求 \\(\\theta\\) 的后验均值估计。\n\\end{enumerate}\n\\end{homework}",
+    "text": "[20] （帕雷托（Pareto）分布）设 i.i.d.， ，其中 的先验分布为 ，其概率密度为 求 的后验分布； 求 的后验均值估计。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 276,
+    "endLine": 286,
+    "pdfLocator": {
+      "page": 65,
+      "x": 53.704132,
+      "y": 208.170624,
+      "h": 39.337566,
+      "v": 210.661285,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-258",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[1]\n（泊松分布）设 $X \\sim P(\\lambda)$，试求样本量为 $1$ 时 $g(\\lambda) = e^{-2\\lambda}$ 的无偏估计量，并说明该估计的不合理性。\n\\end{homework}",
+    "content": "\\begin{homework}[1]\n（泊松分布）设 $X \\sim P(\\lambda)$，试求样本量为 $1$ 时 $g(\\lambda) = e^{-2\\lambda}$ 的无偏估计量，并说明该估计的不合理性。\n\\end{homework}",
+    "text": "[1] （泊松分布）设 ，试求样本量为 时 的无偏估计量，并说明该估计的不合理性。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 287,
+    "endLine": 289,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 296.175842,
+      "h": 39.337566,
+      "v": 298.666504,
+      "W": 499.245117,
+      "H": 10.948961
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-259",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[2]\n（二项分布）设 $X \\sim B(n,p)$，证明 $g(p) = \\dfrac{1}{1+p^2}$ 不存在无偏估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n（二项分布）设 $X \\sim B(n,p)$，证明 $g(p) = \\dfrac{1}{1+p^2}$ 不存在无偏估计量。\n\\end{homework}",
+    "text": "[2] （二项分布）设 ，证明 不存在无偏估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 291,
+    "endLine": 293,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 312.822937,
+      "h": 39.337566,
+      "v": 321.593994,
+      "W": 499.245117,
+      "H": 21.931232
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-260",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[3]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, 1)$，证明 $g(\\mu) = |\\mu|$ 没有无偏估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[3]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, 1)$，证明 $g(\\mu) = |\\mu|$ 没有无偏估计量。\n\\end{homework}",
+    "text": "[3] 设 i.i.d.， ，证明 没有无偏估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 295,
+    "endLine": 297,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 330.450775,
+      "h": 39.337566,
+      "v": 332.941437,
+      "W": 499.245117,
+      "H": 10.351182
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-261",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
+    "rawContent": "\\begin{homework}[4]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta_1, \\theta_2)$，求 $\\theta_1, \\theta_2$ 的无偏估计量。\n\\end{homework}",
+    "content": "\\begin{homework}[4]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta_1, \\theta_2)$，求 $\\theta_1, \\theta_2$ 的无偏估计量。\n\\end{homework}",
+    "text": "[4] （均匀分布）设 i.i.d.， ，求 的无偏估计量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 299,
+    "endLine": 301,
+    "pdfLocator": {
+      "page": 65,
+      "x": 56.19479,
+      "y": 345.992554,
+      "h": 39.337566,
+      "v": 348.483215,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-262",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第五周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第五周作业",
+    "previewType": "homework",
+    "previewTitle": "第五周作业",
     "rawContent": "\\begin{homework}[5]\n设 $\\hat{\\theta}$ 和 $\\theta^*$ 为 $\\theta$ 的无偏估计量，若 $\\tilde{\\theta} = a\\hat{\\theta} + b\\theta^*$，问：$a, b$ 满足什么条件时，$\\tilde{\\theta}$ 也是 $\\theta$ 的无偏估计量？\n\\end{homework}",
     "content": "\\begin{homework}[5]\n设 $\\hat{\\theta}$ 和 $\\theta^*$ 为 $\\theta$ 的无偏估计量，若 $\\tilde{\\theta} = a\\hat{\\theta} + b\\theta^*$，问：$a, b$ 满足什么条件时，$\\tilde{\\theta}$ 也是 $\\theta$ 的无偏估计量？\n\\end{homework}",
     "text": "[5] 设 和 为 的无偏估计量，若 ，问： 满足什么条件时， 也是 的无偏估计量？",
@@ -48410,7 +48658,7 @@
     "startLine": 303,
     "endLine": 305,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 56.19479,
       "y": 361.534302,
       "h": 39.337566,
@@ -48422,7 +48670,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-255",
+    "id": "dx-Mathematical-Statistics-263",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48441,7 +48689,7 @@
     "startLine": 307,
     "endLine": 309,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 56.19479,
       "y": 377.07605,
       "h": 39.337566,
@@ -48453,7 +48701,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-256",
+    "id": "dx-Mathematical-Statistics-264",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48472,7 +48720,7 @@
     "startLine": 311,
     "endLine": 322,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 56.19479,
       "y": 441.932922,
       "h": 39.337566,
@@ -48484,7 +48732,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-257",
+    "id": "dx-Mathematical-Statistics-265",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48503,7 +48751,7 @@
     "startLine": 324,
     "endLine": 330,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 56.19479,
       "y": 559.60144,
       "h": 39.337566,
@@ -48515,7 +48763,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-258",
+    "id": "dx-Mathematical-Statistics-266",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48534,7 +48782,7 @@
     "startLine": 332,
     "endLine": 334,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 53.704132,
       "y": 611.675232,
       "h": 39.337566,
@@ -48546,7 +48794,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-259",
+    "id": "dx-Mathematical-Statistics-267",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48565,7 +48813,7 @@
     "startLine": 336,
     "endLine": 345,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 56.19479,
       "y": 643.987,
       "h": 39.337566,
@@ -48577,7 +48825,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-260",
+    "id": "dx-Mathematical-Statistics-268",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48596,7 +48844,7 @@
     "startLine": 347,
     "endLine": 349,
     "pdfLocator": {
-      "page": 63,
+      "page": 65,
       "x": 53.704132,
       "y": 721.69574,
       "h": 39.337566,
@@ -48608,7 +48856,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-261",
+    "id": "dx-Mathematical-Statistics-269",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48627,7 +48875,7 @@
     "startLine": 351,
     "endLine": 359,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 81.962631,
       "h": 39.337566,
@@ -48639,7 +48887,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-262",
+    "id": "dx-Mathematical-Statistics-270",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48658,7 +48906,7 @@
     "startLine": 361,
     "endLine": 366,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 138.691696,
       "h": 39.337566,
@@ -48670,7 +48918,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-263",
+    "id": "dx-Mathematical-Statistics-271",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48689,7 +48937,7 @@
     "startLine": 368,
     "endLine": 370,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 53.704132,
       "y": 180.876404,
       "h": 39.337566,
@@ -48701,7 +48949,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-264",
+    "id": "dx-Mathematical-Statistics-272",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48720,7 +48968,7 @@
     "startLine": 372,
     "endLine": 374,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 211.9599,
       "h": 39.337566,
@@ -48732,7 +48980,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-265",
+    "id": "dx-Mathematical-Statistics-273",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48751,7 +48999,7 @@
     "startLine": 376,
     "endLine": 378,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 227.501678,
       "h": 39.337566,
@@ -48763,7 +49011,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-266",
+    "id": "dx-Mathematical-Statistics-274",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48782,7 +49030,7 @@
     "startLine": 380,
     "endLine": 386,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 243.043427,
       "h": 39.337566,
@@ -48794,7 +49042,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-267",
+    "id": "dx-Mathematical-Statistics-275",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48813,7 +49061,7 @@
     "startLine": 388,
     "endLine": 394,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 56.19479,
       "y": 299.04303,
       "h": 39.337566,
@@ -48825,7 +49073,7 @@
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
   },
   {
-    "id": "dx-Mathematical-Statistics-268",
+    "id": "dx-Mathematical-Statistics-276",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -48844,13 +49092,199 @@
     "startLine": 396,
     "endLine": 398,
     "pdfLocator": {
-      "page": 64,
+      "page": 66,
       "x": 53.704132,
       "y": 363.348969,
       "h": 39.337566,
       "v": 370.182861,
       "W": 499.245117,
       "H": 19.994053
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-277",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第八周作业",
+    "previewType": "homework",
+    "previewTitle": "第八周作业",
+    "rawContent": "\\begin{homework}[9]\n在习题 3.3.11 中，估计 $\\lambda^2$ 时，求 $\\overline{X}^2$ 相对于 $\\tilde{\\lambda}^2$ 的渐近效率．\n\\end{homework}",
+    "content": "\\begin{homework}[9]\n在习题 3.3.11 中，估计 $\\lambda^2$ 时，求 $\\overline{X}^2$ 相对于 $\\tilde{\\lambda}^2$ 的渐近效率．\n\\end{homework}",
+    "text": "[9] 在习题 3.3.11 中，估计 时，求 相对于 的渐近效率．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 400,
+    "endLine": 402,
+    "pdfLocator": {
+      "page": 66,
+      "x": 56.19479,
+      "y": 457.632294,
+      "h": 39.337566,
+      "v": 459.555054,
+      "W": 499.245117,
+      "H": 12.754264
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-278",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第八周作业",
+    "previewType": "homework",
+    "previewTitle": "第八周作业",
+    "rawContent": "\\begin{homework}[10]\n设 $X_1, \\cdots, X_n$ i.i.d.，$X_1 \\sim f(x, \\theta)$，$\\hat{\\theta} = \\hat{\\theta}(X_1, \\cdots, X_n)$ 是 $\\theta$ 的渐近正态估计量：\n\\[\n\\sqrt{n}(\\hat{\\theta}_n - \\theta) \\xrightarrow{L} N(0, V(\\theta)), \\quad \\forall \\theta \\subset \\Theta,\n\\]\n$V(\\theta)$ 是 $\\theta$ 的连续函数．证明：$V(\\hat{\\theta})$ 为 $V(\\theta)$ 的相合估计量．\n\\end{homework}",
+    "content": "\\begin{homework}[10]\n设 $X_1, \\cdots, X_n$ i.i.d.，$X_1 \\sim f(x, \\theta)$，$\\hat{\\theta} = \\hat{\\theta}(X_1, \\cdots, X_n)$ 是 $\\theta$ 的渐近正态估计量：\n\\[\n\\sqrt{n}(\\hat{\\theta}_n - \\theta) \\xrightarrow{L} N(0, V(\\theta)), \\quad \\forall \\theta \\subset \\Theta,\n\\]\n$V(\\theta)$ 是 $\\theta$ 的连续函数．证明：$V(\\hat{\\theta})$ 为 $V(\\theta)$ 的相合估计量．\n\\end{homework}",
+    "text": "[10] 设 i.i.d.， ， 是 的渐近正态估计量： 是 的连续函数．证明： 为 的相合估计量．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 404,
+    "endLine": 410,
+    "pdfLocator": {
+      "page": 66,
+      "x": 56.19479,
+      "y": 473.174042,
+      "h": 39.337566,
+      "v": 475.664703,
+      "W": 499.245117,
+      "H": 12.038199
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-279",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第八周作业",
+    "previewType": "homework",
+    "previewTitle": "第八周作业",
+    "rawContent": "\\begin{homework}[12]\n设在定理 3.4.6 中，$h(\\theta)$ 二阶可导并且 $h'(\\theta_0) = 0$，$h''(\\theta_0) \\neq 0$．利用泰勒公式 $h(\\hat{\\theta}) - h(\\theta_0) = \\dfrac{1}{2}(\\hat{\\theta} - \\theta_0)^2 (h''(\\theta_0) + R)$，证明\n\\[\nn(h(\\hat{\\theta}) - h(\\theta_0)) \\xrightarrow{L} \\frac{1}{2} A(\\theta_0) h''(\\theta_0) \\chi^2(1),\n\\]\n其中 $\\chi^2(1)$ 为自由度是 $1$ 的 $\\chi^2$ 分布．\n\\end{homework}",
+    "content": "\\begin{homework}[12]\n设在定理 3.4.6 中，$h(\\theta)$ 二阶可导并且 $h'(\\theta_0) = 0$，$h''(\\theta_0) \\neq 0$．利用泰勒公式 $h(\\hat{\\theta}) - h(\\theta_0) = \\dfrac{1}{2}(\\hat{\\theta} - \\theta_0)^2 (h''(\\theta_0) + R)$，证明\n\\[\nn(h(\\hat{\\theta}) - h(\\theta_0)) \\xrightarrow{L} \\frac{1}{2} A(\\theta_0) h''(\\theta_0) \\chi^2(1),\n\\]\n其中 $\\chi^2(1)$ 为自由度是 $1$ 的 $\\chi^2$ 分布．\n\\end{homework}",
+    "text": "[12] 设在定理 3.4.6 中， 二阶可导并且 ， ．利用泰勒公式 ，证明 其中 为自由度是 的 分布．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 412,
+    "endLine": 418,
+    "pdfLocator": {
+      "page": 66,
+      "x": 53.704132,
+      "y": 528.675537,
+      "h": 39.337566,
+      "v": 535.509399,
+      "W": 499.245117,
+      "H": 19.994053
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-280",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "3.5",
+    "kind": "homework",
+    "blockTitle": "3.5",
+    "previewType": "homework",
+    "previewTitle": "3.5",
+    "rawContent": "\\begin{homework}[1]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta, \\theta+1)$，求 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的置信区间．\n\\end{homework}",
+    "content": "\\begin{homework}[1]\n（均匀分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim U(\\theta, \\theta+1)$，求 $\\theta$ 的置信度为 $100(1-\\alpha)\\%$ 的置信区间．\n\\end{homework}",
+    "text": "[1] （均匀分布）设 i.i.d.， ，求 的置信度为 的置信区间．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 420,
+    "endLine": 422,
+    "pdfLocator": {
+      "page": 66,
+      "x": 56.19479,
+      "y": 639.145935,
+      "h": 39.337566,
+      "v": 641.636597,
+      "W": 499.245117,
+      "H": 10.460772
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-281",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "3.5",
+    "kind": "homework",
+    "blockTitle": "3.5",
+    "previewType": "homework",
+    "previewTitle": "3.5",
+    "rawContent": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, \\sigma^2)$，$\\mu$ 已知，求 $\\sigma^2$ 的置信度为 $100(1-\\alpha)\\%$ 的置信区间．它与 $\\mu$ 未知时的区间估计有何差别？\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1 \\sim N(\\mu, \\sigma^2)$，$\\mu$ 已知，求 $\\sigma^2$ 的置信度为 $100(1-\\alpha)\\%$ 的置信区间．它与 $\\mu$ 未知时的区间估计有何差别？\n\\end{homework}",
+    "text": "[2] 设 i.i.d.， ， 已知，求 的置信度为 的置信区间．它与 未知时的区间估计有何差别？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 424,
+    "endLine": 426,
+    "pdfLocator": {
+      "page": 66,
+      "x": 53.704132,
+      "y": 654.687683,
+      "h": 39.337566,
+      "v": 657.178345,
+      "W": 499.245117,
+      "H": 10.600278
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-282",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第八周作业",
+    "subsection": "3.5",
+    "kind": "homework",
+    "blockTitle": "3.5",
+    "previewType": "homework",
+    "previewTitle": "3.5",
+    "rawContent": "\\begin{homework}[3]\n（指数分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1$ 服从指数分布，密度为\n\\[\nf(x) = \\begin{cases} \\dfrac{1}{\\theta} \\mathrm{e}^{-x/\\theta}, & x > 0; \\\\ 0, & \\text{其他}. \\end{cases}\n\\]\n\\begin{enumerate}[(1)]\n    \\item 证明 $2n\\overline{X}/\\theta \\sim \\chi^2(2n)$；\n    \\item 求 $\\theta$ 的 $100(1-\\alpha)\\%$ 的置信下限；\n    \\item 记 $T_{0.95}$ 为方程 $P\\{X_1 > T_{0.95}\\} = 0.95$ 的解，求 $T_{0.95}$ 的 $100(1-\\alpha)\\%$ 置信下限．\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[3]\n（指数分布）设 $X_1, X_2, \\cdots, X_n$ i.i.d.，$X_1$ 服从指数分布，密度为\n\\[\nf(x) = \\begin{cases} \\dfrac{1}{\\theta} \\mathrm{e}^{-x/\\theta}, & x > 0; \\\\ 0, & \\text{其他}. \\end{cases}\n\\]\n\\begin{enumerate}[(1)]\n    \\item 证明 $2n\\overline{X}/\\theta \\sim \\chi^2(2n)$；\n    \\item 求 $\\theta$ 的 $100(1-\\alpha)\\%$ 的置信下限；\n    \\item 记 $T_{0.95}$ 为方程 $P\\{X_1 > T_{0.95}\\} = 0.95$ 的解，求 $T_{0.95}$ 的 $100(1-\\alpha)\\%$ 置信下限．\n\\end{enumerate}\n\\end{homework}",
+    "text": "[3] （指数分布）设 i.i.d.， 服从指数分布，密度为 [(1)] 证明 ； 求 的 的置信下限； 记 为方程 的解，求 的 置信下限．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 428,
+    "endLine": 438,
+    "pdfLocator": {
+      "page": 66,
+      "x": 56.19479,
+      "y": 685.77124,
+      "h": 39.337566,
+      "v": 687.763733,
+      "W": 499.245117,
+      "H": 9.962625
     },
     "debugExitStatus": 0,
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf"
