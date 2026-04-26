@@ -644,6 +644,7 @@
           <div id="searchResults" class="search-results"></div>
         </div>
       </div>
+      <button id="tasksBtn" class="admin-btn" onclick="window.location.href='https://yangminggu.com/tasks'" style="display:none">Tasks</button>
     </div>
 
     <div id="bookshelf" class="bookshelf"></div>
@@ -687,13 +688,16 @@
 
     function updateAdminBtn() {
       const btn = document.getElementById("adminBtn");
+      const tasksBtn = document.getElementById("tasksBtn");
       if (!btn) return;
       if (isAdmin) {
         btn.textContent = "已登录";
         btn.classList.add("active");
+        if (tasksBtn) tasksBtn.style.display = "";
       } else {
         btn.textContent = "管理员";
         btn.classList.remove("active");
+        if (tasksBtn) tasksBtn.style.display = "none";
       }
     }
 
