@@ -45652,15 +45652,55 @@
     "blockTitle": "聚合",
     "previewType": "tip",
     "previewTitle": "聚合",
-    "rawContent": "\\begin{dxtips}\n    今天的错误是太贪心，想少用子查询。首先应该想明白到底要链接几张表。是这样的比如最后满足我们要求的只有一个元素，这个需要count没问题但是一旦进行操作以后最开始的表一定变化了，所有一定需要一个最开始表的子查询也就是(SELECT COUNT(DISTINCT player_id) FROM Activity。除数是一个表，被除数是一个表。求除数再看需要几个表。一个表没法和自己的元素上下判断所以需要自链接弄成横着的。然后筛选条件一定要写在一起DATE_ADD(t.firstdate, INTERVAL 1 DAY);最后在筛选。\n\\end{dxtips}",
-    "content": "\\begin{dxtips}\n    今天的错误是太贪心，想少用子查询。首先应该想明白到底要链接几张表。是这样的比如最后满足我们要求的只有一个元素，这个需要count没问题但是一旦进行操作以后最开始的表一定变化了，所有一定需要一个最开始表的子查询也就是(SELECT COUNT(DISTINCT player_id) FROM Activity。除数是一个表，被除数是一个表。求除数再看需要几个表。一个表没法和自己的元素上下判断所以需要自链接弄成横着的。然后筛选条件一定要写在一起DATE_ADD(t.firstdate, INTERVAL 1 DAY);最后在筛选。\n\\end{dxtips}",
-    "text": "今天的错误是太贪心，想少用子查询。首先应该想明白到底要链接几张表。是这样的比如最后满足我们要求的只有一个元素，这个需要count没问题但是一旦进行操作以后最开始的表一定变化了，所有一定需要一个最开始表的子查询也就是(SELECT COUNT(DISTINCT player_id) FROM Activity。除数是一个表，被除数是一个表。求除数再看需要几个表。一个表没法和自己的元素上下判断所以需要自链接弄成横着的。然后筛选条件一定要写在一起DATE_ADD(t.firstdate, INTERVAL 1 DAY);最后在筛选。",
+    "rawContent": "\\begin{dxtips}\n今天的错误是太贪心，想少用子查询。首先应该想明白到底要连接几张表。是这样的，比如最后满足我们要求的只有一个元素，这个需要 \\texttt{COUNT} 没问题，但是一旦进行操作以后最开始的表一定变化了，所以一定需要一个最开始表的子查询，也就是 \\texttt{(SELECT COUNT(DISTINCT player\\_id) FROM Activity)}。除数是一个表，被除数是一个表，求除数再看需要几个表。一个表没法和自己的元素上下判断，所以需要自连接弄成横着的。然后筛选条件一定要写在一起 \\texttt{DATE\\_ADD(t.firstdate, INTERVAL 1 DAY)}，最后再筛选。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n今天的错误是太贪心，想少用子查询。首先应该想明白到底要连接几张表。是这样的，比如最后满足我们要求的只有一个元素，这个需要 \\texttt{COUNT} 没问题，但是一旦进行操作以后最开始的表一定变化了，所以一定需要一个最开始表的子查询，也就是 \\texttt{(SELECT COUNT(DISTINCT player\\_id) FROM Activity)}。除数是一个表，被除数是一个表，求除数再看需要几个表。一个表没法和自己的元素上下判断，所以需要自连接弄成横着的。然后筛选条件一定要写在一起 \\texttt{DATE\\_ADD(t.firstdate, INTERVAL 1 DAY)}，最后再筛选。\n\\end{dxtips}",
+    "text": "今天的错误是太贪心，想少用子查询。首先应该想明白到底要连接几张表。是这样的，比如最后满足我们要求的只有一个元素，这个需要 COUNT 没问题，但是一旦进行操作以后最开始的表一定变化了，所以一定需要一个最开始表的子查询，也就是 (SELECT COUNT(DISTINCT player\\_id) FROM Activity)。除数是一个表，被除数是一个表，求除数再看需要几个表。一个表没法和自己的元素上下判断，所以需要自连接弄成横着的。然后筛选条件一定要写在一起 DATE\\_ADD(t.firstdate, INTERVAL 1 DAY)，最后再筛选。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
     "startLine": 394,
     "endLine": 396
   },
   {
     "id": "dx-sql-91",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "聚合",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "聚合",
+    "previewType": "note",
+    "previewTitle": "聚合",
+    "rawContent": "\\begin{note}\n\\texttt{GROUP BY product\\_id} 之后每组变成一行，但 \\texttt{sale\\_date} 这一组里有多个值，MySQL 不知道该显示哪一个，所以不允许直接 \\texttt{SELECT}．\\texttt{GROUP BY} 之后 \\texttt{SELECT} 的列只能是 \\texttt{GROUP BY} 里出现的列或聚合函数（\\texttt{MIN}、\\texttt{MAX}、\\texttt{COUNT}、\\texttt{SUM}、\\texttt{AVG}）．\n\\begin{lstlisting}[language=SQL]\nSELECT product_id,\n       COUNT(*) AS 销售次数,\n       MIN(sale_date) AS 最早销售,\n       MAX(sale_date) AS 最晚销售\nFROM Sales\nGROUP BY product_id;\n\\end{lstlisting}\n\\end{note}",
+    "content": "\\begin{note}\n\\texttt{GROUP BY product\\_id} 之后每组变成一行，但 \\texttt{sale\\_date} 这一组里有多个值，MySQL 不知道该显示哪一个，所以不允许直接 \\texttt{SELECT}．\\texttt{GROUP BY} 之后 \\texttt{SELECT} 的列只能是 \\texttt{GROUP BY} 里出现的列或聚合函数（\\texttt{MIN}、\\texttt{MAX}、\\texttt{COUNT}、\\texttt{SUM}、\\texttt{AVG}）．\n\\begin{lstlisting}[language=SQL]\nSELECT product_id,\n       COUNT(*) AS 销售次数,\n       MIN(sale_date) AS 最早销售,\n       MAX(sale_date) AS 最晚销售\nFROM Sales\nGROUP BY product_id;\n\\end{lstlisting}\n\\end{note}",
+    "text": "GROUP BY product\\_id 之后每组变成一行，但 sale\\_date 这一组里有多个值，MySQL 不知道该显示哪一个，所以不允许直接 SELECT．GROUP BY 之后 SELECT 的列只能是 GROUP BY 里出现的列或聚合函数（MIN、MAX、COUNT、SUM、AVG）． [language=SQL] SELECT product_id, COUNT(*) AS 销售次数, MIN(sale_date) AS 最早销售, MAX(sale_date) AS 最晚销售 FROM Sales GROUP BY product_id;",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
+    "startLine": 397,
+    "endLine": 407
+  },
+  {
+    "id": "dx-sql-92",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "聚合",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "聚合",
+    "previewType": "note",
+    "previewTitle": "聚合",
+    "rawContent": "\\begin{note}\n\\texttt{WHERE} 后面不能带聚合函数，但 \\texttt{HAVING} 可以，因为执行顺序不同：\n\\[\n\\texttt{FROM} \\to \\texttt{WHERE} \\to \\texttt{GROUP BY} \\to \\texttt{HAVING} \\to \\texttt{SELECT}\n\\]\n\\texttt{WHERE} 在 \\texttt{GROUP BY} 之前执行，此时还没有分组，聚合函数根本没算出来，所以不能用．\\texttt{HAVING} 在 \\texttt{GROUP BY} 之后执行，聚合函数已经算好了，所以可以用．\n\\end{note}",
+    "content": "\\begin{note}\n\\texttt{WHERE} 后面不能带聚合函数，但 \\texttt{HAVING} 可以，因为执行顺序不同：\n\\[\n\\texttt{FROM} \\to \\texttt{WHERE} \\to \\texttt{GROUP BY} \\to \\texttt{HAVING} \\to \\texttt{SELECT}\n\\]\n\\texttt{WHERE} 在 \\texttt{GROUP BY} 之前执行，此时还没有分组，聚合函数根本没算出来，所以不能用．\\texttt{HAVING} 在 \\texttt{GROUP BY} 之后执行，聚合函数已经算好了，所以可以用．\n\\end{note}",
+    "text": "WHERE 后面不能带聚合函数，但 HAVING 可以，因为执行顺序不同： WHERE 在 GROUP BY 之前执行，此时还没有分组，聚合函数根本没算出来，所以不能用．HAVING 在 GROUP BY 之后执行，聚合函数已经算好了，所以可以用．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
+    "startLine": 409,
+    "endLine": 415
+  },
+  {
+    "id": "dx-sql-93",
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
@@ -45676,11 +45716,11 @@
     "content": "子查询就是创造一个池子以前要写a在1，2，3里面选但是用另一个表表里就是1，2，3。就用select from这个表直接返回1，2，3。\n当然作为比较条件也可以是大余小余找第二大的去掉最大的就行。",
     "text": "子查询就是创造一个池子以前要写a在1，2，3里面选但是用另一个表表里就是1，2，3。就用select from这个表直接返回1，2，3。 当然作为比较条件也可以是大余小余找第二大的去掉最大的就行。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 402,
-    "endLine": 403
+    "startLine": 418,
+    "endLine": 419
   },
   {
-    "id": "dx-sql-92",
+    "id": "dx-sql-94",
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
@@ -45696,11 +45736,11 @@
     "content": "\\begin{definition}[SQL 自定义函数]\n自定义函数（User-Defined Function）是用户在数据库中创建的可复用逻辑单元，语法为：\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nCREATE FUNCTION 函数名(参数名 参数类型, ...) RETURNS 返回类型\nBEGIN\n    -- 函数体\n    RETURN 返回值;\nEND\n\\end{lstlisting}\n\n与存储过程的区别在于：函数必须有返回值，且可以直接嵌套在 \\texttt{SELECT} 语句中使用。\n\\end{definition}",
     "text": "[SQL 自定义函数] 自定义函数（User-Defined Function）是用户在数据库中创建的可复用逻辑单元，语法为： [language=SQL, frame=single, backgroundcolor=white] CREATE FUNCTION 函数名(参数名 参数类型, ...) RETURNS 返回类型 BEGIN -- 函数体 RETURN 返回值; END 与存储过程的区别在于：函数必须有返回值，且可以直接嵌套在 SELECT 语句中使用。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 409,
-    "endLine": 421
+    "startLine": 425,
+    "endLine": 437
   },
   {
-    "id": "dx-sql-93",
+    "id": "dx-sql-95",
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
@@ -45716,11 +45756,11 @@
     "content": "\\begin{definition}[SQL 循环]\n循环只能写在存储过程或自定义函数内部，MySQL 提供三种循环结构：\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\n-- 1. LOOP：手动控制退出\nloop1: LOOP\n    IF 条件 THEN LEAVE loop1; END IF;\nEND LOOP;\n\n-- 2. WHILE：先判断条件再执行\nWHILE 条件 DO\n    -- 执行内容\nEND WHILE;\n\n-- 3. REPEAT：先执行再判断，至少执行一次\nREPEAT\n    -- 执行内容\nUNTIL 条件 END REPEAT;\n\\end{lstlisting}\n\n\\end{definition}",
     "text": "[SQL 循环] 循环只能写在存储过程或自定义函数内部，MySQL 提供三种循环结构： [language=SQL, frame=single, backgroundcolor=white] -- 1. LOOP：手动控制退出 loop1: LOOP IF 条件 THEN LEAVE loop1; END IF; END LOOP; -- 2. WHILE：先判断条件再执行 WHILE 条件 DO -- 执行内容 END WHILE; -- 3. REPEAT：先执行再判断，至少执行一次 REPEAT -- 执行内容 UNTIL 条件 END REPEAT;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 423,
-    "endLine": 443
+    "startLine": 439,
+    "endLine": 459
   },
   {
-    "id": "dx-sql-94",
+    "id": "dx-sql-96",
     "repo": "dx-sql",
     "title": "Sql",
     "pdf": "pdf/dx-sql.pdf",
@@ -45736,8 +45776,8 @@
     "content": "\\begin{example}*[177第n高薪水]\n    \\begin{lstlisting}[language=SQL]\nCREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT\nBEGIN\n    SET N = N - 1;\n    RETURN (\n        SELECT DISTINCT Salary\n        FROM Employee\n        ORDER BY Salary DESC\n        LIMIT 1 OFFSET N\n    );\nEND\n\\end{lstlisting}\n\\end{example}",
     "text": "*[177第n高薪水] [language=SQL] CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN SET N = N - 1; RETURN ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET N ); END",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 446,
-    "endLine": 459
+    "startLine": 462,
+    "endLine": 475
   },
   {
     "id": "dx-topology-1",
