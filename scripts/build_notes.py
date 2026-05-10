@@ -53,20 +53,7 @@ matched_repos = 0
 compiled = 0
 books = []
 manifest = []
-
-existing_books = {}
-seen_lower = set()
-for pdf_file in OUTPUT_DIR.glob("*.pdf"):
-    key = pdf_file.name.lower()
-    if key in seen_lower:
-        continue
-    seen_lower.add(key)
-    existing_books[pdf_file.name] = {
-        "file": pdf_file.name,
-        "title": pdf_file.stem.replace("dx-", "").replace("-", " ").title(),
-        "subtitle": "",
-        "desc": "Auto-compiled from LaTeX",
-    }
+current_repo_names = set()
 
 for repo in repos:
     name = repo["name"]
@@ -74,6 +61,7 @@ for repo in repos:
         continue
 
     matched_repos += 1
+    current_repo_names.add(name)
     latest_commit = repo["pushed_at"]
     clone_url = repo["clone_url"]
     repo_path = WORK_DIR / name
@@ -231,10 +219,15 @@ for repo in repos:
         "desc": "Auto-compiled from LaTeX",
     })
 
-existing_names = {book["file"] for book in books}
-for old_pdf_name, book_info in existing_books.items():
-    if old_pdf_name not in existing_names:
-        books.append(book_info)
+# Clean up state: only keep entries for repos that still exist
+state = {k: v for k, v in state.items() if k in current_repo_names}
+
+# Clean up orphaned PDFs: remove PDFs whose repo no longer exists
+current_pdf_names = {f"{name}.pdf" for name in current_repo_names}
+for pdf_file in OUTPUT_DIR.glob("*.pdf"):
+    if pdf_file.name not in current_pdf_names:
+        print(f"  -> removing orphaned PDF: {pdf_file.name}")
+        pdf_file.unlink()
 
 books.sort(key=lambda x: x["title"].lower())
 manifest.sort(key=lambda x: x["title"].lower())
