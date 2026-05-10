@@ -17688,6 +17688,46 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
     "section": "代数运算与单位元",
     "subsection": "",
+    "kind": "note",
+    "blockTitle": "代数运算与单位元",
+    "previewType": "note",
+    "previewTitle": "代数运算与单位元",
+    "rawContent": "\\begin{note}[运算表]\n有限集上的代数运算可以用运算表（Cayley table）来表示：行列分别对应集合元素，交叉格填运算结果。\n\\end{note}",
+    "content": "\\begin{note}[运算表]\n有限集上的代数运算可以用运算表（Cayley table）来表示：行列分别对应集合元素，交叉格填运算结果。\n\\end{note}",
+    "text": "[运算表] 有限集上的代数运算可以用运算表（Cayley table）来表示：行列分别对应集合元素，交叉格填运算结果。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 178,
+    "endLine": 180
+  },
+  {
+    "id": "dx-Abstract-Algebra-25",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "代数运算与单位元",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "代数运算与单位元",
+    "previewType": "note",
+    "previewTitle": "代数运算与单位元",
+    "rawContent": "\\begin{note}[结合律 交换律 分配律]\n验证代数运算性质时保证映射（运算）合法即可。分配律：第一分配律把右侧元素分进左侧（$a(b+c)=ab+ac$），第二分配律把左侧元素分进右侧（$(a+b)c=ac+bc$）。\n\\end{note}",
+    "content": "\\begin{note}[结合律 交换律 分配律]\n验证代数运算性质时保证映射（运算）合法即可。分配律：第一分配律把右侧元素分进左侧（$a(b+c)=ab+ac$），第二分配律把左侧元素分进右侧（$(a+b)c=ac+bc$）。\n\\end{note}",
+    "text": "[结合律 交换律 分配律] 验证代数运算性质时保证映射（运算）合法即可。分配律：第一分配律把右侧元素分进左侧（ ），第二分配律把左侧元素分进右侧（ ）。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 182,
+    "endLine": 184
+  },
+  {
+    "id": "dx-Abstract-Algebra-26",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "代数运算与单位元",
+    "subsection": "",
     "kind": "definition",
     "blockTitle": "代数运算与单位元",
     "previewType": "definition",
@@ -17696,11 +17736,11 @@
     "content": "\\begin{definition}[单位元]\n设 $S$ 是一个具有二元运算 $*$ 的集合。如果对集合 $S$ 中的所有 $a$，$a*e=e*a=a$，那么 $e$ 被称为是二元运算 $*$ 的单位元（幺元）。\n\n\\textbf{定理（单位元唯一性）：} 具有二元运算 $*$ 的集合最多有一个单位元。\n\\end{definition}",
     "text": "[单位元] 设 是一个具有二元运算 的集合。如果对集合 中的所有 ， ，那么 被称为是二元运算 的单位元（幺元）。 定理（单位元唯一性）： 具有二元运算 的集合最多有一个单位元。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 178,
-    "endLine": 182
+    "startLine": 186,
+    "endLine": 190
   },
   {
-    "id": "dx-Abstract-Algebra-25",
+    "id": "dx-Abstract-Algebra-27",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17716,11 +17756,11 @@
     "content": "\\begin{note}[单位元唯一性证明]\n单位元唯一性证明方法：把单位元拆解，然后用结合律引出新的东西，唯一性证明。\n\n若 $e_1,e_2$ 都是单位元，则 $e_1=e_1*e_2=e_2$。\n\n数学中唯一性证明通常设存在两个再证明这两个相等\n\\end{note}",
     "text": "[单位元唯一性证明] 单位元唯一性证明方法：把单位元拆解，然后用结合律引出新的东西，唯一性证明。 若 都是单位元，则 。 数学中唯一性证明通常设存在两个再证明这两个相等",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 184,
-    "endLine": 190
+    "startLine": 192,
+    "endLine": 198
   },
   {
-    "id": "dx-Abstract-Algebra-26",
+    "id": "dx-Abstract-Algebra-28",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17736,11 +17776,11 @@
     "content": "\\begin{definition}[逆元]\n如果 $*$ 是 $S$ 上的一个运算，且有单位元 $e$，那么对任意 $x\\in S$，$x$ 的逆元是 $x'$，使得 $x*x'=x'*x=e$。\n\\end{definition}",
     "text": "[逆元] 如果 是 上的一个运算，且有单位元 ，那么对任意 ， 的逆元是 ，使得 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 192,
-    "endLine": 194
+    "startLine": 200,
+    "endLine": 202
   },
   {
-    "id": "dx-Abstract-Algebra-27",
+    "id": "dx-Abstract-Algebra-29",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17756,11 +17796,11 @@
     "content": "\\begin{definition}[幺半群（定义 1.1）]\n我们说 $(S,*)$ 是一个幺半群，当该二元运算满足结合律，且具有单位元。此即，\n\\[\n\\forall x,y,z\\in S,\\;x*(y*z)=(x*y)*z\n\\]\n\\[\n\\exists e\\in S,\\forall x\\in S,\\;e*x=x*e=x\n\\]\n\\end{definition}",
     "text": "[幺半群（定义 1.1）] 我们说 是一个幺半群，当该二元运算满足结合律，且具有单位元。此即，",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 199,
-    "endLine": 207
+    "startLine": 207,
+    "endLine": 215
   },
   {
-    "id": "dx-Abstract-Algebra-28",
+    "id": "dx-Abstract-Algebra-30",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17776,11 +17816,11 @@
     "content": "\\begin{definition}[交换幺半群（定义 1.2）]\n我们说 $(S,*)$ 是一个交换幺半群，当其是一个幺半群，且运算满足交换律，即\n\\[\n\\forall x,y\\in S,\\;x*y=y*x\n\\]\n\\end{definition}",
     "text": "[交换幺半群（定义 1.2）] 我们说 是一个交换幺半群，当其是一个幺半群，且运算满足交换律，即",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 209,
-    "endLine": 214
+    "startLine": 217,
+    "endLine": 222
   },
   {
-    "id": "dx-Abstract-Algebra-29",
+    "id": "dx-Abstract-Algebra-31",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17796,11 +17836,11 @@
     "content": "\\begin{definition}[幂（定义 1.3）]\n令 $x_1,\\cdots,x_n\\in S$，我们递归地定义\n\\[\nx_1\\cdot x_2\\cdots x_n=(x_1\\cdot x_2\\cdots x_{n-1})\\cdot x_n\n\\]\n令 $x\\in S$，$n\\in\\mathbb{N}$。若 $n>0$，我们定义 $x^n=x\\cdots x$，而 $x^0=e$。\n\\end{definition}",
     "text": "[幂（定义 1.3）] 令 ，我们递归地定义 令 ， 。若 ，我们定义 ，而 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 216,
-    "endLine": 222
+    "startLine": 224,
+    "endLine": 230
   },
   {
-    "id": "dx-Abstract-Algebra-30",
+    "id": "dx-Abstract-Algebra-32",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17816,11 +17856,11 @@
     "content": "\\begin{note}[定义1 3群中的幂]\n牢记幂只是把多个乘法换了一种写法表示了，乘法只是一种运算\n\\end{note}",
     "text": "[定义1 3群中的幂] 牢记幂只是把多个乘法换了一种写法表示了，乘法只是一种运算",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 224,
-    "endLine": 226
+    "startLine": 232,
+    "endLine": 234
   },
   {
-    "id": "dx-Abstract-Algebra-31",
+    "id": "dx-Abstract-Algebra-33",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17836,11 +17876,11 @@
     "content": "\\begin{note}[幺半群的定义 定义1 2 定义1 3]\n幺半群只要求有单位元，还有满足结合律 \\\\\n幺半群的单位元是唯一的\n\\end{note}",
     "text": "[幺半群的定义 定义1 2 定义1 3] 幺半群只要求有单位元，还有满足结合律 \\\\ 幺半群的单位元是唯一的",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 228,
-    "endLine": 231
+    "startLine": 236,
+    "endLine": 239
   },
   {
-    "id": "dx-Abstract-Algebra-32",
+    "id": "dx-Abstract-Algebra-34",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17856,11 +17896,11 @@
     "content": "\\begin{proposition}[广义结合律（命题 1.2）]\n令 $x_1,\\cdots,x_n,y_1,\\cdots,y_m\\in S$，则\n\\[\nx_1\\cdot x_2\\cdots x_n\\cdot y_1\\cdot y_2\\cdots y_m=(x_1\\cdot x_2\\cdots x_n)\\cdot(y_1\\cdot y_2\\cdots y_m)\n\\]\n\\end{proposition}",
     "text": "[广义结合律（命题 1.2）] 令 ，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 233,
-    "endLine": 238
+    "startLine": 241,
+    "endLine": 246
   },
   {
-    "id": "dx-Abstract-Algebra-33",
+    "id": "dx-Abstract-Algebra-35",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17876,11 +17916,11 @@
     "content": "\\begin{note}[广义结合律与数学归纳法]\n数学归纳法先对1一个证明成立然后假设k成立证明k成立的时候可以借鉴证明特殊的做法再证明k+1成立\n\\end{note}",
     "text": "[广义结合律与数学归纳法] 数学归纳法先对1一个证明成立然后假设k成立证明k成立的时候可以借鉴证明特殊的做法再证明k+1成立",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 240,
-    "endLine": 242
+    "startLine": 248,
+    "endLine": 250
   },
   {
-    "id": "dx-Abstract-Algebra-34",
+    "id": "dx-Abstract-Algebra-36",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17896,11 +17936,11 @@
     "content": "\\begin{proposition}[命题 1.3]\n令 $x\\in S$，$m,n\\in\\mathbb{N}$，则 $x^{m+n}=x^m\\cdot x^n$。\n\\end{proposition}",
     "text": "[命题 1.3] 令 ， ，则 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 244,
-    "endLine": 246
+    "startLine": 252,
+    "endLine": 254
   },
   {
-    "id": "dx-Abstract-Algebra-35",
+    "id": "dx-Abstract-Algebra-37",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17916,11 +17956,11 @@
     "content": "\\begin{definition}[子幺半群（定义 1.4）]\n令 $(S,\\cdot)$ 是一个幺半群，若 $T\\subset S$，我们说 $(T,\\cdot)$ 是 $(S,\\cdot)$ 的一个子幺半群，若 $e\\in T$，且 $T$ 在乘法下封闭，即\n\\[\ne\\in T,\\qquad\\forall x,y\\in T,\\;x*y\\in T\n\\]\n\\end{definition}",
     "text": "[子幺半群（定义 1.4）] 令 是一个幺半群，若 ，我们说 是 的一个子幺半群，若 ，且 在乘法下封闭，即",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 248,
-    "endLine": 253
+    "startLine": 256,
+    "endLine": 261
   },
   {
-    "id": "dx-Abstract-Algebra-36",
+    "id": "dx-Abstract-Algebra-38",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17936,11 +17976,11 @@
     "content": "\\begin{definition}[幺半群同态（定义 1.5）]\n假设 $(S,\\cdot)$，$(T,*)$ 是两个幺半群，且 $f:S\\to T$ 是一个映射，我们称 $f$ 是一个幺半群同态，当 $f$ 保持了乘法运算，且把单位元映到了单位元。\n\\[\n\\forall x,y\\in S,\\;f(x\\cdot y)=f(x)*f(y),\\qquad f(e)=e'\n\\]\n其中，$e$ 和 $e'$ 分别是 $(S,\\cdot)$ 和 $(T,*)$ 的单位元。\n\\end{definition}",
     "text": "[幺半群同态（定义 1.5）] 假设 ， 是两个幺半群，且 是一个映射，我们称 是一个幺半群同态，当 保持了乘法运算，且把单位元映到了单位元。 其中， 和 分别是 和 的单位元。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 255,
-    "endLine": 261
+    "startLine": 263,
+    "endLine": 269
   },
   {
-    "id": "dx-Abstract-Algebra-37",
+    "id": "dx-Abstract-Algebra-39",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17956,11 +17996,11 @@
     "content": "\\begin{note}[定义1 5幺半群的同态]\n这里是把自然数中的x映射到了x的n次方这个元素是在另一个幺半群里面的\n\\end{note}",
     "text": "[定义1 5幺半群的同态] 这里是把自然数中的x映射到了x的n次方这个元素是在另一个幺半群里面的",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 263,
-    "endLine": 265
+    "startLine": 271,
+    "endLine": 273
   },
   {
-    "id": "dx-Abstract-Algebra-38",
+    "id": "dx-Abstract-Algebra-40",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17976,11 +18016,11 @@
     "content": "\\begin{definition}[由子集生成的子幺半群（定义 1.6）]\n假设 $(S,\\cdot)$ 是一个幺半群，而 $A\\subset S$ 是一个子集。我们定义由 $A$ 生成的子幺半群，记作 $\\langle A\\rangle$，是指 $S$ 中所有包含了 $A$ 的子幺半群的交集。\n\\[\n\\langle A\\rangle=\\bigcap\\{T\\subset S:T\\supset A,\\,T\\text{ 是子幺半群}\\}\n\\]\n\\end{definition}",
     "text": "[由子集生成的子幺半群（定义 1.6）] 假设 是一个幺半群，而 是一个子集。我们定义由 生成的子幺半群，记作 ，是指 中所有包含了 的子幺半群的交集。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 267,
-    "endLine": 272
+    "startLine": 275,
+    "endLine": 280
   },
   {
-    "id": "dx-Abstract-Algebra-39",
+    "id": "dx-Abstract-Algebra-41",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -17996,11 +18036,11 @@
     "content": "\\begin{note}[定义1 6由子集生成的子幺半群]\n是包含A的所有子幺半群，如果A本身就是幺半群它不需要添加项就可以生成子幺半群。但是如果A本身元素构成不了幺半群你们就要引入新的元素显然新的元素+A是包含A的，所有A生成的子幺半群里面都有全部的A。所有的交集也就A+最少构成子幺半群需要添加的元素，这个最少代价形成的幺半群就是A生成的子幺半群\n\\end{note}",
     "text": "[定义1 6由子集生成的子幺半群] 是包含A的所有子幺半群，如果A本身就是幺半群它不需要添加项就可以生成子幺半群。但是如果A本身元素构成不了幺半群你们就要引入新的元素显然新的元素+A是包含A的，所有A生成的子幺半群里面都有全部的A。所有的交集也就A+最少构成子幺半群需要添加的元素，这个最少代价形成的幺半群就是A生成的子幺半群",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 274,
-    "endLine": 276
+    "startLine": 282,
+    "endLine": 284
   },
   {
-    "id": "dx-Abstract-Algebra-40",
+    "id": "dx-Abstract-Algebra-42",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18016,11 +18056,11 @@
     "content": "\\begin{definition}[幺半群同构（定义 1.7）]\n假设 $(S,\\cdot)$，$(T,*)$ 是两个幺半群，且 $f:S\\to T$ 是一个映射，我们称 $f$ 是一个幺半群同构，当 $f$ 是双射，且是一个同态。\n\\[\nf\\text{ 是双射},\\qquad\\forall x,y\\in S,\\;f(x\\cdot y)=f(x)*f(y),\\qquad f(e)=e'\n\\]\n\\end{definition}",
     "text": "[幺半群同构（定义 1.7）] 假设 ， 是两个幺半群，且 是一个映射，我们称 是一个幺半群同构，当 是双射，且是一个同态。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 278,
-    "endLine": 283
+    "startLine": 286,
+    "endLine": 291
   },
   {
-    "id": "dx-Abstract-Algebra-41",
+    "id": "dx-Abstract-Algebra-43",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18036,11 +18076,11 @@
     "content": "\\begin{note}[定义1 7幺半群的同构]\n同构概念可以类比全等 \\\\\n双射，原函数同态\n\\end{note}",
     "text": "[定义1 7幺半群的同构] 同构概念可以类比全等 \\\\ 双射，原函数同态",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 285,
-    "endLine": 288
+    "startLine": 293,
+    "endLine": 296
   },
   {
-    "id": "dx-Abstract-Algebra-42",
+    "id": "dx-Abstract-Algebra-44",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18056,11 +18096,11 @@
     "content": "\\begin{proposition}[命题 1.6]\n若 $f:(S,\\cdot)\\to(T,*)$ 是一个幺半群同构，则 $f^{-1}:T\\to S$ 是一个幺半群同构。\n\\end{proposition}",
     "text": "[命题 1.6] 若 是一个幺半群同构，则 是一个幺半群同构。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 290,
-    "endLine": 292
+    "startLine": 298,
+    "endLine": 300
   },
   {
-    "id": "dx-Abstract-Algebra-43",
+    "id": "dx-Abstract-Algebra-45",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18076,11 +18116,11 @@
     "content": "\\begin{note}[命题1 5证明A生成的子幺半群是包含A的最小子幺半群]\n由一个子集A生成的子结构就是包含了A的所有子结构的交集 \\\\\n所有幺半群都有e自然在交集了吗，证明x，y有$x*y$就有因为每一个群x，y在交集里面所以每个半幺群里面都有\n\\end{note}",
     "text": "[命题1 5证明A生成的子幺半群是包含A的最小子幺半群] 由一个子集A生成的子结构就是包含了A的所有子结构的交集 \\\\ 所有幺半群都有e自然在交集了吗，证明x，y有 就有因为每一个群x，y在交集里面所以每个半幺群里面都有",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 294,
-    "endLine": 297
+    "startLine": 302,
+    "endLine": 305
   },
   {
-    "id": "dx-Abstract-Algebra-44",
+    "id": "dx-Abstract-Algebra-46",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18096,11 +18136,11 @@
     "content": "\\begin{definition}[逆元（定义 1.8）]\n令 $(S,\\cdot)$ 是一个幺半群，$x\\in S$。我们称 $x$ 是可逆的，当且仅当\n\\[\n\\exists y\\in S,\\;x\\cdot y=y\\cdot x=e\n\\]\n其中 $y$ 被称为 $x$ 的逆元，记作 $x^{-1}$。\n\\end{definition}",
     "text": "[逆元（定义 1.8）] 令 是一个幺半群， 。我们称 是可逆的，当且仅当 其中 被称为 的逆元，记作 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 299,
-    "endLine": 305
+    "startLine": 307,
+    "endLine": 313
   },
   {
-    "id": "dx-Abstract-Algebra-45",
+    "id": "dx-Abstract-Algebra-47",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18116,11 +18156,11 @@
     "content": "\\begin{lemma}[引理 1.1：幺半群的逆元构成群]\n令 $(S,\\cdot)$ 是一个幺半群，则 $G$ 是由所有可逆元构成的子集，则 $(G,\\cdot)$ 是个群。\n\\end{lemma}",
     "text": "[引理 1.1：幺半群的逆元构成群] 令 是一个幺半群，则 是由所有可逆元构成的子集，则 是个群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 307,
-    "endLine": 309
+    "startLine": 315,
+    "endLine": 317
   },
   {
-    "id": "dx-Abstract-Algebra-46",
+    "id": "dx-Abstract-Algebra-48",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18136,11 +18176,11 @@
     "content": "\\begin{proposition}[命题 1.7：逆元唯一]\n令 $(S,\\cdot)$ 是一个幺半群。假设 $x\\in S$ 是可逆的，则其逆元唯一。也就是说，如果 $y,y'\\in S$ 都是它的逆元，则 $y=y'$。\n\n\\textbf{证明：} 假设 $y,y'$ 都是 $x$ 的逆元。则 $y\\cdot x=e$，$x\\cdot y'=e$。利用一个巧妙的连续\"代数变形\"来证明 $y=y'$。\n\\[\ny=y\\cdot e=y\\cdot x\\cdot y'=e\\cdot y'=y'\n\\]\n其中我们利用了 $e$ 是单位元，以及（广义）结合律。\n\\end{proposition}",
     "text": "[命题 1.7：逆元唯一] 令 是一个幺半群。假设 是可逆的，则其逆元唯一。也就是说，如果 都是它的逆元，则 。 证明： 假设 都是 的逆元。则 ， 。利用一个巧妙的连续\"代数变形\"来证明 。 其中我们利用了 是单位元，以及（广义）结合律。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 311,
-    "endLine": 319
+    "startLine": 319,
+    "endLine": 327
   },
   {
-    "id": "dx-Abstract-Algebra-47",
+    "id": "dx-Abstract-Algebra-49",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18156,11 +18196,11 @@
     "content": "\\begin{definition}[群（定义 1.9）]\n令 $(G,\\cdot)$ 是一个幺半群，则我们说它是一个群，若 $G$ 中所有元素都是可逆的，换言之，若是 $G$ 上的一个二元运算，则我们称 $(G,\\cdot)$ 是个群，若\n\\[\n\\forall x,y,z\\in G,\\;x\\cdot(y\\cdot z)=(x\\cdot y)\\cdot z\n\\]\n\\[\n\\exists e\\in G,\\forall x\\in G,\\;e\\cdot x=x\\cdot e=x\n\\]\n\\[\n\\forall x\\in G,\\;\\exists y\\in G,\\;x\\cdot y=y\\cdot x=e\n\\]\n\n注意：对于群，我们常用字母 $G$，以及接着的 $H,K$ 等，因为群的英文是 group。另外，我们把 $x$ 的逆记作 $x^{-1}$。命题 1.8：$(x^{-1})^{-1}=x$。命题 1.9：$(x\\cdot y)^{-1}=y^{-1}\\cdot x^{-1}$。\n\\end{definition}",
     "text": "[群（定义 1.9）] 令 是一个幺半群，则我们说它是一个群，若 中所有元素都是可逆的，换言之，若是 上的一个二元运算，则我们称 是个群，若 注意：对于群，我们常用字母 ，以及接着的 等，因为群的英文是 group。另外，我们把 的逆记作 。命题 1.8： 。命题 1.9： 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 324,
-    "endLine": 337
+    "startLine": 332,
+    "endLine": 345
   },
   {
-    "id": "dx-Abstract-Algebra-48",
+    "id": "dx-Abstract-Algebra-50",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18176,11 +18216,11 @@
     "content": "\\begin{note}[定义1 9幺半群加逆元就是群]\n这里有着为什么加逆符号这个需要改变x，y的位置\n\\end{note}",
     "text": "[定义1 9幺半群加逆元就是群] 这里有着为什么加逆符号这个需要改变x，y的位置",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 339,
-    "endLine": 341
+    "startLine": 347,
+    "endLine": 349
   },
   {
-    "id": "dx-Abstract-Algebra-49",
+    "id": "dx-Abstract-Algebra-51",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18196,11 +18236,11 @@
     "content": "\\begin{note}\n群的另一种等价定义：设 $G$ 是一个具有叫做乘法代数运算的非空集合，并且满足：\n\\begin{enumerate}\n  \\item[I.] $G$ 对于乘法来说是闭的；\n  \\item[II.] 结合律：$\\forall a,b,c\\in G$，有 $(a\\circ b)\\circ c=a\\circ(b\\circ c)$；\n  \\item[III.] $G$ 中有左单位元 $e$：$\\forall a\\in G$，$e\\circ a=a$；\n  \\item[IV.] 对 $G$ 中每一个元素 $a$，有左逆元 $a^{-1}\\in G$，使得 $a^{-1}\\circ a=e$。\n\\end{enumerate}\n则称 $G$ 关于代数运算 $\\circ$ 作成一个群。\n\\end{note}",
     "text": "群的另一种等价定义：设 是一个具有叫做乘法代数运算的非空集合，并且满足： 对于乘法来说是闭的； 结合律： ，有 ； 中有左单位元 ： ， ； 对 中每一个元素 ，有左逆元 ，使得 。 则称 关于代数运算 作成一个群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 343,
-    "endLine": 352
+    "startLine": 351,
+    "endLine": 360
   },
   {
-    "id": "dx-Abstract-Algebra-50",
+    "id": "dx-Abstract-Algebra-52",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18216,11 +18256,11 @@
     "content": "\\begin{note}[群的定义]\n乘法封闭 满足结合律 叫做乘法不一定是乘法是可以自定义的 \\\\\n有左单位元有左逆元 \\\\\n先证明是代数运算\n\\end{note}",
     "text": "[群的定义] 乘法封闭 满足结合律 叫做乘法不一定是乘法是可以自定义的 \\\\ 有左单位元有左逆元 \\\\ 先证明是代数运算",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 354,
-    "endLine": 358
+    "startLine": 362,
+    "endLine": 366
   },
   {
-    "id": "dx-Abstract-Algebra-51",
+    "id": "dx-Abstract-Algebra-53",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18236,11 +18276,11 @@
     "content": "\\begin{note}[群的意义]\n群论的诞生源于对具体数学问题的解决需求和对称性认识的深化：\n\\begin{enumerate}\n  \\item \\textbf{多项式方程与伽罗瓦理论：} 伽罗瓦通过研究根的置换群，判断多项式是否能用有限次根式求解，奠定了群论基础。\n  \\item \\textbf{几何中的对称性：} 旋转、反射、平移等几何变换具有规律性，群论统一描述这些对称操作，是几何学的强大工具。\n  \\item \\textbf{数学结构的统一与抽象化：} 群的公理体系（封闭性、结合律、单位元、逆元）简单而有力，推动了环、域、向量空间等更复杂结构的建立，使数学理论趋向统一和抽象。\n  \\item \\textbf{物理学的应用：} 物理定律在某些变换下保持不变（对称性与守恒定律），群论被用于量子力学、粒子物理等领域构建理论模型。\n\\end{enumerate}\n群论是研究\"对称性\"与\"结构\"的核心工具，既解决具体数学问题，也统一描述各种抽象代数结构。\n\\end{note}",
     "text": "[群的意义] 群论的诞生源于对具体数学问题的解决需求和对称性认识的深化： 多项式方程与伽罗瓦理论： 伽罗瓦通过研究根的置换群，判断多项式是否能用有限次根式求解，奠定了群论基础。 几何中的对称性： 旋转、反射、平移等几何变换具有规律性，群论统一描述这些对称操作，是几何学的强大工具。 数学结构的统一与抽象化： 群的公理体系（封闭性、结合律、单位元、逆元）简单而有力，推动了环、域、向量空间等更复杂结构的建立，使数学理论趋向统一和抽象。 物理学的应用： 物理定律在某些变换下保持不变（对称性与守恒定律），群论被用于量子力学、粒子物理等领域构建理论模型。 群论是研究\"对称性\"与\"结构\"的核心工具，既解决具体数学问题，也统一描述各种抽象代数结构。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 360,
-    "endLine": 369
+    "startLine": 368,
+    "endLine": 377
   },
   {
-    "id": "dx-Abstract-Algebra-52",
+    "id": "dx-Abstract-Algebra-54",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18256,11 +18296,11 @@
     "content": "\\begin{note}[群的性质]\n$\\forall a\\in G,\\exists a^{-1}\\in G,\\;a^{-1}a=e\\Rightarrow\\exists a'\\in G,\\;a'a^{-1}=e$\n\n定理1：左逆元也是右逆元\n\n$a$ 逆是 $a$ 的左逆元，$a'$ 是 $a$ 逆的左逆元，再证明 $a'$ 和 $a$ 一样\n\n$aa^{-1}=eaa^{-1}=(a'a^{-1})aa^{-1}=a'(a^{-1}a)a^{-1}=a'ea^{-1}=a'a^{-1}=e$\n\n左单位元也是右单位元；群的乘法适合消去律。\n\n定理1左逆元也是右逆元 / $a$逆是$a$的左逆元 $a'$是$a$逆的左逆元再证明$a'$和$a$一样 \\\\\n左单位元也是右单位元 / 群的乘法适合消去律\n\\end{note}",
     "text": "[群的性质] 定理1：左逆元也是右逆元 逆是 的左逆元， 是 逆的左逆元，再证明 和 一样 左单位元也是右单位元；群的乘法适合消去律。 定理1左逆元也是右逆元 / 逆是 的左逆元 是 逆的左逆元再证明 和 一样 \\\\ 左单位元也是右单位元 / 群的乘法适合消去律",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 371,
-    "endLine": 384
+    "startLine": 379,
+    "endLine": 392
   },
   {
-    "id": "dx-Abstract-Algebra-53",
+    "id": "dx-Abstract-Algebra-55",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18276,11 +18316,11 @@
     "content": "\\begin{note}[群的等价判别]\n设 $G$ 是一个具有叫做乘法代数运算的非空集合，并且满足：\n\\begin{enumerate}\n  \\item[I.] $G$ 对于乘法来说是闭的；\n  \\item[II.] 结合律：$\\forall a,b,c\\in G$，有 $(a\\circ b)\\circ c=a\\circ(b\\circ c)$；\n  \\item[III.] $G$ 中任意两个元 $a,b$，方程 $ax=b$，$ya=b$ 都在 $G$ 中有解。\n\\end{enumerate}\n则称 $G$ 关于代数运算 $\\circ$ 作成一个群。\n\\end{note}",
     "text": "[群的等价判别] 设 是一个具有叫做乘法代数运算的非空集合，并且满足： 对于乘法来说是闭的； 结合律： ，有 ； 中任意两个元 ，方程 ， 都在 中有解。 则称 关于代数运算 作成一个群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 386,
-    "endLine": 394
+    "startLine": 394,
+    "endLine": 402
   },
   {
-    "id": "dx-Abstract-Algebra-54",
+    "id": "dx-Abstract-Algebra-56",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18296,11 +18336,11 @@
     "content": "\\begin{theorem}[消去律与有限群判定]\n设 $G$ 是一个乘法运算封闭的非空有限集合，如果 $G$ 满足结合律，且两个消去律成立，则 $G$ 是一个群。\n\n\\textbf{证：} 设 $G=\\{a_1,a_2,\\cdots,a_n\\}$，对任意的 $a,b\\in G$，考察 $aa_i$ 与 $aa_j$，如果 $aa_i=aa_j$，则由左消去律得，$a_i=a_j$，于是 $i=j$。这说明，$aa_1,aa_2,\\cdots,aa_n$ 是 $G$ 中 $n$ 个不同的元素。\n\n封闭有限集，有限有限不需要找单位元和逆元。消去律是未来解方程，群可以用消去律。\n\\end{theorem}",
     "text": "[消去律与有限群判定] 设 是一个乘法运算封闭的非空有限集合，如果 满足结合律，且两个消去律成立，则 是一个群。 证： 设 ，对任意的 ，考察 与 ，如果 ，则由左消去律得， ，于是 。这说明， 是 中 个不同的元素。 封闭有限集，有限有限不需要找单位元和逆元。消去律是未来解方程，群可以用消去律。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 396,
-    "endLine": 402
+    "startLine": 404,
+    "endLine": 410
   },
   {
-    "id": "dx-Abstract-Algebra-55",
+    "id": "dx-Abstract-Algebra-57",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18316,11 +18356,11 @@
     "content": "\\begin{note}[消去律成立与证明G是一个群 重点]\n封闭有限集 有限有限不需要找单位元和逆元 \\\\\n消去律是未来解方程 \\\\\n群可以用消去律\n\\end{note}",
     "text": "[消去律成立与证明G是一个群 重点] 封闭有限集 有限有限不需要找单位元和逆元 \\\\ 消去律是未来解方程 \\\\ 群可以用消去律",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 404,
-    "endLine": 408
+    "startLine": 412,
+    "endLine": 416
   },
   {
-    "id": "dx-Abstract-Algebra-56",
+    "id": "dx-Abstract-Algebra-58",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18336,11 +18376,11 @@
     "content": "\\begin{definition}[加群]\n一个交换群叫做一个加群，是指我们把这个群的代数运算叫做加法，并且用符号 $+$ 来表示。\n\\end{definition}",
     "text": "[加群] 一个交换群叫做一个加群，是指我们把这个群的代数运算叫做加法，并且用符号 来表示。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 410,
-    "endLine": 412
+    "startLine": 418,
+    "endLine": 420
   },
   {
-    "id": "dx-Abstract-Algebra-57",
+    "id": "dx-Abstract-Algebra-59",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18356,11 +18396,11 @@
     "content": "\\begin{definition}[有限群（定义 1.20）]\n令 $(G,\\cdot)$ 是一个群，我们称 $G$ 是一个有限群，当该群是有限的，则 $G$ 是有限的。\n\n第一个概念是元素的阶，这与循环群密切相关，我们会慢慢引到循环群的概念。\n\n令 $x\\in G$，则 $x$（在 $G$ 中）的阶，记作 $|x|$，定义为那个最小的正整数 $n\\in\\mathbb{N}_1$，使得 $x^n=e$。若这样的 $n$ 不存在，则记 $|x|=\\infty$。\n\\end{definition}",
     "text": "[有限群（定义 1.20）] 令 是一个群，我们称 是一个有限群，当该群是有限的，则 是有限的。 第一个概念是元素的阶，这与循环群密切相关，我们会慢慢引到循环群的概念。 令 ，则 （在 中）的阶，记作 ，定义为那个最小的正整数 ，使得 。若这样的 不存在，则记 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 417,
-    "endLine": 423
+    "startLine": 425,
+    "endLine": 431
   },
   {
-    "id": "dx-Abstract-Algebra-58",
+    "id": "dx-Abstract-Algebra-60",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18376,11 +18416,11 @@
     "content": "\\begin{note}[群的阶与元素的阶]\n群的阶是群中元素的个数。群中每一个元素的阶可以是不一样的。\n\\end{note}",
     "text": "[群的阶与元素的阶] 群的阶是群中元素的个数。群中每一个元素的阶可以是不一样的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 425,
-    "endLine": 427
+    "startLine": 433,
+    "endLine": 435
   },
   {
-    "id": "dx-Abstract-Algebra-59",
+    "id": "dx-Abstract-Algebra-61",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18396,47 +18436,7 @@
     "content": "\\begin{note}[定义1 20元素的阶]\n乘法不是真正的乘法 \\\\\n$a$的$n$次方$=a\\circ a\\circ a$就是$n$次运算，运算可以定义 \\\\\n阶是最小正整数 阶的符号和绝对值一样 \\\\\n有限群每个元素的阶均有限 $a$和阶和$a^{-1}$的阶一样 \\\\\n交换群可以拆括号\n\\end{note}",
     "text": "[定义1 20元素的阶] 乘法不是真正的乘法 \\\\ 的 次方 就是 次运算，运算可以定义 \\\\ 阶是最小正整数 阶的符号和绝对值一样 \\\\ 有限群每个元素的阶均有限 和阶和 的阶一样 \\\\ 交换群可以拆括号",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 429,
-    "endLine": 435
-  },
-  {
-    "id": "dx-Abstract-Algebra-60",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "有限群与元素的阶",
-    "subsection": "",
-    "kind": "proposition",
-    "blockTitle": "有限群与元素的阶",
-    "previewType": "theorem",
-    "previewTitle": "有限群与元素的阶",
-    "rawContent": "\\begin{proposition}[命题 1.21]\n$(G,\\cdot)$ 是有限群，且 $x\\in G$，则 $|x|<\\infty$。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。\n\\end{proposition}",
-    "content": "\\begin{proposition}[命题 1.21]\n$(G,\\cdot)$ 是有限群，且 $x\\in G$，则 $|x|<\\infty$。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。\n\\end{proposition}",
-    "text": "[命题 1.21] 是有限群，且 ，则 。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 437,
-    "endLine": 439
-  },
-  {
-    "id": "dx-Abstract-Algebra-61",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "有限群与元素的阶",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "有限群与元素的阶",
-    "previewType": "note",
-    "previewTitle": "有限群与元素的阶",
-    "rawContent": "\\begin{note}[有限群每一个元素都有元]\n不能不相等是因为如果都不相等就会出现无限了\n\\end{note}",
-    "content": "\\begin{note}[有限群每一个元素都有元]\n不能不相等是因为如果都不相等就会出现无限了\n\\end{note}",
-    "text": "[有限群每一个元素都有元] 不能不相等是因为如果都不相等就会出现无限了",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 441,
     "endLine": 443
   },
   {
@@ -18452,15 +18452,55 @@
     "blockTitle": "有限群与元素的阶",
     "previewType": "theorem",
     "previewTitle": "有限群与元素的阶",
+    "rawContent": "\\begin{proposition}[命题 1.21]\n$(G,\\cdot)$ 是有限群，且 $x\\in G$，则 $|x|<\\infty$。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。\n\\end{proposition}",
+    "content": "\\begin{proposition}[命题 1.21]\n$(G,\\cdot)$ 是有限群，且 $x\\in G$，则 $|x|<\\infty$。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。\n\\end{proposition}",
+    "text": "[命题 1.21] 是有限群，且 ，则 。换言之，有限群的每一个元素都可以通过自乘有限多次，都可以得到单位元。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 445,
+    "endLine": 447
+  },
+  {
+    "id": "dx-Abstract-Algebra-63",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "有限群与元素的阶",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "有限群与元素的阶",
+    "previewType": "note",
+    "previewTitle": "有限群与元素的阶",
+    "rawContent": "\\begin{note}[有限群每一个元素都有元]\n不能不相等是因为如果都不相等就会出现无限了\n\\end{note}",
+    "content": "\\begin{note}[有限群每一个元素都有元]\n不能不相等是因为如果都不相等就会出现无限了\n\\end{note}",
+    "text": "[有限群每一个元素都有元] 不能不相等是因为如果都不相等就会出现无限了",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 449,
+    "endLine": 451
+  },
+  {
+    "id": "dx-Abstract-Algebra-64",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "有限群与元素的阶",
+    "subsection": "",
+    "kind": "proposition",
+    "blockTitle": "有限群与元素的阶",
+    "previewType": "theorem",
+    "previewTitle": "有限群与元素的阶",
     "rawContent": "\\begin{proposition}[$a$ 和 $a^{-1}$ 阶数一样]\n\\[\n|a|=|a^{-1}|\n\\]\n若 $|a|=m$，那么 $a^m=e$，另外 $(a^{-1})^m=(a^m)^{-1}=e^{-1}=e$，知 $|a^{-1}|\\le m$；\n\n若 $|a^{-1}|=n\\Rightarrow(a^{-1})^n=e\\Rightarrow(a^n)^{-1}=e\\Rightarrow a^n=e^{-1}=e$，$\\therefore|a|\\le n$，于是有 $n\\le m$，\n\n且 $m\\le n\\Rightarrow m=n$，即 $|a|=|a^{-1}|$。\n\\end{proposition}",
     "content": "\\begin{proposition}[$a$ 和 $a^{-1}$ 阶数一样]\n\\[\n|a|=|a^{-1}|\n\\]\n若 $|a|=m$，那么 $a^m=e$，另外 $(a^{-1})^m=(a^m)^{-1}=e^{-1}=e$，知 $|a^{-1}|\\le m$；\n\n若 $|a^{-1}|=n\\Rightarrow(a^{-1})^n=e\\Rightarrow(a^n)^{-1}=e\\Rightarrow a^n=e^{-1}=e$，$\\therefore|a|\\le n$，于是有 $n\\le m$，\n\n且 $m\\le n\\Rightarrow m=n$，即 $|a|=|a^{-1}|$。\n\\end{proposition}",
     "text": "[ 和 阶数一样] 若 ，那么 ，另外 ，知 ； 若 ， ，于是有 ， 且 ，即 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 445,
-    "endLine": 454
+    "startLine": 453,
+    "endLine": 462
   },
   {
-    "id": "dx-Abstract-Algebra-63",
+    "id": "dx-Abstract-Algebra-65",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18476,11 +18516,11 @@
     "content": "\\begin{note}[a和a的逆阶数一样]\n设$a$的阶数是$m$，$a^{-1}$的$m$次方也是$e$，$m$大于等于$a^{-1}$的阶数 \\\\\n同理设$a^{-1}$的阶数是$n$，$a$的$n$次方也是$e$，$n$大于等于$a$的阶数 \\\\\n$m$大于等于$n$，$n$大于等于$m$\n\\end{note}",
     "text": "[a和a的逆阶数一样] 设 的阶数是 ， 的 次方也是 ， 大于等于 的阶数 \\\\ 同理设 的阶数是 ， 的 次方也是 ， 大于等于 的阶数 \\\\ 大于等于 ， 大于等于",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 456,
-    "endLine": 460
+    "startLine": 464,
+    "endLine": 468
   },
   {
-    "id": "dx-Abstract-Algebra-64",
+    "id": "dx-Abstract-Algebra-66",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18496,47 +18536,7 @@
     "content": "\\begin{example}[阶的例题]\n1. 若群 $G$ 的每一个元都适合方程 $x^2=e$，那么 $G$ 是交换群。\n\n\\textbf{解：} 令 $a$ 和 $b$ 是 $G$ 的任意两个元。由题设 $(ab)(ab)=(ab)^2=e$，另一方面 $(ab)(ba)=ab^2a=aea=a^2=e$，于是有 $(ab)(ab)=(ab)(ba)$。利用消去律，得 $ab=ba$，所以 $G$ 是交换群。\n\\end{example}",
     "text": "[阶的例题] 1. 若群 的每一个元都适合方程 ，那么 是交换群。 解： 令 和 是 的任意两个元。由题设 ，另一方面 ，于是有 。利用消去律，得 ，所以 是交换群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 462,
-    "endLine": 466
-  },
-  {
-    "id": "dx-Abstract-Algebra-65",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "有限群与元素的阶",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "有限群与元素的阶",
-    "previewType": "note",
-    "previewTitle": "有限群与元素的阶",
-    "rawContent": "\\begin{note}[命题1 2 6 带余除法和阶n的结合]\n主要要把n拿出来\n\\end{note}",
-    "content": "\\begin{note}[命题1 2 6 带余除法和阶n的结合]\n主要要把n拿出来\n\\end{note}",
-    "text": "[命题1 2 6 带余除法和阶n的结合] 主要要把n拿出来",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 468,
-    "endLine": 470
-  },
-  {
-    "id": "dx-Abstract-Algebra-66",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "有限群与元素的阶",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "有限群与元素的阶",
-    "previewType": "note",
-    "previewTitle": "有限群与元素的阶",
-    "rawContent": "\\begin{note}[阶数与奇偶]\n由$a$和$a$的逆出现偶数，有$a$的逆是群的定义规定的\n\\end{note}",
-    "content": "\\begin{note}[阶数与奇偶]\n由$a$和$a$的逆出现偶数，有$a$的逆是群的定义规定的\n\\end{note}",
-    "text": "[阶数与奇偶] 由 和 的逆出现偶数，有 的逆是群的定义规定的",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 472,
+    "startLine": 470,
     "endLine": 474
   },
   {
@@ -18552,15 +18552,55 @@
     "blockTitle": "有限群与元素的阶",
     "previewType": "note",
     "previewTitle": "有限群与元素的阶",
-    "rawContent": "\\begin{note}[阶是素数的群一定是循环]\n也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶\n\\end{note}",
-    "content": "\\begin{note}[阶是素数的群一定是循环]\n也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶\n\\end{note}",
-    "text": "[阶是素数的群一定是循环] 也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶",
+    "rawContent": "\\begin{note}[命题1 2 6 带余除法和阶n的结合]\n主要要把n拿出来\n\\end{note}",
+    "content": "\\begin{note}[命题1 2 6 带余除法和阶n的结合]\n主要要把n拿出来\n\\end{note}",
+    "text": "[命题1 2 6 带余除法和阶n的结合] 主要要把n拿出来",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 476,
     "endLine": 478
   },
   {
     "id": "dx-Abstract-Algebra-68",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "有限群与元素的阶",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "有限群与元素的阶",
+    "previewType": "note",
+    "previewTitle": "有限群与元素的阶",
+    "rawContent": "\\begin{note}[阶数与奇偶]\n由$a$和$a$的逆出现偶数，有$a$的逆是群的定义规定的\n\\end{note}",
+    "content": "\\begin{note}[阶数与奇偶]\n由$a$和$a$的逆出现偶数，有$a$的逆是群的定义规定的\n\\end{note}",
+    "text": "[阶数与奇偶] 由 和 的逆出现偶数，有 的逆是群的定义规定的",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 480,
+    "endLine": 482
+  },
+  {
+    "id": "dx-Abstract-Algebra-69",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "有限群与元素的阶",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "有限群与元素的阶",
+    "previewType": "note",
+    "previewTitle": "有限群与元素的阶",
+    "rawContent": "\\begin{note}[阶是素数的群一定是循环]\n也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶\n\\end{note}",
+    "content": "\\begin{note}[阶是素数的群一定是循环]\n也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶\n\\end{note}",
+    "text": "[阶是素数的群一定是循环] 也就是阶是素数的群每个不是单位元的都是生成元 先生成一个循环子群子群的阶是父群阶的因子 因为父群阶是素数所以子群阶就是父群的阶",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 484,
+    "endLine": 486
+  },
+  {
+    "id": "dx-Abstract-Algebra-70",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18576,11 +18616,11 @@
     "content": "\\begin{definition}[交换群]\n若群 $G$ 的代数运算满足交换律，则称 $G$ 为交换群（Abel群）。\n\\end{definition}",
     "text": "[交换群] 若群 的代数运算满足交换律，则称 为交换群（Abel群）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 483,
-    "endLine": 485
+    "startLine": 491,
+    "endLine": 493
   },
   {
-    "id": "dx-Abstract-Algebra-69",
+    "id": "dx-Abstract-Algebra-71",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18596,11 +18636,11 @@
     "content": "\\begin{example}\n整数集 $Z$：\n\n（1）对于数的普通加法：加法有结合律、交换律，左单位元 $0$，左逆元 $-a$，因此做成交换群，称为\\textbf{整数加群}；\n\n（2）对于数的普通乘法：左单位元 $1$，$a\\ne\\pm1$ 无逆元，不能做成群；\n\n（3）对于运算 $a\\circ b=a+b+4$：\n\n$(a\\circ b)\\circ c=(a+b+4)\\circ c=(a+b+4)+c+4=a+b+c+8$\n\n$a\\circ(b\\circ c)=a\\circ(b+c+4)=a+(b+c+4)+4=a+b+c+8$\n\n有结合律，且有交换律。左单位元 $-4$：$-4\\circ b=-4+b+4=b$；左逆元：$(-8-a)\\circ a=-8-a+a+4=-4$。做成交换群。\n\\end{example}",
     "text": "整数集 ： （1）对于数的普通加法：加法有结合律、交换律，左单位元 ，左逆元 ，因此做成交换群，称为整数加群； （2）对于数的普通乘法：左单位元 ， 无逆元，不能做成群； （3）对于运算 ： 有结合律，且有交换律。左单位元 ： ；左逆元： 。做成交换群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 487,
-    "endLine": 501
+    "startLine": 495,
+    "endLine": 509
   },
   {
-    "id": "dx-Abstract-Algebra-70",
+    "id": "dx-Abstract-Algebra-72",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18616,11 +18656,11 @@
     "content": "\\begin{definition}[定义 1.10：阿贝尔群]\n若 $(G,\\cdot)$ 是一个群，我们称它是阿贝尔群，或交换群，当该运算满足交换律，即\n\\[\n\\forall x,y\\in G,\\;x\\cdot y=y\\cdot x\n\\]\n\\end{definition}",
     "text": "[定义 1.10：阿贝尔群] 若 是一个群，我们称它是阿贝尔群，或交换群，当该运算满足交换律，即",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 503,
-    "endLine": 508
+    "startLine": 511,
+    "endLine": 516
   },
   {
-    "id": "dx-Abstract-Algebra-71",
+    "id": "dx-Abstract-Algebra-73",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18636,11 +18676,11 @@
     "content": "\\begin{note}[1 10阿贝尔群]\n常见的群，加群最为普遍\n\\end{note}",
     "text": "[1 10阿贝尔群] 常见的群，加群最为普遍",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 510,
-    "endLine": 512
+    "startLine": 518,
+    "endLine": 520
   },
   {
-    "id": "dx-Abstract-Algebra-72",
+    "id": "dx-Abstract-Algebra-74",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18656,11 +18696,11 @@
     "content": "\\begin{note}[交换群 阿贝尔群]\n交换群就是证明$ab=ba$\n\\end{note}",
     "text": "[交换群 阿贝尔群] 交换群就是证明",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 514,
-    "endLine": 516
+    "startLine": 522,
+    "endLine": 524
   },
   {
-    "id": "dx-Abstract-Algebra-73",
+    "id": "dx-Abstract-Algebra-75",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18676,11 +18716,11 @@
     "content": "\\begin{definition}[子群]\n一个群 $G$ 的一个子集 $H$ 叫做 $G$ 的一个子群，是指 $H$ 对于 $G$ 的乘法来说作成一个群。\n\n设 $G$ 是群，$H$ 是 $G$ 的一个非空子集。如果按 $G$ 中元素的二元运算也构成群，则称 $H$ 是 $G$ 的一个子群，记为 $H\\le G$。\n\\end{definition}",
     "text": "[子群] 一个群 的一个子集 叫做 的一个子群，是指 对于 的乘法来说作成一个群。 设 是群， 是 的一个非空子集。如果按 中元素的二元运算也构成群，则称 是 的一个子群，记为 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 521,
-    "endLine": 525
+    "startLine": 529,
+    "endLine": 533
   },
   {
-    "id": "dx-Abstract-Algebra-74",
+    "id": "dx-Abstract-Algebra-76",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18696,11 +18736,11 @@
     "content": "\\begin{note}[子群]\n继承运算 \\\\\n子群也得是群而且运算和父空间一样\n\\end{note}",
     "text": "[子群] 继承运算 \\\\ 子群也得是群而且运算和父空间一样",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 527,
-    "endLine": 530
+    "startLine": 535,
+    "endLine": 538
   },
   {
-    "id": "dx-Abstract-Algebra-75",
+    "id": "dx-Abstract-Algebra-77",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18716,11 +18756,11 @@
     "content": "\\begin{note}[定义子群的目的（定义 1.13）]\n定义子群根本目的是证明它是一个群。\n\\end{note}",
     "text": "[定义子群的目的（定义 1.13）] 定义子群根本目的是证明它是一个群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 532,
-    "endLine": 534
+    "startLine": 540,
+    "endLine": 542
   },
   {
-    "id": "dx-Abstract-Algebra-76",
+    "id": "dx-Abstract-Algebra-78",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18736,11 +18776,11 @@
     "content": "\\begin{theorem}[定理 1：子群充要条件]\n一个群 $G$ 的一个非空子集 $H$ 作成 $G$ 的一个子群的充要条件是：\n\\begin{enumerate}[(i)]\n  \\item $a,b\\in H\\Rightarrow ab\\in H$；\n  \\item $a\\in H\\Rightarrow a^{-1}\\in H$。\n\\end{enumerate}\n\\end{theorem}",
     "text": "[定理 1：子群充要条件] 一个群 的一个非空子集 作成 的一个子群的充要条件是： [(i)] ； 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 536,
-    "endLine": 542
+    "startLine": 544,
+    "endLine": 550
   },
   {
-    "id": "dx-Abstract-Algebra-77",
+    "id": "dx-Abstract-Algebra-79",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18756,11 +18796,11 @@
     "content": "\\begin{note}[定理1子群充要条件]\n子群单位元是原群的单位元，子群的逆元也是原群的逆元 \\\\\n继承最重要的\n\\end{note}",
     "text": "[定理1子群充要条件] 子群单位元是原群的单位元，子群的逆元也是原群的逆元 \\\\ 继承最重要的",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 544,
-    "endLine": 547
+    "startLine": 552,
+    "endLine": 555
   },
   {
-    "id": "dx-Abstract-Algebra-78",
+    "id": "dx-Abstract-Algebra-80",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18776,11 +18816,11 @@
     "content": "\\begin{theorem}[定理 2：子群充要条件]\n一个群 $G$ 的一个非空子集 $H$ 作成 $G$ 的一个子群的充要条件是：\n\\begin{enumerate}[(iii)]\n  \\item $a,b\\in H\\Rightarrow ab^{-1}\\in H$。\n\\end{enumerate}\n\\end{theorem}",
     "text": "[定理 2：子群充要条件] 一个群 的一个非空子集 作成 的一个子群的充要条件是： [(iii)] 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 549,
-    "endLine": 554
+    "startLine": 557,
+    "endLine": 562
   },
   {
-    "id": "dx-Abstract-Algebra-79",
+    "id": "dx-Abstract-Algebra-81",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18796,11 +18836,11 @@
     "content": "\\begin{note}[定理2非空子集充要条件]\n定理2就是简化的定理1：把逆元条件和乘法封闭条件合并成一个条件 $ab^{-1}\\in H$。\n\\end{note}",
     "text": "[定理2非空子集充要条件] 定理2就是简化的定理1：把逆元条件和乘法封闭条件合并成一个条件 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 556,
-    "endLine": 558
+    "startLine": 564,
+    "endLine": 566
   },
   {
-    "id": "dx-Abstract-Algebra-80",
+    "id": "dx-Abstract-Algebra-82",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18816,11 +18856,11 @@
     "content": "\\begin{theorem}[定理 3：非空有限子群]\n一个群 $G$ 的一个非空有限子集 $H$ 作成 $G$ 的一个子群的充要条件是\n\\[\na,b\\in H\\Rightarrow ab\\in H.\n\\]\n\\end{theorem}",
     "text": "[定理 3：非空有限子群] 一个群 的一个非空有限子集 作成 的一个子群的充要条件是",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 560,
-    "endLine": 565
+    "startLine": 568,
+    "endLine": 573
   },
   {
-    "id": "dx-Abstract-Algebra-81",
+    "id": "dx-Abstract-Algebra-83",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18836,11 +18876,11 @@
     "content": "\\begin{note}[学子群的意义]\n\\begin{enumerate}\n  \\item \\textbf{理解群的结构：} 子群是群的\"内部构件\"。通过研究一个群的所有子群，我们可以了解群内部的分解和层次结构，这对分类和分析群的性质非常关键。例如，利用子群可以描述群的分解、直积和半直积结构，从而揭示群的内在对称性和代数性质。\n  \\item \\textbf{简化证明和构造：} 在解决某些问题时，我们可以先在一个子群内证明结论，然后再推广到整个群。例如，在证明群的某些性质时，先考虑生成的循环子群或正规子群往往会使证明过程简单明了。\n  \\item \\textbf{群的同态与商群：} 子群，尤其是正规子群，是构造群同态和商群的基础。通过研究子群，我们可以定义群的同态映射、了解核与像的关系，从而构建新的群（商群），这对于群的分类、群论的应用及现代代数的发展都非常重要。\n\\end{enumerate}\n\\end{note}",
     "text": "[学子群的意义] 理解群的结构： 子群是群的\"内部构件\"。通过研究一个群的所有子群，我们可以了解群内部的分解和层次结构，这对分类和分析群的性质非常关键。例如，利用子群可以描述群的分解、直积和半直积结构，从而揭示群的内在对称性和代数性质。 简化证明和构造： 在解决某些问题时，我们可以先在一个子群内证明结论，然后再推广到整个群。例如，在证明群的某些性质时，先考虑生成的循环子群或正规子群往往会使证明过程简单明了。 群的同态与商群： 子群，尤其是正规子群，是构造群同态和商群的基础。通过研究子群，我们可以定义群的同态映射、了解核与像的关系，从而构建新的群（商群），这对于群的分类、群论的应用及现代代数的发展都非常重要。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 567,
-    "endLine": 573
+    "startLine": 575,
+    "endLine": 581
   },
   {
-    "id": "dx-Abstract-Algebra-82",
+    "id": "dx-Abstract-Algebra-84",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18856,47 +18896,7 @@
     "content": "\\begin{proposition}[命题 1.11]\n有时为了方便起见，我们把子群的后两个条件合并，缩成两个条件，即\n\\[\ne\\in H,\\qquad\\forall x,y\\in H,\\;x\\cdot y^{-1}\\in H\n\\]\n这条命题说的便是，这是子群的等价条件。\n\\end{proposition}",
     "text": "[命题 1.11] 有时为了方便起见，我们把子群的后两个条件合并，缩成两个条件，即 这条命题说的便是，这是子群的等价条件。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 575,
-    "endLine": 581
-  },
-  {
-    "id": "dx-Abstract-Algebra-83",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "子群",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "子群",
-    "previewType": "note",
-    "previewTitle": "子群",
-    "rawContent": "\\begin{note}[命题1 11证明]\n第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可\n\\end{note}",
-    "content": "\\begin{note}[命题1 11证明]\n第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可\n\\end{note}",
-    "text": "[命题1 11证明] 第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 583,
-    "endLine": 585
-  },
-  {
-    "id": "dx-Abstract-Algebra-84",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "子群",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "子群",
-    "previewType": "note",
-    "previewTitle": "子群",
-    "rawContent": "\\begin{note}[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H]\n这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭\n\\end{note}",
-    "content": "\\begin{note}[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H]\n这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭\n\\end{note}",
-    "text": "[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H] 这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 587,
     "endLine": 589
   },
   {
@@ -18912,15 +18912,55 @@
     "blockTitle": "子群",
     "previewType": "note",
     "previewTitle": "子群",
-    "rawContent": "\\begin{note}[命题1 12特殊线性群是群]\n因为它的定义就是行列式是1，$1\\times1$永远是1所以封闭性极好逆元也是自己啥都有了\n\\end{note}",
-    "content": "\\begin{note}[命题1 12特殊线性群是群]\n因为它的定义就是行列式是1，$1\\times1$永远是1所以封闭性极好逆元也是自己啥都有了\n\\end{note}",
-    "text": "[命题1 12特殊线性群是群] 因为它的定义就是行列式是1， 永远是1所以封闭性极好逆元也是自己啥都有了",
+    "rawContent": "\\begin{note}[命题1 11证明]\n第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可\n\\end{note}",
+    "content": "\\begin{note}[命题1 11证明]\n第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可\n\\end{note}",
+    "text": "[命题1 11证明] 第二个条件x可以是e，y则是H中任意元素证明了每一个都有逆元再证明x.y属于H即可",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 591,
     "endLine": 593
   },
   {
     "id": "dx-Abstract-Algebra-86",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "子群",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "子群",
+    "previewType": "note",
+    "previewTitle": "子群",
+    "rawContent": "\\begin{note}[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H]\n这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭\n\\end{note}",
+    "content": "\\begin{note}[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H]\n这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭\n\\end{note}",
+    "text": "[子群里面的元素当陪集的x，则这个陪集还是原来子群xH=H] 这里就把前面的g可以分为H里面的和G-H里面的，核心原因是子群对乘法封闭",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 595,
+    "endLine": 597
+  },
+  {
+    "id": "dx-Abstract-Algebra-87",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "子群",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "子群",
+    "previewType": "note",
+    "previewTitle": "子群",
+    "rawContent": "\\begin{note}[命题1 12特殊线性群是群]\n因为它的定义就是行列式是1，$1\\times1$永远是1所以封闭性极好逆元也是自己啥都有了\n\\end{note}",
+    "content": "\\begin{note}[命题1 12特殊线性群是群]\n因为它的定义就是行列式是1，$1\\times1$永远是1所以封闭性极好逆元也是自己啥都有了\n\\end{note}",
+    "text": "[命题1 12特殊线性群是群] 因为它的定义就是行列式是1， 永远是1所以封闭性极好逆元也是自己啥都有了",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 599,
+    "endLine": 601
+  },
+  {
+    "id": "dx-Abstract-Algebra-88",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18936,11 +18976,11 @@
     "content": "\\begin{definition}[左陪集（定义 1.27）]\n令 $G$ 是一个群，$H<G$ 是一个子群，$a\\in G$。则 $aH$ 是 $H$ 的一个左陪集（由 $a$ 引出），定义为\n\\[\naH=\\{ax:x\\in H\\}\n\\]\n也就是说，由 $a$ 引出的 $H$ 的左陪集，就是用 $a$ 左乘了 $H$ 中的每一个元素所得到的。特别地，$eH=H$ 也是一个左陪集。\n\\end{definition}",
     "text": "[左陪集（定义 1.27）] 令 是一个群， 是一个子群， 。则 是 的一个左陪集（由 引出），定义为 也就是说，由 引出的 的左陪集，就是用 左乘了 中的每一个元素所得到的。特别地， 也是一个左陪集。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 598,
-    "endLine": 604
+    "startLine": 606,
+    "endLine": 612
   },
   {
-    "id": "dx-Abstract-Algebra-87",
+    "id": "dx-Abstract-Algebra-89",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18956,11 +18996,11 @@
     "content": "\\begin{definition}[右陪集]\n一个群 $G$ 和 $G$ 的一个子群 $H$。我们规定一个 $G$ 的元中间的关系 $\\sim$：$a\\sim b$，当而且只当 $ab^{-1}\\in H$ 的时候。\n\\begin{enumerate}\n  \\item $aa^{-1}=e\\in H$，所以 $a\\sim a$；\n  \\item $ab^{-1}\\in H\\Rightarrow(ab^{-1})^{-1}=ba^{-1}\\in H$，所以 $a\\sim b\\Rightarrow b\\sim a$；\n  \\item $ab^{-1}\\in H$，$bc^{-1}\\in H\\Rightarrow(ab^{-1})(bc^{-1})=ac^{-1}\\in H$，所以 $a\\sim b$，$b\\sim c\\Rightarrow a\\sim c$。\n\\end{enumerate}\n由上面的等价关系 $\\sim$ 所决定的类叫做子群 $H$ 的\\textbf{右陪集}。包含元 $a$ 的右陪集用符号 $Ha$ 来表示。\n\\[\nH\\le G,\\;a\\in G\\text{ 则 }Ha=\\{ha\\mid h\\in H\\}\n\\]\n\\end{definition}",
     "text": "[右陪集] 一个群 和 的一个子群 。我们规定一个 的元中间的关系 ： ，当而且只当 的时候。 ，所以 ； ，所以 ； ， ，所以 ， 。 由上面的等价关系 所决定的类叫做子群 的右陪集。包含元 的右陪集用符号 来表示。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 606,
-    "endLine": 617
+    "startLine": 614,
+    "endLine": 625
   },
   {
-    "id": "dx-Abstract-Algebra-88",
+    "id": "dx-Abstract-Algebra-90",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18976,11 +19016,11 @@
     "content": "\\begin{note}[右陪集的定义]\n陪集是陪伴着出现的没有对象就不存在陪伴 \\\\\n$a$和$b$满足这个关系当且仅当$ab^{-1}$在$H$子群中 \\\\\n下面的三条是证明这个关系是等价关系 \\\\\n$Ha$就是$H$中每一个元素乘$a$；$aH$一般不是群但是可以与$H$构成双射\n\\end{note}",
     "text": "[右陪集的定义] 陪集是陪伴着出现的没有对象就不存在陪伴 \\\\ 和 满足这个关系当且仅当 在 子群中 \\\\ 下面的三条是证明这个关系是等价关系 \\\\ 就是 中每一个元素乘 ； 一般不是群但是可以与 构成双射",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 619,
-    "endLine": 624
+    "startLine": 627,
+    "endLine": 632
   },
   {
-    "id": "dx-Abstract-Algebra-89",
+    "id": "dx-Abstract-Algebra-91",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -18996,11 +19036,11 @@
     "content": "\\begin{lemma}[引理 1.2]\n令 $G$ 是一个有限群，$H<G$ 是一个子群，$a\\in G$。我们通过左乘 $a$ 来定义 $f:H\\to aH$，$f(x)=ax$，则 $f$ 是一个双射。特别地，$|H|=|aH|$。\n\\end{lemma}",
     "text": "[引理 1.2] 令 是一个有限群， 是一个子群， 。我们通过左乘 来定义 ， ，则 是一个双射。特别地， 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 626,
-    "endLine": 628
+    "startLine": 634,
+    "endLine": 636
   },
   {
-    "id": "dx-Abstract-Algebra-90",
+    "id": "dx-Abstract-Algebra-92",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19016,11 +19056,11 @@
     "content": "\\begin{proposition}[命题 1.33：陪集要不然相等要不然无交]\n令 $G$ 是一个有限群，$H<G$ 是一个子群，$a,b\\in G$。则左陪集 $aH$ 和 $bH$ 要么相等，要么无交。也就是说，我们有 $aH=bH$，或 $aH\\cap bH=\\varnothing$。\n\\end{proposition}",
     "text": "[命题 1.33：陪集要不然相等要不然无交] 令 是一个有限群， 是一个子群， 。则左陪集 和 要么相等，要么无交。也就是说，我们有 ，或 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 630,
-    "endLine": 632
+    "startLine": 638,
+    "endLine": 640
   },
   {
-    "id": "dx-Abstract-Algebra-91",
+    "id": "dx-Abstract-Algebra-93",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19036,11 +19076,11 @@
     "content": "\\begin{note}[命题1 3 3子群陪集要不然相等要不然无交]\n$a_1=bh_2\\cdot h_1^{-1}$ 两边都能加h \\\\\n比如说剩余类加群$\\{0,1,2,3,4,5\\}$子群，有1阶的就是$\\{0\\}$，2阶$\\{0,3\\}$生成元是3\n\\end{note}",
     "text": "[命题1 3 3子群陪集要不然相等要不然无交] 两边都能加h \\\\ 比如说剩余类加群 子群，有1阶的就是 ，2阶 生成元是3",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 634,
-    "endLine": 637
+    "startLine": 642,
+    "endLine": 645
   },
   {
-    "id": "dx-Abstract-Algebra-92",
+    "id": "dx-Abstract-Algebra-94",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19056,11 +19096,11 @@
     "content": "\\begin{example}\n例子：群 $\\mathbb{Z}_4$ 与子群 $H=\\{0,2\\}$\n\n考虑加法模 4 的群 $\\mathbb{Z}_4=\\{0,1,2,3\\}$，其运算为加法模 4。子群 $H=\\{0,2\\}$ 是 $\\mathbb{Z}_4$ 的一个子群。\n\n$0+H=\\{0+0,0+2\\}=\\{0,2\\}$；$2+H=\\{2+0,2+2\\}=\\{2,4\\}\\bmod 4=\\{2,0\\}=\\{0,2\\}$。\n\n可以看到，$0+H=2+H=\\{0,2\\}$，这说明两个不同的元素 0 和 2 所生成的左陪集是相等的。\n\\end{example}",
     "text": "例子：群 与子群 考虑加法模 4 的群 ，其运算为加法模 4。子群 是 的一个子群。 ； 。 可以看到， ，这说明两个不同的元素 0 和 2 所生成的左陪集是相等的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 639,
-    "endLine": 647
+    "startLine": 647,
+    "endLine": 655
   },
   {
-    "id": "dx-Abstract-Algebra-93",
+    "id": "dx-Abstract-Algebra-95",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19076,11 +19116,11 @@
     "content": "\\begin{note}[子群里面的元素当陪集的 $x$，则这个陪集还是原来子群 $xH=H$]\n子群里面的元素当陪集的 $x$，则这个陪集还是原来子群 $xH=H$。\n\\end{note}",
     "text": "[子群里面的元素当陪集的 ，则这个陪集还是原来子群 ] 子群里面的元素当陪集的 ，则这个陪集还是原来子群 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 649,
-    "endLine": 651
+    "startLine": 657,
+    "endLine": 659
   },
   {
-    "id": "dx-Abstract-Algebra-94",
+    "id": "dx-Abstract-Algebra-96",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19096,11 +19136,11 @@
     "content": "\\begin{proposition}[命题 1.34、1.35：嵌套子群的陪集]\n\\textbf{命题 1.34：} 令 $K<H<G$ 是三个有限群，则\n\\[\n[G:K]=[G:H][H:K]\n\\]\n\n\\textbf{命题 1.35：} 令 $(G,\\cdot)$ 是一个群，若 $H,K<G$ 是两个有限子群，则\n\\[\n|HK|=\\frac{|H||K|}{|H\\cap K|}\n\\]\n其中 $HK=\\{hk:h\\in H,k\\in K\\}$。$<$ 是子群的意思。\n\\end{proposition}",
     "text": "[命题 1.34、1.35：嵌套子群的陪集] 命题 1.34： 令 是三个有限群，则 命题 1.35： 令 是一个群，若 是两个有限子群，则 其中 。 是子群的意思。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 653,
-    "endLine": 664
+    "startLine": 661,
+    "endLine": 672
   },
   {
-    "id": "dx-Abstract-Algebra-95",
+    "id": "dx-Abstract-Algebra-97",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19116,11 +19156,11 @@
     "content": "\\begin{note}[命题1 34 1 35嵌套子群的陪集]\n$<$是子群的意思 \\\\\n证明1 $|G|/|H|\\cdot|H|/|E|$ \\\\\n证明2 I J表示的就是能让他们形成不相交陪集的代表元，需要证明两件事一件事是枚举了所有陪集也就能覆盖G，第二件事就是证明集合两两不交\n\\end{note}",
     "text": "[命题1 34 1 35嵌套子群的陪集] 是子群的意思 \\\\ 证明1 \\\\ 证明2 I J表示的就是能让他们形成不相交陪集的代表元，需要证明两件事一件事是枚举了所有陪集也就能覆盖G，第二件事就是证明集合两两不交",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 666,
-    "endLine": 670
+    "startLine": 674,
+    "endLine": 678
   },
   {
-    "id": "dx-Abstract-Algebra-96",
+    "id": "dx-Abstract-Algebra-98",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19136,47 +19176,7 @@
     "content": "\\begin{definition}[商集与指数（定义 1.28）]\n一个群 $G$ 的一个子群 $H$ 的右陪集（或左陪集）的个数叫做 $H$ 在 $G$ 里的\\textbf{指数}。\n\n下面我们要用右陪集来证明几个重要定理。因为左陪集和右陪集的对称性，凡是我们以下用右陪集的地方也都可以用左陪集来代替。\n\n引理：一个子群 $H$ 与 $H$ 的每一个右陪集 $Ha$ 之间都存在一个一一映射。证明：$\\varphi:h\\to ha$ 是 $H$ 与 $Ha$ 间的一一映射。\n\\end{definition}",
     "text": "[商集与指数（定义 1.28）] 一个群 的一个子群 的右陪集（或左陪集）的个数叫做 在 里的指数。 下面我们要用右陪集来证明几个重要定理。因为左陪集和右陪集的对称性，凡是我们以下用右陪集的地方也都可以用左陪集来代替。 引理：一个子群 与 的每一个右陪集 之间都存在一个一一映射。证明： 是 与 间的一一映射。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 672,
-    "endLine": 678
-  },
-  {
-    "id": "dx-Abstract-Algebra-97",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "陪集与拉格朗日定理",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "陪集与拉格朗日定理",
-    "previewType": "note",
-    "previewTitle": "陪集与拉格朗日定理",
-    "rawContent": "\\begin{note}[定义1 28商集与指数]\n指数就是左陪集个数\n\\end{note}",
-    "content": "\\begin{note}[定义1 28商集与指数]\n指数就是左陪集个数\n\\end{note}",
-    "text": "[定义1 28商集与指数] 指数就是左陪集个数",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 680,
-    "endLine": 682
-  },
-  {
-    "id": "dx-Abstract-Algebra-98",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "陪集与拉格朗日定理",
-    "subsection": "",
-    "kind": "theorem",
-    "blockTitle": "陪集与拉格朗日定理",
-    "previewType": "theorem",
-    "previewTitle": "陪集与拉格朗日定理",
-    "rawContent": "\\begin{theorem}[定理 1：左右陪集个数相等]\n一个子群 $H$ 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。\n\\end{theorem}",
-    "content": "\\begin{theorem}[定理 1：左右陪集个数相等]\n一个子群 $H$ 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。\n\\end{theorem}",
-    "text": "[定理 1：左右陪集个数相等] 一个子群 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 684,
     "endLine": 686
   },
   {
@@ -19192,15 +19192,55 @@
     "blockTitle": "陪集与拉格朗日定理",
     "previewType": "note",
     "previewTitle": "陪集与拉格朗日定理",
+    "rawContent": "\\begin{note}[定义1 28商集与指数]\n指数就是左陪集个数\n\\end{note}",
+    "content": "\\begin{note}[定义1 28商集与指数]\n指数就是左陪集个数\n\\end{note}",
+    "text": "[定义1 28商集与指数] 指数就是左陪集个数",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 688,
+    "endLine": 690
+  },
+  {
+    "id": "dx-Abstract-Algebra-100",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "陪集与拉格朗日定理",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "陪集与拉格朗日定理",
+    "previewType": "theorem",
+    "previewTitle": "陪集与拉格朗日定理",
+    "rawContent": "\\begin{theorem}[定理 1：左右陪集个数相等]\n一个子群 $H$ 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。\n\\end{theorem}",
+    "content": "\\begin{theorem}[定理 1：左右陪集个数相等]\n一个子群 $H$ 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。\n\\end{theorem}",
+    "text": "[定理 1：左右陪集个数相等] 一个子群 的右陪集的个数和左陪集的个数相等：它们或者都是无限，或者都有限并且相等。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 692,
+    "endLine": 694
+  },
+  {
+    "id": "dx-Abstract-Algebra-101",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "陪集与拉格朗日定理",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "陪集与拉格朗日定理",
+    "previewType": "note",
+    "previewTitle": "陪集与拉格朗日定理",
     "rawContent": "\\begin{note}[定理1 左右陪集个数相等]\n先构造左陪集和右陪集的一个映射 \\\\\ni是证明a，b的选取不影响\n\\end{note}",
     "content": "\\begin{note}[定理1 左右陪集个数相等]\n先构造左陪集和右陪集的一个映射 \\\\\ni是证明a，b的选取不影响\n\\end{note}",
     "text": "[定理1 左右陪集个数相等] 先构造左陪集和右陪集的一个映射 \\\\ i是证明a，b的选取不影响",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 688,
-    "endLine": 691
+    "startLine": 696,
+    "endLine": 699
   },
   {
-    "id": "dx-Abstract-Algebra-100",
+    "id": "dx-Abstract-Algebra-102",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19216,11 +19256,11 @@
     "content": "\\begin{theorem}[拉格朗日定理（定理 1.1）]\n令 $G$ 是一个有限群，$H<G$ 是一个子群，则\n\\[\n|G|=[G:H]|H|\n\\]\n特别地，$|H|\\,\\big|\\,|G|$。\n\\end{theorem}",
     "text": "[拉格朗日定理（定理 1.1）] 令 是一个有限群， 是一个子群，则 特别地， 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 693,
-    "endLine": 699
+    "startLine": 701,
+    "endLine": 707
   },
   {
-    "id": "dx-Abstract-Algebra-101",
+    "id": "dx-Abstract-Algebra-103",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19236,11 +19276,11 @@
     "content": "\\begin{note}[拉格朗日定理]\n$G$的阶等于商群的数量乘子群的阶 \\\\\n比如循环群$\\{0,1,2,3,4,5\\}$ 子群$\\{0,3\\}$ 他生成的商群$\\{1,4\\}$ $\\{2,5\\}$ $\\{0,3\\}$ $6=3\\times2$ \\\\\n子群的阶一定是父群阶的因数\n\\end{note}",
     "text": "[拉格朗日定理] 的阶等于商群的数量乘子群的阶 \\\\ 比如循环群 子群 他生成的商群 \\\\ 子群的阶一定是父群阶的因数",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 701,
-    "endLine": 705
+    "startLine": 709,
+    "endLine": 713
   },
   {
-    "id": "dx-Abstract-Algebra-102",
+    "id": "dx-Abstract-Algebra-104",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19256,11 +19296,11 @@
     "content": "\\begin{definition}[正规子群（不变子群）]\n一个群 $G$ 的一个子群 $N$ 叫做一个\\textbf{正规子群}（不变子群），是指对于 $G$ 的每一个元 $a$ 来说，都有\n\\[\nNa=aN.\n\\]\n一个正规子群 $N$ 的一个左（或右）陪集叫做 $N$ 的一个\\textbf{陪集}。$Na=aN$ 是用于验证的。\n\n任何两个群的两个平凡子群都是不变子群；交换群的子群都是不变子群；素数阶的群都是循环群。代表选取不影响是重点。\n\\end{definition}",
     "text": "[正规子群（不变子群）] 一个群 的一个子群 叫做一个正规子群（不变子群），是指对于 的每一个元 来说，都有 一个正规子群 的一个左（或右）陪集叫做 的一个陪集。 是用于验证的。 任何两个群的两个平凡子群都是不变子群；交换群的子群都是不变子群；素数阶的群都是循环群。代表选取不影响是重点。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 710,
-    "endLine": 718
+    "startLine": 718,
+    "endLine": 726
   },
   {
-    "id": "dx-Abstract-Algebra-103",
+    "id": "dx-Abstract-Algebra-105",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19276,11 +19316,11 @@
     "content": "\\begin{definition}[正规子群（定义 1.29）]\n$N\\triangleleft G$。\n\\end{definition}",
     "text": "[正规子群（定义 1.29）] 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 720,
-    "endLine": 722
+    "startLine": 728,
+    "endLine": 730
   },
   {
-    "id": "dx-Abstract-Algebra-104",
+    "id": "dx-Abstract-Algebra-106",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19296,11 +19336,11 @@
     "content": "\\begin{note}[定义1 29正规子群]\n得给商集 群结构，$a$和$a'$是不同代表元，正规子群才是三角，普通子群只是小于等于\n\\end{note}",
     "text": "[定义1 29正规子群] 得给商集 群结构， 和 是不同代表元，正规子群才是三角，普通子群只是小于等于",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 724,
-    "endLine": 726
+    "startLine": 732,
+    "endLine": 734
   },
   {
-    "id": "dx-Abstract-Algebra-105",
+    "id": "dx-Abstract-Algebra-107",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19316,11 +19356,11 @@
     "content": "\\begin{theorem}[定理 1：不变子群的判定]\n一个群 $G$ 的一个子群 $N$ 是一个不变子群的充分而且必要条件是：\n\\[\naNa^{-1}=N\n\\]\n对于 $G$ 的任意一个元 $a$ 都对。\n\\end{theorem}",
     "text": "[定理 1：不变子群的判定] 一个群 的一个子群 是一个不变子群的充分而且必要条件是： 对于 的任意一个元 都对。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 728,
-    "endLine": 734
+    "startLine": 736,
+    "endLine": 742
   },
   {
-    "id": "dx-Abstract-Algebra-106",
+    "id": "dx-Abstract-Algebra-108",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19336,11 +19376,11 @@
     "content": "\\begin{theorem}[定理 2：不变子群判定方式 2]\n一个群 $G$ 的一个子群 $N$ 是一个不变子群的充分而且必要条件是：\n\\[\na\\in G,\\;n\\in N\\Rightarrow ana^{-1}\\in N\n\\]\n\\end{theorem}",
     "text": "[定理 2：不变子群判定方式 2] 一个群 的一个子群 是一个不变子群的充分而且必要条件是：",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 736,
-    "endLine": 741
+    "startLine": 744,
+    "endLine": 749
   },
   {
-    "id": "dx-Abstract-Algebra-107",
+    "id": "dx-Abstract-Algebra-109",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19356,11 +19396,11 @@
     "content": "\\begin{lemma}[引理 1.4：正规子群]\n正规子群的意义就是为了让陪集成为群（商群）。$N\\trianglelefteq G$ 使得陪集集合 $G/N$ 上的乘法良定义，从而构成商群。\n\\end{lemma}",
     "text": "[引理 1.4：正规子群] 正规子群的意义就是为了让陪集成为群（商群）。 使得陪集集合 上的乘法良定义，从而构成商群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 743,
-    "endLine": 745
+    "startLine": 751,
+    "endLine": 753
   },
   {
-    "id": "dx-Abstract-Algebra-108",
+    "id": "dx-Abstract-Algebra-110",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19376,11 +19416,11 @@
     "content": "\\begin{note}[正规子群定义]\n任何两个群的两个平凡子群都是不变子群 \\\\\n交换群的子群都是不变子群 \\\\\n素数阶的群都是循环群 \\\\\n代表选取不影响是重点\n\\end{note}",
     "text": "[正规子群定义] 任何两个群的两个平凡子群都是不变子群 \\\\ 交换群的子群都是不变子群 \\\\ 素数阶的群都是循环群 \\\\ 代表选取不影响是重点",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 747,
-    "endLine": 752
+    "startLine": 755,
+    "endLine": 760
   },
   {
-    "id": "dx-Abstract-Algebra-109",
+    "id": "dx-Abstract-Algebra-111",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19396,11 +19436,11 @@
     "content": "\\begin{note}[正规子群的意义就是为了让看看陪集是不是群]\n加群逆元就是相反数，乘群逆元就是倒数\n\\end{note}",
     "text": "[正规子群的意义就是为了让看看陪集是不是群] 加群逆元就是相反数，乘群逆元就是倒数",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 754,
-    "endLine": 756
+    "startLine": 762,
+    "endLine": 764
   },
   {
-    "id": "dx-Abstract-Algebra-110",
+    "id": "dx-Abstract-Algebra-112",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19416,11 +19456,11 @@
     "content": "\\begin{note}[指数是2的子群一定是不变的]\n也就是要不然g就在eN里面左乘右乘没区别，要不然因为已经有一个eN了右陪集，左陪集只有一个一个座位所以他们只能是一个人\n\\end{note}",
     "text": "[指数是2的子群一定是不变的] 也就是要不然g就在eN里面左乘右乘没区别，要不然因为已经有一个eN了右陪集，左陪集只有一个一个座位所以他们只能是一个人",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 758,
-    "endLine": 760
+    "startLine": 766,
+    "endLine": 768
   },
   {
-    "id": "dx-Abstract-Algebra-111",
+    "id": "dx-Abstract-Algebra-113",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19436,11 +19476,11 @@
     "content": "\\begin{proposition}[命题 1.36：良定义]\n令 $(G,\\cdot)$ 是一个群，且 $N\\trianglelefteq G$，$a,b\\in G$，则\n\\[\n(aN)\\cdot(bN)=(ab)N\n\\]\n是良定义的。\n\\end{proposition}",
     "text": "[命题 1.36：良定义] 令 是一个群，且 ， ，则 是良定义的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 762,
-    "endLine": 768
+    "startLine": 770,
+    "endLine": 776
   },
   {
-    "id": "dx-Abstract-Algebra-112",
+    "id": "dx-Abstract-Algebra-114",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19456,11 +19496,11 @@
     "content": "\\begin{note}[命题1 36良定义]\n正规子群就是良定义，良定义在数学里面就是不同表达方式下的取值说一样的，和选取的代表元无关\n\\end{note}",
     "text": "[命题1 36良定义] 正规子群就是良定义，良定义在数学里面就是不同表达方式下的取值说一样的，和选取的代表元无关",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 770,
-    "endLine": 772
+    "startLine": 778,
+    "endLine": 780
   },
   {
-    "id": "dx-Abstract-Algebra-113",
+    "id": "dx-Abstract-Algebra-115",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19476,11 +19516,11 @@
     "content": "\\begin{proposition}[命题 1.37：商群]\n令 $(G,\\cdot)$ 是一个群，且 $N\\trianglelefteq G$，则 $(G/N,\\cdot)$ 构成一个群，称为（$G$ 在 $N$ 上的）商群，其中单位元是 $eN=N$，每个陪集 $aN$ 的逆元是 $a^{-1}N$。\n\\end{proposition}",
     "text": "[命题 1.37：商群] 令 是一个群，且 ，则 构成一个群，称为（ 在 上的）商群，其中单位元是 ，每个陪集 的逆元是 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 774,
-    "endLine": 776
+    "startLine": 782,
+    "endLine": 784
   },
   {
-    "id": "dx-Abstract-Algebra-114",
+    "id": "dx-Abstract-Algebra-116",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19496,11 +19536,11 @@
     "content": "\\begin{theorem}[定理 3：不变子群的陪集叫商群]\n一个不变子群的陪集对于上边规定的乘法来说作成一个群。\n\n定义：一个群 $G$ 的一个不变子群 $N$ 的陪集所作成的群叫做一个商群。这个群我们用符号 $G/N$ 来表示。\n\\end{theorem}",
     "text": "[定理 3：不变子群的陪集叫商群] 一个不变子群的陪集对于上边规定的乘法来说作成一个群。 定义：一个群 的一个不变子群 的陪集所作成的群叫做一个商群。这个群我们用符号 来表示。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 778,
-    "endLine": 782
+    "startLine": 786,
+    "endLine": 790
   },
   {
-    "id": "dx-Abstract-Algebra-115",
+    "id": "dx-Abstract-Algebra-117",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19516,11 +19556,11 @@
     "content": "\\begin{proposition}[命题 1.38：正规子群的交集还是正规子群]\n令 $\\{N_i\\}_{i\\in I}$ 是一族 $G$ 的正规子群，则它们的交集仍然是 $G$ 的正规子群，即\n\\[\n\\bigcap_{i\\in I}N_i\\trianglelefteq G\n\\]\n\\end{proposition}",
     "text": "[命题 1.38：正规子群的交集还是正规子群] 令 是一族 的正规子群，则它们的交集仍然是 的正规子群，即",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 784,
-    "endLine": 789
+    "startLine": 792,
+    "endLine": 797
   },
   {
-    "id": "dx-Abstract-Algebra-116",
+    "id": "dx-Abstract-Algebra-118",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19536,11 +19576,11 @@
     "content": "\\begin{proposition}[命题 1.39、1.40：$e$ 和自己都是自己的正规子群；交换群的子群都是正规子群]\n$e$ 和自己都是自己的正规子群；交换群的子群都是正规子群。\n\\end{proposition}",
     "text": "[命题 1.39、1.40： 和自己都是自己的正规子群；交换群的子群都是正规子群] 和自己都是自己的正规子群；交换群的子群都是正规子群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 791,
-    "endLine": 793
+    "startLine": 799,
+    "endLine": 801
   },
   {
-    "id": "dx-Abstract-Algebra-117",
+    "id": "dx-Abstract-Algebra-119",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19556,11 +19596,11 @@
     "content": "\\begin{example}[不变子群的中心]\n$N$ 刚好包含群 $G$ 的所有有以下性质的元 $n$：$na=an$，不管 $a$ 是 $G$ 的哪一个元，那么 $N$ 是 $G$ 的一个不变子群。这个不变子群叫做 $G$ 的\\textbf{中心}。\n\\end{example}",
     "text": "[不变子群的中心] 刚好包含群 的所有有以下性质的元 ： ，不管 是 的哪一个元，那么 是 的一个不变子群。这个不变子群叫做 的中心。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 795,
-    "endLine": 797
+    "startLine": 803,
+    "endLine": 805
   },
   {
-    "id": "dx-Abstract-Algebra-118",
+    "id": "dx-Abstract-Algebra-120",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19576,11 +19616,11 @@
     "content": "\\begin{note}[商群性质]\n商群有下列常用的性质：\n\\begin{enumerate}\n  \\item 商群 $G/N$ 的阶 $=[G:N]$；\n  \\item 如果 $G$ 是有限群，则商群 $G/N$ 的阶 $=[G:N]=\\dfrac{|G|}{|N|}$；\n  \\item 有限群的商群还是有限群，且其任一商群的阶是群阶数的因数；\n  \\item $N\\trianglelefteq G$，则 $\\bar{e}=eN=N$ 为商群 $G/N$ 的单位元，$a^{-1}N$ 为 $aN$ 的逆元。\n\\end{enumerate}\n\\end{note}",
     "text": "[商群性质] 商群有下列常用的性质： 商群 的阶 ； 如果 是有限群，则商群 的阶 ； 有限群的商群还是有限群，且其任一商群的阶是群阶数的因数； ，则 为商群 的单位元， 为 的逆元。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 799,
-    "endLine": 807
+    "startLine": 807,
+    "endLine": 815
   },
   {
-    "id": "dx-Abstract-Algebra-119",
+    "id": "dx-Abstract-Algebra-121",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19596,11 +19636,11 @@
     "content": "\\begin{definition}[同态与同构]\n$\\phi$ 是 $A$ 与 $\\bar{A}$ 间的一一映射，$\\circ$ 和 $\\bar{\\circ}$ 分别是 $A$ 和 $\\bar{A}$ 的代数运算，如果 $\\forall a,b\\in A$，只要 $a\\to\\bar{a}$，$b\\to\\bar{b}$，就有 $a\\circ b\\to\\bar{a}\\bar{\\circ}\\bar{b}$，则说 $\\phi$ 是 $A$ 与 $\\bar{A}$ 间的同构映射，并说 $A$ 与 $\\bar{A}$ 同构，记为 $A\\cong\\bar{A}$。\n\n同构只关心运算规律，不关心元素长什么样，可以把复杂的群换成结构相同但更容易处理的群。两个集合中的代数运算可以不一样，但是否能够构造群同态或同构，取决于它们的代数结构如何关联。\n\\end{definition}",
     "text": "[同态与同构] 是 与 间的一一映射， 和 分别是 和 的代数运算，如果 ，只要 ， ，就有 ，则说 是 与 间的同构映射，并说 与 同构，记为 。 同构只关心运算规律，不关心元素长什么样，可以把复杂的群换成结构相同但更容易处理的群。两个集合中的代数运算可以不一样，但是否能够构造群同态或同构，取决于它们的代数结构如何关联。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 812,
-    "endLine": 816
+    "startLine": 820,
+    "endLine": 824
   },
   {
-    "id": "dx-Abstract-Algebra-120",
+    "id": "dx-Abstract-Algebra-122",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19616,11 +19656,11 @@
     "content": "\\begin{example}[同态例子]\n例1. 设 $A=\\{\\text{所有实数 }x\\}$，$A$ 的代数运算是实数的乘法。以下映射是否是同态？\n\n（1）若 $f:x\\to|x|$。（1）$f$ 是同态。\n\n（2）若 $f:x\\to2x$。（2）$f$ 不是同态。\n\\end{example}",
     "text": "[同态例子] 例1. 设 ， 的代数运算是实数的乘法。以下映射是否是同态？ （1）若 。（1） 是同态。 （2）若 。（2） 不是同态。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 818,
-    "endLine": 824
+    "startLine": 826,
+    "endLine": 832
   },
   {
-    "id": "dx-Abstract-Algebra-121",
+    "id": "dx-Abstract-Algebra-123",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19636,11 +19676,11 @@
     "content": "\\begin{theorem}[同态定理]\n两个代数系统 $G$ 与 $\\bar{G}$ 同态，若 $G$ 是群，则 $\\bar{G}$ 也是群。\n\\end{theorem}",
     "text": "[同态定理] 两个代数系统 与 同态，若 是群，则 也是群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 826,
-    "endLine": 828
+    "startLine": 834,
+    "endLine": 836
   },
   {
-    "id": "dx-Abstract-Algebra-122",
+    "id": "dx-Abstract-Algebra-124",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19656,11 +19696,11 @@
     "content": "\\begin{note}[同态的意义]\n同构：同构只关心运算规律，不关心元素长什么样。它能把\"复杂的群\"换成\"结构相同但更容易处理的群\"。\n\\end{note}",
     "text": "[同态的意义] 同构：同构只关心运算规律，不关心元素长什么样。它能把\"复杂的群\"换成\"结构相同但更容易处理的群\"。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 830,
-    "endLine": 832
+    "startLine": 838,
+    "endLine": 840
   },
   {
-    "id": "dx-Abstract-Algebra-123",
+    "id": "dx-Abstract-Algebra-125",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19676,11 +19716,11 @@
     "content": "\\begin{note}[同态同构的意义]\n从这里，我们有两个延伸。第一个延伸是，什么是\"引出\"？我们可以从一个元素引出一个同态，实际上，也可以从任何一个元素引出一个原幺半群的子幺半群。另一方面，其实每一个子集都可以引出一个子幺半群。第二个延伸是\"同构\"。同构首先是一个双射，这意味着你可以在元素之间建立一一对应；在双射的基础上，同构的含义是，换了标签下，运算是不变的——也就是说，这两个结构（比如幺半群）的唯一区别就是\"标签不同\"。\n\\end{note}",
     "text": "[同态同构的意义] 从这里，我们有两个延伸。第一个延伸是，什么是\"引出\"？我们可以从一个元素引出一个同态，实际上，也可以从任何一个元素引出一个原幺半群的子幺半群。另一方面，其实每一个子集都可以引出一个子幺半群。第二个延伸是\"同构\"。同构首先是一个双射，这意味着你可以在元素之间建立一一对应；在双射的基础上，同构的含义是，换了标签下，运算是不变的——也就是说，这两个结构（比如幺半群）的唯一区别就是\"标签不同\"。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 834,
-    "endLine": 836
+    "startLine": 842,
+    "endLine": 844
   },
   {
-    "id": "dx-Abstract-Algebra-124",
+    "id": "dx-Abstract-Algebra-126",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19696,47 +19736,7 @@
     "content": "\\begin{definition}[群同态（定义 1.14）]\n令 $(G,\\cdot)$，$(G',*)$ 是两个群，且 $f:G\\to G'$ 是一个映射，我们称 $f$ 是一个群同态，当其保持了乘法运算，即\n\\[\n\\forall x,y\\in G,\\;f(x\\cdot y)=f(x)*f(y)\n\\]\n\\end{definition}",
     "text": "[群同态（定义 1.14）] 令 ， 是两个群，且 是一个映射，我们称 是一个群同态，当其保持了乘法运算，即",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 838,
-    "endLine": 843
-  },
-  {
-    "id": "dx-Abstract-Algebra-125",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "同态与同构",
-    "subsection": "",
-    "kind": "note",
-    "blockTitle": "同态与同构",
-    "previewType": "note",
-    "previewTitle": "同态与同构",
-    "rawContent": "\\begin{note}[定义1 16群同态]\n左乘，同态最好的就是可以拆括号让x和$x^{-1}$相遇\n\\end{note}",
-    "content": "\\begin{note}[定义1 16群同态]\n左乘，同态最好的就是可以拆括号让x和$x^{-1}$相遇\n\\end{note}",
-    "text": "[定义1 16群同态] 左乘，同态最好的就是可以拆括号让x和 相遇",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 845,
-    "endLine": 847
-  },
-  {
-    "id": "dx-Abstract-Algebra-126",
-    "repo": "dx-Abstract-Algebra",
-    "title": "Abstract Algebra",
-    "pdf": "pdf/dx-Abstract-Algebra.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
-    "section": "同态与同构",
-    "subsection": "",
-    "kind": "proposition",
-    "blockTitle": "同态与同构",
-    "previewType": "theorem",
-    "previewTitle": "同态与同构",
-    "rawContent": "\\begin{proposition}[命题 1.13：群同态单位元对单位元，逆元对逆元]\n若 $f:(G,\\cdot)\\to(G',*)$ 是一个群同态，则 $f(e)=e'$，$f(x^{-1})=f(x)^{-1}$。\n\\end{proposition}",
-    "content": "\\begin{proposition}[命题 1.13：群同态单位元对单位元，逆元对逆元]\n若 $f:(G,\\cdot)\\to(G',*)$ 是一个群同态，则 $f(e)=e'$，$f(x^{-1})=f(x)^{-1}$。\n\\end{proposition}",
-    "text": "[命题 1.13：群同态单位元对单位元，逆元对逆元] 若 是一个群同态，则 ， 。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 849,
+    "startLine": 846,
     "endLine": 851
   },
   {
@@ -19752,9 +19752,9 @@
     "blockTitle": "同态与同构",
     "previewType": "note",
     "previewTitle": "同态与同构",
-    "rawContent": "\\begin{note}[命题1 13群同态单位元对单位元逆元对逆元]\n证明思路因为$e\\cdot e=e$所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入\n\\end{note}",
-    "content": "\\begin{note}[命题1 13群同态单位元对单位元逆元对逆元]\n证明思路因为$e\\cdot e=e$所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入\n\\end{note}",
-    "text": "[命题1 13群同态单位元对单位元逆元对逆元] 证明思路因为 所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入",
+    "rawContent": "\\begin{note}[定义1 16群同态]\n左乘，同态最好的就是可以拆括号让x和$x^{-1}$相遇\n\\end{note}",
+    "content": "\\begin{note}[定义1 16群同态]\n左乘，同态最好的就是可以拆括号让x和$x^{-1}$相遇\n\\end{note}",
+    "text": "[定义1 16群同态] 左乘，同态最好的就是可以拆括号让x和 相遇",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 853,
     "endLine": 855
@@ -19772,15 +19772,55 @@
     "blockTitle": "同态与同构",
     "previewType": "theorem",
     "previewTitle": "同态与同构",
-    "rawContent": "\\begin{proposition}[命题 1.14：$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态]\n$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态。\n\\end{proposition}",
-    "content": "\\begin{proposition}[命题 1.14：$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态]\n$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态。\n\\end{proposition}",
-    "text": "[命题 1.14： 是一个乘法群同态] 是一个乘法群同态。",
+    "rawContent": "\\begin{proposition}[命题 1.13：群同态单位元对单位元，逆元对逆元]\n若 $f:(G,\\cdot)\\to(G',*)$ 是一个群同态，则 $f(e)=e'$，$f(x^{-1})=f(x)^{-1}$。\n\\end{proposition}",
+    "content": "\\begin{proposition}[命题 1.13：群同态单位元对单位元，逆元对逆元]\n若 $f:(G,\\cdot)\\to(G',*)$ 是一个群同态，则 $f(e)=e'$，$f(x^{-1})=f(x)^{-1}$。\n\\end{proposition}",
+    "text": "[命题 1.13：群同态单位元对单位元，逆元对逆元] 若 是一个群同态，则 ， 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
     "startLine": 857,
     "endLine": 859
   },
   {
     "id": "dx-Abstract-Algebra-129",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "同态与同构",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "同态与同构",
+    "previewType": "note",
+    "previewTitle": "同态与同构",
+    "rawContent": "\\begin{note}[命题1 13群同态单位元对单位元逆元对逆元]\n证明思路因为$e\\cdot e=e$所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入\n\\end{note}",
+    "content": "\\begin{note}[命题1 13群同态单位元对单位元逆元对逆元]\n证明思路因为$e\\cdot e=e$所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入\n\\end{note}",
+    "text": "[命题1 13群同态单位元对单位元逆元对逆元] 证明思路因为 所以要添项减少项目的时候e就是很有用e也可以拆成两个互逆的元素相乘把我们想要的东西引入",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 861,
+    "endLine": 863
+  },
+  {
+    "id": "dx-Abstract-Algebra-130",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "同态与同构",
+    "subsection": "",
+    "kind": "proposition",
+    "blockTitle": "同态与同构",
+    "previewType": "theorem",
+    "previewTitle": "同态与同构",
+    "rawContent": "\\begin{proposition}[命题 1.14：$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态]\n$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态。\n\\end{proposition}",
+    "content": "\\begin{proposition}[命题 1.14：$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态]\n$\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 是一个乘法群同态。\n\\end{proposition}",
+    "text": "[命题 1.14： 是一个乘法群同态] 是一个乘法群同态。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 865,
+    "endLine": 867
+  },
+  {
+    "id": "dx-Abstract-Algebra-131",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19796,11 +19836,11 @@
     "content": "\\begin{definition}[核与像（定义 1.15）]\n群同态下定义：核是映射到 $e'$ 的原像集，$\\operatorname{im}f$ 是像集。\n\\[\n\\ker(f)=\\{x\\in G\\mid f(x)=e'\\},\\qquad\\operatorname{im}(f)=\\{f(x)\\mid x\\in G\\}\n\\]\n\\end{definition}",
     "text": "[核与像（定义 1.15）] 群同态下定义：核是映射到 的原像集， 是像集。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 861,
-    "endLine": 866
+    "startLine": 869,
+    "endLine": 874
   },
   {
-    "id": "dx-Abstract-Algebra-130",
+    "id": "dx-Abstract-Algebra-132",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19816,11 +19856,11 @@
     "content": "\\begin{note}[定义1 15群同态下定义 核是映射到e'的原像集 imf是像集]\n核是映射到对方单位元对应的原像集，像是G能映射到$G'$的所有$G'$的元素。但是因为同态不要求单满所以$\\operatorname{im}(f)$至少G的子集 \\\\\n要证两件事1有单位元2.$x,y$在这里面那么$xy^{-1}$次方也在，用$\\ker f$的定义也就是验证这个东西能不能映射到$e'$上。$e'$本身就是一个群，反正要把运算通过同态的性质转化到已知的群上\n\\end{note}",
     "text": "[定义1 15群同态下定义 核是映射到e'的原像集 imf是像集] 核是映射到对方单位元对应的原像集，像是G能映射到 的所有 的元素。但是因为同态不要求单满所以 至少G的子集 \\\\ 要证两件事1有单位元2. 在这里面那么 次方也在，用 的定义也就是验证这个东西能不能映射到 上。 本身就是一个群，反正要把运算通过同态的性质转化到已知的群上",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 868,
-    "endLine": 871
+    "startLine": 876,
+    "endLine": 879
   },
   {
-    "id": "dx-Abstract-Algebra-131",
+    "id": "dx-Abstract-Algebra-133",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19836,11 +19876,11 @@
     "content": "\\begin{proposition}[命题 1.16]\n令 $f:(G,\\cdot)\\to(G',*)$ 是一个群同态，则 $f$ 是一个单同态当且仅当 $\\ker(f)=\\{e\\}$。也就是说，一个群同态是单的当且仅当核是平凡的。\n\\end{proposition}",
     "text": "[命题 1.16] 令 是一个群同态，则 是一个单同态当且仅当 。也就是说，一个群同态是单的当且仅当核是平凡的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 873,
-    "endLine": 875
+    "startLine": 881,
+    "endLine": 883
   },
   {
-    "id": "dx-Abstract-Algebra-132",
+    "id": "dx-Abstract-Algebra-134",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19856,11 +19896,11 @@
     "content": "\\begin{proposition}[命题 1.17：同态就是拆括号的游戏]\n若 $f:(G,\\cdot)\\to(G,*)$ 是一个群同构，则 $f^{-1}$ 也是群同构。\n\\end{proposition}",
     "text": "[命题 1.17：同态就是拆括号的游戏] 若 是一个群同构，则 也是群同构。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 877,
-    "endLine": 879
+    "startLine": 885,
+    "endLine": 887
   },
   {
-    "id": "dx-Abstract-Algebra-133",
+    "id": "dx-Abstract-Algebra-135",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19876,11 +19916,11 @@
     "content": "\\begin{note}[命题1 17同态就是拆括号的游戏]\n同态就是拆括号合括号的游戏\n\\end{note}",
     "text": "[命题1 17同态就是拆括号的游戏] 同态就是拆括号合括号的游戏",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 881,
-    "endLine": 883
+    "startLine": 889,
+    "endLine": 891
   },
   {
-    "id": "dx-Abstract-Algebra-134",
+    "id": "dx-Abstract-Algebra-136",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19896,11 +19936,11 @@
     "content": "\\begin{note}[同态的定义]\n同态映射 A这边对两个元素操作A得到的 和$A'$中对这两个元素在$A'$中的映射操作A 得到的还是映射 \\\\\n同态映射+满射才能说A与$A'$是同态 \\\\\n同态传递结合律分配律交换律\n\\end{note}",
     "text": "[同态的定义] 同态映射 A这边对两个元素操作A得到的 和 中对这两个元素在 中的映射操作A 得到的还是映射 \\\\ 同态映射+满射才能说A与 是同态 \\\\ 同态传递结合律分配律交换律",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 885,
-    "endLine": 889
+    "startLine": 893,
+    "endLine": 897
   },
   {
-    "id": "dx-Abstract-Algebra-135",
+    "id": "dx-Abstract-Algebra-137",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19916,11 +19956,11 @@
     "content": "\\begin{note}[同态同构的意义]\n同态保持运算，同构完全一致\n\\end{note}",
     "text": "[同态同构的意义] 同态保持运算，同构完全一致",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 891,
-    "endLine": 893
+    "startLine": 899,
+    "endLine": 901
   },
   {
-    "id": "dx-Abstract-Algebra-136",
+    "id": "dx-Abstract-Algebra-138",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19936,11 +19976,11 @@
     "content": "\\begin{note}[同构]\n同构=同态+限制必须一一对应既单又满 \\\\\n同构只看运算规律，把复杂集合的运算同构简化 \\\\\n自己到自己叫自同构\n\\end{note}",
     "text": "[同构] 同构=同态+限制必须一一对应既单又满 \\\\ 同构只看运算规律，把复杂集合的运算同构简化 \\\\ 自己到自己叫自同构",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 895,
-    "endLine": 899
+    "startLine": 903,
+    "endLine": 907
   },
   {
-    "id": "dx-Abstract-Algebra-137",
+    "id": "dx-Abstract-Algebra-139",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19956,11 +19996,11 @@
     "content": "\\begin{note}[构造同态同构的关键点]\n\\textbf{同态（Homomorphism）：} 只需要映射保持运算结构：$\\phi(a\\cdot b)=\\phi(a)*\\phi(b)$。例如，$(\\mathbb{R},+)$ 和 $(\\mathbb{R}^+,\\times)$ 的运算不同，但可以用指数映射 $\\phi(x)=e^x$ 连接它们，使其成为同构。\n\n\\textbf{同构（Isomorphism）：} 除了运算关系必须保持，映射还必须是双射。同构要求双射，且必须使运算方式保持一致，即使运算符号不同，也可以通过映射来建立联系。\n\n证明同构：证明任意 $\\phi(a\\circ b)=\\phi(c)$，同时 $\\phi(a)\\circ\\phi(b)=d$；证明单射反证就是一对多；特殊点就是切入口。\n\\end{note}",
     "text": "[构造同态同构的关键点] 同态（Homomorphism）： 只需要映射保持运算结构： 。例如， 和 的运算不同，但可以用指数映射 连接它们，使其成为同构。 同构（Isomorphism）： 除了运算关系必须保持，映射还必须是双射。同构要求双射，且必须使运算方式保持一致，即使运算符号不同，也可以通过映射来建立联系。 证明同构：证明任意 ，同时 ；证明单射反证就是一对多；特殊点就是切入口。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 901,
-    "endLine": 907
+    "startLine": 909,
+    "endLine": 915
   },
   {
-    "id": "dx-Abstract-Algebra-138",
+    "id": "dx-Abstract-Algebra-140",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19976,11 +20016,11 @@
     "content": "\\begin{theorem}[群同构第一定理（定理 1.2）]\n令 $f:G\\to G'$ 是一个群同态，则 $\\ker(f)\\triangleleft G$，且 $G$ 在 $\\ker(f)$ 上的商群同构于 $\\operatorname{im}(f)$，即\n\\[\nG/\\ker(f)\\simeq\\operatorname{im}(f)\n\\]\n特别地，若 $f$ 是满同态，则\n\\[\nG/\\ker(f)\\simeq G'\n\\]\n若 $f$ 是单同态，则\n\\[\nG/\\{e\\}\\simeq G\\simeq\\operatorname{im}(f)\n\\]\n若 $G$ 是有限群，则\n\\[\n\\frac{|G|}{|\\ker(f)|}=|\\operatorname{im}(f)|\n\\]\n\\end{theorem}",
     "text": "[群同构第一定理（定理 1.2）] 令 是一个群同态，则 ，且 在 上的商群同构于 ，即 特别地，若 是满同态，则 若 是单同态，则 若 是有限群，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 912,
-    "endLine": 929
+    "startLine": 920,
+    "endLine": 937
   },
   {
-    "id": "dx-Abstract-Algebra-139",
+    "id": "dx-Abstract-Algebra-141",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -19996,11 +20036,11 @@
     "content": "\\begin{note}[群同构第一定理1 2]\n$\\ker(f)$是映射到e的原像集，G上由$\\ker(f)$的陪集组成群和$\\operatorname{im}(f)$也就是值域群上同构 \\\\\n如果f是满射，$\\operatorname{im}(f)$就是$G'$，如果f是单同态$\\ker(f)=\\{e\\}$ \\\\\n如果G有限则他的阶等于$\\ker(f)$的阶乘$\\operatorname{im}(f)$的乘积\n\\end{note}",
     "text": "[群同构第一定理1 2] 是映射到e的原像集，G上由 的陪集组成群和 也就是值域群上同构 \\\\ 如果f是满射， 就是 ，如果f是单同态 \\\\ 如果G有限则他的阶等于 的阶乘 的乘积",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 931,
-    "endLine": 935
+    "startLine": 939,
+    "endLine": 943
   },
   {
-    "id": "dx-Abstract-Algebra-140",
+    "id": "dx-Abstract-Algebra-142",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20016,11 +20056,11 @@
     "content": "\\begin{theorem}[群同构第二定理（定理 1.3）]\n令 $(G,\\cdot)$ 是一个群，且 $N\\trianglelefteq G$，$H<G$。则 $H\\cap N\\trianglelefteq H$，$N\\trianglelefteq HN$，且\n\\[\nH/(H\\cap N)\\simeq HN/N\n\\]\n这和之前两个子群乘积的阶的公式是类似的。\n\\end{theorem}",
     "text": "[群同构第二定理（定理 1.3）] 令 是一个群，且 ， 。则 ， ，且 这和之前两个子群乘积的阶的公式是类似的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 937,
-    "endLine": 943
+    "startLine": 945,
+    "endLine": 951
   },
   {
-    "id": "dx-Abstract-Algebra-141",
+    "id": "dx-Abstract-Algebra-143",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20036,11 +20076,11 @@
     "content": "\\begin{note}[群同构第二定理]\nN是正规子群，H是真子群 H和N的交集是H的正规子群 \\\\\n$H\\cap N$构成的子群的陪集组成的商群和H中元素与N组合构成的陪集的商群是同构的\n\\end{note}",
     "text": "[群同构第二定理] N是正规子群，H是真子群 H和N的交集是H的正规子群 \\\\ 构成的子群的陪集组成的商群和H中元素与N组合构成的陪集的商群是同构的",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 945,
-    "endLine": 948
+    "startLine": 953,
+    "endLine": 956
   },
   {
-    "id": "dx-Abstract-Algebra-142",
+    "id": "dx-Abstract-Algebra-144",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20056,11 +20096,11 @@
     "content": "\\begin{note}[证明]\n正规子群一共干的就是一件事从父群里面任意挑出a和对应的a的逆，再证明正规子群里面的元素可以达成$aNa^{-1}=N$，而证明的时候就要用增加a和$a^{-1}$把想要的形式凑出来\n\\end{note}",
     "text": "[证明] 正规子群一共干的就是一件事从父群里面任意挑出a和对应的a的逆，再证明正规子群里面的元素可以达成 ，而证明的时候就要用增加a和 把想要的形式凑出来",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 950,
-    "endLine": 952
+    "startLine": 958,
+    "endLine": 960
   },
   {
-    "id": "dx-Abstract-Algebra-143",
+    "id": "dx-Abstract-Algebra-145",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20076,11 +20116,11 @@
     "content": "\\begin{note}[证明]\n$\\ker(f)$被拿出来就是因为它能映射到$e'$只要映射到$G'$这一项就会变成$e'$然后消失掉\n\\end{note}",
     "text": "[证明] 被拿出来就是因为它能映射到 只要映射到 这一项就会变成 然后消失掉",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 954,
-    "endLine": 956
+    "startLine": 962,
+    "endLine": 964
   },
   {
-    "id": "dx-Abstract-Algebra-144",
+    "id": "dx-Abstract-Algebra-146",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20096,11 +20136,11 @@
     "content": "\\begin{theorem}[群同构第三定理（定理 1.4）]\n令 $(G,\\cdot)$ 是一个群，且 $N\\trianglelefteq G$，$M\\trianglelefteq G$，$M<N$。则 $N/M\\trianglelefteq G/M$，且\n\\[\n(G/M)/(N/M)\\simeq G/N\n\\]\n\\end{theorem}",
     "text": "[群同构第三定理（定理 1.4）] 令 是一个群，且 ， ， 。则 ，且",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 958,
-    "endLine": 963
+    "startLine": 966,
+    "endLine": 971
   },
   {
-    "id": "dx-Abstract-Algebra-145",
+    "id": "dx-Abstract-Algebra-147",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20116,11 +20156,11 @@
     "content": "\\begin{definition}[变换群]\n\\textbf{1 变换：} 设 $M$ 是一个非空集合，若 $\\tau$ 是 $M$ 到 $M$ 上的映射 $\\tau:M\\to M$，就称 $\\tau$ 是 $M$ 的一个\\textbf{变换}。\n\n\\textbf{2 变换乘法：} $\\tau_1$，$\\tau_2$ 是 $M$ 的变换，规定 $\\forall a\\in M$：\n\\[\n\\tau_1\\tau_2:a\\to(a^{\\tau_1})^{\\tau_2}=a^{\\tau_1\\tau_2}\n\\]\n称 $\\tau_1\\tau_2$ 为 $\\tau_1,\\tau_2$ 的乘法。\n\n\\textbf{3 恒等变换：} $\\varepsilon:\\forall\\tau,\\;\\varepsilon\\tau=\\tau\\varepsilon=\\tau$。\n\n\\textbf{定理 1：} 假定 $G$ 是集合 $A$ 的若干个变换所作成的集合，并且 $G$ 包含恒等变换 $\\varepsilon$。若是对于上述乘法来说 $G$ 作成一个群，那么 $G$ 只包含 $A$ 的一一变换。\n\n变换得自己往自己身上映射；变换群里面的元素是变换。\n\\end{definition}",
     "text": "[变换群] 1 变换： 设 是一个非空集合，若 是 到 上的映射 ，就称 是 的一个变换。 2 变换乘法： ， 是 的变换，规定 ： 称 为 的乘法。 3 恒等变换： 。 定理 1： 假定 是集合 的若干个变换所作成的集合，并且 包含恒等变换 。若是对于上述乘法来说 作成一个群，那么 只包含 的一一变换。 变换得自己往自己身上映射；变换群里面的元素是变换。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 968,
-    "endLine": 982
+    "startLine": 976,
+    "endLine": 990
   },
   {
-    "id": "dx-Abstract-Algebra-146",
+    "id": "dx-Abstract-Algebra-148",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20136,11 +20176,11 @@
     "content": "\\begin{note}[变换群]\n变换得自己往自己身上映射 \\\\\n变换乘法 恒等变换 \\\\\n变换群里面的元素是变换\n\\end{note}",
     "text": "[变换群] 变换得自己往自己身上映射 \\\\ 变换乘法 恒等变换 \\\\ 变换群里面的元素是变换",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 984,
-    "endLine": 988
+    "startLine": 992,
+    "endLine": 996
   },
   {
-    "id": "dx-Abstract-Algebra-147",
+    "id": "dx-Abstract-Algebra-149",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20156,11 +20196,11 @@
     "content": "\\begin{note}[变换群证明]\n（1）非空、代数运算、结合律都满足，有单位元 $\\varepsilon$。那么\"逆元\"问题能解决吗？事实上，$\\tau_1$ 就没有逆元。因为如果 $\\tau_1$ 有逆元 $\\tau$，那么必有 $\\tau_1\\tau=\\varepsilon$ 且 $\\tau\\tau_1=\\varepsilon$。但是\n\\[\n(1)^\\varepsilon=(1)^{\\tau_1\\tau}=(1^{\\tau_1})^\\tau=(1)^\\tau\\Rightarrow(1)^\\tau=1\n\\]\n而\n\\[\n(2)^\\varepsilon=(2)^{\\tau_1\\tau}=(2^{\\tau_1})^\\tau=(1)^\\tau\\Rightarrow(1)^\\tau=2\n\\]\n导致矛盾，故 $\\tau_1$ 没有逆元。因此 $T(M)$ 不能成为群。\n\\end{note}",
     "text": "[变换群证明] （1）非空、代数运算、结合律都满足，有单位元 。那么\"逆元\"问题能解决吗？事实上， 就没有逆元。因为如果 有逆元 ，那么必有 且 。但是 而 导致矛盾，故 没有逆元。因此 不能成为群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 990,
-    "endLine": 1000
+    "startLine": 998,
+    "endLine": 1008
   },
   {
-    "id": "dx-Abstract-Algebra-148",
+    "id": "dx-Abstract-Algebra-150",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20176,11 +20216,11 @@
     "content": "\\begin{note}[变化群的意义]\n可以通过一个简单的例子来理解。设想你有一个正方形，你可以对这个正方形进行各种操作（旋转、翻转等），这些操作我们称为\"变换\"。变换的组合（封闭性）：如果你先对正方形进行一次变换，再进行另一次变换，整体效果依然是一个变换。比如先旋转90°再旋转90°，结果等于旋转180°。\n\\end{note}",
     "text": "[变化群的意义] 可以通过一个简单的例子来理解。设想你有一个正方形，你可以对这个正方形进行各种操作（旋转、翻转等），这些操作我们称为\"变换\"。变换的组合（封闭性）：如果你先对正方形进行一次变换，再进行另一次变换，整体效果依然是一个变换。比如先旋转90°再旋转90°，结果等于旋转180°。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1002,
-    "endLine": 1004
+    "startLine": 1010,
+    "endLine": 1012
   },
   {
-    "id": "dx-Abstract-Algebra-149",
+    "id": "dx-Abstract-Algebra-151",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20196,11 +20236,11 @@
     "content": "\\begin{definition}[置换与置换群]\n一个有限集的一个一一变换叫做一个置换。一个有限集的若干个置换作成的一个群叫做一个置换群。\n\n我们看一个有限集合 $A$，$A$ 有 $n$ 个元 $a_1,a_2,\\cdots,a_n$。由 §5 定理 2，$A$ 的全体置换作成一个群 $G$。\n\\end{definition}",
     "text": "[置换与置换群] 一个有限集的一个一一变换叫做一个置换。一个有限集的若干个置换作成的一个群叫做一个置换群。 我们看一个有限集合 ， 有 个元 。由 §5 定理 2， 的全体置换作成一个群 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1006,
-    "endLine": 1010
+    "startLine": 1014,
+    "endLine": 1018
   },
   {
-    "id": "dx-Abstract-Algebra-150",
+    "id": "dx-Abstract-Algebra-152",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20216,11 +20256,11 @@
     "content": "\\begin{note}[置换与置换群]\n有限集+变换=置换 \\\\\n一一变换为置换\n\\end{note}",
     "text": "[置换与置换群] 有限集+变换=置换 \\\\ 一一变换为置换",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1012,
-    "endLine": 1015
+    "startLine": 1020,
+    "endLine": 1023
   },
   {
-    "id": "dx-Abstract-Algebra-151",
+    "id": "dx-Abstract-Algebra-153",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20236,11 +20276,31 @@
     "content": "\\begin{definition}[置换的书写方式]\n置换\n\\[\n\\pi:a_i\\longrightarrow a_{k_i},\\quad i=1,2,\\cdots,n\n\\]\n这样一个置换所发生的作用完全可以由 $(1,k_1),(2,k_2),\\cdots,(n,k_n)$ 这 $n$ 对整数来决定。我们表示重量的第一个方法就是把这个置换写成\n\\[\n\\begin{pmatrix}1&2&\\cdots&n\\\\k_1&k_2&\\cdots&k_n\\end{pmatrix}\n\\]\n例1 $n=3$，$\\pi:1\\to2,\\;2\\to3,\\;3\\to1$，那么\n\\[\n\\pi=\\begin{pmatrix}1&2&3\\\\2&3&1\\end{pmatrix}\n\\]\n\\end{definition}",
     "text": "[置换的书写方式] 置换 这样一个置换所发生的作用完全可以由 这 对整数来决定。我们表示重量的第一个方法就是把这个置换写成 例1 ， ，那么",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1017,
-    "endLine": 1030
+    "startLine": 1025,
+    "endLine": 1038
   },
   {
-    "id": "dx-Abstract-Algebra-152",
+    "id": "dx-Abstract-Algebra-154",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "变换群与置换群",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "变换群与置换群",
+    "previewType": "note",
+    "previewTitle": "变换群与置换群",
+    "rawContent": "\\begin{note}[证明置换可以写成不相交循环之积]\n先证明集合中元素的轨道序列一定有重复（因为集合有限不是无限的）；再在第一次出现重复时截断，得到一个循环，证明剩余元素构成的 $k$ 不空，继续分解。最终每个置换都能写成若干不相交循环的乘积。\n\\end{note}",
+    "content": "\\begin{note}[证明置换可以写成不相交循环之积]\n先证明集合中元素的轨道序列一定有重复（因为集合有限不是无限的）；再在第一次出现重复时截断，得到一个循环，证明剩余元素构成的 $k$ 不空，继续分解。最终每个置换都能写成若干不相交循环的乘积。\n\\end{note}",
+    "text": "[证明置换可以写成不相交循环之积] 先证明集合中元素的轨道序列一定有重复（因为集合有限不是无限的）；再在第一次出现重复时截断，得到一个循环，证明剩余元素构成的 不空，继续分解。最终每个置换都能写成若干不相交循环的乘积。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
+    "startLine": 1040,
+    "endLine": 1042
+  },
+  {
+    "id": "dx-Abstract-Algebra-155",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20256,11 +20316,11 @@
     "content": "\\begin{note}[循环置换]\n3循环 第k个接回第一个 \\\\\n不变的映射不写 \\\\\n两个循环不能有公共的东西加不相连的循环\n\\end{note}",
     "text": "[循环置换] 3循环 第k个接回第一个 \\\\ 不变的映射不写 \\\\ 两个循环不能有公共的东西加不相连的循环",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1032,
-    "endLine": 1036
+    "startLine": 1044,
+    "endLine": 1048
   },
   {
-    "id": "dx-Abstract-Algebra-153",
+    "id": "dx-Abstract-Algebra-156",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20276,11 +20336,11 @@
     "content": "\\begin{note}[置换群]\n置换是一一对应的变化，不相连就是交集是空，写成循环置换就是为了省地方 \\\\\nn次对称群就是全体置换\n\\end{note}",
     "text": "[置换群] 置换是一一对应的变化，不相连就是交集是空，写成循环置换就是为了省地方 \\\\ n次对称群就是全体置换",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1038,
-    "endLine": 1041
+    "startLine": 1050,
+    "endLine": 1053
   },
   {
-    "id": "dx-Abstract-Algebra-154",
+    "id": "dx-Abstract-Algebra-157",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20296,11 +20356,11 @@
     "content": "\\begin{note}[只要不相连就可以快速求阶数而且有交换律]\n$ab=ba$，$(123)(45)$，$3\\times2=6$。\n\\end{note}",
     "text": "[只要不相连就可以快速求阶数而且有交换律] ， ， 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1043,
-    "endLine": 1045
+    "startLine": 1055,
+    "endLine": 1057
   },
   {
-    "id": "dx-Abstract-Algebra-155",
+    "id": "dx-Abstract-Algebra-158",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20316,11 +20376,11 @@
     "content": "\\begin{definition}[对称群]\n一个包含 $n$ 个元的集合的全体置换作成的群叫做 $n$ 次对称群，这个群我们用 $S_n$ 来表示。\n\\end{definition}",
     "text": "[对称群] 一个包含 个元的集合的全体置换作成的群叫做 次对称群，这个群我们用 来表示。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1047,
-    "endLine": 1049
+    "startLine": 1059,
+    "endLine": 1061
   },
   {
-    "id": "dx-Abstract-Algebra-156",
+    "id": "dx-Abstract-Algebra-159",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20336,11 +20396,11 @@
     "content": "\\begin{theorem}[$n$ 次对称群 $S_n$ 的阶是 $n!$]\n定理 1：$n$ 次对称群 $S_n$ 的阶是 $n!$。\n\n现在我们要看一看表示一个置换的符号。$n$ 个元的置换一共有 $n!$ 个。由初等代数我们知道，$n$ 个元的置换一共有 $n!$ 个，要作 $n$ 个元的一个置换，就是要替每一个元选定一个对象，我们替 $a_1$ 选定对象时，有 $n$ 个可能，选定了以后，再替 $a_2$ 选时，就只有 $n-1$ 个可能，这样下去，一共可以得到 $n(n-1)\\cdots2\\cdot1=n!$ 个不同的置换。\n\\end{theorem}",
     "text": "[ 次对称群 的阶是 ] 定理 1： 次对称群 的阶是 。 现在我们要看一看表示一个置换的符号。 个元的置换一共有 个。由初等代数我们知道， 个元的置换一共有 个，要作 个元的一个置换，就是要替每一个元选定一个对象，我们替 选定对象时，有 个可能，选定了以后，再替 选时，就只有 个可能，这样下去，一共可以得到 个不同的置换。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1051,
-    "endLine": 1055
+    "startLine": 1063,
+    "endLine": 1067
   },
   {
-    "id": "dx-Abstract-Algebra-157",
+    "id": "dx-Abstract-Algebra-160",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20356,11 +20416,11 @@
     "content": "\\begin{theorem}[凯莱定理：任何群都是同一个变换群的同构]\n定理（凯莱定理）任何群都同一个变换群同构。\n\n\\textbf{证明：} 假定 $G$ 是一个群，$G$ 的元是 $a,b,c,\\cdots$。我们在 $G$ 里任意取出一个元 $x$ 来，那么\n\\[\ng\\longrightarrow gx=g^{\\tau_x}\n\\]\n是集合 $G$ 的一个变换，因为给了 $G$ 的任意元 $g$，我们能够得到一个唯一的 $G$ 的元 $g^{\\tau_x}$，这样当 $G$ 的每个元 $x$ 可以得到一个 $G$ 的变换放在一起，作成一个集合 $\\tilde{G}=\\{\\tau_a,\\tau_b,\\tau_c,\\cdots\\}$。那么\n\\[\n\\phi:\\quad x\\longrightarrow\\tau_x\n\\]\n是 $G$ 到 $\\tilde{G}$ 间的满射，且消去律告诉我们：$x\\ne y\\Rightarrow gx\\ne gy$ 告诉我们，$\\tau_x\\ne\\tau_y$。所以 $\\phi$ 是 $G$ 与 $\\tilde{G}$ 间的一一映射。\n\\end{theorem}",
     "text": "[凯莱定理：任何群都是同一个变换群的同构] 定理（凯莱定理）任何群都同一个变换群同构。 证明： 假定 是一个群， 的元是 。我们在 里任意取出一个元 来，那么 是集合 的一个变换，因为给了 的任意元 ，我们能够得到一个唯一的 的元 ，这样当 的每个元 可以得到一个 的变换放在一起，作成一个集合 。那么 是 到 间的满射，且消去律告诉我们： 告诉我们， 。所以 是 与 间的一一映射。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1060,
-    "endLine": 1072
+    "startLine": 1072,
+    "endLine": 1084
   },
   {
-    "id": "dx-Abstract-Algebra-158",
+    "id": "dx-Abstract-Algebra-161",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20376,11 +20436,11 @@
     "content": "\\begin{note}[凯莱定理任何群都是同一个群的同构]\n第一步构造映射g到gx这个操作叫做$\\tau_x$ \\\\\n每一个元都有一种变换 再构建变换和元素之间的映射 \\\\\ngx之间是由定义的运算连接的而不是乘法 \\\\\n这步证明的是$g(x\\circ y)=g(x)\\circ g(y)$\n\\end{note}",
     "text": "[凯莱定理任何群都是同一个群的同构] 第一步构造映射g到gx这个操作叫做 \\\\ 每一个元都有一种变换 再构建变换和元素之间的映射 \\\\ gx之间是由定义的运算连接的而不是乘法 \\\\ 这步证明的是",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1074,
-    "endLine": 1079
+    "startLine": 1086,
+    "endLine": 1091
   },
   {
-    "id": "dx-Abstract-Algebra-159",
+    "id": "dx-Abstract-Algebra-162",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20396,11 +20456,11 @@
     "content": "\\begin{definition}[定义 1.22：$x$ 的幂]\n令 $(G,\\cdot)$ 是一个群，且 $x\\in G$。若 $n\\in\\mathbb{N}_1$，我们定义 $x^{-n}=(x^{-1})^n$，另外 $x^0=e$。\n\n命题 1.22：令 $(G,\\cdot)$ 是一个群，任取 $x\\in G$，则 $f:(\\mathbb{Z},+)\\to(G,\\cdot)$，定义为 $f(n)=x^n$，是一个群同态。\n\n$x$ 的幂是群同态，$f$ 是同态映射。\n\\end{definition}",
     "text": "[定义 1.22： 的幂] 令 是一个群，且 。若 ，我们定义 ，另外 。 命题 1.22：令 是一个群，任取 ，则 ，定义为 ，是一个群同态。 的幂是群同态， 是同态映射。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1084,
-    "endLine": 1090
+    "startLine": 1096,
+    "endLine": 1102
   },
   {
-    "id": "dx-Abstract-Algebra-160",
+    "id": "dx-Abstract-Algebra-163",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20416,11 +20476,11 @@
     "content": "\\begin{definition}[由 $x$ 生成子群（定义 1.23）]\n令 $(G,\\cdot)$ 是一个群，且 $x\\in G$，则 $\\langle x\\rangle$，被称为由 $x$ 生成的群，定义为\n\\[\n\\langle x\\rangle=\\{x^n:n\\in\\mathbb{Z}\\}\n\\]\n利用同态的性质，我们有的直接推论就是，刚才提到的同态的像，也就是 $\\{x^n:n\\in\\mathbb{Z}\\}$ 是一个子群，被称为由 $x$ 生成的群。\n\n阶只是 $n$ 次方可以等于 $e$，没有说 $n$ 次方的过程，这 $n$ 个元素就是群中所有的元素。\n\\end{definition}",
     "text": "[由 生成子群（定义 1.23）] 令 是一个群，且 ，则 ，被称为由 生成的群，定义为 利用同态的性质，我们有的直接推论就是，刚才提到的同态的像，也就是 是一个子群，被称为由 生成的群。 阶只是 次方可以等于 ，没有说 次方的过程，这 个元素就是群中所有的元素。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1092,
-    "endLine": 1100
+    "startLine": 1104,
+    "endLine": 1112
   },
   {
-    "id": "dx-Abstract-Algebra-161",
+    "id": "dx-Abstract-Algebra-164",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20436,11 +20496,11 @@
     "content": "\\begin{definition}[循环群（定义 1.25）]\n令 $(G,\\cdot)$ 是一个群。若存在 $x\\in G$，使得 $G=\\langle x\\rangle$，则 $G$ 被称为一个循环群，而 $x$ 被称为 $G$ 的一个生成元。\n\n循环群的关键是找到固定元，由固定元可以生成所有的元素。若群 $G$ 中每个元都能表示成某个固定元 $a$ 的乘方，就称群 $G$ 为循环群，也称群 $G$ 为由元 $a$ 生成的群，记为 $G=(a)$，称 $a$ 是 $G$ 的一个生成元。\n\n\\textbf{例1：} 整数加群 $Z$ 是无限阶循环群。$\\because 1\\in Z$，$m=\\underbrace{1+1+\\cdots+1}_{m\\text{个}}=1^m$，$-m=\\underbrace{(-1)+(-1)+\\cdots+(-1)}_{m\\text{个}}=(-1)^m=1^{-m}$，$0=1^0$，$\\therefore Z=(1)$。\n\n\\textbf{例2：} 模 $n$ 的剩余类加群 $Z_n=([1])$ 是 $n$ 阶循环群。\n\\end{definition}",
     "text": "[循环群（定义 1.25）] 令 是一个群。若存在 ，使得 ，则 被称为一个循环群，而 被称为 的一个生成元。 循环群的关键是找到固定元，由固定元可以生成所有的元素。若群 中每个元都能表示成某个固定元 的乘方，就称群 为循环群，也称群 为由元 生成的群，记为 ，称 是 的一个生成元。 例1： 整数加群 是无限阶循环群。 ， ， ， ， 。 例2： 模 的剩余类加群 是 阶循环群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1102,
-    "endLine": 1110
+    "startLine": 1114,
+    "endLine": 1122
   },
   {
-    "id": "dx-Abstract-Algebra-162",
+    "id": "dx-Abstract-Algebra-165",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20456,11 +20516,11 @@
     "content": "\\begin{note}[循环群 1]\n循环群的关键是找到固定元，由固定元可以生成所有的元素，m是加法做多少次也就是运算多少次 \\\\\n余k的可由余1的自+k次\n\\end{note}",
     "text": "[循环群 1] 循环群的关键是找到固定元，由固定元可以生成所有的元素，m是加法做多少次也就是运算多少次 \\\\ 余k的可由余1的自+k次",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1112,
-    "endLine": 1115
+    "startLine": 1124,
+    "endLine": 1127
   },
   {
-    "id": "dx-Abstract-Algebra-163",
+    "id": "dx-Abstract-Algebra-166",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20476,11 +20536,11 @@
     "content": "\\begin{note}[循环群 2]\n由一个元形成群所有元素 所有元素都可以写成生成元的次方\n\\end{note}",
     "text": "[循环群 2] 由一个元形成群所有元素 所有元素都可以写成生成元的次方",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1117,
-    "endLine": 1119
+    "startLine": 1129,
+    "endLine": 1131
   },
   {
-    "id": "dx-Abstract-Algebra-164",
+    "id": "dx-Abstract-Algebra-167",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20496,11 +20556,11 @@
     "content": "\\begin{proposition}[命题 1.26：有限循环群的结构]\n令 $G=\\langle x\\rangle$ 是有限循环群，假设 $|x|=n$，则 $G=\\{e,x,x^2,\\cdots,x^{n-1}\\}$，其中乘法法中的这些元素是两两不同的。\n\\end{proposition}",
     "text": "[命题 1.26：有限循环群的结构] 令 是有限循环群，假设 ，则 ，其中乘法法中的这些元素是两两不同的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1121,
-    "endLine": 1123
+    "startLine": 1133,
+    "endLine": 1135
   },
   {
-    "id": "dx-Abstract-Algebra-165",
+    "id": "dx-Abstract-Algebra-168",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20516,11 +20576,11 @@
     "content": "\\begin{note}[循环子群]\n循环群的阶是父群阶的因数，阶也就是个数\n\\end{note}",
     "text": "[循环子群] 循环群的阶是父群阶的因数，阶也就是个数",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1125,
-    "endLine": 1127
+    "startLine": 1137,
+    "endLine": 1139
   },
   {
-    "id": "dx-Abstract-Algebra-166",
+    "id": "dx-Abstract-Algebra-169",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20536,11 +20596,11 @@
     "content": "\\begin{proposition}[命题 1.30：循环群的生成元]\n令 $G=\\langle x\\rangle$ 是一个 $n$ 阶循环群。假设 $1\\le m\\le n$，则 $x^m$ 的阶为\n\\[\n|x^m|=\\frac{n}{\\gcd(n,m)}\n\\]\n\\textbf{命题 1.31：} 令 $G=\\langle x\\rangle$ 是一个 $n$ 阶循环群，则 $x^m$（$1\\le m\\le n$）是个生成元，当且仅当 $\\gcd(m,n)=1$。根据欧拉 $\\phi$ 函数的定义，这些生成元的个数正是 $\\phi(n)$。所以循环群的生成元不止一个。\n\\end{proposition}",
     "text": "[命题 1.30：循环群的生成元] 令 是一个 阶循环群。假设 ，则 的阶为 命题 1.31： 令 是一个 阶循环群，则 （ ）是个生成元，当且仅当 。根据欧拉 函数的定义，这些生成元的个数正是 。所以循环群的生成元不止一个。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1129,
-    "endLine": 1135
+    "startLine": 1141,
+    "endLine": 1147
   },
   {
-    "id": "dx-Abstract-Algebra-167",
+    "id": "dx-Abstract-Algebra-170",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20556,11 +20616,11 @@
     "content": "\\begin{note}[命题1 30循环群的生成元的幂指数和循环群阶数互素]\n所以循环群的生成元不止一个\n\\end{note}",
     "text": "[命题1 30循环群的生成元的幂指数和循环群阶数互素] 所以循环群的生成元不止一个",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1137,
-    "endLine": 1139
+    "startLine": 1149,
+    "endLine": 1151
   },
   {
-    "id": "dx-Abstract-Algebra-168",
+    "id": "dx-Abstract-Algebra-171",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20576,11 +20636,11 @@
     "content": "\\begin{proposition}[$n$ 阶循环群互相同构，无限循环群彼此同构（命题 1.2.9）]\n令 $G=\\langle x\\rangle$ 是有限循环群，$|x|=n$，则 $G\\cong\\mathbb{Z}/n\\mathbb{Z}$。无限循环群 $G=\\langle x\\rangle$（$|x|=\\infty$）则 $G\\cong\\mathbb{Z}$。故所有 $n$ 阶循环群互相同构，所有无限循环群彼此同构。\n\\end{proposition}",
     "text": "[ 阶循环群互相同构，无限循环群彼此同构（命题 1.2.9）] 令 是有限循环群， ，则 。无限循环群 （ ）则 。故所有 阶循环群互相同构，所有无限循环群彼此同构。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1141,
-    "endLine": 1143
+    "startLine": 1153,
+    "endLine": 1155
   },
   {
-    "id": "dx-Abstract-Algebra-169",
+    "id": "dx-Abstract-Algebra-172",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20596,11 +20656,11 @@
     "content": "\\begin{note}[循环群的同构]\n把生成元做映射 \\\\\n同构证明是映射证明同态+单+满\n\\end{note}",
     "text": "[循环群的同构] 把生成元做映射 \\\\ 同构证明是映射证明同态+单+满",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1145,
-    "endLine": 1148
+    "startLine": 1157,
+    "endLine": 1160
   },
   {
-    "id": "dx-Abstract-Algebra-170",
+    "id": "dx-Abstract-Algebra-173",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20616,11 +20676,11 @@
     "content": "\\begin{note}[循环群的子群还是循环群]\n其实也就是要证明子群中最小的正幂次方$a^k$是生成元，设其他的元素不整除则$m=kq+r$群有逆元 所以$a^r$也在循环群内 因为r比k小，k又是最小的正幂r只能等于0所有元都是k的整数倍\n\\end{note}",
     "text": "[循环群的子群还是循环群] 其实也就是要证明子群中最小的正幂次方 是生成元，设其他的元素不整除则 群有逆元 所以 也在循环群内 因为r比k小，k又是最小的正幂r只能等于0所有元都是k的整数倍",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1150,
-    "endLine": 1152
+    "startLine": 1162,
+    "endLine": 1164
   },
   {
-    "id": "dx-Abstract-Algebra-171",
+    "id": "dx-Abstract-Algebra-174",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20636,11 +20696,11 @@
     "content": "\\begin{note}[无限阶的群和任意循环群同态]\n无限阶循环群（如$\\mathbb{Z}$）可以同态到任意循环群：同态只需要满射，不必是单射，多对一可以，一对多不行。\n\\end{note}",
     "text": "[无限阶的群和任意循环群同态] 无限阶循环群（如 ）可以同态到任意循环群：同态只需要满射，不必是单射，多对一可以，一对多不行。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1154,
-    "endLine": 1156
+    "startLine": 1166,
+    "endLine": 1168
   },
   {
-    "id": "dx-Abstract-Algebra-172",
+    "id": "dx-Abstract-Algebra-175",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20656,11 +20716,11 @@
     "content": "\\begin{definition}[两个群直积（定义 1.18）]\n令 $(G,\\cdot_1)$，$(G',\\cdot_2)$ 是两个群，我们构造它们的直积，不妨记 $(G\\times G',*)$。对于 $(x,y),(x',y')\\in G\\times G'$，我们定义逐坐标的乘积，为\n\\[\n(x,y)*(x',y')=(x\\cdot_1 x',\\;y\\cdot_2 y')\n\\]\n\n\\textbf{命题 1.18：} 若 $(G,\\cdot_1)$，$(G',\\cdot_2)$ 是两个群，则它们的直积 $(G\\times G',*)$ 还是一个群。\n\n\\textbf{证明：} 封闭性：因为 $G$ 在 $\\cdot_1$ 下封闭，$G'$ 在 $\\cdot_2$ 下封闭，而 $G\\times G'$ 的元素乘积是逐坐标定义的，则 $G\\times G'$ 在 $*=(\\cdot_1,\\cdot_2)$ 下也是封闭的。结合律：同样，逐坐标有结合律，故整体也有结合律。单位元：$(e,e')$ 是直积的单位元。逆元：对于任意 $(x,y)\\in G\\times G'$，$(x^{-1},y^{-1})$ 是 $(x,y)$ 的逆元。\n\\end{definition}",
     "text": "[两个群直积（定义 1.18）] 令 ， 是两个群，我们构造它们的直积，不妨记 。对于 ，我们定义逐坐标的乘积，为 命题 1.18： 若 ， 是两个群，则它们的直积 还是一个群。 证明： 封闭性：因为 在 下封闭， 在 下封闭，而 的元素乘积是逐坐标定义的，则 在 下也是封闭的。结合律：同样，逐坐标有结合律，故整体也有结合律。单位元： 是直积的单位元。逆元：对于任意 ， 是 的逆元。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1161,
-    "endLine": 1170
+    "startLine": 1173,
+    "endLine": 1182
   },
   {
-    "id": "dx-Abstract-Algebra-173",
+    "id": "dx-Abstract-Algebra-176",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20676,11 +20736,11 @@
     "content": "\\begin{definition}[一族群的直积（定义 1.19）]\n令 $(G_i,\\cdot_i)$ 是一族群，其中 $I$ 是一个指标集，我们定义它们的直积为 $(\\prod_{i\\in I}G_i,*)$，同样通过逐点的乘积，对于 $(x_i)_{i\\in I},(y_i)_{i\\in I}\\in\\prod_{i\\in I}G_i$，我们定义\n\\[\n(x_i)_{i\\in I}*(y_i)_{i\\in I}=(x_i\\cdot_i y_i)_{i\\in I}\n\\]\n\\textbf{命题 1.19：} 若 $(G_i,\\cdot_i)$ 是一族群，则它们的直积 $(\\prod_{i\\in I}G_i,*)$ 还是一个群。\n\n既然有了两个群的直积，我们就可以类似地定义有限多个群的直积，同样通过逐坐标的乘法。甚至进一步，我们可以对于任意一族群，定义它们的直积。\n\\end{definition}",
     "text": "[一族群的直积（定义 1.19）] 令 是一族群，其中 是一个指标集，我们定义它们的直积为 ，同样通过逐点的乘积，对于 ，我们定义 命题 1.19： 若 是一族群，则它们的直积 还是一个群。 既然有了两个群的直积，我们就可以类似地定义有限多个群的直积，同样通过逐坐标的乘法。甚至进一步，我们可以对于任意一族群，定义它们的直积。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1172,
-    "endLine": 1180
+    "startLine": 1184,
+    "endLine": 1192
   },
   {
-    "id": "dx-Abstract-Algebra-174",
+    "id": "dx-Abstract-Algebra-177",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20696,11 +20756,11 @@
     "content": "\\begin{definition}[$n$ 阶一般线性群（定义 1.11）]\n我们对于那些 $n*n$ 可逆实矩阵构成的乘法群，称为（实数上的）$n$ 阶一般线性群，记作 $(GL(n,\\mathbb{R}),\\cdot)$。由于一个矩阵可逆当且仅当其行列式不为零，因此\n\\[\nGL(n,\\mathbb{R})=\\{A\\in M(n,\\mathbb{R}):\\det(A)\\ne 0\\}\n\\]\n注意，这的确是个群，因为本身 $n*n$ 实矩阵对乘法构成幺半群（单位元是单位矩阵），接下来我们取所有可逆元素，就得到了一般线性群。提到了一般线性群很难不去提特殊线性群。\n\\end{definition}",
     "text": "[ 阶一般线性群（定义 1.11）] 我们对于那些 可逆实矩阵构成的乘法群，称为（实数上的） 阶一般线性群，记作 。由于一个矩阵可逆当且仅当其行列式不为零，因此 注意，这的确是个群，因为本身 实矩阵对乘法构成幺半群（单位元是单位矩阵），接下来我们取所有可逆元素，就得到了一般线性群。提到了一般线性群很难不去提特殊线性群。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1182,
-    "endLine": 1188
+    "startLine": 1194,
+    "endLine": 1200
   },
   {
-    "id": "dx-Abstract-Algebra-175",
+    "id": "dx-Abstract-Algebra-178",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20716,11 +20776,11 @@
     "content": "\\begin{definition}[$n$ 阶特殊线性群行列式是 1（定义 1.12）]\n（实数上的）$n$ 阶特殊线性群是由那些行列式恰好是 $1$ 的 $n*n$ 实矩阵构成的乘法群，记作 $(SL(n,\\mathbb{R}),\\cdot)$，即\n\\[\nSL(n,\\mathbb{R})=\\{A\\in M(n,\\mathbb{R}):\\det(A)=1\\}\n\\]\n注意，这个定义是尚且不良好的，因为我们并没有证明特殊线性群是个群。实际上，它是个子群。我们为什么不给出子群的条件呢？正如我们给出子幺半群的条件那样。\n\\end{definition}",
     "text": "[ 阶特殊线性群行列式是 1（定义 1.12）] （实数上的） 阶特殊线性群是由那些行列式恰好是 的 实矩阵构成的乘法群，记作 ，即 注意，这个定义是尚且不良好的，因为我们并没有证明特殊线性群是个群。实际上，它是个子群。我们为什么不给出子群的条件呢？正如我们给出子幺半群的条件那样。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1190,
-    "endLine": 1196
+    "startLine": 1202,
+    "endLine": 1208
   },
   {
-    "id": "dx-Abstract-Algebra-176",
+    "id": "dx-Abstract-Algebra-179",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20736,11 +20796,11 @@
     "content": "\\begin{proposition}[命题 1.12：特殊线性群是群]\n$SL(n,\\mathbb{R})$ 是 $GL(n,\\mathbb{R})$ 的一个子群，从而是一个群。（由行列式同态 $\\det:GL(n,\\mathbb{R})\\to(\\mathbb{R}^\\times,\\cdot)$ 的核即得。）\n\\end{proposition}",
     "text": "[命题 1.12：特殊线性群是群] 是 的一个子群，从而是一个群。（由行列式同态 的核即得。）",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1198,
-    "endLine": 1200
+    "startLine": 1210,
+    "endLine": 1212
   },
   {
-    "id": "dx-Abstract-Algebra-177",
+    "id": "dx-Abstract-Algebra-180",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20756,11 +20816,11 @@
     "content": "\\begin{example}[4 元群]\n假定 $F$ 是一个有四个元的域。证明：(i) $F$ 的特征是 $2$；(ii) $F$ 的不等于 $0$ 或 $1$ 的两个元都适合方程 $x^2=x+1$。\n\n\\textbf{解：} (a) $F$ 的特征是 $F$ 的非零元（对加法来说的）相同的阶，并且是一个素数。$F$ 作为加群的阶是 $4$，因此 $F$ 的非零元（对加法来说）的阶只能是 $1$，$2$ 或 $4$，其中只有 $2$ 是素数，所以特征是 $2$。因此加群 $F$ 与克莱因四元群 $B_4$ 同构。\n\n(b) 另一方面乘群 $F^\\times$ 的阶是 $3$，因而是一个循环群 $(a)$，而 $F^\\times$ 的元是 $1,a,a^2$。这样 $F=\\{0,1,a,a^2\\}$。由于加群 $F$ 与 $B_4$ 同构，有 $a+1=a^2$，$a^2+1=a=(a^2)^2$，因此 $F$ 的不等于 $0$ 或 $1$ 的两个元 $a$ 和 $a^2$ 都适合方程 $x^2=x+1$。有限域一定有阶，阶只能是 $4$ 或 $2$，只有 $2$ 是素数只能是 $2$，域一定有特征，特征只能是 $2$。\n\\end{example}",
     "text": "[4 元群] 假定 是一个有四个元的域。证明：(i) 的特征是 ；(ii) 的不等于 或 的两个元都适合方程 。 解： (a) 的特征是 的非零元（对加法来说的）相同的阶，并且是一个素数。 作为加群的阶是 ，因此 的非零元（对加法来说）的阶只能是 ， 或 ，其中只有 是素数，所以特征是 。因此加群 与克莱因四元群 同构。 (b) 另一方面乘群 的阶是 ，因而是一个循环群 ，而 的元是 。这样 。由于加群 与 同构，有 ， ，因此 的不等于 或 的两个元 和 都适合方程 。有限域一定有阶，阶只能是 或 ，只有 是素数只能是 ，域一定有特征，特征只能是 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch1.tex",
-    "startLine": 1202,
-    "endLine": 1208
+    "startLine": 1214,
+    "endLine": 1220
   },
   {
-    "id": "dx-Abstract-Algebra-178",
+    "id": "dx-Abstract-Algebra-181",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20780,7 +20840,7 @@
     "endLine": 23
   },
   {
-    "id": "dx-Abstract-Algebra-179",
+    "id": "dx-Abstract-Algebra-182",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20800,7 +20860,7 @@
     "endLine": 27
   },
   {
-    "id": "dx-Abstract-Algebra-180",
+    "id": "dx-Abstract-Algebra-183",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20820,7 +20880,7 @@
     "endLine": 33
   },
   {
-    "id": "dx-Abstract-Algebra-181",
+    "id": "dx-Abstract-Algebra-184",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20840,7 +20900,7 @@
     "endLine": 44
   },
   {
-    "id": "dx-Abstract-Algebra-182",
+    "id": "dx-Abstract-Algebra-185",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20860,7 +20920,7 @@
     "endLine": 50
   },
   {
-    "id": "dx-Abstract-Algebra-183",
+    "id": "dx-Abstract-Algebra-186",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20880,7 +20940,7 @@
     "endLine": 57
   },
   {
-    "id": "dx-Abstract-Algebra-184",
+    "id": "dx-Abstract-Algebra-187",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20900,7 +20960,7 @@
     "endLine": 61
   },
   {
-    "id": "dx-Abstract-Algebra-185",
+    "id": "dx-Abstract-Algebra-188",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20920,7 +20980,7 @@
     "endLine": 67
   },
   {
-    "id": "dx-Abstract-Algebra-186",
+    "id": "dx-Abstract-Algebra-189",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20932,15 +20992,15 @@
     "blockTitle": "环、交换环、除环与域",
     "previewType": "note",
     "previewTitle": "环、交换环、除环与域",
-    "rawContent": "\\begin{note}[定义2 4除环非零元素都是单位]\n除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。\n\\end{note}",
-    "content": "\\begin{note}[定义2 4除环非零元素都是单位]\n除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。\n\\end{note}",
-    "text": "[定义2 4除环非零元素都是单位] 除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。",
+    "rawContent": "\\begin{note}[定义2 4除环非零元素都是单位]\n除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。除环因为有逆元所以没有零因子（$ab=0$，$a\\ne0$，则两边左乘 $a^{-1}$ 得 $b=0$）。\n\\end{note}",
+    "content": "\\begin{note}[定义2 4除环非零元素都是单位]\n除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。除环因为有逆元所以没有零因子（$ab=0$，$a\\ne0$，则两边左乘 $a^{-1}$ 得 $b=0$）。\n\\end{note}",
+    "text": "[定义2 4除环非零元素都是单位] 除环非零元素都有逆元。加法是阿贝尔群，乘法构成群而不是仅仅幺半群；乘法对加法有左右分配律。证明一个环是除环：只需证任意两个非零元相乘结果不为零。证明域：在除环基础上再证明乘法满足交换律。除环因为有逆元所以没有零因子（ ， ，则两边左乘 得 ）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
     "startLine": 69,
     "endLine": 71
   },
   {
-    "id": "dx-Abstract-Algebra-187",
+    "id": "dx-Abstract-Algebra-190",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20960,7 +21020,7 @@
     "endLine": 82
   },
   {
-    "id": "dx-Abstract-Algebra-188",
+    "id": "dx-Abstract-Algebra-191",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -20980,7 +21040,7 @@
     "endLine": 86
   },
   {
-    "id": "dx-Abstract-Algebra-189",
+    "id": "dx-Abstract-Algebra-192",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21000,7 +21060,7 @@
     "endLine": 90
   },
   {
-    "id": "dx-Abstract-Algebra-190",
+    "id": "dx-Abstract-Algebra-193",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21020,7 +21080,7 @@
     "endLine": 99
   },
   {
-    "id": "dx-Abstract-Algebra-191",
+    "id": "dx-Abstract-Algebra-194",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21040,7 +21100,7 @@
     "endLine": 114
   },
   {
-    "id": "dx-Abstract-Algebra-192",
+    "id": "dx-Abstract-Algebra-195",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21060,7 +21120,7 @@
     "endLine": 118
   },
   {
-    "id": "dx-Abstract-Algebra-193",
+    "id": "dx-Abstract-Algebra-196",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21080,7 +21140,7 @@
     "endLine": 135
   },
   {
-    "id": "dx-Abstract-Algebra-194",
+    "id": "dx-Abstract-Algebra-197",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21100,7 +21160,7 @@
     "endLine": 139
   },
   {
-    "id": "dx-Abstract-Algebra-195",
+    "id": "dx-Abstract-Algebra-198",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21120,7 +21180,7 @@
     "endLine": 152
   },
   {
-    "id": "dx-Abstract-Algebra-196",
+    "id": "dx-Abstract-Algebra-199",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21140,7 +21200,7 @@
     "endLine": 156
   },
   {
-    "id": "dx-Abstract-Algebra-197",
+    "id": "dx-Abstract-Algebra-200",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21160,7 +21220,7 @@
     "endLine": 160
   },
   {
-    "id": "dx-Abstract-Algebra-198",
+    "id": "dx-Abstract-Algebra-201",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21180,7 +21240,7 @@
     "endLine": 172
   },
   {
-    "id": "dx-Abstract-Algebra-199",
+    "id": "dx-Abstract-Algebra-202",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21200,7 +21260,7 @@
     "endLine": 178
   },
   {
-    "id": "dx-Abstract-Algebra-200",
+    "id": "dx-Abstract-Algebra-203",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21220,7 +21280,7 @@
     "endLine": 186
   },
   {
-    "id": "dx-Abstract-Algebra-201",
+    "id": "dx-Abstract-Algebra-204",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21240,7 +21300,27 @@
     "endLine": 190
   },
   {
-    "id": "dx-Abstract-Algebra-202",
+    "id": "dx-Abstract-Algebra-205",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "子环与环同态",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "子环与环同态",
+    "previewType": "note",
+    "previewTitle": "子环与环同态",
+    "rawContent": "\\begin{note}[理想的本质——乘法吸收结构]\n$\\ker(f)$ 是加法的正规子群，同时也是 $R$ 的理想。理想的本质：在环 $R$ 中闭合某种\"乘法吸收\"结构——一旦选了一个元素 $a$，就必须把 $R$ 中所有与 $a$ 相乘的结果都纳入进去，所以理想中的元素有同一种性质（如都是 $n$ 的倍数）。同态可以帮助拆括号，把\"和起来有的性质\"让拆开的元素也具有。\n\\end{note}",
+    "content": "\\begin{note}[理想的本质——乘法吸收结构]\n$\\ker(f)$ 是加法的正规子群，同时也是 $R$ 的理想。理想的本质：在环 $R$ 中闭合某种\"乘法吸收\"结构——一旦选了一个元素 $a$，就必须把 $R$ 中所有与 $a$ 相乘的结果都纳入进去，所以理想中的元素有同一种性质（如都是 $n$ 的倍数）。同态可以帮助拆括号，把\"和起来有的性质\"让拆开的元素也具有。\n\\end{note}",
+    "text": "[理想的本质——乘法吸收结构] 是加法的正规子群，同时也是 的理想。理想的本质：在环 中闭合某种\"乘法吸收\"结构——一旦选了一个元素 ，就必须把 中所有与 相乘的结果都纳入进去，所以理想中的元素有同一种性质（如都是 的倍数）。同态可以帮助拆括号，把\"和起来有的性质\"让拆开的元素也具有。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 192,
+    "endLine": 194
+  },
+  {
+    "id": "dx-Abstract-Algebra-206",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21256,11 +21336,11 @@
     "content": "\\begin{theorem}[定理 3：同构传递整环、除环、域的性质]\n假定 $R$ 同 $\\bar{R}$ 是两个环，并且 $R\\cong\\bar{R}$。那么，若 $R$ 是整环，$\\bar{R}$ 也是整环；$R$ 是除环，$\\bar{R}$ 也是除环；$R$ 是域，$\\bar{R}$ 也是域。\n\n引理：假定在集合 $A$ 与 $\\bar{A}$ 之间存在一个一一映射 $\\varphi$，并且 $A$ 有加法和乘法。那么我们可以替 $\\bar{A}$ 规定加法和乘法，使得 $A$ 与 $\\bar{A}$ 对于一一对加法以及一一对乘法来说都同构。\n\\end{theorem}",
     "text": "[定理 3：同构传递整环、除环、域的性质] 假定 同 是两个环，并且 。那么，若 是整环， 也是整环； 是除环， 也是除环； 是域， 也是域。 引理：假定在集合 与 之间存在一个一一映射 ，并且 有加法和乘法。那么我们可以替 规定加法和乘法，使得 与 对于一一对加法以及一一对乘法来说都同构。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 192,
-    "endLine": 196
+    "startLine": 196,
+    "endLine": 200
   },
   {
-    "id": "dx-Abstract-Algebra-203",
+    "id": "dx-Abstract-Algebra-207",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21276,11 +21356,11 @@
     "content": "\\begin{theorem}[定理 4]\n假定 $S$ 是环 $R$ 的一个子环，$S$ 在 $R$ 里的补集（就是 $R$ 中不属于 $S$ 的所有元作成的集合）与另一个环 $\\bar{S}$ 没有共同元，并且 $S\\cong\\bar{S}$。那么存在一个与 $R$ 同构的环 $\\bar{R}$，而且 $\\bar{S}$ 是 $\\bar{R}$ 的子环。\n\\end{theorem}",
     "text": "[定理 4] 假定 是环 的一个子环， 在 里的补集（就是 中不属于 的所有元作成的集合）与另一个环 没有共同元，并且 。那么存在一个与 同构的环 ，而且 是 的子环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 198,
-    "endLine": 200
+    "startLine": 202,
+    "endLine": 204
   },
   {
-    "id": "dx-Abstract-Algebra-204",
+    "id": "dx-Abstract-Algebra-208",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21296,11 +21376,11 @@
     "content": "\\begin{definition}[理想子环定义]\n环 $R$ 的一个非空子集 $\\mathfrak{U}$ 叫做一个\\textbf{理想子环}，简称\\textbf{理想}，是指\n\\begin{enumerate}[(i)]\n  \\item $a,b\\in\\mathfrak{U}\\Rightarrow a-b\\in\\mathfrak{U}$；\n  \\item $a\\in\\mathfrak{U}$，$r\\in R\\Rightarrow ra,\\,ar\\in\\mathfrak{U}$。\n\\end{enumerate}\n\n以下两个理想是平凡的：\n\\begin{enumerate}\n  \\item 只包含零元的集合，这个理想叫做 $R$ 的\\textbf{零理想}；\n  \\item $R$ 自己，这个理想叫做 $R$ 的\\textbf{单位理想}。\n\\end{enumerate}\n有的环除了这两个理想以外，没有其他理想，比方说除环。\n\n任意 $a$ 属于理想，所以只要 $1$（单位元）在理想里面，这个理想就是整个环。理想是原环所有元素和 $a$ 相乘生成的元素组成的。\n\n为什么要证明\"某些东西加起来等于 $1$\"？这通常是为了说明某个理想是整个环 $R$，即 $(a,b)=R$，我们要证明 $\\exists r,s\\in R,\\;ra+sb=1$。因为只要 $ra+sb=1$，那么任意 $x\\in R$ 都可以写成 $x=x\\cdot 1=x(ra+sb)=(xr)a+(xs)b\\in(a,b)$，所以说明 $(a,b)=R$。\n\\end{definition}",
     "text": "[理想子环定义] 环 的一个非空子集 叫做一个理想子环，简称理想，是指 [(i)] ； ， 。 以下两个理想是平凡的： 只包含零元的集合，这个理想叫做 的零理想； 自己，这个理想叫做 的单位理想。 有的环除了这两个理想以外，没有其他理想，比方说除环。 任意 属于理想，所以只要 （单位元）在理想里面，这个理想就是整个环。理想是原环所有元素和 相乘生成的元素组成的。 为什么要证明\"某些东西加起来等于 \"？这通常是为了说明某个理想是整个环 ，即 ，我们要证明 。因为只要 ，那么任意 都可以写成 ，所以说明 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 205,
-    "endLine": 222
+    "startLine": 209,
+    "endLine": 226
   },
   {
-    "id": "dx-Abstract-Algebra-205",
+    "id": "dx-Abstract-Algebra-209",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21316,11 +21396,31 @@
     "content": "\\begin{note}[定义2 10理想]\n$(I,+)$ 是加法子群，左乘环中任意元素还在理想里面就是左理想，同理右理想。理想的符号 $\\trianglelefteq$ 与正规子群一样，体现了理想与正规子群的类比。理想都是子环。\n\\end{note}",
     "text": "[定义2 10理想] 是加法子群，左乘环中任意元素还在理想里面就是左理想，同理右理想。理想的符号 与正规子群一样，体现了理想与正规子群的类比。理想都是子环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 224,
-    "endLine": 226
+    "startLine": 228,
+    "endLine": 230
   },
   {
-    "id": "dx-Abstract-Algebra-206",
+    "id": "dx-Abstract-Algebra-210",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "理想与商环",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "理想与商环",
+    "previewType": "note",
+    "previewTitle": "理想与商环",
+    "rawContent": "\\begin{note}[理想与正规子群]\n理想是环论里对应群论中正规子群的结构：正规子群让陪集上的运算良定义（商群），理想让剩余类上的加法与乘法都良定义（商环）。同态的核在群论中一定是正规子群，在环论中一定是理想。定义理想正是为了让核一定是子环，从而构造商环。\n\\end{note}",
+    "content": "\\begin{note}[理想与正规子群]\n理想是环论里对应群论中正规子群的结构：正规子群让陪集上的运算良定义（商群），理想让剩余类上的加法与乘法都良定义（商环）。同态的核在群论中一定是正规子群，在环论中一定是理想。定义理想正是为了让核一定是子环，从而构造商环。\n\\end{note}",
+    "text": "[理想与正规子群] 理想是环论里对应群论中正规子群的结构：正规子群让陪集上的运算良定义（商群），理想让剩余类上的加法与乘法都良定义（商环）。同态的核在群论中一定是正规子群，在环论中一定是理想。定义理想正是为了让核一定是子环，从而构造商环。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 232,
+    "endLine": 234
+  },
+  {
+    "id": "dx-Abstract-Algebra-211",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21336,11 +21436,11 @@
     "content": "\\begin{theorem}[定理 1：除环只有两个理想]\n一个除环 $R$ 只有两个理想，就是零理想和单位理想。\n\n\\textbf{证明：} 假定 $\\mathfrak{U}$ 是 $R$ 的一个理想而 $\\mathfrak{U}$ 不是零理想。那么 $\\mathfrak{U}\\ni a\\ne 0$，由理想的定义，$a^{-1}a=1\\in\\mathfrak{U}$，因而 $R$ 的任意元 $b=b\\cdot 1\\in\\mathfrak{U}$。这就是说，$\\mathfrak{U}=R$。证完。\n\n因此，理想这个概念对于除环或域没有多大用处。\n\\end{theorem}",
     "text": "[定理 1：除环只有两个理想] 一个除环 只有两个理想，就是零理想和单位理想。 证明： 假定 是 的一个理想而 不是零理想。那么 ，由理想的定义， ，因而 的任意元 。这就是说， 。证完。 因此，理想这个概念对于除环或域没有多大用处。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 228,
-    "endLine": 234
+    "startLine": 236,
+    "endLine": 242
   },
   {
-    "id": "dx-Abstract-Algebra-207",
+    "id": "dx-Abstract-Algebra-212",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21356,11 +21456,11 @@
     "content": "\\begin{note}[定理1除环只有两个理想]\n交换的除环就是域，所以域也只有两个理想：零理想和单位理想。这也是为什么理想这个概念对域没有什么作用。\n\\end{note}",
     "text": "[定理1除环只有两个理想] 交换的除环就是域，所以域也只有两个理想：零理想和单位理想。这也是为什么理想这个概念对域没有什么作用。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 236,
-    "endLine": 238
+    "startLine": 244,
+    "endLine": 246
   },
   {
-    "id": "dx-Abstract-Algebra-208",
+    "id": "dx-Abstract-Algebra-213",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21376,11 +21476,31 @@
     "content": "\\begin{example}[$\\mathbb{Z}_n$ 剩余类环]\n令 $R=\\{\\text{所有模 }n\\text{ 的剩余类}\\}$。我们替 $R$ 规定一种加法\n\\[\n[a]+[b]=[a+b],\n\\]\n并且知道 $R$ 对于这个加法来说成一个群。现在我们替 $R$ 规定一个乘法，我们规定\n\\[\n[a][b]=[ab].\n\\]\n模 $n$ 的剩余类是由整数间的等价关系 $a\\equiv b\\pmod{n}$ 当且仅当 $n\\mid a-b$ 所决定的。如果 $[a]=[a']$，$[b]=[b']$，那么由等式 $ab-a'b'=a(b-b')+(a-a')b'$，容易证明 $[ab]=[a'b']$。由上述加法和乘法的定义易见：乘法适合结合律，并且两个分配律都成立。因此 $R$ 作成一个环。这个环叫做模 $n$ 的\\textbf{剩余类环}。\n\n如果 $n$ 不是素数，$n=ab$，$n\\nmid a$，$n\\nmid b$，那么在环 $R$ 里\n\\[\n[a]\\ne[0],\\quad[b]\\ne[0],\\quad\\text{但}\\ [a][b]=[ab]=[n]=[0].\n\\]\n因为 $[0]$ 正是 $R$ 的零元，这就是说，式 $[a][b]=0\\Rightarrow[a]=0$ 或 $[b]=0$ 在 $R$ 里不成立。\n\\end{example}",
     "text": "[ 剩余类环] 令 。我们替 规定一种加法 并且知道 对于这个加法来说成一个群。现在我们替 规定一个乘法，我们规定 模 的剩余类是由整数间的等价关系 当且仅当 所决定的。如果 ， ，那么由等式 ，容易证明 。由上述加法和乘法的定义易见：乘法适合结合律，并且两个分配律都成立。因此 作成一个环。这个环叫做模 的剩余类环。 如果 不是素数， ， ， ，那么在环 里 因为 正是 的零元，这就是说，式 或 在 里不成立。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 240,
-    "endLine": 256
+    "startLine": 248,
+    "endLine": 264
   },
   {
-    "id": "dx-Abstract-Algebra-209",
+    "id": "dx-Abstract-Algebra-214",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "理想与商环",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "理想与商环",
+    "previewType": "note",
+    "previewTitle": "理想与商环",
+    "rawContent": "\\begin{note}[剩余类环进化成域]\n$\\mathbb{Z}_n$ 在 $n$ 是素数 $p$ 时可以进化成域：因为 $(p)$ 是 $\\mathbb{Z}$ 的极大理想（素数与环中其他元互素），由极大理想与域定理，$\\mathbb{Z}/p\\mathbb{Z}\\cong\\mathbb{Z}_p$ 是一个域。$n$ 合数时有零因子，不构成域。\n\\end{note}",
+    "content": "\\begin{note}[剩余类环进化成域]\n$\\mathbb{Z}_n$ 在 $n$ 是素数 $p$ 时可以进化成域：因为 $(p)$ 是 $\\mathbb{Z}$ 的极大理想（素数与环中其他元互素），由极大理想与域定理，$\\mathbb{Z}/p\\mathbb{Z}\\cong\\mathbb{Z}_p$ 是一个域。$n$ 合数时有零因子，不构成域。\n\\end{note}",
+    "text": "[剩余类环进化成域] 在 是素数 时可以进化成域：因为 是 的极大理想（素数与环中其他元互素），由极大理想与域定理， 是一个域。 合数时有零因子，不构成域。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 266,
+    "endLine": 268
+  },
+  {
+    "id": "dx-Abstract-Algebra-215",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21396,11 +21516,11 @@
     "content": "\\begin{proposition}[命题 2.6：交换环的理想，左理想就是右理想]\n假设 $(R,+,\\cdot)$ 是一个交换环，则 $I$ 是一个左理想当且仅当 $I$ 是一个右理想，又当且仅当 $I$ 是一个理想。\n\n理想在乘法下吸收了整个环到理想上。\n\\end{proposition}",
     "text": "[命题 2.6：交换环的理想，左理想就是右理想] 假设 是一个交换环，则 是一个左理想当且仅当 是一个右理想，又当且仅当 是一个理想。 理想在乘法下吸收了整个环到理想上。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 258,
-    "endLine": 262
+    "startLine": 270,
+    "endLine": 274
   },
   {
-    "id": "dx-Abstract-Algebra-210",
+    "id": "dx-Abstract-Algebra-216",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21416,11 +21536,11 @@
     "content": "\\begin{proposition}[命题 2.7：整环乘整数都是理想]\n令 $n\\in\\mathbb{N}_1$，则 $n\\mathbb{Z}\\triangleleft\\mathbb{Z}$，即\n\\[\nn\\mathbb{Z}\\trianglelefteq\\mathbb{Z}\n\\]\n\\textbf{证明：} 首先，我们知道 $(n\\mathbb{Z},+)$ 是 $(\\mathbb{Z},+)$ 的（加法）子群，这可以通过构建 $m\\mapsto mn$ 的（加法）群同态来得到。其次，注意到 $\\mathbb{Z}$ 是一个交换环，故我们只须验证 $R\\mathfrak{U}\\subset\\mathfrak{U}$，在这里就是 $\\mathbb{Z}\\cdot n\\mathbb{Z}\\subset n\\mathbb{Z}$。因为一个 $n$ 的倍数的数再乘任意数都还是 $n$ 的倍数。这促使我们，不要被看似简单的事实实现现象蒙蔽双眼，我们应当从中找到教学价值。\n\\end{proposition}",
     "text": "[命题 2.7：整环乘整数都是理想] 令 ，则 ，即 证明： 首先，我们知道 是 的（加法）子群，这可以通过构建 的（加法）群同态来得到。其次，注意到 是一个交换环，故我们只须验证 ，在这里就是 。因为一个 的倍数的数再乘任意数都还是 的倍数。这促使我们，不要被看似简单的事实实现现象蒙蔽双眼，我们应当从中找到教学价值。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 264,
-    "endLine": 270
+    "startLine": 276,
+    "endLine": 282
   },
   {
-    "id": "dx-Abstract-Algebra-211",
+    "id": "dx-Abstract-Algebra-217",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21436,11 +21556,11 @@
     "content": "\\begin{note}[理想并一下还是理想]\n理想并一下还是理想。\n\\end{note}",
     "text": "[理想并一下还是理想] 理想并一下还是理想。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 272,
-    "endLine": 274
+    "startLine": 284,
+    "endLine": 286
   },
   {
-    "id": "dx-Abstract-Algebra-212",
+    "id": "dx-Abstract-Algebra-218",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21456,11 +21576,11 @@
     "content": "\\begin{definition}[定义 2.13：生成理想的定义]\n令 $(R,+,\\cdot)$ 是一个环，而 $A\\subset R$。则 $(A)$，称为由 $A$ 生成的理想，定义为所有 $R$ 中包含 $A$ 的理想的交集，即\n\\[\n(A)=\\bigcap\\{I\\subset R:I\\supset A,\\;I\\trianglelefteq R\\}\n\\]\n这里，我们用圆括号来区分尖括号，后者生成的是子环。所有包含他的理想的交集。生成的理想是包含 $(4)$ 的理想的交集。\n\\end{definition}",
     "text": "[定义 2.13：生成理想的定义] 令 是一个环，而 。则 ，称为由 生成的理想，定义为所有 中包含 的理想的交集，即 这里，我们用圆括号来区分尖括号，后者生成的是子环。所有包含他的理想的交集。生成的理想是包含 的理想的交集。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 276,
-    "endLine": 282
+    "startLine": 288,
+    "endLine": 294
   },
   {
-    "id": "dx-Abstract-Algebra-213",
+    "id": "dx-Abstract-Algebra-219",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21476,11 +21596,11 @@
     "content": "\\begin{definition}[定义 2.14：主理想]\n令 $(R,+,\\cdot)$ 是一个环，而 $a\\in R$，则我们定义\n\\[\n(a)=(\\{a\\})\n\\]\n称为由 $a$ 生成的\\textbf{主理想}。一般地，若一个理想能被一个元素生成，我们就称其为主理想。对于 $a_1,\\cdots,a_n\\in R$，我们定义\n\\[\n(a_1,\\cdots,a_n)=(\\{a_1,\\cdots,a_n\\})\n\\]\n一般地，若一个理想能被有限个元素生成，我们就称其为有限生成的理想。\n\n主理想要求就是由一个元生成的理想。证明是主理想就是证明一个元素能生成整个环；不是每个理想都能做到的，因为理想的诞生是理想中元素与环中元素作用并且不断补充进理想，而生成整个理想是理想里面的一个元素不与环作用。可交换+有单位元 $\\Rightarrow$ 理想可以写成 $ra$ 形式，$r\\in$ 环。\n\\end{definition}",
     "text": "[定义 2.14：主理想] 令 是一个环，而 ，则我们定义 称为由 生成的主理想。一般地，若一个理想能被一个元素生成，我们就称其为主理想。对于 ，我们定义 一般地，若一个理想能被有限个元素生成，我们就称其为有限生成的理想。 主理想要求就是由一个元生成的理想。证明是主理想就是证明一个元素能生成整个环；不是每个理想都能做到的，因为理想的诞生是理想中元素与环中元素作用并且不断补充进理想，而生成整个理想是理想里面的一个元素不与环作用。可交换+有单位元 理想可以写成 形式， 环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 284,
-    "endLine": 296
+    "startLine": 296,
+    "endLine": 308
   },
   {
-    "id": "dx-Abstract-Algebra-214",
+    "id": "dx-Abstract-Algebra-220",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21496,11 +21616,11 @@
     "content": "\\begin{definition}[剩余类环的定义与符号（即商环）]\n$\\bar{R}$ 叫做环 $R$ 的模 $\\mathfrak{U}$ 的\\textbf{剩余类环}。这个环我们用符号\n\\[\nR/\\mathfrak{U}\n\\]\n来表示。\n\\end{definition}",
     "text": "[剩余类环的定义与符号（即商环）] 叫做环 的模 的剩余类环。这个环我们用符号 来表示。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 298,
-    "endLine": 304
+    "startLine": 310,
+    "endLine": 316
   },
   {
-    "id": "dx-Abstract-Algebra-215",
+    "id": "dx-Abstract-Algebra-221",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21516,11 +21636,11 @@
     "content": "\\begin{note}[定义2 11商环]\n$R$ 是一个环，$I$ 是 $R$ 的一个理想，商环就是 $R$ 中元素对 $I$ 做加法陪集形成的集合，$a+I$ 是一个集合。商群是加法的陪集，商环也是加法的陪集。类比商群的构造：正规子群对应理想，商群对应商环。\n\\end{note}",
     "text": "[定义2 11商环] 是一个环， 是 的一个理想，商环就是 中元素对 做加法陪集形成的集合， 是一个集合。商群是加法的陪集，商环也是加法的陪集。类比商群的构造：正规子群对应理想，商群对应商环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 306,
-    "endLine": 308
+    "startLine": 318,
+    "endLine": 320
   },
   {
-    "id": "dx-Abstract-Algebra-216",
+    "id": "dx-Abstract-Algebra-222",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21536,11 +21656,31 @@
     "content": "\\begin{proposition}[命题 2.9：商环是环，当且仅当 $I$ 是理想]\n令 $(R,+,\\cdot)$ 是一个环，而 $I\\trianglelefteq R$，则上述的加法和乘法是良定义的，且商环 $(R/I,+,\\cdot)$ 是一个环。\n\\end{proposition}",
     "text": "[命题 2.9：商环是环，当且仅当 是理想] 令 是一个环，而 ，则上述的加法和乘法是良定义的，且商环 是一个环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 310,
-    "endLine": 312
+    "startLine": 322,
+    "endLine": 324
   },
   {
-    "id": "dx-Abstract-Algebra-217",
+    "id": "dx-Abstract-Algebra-223",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "理想与商环",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "理想与商环",
+    "previewType": "note",
+    "previewTitle": "理想与商环",
+    "rawContent": "\\begin{note}[商环良定义的关键]\n证明商环乘法良定义，就是证明代表元的选取不影响结果：若 $a+I=a'+I$，$b+I=b'+I$，则 $(ab)+I=(a'b')+I$。这正是需要 $I$ 是理想（而不仅仅是子环）的原因——理想的吸收性保证了乘法对陪集的作用不依赖代表元。\n\\end{note}",
+    "content": "\\begin{note}[商环良定义的关键]\n证明商环乘法良定义，就是证明代表元的选取不影响结果：若 $a+I=a'+I$，$b+I=b'+I$，则 $(ab)+I=(a'b')+I$。这正是需要 $I$ 是理想（而不仅仅是子环）的原因——理想的吸收性保证了乘法对陪集的作用不依赖代表元。\n\\end{note}",
+    "text": "[商环良定义的关键] 证明商环乘法良定义，就是证明代表元的选取不影响结果：若 ， ，则 。这正是需要 是理想（而不仅仅是子环）的原因——理想的吸收性保证了乘法对陪集的作用不依赖代表元。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 326,
+    "endLine": 328
+  },
+  {
+    "id": "dx-Abstract-Algebra-224",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21556,11 +21696,11 @@
     "content": "\\begin{theorem}[定理 1：理想和正规子群很像，模理想的剩余类还是环而且和原环同态]\n假定 $R$ 是一个环，$\\mathfrak{U}$ 是它的一个理想，$\\bar{R}$ 是所有模 $\\mathfrak{U}$ 的剩余类作成的集合。那么 $\\bar{R}$ 本身也是一个环，并且 $R$ 与 $\\bar{R}$ 同态。\n\n\\textbf{证明：} 映射 $a\\longrightarrow[a]$ 显然是 $R$ 到 $\\bar{R}$ 的一个同态满射，所以 $R$ 与 $\\bar{R}$ 同态，而 $\\bar{R}$ 是一个环。证完。\n\\end{theorem}",
     "text": "[定理 1：理想和正规子群很像，模理想的剩余类还是环而且和原环同态] 假定 是一个环， 是它的一个理想， 是所有模 的剩余类作成的集合。那么 本身也是一个环，并且 与 同态。 证明： 映射 显然是 到 的一个同态满射，所以 与 同态，而 是一个环。证完。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 314,
-    "endLine": 318
+    "startLine": 330,
+    "endLine": 334
   },
   {
-    "id": "dx-Abstract-Algebra-218",
+    "id": "dx-Abstract-Algebra-225",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21576,11 +21716,11 @@
     "content": "\\begin{theorem}[定理 2：$R$ 和自己的商环同态，同态满射核就是理想]\n假定 $R$ 同 $\\bar{R}$ 是两个环，并且 $R$ 与 $\\bar{R}$ 同态，那么这个同态满射的核 $\\mathfrak{U}$ 是 $R$ 的一个理想，并且\n\\[\nR/\\mathfrak{U}\\cong\\bar{R}.\n\\]\n核在环里面是映射到 $0$ 元。\n\\end{theorem}",
     "text": "[定理 2： 和自己的商环同态，同态满射核就是理想] 假定 同 是两个环，并且 与 同态，那么这个同态满射的核 是 的一个理想，并且 核在环里面是映射到 元。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 320,
-    "endLine": 326
+    "startLine": 336,
+    "endLine": 342
   },
   {
-    "id": "dx-Abstract-Algebra-219",
+    "id": "dx-Abstract-Algebra-226",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21596,11 +21736,11 @@
     "content": "\\begin{theorem}[定理 3：$R$ 和 $R$ 的商环同态满射的性质，传递]\n在环 $R$ 到环 $\\bar{R}$ 的一个同态满射之下：\n\\begin{enumerate}[(i)]\n  \\item $R$ 的一个子环 $S$ 的像 $\\bar{S}$ 是 $\\bar{R}$ 的一个子环；\n  \\item $R$ 的一个理想 $\\mathfrak{U}$ 的像 $\\bar{\\mathfrak{U}}$ 是 $\\bar{R}$ 的一个理想；\n  \\item $\\bar{R}$ 的一个子环 $\\bar{S}$ 的原像 $S$ 是 $R$ 的一个子环；\n  \\item $\\bar{R}$ 的一个理想 $\\bar{\\mathfrak{U}}$ 的原像 $\\mathfrak{U}$ 是 $R$ 的一个理想。\n\\end{enumerate}\n\\end{theorem}",
     "text": "[定理 3： 和 的商环同态满射的性质，传递] 在环 到环 的一个同态满射之下： [(i)] 的一个子环 的像 是 的一个子环； 的一个理想 的像 是 的一个理想； 的一个子环 的原像 是 的一个子环； 的一个理想 的原像 是 的一个理想。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 328,
-    "endLine": 336
+    "startLine": 344,
+    "endLine": 352
   },
   {
-    "id": "dx-Abstract-Algebra-220",
+    "id": "dx-Abstract-Algebra-227",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21616,11 +21756,31 @@
     "content": "\\begin{definition}[左零因子、右零因子]\n如果在一个环里\n\\[\na\\ne 0,\\quad b\\ne 0,\\quad\\text{但}\\;ab=0,\n\\]\n我们就说，$a$ 是这个环的一个\\textbf{左零因子}，$b$ 是一个\\textbf{右零因子}。左、右零因子都称作\\textbf{零因子}。交换环左零因子就是右，非交换环不一定。\n\\end{definition}",
     "text": "[左零因子、右零因子] 如果在一个环里 我们就说， 是这个环的一个左零因子， 是一个右零因子。左、右零因子都称作零因子。交换环左零因子就是右，非交换环不一定。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 341,
-    "endLine": 347
+    "startLine": 357,
+    "endLine": 363
   },
   {
-    "id": "dx-Abstract-Algebra-221",
+    "id": "dx-Abstract-Algebra-228",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "主理想、整环与极大理想",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "主理想、整环与极大理想",
+    "previewType": "note",
+    "previewTitle": "主理想、整环与极大理想",
+    "rawContent": "\\begin{note}[寻找零因子的要点]\n找零因子别漏：除了加法阶不与环阶互素的元（类加群中与阶不互素的元都是零因子），还要检查与其他非零元相乘能否等于 $0$。典型例子：$n\\times n$ 矩阵环中行列式为 $0$ 的矩阵都是零因子，因为不可逆矩阵必有非零矩阵使乘积为 $0$。\n\\end{note}",
+    "content": "\\begin{note}[寻找零因子的要点]\n找零因子别漏：除了加法阶不与环阶互素的元（类加群中与阶不互素的元都是零因子），还要检查与其他非零元相乘能否等于 $0$。典型例子：$n\\times n$ 矩阵环中行列式为 $0$ 的矩阵都是零因子，因为不可逆矩阵必有非零矩阵使乘积为 $0$。\n\\end{note}",
+    "text": "[寻找零因子的要点] 找零因子别漏：除了加法阶不与环阶互素的元（类加群中与阶不互素的元都是零因子），还要检查与其他非零元相乘能否等于 。典型例子： 矩阵环中行列式为 的矩阵都是零因子，因为不可逆矩阵必有非零矩阵使乘积为 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 365,
+    "endLine": 367
+  },
+  {
+    "id": "dx-Abstract-Algebra-229",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21636,11 +21796,11 @@
     "content": "\\begin{proposition}[命题 2.10：由子集生成的理想仍是理想]\n令 $(R,+,\\cdot)$ 是一个环，而 $A\\subset R$，则 $(A)\\trianglelefteq R$。\n\\end{proposition}",
     "text": "[命题 2.10：由子集生成的理想仍是理想] 令 是一个环，而 ，则 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 349,
-    "endLine": 351
+    "startLine": 369,
+    "endLine": 371
   },
   {
-    "id": "dx-Abstract-Algebra-222",
+    "id": "dx-Abstract-Algebra-230",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21656,11 +21816,11 @@
     "content": "\\begin{proposition}[命题 2.11：交换环中主理想的表达式]\n令 $(R,+,\\cdot)$ 是一个交换环，而 $a\\in R$，则\n\\[\n(a)=Ra=\\{ra:r\\in R\\}.\n\\]\n一般地，若 $a_1,\\cdots,a_n\\in R$，则\n\\[\n(a_1,\\cdots,a_n)=Ra_1+\\cdots+Ra_n=\\{r_1a_1+\\cdots r_na_n:r_1,\\cdots,r_n\\in R\\}.\n\\]\n\\end{proposition}",
     "text": "[命题 2.11：交换环中主理想的表达式] 令 是一个交换环，而 ，则 一般地，若 ，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 353,
-    "endLine": 362
+    "startLine": 373,
+    "endLine": 382
   },
   {
-    "id": "dx-Abstract-Algebra-223",
+    "id": "dx-Abstract-Algebra-231",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21676,11 +21836,11 @@
     "content": "\\begin{definition}[定义 2.18：整环没有零因子是交换环]\n令 $(R,+,\\cdot)$ 是一个环，则我们称 $R$ 是个\\textbf{整环}，若它是个非零交换环，且没有零因子，即\n\\begin{align}\nR&\\ne\\{0\\}\\\\\n&R\\text{ 是个交换环}\\\\\n\\forall a,b\\in R,\\;(ab=0&\\Longrightarrow a=0\\;\\text{或}\\;b=0)\n\\end{align}\n若 $a\\ne 0$ 满足 $\\exists b\\ne 0$ 使得 $ab=0$，我们就称其为一个零因子。特别地，类加群的时候，凡事不和阶互素的元都是零因子。\n\\end{definition}",
     "text": "[定义 2.18：整环没有零因子是交换环] 令 是一个环，则我们称 是个整环，若它是个非零交换环，且没有零因子，即 R& \\ 0\\ \\\\ &R 是个交换环\\\\ a,b R,\\;(ab=0& a=0\\;或\\;b=0) 若 满足 使得 ，我们就称其为一个零因子。特别地，类加群的时候，凡事不和阶互素的元都是零因子。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 364,
-    "endLine": 372
+    "startLine": 384,
+    "endLine": 392
   },
   {
-    "id": "dx-Abstract-Algebra-224",
+    "id": "dx-Abstract-Algebra-232",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21692,15 +21852,15 @@
     "blockTitle": "主理想、整环与极大理想",
     "previewType": "note",
     "previewTitle": "主理想、整环与极大理想",
-    "rawContent": "\\begin{note}[零因子与消去律互相证明]\n无零因子 $\\Leftrightarrow$ 消去律成立。\n\\end{note}",
-    "content": "\\begin{note}[零因子与消去律互相证明]\n无零因子 $\\Leftrightarrow$ 消去律成立。\n\\end{note}",
-    "text": "[零因子与消去律互相证明] 无零因子 消去律成立。",
+    "rawContent": "\\begin{note}[零因子与消去律互相证明]\n无零因子 $\\Leftrightarrow$ 消去律成立。特别地，在类加群（群环）的情形，凡是与该群的阶不互素的元素都是零因子。\n\\end{note}",
+    "content": "\\begin{note}[零因子与消去律互相证明]\n无零因子 $\\Leftrightarrow$ 消去律成立。特别地，在类加群（群环）的情形，凡是与该群的阶不互素的元素都是零因子。\n\\end{note}",
+    "text": "[零因子与消去律互相证明] 无零因子 消去律成立。特别地，在类加群（群环）的情形，凡是与该群的阶不互素的元素都是零因子。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 374,
-    "endLine": 376
+    "startLine": 394,
+    "endLine": 396
   },
   {
-    "id": "dx-Abstract-Algebra-225",
+    "id": "dx-Abstract-Algebra-233",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21716,11 +21876,11 @@
     "content": "\\begin{definition}[特征的定义，对加法所有非零元素共同的阶]\n一个无零因子环 $R$ 的非零元的相同的（对加法来说的）阶叫做环 $R$ 的\\textbf{特征}。\n\n这样，一个没有零因子的环 $R$ 的特征如果是无限的，那么在 $R$ 里计算规则 (1) 式永远是对的；$R$ 的特征如果是有限数，那么这个计算规则就永远不对。特征是一个很重要的概念，因为它对环和域的构造都有决定性的作用。\n\\end{definition}",
     "text": "[特征的定义，对加法所有非零元素共同的阶] 一个无零因子环 的非零元的相同的（对加法来说的）阶叫做环 的特征。 这样，一个没有零因子的环 的特征如果是无限的，那么在 里计算规则 (1) 式永远是对的； 的特征如果是有限数，那么这个计算规则就永远不对。特征是一个很重要的概念，因为它对环和域的构造都有决定性的作用。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 378,
-    "endLine": 382
+    "startLine": 398,
+    "endLine": 402
   },
   {
-    "id": "dx-Abstract-Algebra-226",
+    "id": "dx-Abstract-Algebra-234",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21736,11 +21896,11 @@
     "content": "\\begin{note}[定理2 整环除环域的特征]\n特征是加法中所有非零元素共同的阶。整环、除环、域都没有零因子，可以证明特征只能是素数或无限（不能是合数）。域一定有特征，有限域的特征只能是素数 $p$。\n\\end{note}",
     "text": "[定理2 整环除环域的特征] 特征是加法中所有非零元素共同的阶。整环、除环、域都没有零因子，可以证明特征只能是素数或无限（不能是合数）。域一定有特征，有限域的特征只能是素数 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 384,
-    "endLine": 386
+    "startLine": 404,
+    "endLine": 406
   },
   {
-    "id": "dx-Abstract-Algebra-227",
+    "id": "dx-Abstract-Algebra-235",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21756,11 +21916,31 @@
     "content": "\\begin{theorem}[定理 1：无零因子环所有不为 $0$ 的元对加法阶都是一样的]\n在一个没有零因子的环 $R$ 里所有不等于零的元对于加法来说的阶都是一样的。\n\\end{theorem}",
     "text": "[定理 1：无零因子环所有不为 的元对加法阶都是一样的] 在一个没有零因子的环 里所有不等于零的元对于加法来说的阶都是一样的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 388,
-    "endLine": 390
+    "startLine": 408,
+    "endLine": 410
   },
   {
-    "id": "dx-Abstract-Algebra-228",
+    "id": "dx-Abstract-Algebra-236",
+    "repo": "dx-Abstract-Algebra",
+    "title": "Abstract Algebra",
+    "pdf": "pdf/dx-Abstract-Algebra.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz",
+    "section": "主理想、整环与极大理想",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "主理想、整环与极大理想",
+    "previewType": "note",
+    "previewTitle": "主理想、整环与极大理想",
+    "rawContent": "\\begin{note}[无零因子环阶相同的证明思路]\n这里针对的都是加法。因为没有零因子，$na=0$ 的可能性只有两种：$n=0$（无限阶）或者恰好是 $a$ 的加法阶。若 $na=0$ 而 $nb=0$，通过分配律 $n(ab)=(na)b=0$，再用无零因子得 $nb=0$，从而所有非零元的加法阶相同。\n\\end{note}",
+    "content": "\\begin{note}[无零因子环阶相同的证明思路]\n这里针对的都是加法。因为没有零因子，$na=0$ 的可能性只有两种：$n=0$（无限阶）或者恰好是 $a$ 的加法阶。若 $na=0$ 而 $nb=0$，通过分配律 $n(ab)=(na)b=0$，再用无零因子得 $nb=0$，从而所有非零元的加法阶相同。\n\\end{note}",
+    "text": "[无零因子环阶相同的证明思路] 这里针对的都是加法。因为没有零因子， 的可能性只有两种： （无限阶）或者恰好是 的加法阶。若 而 ，通过分配律 ，再用无零因子得 ，从而所有非零元的加法阶相同。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
+    "startLine": 412,
+    "endLine": 414
+  },
+  {
+    "id": "dx-Abstract-Algebra-237",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21776,11 +21956,11 @@
     "content": "\\begin{definition}[主理想环的定义]\n一个整环 $I$ 叫做一个\\textbf{主理想环}，是指 $I$ 的每一个理想都是一个主理想。\n\n我们说，一个主理想环一定是一个唯一分解环。为证明这一点，我们需要两个引理，这两个引理本身也很重要。\n\\end{definition}",
     "text": "[主理想环的定义] 一个整环 叫做一个主理想环，是指 的每一个理想都是一个主理想。 我们说，一个主理想环一定是一个唯一分解环。为证明这一点，我们需要两个引理，这两个引理本身也很重要。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 392,
-    "endLine": 396
+    "startLine": 416,
+    "endLine": 420
   },
   {
-    "id": "dx-Abstract-Algebra-229",
+    "id": "dx-Abstract-Algebra-238",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21796,11 +21976,11 @@
     "content": "\\begin{note}[定义2 25主理想整环]\n主理想整环：每一个理想都是主理想（由单个元素生成）。主理想整环一定是唯一分解环；不可约元可以生成极大理想。\n\\end{note}",
     "text": "[定义2 25主理想整环] 主理想整环：每一个理想都是主理想（由单个元素生成）。主理想整环一定是唯一分解环；不可约元可以生成极大理想。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 398,
-    "endLine": 400
+    "startLine": 422,
+    "endLine": 424
   },
   {
-    "id": "dx-Abstract-Algebra-230",
+    "id": "dx-Abstract-Algebra-239",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21816,11 +21996,11 @@
     "content": "\\begin{definition}[极大理想的定义]\n一个环 $R$ 的一个不等于 $R$ 的理想 $\\mathfrak{U}$ 叫做一个\\textbf{极大理想}，是指除了 $R$ 同 $\\mathfrak{U}$ 自己以外，没有包含 $\\mathfrak{U}$ 的理想。\n\n不等于父环；第二，不被其他理想包含。两步走：$I\\ne R$，包含 $I$ 的理想只有 $R$。\n\\end{definition}",
     "text": "[极大理想的定义] 一个环 的一个不等于 的理想 叫做一个极大理想，是指除了 同 自己以外，没有包含 的理想。 不等于父环；第二，不被其他理想包含。两步走： ，包含 的理想只有 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 402,
-    "endLine": 406
+    "startLine": 426,
+    "endLine": 430
   },
   {
-    "id": "dx-Abstract-Algebra-231",
+    "id": "dx-Abstract-Algebra-240",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21836,11 +22016,11 @@
     "content": "\\begin{lemma}[引理 1：极大理想对剩余类环充要]\n假定 $\\mathfrak{U}\\ne R$ 是环 $R$ 的理想。剩余类环 $R/\\mathfrak{U}$ 除了零理想同单位理想以外不再有其他的理想，当且仅当 $\\mathfrak{U}$ 是极大理想时。\n\n商环只有零理想和单位理想，当被除的理想是极大理想。\n\\end{lemma}",
     "text": "[引理 1：极大理想对剩余类环充要] 假定 是环 的理想。剩余类环 除了零理想同单位理想以外不再有其他的理想，当且仅当 是极大理想时。 商环只有零理想和单位理想，当被除的理想是极大理想。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 408,
-    "endLine": 412
+    "startLine": 432,
+    "endLine": 436
   },
   {
-    "id": "dx-Abstract-Algebra-232",
+    "id": "dx-Abstract-Algebra-241",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21856,11 +22036,11 @@
     "content": "\\begin{note}[极大理想引理1对主理想整环的推论]\n在主理想整环中，一个主理想 $(a)$ 是极大理想当且仅当 $a$ 是不可约元素。\n\\end{note}",
     "text": "[极大理想引理1对主理想整环的推论] 在主理想整环中，一个主理想 是极大理想当且仅当 是不可约元素。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 414,
-    "endLine": 416
+    "startLine": 438,
+    "endLine": 440
   },
   {
-    "id": "dx-Abstract-Algebra-233",
+    "id": "dx-Abstract-Algebra-242",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21876,11 +22056,11 @@
     "content": "\\begin{lemma}[引理 2：交换环只有零理想和单位理想 $R$ 是一个域]\n如果有单位元（$\\ne 0$）的交换环 $R$ 除了零理想同单位理想以外没有其他的理想，那么 $R$ 一定是一个域。\n\n交换环+只有零理想和单位理想就是一个域。\n\\end{lemma}",
     "text": "[引理 2：交换环只有零理想和单位理想 是一个域] 如果有单位元（ ）的交换环 除了零理想同单位理想以外没有其他的理想，那么 一定是一个域。 交换环+只有零理想和单位理想就是一个域。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 418,
-    "endLine": 422
+    "startLine": 442,
+    "endLine": 446
   },
   {
-    "id": "dx-Abstract-Algebra-234",
+    "id": "dx-Abstract-Algebra-243",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21896,11 +22076,11 @@
     "content": "\\begin{theorem}[极大理想与域]\n假定 $R$ 是一个有单位元的交换环，$I$ 是 $R$ 的一个理想，则\n\\[\nR/I\\text{ 是一个域}\\iff I\\text{ 是极大理想}.\n\\]\n\\end{theorem}",
     "text": "[极大理想与域] 假定 是一个有单位元的交换环， 是 的一个理想，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 424,
-    "endLine": 429
+    "startLine": 448,
+    "endLine": 453
   },
   {
-    "id": "dx-Abstract-Algebra-235",
+    "id": "dx-Abstract-Algebra-244",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21916,11 +22096,11 @@
     "content": "\\begin{lemma}[引理 2.7：素数的性质]\n若 $p$ 是一个素数，$a,b\\in\\mathbb{Z}$，则\n\\[\np\\mid ab\\iff p\\mid a\\;\\text{或}\\;p\\mid b\n\\]\n注意到这个命题对于合数 $n$ 是错的。\n\\end{lemma}",
     "text": "[引理 2.7：素数的性质] 若 是一个素数， ，则 注意到这个命题对于合数 是错的。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 434,
-    "endLine": 440
+    "startLine": 458,
+    "endLine": 464
   },
   {
-    "id": "dx-Abstract-Algebra-236",
+    "id": "dx-Abstract-Algebra-245",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21936,11 +22116,11 @@
     "content": "\\begin{lemma}[引理 2.8：合数的性质]\n若 $n$ 是一个合数，则存在 $a,b\\in\\mathbb{Z}$，使得\n\\[\nn\\mid ab,\\quad n\\nmid a,\\quad n\\nmid b\n\\]\n\\textbf{证明：} 证明是简单的，若 $n$ 是一个合数，我们可以写一个平平凡分解 $n=ab$，其中 $a,b\\ne\\pm1$，则 $n\\mid ab$，可是 $|a|<n$ 故 $n\\nmid a$，同理 $n\\nmid b$。\n\n由此，在整数中，这个性质只对素数成立的。实际上，如果我们用理想来看，这个性质也可以改为\n\\[\n\\forall a,b\\in\\mathbb{Z},\\;(ab\\in p\\mathbb{Z}\\iff a\\in p\\mathbb{Z}\\;\\text{或}\\;b\\in p\\mathbb{Z})\n\\]\n因此，在一般的交换环中，我们定义素理想就是满足这个性质（如果两个元素的积在理想中，则至少有一元素在理想中）的理想，但不是每一个元素都是零的环的理想。\n\\end{lemma}",
     "text": "[引理 2.8：合数的性质] 若 是一个合数，则存在 ，使得 证明： 证明是简单的，若 是一个合数，我们可以写一个平平凡分解 ，其中 ，则 ，可是 故 ，同理 。 由此，在整数中，这个性质只对素数成立的。实际上，如果我们用理想来看，这个性质也可以改为 因此，在一般的交换环中，我们定义素理想就是满足这个性质（如果两个元素的积在理想中，则至少有一元素在理想中）的理想，但不是每一个元素都是零的环的理想。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 442,
-    "endLine": 454
+    "startLine": 466,
+    "endLine": 478
   },
   {
-    "id": "dx-Abstract-Algebra-237",
+    "id": "dx-Abstract-Algebra-246",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21956,11 +22136,11 @@
     "content": "\\begin{example}[整数环中，素数生成的都是极大理想]\n\\textbf{例 1} \\quad 我们看整数环 $R$。我们说，由一个素数 $p$ 所生成的主理想 $(p)$ 是一个极大理想。因为假定 $\\mathfrak{B}$ 是一个不等于 $(p)$ 的 $R$ 的理想，并且\n\\[\n\\mathfrak{B}\\supseteq(p),\n\\]\n那么 $\\mathfrak{B}$ 一定包含一个不能被 $p$ 整除的整数 $q$。由于 $p$ 是素数，$q$ 与 $p$ 互素，所以存在整数 $s,t$，有\n\\[\nsp+tq=1.\n\\]\n包含一个和 $p$ 互素是这个理想包含由 $p$ 生成的理想的必要条件，也就是存在 $p$ 生成不了的元，然后用互素条件就能把关键的 $1$ 证明在这个包含 $p$ 的理想里面，有 $1$ 的理想就是整个环。\n\\end{example}",
     "text": "[整数环中，素数生成的都是极大理想] 例 1 我们看整数环 。我们说，由一个素数 所生成的主理想 是一个极大理想。因为假定 是一个不等于 的 的理想，并且 那么 一定包含一个不能被 整除的整数 。由于 是素数， 与 互素，所以存在整数 ，有 包含一个和 互素是这个理想包含由 生成的理想的必要条件，也就是存在 生成不了的元，然后用互素条件就能把关键的 证明在这个包含 的理想里面，有 的理想就是整个环。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch2.tex",
-    "startLine": 456,
-    "endLine": 466
+    "startLine": 480,
+    "endLine": 490
   },
   {
-    "id": "dx-Abstract-Algebra-238",
+    "id": "dx-Abstract-Algebra-247",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21980,7 +22160,7 @@
     "endLine": 16
   },
   {
-    "id": "dx-Abstract-Algebra-239",
+    "id": "dx-Abstract-Algebra-248",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -21992,15 +22172,15 @@
     "blockTitle": "整除、单位、相伴元与不可约元",
     "previewType": "note",
     "previewTitle": "整除、单位、相伴元与不可约元",
-    "rawContent": "\\begin{note}[单位与相伴元辨析]\n单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 $1$。$b = \\varepsilon a$（$\\varepsilon$ 是单位）则 $b$ 是 $a$ 的相伴元。单位乘自己的逆元等于单位元（$\\varepsilon\\cdot\\varepsilon^{-1}=1$）。在 $\\mathbb{Z}$ 中单位是 $\\pm1$；在 $\\mathbb{Z}[i]$ 中单位是 $\\pm1,\\pm i$。\n\\end{note}",
-    "content": "\\begin{note}[单位与相伴元辨析]\n单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 $1$。$b = \\varepsilon a$（$\\varepsilon$ 是单位）则 $b$ 是 $a$ 的相伴元。单位乘自己的逆元等于单位元（$\\varepsilon\\cdot\\varepsilon^{-1}=1$）。在 $\\mathbb{Z}$ 中单位是 $\\pm1$；在 $\\mathbb{Z}[i]$ 中单位是 $\\pm1,\\pm i$。\n\\end{note}",
-    "text": "[单位与相伴元辨析] 单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 。 （ 是单位）则 是 的相伴元。单位乘自己的逆元等于单位元（ ）。在 中单位是 ；在 中单位是 。",
+    "rawContent": "\\begin{note}[单位与相伴元辨析]\n单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 $1$。$b = \\varepsilon a$（$\\varepsilon$ 是单位）则 $b$ 是 $a$ 的相伴元。单位乘自己的逆元等于单位元（$\\varepsilon\\cdot\\varepsilon^{-1}=1$）。在 $\\mathbb{Z}$ 中单位是 $\\pm1$；在 $\\mathbb{Z}[i]$ 中单位是 $\\pm1,\\pm i$。计算 $\\mathbb{Z}[i]$ 中元素的模长（范数）时记得有根号：$|a+bi|=\\sqrt{a^2+b^2}$。\n\\end{note}",
+    "content": "\\begin{note}[单位与相伴元辨析]\n单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 $1$。$b = \\varepsilon a$（$\\varepsilon$ 是单位）则 $b$ 是 $a$ 的相伴元。单位乘自己的逆元等于单位元（$\\varepsilon\\cdot\\varepsilon^{-1}=1$）。在 $\\mathbb{Z}$ 中单位是 $\\pm1$；在 $\\mathbb{Z}[i]$ 中单位是 $\\pm1,\\pm i$。计算 $\\mathbb{Z}[i]$ 中元素的模长（范数）时记得有根号：$|a+bi|=\\sqrt{a^2+b^2}$。\n\\end{note}",
+    "text": "[单位与相伴元辨析] 单位不是单位元：单位是有乘法逆元的元素，单位元是乘法中的 。 （ 是单位）则 是 的相伴元。单位乘自己的逆元等于单位元（ ）。在 中单位是 ；在 中单位是 。计算 中元素的模长（范数）时记得有根号： 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/ch3.tex",
     "startLine": 18,
     "endLine": 20
   },
   {
-    "id": "dx-Abstract-Algebra-240",
+    "id": "dx-Abstract-Algebra-249",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22020,7 +22200,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-Abstract-Algebra-241",
+    "id": "dx-Abstract-Algebra-250",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22040,7 +22220,7 @@
     "endLine": 40
   },
   {
-    "id": "dx-Abstract-Algebra-242",
+    "id": "dx-Abstract-Algebra-251",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22060,7 +22240,7 @@
     "endLine": 48
   },
   {
-    "id": "dx-Abstract-Algebra-243",
+    "id": "dx-Abstract-Algebra-252",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22080,7 +22260,7 @@
     "endLine": 52
   },
   {
-    "id": "dx-Abstract-Algebra-244",
+    "id": "dx-Abstract-Algebra-253",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22100,7 +22280,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-Abstract-Algebra-245",
+    "id": "dx-Abstract-Algebra-254",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22120,7 +22300,7 @@
     "endLine": 63
   },
   {
-    "id": "dx-Abstract-Algebra-246",
+    "id": "dx-Abstract-Algebra-255",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22140,7 +22320,7 @@
     "endLine": 69
   },
   {
-    "id": "dx-Abstract-Algebra-247",
+    "id": "dx-Abstract-Algebra-256",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22160,7 +22340,7 @@
     "endLine": 79
   },
   {
-    "id": "dx-Abstract-Algebra-248",
+    "id": "dx-Abstract-Algebra-257",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22180,7 +22360,7 @@
     "endLine": 85
   },
   {
-    "id": "dx-Abstract-Algebra-249",
+    "id": "dx-Abstract-Algebra-258",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22200,7 +22380,7 @@
     "endLine": 97
   },
   {
-    "id": "dx-Abstract-Algebra-250",
+    "id": "dx-Abstract-Algebra-259",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22220,7 +22400,7 @@
     "endLine": 101
   },
   {
-    "id": "dx-Abstract-Algebra-251",
+    "id": "dx-Abstract-Algebra-260",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22240,7 +22420,7 @@
     "endLine": 109
   },
   {
-    "id": "dx-Abstract-Algebra-252",
+    "id": "dx-Abstract-Algebra-261",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22260,7 +22440,7 @@
     "endLine": 115
   },
   {
-    "id": "dx-Abstract-Algebra-253",
+    "id": "dx-Abstract-Algebra-262",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22280,7 +22460,7 @@
     "endLine": 122
   },
   {
-    "id": "dx-Abstract-Algebra-254",
+    "id": "dx-Abstract-Algebra-263",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22300,7 +22480,7 @@
     "endLine": 126
   },
   {
-    "id": "dx-Abstract-Algebra-255",
+    "id": "dx-Abstract-Algebra-264",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22320,7 +22500,7 @@
     "endLine": 130
   },
   {
-    "id": "dx-Abstract-Algebra-256",
+    "id": "dx-Abstract-Algebra-265",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22340,7 +22520,7 @@
     "endLine": 134
   },
   {
-    "id": "dx-Abstract-Algebra-257",
+    "id": "dx-Abstract-Algebra-266",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22360,7 +22540,7 @@
     "endLine": 149
   },
   {
-    "id": "dx-Abstract-Algebra-258",
+    "id": "dx-Abstract-Algebra-267",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22380,7 +22560,7 @@
     "endLine": 153
   },
   {
-    "id": "dx-Abstract-Algebra-259",
+    "id": "dx-Abstract-Algebra-268",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22400,7 +22580,7 @@
     "endLine": 157
   },
   {
-    "id": "dx-Abstract-Algebra-260",
+    "id": "dx-Abstract-Algebra-269",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22420,7 +22600,7 @@
     "endLine": 161
   },
   {
-    "id": "dx-Abstract-Algebra-261",
+    "id": "dx-Abstract-Algebra-270",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22440,7 +22620,7 @@
     "endLine": 176
   },
   {
-    "id": "dx-Abstract-Algebra-262",
+    "id": "dx-Abstract-Algebra-271",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22460,7 +22640,7 @@
     "endLine": 188
   },
   {
-    "id": "dx-Abstract-Algebra-263",
+    "id": "dx-Abstract-Algebra-272",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22480,7 +22660,7 @@
     "endLine": 199
   },
   {
-    "id": "dx-Abstract-Algebra-264",
+    "id": "dx-Abstract-Algebra-273",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22500,7 +22680,7 @@
     "endLine": 205
   },
   {
-    "id": "dx-Abstract-Algebra-265",
+    "id": "dx-Abstract-Algebra-274",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22520,7 +22700,7 @@
     "endLine": 218
   },
   {
-    "id": "dx-Abstract-Algebra-266",
+    "id": "dx-Abstract-Algebra-275",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22540,7 +22720,7 @@
     "endLine": 229
   },
   {
-    "id": "dx-Abstract-Algebra-267",
+    "id": "dx-Abstract-Algebra-276",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22560,7 +22740,7 @@
     "endLine": 233
   },
   {
-    "id": "dx-Abstract-Algebra-268",
+    "id": "dx-Abstract-Algebra-277",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22580,7 +22760,7 @@
     "endLine": 237
   },
   {
-    "id": "dx-Abstract-Algebra-269",
+    "id": "dx-Abstract-Algebra-278",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22600,7 +22780,7 @@
     "endLine": 254
   },
   {
-    "id": "dx-Abstract-Algebra-270",
+    "id": "dx-Abstract-Algebra-279",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22620,7 +22800,7 @@
     "endLine": 258
   },
   {
-    "id": "dx-Abstract-Algebra-271",
+    "id": "dx-Abstract-Algebra-280",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22640,7 +22820,7 @@
     "endLine": 262
   },
   {
-    "id": "dx-Abstract-Algebra-272",
+    "id": "dx-Abstract-Algebra-281",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22660,7 +22840,7 @@
     "endLine": 266
   },
   {
-    "id": "dx-Abstract-Algebra-273",
+    "id": "dx-Abstract-Algebra-282",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22680,7 +22860,7 @@
     "endLine": 289
   },
   {
-    "id": "dx-Abstract-Algebra-274",
+    "id": "dx-Abstract-Algebra-283",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22700,7 +22880,7 @@
     "endLine": 293
   },
   {
-    "id": "dx-Abstract-Algebra-275",
+    "id": "dx-Abstract-Algebra-284",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22720,7 +22900,7 @@
     "endLine": 22
   },
   {
-    "id": "dx-Abstract-Algebra-276",
+    "id": "dx-Abstract-Algebra-285",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22740,7 +22920,7 @@
     "endLine": 28
   },
   {
-    "id": "dx-Abstract-Algebra-277",
+    "id": "dx-Abstract-Algebra-286",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22760,7 +22940,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-Abstract-Algebra-278",
+    "id": "dx-Abstract-Algebra-287",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22780,7 +22960,7 @@
     "endLine": 40
   },
   {
-    "id": "dx-Abstract-Algebra-279",
+    "id": "dx-Abstract-Algebra-288",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22800,7 +22980,7 @@
     "endLine": 46
   },
   {
-    "id": "dx-Abstract-Algebra-280",
+    "id": "dx-Abstract-Algebra-289",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22820,7 +23000,7 @@
     "endLine": 52
   },
   {
-    "id": "dx-Abstract-Algebra-281",
+    "id": "dx-Abstract-Algebra-290",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22840,7 +23020,7 @@
     "endLine": 67
   },
   {
-    "id": "dx-Abstract-Algebra-282",
+    "id": "dx-Abstract-Algebra-291",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22860,7 +23040,7 @@
     "endLine": 91
   },
   {
-    "id": "dx-Abstract-Algebra-283",
+    "id": "dx-Abstract-Algebra-292",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22880,7 +23060,7 @@
     "endLine": 107
   },
   {
-    "id": "dx-Abstract-Algebra-284",
+    "id": "dx-Abstract-Algebra-293",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22900,7 +23080,7 @@
     "endLine": 113
   },
   {
-    "id": "dx-Abstract-Algebra-285",
+    "id": "dx-Abstract-Algebra-294",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22920,7 +23100,7 @@
     "endLine": 119
   },
   {
-    "id": "dx-Abstract-Algebra-286",
+    "id": "dx-Abstract-Algebra-295",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22940,7 +23120,7 @@
     "endLine": 127
   },
   {
-    "id": "dx-Abstract-Algebra-287",
+    "id": "dx-Abstract-Algebra-296",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22960,7 +23140,7 @@
     "endLine": 144
   },
   {
-    "id": "dx-Abstract-Algebra-288",
+    "id": "dx-Abstract-Algebra-297",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -22980,7 +23160,7 @@
     "endLine": 156
   },
   {
-    "id": "dx-Abstract-Algebra-289",
+    "id": "dx-Abstract-Algebra-298",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23000,7 +23180,7 @@
     "endLine": 169
   },
   {
-    "id": "dx-Abstract-Algebra-290",
+    "id": "dx-Abstract-Algebra-299",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23020,7 +23200,7 @@
     "endLine": 179
   },
   {
-    "id": "dx-Abstract-Algebra-291",
+    "id": "dx-Abstract-Algebra-300",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23040,7 +23220,7 @@
     "endLine": 185
   },
   {
-    "id": "dx-Abstract-Algebra-292",
+    "id": "dx-Abstract-Algebra-301",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23060,7 +23240,7 @@
     "endLine": 191
   },
   {
-    "id": "dx-Abstract-Algebra-293",
+    "id": "dx-Abstract-Algebra-302",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23080,7 +23260,7 @@
     "endLine": 204
   },
   {
-    "id": "dx-Abstract-Algebra-294",
+    "id": "dx-Abstract-Algebra-303",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23100,7 +23280,7 @@
     "endLine": 210
   },
   {
-    "id": "dx-Abstract-Algebra-295",
+    "id": "dx-Abstract-Algebra-304",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23120,7 +23300,7 @@
     "endLine": 216
   },
   {
-    "id": "dx-Abstract-Algebra-296",
+    "id": "dx-Abstract-Algebra-305",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
@@ -23140,7 +23320,7 @@
     "endLine": 222
   },
   {
-    "id": "dx-Abstract-Algebra-297",
+    "id": "dx-Abstract-Algebra-306",
     "repo": "dx-Abstract-Algebra",
     "title": "Abstract Algebra",
     "pdf": "pdf/dx-Abstract-Algebra.pdf",
