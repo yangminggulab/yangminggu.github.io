@@ -34748,6 +34748,26 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
     "section": "奈曼皮尔逊",
     "subsection": "",
+    "kind": "note",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "note",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{note}\n    \\textbf{Lambda}，希腊字母，大写写作 $\\Lambda$，小写写作 $\\lambda$。\n\\end{note}",
+    "content": "\\begin{note}\n    \\textbf{Lambda}，希腊字母，大写写作 $\\Lambda$，小写写作 $\\lambda$。\n\\end{note}",
+    "text": "Lambda，希腊字母，大写写作 ，小写写作 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 144,
+    "endLine": 146
+  },
+  {
+    "id": "dx-Mathematical-Statistics-125",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
     "kind": "theorem",
     "blockTitle": "奈曼皮尔逊",
     "previewType": "theorem",
@@ -34756,11 +34776,31 @@
     "content": "\\begin{theorem}{Neyman-Pearson 引理}{}\n设 $\\alpha \\in [0,1]$，考虑简单假设检验 $H_0: f = f_0$ vs $H_1: f = f_1$，则：\n\n\\begin{enumerate}\n    \\item \\textbf{（存在性）} 必存在检验函数\n    $$\\phi(\\boldsymbol{X}) = \\begin{cases} 1, & \\Lambda(\\boldsymbol{X}) > k \\\\ r, & \\Lambda(\\boldsymbol{X}) = k \\\\ 0, & \\Lambda(\\boldsymbol{X}) < k \\end{cases}$$\n    其中 $\\Lambda(\\boldsymbol{X}) = \\prod_{i=1}^n f_1(X_i) / \\prod_{i=1}^n f_0(X_i)$ 为似然比，常数 $k > 0$，$r \\in [0,1]$ 由 $E_0[\\phi(\\boldsymbol{X})] = \\alpha$ 确定。\n\n    \\item \\textbf{（充分性）} 满足上述条件的 $\\phi$ 是水平 $\\alpha$ 的 UMP 检验。\n\n    \\item \\textbf{（必要性）} 若 $\\phi$ 是水平 $\\alpha$ 的 UMP 检验，则必存在 $k$ 使上述似然比形式几乎处处成立；且若 $E_1(\\phi(\\boldsymbol{X})) < 1$，则必有 $E_0(\\phi(\\boldsymbol{X})) = \\alpha$。\n\\end{enumerate}\n\\end{theorem}",
     "text": "Neyman-Pearson 引理 设 ，考虑简单假设检验 vs ，则： （存在性） 必存在检验函数 其中 为似然比，常数 ， 由 确定。 （充分性） 满足上述条件的 是水平 的 UMP 检验。 （必要性） 若 是水平 的 UMP 检验，则必存在 使上述似然比形式几乎处处成立；且若 ，则必有 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
-    "startLine": 144,
-    "endLine": 156
+    "startLine": 147,
+    "endLine": 159
   },
   {
-    "id": "dx-Mathematical-Statistics-125",
+    "id": "dx-Mathematical-Statistics-126",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "note",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{note}\n因为分布族满足 MLR 条件，不同 $\\theta_1$ 的似然比都是 $T(\\boldsymbol{X})$ 的单增函数，从而所有 $\\theta_1$ 对数据点的排序一致，最优拒绝域对所有 $\\theta_1$ 都是 $T(\\boldsymbol{X}) > c$，UMP 存在。\n\\end{note}",
+    "content": "\\begin{note}\n因为分布族满足 MLR 条件，不同 $\\theta_1$ 的似然比都是 $T(\\boldsymbol{X})$ 的单增函数，从而所有 $\\theta_1$ 对数据点的排序一致，最优拒绝域对所有 $\\theta_1$ 都是 $T(\\boldsymbol{X}) > c$，UMP 存在。\n\\end{note}",
+    "text": "因为分布族满足 MLR 条件，不同 的似然比都是 的单增函数，从而所有 对数据点的排序一致，最优拒绝域对所有 都是 ，UMP 存在。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 160,
+    "endLine": 162
+  },
+  {
+    "id": "dx-Mathematical-Statistics-127",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34776,11 +34816,71 @@
     "content": "\\begin{definition}{单调似然比分布族}{}\n若分布族 $\\{f(x;\\theta),\\ \\theta \\in \\Theta\\}$ 满足：\n\\begin{enumerate}\n    \\item 不同参数值对应的分布不同；\n    \\item 存在统计量 $T = T(\\boldsymbol{X})$，使得对任何 $\\theta_1 < \\theta_2$，似然比\n    $$\\frac{\\prod_{i=1}^n f(X_i;\\theta_2)}{\\prod_{i=1}^n f(X_i;\\theta_1)}$$\n    作为 $\\boldsymbol{X}$ 的函数只依赖于 $T(\\boldsymbol{X})$，且是 $T(\\boldsymbol{X})$ 的单增（单减）函数，\n\\end{enumerate}\n则称该分布族为\\textbf{单增（单减）似然比分布族}，二者统称为\\textbf{单调似然比分布族}。\n\\end{definition}",
     "text": "单调似然比分布族 若分布族 满足： 不同参数值对应的分布不同； 存在统计量 ，使得对任何 ，似然比 作为 的函数只依赖于 ，且是 的单增（单减）函数， 则称该分布族为单增（单减）似然比分布族，二者统称为单调似然比分布族。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
-    "startLine": 157,
-    "endLine": 166
+    "startLine": 163,
+    "endLine": 172
   },
   {
-    "id": "dx-Mathematical-Statistics-126",
+    "id": "dx-Mathematical-Statistics-128",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "note",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{note}\nMLR 不是一个操作，不是一个定理，而是我们对分布族提出的一个要求：对任意 $\\theta_1 < \\theta_2$，似然比 $\\dfrac{\\prod f(X_i;\\theta_2)}{\\prod f(X_i;\\theta_1)}$ 是某个统计量 $T(X)$ 的单增函数。满足这个要求的分布族叫 MLR 族，正态、泊松、指数族都满足。不满足的分布族，UMP 一般不存在。\n\\end{note}",
+    "content": "\\begin{note}\nMLR 不是一个操作，不是一个定理，而是我们对分布族提出的一个要求：对任意 $\\theta_1 < \\theta_2$，似然比 $\\dfrac{\\prod f(X_i;\\theta_2)}{\\prod f(X_i;\\theta_1)}$ 是某个统计量 $T(X)$ 的单增函数。满足这个要求的分布族叫 MLR 族，正态、泊松、指数族都满足。不满足的分布族，UMP 一般不存在。\n\\end{note}",
+    "text": "MLR 不是一个操作，不是一个定理，而是我们对分布族提出的一个要求：对任意 ，似然比 是某个统计量 的单增函数。满足这个要求的分布族叫 MLR 族，正态、泊松、指数族都满足。不满足的分布族，UMP 一般不存在。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 173,
+    "endLine": 175
+  },
+  {
+    "id": "dx-Mathematical-Statistics-129",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "tip",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{dxtips}\n  $\\theta_1$ 和 $\\theta_2$ 是确定的，$X_i$ 是变化的，每取一组 $\\boldsymbol{X}$，似然比的值都会变。比值越大说明分子发生概率越大，$\\theta_2$ 越可能；反之 $\\theta_1$ 更可能。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n  $\\theta_1$ 和 $\\theta_2$ 是确定的，$X_i$ 是变化的，每取一组 $\\boldsymbol{X}$，似然比的值都会变。比值越大说明分子发生概率越大，$\\theta_2$ 越可能；反之 $\\theta_1$ 更可能。\n\\end{dxtips}",
+    "text": "和 是确定的， 是变化的，每取一组 ，似然比的值都会变。比值越大说明分子发生概率越大， 越可能；反之 更可能。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 176,
+    "endLine": 178
+  },
+  {
+    "id": "dx-Mathematical-Statistics-130",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "example",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{example}\n设 $X_1, \\ldots, X_n \\overset{iid}{\\sim} N(\\mu, 1)$，取 $\\theta_0 < \\theta_1$，似然比为\n$$\\Lambda_{\\theta_1}(\\boldsymbol{X}) = e^{n(\\theta_1 - \\theta_0)\\bar{X} - \\frac{n}{2}(\\theta_1^2 - \\theta_0^2)}$$\n其中 $e^{-\\frac{n}{2}(\\theta_1^2 - \\theta_0^2)}$ 是只含 $\\theta$ 的常数，与数据无关，所以似然比完全由 $\\bar{X}$ 决定。又因为 $\\theta_1 > \\theta_0$，系数 $n(\\theta_1 - \\theta_0) > 0$，故 $\\Lambda_{\\theta_1}(\\boldsymbol{X})$ 是 $\\bar{X}$ 的单增函数。因此正态分布族取 $T(\\boldsymbol{X}) = \\bar{X}$，不管 $\\theta_1$ 取何值，对数据点的排序都由 $\\bar{X}$ 决定，MLR 条件成立。\n\\end{example}",
+    "content": "\\begin{example}\n设 $X_1, \\ldots, X_n \\overset{iid}{\\sim} N(\\mu, 1)$，取 $\\theta_0 < \\theta_1$，似然比为\n$$\\Lambda_{\\theta_1}(\\boldsymbol{X}) = e^{n(\\theta_1 - \\theta_0)\\bar{X} - \\frac{n}{2}(\\theta_1^2 - \\theta_0^2)}$$\n其中 $e^{-\\frac{n}{2}(\\theta_1^2 - \\theta_0^2)}$ 是只含 $\\theta$ 的常数，与数据无关，所以似然比完全由 $\\bar{X}$ 决定。又因为 $\\theta_1 > \\theta_0$，系数 $n(\\theta_1 - \\theta_0) > 0$，故 $\\Lambda_{\\theta_1}(\\boldsymbol{X})$ 是 $\\bar{X}$ 的单增函数。因此正态分布族取 $T(\\boldsymbol{X}) = \\bar{X}$，不管 $\\theta_1$ 取何值，对数据点的排序都由 $\\bar{X}$ 决定，MLR 条件成立。\n\\end{example}",
+    "text": "设 ，取 ，似然比为 其中 是只含 的常数，与数据无关，所以似然比完全由 决定。又因为 ，系数 ，故 是 的单增函数。因此正态分布族取 ，不管 取何值，对数据点的排序都由 决定，MLR 条件成立。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 179,
+    "endLine": 183
+  },
+  {
+    "id": "dx-Mathematical-Statistics-131",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34796,11 +34896,31 @@
     "content": "\\begin{theorem}{单调似然比与 UMP 检验}{}\n设 $\\{f(x;\\theta),\\ \\theta \\in \\Theta\\}$ 为单增似然比分布族，$\\theta_0 \\in \\Theta$ 且 $\\{\\theta > \\theta_0\\} \\cap \\Theta$ 非空，对假设检验问题\n$$H_0: \\theta \\leq \\theta_0; \\quad H_1: \\theta > \\theta_0$$\n及任意 $\\alpha \\in (0,1)$，有：\n\\begin{enumerate}\n    \\item \\textbf{（存在性与最优性）} 存在形如\n    $$\\phi(\\boldsymbol{X}) = \\begin{cases} 1, & T(\\boldsymbol{X}) > c \\\\ r, & T(\\boldsymbol{X}) = c \\\\ 0, & T(\\boldsymbol{X}) < c \\end{cases}$$\n    的检验 $\\phi$，满足 $E_{\\theta_0}(\\phi(\\boldsymbol{X})) = \\alpha$，且该检验是水平 $\\alpha$ 的 UMP 检验。\n\n    \\item \\textbf{（功效函数单调性）} $\\beta_\\phi(\\theta)$ 单增，且在 $\\{\\theta: 0 < \\beta_\\phi(\\theta) < 1\\}$ 上严格单增。\n\n    \\item \\textbf{（最小化第一类错误）} 对任何 $\\theta < \\theta_0$，\n    $$\\beta_\\phi(\\theta) = \\min\\{\\beta_{\\phi^*}(\\theta):\\ E_{\\theta_0}(\\phi^*(\\boldsymbol{X})) = \\alpha\\}.$$\n\\end{enumerate}\n\\end{theorem}",
     "text": "单调似然比与 UMP 检验 设 为单增似然比分布族， 且 非空，对假设检验问题 及任意 ，有： （存在性与最优性） 存在形如 的检验 ，满足 ，且该检验是水平 的 UMP 检验。 （功效函数单调性） 单增，且在 上严格单增。 （最小化第一类错误） 对任何 ，",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
-    "startLine": 167,
-    "endLine": 181
+    "startLine": 184,
+    "endLine": 198
   },
   {
-    "id": "dx-Mathematical-Statistics-127",
+    "id": "dx-Mathematical-Statistics-132",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "奈曼皮尔逊",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "奈曼皮尔逊",
+    "previewType": "note",
+    "previewTitle": "奈曼皮尔逊",
+    "rawContent": "\\begin{note}\n实际操作顺序是：\n\\begin{enumerate}\n    \\item 先由 $P_{H_0}(X > c) = \\alpha$ 解出 $c = 1.645$\n    \\item $c$带入x，x变成了f（x）他对应的拒绝域也要跟着变\n    \\item 再由 $c = \\ln k + 0.5$ 倒推出 $k \\approx 3.14$\n\\end{enumerate}\n$k$ 是最后算出来的，不是一开始就知道的。\n\\end{note}",
+    "content": "\\begin{note}\n实际操作顺序是：\n\\begin{enumerate}\n    \\item 先由 $P_{H_0}(X > c) = \\alpha$ 解出 $c = 1.645$\n    \\item $c$带入x，x变成了f（x）他对应的拒绝域也要跟着变\n    \\item 再由 $c = \\ln k + 0.5$ 倒推出 $k \\approx 3.14$\n\\end{enumerate}\n$k$ 是最后算出来的，不是一开始就知道的。\n\\end{note}",
+    "text": "实际操作顺序是： 先由 解出 带入x，x变成了f（x）他对应的拒绝域也要跟着变 再由 倒推出 是最后算出来的，不是一开始就知道的。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
+    "startLine": 199,
+    "endLine": 207
+  },
+  {
+    "id": "dx-Mathematical-Statistics-133",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34816,11 +34936,11 @@
     "content": "\\begin{theorem}{推论：左单边检验}{}\n设分布族为单增似然比分布族，则对于\n$$H_0: \\theta \\geq \\theta_0; \\quad H_1: \\theta < \\theta_0$$\nUMP 检验的拒绝域方向相反：\n$$\\phi(\\boldsymbol{X}) = \\begin{cases} 1, & T(\\boldsymbol{X}) < c \\\\ r, & T(\\boldsymbol{X}) = c \\\\ 0, & T(\\boldsymbol{X}) > c \\end{cases}$$\n且结论中 $\\beta_\\phi(\\theta)$ 单增改为单减。\n\\end{theorem}",
     "text": "推论：左单边检验 设分布族为单增似然比分布族，则对于 UMP 检验的拒绝域方向相反： 且结论中 单增改为单减。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/第四章.tex",
-    "startLine": 182,
-    "endLine": 188
+    "startLine": 208,
+    "endLine": 214
   },
   {
-    "id": "dx-Mathematical-Statistics-128",
+    "id": "dx-Mathematical-Statistics-134",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34840,7 +34960,7 @@
     "endLine": 16
   },
   {
-    "id": "dx-Mathematical-Statistics-129",
+    "id": "dx-Mathematical-Statistics-135",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34860,7 +34980,7 @@
     "endLine": 50
   },
   {
-    "id": "dx-Mathematical-Statistics-130",
+    "id": "dx-Mathematical-Statistics-136",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34880,7 +35000,7 @@
     "endLine": 60
   },
   {
-    "id": "dx-Mathematical-Statistics-131",
+    "id": "dx-Mathematical-Statistics-137",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34900,7 +35020,7 @@
     "endLine": 75
   },
   {
-    "id": "dx-Mathematical-Statistics-132",
+    "id": "dx-Mathematical-Statistics-138",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34920,7 +35040,7 @@
     "endLine": 78
   },
   {
-    "id": "dx-Mathematical-Statistics-133",
+    "id": "dx-Mathematical-Statistics-139",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34940,7 +35060,7 @@
     "endLine": 104
   },
   {
-    "id": "dx-Mathematical-Statistics-134",
+    "id": "dx-Mathematical-Statistics-140",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34960,7 +35080,7 @@
     "endLine": 113
   },
   {
-    "id": "dx-Mathematical-Statistics-135",
+    "id": "dx-Mathematical-Statistics-141",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -34980,7 +35100,7 @@
     "endLine": 120
   },
   {
-    "id": "dx-Mathematical-Statistics-136",
+    "id": "dx-Mathematical-Statistics-142",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35000,7 +35120,7 @@
     "endLine": 160
   },
   {
-    "id": "dx-Mathematical-Statistics-137",
+    "id": "dx-Mathematical-Statistics-143",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35020,7 +35140,7 @@
     "endLine": 171
   },
   {
-    "id": "dx-Mathematical-Statistics-138",
+    "id": "dx-Mathematical-Statistics-144",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35040,7 +35160,7 @@
     "endLine": 219
   },
   {
-    "id": "dx-Mathematical-Statistics-139",
+    "id": "dx-Mathematical-Statistics-145",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35060,7 +35180,7 @@
     "endLine": 230
   },
   {
-    "id": "dx-Mathematical-Statistics-140",
+    "id": "dx-Mathematical-Statistics-146",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35080,7 +35200,7 @@
     "endLine": 235
   },
   {
-    "id": "dx-Mathematical-Statistics-141",
+    "id": "dx-Mathematical-Statistics-147",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35100,7 +35220,7 @@
     "endLine": 277
   },
   {
-    "id": "dx-Mathematical-Statistics-142",
+    "id": "dx-Mathematical-Statistics-148",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35120,7 +35240,7 @@
     "endLine": 280
   },
   {
-    "id": "dx-Mathematical-Statistics-143",
+    "id": "dx-Mathematical-Statistics-149",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35140,7 +35260,7 @@
     "endLine": 287
   },
   {
-    "id": "dx-Mathematical-Statistics-144",
+    "id": "dx-Mathematical-Statistics-150",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35160,7 +35280,7 @@
     "endLine": 341
   },
   {
-    "id": "dx-Mathematical-Statistics-145",
+    "id": "dx-Mathematical-Statistics-151",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35180,7 +35300,7 @@
     "endLine": 344
   },
   {
-    "id": "dx-Mathematical-Statistics-146",
+    "id": "dx-Mathematical-Statistics-152",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35200,7 +35320,7 @@
     "endLine": 350
   },
   {
-    "id": "dx-Mathematical-Statistics-147",
+    "id": "dx-Mathematical-Statistics-153",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35220,7 +35340,7 @@
     "endLine": 377
   },
   {
-    "id": "dx-Mathematical-Statistics-148",
+    "id": "dx-Mathematical-Statistics-154",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35240,7 +35360,7 @@
     "endLine": 384
   },
   {
-    "id": "dx-Mathematical-Statistics-149",
+    "id": "dx-Mathematical-Statistics-155",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35260,7 +35380,7 @@
     "endLine": 387
   },
   {
-    "id": "dx-Mathematical-Statistics-150",
+    "id": "dx-Mathematical-Statistics-156",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35280,7 +35400,7 @@
     "endLine": 464
   },
   {
-    "id": "dx-Mathematical-Statistics-151",
+    "id": "dx-Mathematical-Statistics-157",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35300,7 +35420,7 @@
     "endLine": 471
   },
   {
-    "id": "dx-Mathematical-Statistics-152",
+    "id": "dx-Mathematical-Statistics-158",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35320,7 +35440,7 @@
     "endLine": 515
   },
   {
-    "id": "dx-Mathematical-Statistics-153",
+    "id": "dx-Mathematical-Statistics-159",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35340,7 +35460,7 @@
     "endLine": 522
   },
   {
-    "id": "dx-Mathematical-Statistics-154",
+    "id": "dx-Mathematical-Statistics-160",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35360,7 +35480,7 @@
     "endLine": 590
   },
   {
-    "id": "dx-Mathematical-Statistics-155",
+    "id": "dx-Mathematical-Statistics-161",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35380,7 +35500,7 @@
     "endLine": 593
   },
   {
-    "id": "dx-Mathematical-Statistics-156",
+    "id": "dx-Mathematical-Statistics-162",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35400,7 +35520,7 @@
     "endLine": 597
   },
   {
-    "id": "dx-Mathematical-Statistics-157",
+    "id": "dx-Mathematical-Statistics-163",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35420,7 +35540,7 @@
     "endLine": 650
   },
   {
-    "id": "dx-Mathematical-Statistics-158",
+    "id": "dx-Mathematical-Statistics-164",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35440,7 +35560,7 @@
     "endLine": 762
   },
   {
-    "id": "dx-Mathematical-Statistics-159",
+    "id": "dx-Mathematical-Statistics-165",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35460,7 +35580,7 @@
     "endLine": 765
   },
   {
-    "id": "dx-Mathematical-Statistics-160",
+    "id": "dx-Mathematical-Statistics-166",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35480,7 +35600,7 @@
     "endLine": 774
   },
   {
-    "id": "dx-Mathematical-Statistics-161",
+    "id": "dx-Mathematical-Statistics-167",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35500,7 +35620,7 @@
     "endLine": 777
   },
   {
-    "id": "dx-Mathematical-Statistics-162",
+    "id": "dx-Mathematical-Statistics-168",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35520,7 +35640,7 @@
     "endLine": 821
   },
   {
-    "id": "dx-Mathematical-Statistics-163",
+    "id": "dx-Mathematical-Statistics-169",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35540,7 +35660,7 @@
     "endLine": 944
   },
   {
-    "id": "dx-Mathematical-Statistics-164",
+    "id": "dx-Mathematical-Statistics-170",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35560,7 +35680,7 @@
     "endLine": 947
   },
   {
-    "id": "dx-Mathematical-Statistics-165",
+    "id": "dx-Mathematical-Statistics-171",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35580,7 +35700,7 @@
     "endLine": 954
   },
   {
-    "id": "dx-Mathematical-Statistics-166",
+    "id": "dx-Mathematical-Statistics-172",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35600,7 +35720,7 @@
     "endLine": 983
   },
   {
-    "id": "dx-Mathematical-Statistics-167",
+    "id": "dx-Mathematical-Statistics-173",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35620,7 +35740,7 @@
     "endLine": 993
   },
   {
-    "id": "dx-Mathematical-Statistics-168",
+    "id": "dx-Mathematical-Statistics-174",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35640,7 +35760,7 @@
     "endLine": 1000
   },
   {
-    "id": "dx-Mathematical-Statistics-169",
+    "id": "dx-Mathematical-Statistics-175",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35660,7 +35780,7 @@
     "endLine": 1018
   },
   {
-    "id": "dx-Mathematical-Statistics-170",
+    "id": "dx-Mathematical-Statistics-176",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35680,7 +35800,7 @@
     "endLine": 1036
   },
   {
-    "id": "dx-Mathematical-Statistics-171",
+    "id": "dx-Mathematical-Statistics-177",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35700,7 +35820,7 @@
     "endLine": 1090
   },
   {
-    "id": "dx-Mathematical-Statistics-172",
+    "id": "dx-Mathematical-Statistics-178",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35720,7 +35840,7 @@
     "endLine": 1102
   },
   {
-    "id": "dx-Mathematical-Statistics-173",
+    "id": "dx-Mathematical-Statistics-179",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35740,7 +35860,7 @@
     "endLine": 1137
   },
   {
-    "id": "dx-Mathematical-Statistics-174",
+    "id": "dx-Mathematical-Statistics-180",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35760,7 +35880,7 @@
     "endLine": 1140
   },
   {
-    "id": "dx-Mathematical-Statistics-175",
+    "id": "dx-Mathematical-Statistics-181",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35780,7 +35900,7 @@
     "endLine": 1147
   },
   {
-    "id": "dx-Mathematical-Statistics-176",
+    "id": "dx-Mathematical-Statistics-182",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35800,7 +35920,7 @@
     "endLine": 1150
   },
   {
-    "id": "dx-Mathematical-Statistics-177",
+    "id": "dx-Mathematical-Statistics-183",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35820,7 +35940,7 @@
     "endLine": 1176
   },
   {
-    "id": "dx-Mathematical-Statistics-178",
+    "id": "dx-Mathematical-Statistics-184",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35840,7 +35960,7 @@
     "endLine": 1195
   },
   {
-    "id": "dx-Mathematical-Statistics-179",
+    "id": "dx-Mathematical-Statistics-185",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35860,7 +35980,7 @@
     "endLine": 1198
   },
   {
-    "id": "dx-Mathematical-Statistics-180",
+    "id": "dx-Mathematical-Statistics-186",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35880,7 +36000,7 @@
     "endLine": 1251
   },
   {
-    "id": "dx-Mathematical-Statistics-181",
+    "id": "dx-Mathematical-Statistics-187",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35900,7 +36020,7 @@
     "endLine": 1258
   },
   {
-    "id": "dx-Mathematical-Statistics-182",
+    "id": "dx-Mathematical-Statistics-188",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35920,7 +36040,7 @@
     "endLine": 1293
   },
   {
-    "id": "dx-Mathematical-Statistics-183",
+    "id": "dx-Mathematical-Statistics-189",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35940,7 +36060,7 @@
     "endLine": 1296
   },
   {
-    "id": "dx-Mathematical-Statistics-184",
+    "id": "dx-Mathematical-Statistics-190",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35960,7 +36080,7 @@
     "endLine": 1336
   },
   {
-    "id": "dx-Mathematical-Statistics-185",
+    "id": "dx-Mathematical-Statistics-191",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -35980,7 +36100,7 @@
     "endLine": 1339
   },
   {
-    "id": "dx-Mathematical-Statistics-186",
+    "id": "dx-Mathematical-Statistics-192",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36000,7 +36120,7 @@
     "endLine": 1353
   },
   {
-    "id": "dx-Mathematical-Statistics-187",
+    "id": "dx-Mathematical-Statistics-193",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36020,7 +36140,7 @@
     "endLine": 1356
   },
   {
-    "id": "dx-Mathematical-Statistics-188",
+    "id": "dx-Mathematical-Statistics-194",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36040,7 +36160,7 @@
     "endLine": 1359
   },
   {
-    "id": "dx-Mathematical-Statistics-189",
+    "id": "dx-Mathematical-Statistics-195",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36060,7 +36180,7 @@
     "endLine": 1395
   },
   {
-    "id": "dx-Mathematical-Statistics-190",
+    "id": "dx-Mathematical-Statistics-196",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36080,7 +36200,7 @@
     "endLine": 1407
   },
   {
-    "id": "dx-Mathematical-Statistics-191",
+    "id": "dx-Mathematical-Statistics-197",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36100,7 +36220,7 @@
     "endLine": 1414
   },
   {
-    "id": "dx-Mathematical-Statistics-192",
+    "id": "dx-Mathematical-Statistics-198",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36120,7 +36240,7 @@
     "endLine": 1437
   },
   {
-    "id": "dx-Mathematical-Statistics-193",
+    "id": "dx-Mathematical-Statistics-199",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36140,7 +36260,7 @@
     "endLine": 1449
   },
   {
-    "id": "dx-Mathematical-Statistics-194",
+    "id": "dx-Mathematical-Statistics-200",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36160,7 +36280,7 @@
     "endLine": 1459
   },
   {
-    "id": "dx-Mathematical-Statistics-195",
+    "id": "dx-Mathematical-Statistics-201",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36180,7 +36300,7 @@
     "endLine": 1466
   },
   {
-    "id": "dx-Mathematical-Statistics-196",
+    "id": "dx-Mathematical-Statistics-202",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36200,7 +36320,7 @@
     "endLine": 1488
   },
   {
-    "id": "dx-Mathematical-Statistics-197",
+    "id": "dx-Mathematical-Statistics-203",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36220,7 +36340,7 @@
     "endLine": 1491
   },
   {
-    "id": "dx-Mathematical-Statistics-198",
+    "id": "dx-Mathematical-Statistics-204",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36240,7 +36360,7 @@
     "endLine": 1505
   },
   {
-    "id": "dx-Mathematical-Statistics-199",
+    "id": "dx-Mathematical-Statistics-205",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36260,7 +36380,7 @@
     "endLine": 1524
   },
   {
-    "id": "dx-Mathematical-Statistics-200",
+    "id": "dx-Mathematical-Statistics-206",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36280,7 +36400,7 @@
     "endLine": 1536
   },
   {
-    "id": "dx-Mathematical-Statistics-201",
+    "id": "dx-Mathematical-Statistics-207",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36300,7 +36420,7 @@
     "endLine": 1576
   },
   {
-    "id": "dx-Mathematical-Statistics-202",
+    "id": "dx-Mathematical-Statistics-208",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36320,7 +36440,7 @@
     "endLine": 1579
   },
   {
-    "id": "dx-Mathematical-Statistics-203",
+    "id": "dx-Mathematical-Statistics-209",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36340,7 +36460,7 @@
     "endLine": 1597
   },
   {
-    "id": "dx-Mathematical-Statistics-204",
+    "id": "dx-Mathematical-Statistics-210",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36360,7 +36480,7 @@
     "endLine": 1605
   },
   {
-    "id": "dx-Mathematical-Statistics-205",
+    "id": "dx-Mathematical-Statistics-211",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36380,7 +36500,7 @@
     "endLine": 1611
   },
   {
-    "id": "dx-Mathematical-Statistics-206",
+    "id": "dx-Mathematical-Statistics-212",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36400,7 +36520,7 @@
     "endLine": 1636
   },
   {
-    "id": "dx-Mathematical-Statistics-207",
+    "id": "dx-Mathematical-Statistics-213",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36420,7 +36540,7 @@
     "endLine": 1639
   },
   {
-    "id": "dx-Mathematical-Statistics-208",
+    "id": "dx-Mathematical-Statistics-214",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36440,7 +36560,7 @@
     "endLine": 1655
   },
   {
-    "id": "dx-Mathematical-Statistics-209",
+    "id": "dx-Mathematical-Statistics-215",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36460,7 +36580,7 @@
     "endLine": 1687
   },
   {
-    "id": "dx-Mathematical-Statistics-210",
+    "id": "dx-Mathematical-Statistics-216",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36480,7 +36600,7 @@
     "endLine": 1707
   },
   {
-    "id": "dx-Mathematical-Statistics-211",
+    "id": "dx-Mathematical-Statistics-217",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36500,7 +36620,7 @@
     "endLine": 1728
   },
   {
-    "id": "dx-Mathematical-Statistics-212",
+    "id": "dx-Mathematical-Statistics-218",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36520,7 +36640,7 @@
     "endLine": 1731
   },
   {
-    "id": "dx-Mathematical-Statistics-213",
+    "id": "dx-Mathematical-Statistics-219",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36540,7 +36660,7 @@
     "endLine": 1752
   },
   {
-    "id": "dx-Mathematical-Statistics-214",
+    "id": "dx-Mathematical-Statistics-220",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36560,7 +36680,7 @@
     "endLine": 1755
   },
   {
-    "id": "dx-Mathematical-Statistics-215",
+    "id": "dx-Mathematical-Statistics-221",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36580,7 +36700,7 @@
     "endLine": 1759
   },
   {
-    "id": "dx-Mathematical-Statistics-216",
+    "id": "dx-Mathematical-Statistics-222",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36600,7 +36720,7 @@
     "endLine": 1762
   },
   {
-    "id": "dx-Mathematical-Statistics-217",
+    "id": "dx-Mathematical-Statistics-223",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36620,7 +36740,7 @@
     "endLine": 1769
   },
   {
-    "id": "dx-Mathematical-Statistics-218",
+    "id": "dx-Mathematical-Statistics-224",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36640,7 +36760,7 @@
     "endLine": 1772
   },
   {
-    "id": "dx-Mathematical-Statistics-219",
+    "id": "dx-Mathematical-Statistics-225",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36660,7 +36780,7 @@
     "endLine": 1784
   },
   {
-    "id": "dx-Mathematical-Statistics-220",
+    "id": "dx-Mathematical-Statistics-226",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36680,7 +36800,7 @@
     "endLine": 1787
   },
   {
-    "id": "dx-Mathematical-Statistics-221",
+    "id": "dx-Mathematical-Statistics-227",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36700,7 +36820,7 @@
     "endLine": 1798
   },
   {
-    "id": "dx-Mathematical-Statistics-222",
+    "id": "dx-Mathematical-Statistics-228",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36720,7 +36840,7 @@
     "endLine": 1801
   },
   {
-    "id": "dx-Mathematical-Statistics-223",
+    "id": "dx-Mathematical-Statistics-229",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36740,7 +36860,7 @@
     "endLine": 1815
   },
   {
-    "id": "dx-Mathematical-Statistics-224",
+    "id": "dx-Mathematical-Statistics-230",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36760,7 +36880,7 @@
     "endLine": 1824
   },
   {
-    "id": "dx-Mathematical-Statistics-225",
+    "id": "dx-Mathematical-Statistics-231",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36780,7 +36900,7 @@
     "endLine": 1827
   },
   {
-    "id": "dx-Mathematical-Statistics-226",
+    "id": "dx-Mathematical-Statistics-232",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36800,7 +36920,7 @@
     "endLine": 1830
   },
   {
-    "id": "dx-Mathematical-Statistics-227",
+    "id": "dx-Mathematical-Statistics-233",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36820,7 +36940,7 @@
     "endLine": 1840
   },
   {
-    "id": "dx-Mathematical-Statistics-228",
+    "id": "dx-Mathematical-Statistics-234",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36840,7 +36960,7 @@
     "endLine": 1843
   },
   {
-    "id": "dx-Mathematical-Statistics-229",
+    "id": "dx-Mathematical-Statistics-235",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36860,7 +36980,7 @@
     "endLine": 1871
   },
   {
-    "id": "dx-Mathematical-Statistics-230",
+    "id": "dx-Mathematical-Statistics-236",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36880,7 +37000,7 @@
     "endLine": 1887
   },
   {
-    "id": "dx-Mathematical-Statistics-231",
+    "id": "dx-Mathematical-Statistics-237",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36900,7 +37020,7 @@
     "endLine": 1893
   },
   {
-    "id": "dx-Mathematical-Statistics-232",
+    "id": "dx-Mathematical-Statistics-238",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36920,7 +37040,7 @@
     "endLine": 1925
   },
   {
-    "id": "dx-Mathematical-Statistics-233",
+    "id": "dx-Mathematical-Statistics-239",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36940,7 +37060,7 @@
     "endLine": 1938
   },
   {
-    "id": "dx-Mathematical-Statistics-234",
+    "id": "dx-Mathematical-Statistics-240",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36960,7 +37080,7 @@
     "endLine": 1967
   },
   {
-    "id": "dx-Mathematical-Statistics-235",
+    "id": "dx-Mathematical-Statistics-241",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -36980,7 +37100,7 @@
     "endLine": 1983
   },
   {
-    "id": "dx-Mathematical-Statistics-236",
+    "id": "dx-Mathematical-Statistics-242",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37000,7 +37120,7 @@
     "endLine": 1990
   },
   {
-    "id": "dx-Mathematical-Statistics-237",
+    "id": "dx-Mathematical-Statistics-243",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37020,7 +37140,7 @@
     "endLine": 1998
   },
   {
-    "id": "dx-Mathematical-Statistics-238",
+    "id": "dx-Mathematical-Statistics-244",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37040,7 +37160,7 @@
     "endLine": 2045
   },
   {
-    "id": "dx-Mathematical-Statistics-239",
+    "id": "dx-Mathematical-Statistics-245",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37060,7 +37180,7 @@
     "endLine": 2062
   },
   {
-    "id": "dx-Mathematical-Statistics-240",
+    "id": "dx-Mathematical-Statistics-246",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37080,7 +37200,7 @@
     "endLine": 2065
   },
   {
-    "id": "dx-Mathematical-Statistics-241",
+    "id": "dx-Mathematical-Statistics-247",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37100,7 +37220,7 @@
     "endLine": 2073
   },
   {
-    "id": "dx-Mathematical-Statistics-242",
+    "id": "dx-Mathematical-Statistics-248",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37120,7 +37240,7 @@
     "endLine": 2113
   },
   {
-    "id": "dx-Mathematical-Statistics-243",
+    "id": "dx-Mathematical-Statistics-249",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37140,7 +37260,7 @@
     "endLine": 2116
   },
   {
-    "id": "dx-Mathematical-Statistics-244",
+    "id": "dx-Mathematical-Statistics-250",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37160,7 +37280,7 @@
     "endLine": 2126
   },
   {
-    "id": "dx-Mathematical-Statistics-245",
+    "id": "dx-Mathematical-Statistics-251",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37180,7 +37300,7 @@
     "endLine": 2171
   },
   {
-    "id": "dx-Mathematical-Statistics-246",
+    "id": "dx-Mathematical-Statistics-252",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37200,7 +37320,7 @@
     "endLine": 2240
   },
   {
-    "id": "dx-Mathematical-Statistics-247",
+    "id": "dx-Mathematical-Statistics-253",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37220,7 +37340,7 @@
     "endLine": 2677
   },
   {
-    "id": "dx-Mathematical-Statistics-248",
+    "id": "dx-Mathematical-Statistics-254",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37240,7 +37360,7 @@
     "endLine": 2718
   },
   {
-    "id": "dx-Mathematical-Statistics-249",
+    "id": "dx-Mathematical-Statistics-255",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37260,7 +37380,7 @@
     "endLine": 2721
   },
   {
-    "id": "dx-Mathematical-Statistics-250",
+    "id": "dx-Mathematical-Statistics-256",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37280,7 +37400,7 @@
     "endLine": 2739
   },
   {
-    "id": "dx-Mathematical-Statistics-251",
+    "id": "dx-Mathematical-Statistics-257",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37300,7 +37420,7 @@
     "endLine": 2757
   },
   {
-    "id": "dx-Mathematical-Statistics-252",
+    "id": "dx-Mathematical-Statistics-258",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37320,7 +37440,7 @@
     "endLine": 2761
   },
   {
-    "id": "dx-Mathematical-Statistics-253",
+    "id": "dx-Mathematical-Statistics-259",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37340,7 +37460,7 @@
     "endLine": 2784
   },
   {
-    "id": "dx-Mathematical-Statistics-254",
+    "id": "dx-Mathematical-Statistics-260",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37360,7 +37480,7 @@
     "endLine": 2789
   },
   {
-    "id": "dx-Mathematical-Statistics-255",
+    "id": "dx-Mathematical-Statistics-261",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37380,7 +37500,7 @@
     "endLine": 2792
   },
   {
-    "id": "dx-Mathematical-Statistics-256",
+    "id": "dx-Mathematical-Statistics-262",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37400,7 +37520,7 @@
     "endLine": 2799
   },
   {
-    "id": "dx-Mathematical-Statistics-257",
+    "id": "dx-Mathematical-Statistics-263",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37420,7 +37540,7 @@
     "endLine": 2808
   },
   {
-    "id": "dx-Mathematical-Statistics-258",
+    "id": "dx-Mathematical-Statistics-264",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37440,7 +37560,7 @@
     "endLine": 2816
   },
   {
-    "id": "dx-Mathematical-Statistics-259",
+    "id": "dx-Mathematical-Statistics-265",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37460,7 +37580,7 @@
     "endLine": 2821
   },
   {
-    "id": "dx-Mathematical-Statistics-260",
+    "id": "dx-Mathematical-Statistics-266",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37480,7 +37600,7 @@
     "endLine": 2840
   },
   {
-    "id": "dx-Mathematical-Statistics-261",
+    "id": "dx-Mathematical-Statistics-267",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37500,7 +37620,7 @@
     "endLine": 2843
   },
   {
-    "id": "dx-Mathematical-Statistics-262",
+    "id": "dx-Mathematical-Statistics-268",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37520,7 +37640,7 @@
     "endLine": 2855
   },
   {
-    "id": "dx-Mathematical-Statistics-263",
+    "id": "dx-Mathematical-Statistics-269",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37540,7 +37660,7 @@
     "endLine": 2899
   },
   {
-    "id": "dx-Mathematical-Statistics-264",
+    "id": "dx-Mathematical-Statistics-270",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37560,7 +37680,7 @@
     "endLine": 2902
   },
   {
-    "id": "dx-Mathematical-Statistics-265",
+    "id": "dx-Mathematical-Statistics-271",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37580,7 +37700,7 @@
     "endLine": 2916
   },
   {
-    "id": "dx-Mathematical-Statistics-266",
+    "id": "dx-Mathematical-Statistics-272",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37600,7 +37720,7 @@
     "endLine": 2923
   },
   {
-    "id": "dx-Mathematical-Statistics-267",
+    "id": "dx-Mathematical-Statistics-273",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37620,7 +37740,7 @@
     "endLine": 2930
   },
   {
-    "id": "dx-Mathematical-Statistics-268",
+    "id": "dx-Mathematical-Statistics-274",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37640,7 +37760,7 @@
     "endLine": 2941
   },
   {
-    "id": "dx-Mathematical-Statistics-269",
+    "id": "dx-Mathematical-Statistics-275",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37660,7 +37780,7 @@
     "endLine": 2974
   },
   {
-    "id": "dx-Mathematical-Statistics-270",
+    "id": "dx-Mathematical-Statistics-276",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37680,7 +37800,7 @@
     "endLine": 2986
   },
   {
-    "id": "dx-Mathematical-Statistics-271",
+    "id": "dx-Mathematical-Statistics-277",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37700,7 +37820,7 @@
     "endLine": 2989
   },
   {
-    "id": "dx-Mathematical-Statistics-272",
+    "id": "dx-Mathematical-Statistics-278",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37720,7 +37840,7 @@
     "endLine": 3037
   },
   {
-    "id": "dx-Mathematical-Statistics-273",
+    "id": "dx-Mathematical-Statistics-279",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37740,7 +37860,7 @@
     "endLine": 3041
   },
   {
-    "id": "dx-Mathematical-Statistics-274",
+    "id": "dx-Mathematical-Statistics-280",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37760,7 +37880,7 @@
     "endLine": 3058
   },
   {
-    "id": "dx-Mathematical-Statistics-275",
+    "id": "dx-Mathematical-Statistics-281",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37780,7 +37900,7 @@
     "endLine": 3063
   },
   {
-    "id": "dx-Mathematical-Statistics-276",
+    "id": "dx-Mathematical-Statistics-282",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37800,7 +37920,7 @@
     "endLine": 3072
   },
   {
-    "id": "dx-Mathematical-Statistics-277",
+    "id": "dx-Mathematical-Statistics-283",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37820,7 +37940,7 @@
     "endLine": 3075
   },
   {
-    "id": "dx-Mathematical-Statistics-278",
+    "id": "dx-Mathematical-Statistics-284",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37840,7 +37960,7 @@
     "endLine": 3100
   },
   {
-    "id": "dx-Mathematical-Statistics-279",
+    "id": "dx-Mathematical-Statistics-285",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37860,7 +37980,107 @@
     "endLine": 3105
   },
   {
-    "id": "dx-Mathematical-Statistics-280",
+    "id": "dx-Mathematical-Statistics-286",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "solution",
+    "blockTitle": "4.3",
+    "previewType": "solution",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{solution}\n设不合格品数 $X \\sim B(n, p)$，$n = 36$，样本比例 $\\hat{p} = \\dfrac{3}{36} = \\dfrac{1}{12} \\approx 0.0833$。\n\n\\textbf{第一问：}建立假设\n\\[\nH_0: p \\leq 0.03, \\quad H_1: p > 0.03\n\\]\n检验统计量为\n\\[\nZ = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}} = \\frac{\\frac{1}{12} - 0.03}{\\sqrt{\\frac{0.03 \\times 0.97}{36}}} \\approx 1.875\n\\]\n取 $\\alpha = 0.05$，单侧临界值 $z_{0.05} = 1.645$。因为 $Z \\approx 1.875 > 1.645$，拒绝 $H_0$，认为不合格品率高于 $3\\%$。\n\n\\textbf{第二问：}构造 $p$ 的置信水平 $0.95$ 的单侧置信上限：\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} = \\frac{1}{12} + 1.645 \\times \\sqrt{\\frac{\\frac{1}{12} \\times \\frac{11}{12}}{36}} \\approx 0.160\n\\]\n即认为次品率不超过 $16.0\\%$。\n\\end{solution}",
+    "content": "\\begin{solution}\n设不合格品数 $X \\sim B(n, p)$，$n = 36$，样本比例 $\\hat{p} = \\dfrac{3}{36} = \\dfrac{1}{12} \\approx 0.0833$。\n\n\\textbf{第一问：}建立假设\n\\[\nH_0: p \\leq 0.03, \\quad H_1: p > 0.03\n\\]\n检验统计量为\n\\[\nZ = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}} = \\frac{\\frac{1}{12} - 0.03}{\\sqrt{\\frac{0.03 \\times 0.97}{36}}} \\approx 1.875\n\\]\n取 $\\alpha = 0.05$，单侧临界值 $z_{0.05} = 1.645$。因为 $Z \\approx 1.875 > 1.645$，拒绝 $H_0$，认为不合格品率高于 $3\\%$。\n\n\\textbf{第二问：}构造 $p$ 的置信水平 $0.95$ 的单侧置信上限：\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} = \\frac{1}{12} + 1.645 \\times \\sqrt{\\frac{\\frac{1}{12} \\times \\frac{11}{12}}{36}} \\approx 0.160\n\\]\n即认为次品率不超过 $16.0\\%$。\n\\end{solution}",
+    "text": "设不合格品数 ， ，样本比例 。 第一问：建立假设 检验统计量为 取 ，单侧临界值 。因为 ，拒绝 ，认为不合格品率高于 。 第二问：构造 的置信水平 的单侧置信上限： 即认为次品率不超过 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3106,
+    "endLine": 3124
+  },
+  {
+    "id": "dx-Mathematical-Statistics-287",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "dxtips",
+    "blockTitle": "4.3",
+    "previewType": "tip",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{dxtips}\n    第一步先确定是什么分布如果合格不合格就是二项分布把n和p算出来p就是我们要求的不合格率的概率要求什么算什么。然后\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    第一步先确定是什么分布如果合格不合格就是二项分布把n和p算出来p就是我们要求的不合格率的概率要求什么算什么。然后\n\\end{dxtips}",
+    "text": "第一步先确定是什么分布如果合格不合格就是二项分布把n和p算出来p就是我们要求的不合格率的概率要求什么算什么。然后",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3125,
+    "endLine": 3127
+  },
+  {
+    "id": "dx-Mathematical-Statistics-288",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "dxtips",
+    "blockTitle": "4.3",
+    "previewType": "tip",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{dxtips}\n    梳理一下，抽36他就算一个大样本，在大样本中出现次品的次数服从正态分布。也就是每一次抽36坏的可能都不同所以这些次数是服从正态分布的。然后呢我们就要求如果按照H0假设的出现现在状况的概率，如何求呢我们要减去均值除以标准差得到标准正态分布然后再查表，这里就是省略了上下同时除以n的步骤。\n    \n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    梳理一下，抽36他就算一个大样本，在大样本中出现次品的次数服从正态分布。也就是每一次抽36坏的可能都不同所以这些次数是服从正态分布的。然后呢我们就要求如果按照H0假设的出现现在状况的概率，如何求呢我们要减去均值除以标准差得到标准正态分布然后再查表，这里就是省略了上下同时除以n的步骤。\n    \n\\end{dxtips}",
+    "text": "梳理一下，抽36他就算一个大样本，在大样本中出现次品的次数服从正态分布。也就是每一次抽36坏的可能都不同所以这些次数是服从正态分布的。然后呢我们就要求如果按照H0假设的出现现在状况的概率，如何求呢我们要减去均值除以标准差得到标准正态分布然后再查表，这里就是省略了上下同时除以n的步骤。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3128,
+    "endLine": 3131
+  },
+  {
+    "id": "dx-Mathematical-Statistics-289",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "dxtips",
+    "blockTitle": "4.3",
+    "previewType": "tip",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{dxtips}\n  第一问：假设已知 $p_0 = 0.03$，即已知均值 $np_0$，从而确定正态分布的图像，看观测值 $\\hat{p}$ 够不够极端。\n\n第二问：不知道真实 $p$，但构造一个区间，使得真实的 $p$ 有 95\\% 的概率落在观测值 $\\hat{p}$ 的附近。但既然只关心上限，下限没意义，就直接把全部的5都放到右尾，变成单侧\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n\\]\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n  第一问：假设已知 $p_0 = 0.03$，即已知均值 $np_0$，从而确定正态分布的图像，看观测值 $\\hat{p}$ 够不够极端。\n\n第二问：不知道真实 $p$，但构造一个区间，使得真实的 $p$ 有 95\\% 的概率落在观测值 $\\hat{p}$ 的附近。但既然只关心上限，下限没意义，就直接把全部的5都放到右尾，变成单侧\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n\\]\n\\end{dxtips}",
+    "text": "第一问：假设已知 ，即已知均值 ，从而确定正态分布的图像，看观测值 够不够极端。 第二问：不知道真实 ，但构造一个区间，使得真实的 有 95\\% 的概率落在观测值 的附近。但既然只关心上限，下限没意义，就直接把全部的5都放到右尾，变成单侧",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3132,
+    "endLine": 3139
+  },
+  {
+    "id": "dx-Mathematical-Statistics-290",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "note",
+    "blockTitle": "4.3",
+    "previewType": "note",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{note}\n标准化是除以标准差，反过来还原就是乘以标准差，从 $N(0,1)$ 的尺度换回 $\\hat{p}$ 的尺度。\n\\end{note}",
+    "content": "\\begin{note}\n标准化是除以标准差，反过来还原就是乘以标准差，从 $N(0,1)$ 的尺度换回 $\\hat{p}$ 的尺度。\n\\end{note}",
+    "text": "标准化是除以标准差，反过来还原就是乘以标准差，从 的尺度换回 的尺度。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3140,
+    "endLine": 3142
+  },
+  {
+    "id": "dx-Mathematical-Statistics-291",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37876,11 +38096,131 @@
     "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_n$ 为来自 $P(\\lambda)$ 的样本，试给出检验 $H_0: \\lambda = \\lambda_0$；$H_1: \\lambda \\neq \\lambda_0$ 的检验函数．若有观测值 $5, 7, 8, 6, 9, 10$，在检验水平 $\\alpha = 0.05$ 下，能接受 $\\lambda = 3$ 吗？\n\\end{homework}",
     "text": "[2] 设 为来自 的样本，试给出检验 ； 的检验函数．若有观测值 ，在检验水平 下，能接受 吗？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3107,
-    "endLine": 3109
+    "startLine": 3143,
+    "endLine": 3145
   },
   {
-    "id": "dx-Mathematical-Statistics-281",
+    "id": "dx-Mathematical-Statistics-292",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "note",
+    "blockTitle": "4.3",
+    "previewType": "note",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{note}\n单个 $X_i \\sim P(\\lambda)$：期望是 $\\lambda$，方差是 $\\lambda$（期望方差相等是 Poisson 分布的特征）。\n\n所以 $\\bar{X}$ 的方差是 $\\dfrac{\\lambda}{n}$，标准差是 $\\sqrt{\\dfrac{\\lambda}{n}}$。\n\\end{note}",
+    "content": "\\begin{note}\n单个 $X_i \\sim P(\\lambda)$：期望是 $\\lambda$，方差是 $\\lambda$（期望方差相等是 Poisson 分布的特征）。\n\n所以 $\\bar{X}$ 的方差是 $\\dfrac{\\lambda}{n}$，标准差是 $\\sqrt{\\dfrac{\\lambda}{n}}$。\n\\end{note}",
+    "text": "单个 ：期望是 ，方差是 （期望方差相等是 Poisson 分布的特征）。 所以 的方差是 ，标准差是 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3146,
+    "endLine": 3150
+  },
+  {
+    "id": "dx-Mathematical-Statistics-293",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "solution",
+    "blockTitle": "4.3",
+    "previewType": "solution",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{solution}\n由 $X_i \\sim P(\\lambda)$，$\\bar{X}$ 是 $\\lambda$ 的充分统计量，由中心极限定理，检验统计量为\n\\[\nZ = \\frac{\\bar{X} - \\lambda_0}{\\sqrt{\\lambda_0 / n}} \\overset{H_0}{\\approx} N(0,1)\n\\]\n拒绝域为 $|Z| > z_{\\alpha/2} = z_{0.025} = 1.96$。\n\n计算观测值：\n\\[\n\\bar{x} = \\frac{5+7+8+6+9+10}{6} = 7.5\n\\]\n代入统计量：\n\\[\nZ = \\frac{7.5 - 3}{\\sqrt{3/6}} = \\frac{4.5}{\\sqrt{0.5}} \\approx 6.36\n\\]\n因为 $|Z| \\approx 6.36 > 1.96$，拒绝 $H_0$，在显著性水平 $\\alpha = 0.05$ 下，不能接受 $\\lambda = 3$。\n\\end{solution}",
+    "content": "\\begin{solution}\n由 $X_i \\sim P(\\lambda)$，$\\bar{X}$ 是 $\\lambda$ 的充分统计量，由中心极限定理，检验统计量为\n\\[\nZ = \\frac{\\bar{X} - \\lambda_0}{\\sqrt{\\lambda_0 / n}} \\overset{H_0}{\\approx} N(0,1)\n\\]\n拒绝域为 $|Z| > z_{\\alpha/2} = z_{0.025} = 1.96$。\n\n计算观测值：\n\\[\n\\bar{x} = \\frac{5+7+8+6+9+10}{6} = 7.5\n\\]\n代入统计量：\n\\[\nZ = \\frac{7.5 - 3}{\\sqrt{3/6}} = \\frac{4.5}{\\sqrt{0.5}} \\approx 6.36\n\\]\n因为 $|Z| \\approx 6.36 > 1.96$，拒绝 $H_0$，在显著性水平 $\\alpha = 0.05$ 下，不能接受 $\\lambda = 3$。\n\\end{solution}",
+    "text": "由 ， 是 的充分统计量，由中心极限定理，检验统计量为 拒绝域为 。 计算观测值： 代入统计量： 因为 ，拒绝 ，在显著性水平 下，不能接受 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3151,
+    "endLine": 3167
+  },
+  {
+    "id": "dx-Mathematical-Statistics-294",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第10周作业",
+    "subsection": "4.3",
+    "kind": "note",
+    "blockTitle": "4.3",
+    "previewType": "note",
+    "previewTitle": "4.3",
+    "rawContent": "\\begin{note}\n看 $H_1$ 的符号：\n\\begin{itemize}\n    \\item $H_1: \\lambda \\neq \\lambda_0$，有 $\\neq$，双侧检验\n    \\item $H_1: \\lambda > \\lambda_0$，有 $>$，单侧右检验\n    \\item $H_1: \\lambda < \\lambda_0$，有 $<$，单侧左检验\n\\end{itemize}\n\\end{note}",
+    "content": "\\begin{note}\n看 $H_1$ 的符号：\n\\begin{itemize}\n    \\item $H_1: \\lambda \\neq \\lambda_0$，有 $\\neq$，双侧检验\n    \\item $H_1: \\lambda > \\lambda_0$，有 $>$，单侧右检验\n    \\item $H_1: \\lambda < \\lambda_0$，有 $<$，单侧左检验\n\\end{itemize}\n\\end{note}",
+    "text": "看 的符号： ，有 ，双侧检验 ，有 ，单侧右检验 ，有 ，单侧左检验",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3168,
+    "endLine": 3175
+  },
+  {
+    "id": "dx-Mathematical-Statistics-295",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
+    "text": "1 设总体 服从参数为 的泊松分布 其中 为参数， 是独立同分布样本。考虑假设检验问题： 有无 UMP 检验？为什么？ 若有 UMP 检验，试求出检验水平 ， ， 时的检验函数。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3177,
+    "endLine": 3186
+  },
+  {
+    "id": "dx-Mathematical-Statistics-296",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
+    "content": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
+    "text": "2 某修理部对要求服务人数连续作 日记录。 为第 日要求服务的人数。设 独立同分布，均服从参数为 的泊松分布。若每日要求服务人数太少将关门。根据 日的记录，要作出符合下面要求的决定： 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门； 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。 问需观察多少日即 为多少时，UMP 检验才能满足上述要求？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3187,
+    "endLine": 3194
+  },
+  {
+    "id": "dx-Mathematical-Statistics-297",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
+    "text": "3 一测量仪器正常运行，对某量重复测量 次，其结果是 。假设 。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 。试回答下列问题： 怎样将该问题叙述成假设检验问题？ 该假设检验问题有无 UMP 检验？若有给出检验函数的形式； 利用 分布表，确定样本容量 的大小，使得在检验水平为 0.01、测量误差大于 时，被检测出的概率大于 0.9。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3196,
+    "endLine": 3203
+  },
+  {
+    "id": "dx-Mathematical-Statistics-298",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37900,7 +38240,7 @@
     "endLine": 14
   },
   {
-    "id": "dx-Mathematical-Statistics-282",
+    "id": "dx-Mathematical-Statistics-299",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37920,7 +38260,7 @@
     "endLine": 22
   },
   {
-    "id": "dx-Mathematical-Statistics-283",
+    "id": "dx-Mathematical-Statistics-300",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37940,7 +38280,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-Mathematical-Statistics-284",
+    "id": "dx-Mathematical-Statistics-301",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37960,7 +38300,7 @@
     "endLine": 39
   },
   {
-    "id": "dx-Mathematical-Statistics-285",
+    "id": "dx-Mathematical-Statistics-302",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -37980,7 +38320,7 @@
     "endLine": 47
   },
   {
-    "id": "dx-Mathematical-Statistics-286",
+    "id": "dx-Mathematical-Statistics-303",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38000,7 +38340,7 @@
     "endLine": 51
   },
   {
-    "id": "dx-Mathematical-Statistics-287",
+    "id": "dx-Mathematical-Statistics-304",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38020,7 +38360,7 @@
     "endLine": 61
   },
   {
-    "id": "dx-Mathematical-Statistics-288",
+    "id": "dx-Mathematical-Statistics-305",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38040,7 +38380,7 @@
     "endLine": 69
   },
   {
-    "id": "dx-Mathematical-Statistics-289",
+    "id": "dx-Mathematical-Statistics-306",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38060,7 +38400,7 @@
     "endLine": 76
   },
   {
-    "id": "dx-Mathematical-Statistics-290",
+    "id": "dx-Mathematical-Statistics-307",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38080,7 +38420,7 @@
     "endLine": 89
   },
   {
-    "id": "dx-Mathematical-Statistics-291",
+    "id": "dx-Mathematical-Statistics-308",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38100,7 +38440,7 @@
     "endLine": 102
   },
   {
-    "id": "dx-Mathematical-Statistics-292",
+    "id": "dx-Mathematical-Statistics-309",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38120,7 +38460,7 @@
     "endLine": 106
   },
   {
-    "id": "dx-Mathematical-Statistics-293",
+    "id": "dx-Mathematical-Statistics-310",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38140,7 +38480,7 @@
     "endLine": 113
   },
   {
-    "id": "dx-Mathematical-Statistics-294",
+    "id": "dx-Mathematical-Statistics-311",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38160,7 +38500,7 @@
     "endLine": 120
   },
   {
-    "id": "dx-Mathematical-Statistics-295",
+    "id": "dx-Mathematical-Statistics-312",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38180,7 +38520,7 @@
     "endLine": 138
   },
   {
-    "id": "dx-Mathematical-Statistics-296",
+    "id": "dx-Mathematical-Statistics-313",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38200,7 +38540,7 @@
     "endLine": 150
   },
   {
-    "id": "dx-Mathematical-Statistics-297",
+    "id": "dx-Mathematical-Statistics-314",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38220,7 +38560,7 @@
     "endLine": 157
   },
   {
-    "id": "dx-Mathematical-Statistics-298",
+    "id": "dx-Mathematical-Statistics-315",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38240,7 +38580,7 @@
     "endLine": 177
   },
   {
-    "id": "dx-Mathematical-Statistics-299",
+    "id": "dx-Mathematical-Statistics-316",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38260,7 +38600,7 @@
     "endLine": 185
   },
   {
-    "id": "dx-Mathematical-Statistics-300",
+    "id": "dx-Mathematical-Statistics-317",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38280,7 +38620,7 @@
     "endLine": 188
   },
   {
-    "id": "dx-Mathematical-Statistics-301",
+    "id": "dx-Mathematical-Statistics-318",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38300,7 +38640,7 @@
     "endLine": 192
   },
   {
-    "id": "dx-Mathematical-Statistics-302",
+    "id": "dx-Mathematical-Statistics-319",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38320,7 +38660,7 @@
     "endLine": 196
   },
   {
-    "id": "dx-Mathematical-Statistics-303",
+    "id": "dx-Mathematical-Statistics-320",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38340,7 +38680,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-Mathematical-Statistics-304",
+    "id": "dx-Mathematical-Statistics-321",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38360,7 +38700,7 @@
     "endLine": 215
   },
   {
-    "id": "dx-Mathematical-Statistics-305",
+    "id": "dx-Mathematical-Statistics-322",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38380,7 +38720,7 @@
     "endLine": 223
   },
   {
-    "id": "dx-Mathematical-Statistics-306",
+    "id": "dx-Mathematical-Statistics-323",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38400,7 +38740,7 @@
     "endLine": 234
   },
   {
-    "id": "dx-Mathematical-Statistics-307",
+    "id": "dx-Mathematical-Statistics-324",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38420,7 +38760,7 @@
     "endLine": 254
   },
   {
-    "id": "dx-Mathematical-Statistics-308",
+    "id": "dx-Mathematical-Statistics-325",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38440,7 +38780,7 @@
     "endLine": 266
   },
   {
-    "id": "dx-Mathematical-Statistics-309",
+    "id": "dx-Mathematical-Statistics-326",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38460,7 +38800,7 @@
     "endLine": 274
   },
   {
-    "id": "dx-Mathematical-Statistics-310",
+    "id": "dx-Mathematical-Statistics-327",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38480,7 +38820,7 @@
     "endLine": 286
   },
   {
-    "id": "dx-Mathematical-Statistics-311",
+    "id": "dx-Mathematical-Statistics-328",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38500,7 +38840,7 @@
     "endLine": 289
   },
   {
-    "id": "dx-Mathematical-Statistics-312",
+    "id": "dx-Mathematical-Statistics-329",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38520,7 +38860,7 @@
     "endLine": 293
   },
   {
-    "id": "dx-Mathematical-Statistics-313",
+    "id": "dx-Mathematical-Statistics-330",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38540,7 +38880,7 @@
     "endLine": 297
   },
   {
-    "id": "dx-Mathematical-Statistics-314",
+    "id": "dx-Mathematical-Statistics-331",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38560,7 +38900,7 @@
     "endLine": 301
   },
   {
-    "id": "dx-Mathematical-Statistics-315",
+    "id": "dx-Mathematical-Statistics-332",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38580,7 +38920,7 @@
     "endLine": 305
   },
   {
-    "id": "dx-Mathematical-Statistics-316",
+    "id": "dx-Mathematical-Statistics-333",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38600,7 +38940,7 @@
     "endLine": 309
   },
   {
-    "id": "dx-Mathematical-Statistics-317",
+    "id": "dx-Mathematical-Statistics-334",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38620,7 +38960,7 @@
     "endLine": 322
   },
   {
-    "id": "dx-Mathematical-Statistics-318",
+    "id": "dx-Mathematical-Statistics-335",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38640,7 +38980,7 @@
     "endLine": 330
   },
   {
-    "id": "dx-Mathematical-Statistics-319",
+    "id": "dx-Mathematical-Statistics-336",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38660,7 +39000,7 @@
     "endLine": 334
   },
   {
-    "id": "dx-Mathematical-Statistics-320",
+    "id": "dx-Mathematical-Statistics-337",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38680,7 +39020,7 @@
     "endLine": 345
   },
   {
-    "id": "dx-Mathematical-Statistics-321",
+    "id": "dx-Mathematical-Statistics-338",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38700,7 +39040,7 @@
     "endLine": 349
   },
   {
-    "id": "dx-Mathematical-Statistics-322",
+    "id": "dx-Mathematical-Statistics-339",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38720,7 +39060,7 @@
     "endLine": 359
   },
   {
-    "id": "dx-Mathematical-Statistics-323",
+    "id": "dx-Mathematical-Statistics-340",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38740,7 +39080,7 @@
     "endLine": 366
   },
   {
-    "id": "dx-Mathematical-Statistics-324",
+    "id": "dx-Mathematical-Statistics-341",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38760,7 +39100,7 @@
     "endLine": 370
   },
   {
-    "id": "dx-Mathematical-Statistics-325",
+    "id": "dx-Mathematical-Statistics-342",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38780,7 +39120,7 @@
     "endLine": 374
   },
   {
-    "id": "dx-Mathematical-Statistics-326",
+    "id": "dx-Mathematical-Statistics-343",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38800,7 +39140,7 @@
     "endLine": 378
   },
   {
-    "id": "dx-Mathematical-Statistics-327",
+    "id": "dx-Mathematical-Statistics-344",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38820,7 +39160,7 @@
     "endLine": 386
   },
   {
-    "id": "dx-Mathematical-Statistics-328",
+    "id": "dx-Mathematical-Statistics-345",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38840,7 +39180,7 @@
     "endLine": 394
   },
   {
-    "id": "dx-Mathematical-Statistics-329",
+    "id": "dx-Mathematical-Statistics-346",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38860,7 +39200,7 @@
     "endLine": 398
   },
   {
-    "id": "dx-Mathematical-Statistics-330",
+    "id": "dx-Mathematical-Statistics-347",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38880,7 +39220,7 @@
     "endLine": 402
   },
   {
-    "id": "dx-Mathematical-Statistics-331",
+    "id": "dx-Mathematical-Statistics-348",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38900,7 +39240,7 @@
     "endLine": 410
   },
   {
-    "id": "dx-Mathematical-Statistics-332",
+    "id": "dx-Mathematical-Statistics-349",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38920,7 +39260,7 @@
     "endLine": 418
   },
   {
-    "id": "dx-Mathematical-Statistics-333",
+    "id": "dx-Mathematical-Statistics-350",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38940,7 +39280,7 @@
     "endLine": 422
   },
   {
-    "id": "dx-Mathematical-Statistics-334",
+    "id": "dx-Mathematical-Statistics-351",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38960,7 +39300,7 @@
     "endLine": 426
   },
   {
-    "id": "dx-Mathematical-Statistics-335",
+    "id": "dx-Mathematical-Statistics-352",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38980,7 +39320,7 @@
     "endLine": 438
   },
   {
-    "id": "dx-Mathematical-Statistics-336",
+    "id": "dx-Mathematical-Statistics-353",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39000,7 +39340,7 @@
     "endLine": 442
   },
   {
-    "id": "dx-Mathematical-Statistics-337",
+    "id": "dx-Mathematical-Statistics-354",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39020,7 +39360,7 @@
     "endLine": 452
   },
   {
-    "id": "dx-Mathematical-Statistics-338",
+    "id": "dx-Mathematical-Statistics-355",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39040,7 +39380,7 @@
     "endLine": 464
   },
   {
-    "id": "dx-Mathematical-Statistics-339",
+    "id": "dx-Mathematical-Statistics-356",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39060,7 +39400,7 @@
     "endLine": 476
   },
   {
-    "id": "dx-Mathematical-Statistics-340",
+    "id": "dx-Mathematical-Statistics-357",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39080,7 +39420,7 @@
     "endLine": 480
   },
   {
-    "id": "dx-Mathematical-Statistics-341",
+    "id": "dx-Mathematical-Statistics-358",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39100,7 +39440,7 @@
     "endLine": 485
   },
   {
-    "id": "dx-Mathematical-Statistics-342",
+    "id": "dx-Mathematical-Statistics-359",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39118,6 +39458,66 @@
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
     "startLine": 487,
     "endLine": 489
+  },
+  {
+    "id": "dx-Mathematical-Statistics-360",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
+    "text": "1 设总体 服从参数为 的泊松分布 其中 为参数， 是独立同分布样本。考虑假设检验问题： 有无 UMP 检验？为什么？ 若有 UMP 检验，试求出检验水平 ， ， 时的检验函数。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 491,
+    "endLine": 500
+  },
+  {
+    "id": "dx-Mathematical-Statistics-361",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
+    "content": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
+    "text": "2 某修理部对要求服务人数连续作 日记录。 为第 日要求服务的人数。设 独立同分布，均服从参数为 的泊松分布。若每日要求服务人数太少将关门。根据 日的记录，要作出符合下面要求的决定： 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门； 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。 问需观察多少日即 为多少时，UMP 检验才能满足上述要求？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 501,
+    "endLine": 508
+  },
+  {
+    "id": "dx-Mathematical-Statistics-362",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第11周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "第11周作业",
+    "previewType": "homework",
+    "previewTitle": "第11周作业",
+    "rawContent": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
+    "text": "3 一测量仪器正常运行，对某量重复测量 次，其结果是 。假设 。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 。试回答下列问题： 怎样将该问题叙述成假设检验问题？ 该假设检验问题有无 UMP 检验？若有给出检验函数的形式； 利用 分布表，确定样本容量 的大小，使得在检验水平为 0.01、测量误差大于 时，被检测出的概率大于 0.9。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 510,
+    "endLine": 517
   },
   {
     "id": "dx-ML-1",
