@@ -1,9 +1,11 @@
-name: Build LaTeX Notes
+# Original workflow kept for reference — triggers removed so it won't run.
+# To re-enable, restore the `on:` block:
+#   on:
+#     workflow_dispatch:
+#     schedule:
+#       - cron: '0 */3 * * *'
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 */3 * * *'
+name: Build LaTeX Notes (Original)
 
 jobs:
   build:
@@ -14,36 +16,12 @@ jobs:
 
     steps:
       - name: Install Python and Node
-        run: apk add --no-cache python3 py3-pip nodejs npm zstd
+        run: apk add --no-cache python3 py3-pip nodejs npm
 
       - name: Checkout website repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Cache compiled LaTeX repos
-        uses: actions/cache@v4
-        with:
-          path: temp_repos
-          key: temp-repos-${{ github.run_id }}
-          restore-keys: |
-            temp-repos-
-
-      - name: Cache pip packages
-        uses: actions/cache@v4
-        with:
-          path: /root/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
 
       - name: Install Python dependencies
         run: pip3 install -r requirements.txt --break-system-packages
