@@ -37986,6 +37986,166 @@
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_{10}$ 是抽自 $N(\\mu, \\sigma^2)$ 的样本．\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] 试写出检验问题 $H_0: \\sigma^2 \\leqslant 1$；$H_1: \\sigma^2 > 1$ 的检验函数，取 $\\alpha = 0.1$；\n\n    \\item[(3)] 取 $\\alpha = 0.05$，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_{10}$ 是抽自 $N(\\mu, \\sigma^2)$ 的样本．\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] 试写出检验问题 $H_0: \\sigma^2 \\leqslant 1$；$H_1: \\sigma^2 > 1$ 的检验函数，取 $\\alpha = 0.1$；\n\n    \\item[(3)] 取 $\\alpha = 0.05$，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？\n\\end{enumerate}\n\\end{homework}",
+    "text": "[2] 设 是抽自 的样本． 试写出检验问题 ； 的检验函数，取 ； 取 ，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3101,
+    "endLine": 3111
+  },
+  {
+    "id": "dx-Mathematical-Statistics-287",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "solution",
+    "blockTitle": "4.2",
+    "previewType": "solution",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(2)] $\\mu$ 未知，使用统计量\n    \\[\n    \\chi^2 = 9S^2 \\sim \\chi^2(9) \\quad (\\text{在 } \\sigma^2 = 1 \\text{ 下})\n    \\]\n    取 $\\alpha = 0.1$，查表得 $\\chi^2_{0.1}(9) = 14.684$，检验函数为\n    \\[\n    \\varphi(X) =\n    \\begin{cases}\n    1, & 9S^2 > 14.684 \\\\\n    0, & 9S^2 \\leqslant 14.684\n    \\end{cases}\n    \\]\n    功效函数为\n    \\[\n    \\beta(\\sigma^2) = P\\!\\left(\\chi^2(9) > \\frac{14.684}{\\sigma^2}\\right)\n    \\]\n\n    \\item[(3)] 取 $\\alpha = 0.05$，查表得 $\\chi^2_{0.05}(9) = 16.919$，第 (2) 题的检验函数变为\n    \\[\n    \\varphi(X) =\n    \\begin{cases}\n    1, & 9S^2 > 16.919 \\\\\n    0, & 9S^2 \\leqslant 16.919\n    \\end{cases}\n    \\]\n    功效函数变为\n    \\[\n    \\beta(\\sigma^2) = P\\!\\left(\\chi^2(9) > \\frac{16.919}{\\sigma^2}\\right)\n    \\]\n    与 $\\alpha = 0.1$ 时相比，临界值增大，拒绝域缩小，功效函数在每个 $\\sigma^2 > 1$ 处均减小．由此得出结论：在样本量固定时，$\\alpha$ 与功效相互制约，降低显著性水平必然导致功效下降；若要同时控制两类错误，只能增大样本量．\n\\end{enumerate}\n\\end{solution}",
+    "content": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(2)] $\\mu$ 未知，使用统计量\n    \\[\n    \\chi^2 = 9S^2 \\sim \\chi^2(9) \\quad (\\text{在 } \\sigma^2 = 1 \\text{ 下})\n    \\]\n    取 $\\alpha = 0.1$，查表得 $\\chi^2_{0.1}(9) = 14.684$，检验函数为\n    \\[\n    \\varphi(X) =\n    \\begin{cases}\n    1, & 9S^2 > 14.684 \\\\\n    0, & 9S^2 \\leqslant 14.684\n    \\end{cases}\n    \\]\n    功效函数为\n    \\[\n    \\beta(\\sigma^2) = P\\!\\left(\\chi^2(9) > \\frac{14.684}{\\sigma^2}\\right)\n    \\]\n\n    \\item[(3)] 取 $\\alpha = 0.05$，查表得 $\\chi^2_{0.05}(9) = 16.919$，第 (2) 题的检验函数变为\n    \\[\n    \\varphi(X) =\n    \\begin{cases}\n    1, & 9S^2 > 16.919 \\\\\n    0, & 9S^2 \\leqslant 16.919\n    \\end{cases}\n    \\]\n    功效函数变为\n    \\[\n    \\beta(\\sigma^2) = P\\!\\left(\\chi^2(9) > \\frac{16.919}{\\sigma^2}\\right)\n    \\]\n    与 $\\alpha = 0.1$ 时相比，临界值增大，拒绝域缩小，功效函数在每个 $\\sigma^2 > 1$ 处均减小．由此得出结论：在样本量固定时，$\\alpha$ 与功效相互制约，降低显著性水平必然导致功效下降；若要同时控制两类错误，只能增大样本量．\n\\end{enumerate}\n\\end{solution}",
+    "text": "未知，使用统计量 取 ，查表得 ，检验函数为 功效函数为 取 ，查表得 ，第 (2) 题的检验函数变为 功效函数变为 与 时相比，临界值增大，拒绝域缩小，功效函数在每个 处均减小．由此得出结论：在样本量固定时， 与功效相互制约，降低显著性水平必然导致功效下降；若要同时控制两类错误，只能增大样本量．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3112,
+    "endLine": 3145
+  },
+  {
+    "id": "dx-Mathematical-Statistics-288",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[3]\n（两个正态总体的比较）设 $X_1, X_2, \\cdots, X_m$ 为来自 $N(\\mu_1, \\sigma_1^2)$ 的样本；$Y_1, Y_2, \\cdots, Y_n$ 为来自 $N(\\mu_2, \\sigma_2^2)$ 的样本，两样本相互独立，$\\sigma_1^2, \\sigma_2^2$ 均未知．分下面几种情况，给出 $H_0: \\mu_1 = \\mu_2$；$H_1: \\mu_1 \\neq \\mu_2$ 的检验函数形式：\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] $\\sigma_1^2 = k\\sigma_2^2$，$k$ 为已知常数；\n\n   \n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[3]\n（两个正态总体的比较）设 $X_1, X_2, \\cdots, X_m$ 为来自 $N(\\mu_1, \\sigma_1^2)$ 的样本；$Y_1, Y_2, \\cdots, Y_n$ 为来自 $N(\\mu_2, \\sigma_2^2)$ 的样本，两样本相互独立，$\\sigma_1^2, \\sigma_2^2$ 均未知．分下面几种情况，给出 $H_0: \\mu_1 = \\mu_2$；$H_1: \\mu_1 \\neq \\mu_2$ 的检验函数形式：\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] $\\sigma_1^2 = k\\sigma_2^2$，$k$ 为已知常数；\n\n   \n\\end{enumerate}\n\\end{homework}",
+    "text": "[3] （两个正态总体的比较）设 为来自 的样本； 为来自 的样本，两样本相互独立， 均未知．分下面几种情况，给出 ； 的检验函数形式： ， 为已知常数；",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3146,
+    "endLine": 3156
+  },
+  {
+    "id": "dx-Mathematical-Statistics-289",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "solution",
+    "blockTitle": "4.2",
+    "previewType": "solution",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(2)] 由 $\\sigma_1^2 = k\\sigma_2^2$，构造统计量．两样本独立，有\n    \\[\n    \\bar{X} - \\bar{Y} \\sim N\\!\\left(\\mu_1 - \\mu_2,\\ \\frac{\\sigma_1^2}{m} + \\frac{\\sigma_2^2}{n}\\right) = N\\!\\left(\\mu_1 - \\mu_2,\\ \\sigma_2^2\\!\\left(\\frac{k}{m} + \\frac{1}{n}\\right)\\right)\n    \\]\n    又\n    \\[\n    \\frac{(m-1)S_1^2}{\\sigma_1^2} + \\frac{(n-1)S_2^2}{\\sigma_2^2} = \\frac{(m-1)S_1^2}{k\\sigma_2^2} + \\frac{(n-1)S_2^2}{\\sigma_2^2} \\sim \\chi^2(m+n-2)\n    \\]\n    定义合并估计量\n    \\[\n    S_p^2 = \\frac{\\dfrac{(m-1)S_1^2}{k} + (n-1)S_2^2}{m+n-2}\n    \\]\n    则 $\\dfrac{(m+n-2)S_p^2}{\\sigma_2^2} \\sim \\chi^2(m+n-2)$，在 $H_0: \\mu_1 = \\mu_2$ 下，构造 $t$ 统计量\n    \\[\n    T = \\frac{\\bar{X} - \\bar{Y}}{S_p\\sqrt{\\dfrac{k}{m} + \\dfrac{1}{n}}} \\sim t(m+n-2)\n    \\]\n    检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & |T| > t_{\\alpha/2}(m+n-2) \\\\ 0, & |T| \\leqslant t_{\\alpha/2}(m+n-2) \\end{cases}\n    \\]\n\\end{enumerate}\n\\end{solution}",
+    "content": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(2)] 由 $\\sigma_1^2 = k\\sigma_2^2$，构造统计量．两样本独立，有\n    \\[\n    \\bar{X} - \\bar{Y} \\sim N\\!\\left(\\mu_1 - \\mu_2,\\ \\frac{\\sigma_1^2}{m} + \\frac{\\sigma_2^2}{n}\\right) = N\\!\\left(\\mu_1 - \\mu_2,\\ \\sigma_2^2\\!\\left(\\frac{k}{m} + \\frac{1}{n}\\right)\\right)\n    \\]\n    又\n    \\[\n    \\frac{(m-1)S_1^2}{\\sigma_1^2} + \\frac{(n-1)S_2^2}{\\sigma_2^2} = \\frac{(m-1)S_1^2}{k\\sigma_2^2} + \\frac{(n-1)S_2^2}{\\sigma_2^2} \\sim \\chi^2(m+n-2)\n    \\]\n    定义合并估计量\n    \\[\n    S_p^2 = \\frac{\\dfrac{(m-1)S_1^2}{k} + (n-1)S_2^2}{m+n-2}\n    \\]\n    则 $\\dfrac{(m+n-2)S_p^2}{\\sigma_2^2} \\sim \\chi^2(m+n-2)$，在 $H_0: \\mu_1 = \\mu_2$ 下，构造 $t$ 统计量\n    \\[\n    T = \\frac{\\bar{X} - \\bar{Y}}{S_p\\sqrt{\\dfrac{k}{m} + \\dfrac{1}{n}}} \\sim t(m+n-2)\n    \\]\n    检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & |T| > t_{\\alpha/2}(m+n-2) \\\\ 0, & |T| \\leqslant t_{\\alpha/2}(m+n-2) \\end{cases}\n    \\]\n\\end{enumerate}\n\\end{solution}",
+    "text": "由 ，构造统计量．两样本独立，有 又 定义合并估计量 则 ，在 下，构造 统计量 检验函数为",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3157,
+    "endLine": 3180
+  },
+  {
+    "id": "dx-Mathematical-Statistics-290",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[4]\n（两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式：\n\n\\begin{enumerate}\n    \\item[(1)] $H_0: \\sigma_1^2 \\leqslant \\sigma_2^2$；$H_1: \\sigma_1^2 > \\sigma_2^2$；\n\n    \\item[(2)] $H_0: \\sigma_1^2 = k\\sigma_2^2$；$H_1: \\sigma_1^2 \\neq k\\sigma_2^2$，其中 $k$ 为给定的数．\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[4]\n（两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式：\n\n\\begin{enumerate}\n    \\item[(1)] $H_0: \\sigma_1^2 \\leqslant \\sigma_2^2$；$H_1: \\sigma_1^2 > \\sigma_2^2$；\n\n    \\item[(2)] $H_0: \\sigma_1^2 = k\\sigma_2^2$；$H_1: \\sigma_1^2 \\neq k\\sigma_2^2$，其中 $k$ 为给定的数．\n\\end{enumerate}\n\\end{homework}",
+    "text": "[4] （两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式： ； ； ； ，其中 为给定的数．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3181,
+    "endLine": 3189
+  },
+  {
+    "id": "dx-Mathematical-Statistics-291",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "solution",
+    "blockTitle": "4.2",
+    "previewType": "solution",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(1)] $\\mu_1, \\mu_2$ 均未知，使用统计量\n    \\[\n    F = \\frac{S_1^2}{S_2^2} \\sim F(m-1, n-1) \\quad (\\text{在 } \\sigma_1^2 = \\sigma_2^2 \\text{ 下})\n    \\]\n    $H_1: \\sigma_1^2 > \\sigma_2^2$ 为右侧检验，拒绝域取右尾，检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & F > F_{\\alpha}(m-1, n-1) \\\\ 0, & F \\leqslant F_{\\alpha}(m-1, n-1) \\end{cases}\n    \\]\n\n    \\item[(2)] 在 $H_0: \\sigma_1^2 = k\\sigma_2^2$ 下，构造统计量\n    \\[\n    F = \\frac{S_1^2 / k}{S_2^2} = \\frac{S_1^2}{k S_2^2} \\sim F(m-1, n-1)\n    \\]\n    为双侧检验，检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & F > F_{\\alpha/2}(m-1, n-1) \\text{ 或 } F < F_{1-\\alpha/2}(m-1, n-1) \\\\ 0, & \\text{otherwise} \\end{cases}\n    \\]\n\\end{enumerate}\n\\end{solution}",
+    "content": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(1)] $\\mu_1, \\mu_2$ 均未知，使用统计量\n    \\[\n    F = \\frac{S_1^2}{S_2^2} \\sim F(m-1, n-1) \\quad (\\text{在 } \\sigma_1^2 = \\sigma_2^2 \\text{ 下})\n    \\]\n    $H_1: \\sigma_1^2 > \\sigma_2^2$ 为右侧检验，拒绝域取右尾，检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & F > F_{\\alpha}(m-1, n-1) \\\\ 0, & F \\leqslant F_{\\alpha}(m-1, n-1) \\end{cases}\n    \\]\n\n    \\item[(2)] 在 $H_0: \\sigma_1^2 = k\\sigma_2^2$ 下，构造统计量\n    \\[\n    F = \\frac{S_1^2 / k}{S_2^2} = \\frac{S_1^2}{k S_2^2} \\sim F(m-1, n-1)\n    \\]\n    为双侧检验，检验函数为\n    \\[\n    \\varphi = \\begin{cases} 1, & F > F_{\\alpha/2}(m-1, n-1) \\text{ 或 } F < F_{1-\\alpha/2}(m-1, n-1) \\\\ 0, & \\text{otherwise} \\end{cases}\n    \\]\n\\end{enumerate}\n\\end{solution}",
+    "text": "均未知，使用统计量 为右侧检验，拒绝域取右尾，检验函数为 在 下，构造统计量 为双侧检验，检验函数为",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3190,
+    "endLine": 3210
+  },
+  {
+    "id": "dx-Mathematical-Statistics-292",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[6]\n用两台仪器 $A$，$B$ 测量相同的物理量，设 $A$ 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 $A$ 独立测量 10 次，数值如下：\n\\[\n10.5 \\quad 10.3 \\quad 10.4 \\quad 9.6 \\quad 9.7 \\quad 9.8 \\quad 9.9 \\quad 10.1 \\quad 10.2 \\quad 9.7\n\\]\n对同一量用仪器 $B$ 独立测量了 10 次，其数值是\n\\[\n10.2 \\quad 10.7 \\quad 10.8 \\quad 10.9 \\quad 10.4 \\quad 10.6 \\quad 11.0 \\quad 11.1 \\quad 10.9 \\quad 11.2\n\\]\n试回答下列问题：\n\n\\begin{enumerate}\n    \\item[(1)] 仪器 $B$ 有无系统误差？\n\n    \\item[(2)] 若已知没有系统误差，仪器 $A$ 和仪器 $B$ 的测量精度是否一致？\n\\end{enumerate}\n\n\\begin{note}\n\"无系统误差\"等同于 $\\mu_B = \\mu_A$，\"测量精度一致\"等同于 $\\sigma_B^2 = \\sigma_A^2$，$\\mu_A, \\mu_B, \\sigma_A^2, \\sigma_B^2$ 分别是两台仪器测量值分布的均值和方差．\n\\end{note}\n\\end{homework}",
+    "content": "\\begin{homework}[6]\n用两台仪器 $A$，$B$ 测量相同的物理量，设 $A$ 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 $A$ 独立测量 10 次，数值如下：\n\\[\n10.5 \\quad 10.3 \\quad 10.4 \\quad 9.6 \\quad 9.7 \\quad 9.8 \\quad 9.9 \\quad 10.1 \\quad 10.2 \\quad 9.7\n\\]\n对同一量用仪器 $B$ 独立测量了 10 次，其数值是\n\\[\n10.2 \\quad 10.7 \\quad 10.8 \\quad 10.9 \\quad 10.4 \\quad 10.6 \\quad 11.0 \\quad 11.1 \\quad 10.9 \\quad 11.2\n\\]\n试回答下列问题：\n\n\\begin{enumerate}\n    \\item[(1)] 仪器 $B$ 有无系统误差？\n\n    \\item[(2)] 若已知没有系统误差，仪器 $A$ 和仪器 $B$ 的测量精度是否一致？\n\\end{enumerate}\n\n\\begin{note}\n\"无系统误差\"等同于 $\\mu_B = \\mu_A$，\"测量精度一致\"等同于 $\\sigma_B^2 = \\sigma_A^2$，$\\mu_A, \\mu_B, \\sigma_A^2, \\sigma_B^2$ 分别是两台仪器测量值分布的均值和方差．\n\\end{note}\n\\end{homework}",
+    "text": "[6] 用两台仪器 ， 测量相同的物理量，设 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 独立测量 10 次，数值如下： 对同一量用仪器 独立测量了 10 次，其数值是 试回答下列问题： 仪器 有无系统误差？ 若已知没有系统误差，仪器 和仪器 的测量精度是否一致？ \"无系统误差\"等同于 ，\"测量精度一致\"等同于 ， 分别是两台仪器测量值分布的均值和方差．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3211,
+    "endLine": 3231
+  },
+  {
+    "id": "dx-Mathematical-Statistics-293",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "第九周作业",
+    "subsection": "4.2",
+    "kind": "solution",
+    "blockTitle": "4.2",
+    "previewType": "solution",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(1)] 检验 $H_0: \\mu_B = \\mu_A$，$H_1: \\mu_B \\neq \\mu_A$，$\\sigma_A^2, \\sigma_B^2$ 未知但假设相等（先不做方差检验，用两样本 $t$ 检验）．\n\n    计算样本均值与样本方差：\n    \\[\n    \\bar{X} = \\frac{1}{10}(10.5+10.3+10.4+9.6+9.7+9.8+9.9+10.1+10.2+9.7) = 10.02\n    \\]\n    \\[\n    \\bar{Y} = \\frac{1}{10}(10.2+10.7+10.8+10.9+10.4+10.6+11.0+11.1+10.9+11.2) = 10.78\n    \\]\n    \\[\n    S_A^2 = \\frac{1}{9}\\sum_{i=1}^{10}(X_i - \\bar{X})^2 = \\frac{1}{9}(0.48^2+0.28^2+0.38^2+0.42^2+0.32^2+0.22^2+0.12^2+0.08^2+0.18^2+0.32^2)\n    \\]\n    逐项计算：$0.2304+0.0784+0.1444+0.1764+0.1024+0.0484+0.0144+0.0064+0.0324+0.1024 = 0.9360$，故\n    \\[\n    S_A^2 = \\frac{0.9360}{9} \\approx 0.1040, \\quad S_A \\approx 0.3225\n    \\]\n    \\[\n    S_B^2 = \\frac{1}{9}\\sum_{i=1}^{10}(Y_i - \\bar{Y})^2\n    \\]\n    各项：$0.58^2+0.08^2+0.02^2+0.12^2+0.38^2+0.18^2+0.22^2+0.32^2+0.12^2+0.42^2$\n    $= 0.3364+0.0064+0.0004+0.0144+0.1444+0.0324+0.0484+0.1024+0.0144+0.1764 = 0.8760$，故\n    \\[\n    S_B^2 = \\frac{0.8760}{9} \\approx 0.0973, \\quad S_B \\approx 0.3120\n    \\]\n    合并方差估计：\n    \\[\n    S_p^2 = \\frac{9S_A^2 + 9S_B^2}{18} = \\frac{0.9360+0.8760}{18} = \\frac{1.8120}{18} \\approx 0.1007, \\quad S_p \\approx 0.3173\n    \\]\n    检验统计量：\n    \\[\n    T = \\frac{\\bar{Y} - \\bar{X}}{S_p\\sqrt{\\dfrac{1}{10}+\\dfrac{1}{10}}} = \\frac{10.78 - 10.02}{0.3173 \\times \\sqrt{0.2}} = \\frac{0.76}{0.3173 \\times 0.4472} \\approx \\frac{0.76}{0.1419} \\approx 5.356\n    \\]\n    取 $\\alpha = 0.05$，查表得 $t_{0.025}(18) = 2.101$．由于 $|T| = 5.356 > 2.101$，拒绝 $H_0$．\n\n    \\textbf{结论：}仪器 $B$ 存在显著系统误差．\n\n    \\item[(2)] 已知无系统误差，检验 $H_0: \\sigma_B^2 = \\sigma_A^2$，$H_1: \\sigma_B^2 \\neq \\sigma_A^2$，使用 $F$ 检验：\n    \\[\n    F = \\frac{S_A^2}{S_B^2} = \\frac{0.1040}{0.0973} \\approx 1.069\n    \\]\n    取 $\\alpha = 0.05$，查表得 $F_{0.025}(9,9) = 4.03$，$F_{0.975}(9,9) = \\dfrac{1}{4.03} \\approx 0.248$．\n\n    由于 $0.248 < F = 1.069 < 4.03$，不拒绝 $H_0$．\n\n    \\textbf{结论：}在显著性水平 $0.05$ 下，无充分理由认为两台仪器测量精度有显著差异．\n\\end{enumerate}\n\\end{solution}",
+    "content": "\\begin{solution}\n\\begin{enumerate}\n    \\item[(1)] 检验 $H_0: \\mu_B = \\mu_A$，$H_1: \\mu_B \\neq \\mu_A$，$\\sigma_A^2, \\sigma_B^2$ 未知但假设相等（先不做方差检验，用两样本 $t$ 检验）．\n\n    计算样本均值与样本方差：\n    \\[\n    \\bar{X} = \\frac{1}{10}(10.5+10.3+10.4+9.6+9.7+9.8+9.9+10.1+10.2+9.7) = 10.02\n    \\]\n    \\[\n    \\bar{Y} = \\frac{1}{10}(10.2+10.7+10.8+10.9+10.4+10.6+11.0+11.1+10.9+11.2) = 10.78\n    \\]\n    \\[\n    S_A^2 = \\frac{1}{9}\\sum_{i=1}^{10}(X_i - \\bar{X})^2 = \\frac{1}{9}(0.48^2+0.28^2+0.38^2+0.42^2+0.32^2+0.22^2+0.12^2+0.08^2+0.18^2+0.32^2)\n    \\]\n    逐项计算：$0.2304+0.0784+0.1444+0.1764+0.1024+0.0484+0.0144+0.0064+0.0324+0.1024 = 0.9360$，故\n    \\[\n    S_A^2 = \\frac{0.9360}{9} \\approx 0.1040, \\quad S_A \\approx 0.3225\n    \\]\n    \\[\n    S_B^2 = \\frac{1}{9}\\sum_{i=1}^{10}(Y_i - \\bar{Y})^2\n    \\]\n    各项：$0.58^2+0.08^2+0.02^2+0.12^2+0.38^2+0.18^2+0.22^2+0.32^2+0.12^2+0.42^2$\n    $= 0.3364+0.0064+0.0004+0.0144+0.1444+0.0324+0.0484+0.1024+0.0144+0.1764 = 0.8760$，故\n    \\[\n    S_B^2 = \\frac{0.8760}{9} \\approx 0.0973, \\quad S_B \\approx 0.3120\n    \\]\n    合并方差估计：\n    \\[\n    S_p^2 = \\frac{9S_A^2 + 9S_B^2}{18} = \\frac{0.9360+0.8760}{18} = \\frac{1.8120}{18} \\approx 0.1007, \\quad S_p \\approx 0.3173\n    \\]\n    检验统计量：\n    \\[\n    T = \\frac{\\bar{Y} - \\bar{X}}{S_p\\sqrt{\\dfrac{1}{10}+\\dfrac{1}{10}}} = \\frac{10.78 - 10.02}{0.3173 \\times \\sqrt{0.2}} = \\frac{0.76}{0.3173 \\times 0.4472} \\approx \\frac{0.76}{0.1419} \\approx 5.356\n    \\]\n    取 $\\alpha = 0.05$，查表得 $t_{0.025}(18) = 2.101$．由于 $|T| = 5.356 > 2.101$，拒绝 $H_0$．\n\n    \\textbf{结论：}仪器 $B$ 存在显著系统误差．\n\n    \\item[(2)] 已知无系统误差，检验 $H_0: \\sigma_B^2 = \\sigma_A^2$，$H_1: \\sigma_B^2 \\neq \\sigma_A^2$，使用 $F$ 检验：\n    \\[\n    F = \\frac{S_A^2}{S_B^2} = \\frac{0.1040}{0.0973} \\approx 1.069\n    \\]\n    取 $\\alpha = 0.05$，查表得 $F_{0.025}(9,9) = 4.03$，$F_{0.975}(9,9) = \\dfrac{1}{4.03} \\approx 0.248$．\n\n    由于 $0.248 < F = 1.069 < 4.03$，不拒绝 $H_0$．\n\n    \\textbf{结论：}在显著性水平 $0.05$ 下，无充分理由认为两台仪器测量精度有显著差异．\n\\end{enumerate}\n\\end{solution}",
+    "text": "检验 ， ， 未知但假设相等（先不做方差检验，用两样本 检验）． 计算样本均值与样本方差： 逐项计算： ，故 各项： ，故 合并方差估计： 检验统计量： 取 ，查表得 ．由于 ，拒绝 ． 结论：仪器 存在显著系统误差． 已知无系统误差，检验 ， ，使用 检验： 取 ，查表得 ， ． 由于 ，不拒绝 ． 结论：在显著性水平 下，无充分理由认为两台仪器测量精度有显著差异．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3232,
+    "endLine": 3280
+  },
+  {
+    "id": "dx-Mathematical-Statistics-294",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
     "section": "第10周作业",
     "subsection": "4.3",
     "kind": "homework",
@@ -37996,11 +38156,11 @@
     "content": "\\begin{homework}[1]\n某单位购进一批产品，抽 36 件检查，发现有 3 件不合格，试问这批产品的不合格品率高于 3\\% 吗？你认为次品率不超过多少？\n\\end{homework}",
     "text": "[1] 某单位购进一批产品，抽 36 件检查，发现有 3 件不合格，试问这批产品的不合格品率高于 3\\% 吗？你认为次品率不超过多少？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3103,
-    "endLine": 3105
+    "startLine": 3283,
+    "endLine": 3285
   },
   {
-    "id": "dx-Mathematical-Statistics-287",
+    "id": "dx-Mathematical-Statistics-295",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38016,11 +38176,11 @@
     "content": "\\begin{solution}\n设不合格品数 $X \\sim B(n, p)$，$n = 36$，样本比例 $\\hat{p} = \\dfrac{3}{36} = \\dfrac{1}{12} \\approx 0.0833$。\n\n\\textbf{第一问：}建立假设\n\\[\nH_0: p \\leq 0.03, \\quad H_1: p > 0.03\n\\]\n检验统计量为\n\\[\nZ = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}} = \\frac{\\frac{1}{12} - 0.03}{\\sqrt{\\frac{0.03 \\times 0.97}{36}}} \\approx 1.875\n\\]\n取 $\\alpha = 0.05$，单侧临界值 $z_{0.05} = 1.645$。因为 $Z \\approx 1.875 > 1.645$，拒绝 $H_0$，认为不合格品率高于 $3\\%$。\n\n\\textbf{第二问：}构造 $p$ 的置信水平 $0.95$ 的单侧置信上限：\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} = \\frac{1}{12} + 1.645 \\times \\sqrt{\\frac{\\frac{1}{12} \\times \\frac{11}{12}}{36}} \\approx 0.160\n\\]\n即认为次品率不超过 $16.0\\%$。\n\\end{solution}",
     "text": "设不合格品数 ， ，样本比例 。 第一问：建立假设 检验统计量为 取 ，单侧临界值 。因为 ，拒绝 ，认为不合格品率高于 。 第二问：构造 的置信水平 的单侧置信上限： 即认为次品率不超过 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3106,
-    "endLine": 3124
+    "startLine": 3286,
+    "endLine": 3304
   },
   {
-    "id": "dx-Mathematical-Statistics-288",
+    "id": "dx-Mathematical-Statistics-296",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38036,11 +38196,11 @@
     "content": "\\begin{dxtips}\n    第一步先确定是什么分布如果合格不合格就是二项分布把n和p算出来p就是我们要求的不合格率的概率要求什么算什么。然后\n\\end{dxtips}",
     "text": "第一步先确定是什么分布如果合格不合格就是二项分布把n和p算出来p就是我们要求的不合格率的概率要求什么算什么。然后",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3125,
-    "endLine": 3127
+    "startLine": 3305,
+    "endLine": 3307
   },
   {
-    "id": "dx-Mathematical-Statistics-289",
+    "id": "dx-Mathematical-Statistics-297",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38056,11 +38216,11 @@
     "content": "\\begin{dxtips}\n    梳理一下，抽36他就算一个大样本，在大样本中出现次品的次数服从正态分布。也就是每一次抽36坏的可能都不同所以这些次数是服从正态分布的。然后呢我们就要求如果按照H0假设的出现现在状况的概率，如何求呢我们要减去均值除以标准差得到标准正态分布然后再查表，这里就是省略了上下同时除以n的步骤。\n    \n\\end{dxtips}",
     "text": "梳理一下，抽36他就算一个大样本，在大样本中出现次品的次数服从正态分布。也就是每一次抽36坏的可能都不同所以这些次数是服从正态分布的。然后呢我们就要求如果按照H0假设的出现现在状况的概率，如何求呢我们要减去均值除以标准差得到标准正态分布然后再查表，这里就是省略了上下同时除以n的步骤。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3128,
-    "endLine": 3131
+    "startLine": 3308,
+    "endLine": 3311
   },
   {
-    "id": "dx-Mathematical-Statistics-290",
+    "id": "dx-Mathematical-Statistics-298",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38076,11 +38236,11 @@
     "content": "\\begin{dxtips}\n  第一问：假设已知 $p_0 = 0.03$，即已知均值 $np_0$，从而确定正态分布的图像，看观测值 $\\hat{p}$ 够不够极端。\n\n第二问：不知道真实 $p$，但构造一个区间，使得真实的 $p$ 有 95\\% 的概率落在观测值 $\\hat{p}$ 的附近。但既然只关心上限，下限没意义，就直接把全部的5都放到右尾，变成单侧\n\\[\np \\leq \\hat{p} + z_{0.05}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n\\]\n\\end{dxtips}",
     "text": "第一问：假设已知 ，即已知均值 ，从而确定正态分布的图像，看观测值 够不够极端。 第二问：不知道真实 ，但构造一个区间，使得真实的 有 95\\% 的概率落在观测值 的附近。但既然只关心上限，下限没意义，就直接把全部的5都放到右尾，变成单侧",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3132,
-    "endLine": 3139
+    "startLine": 3312,
+    "endLine": 3319
   },
   {
-    "id": "dx-Mathematical-Statistics-291",
+    "id": "dx-Mathematical-Statistics-299",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38096,11 +38256,11 @@
     "content": "\\begin{note}\n标准化是除以标准差，反过来还原就是乘以标准差，从 $N(0,1)$ 的尺度换回 $\\hat{p}$ 的尺度。\n\\end{note}",
     "text": "标准化是除以标准差，反过来还原就是乘以标准差，从 的尺度换回 的尺度。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3140,
-    "endLine": 3142
+    "startLine": 3320,
+    "endLine": 3322
   },
   {
-    "id": "dx-Mathematical-Statistics-292",
+    "id": "dx-Mathematical-Statistics-300",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38116,11 +38276,11 @@
     "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_n$ 为来自 $P(\\lambda)$ 的样本，试给出检验 $H_0: \\lambda = \\lambda_0$；$H_1: \\lambda \\neq \\lambda_0$ 的检验函数．若有观测值 $5, 7, 8, 6, 9, 10$，在检验水平 $\\alpha = 0.05$ 下，能接受 $\\lambda = 3$ 吗？\n\\end{homework}",
     "text": "[2] 设 为来自 的样本，试给出检验 ； 的检验函数．若有观测值 ，在检验水平 下，能接受 吗？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3143,
-    "endLine": 3145
+    "startLine": 3323,
+    "endLine": 3325
   },
   {
-    "id": "dx-Mathematical-Statistics-293",
+    "id": "dx-Mathematical-Statistics-301",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38136,11 +38296,11 @@
     "content": "\\begin{note}\n单个 $X_i \\sim P(\\lambda)$：期望是 $\\lambda$，方差是 $\\lambda$（期望方差相等是 Poisson 分布的特征）。\n\n所以 $\\bar{X}$ 的方差是 $\\dfrac{\\lambda}{n}$，标准差是 $\\sqrt{\\dfrac{\\lambda}{n}}$。\n\\end{note}",
     "text": "单个 ：期望是 ，方差是 （期望方差相等是 Poisson 分布的特征）。 所以 的方差是 ，标准差是 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3146,
-    "endLine": 3150
+    "startLine": 3326,
+    "endLine": 3330
   },
   {
-    "id": "dx-Mathematical-Statistics-294",
+    "id": "dx-Mathematical-Statistics-302",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38156,11 +38316,11 @@
     "content": "\\begin{solution}\n由 $X_i \\sim P(\\lambda)$，$\\bar{X}$ 是 $\\lambda$ 的充分统计量，由中心极限定理，检验统计量为\n\\[\nZ = \\frac{\\bar{X} - \\lambda_0}{\\sqrt{\\lambda_0 / n}} \\overset{H_0}{\\approx} N(0,1)\n\\]\n拒绝域为 $|Z| > z_{\\alpha/2} = z_{0.025} = 1.96$。\n\n计算观测值：\n\\[\n\\bar{x} = \\frac{5+7+8+6+9+10}{6} = 7.5\n\\]\n代入统计量：\n\\[\nZ = \\frac{7.5 - 3}{\\sqrt{3/6}} = \\frac{4.5}{\\sqrt{0.5}} \\approx 6.36\n\\]\n因为 $|Z| \\approx 6.36 > 1.96$，拒绝 $H_0$，在显著性水平 $\\alpha = 0.05$ 下，不能接受 $\\lambda = 3$。\n\\end{solution}",
     "text": "由 ， 是 的充分统计量，由中心极限定理，检验统计量为 拒绝域为 。 计算观测值： 代入统计量： 因为 ，拒绝 ，在显著性水平 下，不能接受 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3151,
-    "endLine": 3167
+    "startLine": 3331,
+    "endLine": 3347
   },
   {
-    "id": "dx-Mathematical-Statistics-295",
+    "id": "dx-Mathematical-Statistics-303",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38176,11 +38336,11 @@
     "content": "\\begin{note}\n看 $H_1$ 的符号：\n\\begin{itemize}\n    \\item $H_1: \\lambda \\neq \\lambda_0$，有 $\\neq$，双侧检验\n    \\item $H_1: \\lambda > \\lambda_0$，有 $>$，单侧右检验\n    \\item $H_1: \\lambda < \\lambda_0$，有 $<$，单侧左检验\n\\end{itemize}\n\\end{note}",
     "text": "看 的符号： ，有 ，双侧检验 ，有 ，单侧右检验 ，有 ，单侧左检验",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3168,
-    "endLine": 3175
+    "startLine": 3348,
+    "endLine": 3355
   },
   {
-    "id": "dx-Mathematical-Statistics-296",
+    "id": "dx-Mathematical-Statistics-304",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38196,11 +38356,11 @@
     "content": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
     "text": "1 设总体 服从参数为 的泊松分布 其中 为参数， 是独立同分布样本。考虑假设检验问题： 有无 UMP 检验？为什么？ 若有 UMP 检验，试求出检验水平 ， ， 时的检验函数。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3178,
-    "endLine": 3187
+    "startLine": 3358,
+    "endLine": 3367
   },
   {
-    "id": "dx-Mathematical-Statistics-297",
+    "id": "dx-Mathematical-Statistics-305",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38216,11 +38376,11 @@
     "content": "\\begin{solution}\n\\textbf{第一问：}取 $\\lambda_1 < \\lambda_2$，计算似然比\n$$\\frac{\\prod_{i=1}^n f(X_i;\\lambda_2)}{\\prod_{i=1}^n f(X_i;\\lambda_1)} = \\frac{\\prod_{i=1}^n \\frac{\\lambda_2^{X_i}}{X_i!}e^{-\\lambda_2}}{\\prod_{i=1}^n \\frac{\\lambda_1^{X_i}}{X_i!}e^{-\\lambda_1}} = \\left(\\frac{\\lambda_2}{\\lambda_1}\\right)^{\\sum_{i=1}^n X_i} e^{-n(\\lambda_2 - \\lambda_1)}$$\n其中 $e^{-n(\\lambda_2-\\lambda_1)}$ 是只含 $\\lambda$ 的常数，因为 $\\lambda_2 > \\lambda_1$，底数 $\\frac{\\lambda_2}{\\lambda_1} > 1$，故似然比是 $T(\\boldsymbol{X}) = \\sum_{i=1}^n X_i$ 的单增函数。泊松分布族满足 MLR 条件，由 MLR 定理，UMP 检验存在，拒绝域形式为 $T(\\boldsymbol{X}) = \\sum_{i=1}^n X_i > c$。\n\n\\textbf{第二问：}当 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时，由第一类错误条件\n$$E_{\\lambda_0}[\\phi(\\boldsymbol{X})] = \\alpha$$\n即在 $H_0$ 成立时 $\\sum_{i=1}^n X_i \\sim P(n\\lambda_0) = P(1)$，需确定临界值 $c$ 使得\n$$P_{\\lambda_0}\\left(\\sum_{i=1}^n X_i > c\\right) \\leq 0.05$$\n查泊松分布表，$\\sum X_i \\sim P(1)$ 时：\n\\begin{center}\n\\begin{tabular}{ccc}\n\\hline\n$c$ & $P(\\sum X_i \\leq c)$ & $P(\\sum X_i > c)$ \\\\\n\\hline\n$2$ & $0.9197$ & $0.0803$ \\\\\n$3$ & $0.9810$ & $0.0190$ \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n因为分布离散，取 $c = 3$，随机化参数 $r$ 由 $E_{\\lambda_0}[\\phi(\\boldsymbol{X})] = \\alpha$ 确定：\n$$P_{\\lambda_0}\\left(\\sum X_i > 3\\right) + r \\cdot P_{\\lambda_0}\\left(\\sum X_i = 3\\right) = 0.05$$\n$$0.0190 + r \\times (0.9810 - 0.9197) = 0.05$$\n$$r = \\frac{0.05 - 0.0190}{0.0613} \\approx 0.506$$\n故检验函数为\n$$\\phi(\\boldsymbol{X}) = \\begin{cases} 1, & \\sum_{i=1}^n X_i > 3 \\\\ 0.506, & \\sum_{i=1}^n X_i = 3 \\\\ 0, & \\sum_{i=1}^n X_i < 3 \\end{cases}$$\n\\end{solution}",
     "text": "第一问：取 ，计算似然比 其中 是只含 的常数，因为 ，底数 ，故似然比是 的单增函数。泊松分布族满足 MLR 条件，由 MLR 定理，UMP 检验存在，拒绝域形式为 。 第二问：当 ， ， 时，由第一类错误条件 即在 成立时 ，需确定临界值 使得 查泊松分布表， 时： ccc & & \\\\ & & \\\\ & & \\\\ 因为分布离散，取 ，随机化参数 由 确定： 故检验函数为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3188,
-    "endLine": 3214
+    "startLine": 3368,
+    "endLine": 3394
   },
   {
-    "id": "dx-Mathematical-Statistics-298",
+    "id": "dx-Mathematical-Statistics-306",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38236,11 +38396,11 @@
     "content": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
     "text": "2 某修理部对要求服务人数连续作 日记录。 为第 日要求服务的人数。设 独立同分布，均服从参数为 的泊松分布。若每日要求服务人数太少将关门。根据 日的记录，要作出符合下面要求的决定： 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门； 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。 问需观察多少日即 为多少时，UMP 检验才能满足上述要求？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3215,
-    "endLine": 3222
+    "startLine": 3395,
+    "endLine": 3402
   },
   {
-    "id": "dx-Mathematical-Statistics-299",
+    "id": "dx-Mathematical-Statistics-307",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38256,11 +38416,11 @@
     "content": "\\begin{solution}\n\\textbf{建立假设：}\n$$H_0: \\theta \\leq \\theta_0 \\quad H_1: \\theta > \\theta_0$$\n两个条件翻译成功效函数约束：\n\\begin{itemize}\n    \\item 条件1：$\\theta = 10$ 时，开门概率不超过 $0.01$，即 $\\beta_\\phi(10) \\leq 0.01$\n    \\item 条件2：$\\theta = 15$ 时，关门概率不超过 $0.01$，即 $\\beta_\\phi(15) \\geq 0.99$\n\\end{itemize}\n\n\\textbf{UMP 检验形式：}泊松分布满足 MLR 条件，$T = \\sum_{i=1}^n X_i \\sim P(n\\theta)$，拒绝域为 $\\sum_{i=1}^n X_i > c$。\n\n\\textbf{正态近似：}$n$ 较大时 $\\sum X_i \\approx N(n\\theta, n\\theta)$，故\n$$\\beta_\\phi(\\theta) = P_\\theta\\left(\\sum X_i > c\\right) = P\\left(Z > \\frac{c - n\\theta}{\\sqrt{n\\theta}}\\right)$$\n由两个约束分别得\n$$\\frac{c - 10n}{\\sqrt{10n}} = 2.326, \\quad \\frac{c - 15n}{\\sqrt{15n}} = -2.326$$\n\n\\textbf{解方程组：}两式相减消去 $c$：\n$$\\frac{c-10n}{\\sqrt{10n}} - \\frac{c-15n}{\\sqrt{15n}} = 4.652$$\n代入 $\\frac{1}{\\sqrt{10}} \\approx 0.3162$，$\\frac{1}{\\sqrt{15}} \\approx 0.2582$，整理得\n$$\\sqrt{n}\\left(5 \\times 0.3162 + 5 \\times 0.2582\\right) = 4.652$$\n$$\\sqrt{n} \\times 2.872 = 4.652$$\n$$\\sqrt{n} \\approx 1.620 \\implies n \\approx 25$$\n故需观察 $n = 25$ 日。\n\\end{solution}",
     "text": "建立假设： 两个条件翻译成功效函数约束： 条件1： 时，开门概率不超过 ，即 条件2： 时，关门概率不超过 ，即 UMP 检验形式：泊松分布满足 MLR 条件， ，拒绝域为 。 正态近似： 较大时 ，故 由两个约束分别得 解方程组：两式相减消去 ： 代入 ， ，整理得 故需观察 日。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3223,
-    "endLine": 3246
+    "startLine": 3403,
+    "endLine": 3426
   },
   {
-    "id": "dx-Mathematical-Statistics-300",
+    "id": "dx-Mathematical-Statistics-308",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38276,11 +38436,11 @@
     "content": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
     "text": "3 一测量仪器正常运行，对某量重复测量 次，其结果是 。假设 。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 。试回答下列问题： 怎样将该问题叙述成假设检验问题？ 该假设检验问题有无 UMP 检验？若有给出检验函数的形式； 利用 分布表，确定样本容量 的大小，使得在检验水平为 0.01、测量误差大于 时，被检测出的概率大于 0.9。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3247,
-    "endLine": 3254
+    "startLine": 3427,
+    "endLine": 3434
   },
   {
-    "id": "dx-Mathematical-Statistics-301",
+    "id": "dx-Mathematical-Statistics-309",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38296,11 +38456,11 @@
     "content": "\\begin{solution}\n\\textbf{第一问：}测量精度要求为 $\\mu_0 \\pm \\Delta$，即要求 $|\\mu - \\mu_0| \\leq \\Delta$。若仪器精度不满足要求，则 $|\\mu - \\mu_0| > \\Delta$，故假设检验问题为\n$$H_0: |\\mu - \\mu_0| \\leq \\Delta \\quad H_1: |\\mu - \\mu_0| > \\Delta$$\n等价地，检验方差是否满足要求，即\n$$H_0: \\sigma^2 \\leq \\Delta^2 \\quad H_1: \\sigma^2 > \\Delta^2$$\n\n\\textbf{第二问：}正态分布关于 $\\sigma^2$ 满足 MLR 条件，$T(\\boldsymbol{X}) = \\sum_{i=1}^n (X_i - \\mu_0)^2$，UMP 检验存在，拒绝域形式为\n$$\\sum_{i=1}^n (X_i - \\mu_0)^2 > c$$\n注意到在 $H_0$ 成立时\n$$\\frac{\\sum_{i=1}^n (X_i-\\mu_0)^2}{\\Delta^2} \\sim \\chi^2(n)$$\n由第一类错误条件 $E_{\\sigma^2 = \\Delta^2}[\\phi(\\boldsymbol{X})] = \\alpha = 0.01$，确定临界值\n$$c = \\Delta^2 \\chi^2_{0.01}(n)$$\n故检验函数为\n$$\\phi(\\boldsymbol{X}) = \\begin{cases} 1, & \\sum_{i=1}^n (X_i-\\mu_0)^2 > \\Delta^2 \\chi^2_{0.01}(n) \\\\ 0, & \\sum_{i=1}^n (X_i-\\mu_0)^2 \\leq \\Delta^2 \\chi^2_{0.01}(n) \\end{cases}$$\n\n\\textbf{第三问：}当测量误差大于 $1.1\\Delta$，即 $\\sigma^2 = (1.1\\Delta)^2 = 1.21\\Delta^2$ 时，要求功效大于 $0.9$：\n$$\\beta_\\phi(1.21\\Delta^2) = P_{\\sigma^2 = 1.21\\Delta^2}\\left(\\sum_{i=1}^n(X_i-\\mu_0)^2 > \\Delta^2\\chi^2_{0.01}(n)\\right) \\geq 0.9$$\n注意到此时\n$$\\frac{\\sum_{i=1}^n(X_i-\\mu_0)^2}{1.21\\Delta^2} \\sim \\chi^2(n)$$\n故条件等价于\n$$P\\left(\\chi^2(n) > \\frac{\\chi^2_{0.01}(n)}{1.21}\\right) \\geq 0.9$$\n即\n$$\\frac{\\chi^2_{0.01}(n)}{1.21} \\leq \\chi^2_{0.9}(n)$$\n逐一查 $\\chi^2$ 分布表，寻找满足\n$$\\frac{\\chi^2_{0.01}(n)}{\\chi^2_{0.9}(n)} \\leq 1.21$$\n的最小 $n$。查表得 $n = 152$ 时该比值首次不超过 $1.21$，故需 $n = 152$。\n\\end{solution}",
     "text": "第一问：测量精度要求为 ，即要求 。若仪器精度不满足要求，则 ，故假设检验问题为 等价地，检验方差是否满足要求，即 第二问：正态分布关于 满足 MLR 条件， ，UMP 检验存在，拒绝域形式为 注意到在 成立时 由第一类错误条件 ，确定临界值 故检验函数为 第三问：当测量误差大于 ，即 时，要求功效大于 ： 注意到此时 故条件等价于 即 逐一查 分布表，寻找满足 的最小 。查表得 时该比值首次不超过 ，故需 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
-    "startLine": 3255,
-    "endLine": 3281
+    "startLine": 3435,
+    "endLine": 3461
   },
   {
-    "id": "dx-Mathematical-Statistics-302",
+    "id": "dx-Mathematical-Statistics-310",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38320,7 +38480,7 @@
     "endLine": 14
   },
   {
-    "id": "dx-Mathematical-Statistics-303",
+    "id": "dx-Mathematical-Statistics-311",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38340,7 +38500,7 @@
     "endLine": 22
   },
   {
-    "id": "dx-Mathematical-Statistics-304",
+    "id": "dx-Mathematical-Statistics-312",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38360,7 +38520,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-Mathematical-Statistics-305",
+    "id": "dx-Mathematical-Statistics-313",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38380,7 +38540,7 @@
     "endLine": 39
   },
   {
-    "id": "dx-Mathematical-Statistics-306",
+    "id": "dx-Mathematical-Statistics-314",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38400,7 +38560,7 @@
     "endLine": 47
   },
   {
-    "id": "dx-Mathematical-Statistics-307",
+    "id": "dx-Mathematical-Statistics-315",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38420,7 +38580,7 @@
     "endLine": 51
   },
   {
-    "id": "dx-Mathematical-Statistics-308",
+    "id": "dx-Mathematical-Statistics-316",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38440,7 +38600,7 @@
     "endLine": 61
   },
   {
-    "id": "dx-Mathematical-Statistics-309",
+    "id": "dx-Mathematical-Statistics-317",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38460,7 +38620,7 @@
     "endLine": 69
   },
   {
-    "id": "dx-Mathematical-Statistics-310",
+    "id": "dx-Mathematical-Statistics-318",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38480,7 +38640,7 @@
     "endLine": 76
   },
   {
-    "id": "dx-Mathematical-Statistics-311",
+    "id": "dx-Mathematical-Statistics-319",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38500,7 +38660,7 @@
     "endLine": 89
   },
   {
-    "id": "dx-Mathematical-Statistics-312",
+    "id": "dx-Mathematical-Statistics-320",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38520,7 +38680,7 @@
     "endLine": 102
   },
   {
-    "id": "dx-Mathematical-Statistics-313",
+    "id": "dx-Mathematical-Statistics-321",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38540,7 +38700,7 @@
     "endLine": 106
   },
   {
-    "id": "dx-Mathematical-Statistics-314",
+    "id": "dx-Mathematical-Statistics-322",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38560,7 +38720,7 @@
     "endLine": 113
   },
   {
-    "id": "dx-Mathematical-Statistics-315",
+    "id": "dx-Mathematical-Statistics-323",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38580,7 +38740,7 @@
     "endLine": 120
   },
   {
-    "id": "dx-Mathematical-Statistics-316",
+    "id": "dx-Mathematical-Statistics-324",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38600,7 +38760,7 @@
     "endLine": 138
   },
   {
-    "id": "dx-Mathematical-Statistics-317",
+    "id": "dx-Mathematical-Statistics-325",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38620,7 +38780,7 @@
     "endLine": 150
   },
   {
-    "id": "dx-Mathematical-Statistics-318",
+    "id": "dx-Mathematical-Statistics-326",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38640,7 +38800,7 @@
     "endLine": 157
   },
   {
-    "id": "dx-Mathematical-Statistics-319",
+    "id": "dx-Mathematical-Statistics-327",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38660,7 +38820,7 @@
     "endLine": 177
   },
   {
-    "id": "dx-Mathematical-Statistics-320",
+    "id": "dx-Mathematical-Statistics-328",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38680,7 +38840,7 @@
     "endLine": 185
   },
   {
-    "id": "dx-Mathematical-Statistics-321",
+    "id": "dx-Mathematical-Statistics-329",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38700,7 +38860,7 @@
     "endLine": 188
   },
   {
-    "id": "dx-Mathematical-Statistics-322",
+    "id": "dx-Mathematical-Statistics-330",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38720,7 +38880,7 @@
     "endLine": 192
   },
   {
-    "id": "dx-Mathematical-Statistics-323",
+    "id": "dx-Mathematical-Statistics-331",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38740,7 +38900,7 @@
     "endLine": 196
   },
   {
-    "id": "dx-Mathematical-Statistics-324",
+    "id": "dx-Mathematical-Statistics-332",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38760,7 +38920,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-Mathematical-Statistics-325",
+    "id": "dx-Mathematical-Statistics-333",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38780,7 +38940,7 @@
     "endLine": 215
   },
   {
-    "id": "dx-Mathematical-Statistics-326",
+    "id": "dx-Mathematical-Statistics-334",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38800,7 +38960,7 @@
     "endLine": 223
   },
   {
-    "id": "dx-Mathematical-Statistics-327",
+    "id": "dx-Mathematical-Statistics-335",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38820,7 +38980,7 @@
     "endLine": 234
   },
   {
-    "id": "dx-Mathematical-Statistics-328",
+    "id": "dx-Mathematical-Statistics-336",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38840,7 +39000,7 @@
     "endLine": 254
   },
   {
-    "id": "dx-Mathematical-Statistics-329",
+    "id": "dx-Mathematical-Statistics-337",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38860,7 +39020,7 @@
     "endLine": 266
   },
   {
-    "id": "dx-Mathematical-Statistics-330",
+    "id": "dx-Mathematical-Statistics-338",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38880,7 +39040,7 @@
     "endLine": 274
   },
   {
-    "id": "dx-Mathematical-Statistics-331",
+    "id": "dx-Mathematical-Statistics-339",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38900,7 +39060,7 @@
     "endLine": 286
   },
   {
-    "id": "dx-Mathematical-Statistics-332",
+    "id": "dx-Mathematical-Statistics-340",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38920,7 +39080,7 @@
     "endLine": 289
   },
   {
-    "id": "dx-Mathematical-Statistics-333",
+    "id": "dx-Mathematical-Statistics-341",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38940,7 +39100,7 @@
     "endLine": 293
   },
   {
-    "id": "dx-Mathematical-Statistics-334",
+    "id": "dx-Mathematical-Statistics-342",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38960,7 +39120,7 @@
     "endLine": 297
   },
   {
-    "id": "dx-Mathematical-Statistics-335",
+    "id": "dx-Mathematical-Statistics-343",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -38980,7 +39140,7 @@
     "endLine": 301
   },
   {
-    "id": "dx-Mathematical-Statistics-336",
+    "id": "dx-Mathematical-Statistics-344",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39000,7 +39160,7 @@
     "endLine": 305
   },
   {
-    "id": "dx-Mathematical-Statistics-337",
+    "id": "dx-Mathematical-Statistics-345",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39020,7 +39180,7 @@
     "endLine": 309
   },
   {
-    "id": "dx-Mathematical-Statistics-338",
+    "id": "dx-Mathematical-Statistics-346",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39040,7 +39200,7 @@
     "endLine": 322
   },
   {
-    "id": "dx-Mathematical-Statistics-339",
+    "id": "dx-Mathematical-Statistics-347",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39060,7 +39220,7 @@
     "endLine": 330
   },
   {
-    "id": "dx-Mathematical-Statistics-340",
+    "id": "dx-Mathematical-Statistics-348",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39080,7 +39240,7 @@
     "endLine": 334
   },
   {
-    "id": "dx-Mathematical-Statistics-341",
+    "id": "dx-Mathematical-Statistics-349",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39100,7 +39260,7 @@
     "endLine": 345
   },
   {
-    "id": "dx-Mathematical-Statistics-342",
+    "id": "dx-Mathematical-Statistics-350",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39120,7 +39280,7 @@
     "endLine": 349
   },
   {
-    "id": "dx-Mathematical-Statistics-343",
+    "id": "dx-Mathematical-Statistics-351",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39140,7 +39300,7 @@
     "endLine": 359
   },
   {
-    "id": "dx-Mathematical-Statistics-344",
+    "id": "dx-Mathematical-Statistics-352",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39160,7 +39320,7 @@
     "endLine": 366
   },
   {
-    "id": "dx-Mathematical-Statistics-345",
+    "id": "dx-Mathematical-Statistics-353",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39180,7 +39340,7 @@
     "endLine": 370
   },
   {
-    "id": "dx-Mathematical-Statistics-346",
+    "id": "dx-Mathematical-Statistics-354",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39200,7 +39360,7 @@
     "endLine": 374
   },
   {
-    "id": "dx-Mathematical-Statistics-347",
+    "id": "dx-Mathematical-Statistics-355",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39220,7 +39380,7 @@
     "endLine": 378
   },
   {
-    "id": "dx-Mathematical-Statistics-348",
+    "id": "dx-Mathematical-Statistics-356",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39240,7 +39400,7 @@
     "endLine": 386
   },
   {
-    "id": "dx-Mathematical-Statistics-349",
+    "id": "dx-Mathematical-Statistics-357",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39260,7 +39420,7 @@
     "endLine": 394
   },
   {
-    "id": "dx-Mathematical-Statistics-350",
+    "id": "dx-Mathematical-Statistics-358",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39280,7 +39440,7 @@
     "endLine": 398
   },
   {
-    "id": "dx-Mathematical-Statistics-351",
+    "id": "dx-Mathematical-Statistics-359",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39300,7 +39460,7 @@
     "endLine": 402
   },
   {
-    "id": "dx-Mathematical-Statistics-352",
+    "id": "dx-Mathematical-Statistics-360",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39320,7 +39480,7 @@
     "endLine": 410
   },
   {
-    "id": "dx-Mathematical-Statistics-353",
+    "id": "dx-Mathematical-Statistics-361",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39340,7 +39500,7 @@
     "endLine": 418
   },
   {
-    "id": "dx-Mathematical-Statistics-354",
+    "id": "dx-Mathematical-Statistics-362",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39360,7 +39520,7 @@
     "endLine": 422
   },
   {
-    "id": "dx-Mathematical-Statistics-355",
+    "id": "dx-Mathematical-Statistics-363",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39380,7 +39540,7 @@
     "endLine": 426
   },
   {
-    "id": "dx-Mathematical-Statistics-356",
+    "id": "dx-Mathematical-Statistics-364",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39400,7 +39560,7 @@
     "endLine": 438
   },
   {
-    "id": "dx-Mathematical-Statistics-357",
+    "id": "dx-Mathematical-Statistics-365",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39420,7 +39580,7 @@
     "endLine": 442
   },
   {
-    "id": "dx-Mathematical-Statistics-358",
+    "id": "dx-Mathematical-Statistics-366",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39440,7 +39600,7 @@
     "endLine": 452
   },
   {
-    "id": "dx-Mathematical-Statistics-359",
+    "id": "dx-Mathematical-Statistics-367",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39460,7 +39620,7 @@
     "endLine": 464
   },
   {
-    "id": "dx-Mathematical-Statistics-360",
+    "id": "dx-Mathematical-Statistics-368",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39480,7 +39640,7 @@
     "endLine": 476
   },
   {
-    "id": "dx-Mathematical-Statistics-361",
+    "id": "dx-Mathematical-Statistics-369",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39500,7 +39660,87 @@
     "endLine": 480
   },
   {
-    "id": "dx-Mathematical-Statistics-362",
+    "id": "dx-Mathematical-Statistics-370",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "4.2",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_{10}$ 是抽自 $N(\\mu, \\sigma^2)$ 的样本．\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] 试写出检验问题 $H_0: \\sigma^2 \\leqslant 1$；$H_1: \\sigma^2 > 1$ 的检验函数，取 $\\alpha = 0.1$；\n\n    \\item[(3)] 取 $\\alpha = 0.05$，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_{10}$ 是抽自 $N(\\mu, \\sigma^2)$ 的样本．\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] 试写出检验问题 $H_0: \\sigma^2 \\leqslant 1$；$H_1: \\sigma^2 > 1$ 的检验函数，取 $\\alpha = 0.1$；\n\n    \\item[(3)] 取 $\\alpha = 0.05$，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？\n\\end{enumerate}\n\\end{homework}",
+    "text": "[2] 设 是抽自 的样本． 试写出检验问题 ； 的检验函数，取 ； 取 ，重做 (1)，(2)，功效函数有何变化？由此得出什么结论？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 482,
+    "endLine": 492
+  },
+  {
+    "id": "dx-Mathematical-Statistics-371",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "4.2",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[3]\n（两个正态总体的比较）设 $X_1, X_2, \\cdots, X_m$ 为来自 $N(\\mu_1, \\sigma_1^2)$ 的样本；$Y_1, Y_2, \\cdots, Y_n$ 为来自 $N(\\mu_2, \\sigma_2^2)$ 的样本，两样本相互独立，$\\sigma_1^2, \\sigma_2^2$ 均未知．分下面几种情况，给出 $H_0: \\mu_1 = \\mu_2$；$H_1: \\mu_1 \\neq \\mu_2$ 的检验函数形式：\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] $\\sigma_1^2 = k\\sigma_2^2$，$k$ 为已知常数；\n\n   \n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[3]\n（两个正态总体的比较）设 $X_1, X_2, \\cdots, X_m$ 为来自 $N(\\mu_1, \\sigma_1^2)$ 的样本；$Y_1, Y_2, \\cdots, Y_n$ 为来自 $N(\\mu_2, \\sigma_2^2)$ 的样本，两样本相互独立，$\\sigma_1^2, \\sigma_2^2$ 均未知．分下面几种情况，给出 $H_0: \\mu_1 = \\mu_2$；$H_1: \\mu_1 \\neq \\mu_2$ 的检验函数形式：\n\n\\begin{enumerate}\n   \n\n    \\item[(2)] $\\sigma_1^2 = k\\sigma_2^2$，$k$ 为已知常数；\n\n   \n\\end{enumerate}\n\\end{homework}",
+    "text": "[3] （两个正态总体的比较）设 为来自 的样本； 为来自 的样本，两样本相互独立， 均未知．分下面几种情况，给出 ； 的检验函数形式： ， 为已知常数；",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 494,
+    "endLine": 504
+  },
+  {
+    "id": "dx-Mathematical-Statistics-372",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "4.2",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[4]\n（两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式：\n\n\\begin{enumerate}\n    \\item[(1)] $H_0: \\sigma_1^2 \\leqslant \\sigma_2^2$；$H_1: \\sigma_1^2 > \\sigma_2^2$；\n\n    \\item[(2)] $H_0: \\sigma_1^2 = k\\sigma_2^2$；$H_1: \\sigma_1^2 \\neq k\\sigma_2^2$，其中 $k$ 为给定的数．\n\\end{enumerate}\n\\end{homework}",
+    "content": "\\begin{homework}[4]\n（两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式：\n\n\\begin{enumerate}\n    \\item[(1)] $H_0: \\sigma_1^2 \\leqslant \\sigma_2^2$；$H_1: \\sigma_1^2 > \\sigma_2^2$；\n\n    \\item[(2)] $H_0: \\sigma_1^2 = k\\sigma_2^2$；$H_1: \\sigma_1^2 \\neq k\\sigma_2^2$，其中 $k$ 为给定的数．\n\\end{enumerate}\n\\end{homework}",
+    "text": "[4] （两个正态总体的比较）样本如第 3 题所示，试给出检验下列问题的检验函数的形式： ； ； ； ，其中 为给定的数．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 506,
+    "endLine": 514
+  },
+  {
+    "id": "dx-Mathematical-Statistics-373",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "4.2",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "4.2",
+    "previewType": "homework",
+    "previewTitle": "4.2",
+    "rawContent": "\\begin{homework}[6]\n用两台仪器 $A$，$B$ 测量相同的物理量，设 $A$ 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 $A$ 独立测量 10 次，数值如下：\n\\[\n10.5 \\quad 10.3 \\quad 10.4 \\quad 9.6 \\quad 9.7 \\quad 9.8 \\quad 9.9 \\quad 10.1 \\quad 10.2 \\quad 9.7\n\\]\n对同一量用仪器 $B$ 独立测量了 10 次，其数值是\n\\[\n10.2 \\quad 10.7 \\quad 10.8 \\quad 10.9 \\quad 10.4 \\quad 10.6 \\quad 11.0 \\quad 11.1 \\quad 10.9 \\quad 11.2\n\\]\n试回答下列问题：\n\n\\begin{enumerate}\n    \\item[(1)] 仪器 $B$ 有无系统误差？\n\n    \\item[(2)] 若已知没有系统误差，仪器 $A$ 和仪器 $B$ 的测量精度是否一致？\n\\end{enumerate}\n\n\\begin{note}\n\"无系统误差\"等同于 $\\mu_B = \\mu_A$，\"测量精度一致\"等同于 $\\sigma_B^2 = \\sigma_A^2$，$\\mu_A, \\mu_B, \\sigma_A^2, \\sigma_B^2$ 分别是两台仪器测量值分布的均值和方差．\n\\end{note}\n\\end{homework}",
+    "content": "\\begin{homework}[6]\n用两台仪器 $A$，$B$ 测量相同的物理量，设 $A$ 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 $A$ 独立测量 10 次，数值如下：\n\\[\n10.5 \\quad 10.3 \\quad 10.4 \\quad 9.6 \\quad 9.7 \\quad 9.8 \\quad 9.9 \\quad 10.1 \\quad 10.2 \\quad 9.7\n\\]\n对同一量用仪器 $B$ 独立测量了 10 次，其数值是\n\\[\n10.2 \\quad 10.7 \\quad 10.8 \\quad 10.9 \\quad 10.4 \\quad 10.6 \\quad 11.0 \\quad 11.1 \\quad 10.9 \\quad 11.2\n\\]\n试回答下列问题：\n\n\\begin{enumerate}\n    \\item[(1)] 仪器 $B$ 有无系统误差？\n\n    \\item[(2)] 若已知没有系统误差，仪器 $A$ 和仪器 $B$ 的测量精度是否一致？\n\\end{enumerate}\n\n\\begin{note}\n\"无系统误差\"等同于 $\\mu_B = \\mu_A$，\"测量精度一致\"等同于 $\\sigma_B^2 = \\sigma_A^2$，$\\mu_A, \\mu_B, \\sigma_A^2, \\sigma_B^2$ 分别是两台仪器测量值分布的均值和方差．\n\\end{note}\n\\end{homework}",
+    "text": "[6] 用两台仪器 ， 测量相同的物理量，设 是标准的，两台仪器的测量值均服从正态分布．对某物理量用仪器 独立测量 10 次，数值如下： 对同一量用仪器 独立测量了 10 次，其数值是 试回答下列问题： 仪器 有无系统误差？ 若已知没有系统误差，仪器 和仪器 的测量精度是否一致？ \"无系统误差\"等同于 ，\"测量精度一致\"等同于 ， 分别是两台仪器测量值分布的均值和方差．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 516,
+    "endLine": 536
+  },
+  {
+    "id": "dx-Mathematical-Statistics-374",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39516,11 +39756,11 @@
     "content": "\\begin{homework}[1]\n某单位购进一批产品，抽 36 件检查，发现有 3 件不合格，试问这批产品的不合格品率高于 3\\% 吗？你认为次品率不超过多少？\n\\end{homework}",
     "text": "[1] 某单位购进一批产品，抽 36 件检查，发现有 3 件不合格，试问这批产品的不合格品率高于 3\\% 吗？你认为次品率不超过多少？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 483,
-    "endLine": 485
+    "startLine": 539,
+    "endLine": 541
   },
   {
-    "id": "dx-Mathematical-Statistics-363",
+    "id": "dx-Mathematical-Statistics-375",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39536,11 +39776,11 @@
     "content": "\\begin{homework}[2]\n设 $X_1, X_2, \\cdots, X_n$ 为来自 $P(\\lambda)$ 的样本，试给出检验 $H_0: \\lambda = \\lambda_0$；$H_1: \\lambda \\neq \\lambda_0$ 的检验函数．若有观测值 $5, 7, 8, 6, 9, 10$，在检验水平 $\\alpha = 0.05$ 下，能接受 $\\lambda = 3$ 吗？\n\\end{homework}",
     "text": "[2] 设 为来自 的样本，试给出检验 ； 的检验函数．若有观测值 ，在检验水平 下，能接受 吗？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 487,
-    "endLine": 489
+    "startLine": 543,
+    "endLine": 545
   },
   {
-    "id": "dx-Mathematical-Statistics-364",
+    "id": "dx-Mathematical-Statistics-376",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39556,11 +39796,11 @@
     "content": "\\begin{homework}{1}\n设总体 $X$ 服从参数为 $\\lambda$ 的泊松分布\n$$f(x,\\lambda) = \\frac{\\lambda^x}{x!}e^{-\\lambda}, \\quad x = 0,1,2,\\cdots$$\n其中 $\\lambda > 0$ 为参数，$X_1, X_2, \\cdots, X_n$ 是独立同分布样本。考虑假设检验问题：\n$$H_0: \\lambda \\leq \\lambda_0; \\quad H_1: \\lambda > \\lambda_0$$\n\\begin{enumerate}\n    \\item 有无 UMP 检验？为什么？\n    \\item 若有 UMP 检验，试求出检验水平 $\\alpha = 0.05$，$n = 10$，$\\lambda_0 = 0.1$ 时的检验函数。\n\\end{enumerate}\n\\end{homework}",
     "text": "1 设总体 服从参数为 的泊松分布 其中 为参数， 是独立同分布样本。考虑假设检验问题： 有无 UMP 检验？为什么？ 若有 UMP 检验，试求出检验水平 ， ， 时的检验函数。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 491,
-    "endLine": 500
+    "startLine": 547,
+    "endLine": 556
   },
   {
-    "id": "dx-Mathematical-Statistics-365",
+    "id": "dx-Mathematical-Statistics-377",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39576,11 +39816,11 @@
     "content": "\\begin{homework}{2}\n某修理部对要求服务人数连续作 $n$ 日记录。$X_i$ 为第 $i$ 日要求服务的人数。设 $X_1, X_2, \\cdots, X_n$ 独立同分布，均服从参数为 $\\theta$ 的泊松分布。若每日要求服务人数太少将关门。根据 $n$ 日的记录，要作出符合下面要求的决定：\n\\begin{enumerate}\n    \\item 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门；\n    \\item 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。\n\\end{enumerate}\n问需观察多少日即 $n$ 为多少时，UMP 检验才能满足上述要求？\n\\end{homework}",
     "text": "2 某修理部对要求服务人数连续作 日记录。 为第 日要求服务的人数。设 独立同分布，均服从参数为 的泊松分布。若每日要求服务人数太少将关门。根据 日的记录，要作出符合下面要求的决定： 若每日要求服务平均人数不多于 10 人，仅有 0.01 的概率开门； 若每日要求服务的平均人数不少于 15 人，仅有 0.01 的概率关门。 问需观察多少日即 为多少时，UMP 检验才能满足上述要求？",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 501,
-    "endLine": 508
+    "startLine": 557,
+    "endLine": 564
   },
   {
-    "id": "dx-Mathematical-Statistics-366",
+    "id": "dx-Mathematical-Statistics-378",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -39596,8 +39836,8 @@
     "content": "\\begin{homework}{3}\n一测量仪器正常运行，对某量重复测量 $n$ 次，其结果是 $X_1, X_2, \\cdots, X_n$。假设 $X_1 \\sim N(\\mu, \\sigma^2)$。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 $\\mu_0 \\pm \\Delta$。试回答下列问题：\n\\begin{enumerate}\n    \\item 怎样将该问题叙述成假设检验问题？\n    \\item 该假设检验问题有无 UMP 检验？若有给出检验函数的形式；\n    \\item 利用 $\\chi^2$ 分布表，确定样本容量 $n$ 的大小，使得在检验水平为 0.01、测量误差大于 $1.1\\Delta$ 时，被检测出的概率大于 0.9。\n\\end{enumerate}\n\\end{homework}",
     "text": "3 一测量仪器正常运行，对某量重复测量 次，其结果是 。假设 。今欲检验该仪器测量精度是否满足要求。假定测量精度要求为 。试回答下列问题： 怎样将该问题叙述成假设检验问题？ 该假设检验问题有无 UMP 检验？若有给出检验函数的形式； 利用 分布表，确定样本容量 的大小，使得在检验水平为 0.01、测量误差大于 时，被检测出的概率大于 0.9。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
-    "startLine": 510,
-    "endLine": 517
+    "startLine": 566,
+    "endLine": 573
   },
   {
     "id": "dx-ML-1",
