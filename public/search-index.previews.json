@@ -70737,6 +70737,105 @@
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周",
+    "previewType": "homework",
+    "previewTitle": "12周",
+    "rawContent": "\\begin{homework}[1]\n有一样本的观测值为：$0.473$，$0.224$，$0.827$，$0.223$，$0.867$，$0.779$，$0.554$，$0.529$，$0.705$，$0.656$，试用作图法检验该样本是否抽自 $U(0,1)$．\n\\end{homework}",
+    "content": "\\begin{homework}[1]\n有一样本的观测值为：$0.473$，$0.224$，$0.827$，$0.223$，$0.867$，$0.779$，$0.554$，$0.529$，$0.705$，$0.656$，试用作图法检验该样本是否抽自 $U(0,1)$．\n\\end{homework}",
+    "text": "[1] 有一样本的观测值为： ， ， ， ， ， ， ， ， ， ，试用作图法检验该样本是否抽自 ．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3717,
+    "endLine": 3719,
+    "pdfLocator": {
+      "page": 91,
+      "x": 53.704132,
+      "y": 312.896576,
+      "h": 39.337566,
+      "v": 314.819336,
+      "W": 499.245117,
+      "H": 9.733473
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-339",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周",
+    "previewType": "homework",
+    "previewTitle": "12周",
+    "rawContent": "\\begin{homework}[2]\n有一样本的观测值为：$0.54$，$0.32$，$0.68$，$0.71$，$1.04$，$0.94$，$1.34$，$1.10$，$0.44$，$1.01$，试用作图法检验该样本是否抽自正态总体．\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n有一样本的观测值为：$0.54$，$0.32$，$0.68$，$0.71$，$1.04$，$0.94$，$1.34$，$1.10$，$0.44$，$1.01$，试用作图法检验该样本是否抽自正态总体．\n\\end{homework}",
+    "text": "[2] 有一样本的观测值为： ， ， ， ， ， ， ， ， ， ，试用作图法检验该样本是否抽自正态总体．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3721,
+    "endLine": 3723,
+    "pdfLocator": {
+      "page": 91,
+      "x": 53.704132,
+      "y": 343.980072,
+      "h": 39.337566,
+      "v": 345.902832,
+      "W": 499.245117,
+      "H": 9.733473
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-340",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周",
+    "previewType": "homework",
+    "previewTitle": "12周",
+    "rawContent": "\\begin{homework}[extra]\n对第 1 题做 Kolmogorov 检验．\n\n掷骰子 $30$ 次，掷出 $1$、$2$、$3$、$4$、$5$、$6$ 点的次数分别为 $3$、$6$、$4$、$7$、$4$、$6$，请检验骰子出现各点概率是否相等？\n\\end{homework}",
+    "content": "\\begin{homework}[extra]\n对第 1 题做 Kolmogorov 检验．\n\n掷骰子 $30$ 次，掷出 $1$、$2$、$3$、$4$、$5$、$6$ 点的次数分别为 $3$、$6$、$4$、$7$、$4$、$6$，请检验骰子出现各点概率是否相等？\n\\end{homework}",
+    "text": "[extra] 对第 1 题做 Kolmogorov 检验． 掷骰子 次，掷出 、 、 、 、 、 点的次数分别为 、 、 、 、 、 ，请检验骰子出现各点概率是否相等？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/作业.tex",
+    "startLine": 3725,
+    "endLine": 3729,
+    "pdfLocator": {
+      "page": 91,
+      "x": 56.19479,
+      "y": 375.063568,
+      "h": 39.337566,
+      "v": 377.235413,
+      "W": 499.245117,
+      "H": 9.912808
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-341",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
     "section": "第一周作业",
     "subsection": "page44",
     "kind": "homework",
@@ -70764,7 +70863,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-339",
+    "id": "dx-Mathematical-Statistics-342",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70797,7 +70896,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-340",
+    "id": "dx-Mathematical-Statistics-343",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70830,7 +70929,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-341",
+    "id": "dx-Mathematical-Statistics-344",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70863,7 +70962,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-342",
+    "id": "dx-Mathematical-Statistics-345",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70896,7 +70995,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-343",
+    "id": "dx-Mathematical-Statistics-346",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70929,7 +71028,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-344",
+    "id": "dx-Mathematical-Statistics-347",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70962,7 +71061,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-345",
+    "id": "dx-Mathematical-Statistics-348",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -70995,7 +71094,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-346",
+    "id": "dx-Mathematical-Statistics-349",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71028,7 +71127,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-347",
+    "id": "dx-Mathematical-Statistics-350",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71061,7 +71160,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-348",
+    "id": "dx-Mathematical-Statistics-351",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71094,7 +71193,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-349",
+    "id": "dx-Mathematical-Statistics-352",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71127,7 +71226,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-350",
+    "id": "dx-Mathematical-Statistics-353",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71160,7 +71259,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-351",
+    "id": "dx-Mathematical-Statistics-354",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71193,7 +71292,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-352",
+    "id": "dx-Mathematical-Statistics-355",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71226,7 +71325,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-353",
+    "id": "dx-Mathematical-Statistics-356",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71259,7 +71358,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-354",
+    "id": "dx-Mathematical-Statistics-357",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71292,7 +71391,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-355",
+    "id": "dx-Mathematical-Statistics-358",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71325,7 +71424,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-356",
+    "id": "dx-Mathematical-Statistics-359",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71358,7 +71457,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-357",
+    "id": "dx-Mathematical-Statistics-360",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71391,7 +71490,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-358",
+    "id": "dx-Mathematical-Statistics-361",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71424,7 +71523,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-359",
+    "id": "dx-Mathematical-Statistics-362",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71457,7 +71556,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-360",
+    "id": "dx-Mathematical-Statistics-363",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71490,7 +71589,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-361",
+    "id": "dx-Mathematical-Statistics-364",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71523,7 +71622,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-362",
+    "id": "dx-Mathematical-Statistics-365",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71556,7 +71655,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-363",
+    "id": "dx-Mathematical-Statistics-366",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71589,7 +71688,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-364",
+    "id": "dx-Mathematical-Statistics-367",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71622,7 +71721,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-365",
+    "id": "dx-Mathematical-Statistics-368",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71655,7 +71754,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-366",
+    "id": "dx-Mathematical-Statistics-369",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71688,7 +71787,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-367",
+    "id": "dx-Mathematical-Statistics-370",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71721,7 +71820,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-368",
+    "id": "dx-Mathematical-Statistics-371",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71754,7 +71853,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-369",
+    "id": "dx-Mathematical-Statistics-372",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71787,7 +71886,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-370",
+    "id": "dx-Mathematical-Statistics-373",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71820,7 +71919,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-371",
+    "id": "dx-Mathematical-Statistics-374",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71853,7 +71952,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-372",
+    "id": "dx-Mathematical-Statistics-375",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71886,7 +71985,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-373",
+    "id": "dx-Mathematical-Statistics-376",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71919,7 +72018,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-374",
+    "id": "dx-Mathematical-Statistics-377",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71952,7 +72051,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-375",
+    "id": "dx-Mathematical-Statistics-378",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -71985,7 +72084,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-376",
+    "id": "dx-Mathematical-Statistics-379",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72018,7 +72117,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-377",
+    "id": "dx-Mathematical-Statistics-380",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72051,7 +72150,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-378",
+    "id": "dx-Mathematical-Statistics-381",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72084,7 +72183,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-379",
+    "id": "dx-Mathematical-Statistics-382",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72117,7 +72216,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-380",
+    "id": "dx-Mathematical-Statistics-383",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72150,7 +72249,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-381",
+    "id": "dx-Mathematical-Statistics-384",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72183,7 +72282,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-382",
+    "id": "dx-Mathematical-Statistics-385",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72216,7 +72315,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-383",
+    "id": "dx-Mathematical-Statistics-386",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72249,7 +72348,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-384",
+    "id": "dx-Mathematical-Statistics-387",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72282,7 +72381,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-385",
+    "id": "dx-Mathematical-Statistics-388",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72315,7 +72414,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-386",
+    "id": "dx-Mathematical-Statistics-389",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72348,7 +72447,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-387",
+    "id": "dx-Mathematical-Statistics-390",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72381,7 +72480,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-388",
+    "id": "dx-Mathematical-Statistics-391",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72414,7 +72513,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-389",
+    "id": "dx-Mathematical-Statistics-392",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72447,7 +72546,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-390",
+    "id": "dx-Mathematical-Statistics-393",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72480,7 +72579,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-391",
+    "id": "dx-Mathematical-Statistics-394",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72513,7 +72612,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-392",
+    "id": "dx-Mathematical-Statistics-395",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72546,7 +72645,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-393",
+    "id": "dx-Mathematical-Statistics-396",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72579,7 +72678,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-394",
+    "id": "dx-Mathematical-Statistics-397",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72612,7 +72711,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-395",
+    "id": "dx-Mathematical-Statistics-398",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72645,7 +72744,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-396",
+    "id": "dx-Mathematical-Statistics-399",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72678,7 +72777,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-397",
+    "id": "dx-Mathematical-Statistics-400",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72711,7 +72810,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-398",
+    "id": "dx-Mathematical-Statistics-401",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72744,7 +72843,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-399",
+    "id": "dx-Mathematical-Statistics-402",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72777,7 +72876,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-400",
+    "id": "dx-Mathematical-Statistics-403",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72810,7 +72909,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-401",
+    "id": "dx-Mathematical-Statistics-404",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72843,7 +72942,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-402",
+    "id": "dx-Mathematical-Statistics-405",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72876,7 +72975,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-403",
+    "id": "dx-Mathematical-Statistics-406",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72909,7 +73008,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-404",
+    "id": "dx-Mathematical-Statistics-407",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72942,7 +73041,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-405",
+    "id": "dx-Mathematical-Statistics-408",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -72975,7 +73074,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-406",
+    "id": "dx-Mathematical-Statistics-409",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -73008,7 +73107,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-407",
+    "id": "dx-Mathematical-Statistics-410",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -73041,7 +73140,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-408",
+    "id": "dx-Mathematical-Statistics-411",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -73074,7 +73173,7 @@
     "previewDebug": "non-frame block fallback to text"
   },
   {
-    "id": "dx-Mathematical-Statistics-409",
+    "id": "dx-Mathematical-Statistics-412",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -73100,6 +73199,105 @@
       "v": 357.240417,
       "W": 499.245117,
       "H": 9.504336
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-413",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周作业",
+    "previewType": "homework",
+    "previewTitle": "12周作业",
+    "rawContent": "\\begin{homework}[1]\n有一样本的观测值为：$0.473$，$0.224$，$0.827$，$0.223$，$0.867$，$0.779$，$0.554$，$0.529$，$0.705$，$0.656$，试用作图法检验该样本是否抽自 $U(0,1)$．\n\\end{homework}",
+    "content": "\\begin{homework}[1]\n有一样本的观测值为：$0.473$，$0.224$，$0.827$，$0.223$，$0.867$，$0.779$，$0.554$，$0.529$，$0.705$，$0.656$，试用作图法检验该样本是否抽自 $U(0,1)$．\n\\end{homework}",
+    "text": "[1] 有一样本的观测值为： ， ， ， ， ， ， ， ， ， ，试用作图法检验该样本是否抽自 ．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 632,
+    "endLine": 634,
+    "pdfLocator": {
+      "page": 99,
+      "x": 53.704132,
+      "y": 552.418945,
+      "h": 39.337566,
+      "v": 554.341736,
+      "W": 499.245117,
+      "H": 9.733473
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-414",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周作业",
+    "previewType": "homework",
+    "previewTitle": "12周作业",
+    "rawContent": "\\begin{homework}[2]\n有一样本的观测值为：$0.54$，$0.32$，$0.68$，$0.71$，$1.04$，$0.94$，$1.34$，$1.10$，$0.44$，$1.01$，试用作图法检验该样本是否抽自正态总体．\n\\end{homework}",
+    "content": "\\begin{homework}[2]\n有一样本的观测值为：$0.54$，$0.32$，$0.68$，$0.71$，$1.04$，$0.94$，$1.34$，$1.10$，$0.44$，$1.01$，试用作图法检验该样本是否抽自正态总体．\n\\end{homework}",
+    "text": "[2] 有一样本的观测值为： ， ， ， ， ， ， ， ， ， ，试用作图法检验该样本是否抽自正态总体．",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 636,
+    "endLine": 638,
+    "pdfLocator": {
+      "page": 99,
+      "x": 53.704132,
+      "y": 583.50238,
+      "h": 39.337566,
+      "v": 585.425171,
+      "W": 499.245117,
+      "H": 9.733473
+    },
+    "debugExitStatus": 0,
+    "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
+    "previewImage": null,
+    "previewDebug": "non-frame block fallback to text"
+  },
+  {
+    "id": "dx-Mathematical-Statistics-415",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "12周作业",
+    "subsection": "",
+    "kind": "homework",
+    "blockTitle": "12周作业",
+    "previewType": "homework",
+    "previewTitle": "12周作业",
+    "rawContent": "\\begin{homework}[extra]\n对第 1 题做 Kolmogorov 检验．\n\n掷骰子 $30$ 次，掷出 $1$、$2$、$3$、$4$、$5$、$6$ 点的次数分别为 $3$、$6$、$4$、$7$、$4$、$6$，请检验骰子出现各点概率是否相等？\n\\end{homework}",
+    "content": "\\begin{homework}[extra]\n对第 1 题做 Kolmogorov 检验．\n\n掷骰子 $30$ 次，掷出 $1$、$2$、$3$、$4$、$5$、$6$ 点的次数分别为 $3$、$6$、$4$、$7$、$4$、$6$，请检验骰子出现各点概率是否相等？\n\\end{homework}",
+    "text": "[extra] 对第 1 题做 Kolmogorov 检验． 掷骰子 次，掷出 、 、 、 、 、 点的次数分别为 、 、 、 、 、 ，请检验骰子出现各点概率是否相等？",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/纯作业.tex",
+    "startLine": 640,
+    "endLine": 644,
+    "pdfLocator": {
+      "page": 99,
+      "x": 56.19479,
+      "y": 614.585876,
+      "h": 39.337566,
+      "v": 616.75769,
+      "W": 499.245117,
+      "H": 9.912808
     },
     "debugExitStatus": 0,
     "debugPdfPath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.pdf",
