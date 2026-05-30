@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 */3 * * *'
+  push:
+    branches:
+      - claude/amazing-hoover-8cadf7
 
 jobs:
   build:
