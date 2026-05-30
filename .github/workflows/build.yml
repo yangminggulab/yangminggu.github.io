@@ -19,7 +19,7 @@ jobs:
       - name: Checkout website repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       # --- caching disabled (no speed improvement observed) ---
       # - name: Cache compiled LaTeX repos
@@ -61,17 +61,21 @@ jobs:
           texhash /root/texmf
 
       - name: Run Python build script
+        id: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/build_notes.py
 
       - name: Build search index
+        if: steps.build.outputs.needs_rebuild == 'true'
         run: npx tsx scripts/build-search-index.ts
 
       - name: Enrich search index
+        if: steps.build.outputs.needs_rebuild == 'true'
         run: npx tsx scripts/enrich-search-index.ts
 
       - name: Render search previews
+        if: steps.build.outputs.needs_rebuild == 'true'
         run: python3 scripts/render_search_previews.py
 
       - name: Build diagnostics
