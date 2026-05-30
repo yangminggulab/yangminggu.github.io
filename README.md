@@ -2,65 +2,256 @@
 
 ## 整体架构
 
-这个项目是“阳明谷”的静态网站仓库，核心目标是把 `yangminggulab` 账号下的 `dx*` 笔记仓库自动整理成一个可以浏览、下载和搜索的 GitHub Pages 站点。它不是一个传统的前后端服务，而是一条“内容仓库 -> 自动构建 -> 静态资源 -> 浏览器展示”的流水线。
+`yangminggu.github.io` 是一个面向数学/技术笔记的静态知识站点。它的核心不是传统后端服务，而是一条自动化内容生产流水线：从多个 `dx*` LaTeX 笔记仓库拉取源文件，编译成 PDF，再把 LaTeX 内容抽取成可搜索的结构化索引，最后由一个纯静态首页负责展示书架、视频和搜索结果。
 
-主线可以理解为：
+最上层可以看成下面这棵树：
 
-1. 内容来源：各个 `dx*` 仓库保存课程笔记的 LaTeX 源文件，本站仓库也保存视频、PDF、索引 JSON 等最终要发布的静态资源。
-2. 自动构建：GitHub Actions 定时或手动触发构建，运行 Python 和 TypeScript 脚本拉取笔记仓库、编译 PDF、抽取 LaTeX 内容、生成搜索索引和预览图。
-3. 静态展示：`index.html` 直接读取生成好的 `books.json`、`pdf/`、`video/videos.json` 和 `public/search-index.previews.json`，在浏览器里展示书架、视频和搜索结果。
+```text
+yangminggu.github.io
+├── 内容输入层
+│   ├── GitHub: yangminggulab/dx* 仓库
+│   │   ├── main.tex
+│   │   ├── 章节 .tex 文件
+│   │   └── LaTeX 编译资源
+│   └── 本仓库 video/*.mp4
+│
+├── 自动构建层
+│   ├── .github/workflows/build.yml
+│   │   ├── 安装 Python / Node / TeX Live 依赖
+│   │   ├── 运行 Python 构建脚本
+│   │   ├── 运行 TypeScript 搜索索引脚本
+│   │   └── 把生成结果提交回 main 分支
+│   │
+│   └── scripts/
+│       ├── build_notes.py
+│       │   ├── 调 GitHub API 找到 dx* 仓库
+│       │   ├── clone / fetch 最新笔记仓库
+│       │   ├── latexmk 编译 main.tex
+│       │   ├── 复制 PDF 到 pdf/
+│       │   ├── 生成 books.json
+│       │   ├── 生成 notes_manifest.json
+│       │   ├── 更新 build_state.json
+│       │   └── 生成 video/videos.json
+│       │
+│       ├── build-search-index.ts
+│       │   ├── 读取 notes_manifest.json
+│       │   ├── 递归解析 main.tex 和 input/include 的章节文件
+│       │   ├── 抽取 definition/theorem/example/note/dxtips 等块
+│       │   └── 生成 public/search-index.json
+│       │
+│       ├── enrich-search-index.ts
+│       │   ├── 读取 public/search-index.json
+│       │   ├── 调用 synctex view 定位源代码行在 PDF 中的位置
+│       │   └── 生成 public/search-index.enriched.json
+│       │
+│       └── render_search_previews.py
+│           ├── 读取 public/search-index.enriched.json
+│           ├── 用 PyMuPDF 打开 PDF
+│           ├── 按 SyncTeX 坐标裁剪定理/定义/例题等区域
+│           ├── 输出 public/search-previews/*.png
+│           └── 生成 public/search-index.previews.json
+│
+├── 静态数据层
+│   ├── pdf/*.pdf
+│   ├── books.json
+│   ├── notes_manifest.json
+│   ├── build_state.json
+│   ├── video/videos.json
+│   └── public/
+│       ├── search-index.json
+│       ├── search-index.enriched.json
+│       ├── search-index.previews.json
+│       └── search-previews/*.png
+│
+└── 前端展示层
+    ├── index.html
+    │   ├── 加载 books.json 渲染 PDF 书架
+    │   ├── 加载 video/videos.json 渲染视频列表
+    │   ├── 加载 public/search-index.previews.json 做全文搜索
+    │   └── 打开 pdf/*.pdf 或展示搜索预览
+    └── src/
+        ├── components/
+        └── lib/
+```
 
-各部分之间的关系：
+这个架构的重点是“构建时做重活，运行时只读静态文件”。LaTeX 编译、PDF 坐标定位、搜索预览图裁剪都在 GitHub Actions 里提前完成；用户访问网站时，浏览器只需要请求 JSON、PDF、图片和视频，不需要服务器实时计算。
 
-- `dx*` 笔记仓库 -> `scripts/build_notes.py` -> `temp_repos/`、`pdf/`、`books.json`、`notes_manifest.json`、`build_state.json`
-- `notes_manifest.json` + LaTeX 源文件 -> `scripts/build-search-index.ts` -> `public/search-index.json`
-- `public/search-index.json` + SyncTeX -> `scripts/enrich-search-index.ts` -> `public/search-index.enriched.json`
-- `public/search-index.enriched.json` + PDF -> `scripts/render_search_previews.py` -> `public/search-index.previews.json` 和 `public/search-previews/`
-- `books.json`、`pdf/`、`video/`、`public/` -> `index.html` -> GitHub Pages 页面
+## 信息传递链路
 
-## 目录说明
+整个项目的信息流可以分成五段：
 
-| 路径 | 作用 |
+```text
+dx* 仓库的 LaTeX 源码
+  -> build_notes.py
+  -> PDF 文件 + 笔记清单
+  -> build-search-index.ts
+  -> 文本搜索块
+  -> enrich-search-index.ts
+  -> PDF 定位信息
+  -> render_search_previews.py
+  -> 搜索预览图片
+  -> index.html
+  -> 用户在网页上浏览、搜索、打开 PDF
+```
+
+更具体地说：
+
+1. `build_notes.py` 先通过 GitHub API 获取 `yangminggulab` 用户名下所有仓库，只保留仓库名以 `dx` 开头的课程笔记仓库。
+2. 对每个匹配仓库，脚本会在 `temp_repos/` 中 clone 或更新到最新版本，然后查找 `main.tex`。
+3. 找到 `main.tex` 后，脚本调用 `latexmk -xelatex -synctex=1` 编译 PDF。这里开启 SyncTeX 是后续“从搜索结果跳回 PDF 位置”和“裁剪预览图”的关键。
+4. 编译产物会被复制到 `pdf/`，同时生成 `books.json` 给首页书架使用，生成 `notes_manifest.json` 给搜索索引脚本使用。
+5. `build-search-index.ts` 读取 `notes_manifest.json`，再打开每本笔记的 `main.tex`，沿着 `\input{}` 和 `\include{}` 递归读取章节文件，把 LaTeX 中的定义、定理、例题、笔记、提示和普通段落抽成结构化 JSON。
+6. `enrich-search-index.ts` 读取基础搜索索引，对每个带有源文件路径和行号的内容块调用 `synctex view`，把“某个 TeX 文件第几行”转换成“PDF 第几页、页面坐标是多少”。
+7. `render_search_previews.py` 读取带坐标的索引，用 PyMuPDF 打开 PDF，按坐标把定义、定理、例题等内容裁剪成 PNG 预览图。
+8. `index.html` 在浏览器中读取最终的 `public/search-index.previews.json`，搜索时展示文本摘要或预览图片，并通过 `books.json` 和 `pdf/` 渲染可打开的 PDF 书架。
+
+## 运行时和构建时的分工
+
+| 层级 | 做什么 | 产物 |
+| --- | --- | --- |
+| 构建时 | 拉取笔记仓库、编译 PDF、解析 LaTeX、定位 PDF 坐标、裁剪预览图 | `pdf/`、`books.json`、`notes_manifest.json`、`public/search-*.json`、`public/search-previews/` |
+| 运行时 | 浏览器加载静态资源，完成书架展示、视频展示、搜索匹配和结果渲染 | 用户看到的 GitHub Pages 页面 |
+
+这样设计的好处是部署简单、访问速度快、没有服务器维护成本。复杂计算全部被前置到 CI 里，最终站点只是 GitHub Pages 上的一组静态文件。
+
+## Python 文件说明
+
+项目里参与主流程的 Python 文件有两个。
+
+### `scripts/build_notes.py`
+
+这个文件负责“内容输入层 -> 静态数据层”的第一段，是整个构建流水线的入口。
+
+输入：
+
+- GitHub API 返回的 `yangminggulab` 账号仓库列表。
+- 每个 `dx*` 仓库里的 LaTeX 源文件，尤其是 `main.tex`。
+- 本仓库已有的 `build_state.json`，用于判断仓库是否需要重新编译。
+- 本仓库 `video/*.mp4`，用于生成视频清单。
+
+核心逻辑：
+
+1. 读取环境变量 `GITHUB_TOKEN`，用于访问 GitHub API，减少 API 限流风险。
+2. 读取环境变量 `FORCE_REBUILD`，当它等于 `1` 时强制重新编译所有匹配仓库。
+3. 调用 GitHub API 分页获取 `yangminggulab` 下的仓库列表。
+4. 只处理仓库名以 `dx` 开头的仓库。
+5. 如果 `temp_repos/<repo>` 不存在，就用浅克隆拉取仓库；如果已经存在，就 fetch 最新远端状态并 reset 到 `origin/HEAD`。
+6. 在仓库中递归查找 `main.tex`，并选取第一个候选文件作为编译入口。
+7. 根据 `build_state.json`、远端 `pushed_at`、本地 PDF 和 SyncTeX 是否存在，判断是否需要编译。
+8. 需要编译时调用 `latexmk -xelatex -synctex=1 -interaction=nonstopmode -f main.tex`。
+9. 如果编译失败，会输出 `main.log` 或 `build.log` 的关键尾部日志，方便在 GitHub Actions 里定位 LaTeX 错误。
+10. 编译成功后，把 PDF 复制到根目录的 `pdf/`。
+11. 记录每本书的展示信息到 `books.json`。
+12. 记录每本书的搜索入口信息到 `notes_manifest.json`，包括仓库名、标题、PDF 路径、`main_tex` 路径和 SyncTeX 路径。
+13. 更新 `build_state.json`，避免下一次构建重复编译没有变化的仓库。
+14. 清理已经不存在的仓库对应的孤儿 PDF。
+15. 扫描 `video/*.mp4`，生成 `video/videos.json`。
+
+输出：
+
+- `temp_repos/`：构建时拉取的 `dx*` 仓库副本。
+- `pdf/*.pdf`：网站最终展示和下载的 PDF。
+- `books.json`：首页书架数据。
+- `notes_manifest.json`：后续搜索索引生成脚本的输入清单。
+- `build_state.json`：增量构建状态。
+- `video/videos.json`：首页视频模块的数据源。
+
+### `scripts/render_search_previews.py`
+
+这个文件负责“PDF 定位信息 -> 搜索预览图”的最后一段，让搜索结果不只是普通文本，而能展示 PDF 中真实排版后的截图。
+
+输入：
+
+- `public/search-index.enriched.json`：已经带有源文件路径、行号、SyncTeX 路径和 PDF 定位信息的搜索索引。
+- `pdf/*.pdf` 或构建目录中的 PDF。
+- 每个笔记仓库编译时产生的 `*.synctex.gz`。
+
+核心逻辑：
+
+1. 读取 `public/search-index.enriched.json`。
+2. 只对适合截图展示的 LaTeX 环境生成预览图，比如 `definition`、`theorem`、`example`、`note`、`remark`、`proposition`、`lemma`、`corollary`、`dxtips`。
+3. 普通段落不截图，而是在索引中标记为文本 fallback，避免生成过多低价值图片。
+4. 对每个可截图块，读取它的 `sourcePath`、`startLine`、`endLine` 和 `synctex`。
+5. 调用 `synctex view`，分别把开始行和结束行映射到 PDF 页码和坐标。
+6. 如果开始行和结束行跨页，或者 SyncTeX 映射失败，就记录失败原因，不强行生成错误图片。
+7. 使用 PyMuPDF 打开 PDF，根据 SyncTeX 坐标计算裁剪矩形。
+8. 按内容类型给裁剪区域加不同的上下 padding，让定义、定理、例题等卡片截图更完整。
+9. 把裁剪结果以 PNG 保存到 `public/search-previews/`。
+10. 把每个搜索块对应的 `previewImage` 和 `previewClip` 写回最终索引。
+
+输出：
+
+- `public/search-previews/*.png`：搜索结果展示用的 PDF 局部截图。
+- `public/search-index.previews.json`：首页搜索实际读取的最终索引。
+
+## TypeScript 脚本说明
+
+虽然用户访问时看到的是静态页面，但搜索能力主要来自两个构建期 TypeScript 脚本。
+
+| 文件 | 作用 |
 | --- | --- |
-| `index.html` | 网站入口，包含页面结构、样式和前端交互逻辑。 |
-| `scripts/build_notes.py` | 从 GitHub 拉取 `dx*` 仓库，编译 LaTeX，生成 PDF 清单、构建状态和视频清单。 |
-| `scripts/build-search-index.ts` | 解析 LaTeX 文件，把定义、定理、例题、笔记、段落等内容抽成搜索块。 |
-| `scripts/enrich-search-index.ts` | 使用 SyncTeX 给搜索块补充 PDF 中的位置定位信息。 |
-| `scripts/render_search_previews.py` | 使用 PyMuPDF 按定位信息裁剪 PDF，生成搜索结果里的预览图片。 |
-| `src/` | 搜索组件和搜索工具函数的 TypeScript 源码，目前主要作为搜索逻辑的开发区。 |
-| `pdf/` | 已编译并发布的课程 PDF。 |
-| `public/` | 搜索索引、增强索引、预览索引和预览图片。 |
-| `video/` | 页面展示的视频文件和 `videos.json` 清单。 |
-| `temp_repos/` | 构建时拉取的 `dx*` 仓库副本，用来编译 PDF 和解析源文件。 |
-| `.github/workflows/build.yml` | 自动构建流程，每 3 小时运行一次，也支持手动触发。 |
+| `scripts/build-search-index.ts` | 把 LaTeX 源文件解析成结构化搜索块，识别章节、子章节、定义、定理、例题、笔记、作业、解答、提示和普通段落。 |
+| `scripts/enrich-search-index.ts` | 调用 SyncTeX，把搜索块的源文件行号转换成 PDF 页码和坐标，为后续预览图裁剪提供定位。 |
 
-## 构建流程
+`src/` 目录下也有 TypeScript 搜索相关代码，主要包括搜索组件和搜索评分工具函数；当前首页主要由 `index.html` 内嵌逻辑读取最终 JSON 数据并渲染。
 
-自动构建由 `.github/workflows/build.yml` 负责，运行环境使用完整 TeX Live 容器。流程如下：
+## 数据文件说明
 
-1. 安装 Python、Node、Python 依赖和 npm 依赖。
-2. 安装 `elegantbook.cls`，保证各个 LaTeX 笔记可以编译。
-3. 执行 `python3 scripts/build_notes.py`，拉取并编译 `dx*` 仓库。
-4. 执行 `npx tsx scripts/build-search-index.ts`，生成基础搜索索引。
-5. 执行 `npx tsx scripts/enrich-search-index.ts`，用 SyncTeX 生成 PDF 定位。
-6. 执行 `python3 scripts/render_search_previews.py`，生成搜索预览图。
-7. 把更新后的 `index.html`、`pdf/`、`books.json`、`build_state.json`、`notes_manifest.json`、`public/`、`video/videos.json` 提交回仓库。
+| 文件 | 生产者 | 消费者 | 作用 |
+| --- | --- | --- | --- |
+| `books.json` | `build_notes.py` | `index.html` | 书架数据，告诉首页有哪些 PDF、标题是什么、文件在哪里。 |
+| `notes_manifest.json` | `build_notes.py` | `build-search-index.ts` | 搜索构建入口，记录每本笔记的主 TeX 文件、PDF 路径和 SyncTeX 路径。 |
+| `build_state.json` | `build_notes.py` | `build_notes.py` | 增量构建状态，用于跳过未更新的仓库。 |
+| `video/videos.json` | `build_notes.py` | `index.html` | 视频列表，来自 `video/*.mp4`。 |
+| `public/search-index.json` | `build-search-index.ts` | `enrich-search-index.ts` | 基础搜索索引，只包含文本、标题、章节和源文件行号。 |
+| `public/search-index.enriched.json` | `enrich-search-index.ts` | `render_search_previews.py` | 增强搜索索引，加入 PDF 定位信息和调试信息。 |
+| `public/search-index.previews.json` | `render_search_previews.py` | `index.html` | 最终搜索索引，包含文本、定位和预览图路径。 |
+| `public/search-previews/*.png` | `render_search_previews.py` | `index.html` | 搜索结果中的 PDF 局部截图。 |
 
-## 关键数据文件
+## 自动构建流程
 
-| 文件 | 说明 |
-| --- | --- |
-| `books.json` | 书架数据，告诉首页有哪些 PDF 可以展示和打开。 |
-| `notes_manifest.json` | 每本笔记的仓库名、标题、PDF 路径、主 TeX 文件和 SyncTeX 文件位置。 |
-| `build_state.json` | 记录每个 `dx*` 仓库上次构建时的提交状态，用于判断是否需要重新编译。 |
-| `video/videos.json` | 视频列表，由 `scripts/build_notes.py` 根据 `video/*.mp4` 自动生成。 |
-| `public/search-index.json` | 从 LaTeX 抽取出的基础搜索块。 |
-| `public/search-index.enriched.json` | 在基础搜索块上增加 PDF 定位信息。 |
-| `public/search-index.previews.json` | 在搜索块上增加预览图信息，是首页搜索实际读取的索引。 |
+自动构建由 `.github/workflows/build.yml` 负责。它支持两种触发方式：
+
+- `workflow_dispatch`：手动触发。
+- `schedule`：每 3 小时自动运行一次。
+
+CI 的执行顺序是：
+
+```text
+checkout 仓库
+  -> 安装 Python / Node
+  -> pip3 install -r requirements.txt
+  -> npm install
+  -> 安装 elegantbook.cls
+  -> python3 scripts/build_notes.py
+  -> npx tsx scripts/build-search-index.ts
+  -> npx tsx scripts/enrich-search-index.ts
+  -> python3 scripts/render_search_previews.py
+  -> 输出构建诊断信息
+  -> git add 生成物
+  -> commit
+  -> pull --rebase
+  -> push origin main
+```
+
+CI 使用 `ghcr.io/xu-cheng/texlive-full` 作为容器环境，因为这个项目依赖完整 LaTeX 工具链，包括 `latexmk`、XeLaTeX 和 SyncTeX。
+
+## 前端展示逻辑
+
+`index.html` 是最终页面入口，承担运行时展示职责：
+
+1. 页面加载时读取 `/books.json`，生成 PDF 书架。
+2. 点击书架中的书，打开 `/pdf/<file>`。
+3. 读取 `/video/videos.json`，展示视频列表和视频弹窗。
+4. 读取 `/public/search-index.previews.json`，把搜索框输入和索引内容做匹配。
+5. 搜索结果优先展示预览图；如果某个块没有预览图，就回退到文本摘要。
+6. 搜索结果保留 PDF 路径、章节信息和预览信息，方便用户从关键词跳到具体笔记内容。
+
+这里没有运行时后端，所有数据都通过静态 JSON 文件传给浏览器。
 
 ## 本地开发
 
-这个项目没有单独的应用构建命令，首页是纯静态页面。查看页面时可以在仓库根目录启动一个静态文件服务器：
+首页是纯静态页面，可以在仓库根目录启动一个简单服务器查看：
 
 ```bash
 python3 -m http.server 8000
@@ -68,7 +259,7 @@ python3 -m http.server 8000
 
 然后打开 `http://localhost:8000`。
 
-如果需要重新生成笔记和搜索索引，通常按下面的顺序运行：
+如果需要完整重新生成 PDF、索引和预览图，可以按 CI 顺序运行：
 
 ```bash
 pip3 install -r requirements.txt
@@ -79,4 +270,4 @@ npx tsx scripts/enrich-search-index.ts
 python3 scripts/render_search_previews.py
 ```
 
-本地完整构建依赖 `latexmk`、XeLaTeX、SyncTeX 和 `elegantbook.cls`，所以最稳定的构建环境仍然是 GitHub Actions 里的 TeX Live 容器。
+本地完整构建需要系统已经安装 `latexmk`、XeLaTeX、SyncTeX 和 `elegantbook.cls`。如果只是改首页样式或 README，不需要跑完整构建；如果改搜索索引、PDF 编译或预览图生成逻辑，最好在 GitHub Actions 的 TeX Live 环境里验证。
