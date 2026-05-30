@@ -236,6 +236,82 @@ checkout 仓库
 
 CI 使用 `ghcr.io/xu-cheng/texlive-full` 作为容器环境，因为这个项目依赖完整 LaTeX 工具链，包括 `latexmk`、XeLaTeX 和 SyncTeX。
 
+## 构建时长优化
+
+### 原始耗时分析
+
+每次 CI 运行（每 3 小时一次）都执行完整构建，即使笔记没有任何更新：
+
+| 阶段 | 耗时 |
+| --- | --- |
+| clone 全部 dx* 仓库（浅克隆） | ~2 min |
+| latexmk 编译 12 本笔记 | ~7 min |
+| 生成搜索索引（TypeScript） | ~2 min |
+| SyncTeX 坐标映射（enrich） | ~5 min |
+| 渲染搜索预览图（PyMuPDF） | ~5 min |
+| **合计** | **~20 min** |
+
+一天 8 次定时触发，绝大多数情况下笔记没有更新，全部白跑。
+
+### Phase 1：无变更早退
+
+在克隆任何仓库之前，先判断是否真的需要构建。
+
+`build_notes.py` 通过 GitHub API 拿到所有 dx* 仓库的 `pushed_at`，和两个本地状态文件比对：
+
+| 文件 | 内容 |
+| --- | --- |
+| `build_state.json` | 笔记仓库（有 `main.tex` 且产出了 PDF）→ 要求 PDF 存在 |
+| `build_nonnotes.json` | 无 `main.tex` 的 dx* 仓库（如测试/工具仓库）→ 不要求 PDF |
+
+所有 `pushed_at` 匹配且所有笔记 PDF 存在 → `sys.exit(0)`，跳过全部 clone / compile / 索引 / 预览，同时输出 `needs_rebuild=false` 让 workflow 后续三个步骤也跳过。
+
+两类仓库必须分开跟踪：若把无 `main.tex` 的仓库混入 `build_state.json` 并要求它们有 PDF，早退条件永远为 `False`，优化完全失效。
+
+**早退时的日志：**
+
+```text
+No repository changes detected — skipping clone, compile, and index.
+[Output] needs_rebuild=false
+========== SUMMARY ==========
+Matched dx repos: 14 (12 notes, 2 non-notes, all unchanged, early exit)
+Done.
+```
+
+GitHub Actions 界面中，搜索索引、坐标映射、预览图三步全部显示 `skipped`。
+
+### Route A：仓库级增量编译
+
+有笔记更新时，只编译真正变动的仓库，跳过未变动的仓库。
+
+在 `build.yml` 中启用 `actions/cache` 缓存 `temp_repos/`：
+
+```yaml
+- uses: actions/cache@v4
+  with:
+    path: temp_repos
+    key: temp-repos-${{ github.run_id }}   # 每次 run 都写一份新缓存
+    restore-keys: |
+      temp-repos-                           # 每次都能恢复上一次的缓存
+```
+
+缓存恢复后，`build_notes.py` 对每个仓库判断 `need_compile`：若 `pushed_at` 未变、缓存中有 PDF 和 SyncTeX，则跳过 `latexmk`。只有真正更新过的仓库才会触发编译。
+
+**此前被禁用的原因**：Route A 早在 Phase 1 之前就曾配置过，但当时搜索索引/预览图不受 `needs_rebuild` 控制，不论是否编译都会跑完整的 ~12 min，节省的编译时间被完全掩盖，被误判为"缓存无效"而注释禁用。Phase 1 加入条件控制后，Route A 才有实际效果。
+
+### 优化效果对比
+
+| 场景 | 优化前 | Phase 1 | Phase 1 + Route A |
+| --- | --- | --- | --- |
+| 无变更定时 run | ~20 min | **~3 min** | **~3 min** |
+| 1 本笔记更新 | ~20 min | ~20 min | **~13 min** |
+| 多本同时更新 | ~20 min | ~20 min | ~13–20 min |
+| 首次 run（无缓存） | ~20 min | ~20 min | ~20 min |
+
+### 后续方向（Route B）
+
+有更新时，搜索索引和预览图仍对全部 12 本笔记重跑（约 12 min）。后续改造为按仓库增量生成——只对变动仓库重新解析 LaTeX、映射坐标、截图，未变动仓库复用已有结果。实现后，单本笔记更新的构建时间可从 ~13 min 进一步降至 ~3–4 min。
+
 ## 前端展示逻辑
 
 `index.html` 是最终页面入口，承担运行时展示职责：
