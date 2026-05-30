@@ -14,17 +14,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 WORK_DIR = BASE_DIR / "temp_repos"
 OUTPUT_DIR = BASE_DIR / "pdf"
 STATE_FILE = BASE_DIR / "build_state.json"
+NONNOTE_FILE = BASE_DIR / "build_nonnotes.json"
 MANIFEST_FILE = BASE_DIR / "notes_manifest.json"
 BOOKS_FILE = BASE_DIR / "books.json"
 
 WORK_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-if STATE_FILE.exists():
-    with open(STATE_FILE, "r", encoding="utf-8") as f:
-        state = json.load(f)
-else:
-    state = {}
+
+def load_state(path):
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+# build_state.json tracks note repos (those that produce a PDF); build_nonnotes.json
+# tracks dx* repos that have no main.tex. Both map repo name -> pushed_at.
+state = load_state(STATE_FILE)
+nonnotes = load_state(NONNOTE_FILE)
 
 
 def write_github_output(needs_rebuild: bool):
@@ -75,22 +83,26 @@ while True:
 dx_repos = [r for r in repos if r["name"].lower().startswith("dx")]
 
 # ── No-change early exit ─────────────────────────────────────────────────────
-# If every dx* repo has the same pushed_at as build_state.json, and every PDF
-# already exists, there is nothing to rebuild. Skip clone/compile/index/preview.
+# Skip clone/compile/index/preview only if the set of dx* repos exactly matches
+# what we recorded last time (notes + non-notes), none changed pushed_at, and every
+# note still has its PDF. Non-note repos never produce output, so they are tracked
+# only to avoid forcing a rebuild — they are not required to have a PDF.
 if not FORCE_REBUILD:
-    api_names = {r["name"] for r in dx_repos}
-    state_names = set(state.keys())
+    api = {r["name"]: r["pushed_at"] for r in dx_repos}
+    known = set(state) | set(nonnotes)
     all_unchanged = (
-        api_names == state_names
-        and all(state.get(r["name"]) == r["pushed_at"] for r in dx_repos)
-        and all((OUTPUT_DIR / f"{r['name']}.pdf").exists() for r in dx_repos)
+        set(api) == known
+        and all(state.get(n) == api.get(n) for n in state)
+        and all(nonnotes.get(n) == api.get(n) for n in nonnotes)
+        and all((OUTPUT_DIR / f"{n}.pdf").exists() for n in state)
     )
     if all_unchanged:
         print("No repository changes detected — skipping clone, compile, and index.")
         video_entries = regenerate_videos()
         write_github_output(needs_rebuild=False)
         print("\n========== SUMMARY ==========")
-        print(f"Matched dx repos: {len(dx_repos)} (all unchanged, early exit)")
+        print(f"Matched dx repos: {len(dx_repos)} "
+              f"({len(state)} notes, {len(nonnotes)} non-notes, all unchanged, early exit)")
         print(f"videos.json: {len(video_entries)} videos found")
         print("Done.")
         sys.exit(0)
@@ -100,12 +112,12 @@ matched_repos = 0
 compiled = 0
 books = []
 manifest = []
-current_repo_names = set()
+note_names = set()
+nonnote_names = set()
 
 for repo in dx_repos:
     name = repo["name"]
     matched_repos += 1
-    current_repo_names.add(name)
     latest_commit = repo["pushed_at"]
     clone_url = repo["clone_url"]
     repo_path = WORK_DIR / name
@@ -127,14 +139,14 @@ for repo in dx_repos:
         subprocess.run(["git", "fetch", "--depth", "1", "origin"], cwd=repo_path, check=False)
         subprocess.run(["git", "reset", "--hard", "origin/HEAD"], cwd=repo_path, check=False)
 
-    # Always record pushed_at after a successful clone/fetch so the no-change
-    # early exit works even for repos that have no main.tex or never produce a PDF.
-    state[name] = latest_commit
-
     main_candidates = list(repo_path.rglob("main.tex"))
     if not main_candidates:
-        print("  -> no main.tex found")
+        print("  -> no main.tex found (non-note repo, tracked in build_nonnotes.json)")
+        nonnotes[name] = latest_commit
+        nonnote_names.add(name)
         continue
+
+    note_names.add(name)
 
     print("  -> main.tex candidates:")
     for p in main_candidates:
@@ -250,6 +262,7 @@ for repo in dx_repos:
         output_pdf = OUTPUT_DIR / pdf_name
         shutil.copy(pdf_path, output_pdf)
         print(f"  -> saved to {output_pdf}")
+        state[name] = latest_commit
     else:
         print("  -> pdf not produced")
         continue
@@ -266,11 +279,13 @@ for repo in dx_repos:
         "desc": "Auto-compiled from LaTeX",
     })
 
-# Clean up state: only keep entries for repos that still exist
-state = {k: v for k, v in state.items() if k in current_repo_names}
+# Clean up state: keep only entries for repos that still exist in each category.
+# A repo can move between categories (e.g. gains/loses main.tex), so prune both.
+state = {k: v for k, v in state.items() if k in note_names}
+nonnotes = {k: v for k, v in nonnotes.items() if k in nonnote_names}
 
-# Clean up orphaned PDFs: remove PDFs whose repo no longer exists
-current_pdf_names = {f"{name}.pdf" for name in current_repo_names}
+# Clean up orphaned PDFs: remove PDFs whose note repo no longer exists
+current_pdf_names = {f"{name}.pdf" for name in note_names}
 for pdf_file in OUTPUT_DIR.glob("*.pdf"):
     if pdf_file.name not in current_pdf_names:
         print(f"  -> removing orphaned PDF: {pdf_file.name}")
@@ -285,6 +300,9 @@ with open(BOOKS_FILE, "w", encoding="utf-8") as f:
 with open(STATE_FILE, "w", encoding="utf-8") as f:
     json.dump(state, f, ensure_ascii=False, indent=2)
 
+with open(NONNOTE_FILE, "w", encoding="utf-8") as f:
+    json.dump(nonnotes, f, ensure_ascii=False, indent=2)
+
 with open(MANIFEST_FILE, "w", encoding="utf-8") as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2)
 
@@ -293,11 +311,12 @@ video_entries = regenerate_videos()
 write_github_output(needs_rebuild=True)
 
 print("\n========== SUMMARY ==========")
-print(f"Matched dx repos: {matched_repos}")
+print(f"Matched dx repos: {matched_repos} ({len(note_names)} notes, {len(nonnote_names)} non-notes)")
 print(f"Compiled PDFs: {compiled}")
 print(f"Manifest entries: {len(manifest)}")
 print(f"books.json generated at: {BOOKS_FILE}")
-print(f"build_state.json generated at: {STATE_FILE}")
+print(f"build_state.json generated at: {STATE_FILE} ({len(state)} notes)")
+print(f"build_nonnotes.json generated at: {NONNOTE_FILE} ({len(nonnotes)} non-notes)")
 print(f"notes_manifest.json generated at: {MANIFEST_FILE}")
 print(f"videos.json: {len(video_entries)} videos found")
 print("Done.")
