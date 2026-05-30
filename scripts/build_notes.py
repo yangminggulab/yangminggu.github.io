@@ -3,6 +3,7 @@ import json
 import requests
 import subprocess
 import shutil
+import sys
 from pathlib import Path
 
 USERNAME = "yangminggulab"
@@ -24,6 +25,28 @@ if STATE_FILE.exists():
         state = json.load(f)
 else:
     state = {}
+
+
+def write_github_output(needs_rebuild: bool):
+    value = "true" if needs_rebuild else "false"
+    github_output = os.getenv("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a") as f:
+            f.write(f"needs_rebuild={value}\n")
+    print(f"[Output] needs_rebuild={value}")
+
+
+def regenerate_videos():
+    VIDEO_DIR = BASE_DIR / "video"
+    VIDEOS_FILE = VIDEO_DIR / "videos.json"
+    video_entries = []
+    if VIDEO_DIR.exists():
+        for vf in sorted(VIDEO_DIR.glob("*.mp4")):
+            video_entries.append({"file": f"video/{vf.name}", "name": vf.name})
+    with open(VIDEOS_FILE, "w", encoding="utf-8") as f:
+        json.dump(video_entries, f, ensure_ascii=False, indent=2)
+    return video_entries
+
 
 print("Fetching repositories...")
 
@@ -49,17 +72,38 @@ while True:
     repos.extend(page_data)
     page += 1
 
+dx_repos = [r for r in repos if r["name"].lower().startswith("dx")]
+
+# ── No-change early exit ─────────────────────────────────────────────────────
+# If every dx* repo has the same pushed_at as build_state.json, and every PDF
+# already exists, there is nothing to rebuild. Skip clone/compile/index/preview.
+if not FORCE_REBUILD:
+    api_names = {r["name"] for r in dx_repos}
+    state_names = set(state.keys())
+    all_unchanged = (
+        api_names == state_names
+        and all(state.get(r["name"]) == r["pushed_at"] for r in dx_repos)
+        and all((OUTPUT_DIR / f"{r['name']}.pdf").exists() for r in dx_repos)
+    )
+    if all_unchanged:
+        print("No repository changes detected — skipping clone, compile, and index.")
+        video_entries = regenerate_videos()
+        write_github_output(needs_rebuild=False)
+        print("\n========== SUMMARY ==========")
+        print(f"Matched dx repos: {len(dx_repos)} (all unchanged, early exit)")
+        print(f"videos.json: {len(video_entries)} videos found")
+        print("Done.")
+        sys.exit(0)
+
+# ── Full build ────────────────────────────────────────────────────────────────
 matched_repos = 0
 compiled = 0
 books = []
 manifest = []
 current_repo_names = set()
 
-for repo in repos:
+for repo in dx_repos:
     name = repo["name"]
-    if not name.lower().startswith("dx"):
-        continue
-
     matched_repos += 1
     current_repo_names.add(name)
     latest_commit = repo["pushed_at"]
@@ -241,16 +285,9 @@ with open(STATE_FILE, "w", encoding="utf-8") as f:
 with open(MANIFEST_FILE, "w", encoding="utf-8") as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-VIDEO_DIR = BASE_DIR / "video"
-VIDEOS_FILE = VIDEO_DIR / "videos.json"
+video_entries = regenerate_videos()
 
-video_entries = []
-if VIDEO_DIR.exists():
-    for vf in sorted(VIDEO_DIR.glob("*.mp4")):
-        video_entries.append({"file": f"video/{vf.name}", "name": vf.name})
-
-with open(VIDEOS_FILE, "w", encoding="utf-8") as f:
-    json.dump(video_entries, f, ensure_ascii=False, indent=2)
+write_github_output(needs_rebuild=True)
 
 print("\n========== SUMMARY ==========")
 print(f"Matched dx repos: {matched_repos}")
