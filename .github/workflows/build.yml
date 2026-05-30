@@ -172,7 +172,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git config --global --add safe.directory /__w/yangminggu.github.io/yangminggu.github.io
-          git add -A index.html pdf books.json build_state.json notes_manifest.json public video/videos.json
+          git add -A index.html pdf books.json build_state.json build_nonnotes.json notes_manifest.json public video/videos.json
           echo "== git status before commit =="
           git status --short
           git commit -m "auto build: update notes and search index" || echo "no changes"
