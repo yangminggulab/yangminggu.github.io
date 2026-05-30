@@ -127,6 +127,10 @@ for repo in dx_repos:
         subprocess.run(["git", "fetch", "--depth", "1", "origin"], cwd=repo_path, check=False)
         subprocess.run(["git", "reset", "--hard", "origin/HEAD"], cwd=repo_path, check=False)
 
+    # Always record pushed_at after a successful clone/fetch so the no-change
+    # early exit works even for repos that have no main.tex or never produce a PDF.
+    state[name] = latest_commit
+
     main_candidates = list(repo_path.rglob("main.tex"))
     if not main_candidates:
         print("  -> no main.tex found")
@@ -246,7 +250,6 @@ for repo in dx_repos:
         output_pdf = OUTPUT_DIR / pdf_name
         shutil.copy(pdf_path, output_pdf)
         print(f"  -> saved to {output_pdf}")
-        state[name] = latest_commit
     else:
         print("  -> pdf not produced")
         continue
