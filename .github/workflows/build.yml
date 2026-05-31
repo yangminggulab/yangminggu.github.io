@@ -65,19 +65,27 @@ jobs:
         run: python3 scripts/build_notes.py
 
       - name: Build search index
+        id: idx
         if: steps.build.outputs.needs_rebuild == 'true'
         run: npx tsx scripts/build-search-index.ts
 
       - name: Enrich search index
+        id: enrich
         if: steps.build.outputs.needs_rebuild == 'true'
         run: npx tsx scripts/enrich-search-index.ts
 
       - name: Render search previews
+        id: render
         if: steps.build.outputs.needs_rebuild == 'true'
         run: python3 scripts/render_search_previews.py
 
       - name: Build diagnostics
         if: always()
+        env:
+          STEP_BUILD:  ${{ steps.build.outcome }}
+          STEP_INDEX:  ${{ steps.idx.outcome }}
+          STEP_ENRICH: ${{ steps.enrich.outcome }}
+          STEP_RENDER: ${{ steps.render.outcome }}
         run: |
           python3 - <<'EOF'
           import json, os
@@ -85,84 +93,157 @@ jobs:
           from collections import Counter
 
           SEP = "=" * 60
+          md = []
 
-          # ── 1. TeX environment ──────────────────────────────────────
+          def md_h2(t): md.append(f"\n## {t}\n")
+          def md_h3(t): md.append(f"\n### {t}\n")
+          def md_table(headers, rows):
+              md.append("| " + " | ".join(headers) + " |")
+              md.append("| " + " | ".join("---" for _ in headers) + " |")
+              for r in rows:
+                  md.append("| " + " | ".join(str(c) for c in r) + " |")
+              md.append("")
+
+          ICON = {"success": "✅", "failure": "❌", "skipped": "⏭️", "cancelled": "⚪"}
+
+          manifest = (json.loads(Path("notes_manifest.json").read_text())
+                      if Path("notes_manifest.json").exists() else [])
+          repos_in_manifest = {x["repo"] for x in manifest}
+
+          # ── 0. Step outcomes ──────────────────────────────────────────
           print(SEP)
-          print("1. TEX ENVIRONMENT")
+          print("0. STEP OUTCOMES")
+          step_rows = [
+              ("build_notes.py",            os.environ.get("STEP_BUILD")  or "—"),
+              ("build-search-index.ts",     os.environ.get("STEP_INDEX")  or "—"),
+              ("enrich-search-index.ts",    os.environ.get("STEP_ENRICH") or "—"),
+              ("render_search_previews.py", os.environ.get("STEP_RENDER") or "—"),
+          ]
+          any_failure = any(o == "failure" for _, o in step_rows)
+          for name, outcome in step_rows:
+              print(f"  {ICON.get(outcome, '❓')} {name}: {outcome}")
+
+          md_h2("Build Summary" + ("  ❌ — FAILURES DETECTED" if any_failure else "  ✅"))
+          md_h3("Step Status")
+          md_table(["Step", "Outcome"],
+                   [(n, ICON.get(o, "❓") + " " + o) for n, o in step_rows])
+
+          # ── 1. Route B incremental ────────────────────────────────────
+          print(SEP)
+          print("1. ROUTE B INCREMENTAL")
+          changed_file = Path("build_changed.json")
+          if changed_file.exists():
+              cdata = json.loads(changed_file.read_text())
+              changed = set(cdata.get("changed_repos", []))
+              all_repos = [x["repo"] for x in manifest]
+              reused = [r for r in all_repos if r not in changed]
+              print(f"  changed ({len(changed)}): {sorted(changed) or '(none)'}")
+              print(f"  reused  ({len(reused)}): {reused or '(none)'}")
+              md_h3("Route B Incremental")
+              rows = ([(r, "🔄 reprocessed") for r in sorted(changed)] +
+                      [(r, "♻️  reused")      for r in reused])
+              if rows:
+                  md_table(["Repo", "Action"], rows)
+              else:
+                  md.append("_(early exit — no rebuild needed)_\n")
+          else:
+              print("  build_changed.json not found (early exit or manual run)")
+              md_h3("Route B Incremental")
+              md.append("_(early exit — no rebuild needed)_\n")
+
+          # ── 2. TeX environment ────────────────────────────────────────
+          print(SEP)
+          print("2. TEX ENVIRONMENT")
           for f in ["~/.latexmkrc", "/etc/latexmkrc"]:
               p = Path(f).expanduser()
               print(f"  {f}: {'EXISTS → ' + p.read_text()[:200] if p.exists() else 'not found'}")
 
-          # ── 2. Per-repo compile results ─────────────────────────────
+          # ── 3. Per-repo compile results ───────────────────────────────
           print(SEP)
-          print("2. PER-REPO COMPILE RESULTS")
+          print("3. PER-REPO COMPILE RESULTS")
           temp = Path("temp_repos")
-          manifest = json.loads(Path("notes_manifest.json").read_text()) if Path("notes_manifest.json").exists() else []
-          repos_in_manifest = {x["repo"] for x in manifest}
-
-          for repo_dir in sorted(temp.iterdir()) if temp.exists() else []:
+          compile_rows = []
+          for repo_dir in (sorted(temp.iterdir()) if temp.exists() else []):
               if not repo_dir.is_dir():
                   continue
               pdf = list(repo_dir.glob("*.pdf")) + list(repo_dir.glob("**/*.pdf"))
               stx = list(repo_dir.glob("*.synctex*")) + list(repo_dir.glob("**/*.synctex*"))
               log = repo_dir / "main.log"
-              errors = []
-              if log.exists():
-                  for line in log.read_text(errors="replace").splitlines():
-                      if line.startswith("!"):
-                          errors.append(line)
-              status = []
-              status.append("PDF=" + (pdf[0].name if pdf else "MISSING"))
-              status.append("SYNCTEX=" + (stx[0].name if stx else "MISSING"))
+              errors = [l for l in (log.read_text(errors="replace").splitlines()
+                                    if log.exists() else []) if l.startswith("!")]
+              status = [
+                  "PDF=" + (pdf[0].name if pdf else "MISSING"),
+                  "SYNCTEX=" + (stx[0].name if stx else "MISSING"),
+              ]
               if errors:
                   status.append(f"ERRORS({len(errors)})")
-              in_manifest = "in_manifest" if repo_dir.name in repos_in_manifest else "NOT_IN_MANIFEST"
-              print(f"  {repo_dir.name}: {', '.join(status)}, {in_manifest}")
+              in_m = "in_manifest" if repo_dir.name in repos_in_manifest else "NOT_IN_MANIFEST"
+              print(f"  {repo_dir.name}: {', '.join(status)}, {in_m}")
               for e in errors[:3]:
                   print(f"    {e}")
+              compile_rows.append((
+                  repo_dir.name,
+                  ("✅ " + pdf[0].name) if pdf else "❌ MISSING",
+                  "✅" if stx else "❌ MISSING",
+                  (f"❌ {len(errors)}") if errors else "✅ clean",
+                  "✅" if repo_dir.name in repos_in_manifest else "❌",
+              ))
+          if compile_rows:
+              md_h3("Compile Results")
+              md_table(["Repo", "PDF", "SyncTeX", "Errors", "In Manifest"], compile_rows)
 
-          # ── 3. Manifest summary ─────────────────────────────────────
+          # ── 4. Manifest summary ───────────────────────────────────────
           print(SEP)
-          print("3. MANIFEST SUMMARY")
+          print("4. MANIFEST SUMMARY")
           for item in manifest:
               s = item.get("synctex")
               exists = os.path.exists(s) if s else False
               print(f"  {item['repo']}: synctex={'SET,exists=' + str(exists) if s else 'NULL'}")
 
-          # ── 4. Search index ─────────────────────────────────────────
+          # ── 5. Search index ───────────────────────────────────────────
           print(SEP)
-          print("4. SEARCH INDEX")
+          print("5. SEARCH INDEX")
+          index_rows = []
           for fname, label in [
-              ("public/search-index.json", "search-index"),
+              ("public/search-index.json",          "search-index"),
               ("public/search-index.enriched.json", "enriched"),
               ("public/search-index.previews.json", "previews"),
           ]:
               p = Path(fname)
               if not p.exists():
                   print(f"  {label}: MISSING")
+                  index_rows.append((label, "❌ MISSING", ""))
                   continue
               data = json.loads(p.read_text())
-              if label == "previews":
-                  reasons = Counter(x.get("previewDebug", "success") for x in data)
+              if label in ("previews", "enriched"):
+                  key = "previewDebug" if label == "previews" else "debugReason"
+                  reasons = Counter(x.get(key, "ok") for x in data)
                   print(f"  {label}: {len(data)} blocks")
                   for k, v in reasons.most_common():
                       print(f"    {k}: {v}")
-              elif label == "enriched":
-                  reasons = Counter(x.get("debugReason", "ok") for x in data)
-                  print(f"  {label}: {len(data)} blocks")
-                  for k, v in reasons.most_common():
-                      print(f"    {k}: {v}")
+                  notes = "; ".join(f"{k}: {v}" for k, v in reasons.most_common(3))
+                  index_rows.append((label, f"✅ {len(data)} blocks", notes))
               else:
                   print(f"  {label}: {len(data)} blocks")
+                  index_rows.append((label, f"✅ {len(data)} blocks", ""))
+          md_h3("Search Index")
+          md_table(["File", "Status", "Top failure reasons"], index_rows)
 
-          # ── 5. Preview images ───────────────────────────────────────
+          # ── 6. Preview images ─────────────────────────────────────────
           print(SEP)
-          print("5. PREVIEW IMAGES")
+          print("6. PREVIEW IMAGES")
           img_dir = Path("public/search-previews")
           imgs = list(img_dir.glob("*.png")) if img_dir.exists() else []
           print(f"  {len(imgs)} PNG files in public/search-previews/")
+          md.append(f"\n### Preview Images\n\n`{len(imgs)}` PNG files in `public/search-previews/`\n")
 
           print(SEP)
+
+          # ── Write GITHUB_STEP_SUMMARY ─────────────────────────────────
+          summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary_path:
+              with open(summary_path, "w", encoding="utf-8") as sf:
+                  sf.write("\n".join(md) + "\n")
           EOF
 
       - name: Commit updated files
