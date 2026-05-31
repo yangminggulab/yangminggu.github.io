@@ -9,6 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_PATH = BASE_DIR / "public" / "search-index.enriched.json"
 OUTPUT_DIR = BASE_DIR / "public" / "search-previews"
 OUTPUT_PATH = BASE_DIR / "public" / "search-index.previews.json"
+CHANGED_FILE = BASE_DIR / "build_changed.json"
 
 FRAME_KINDS = {
     "definition", "theorem", "example", "note", "remark",
@@ -26,6 +27,18 @@ BOTTOM_PAD_BY_KIND = {
     "definition": 32, "theorem": 32, "example": 28, "note": 28,
     "remark": 28, "proposition": 32, "lemma": 32, "corollary": 32, "dxtips": 32,
 }
+
+
+def load_changed_set():
+    # Route B incremental: repos absent from changed_repos reuse their existing preview
+    # entries (and on-disk PNGs) instead of being re-rendered. Missing file → full render.
+    if not CHANGED_FILE.exists():
+        return set(), False
+    try:
+        data = json.loads(CHANGED_FILE.read_text(encoding="utf-8"))
+        return set(data.get("changed_repos", [])), True
+    except Exception:
+        return set(), False
 
 
 def pt_to_pdf_y(page_height: float, y_top_like: float, h: float) -> float:
@@ -125,12 +138,29 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     blocks = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
 
+    changed, incremental = load_changed_set()
+    existing_by_id = {}
+    if incremental and OUTPUT_PATH.exists():
+        try:
+            prev = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+            existing_by_id = {b["id"]: b for b in prev}
+        except Exception:
+            existing_by_id = {}
+    can_reuse = incremental and bool(existing_by_id)
+
     updated = []
     docs = {}
     reason_counter = Counter()
     success_count = 0
+    reused_count = 0
 
     for block in blocks:
+        if can_reuse and block.get("repo") not in changed and block.get("id") in existing_by_id:
+            # Unchanged repo: keep the prior preview entry verbatim; its PNG is already on disk.
+            updated.append(existing_by_id[block["id"]])
+            reused_count += 1
+            continue
+
         kind = block.get("kind", "")
 
         if kind not in FRAME_KINDS:
@@ -214,9 +244,22 @@ def main():
     for doc in docs.values():
         doc.close()
 
+    # `updated` is the complete current index, so any PNG it does not reference is an
+    # orphan — left over from a deleted repo or from a changed repo whose block ids
+    # shifted on re-render. Prune them so the preview dir cannot grow without bound.
+    referenced = {Path(b["previewImage"]).name for b in updated if b.get("previewImage")}
+    removed = 0
+    for png in OUTPUT_DIR.glob("*.png"):
+        if png.name not in referenced:
+            png.unlink()
+            removed += 1
+
     OUTPUT_PATH.write_text(json.dumps(updated, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote: {OUTPUT_PATH}")
+    print(f"incremental = {incremental}, reuse = {can_reuse}, reused = {reused_count}, "
+          f"changed = {sorted(changed)}")
     print(f"preview success = {success_count}")
+    print(f"orphan PNGs removed = {removed}")
     print(f"preview failure reasons = {dict(reason_counter)}")
 
 

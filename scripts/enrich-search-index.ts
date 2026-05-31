@@ -32,6 +32,20 @@ type PdfLocator = {
 const ROOT_DIR = path.resolve(__dirname, "..");
 const INPUT_PATH = path.join(ROOT_DIR, "public", "search-index.json");
 const OUTPUT_PATH = path.join(ROOT_DIR, "public", "search-index.enriched.json");
+const CHANGED_PATH = path.join(ROOT_DIR, "build_changed.json");
+
+// Route B incremental: reuse SyncTeX results for repos not recompiled this run. Block
+// ids are stable for unchanged repos (their blocks are copied forward verbatim by
+// build-search-index.ts), so we match the prior enriched output by id.
+function loadChangedSet(): { changed: Set<string>; incremental: boolean } {
+  if (!fs.existsSync(CHANGED_PATH)) return { changed: new Set(), incremental: false };
+  try {
+    const data = JSON.parse(fs.readFileSync(CHANGED_PATH, "utf-8"));
+    return { changed: new Set<string>(data.changed_repos ?? []), incremental: true };
+  } catch {
+    return { changed: new Set(), incremental: false };
+  }
+}
 
 function parseSynctexOutput(output: string): PdfLocator | null {
   const chunks = output.split("Output:");
@@ -107,7 +121,27 @@ function main() {
   const blocks = JSON.parse(fs.readFileSync(INPUT_PATH, "utf-8")) as SearchBlock[];
   const enriched: SearchBlock[] = [];
 
+  const { changed, incremental } = loadChangedSet();
+  const existingById = new Map<string, SearchBlock>();
+  if (incremental && fs.existsSync(OUTPUT_PATH)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8")) as SearchBlock[];
+      for (const b of prev) existingById.set(b.id, b);
+    } catch {
+      existingById.clear();
+    }
+  }
+  const canReuse = incremental && existingById.size > 0;
+  let reusedCount = 0;
+  let computedCount = 0;
+
   for (const block of blocks) {
+    if (canReuse && !changed.has(block.repo) && existingById.has(block.id)) {
+      enriched.push(existingById.get(block.id)!);
+      reusedCount += 1;
+      continue;
+    }
+    computedCount += 1;
     try {
       if (!block.sourcePath || !block.startLine || !block.synctex) {
         enriched.push({
@@ -180,6 +214,10 @@ function main() {
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(enriched, null, 2), "utf-8");
   console.log(`Wrote: ${OUTPUT_PATH}`);
+  console.log(
+    `[enrich] incremental=${incremental} reuse=${canReuse} ` +
+    `reused=${reusedCount} computed=${computedCount} changed=[${[...changed].join(", ")}]`
+  );
 }
 
 main();

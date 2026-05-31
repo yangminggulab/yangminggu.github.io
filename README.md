@@ -31,25 +31,26 @@ yangminggu.github.io
 │       │   ├── 生成 books.json
 │       │   ├── 生成 notes_manifest.json
 │       │   ├── 更新 build_state.json
+│       │   ├── 写出 build_changed.json（本次重新编译的仓库）
 │       │   └── 生成 video/videos.json
 │       │
 │       ├── build-search-index.ts
-│       │   ├── 读取 notes_manifest.json
-│       │   ├── 递归解析 main.tex 和 input/include 的章节文件
+│       │   ├── 读取 notes_manifest.json 和 build_changed.json
+│       │   ├── 变动仓库递归解析 main.tex / input / include，未变动仓库复用旧块
 │       │   ├── 抽取 definition/theorem/example/note/dxtips 等块
-│       │   └── 生成 public/search-index.json
+│       │   └── 合并生成 public/search-index.json
 │       │
 │       ├── enrich-search-index.ts
-│       │   ├── 读取 public/search-index.json
-│       │   ├── 调用 synctex view 定位源代码行在 PDF 中的位置
-│       │   └── 生成 public/search-index.enriched.json
+│       │   ├── 读取 public/search-index.json 和 build_changed.json
+│       │   ├── 变动仓库调用 synctex view 定位，未变动仓库复用旧坐标
+│       │   └── 合并生成 public/search-index.enriched.json
 │       │
 │       └── render_search_previews.py
-│           ├── 读取 public/search-index.enriched.json
-│           ├── 用 PyMuPDF 打开 PDF
+│           ├── 读取 public/search-index.enriched.json 和 build_changed.json
+│           ├── 变动仓库用 PyMuPDF 重新截图，未变动仓库复用旧图
 │           ├── 按 SyncTeX 坐标裁剪定理/定义/例题等区域
-│           ├── 输出 public/search-previews/*.png
-│           └── 生成 public/search-index.previews.json
+│           ├── 输出/复用 public/search-previews/*.png 并清理孤儿图
+│           └── 合并生成 public/search-index.previews.json
 │
 ├── 静态数据层
 │   ├── pdf/*.pdf
@@ -144,8 +145,9 @@ dx* 仓库的 LaTeX 源码
 11. 记录每本书的展示信息到 `books.json`。
 12. 记录每本书的搜索入口信息到 `notes_manifest.json`，包括仓库名、标题、PDF 路径、`main_tex` 路径和 SyncTeX 路径。
 13. 更新 `build_state.json`，避免下一次构建重复编译没有变化的仓库。
-14. 清理已经不存在的仓库对应的孤儿 PDF。
-15. 扫描 `video/*.mp4`，生成 `video/videos.json`。
+14. 把本次真正重新编译（`need_compile` 为真）的笔记仓库写入 `build_changed.json`，供后续索引/预览脚本做增量重建；早退时写入空列表。
+15. 清理已经不存在的仓库对应的孤儿 PDF。
+16. 扫描 `video/*.mp4`，生成 `video/videos.json`。
 
 输出：
 
@@ -154,6 +156,7 @@ dx* 仓库的 LaTeX 源码
 - `books.json`：首页书架数据。
 - `notes_manifest.json`：后续搜索索引生成脚本的输入清单。
 - `build_state.json`：增量构建状态。
+- `build_changed.json`：本次重新编译的笔记仓库清单，驱动索引和预览图的增量重建（不提交，按 run 生成）。
 - `video/videos.json`：首页视频模块的数据源。
 
 ### `scripts/render_search_previews.py`
@@ -168,20 +171,22 @@ dx* 仓库的 LaTeX 源码
 
 核心逻辑：
 
-1. 读取 `public/search-index.enriched.json`。
-2. 只对适合截图展示的 LaTeX 环境生成预览图，比如 `definition`、`theorem`、`example`、`note`、`remark`、`proposition`、`lemma`、`corollary`、`dxtips`。
-3. 普通段落不截图，而是在索引中标记为文本 fallback，避免生成过多低价值图片。
-4. 对每个可截图块，读取它的 `sourcePath`、`startLine`、`endLine` 和 `synctex`。
-5. 调用 `synctex view`，分别把开始行和结束行映射到 PDF 页码和坐标。
-6. 如果开始行和结束行跨页，或者 SyncTeX 映射失败，就记录失败原因，不强行生成错误图片。
-7. 使用 PyMuPDF 打开 PDF，根据 SyncTeX 坐标计算裁剪矩形。
-8. 按内容类型给裁剪区域加不同的上下 padding，让定义、定理、例题等卡片截图更完整。
-9. 把裁剪结果以 PNG 保存到 `public/search-previews/`。
-10. 把每个搜索块对应的 `previewImage` 和 `previewClip` 写回最终索引。
+1. 读取 `public/search-index.enriched.json` 和 `build_changed.json`。
+2. 未变动仓库的块（不在变动集合、`id` 命中上一轮 `search-index.previews.json`）直接沿用旧预览条目，对应 PNG 已在 `public/` 中，无需重绘。
+3. 只对适合截图展示的 LaTeX 环境生成预览图，比如 `definition`、`theorem`、`example`、`note`、`remark`、`proposition`、`lemma`、`corollary`、`dxtips`。
+4. 普通段落不截图，而是在索引中标记为文本 fallback，避免生成过多低价值图片。
+5. 对每个可截图块，读取它的 `sourcePath`、`startLine`、`endLine` 和 `synctex`。
+6. 调用 `synctex view`，分别把开始行和结束行映射到 PDF 页码和坐标。
+7. 如果开始行和结束行跨页，或者 SyncTeX 映射失败，就记录失败原因，不强行生成错误图片。
+8. 使用 PyMuPDF 打开 PDF，根据 SyncTeX 坐标计算裁剪矩形。
+9. 按内容类型给裁剪区域加不同的上下 padding，让定义、定理、例题等卡片截图更完整。
+10. 把裁剪结果以 PNG 保存到 `public/search-previews/`。
+11. 把每个搜索块对应的 `previewImage` 和 `previewClip` 写回最终索引。
+12. 清理孤儿 PNG：最终索引未引用的图片（来自已删除仓库，或变动仓库重绘后 `id` 改变的旧图）会被删除。
 
 输出：
 
-- `public/search-previews/*.png`：搜索结果展示用的 PDF 局部截图。
+- `public/search-previews/*.png`：搜索结果展示用的 PDF 局部截图（变动仓库重绘、未变动仓库复用，孤儿图会被清理）。
 - `public/search-index.previews.json`：首页搜索实际读取的最终索引。
 
 ## TypeScript 脚本说明
@@ -190,8 +195,8 @@ dx* 仓库的 LaTeX 源码
 
 | 文件 | 作用 |
 | --- | --- |
-| `scripts/build-search-index.ts` | 把 LaTeX 源文件解析成结构化搜索块，识别章节、子章节、定义、定理、例题、笔记、作业、解答、提示和普通段落。 |
-| `scripts/enrich-search-index.ts` | 调用 SyncTeX，把搜索块的源文件行号转换成 PDF 页码和坐标，为后续预览图裁剪提供定位。 |
+| `scripts/build-search-index.ts` | 把 LaTeX 源文件解析成结构化搜索块，识别章节、子章节、定义、定理、例题、笔记、作业、解答、提示和普通段落；按 `build_changed.json` 增量重建，未变动仓库复用旧块。 |
+| `scripts/enrich-search-index.ts` | 调用 SyncTeX，把搜索块的源文件行号转换成 PDF 页码和坐标，为后续预览图裁剪提供定位；按块 `id` 复用未变动仓库的旧坐标。 |
 
 `src/` 目录下也有 TypeScript 搜索相关代码，主要包括搜索组件和搜索评分工具函数；当前首页主要由 `index.html` 内嵌逻辑读取最终 JSON 数据并渲染。
 
@@ -202,6 +207,7 @@ dx* 仓库的 LaTeX 源码
 | `books.json` | `build_notes.py` | `index.html` | 书架数据，告诉首页有哪些 PDF、标题是什么、文件在哪里。 |
 | `notes_manifest.json` | `build_notes.py` | `build-search-index.ts` | 搜索构建入口，记录每本笔记的主 TeX 文件、PDF 路径和 SyncTeX 路径。 |
 | `build_state.json` | `build_notes.py` | `build_notes.py` | 增量构建状态，用于跳过未更新的仓库。 |
+| `build_changed.json` | `build_notes.py` | 三个索引/预览脚本 | 本次重新编译的笔记仓库列表，驱动索引和预览图的增量重建（不提交，按 run 生成）。 |
 | `video/videos.json` | `build_notes.py` | `index.html` | 视频列表，来自 `video/*.mp4`。 |
 | `public/search-index.json` | `build-search-index.ts` | `enrich-search-index.ts` | 基础搜索索引，只包含文本、标题、章节和源文件行号。 |
 | `public/search-index.enriched.json` | `enrich-search-index.ts` | `render_search_previews.py` | 增强搜索索引，加入 PDF 定位信息和调试信息。 |
@@ -301,16 +307,28 @@ GitHub Actions 界面中，搜索索引、坐标映射、预览图三步全部�
 
 ### 优化效果对比
 
-| 场景 | 优化前 | Phase 1 | Phase 1 + Route A |
-| --- | --- | --- | --- |
-| 无变更定时 run | ~20 min | **~3 min** | **~3 min** |
-| 1 本笔记更新 | ~20 min | ~20 min | **~13 min** |
-| 多本同时更新 | ~20 min | ~20 min | ~13–20 min |
-| 首次 run（无缓存） | ~20 min | ~20 min | ~20 min |
+| 场景 | 优化前 | Phase 1 | + Route A | + Route B |
+| --- | --- | --- | --- | --- |
+| 无变更定时 run | ~20 min | **~3 min** | **~3 min** | **~3 min** |
+| 1 本笔记更新 | ~20 min | ~20 min | ~13 min | **~3–4 min** |
+| 多本同时更新 | ~20 min | ~20 min | ~13–20 min | 随变动本数线性增长 |
+| 首次 run（无缓存） | ~20 min | ~20 min | ~20 min | ~20 min |
 
-### 后续方向（Route B）
+### Route B：索引级增量
 
-有更新时，搜索索引和预览图仍对全部 12 本笔记重跑（约 12 min）。后续改造为按仓库增量生成——只对变动仓库重新解析 LaTeX、映射坐标、截图，未变动仓库复用已有结果。实现后，单本笔记更新的构建时间可从 ~13 min 进一步降至 ~3–4 min。
+Route A 之后，搜索索引、坐标映射、预览图三步仍对全部 12 本笔记重跑（约 12 min）。Route B 把这三步也改成按仓库增量：只对变动仓库重新解析 LaTeX、映射坐标、截图，未变动仓库复用上一次的索引条目和预览图，最后合并成完整 JSON。单本笔记更新的构建时间因此从 ~13 min 降到 ~3–4 min。
+
+实现链路：
+
+1. `build_notes.py` 记录本次真正重新编译（`need_compile` 为真）的笔记仓库，写入 `build_changed.json`（如 `{"changed_repos": ["dx-sql"]}`）。该文件不提交，每个 run 由 `build_notes.py` 重新生成；早退时写入空列表。
+2. 三个下游脚本读取 `build_changed.json`，按"变动集合"决定每个仓库是重算还是复用：
+   - `build-search-index.ts`：按 `repo` 复用——不在变动集合的仓库直接沿用旧 `search-index.json` 里的块，变动仓库重新解析 `main.tex`。
+   - `enrich-search-index.ts`：按块 `id` 复用——未变动仓库的块 `id` 稳定（上一步原样保留），直接沿用旧 `pdfLocator`，不再调用 `synctex view`。
+   - `render_search_previews.py`：按块 `id` 复用——未变动仓库沿用旧预览条目，对应 PNG 已在 `public/` 中，无需重绘。
+3. 三个脚本都按 `notes_manifest.json` 顺序输出：结果保持完整（已删除的仓库自然从清单消失、被丢弃），同时让 JSON diff 最小化。
+4. `render_search_previews.py` 额外清理孤儿 PNG：最终索引未引用的图片（来自已删除仓库，或变动仓库重绘后 `id` 改变的旧图）会被删除，避免预览目录无限增长。
+
+**回退到全量**：缺少 `build_changed.json`（首次 run、本地单独跑脚本）或缺少上一轮产物时，三个脚本都回退到全量重建以保证正确性；`FORCE_REBUILD=1` 会让所有仓库进入变动集合，等价于全量重跑。
 
 ## 前端展示逻辑
 

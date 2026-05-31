@@ -17,6 +17,9 @@ STATE_FILE = BASE_DIR / "build_state.json"
 NONNOTE_FILE = BASE_DIR / "build_nonnotes.json"
 MANIFEST_FILE = BASE_DIR / "notes_manifest.json"
 BOOKS_FILE = BASE_DIR / "books.json"
+# Per-run signal listing which note repos were (re)compiled, consumed by the three
+# downstream index/preview scripts to rebuild only those repos (Route B incremental).
+CHANGED_FILE = BASE_DIR / "build_changed.json"
 
 WORK_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -98,6 +101,8 @@ if not FORCE_REBUILD:
     )
     if all_unchanged:
         print("No repository changes detected — skipping clone, compile, and index.")
+        with open(CHANGED_FILE, "w", encoding="utf-8") as f:
+            json.dump({"changed_repos": []}, f, ensure_ascii=False, indent=2)
         video_entries = regenerate_videos()
         write_github_output(needs_rebuild=False)
         print("\n========== SUMMARY ==========")
@@ -114,6 +119,8 @@ books = []
 manifest = []
 note_names = set()
 nonnote_names = set()
+# Note repos that were recompiled this run → downstream re-indexes only these.
+changed_notes = set()
 
 for repo in dx_repos:
     name = repo["name"]
@@ -173,6 +180,7 @@ for repo in dx_repos:
     )
 
     if need_compile:
+        changed_notes.add(name)
         print(f"  -> compiling {main_tex}")
         print(f"  -> main.tex first 10 lines:")
         try:
@@ -306,6 +314,13 @@ with open(NONNOTE_FILE, "w", encoding="utf-8") as f:
 with open(MANIFEST_FILE, "w", encoding="utf-8") as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2)
 
+# Keep only changed repos that still exist as notes (a repo could be recompiled and
+# then fail to stay a note). Downstream scripts treat repos absent here as unchanged
+# and reuse their existing index/preview entries.
+changed_notes = {n for n in changed_notes if n in note_names}
+with open(CHANGED_FILE, "w", encoding="utf-8") as f:
+    json.dump({"changed_repos": sorted(changed_notes)}, f, ensure_ascii=False, indent=2)
+
 video_entries = regenerate_videos()
 
 write_github_output(needs_rebuild=True)
@@ -313,6 +328,7 @@ write_github_output(needs_rebuild=True)
 print("\n========== SUMMARY ==========")
 print(f"Matched dx repos: {matched_repos} ({len(note_names)} notes, {len(nonnote_names)} non-notes)")
 print(f"Compiled PDFs: {compiled}")
+print(f"Changed repos (re-indexed downstream): {len(changed_notes)} {sorted(changed_notes)}")
 print(f"Manifest entries: {len(manifest)}")
 print(f"books.json generated at: {BOOKS_FILE}")
 print(f"build_state.json generated at: {STATE_FILE} ({len(state)} notes)")

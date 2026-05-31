@@ -42,8 +42,22 @@ type SharedState = {
 
 const ROOT_DIR = path.resolve(__dirname, "..");
 const MANIFEST_PATH = path.join(ROOT_DIR, "notes_manifest.json");
+const CHANGED_PATH = path.join(ROOT_DIR, "build_changed.json");
 const OUTPUT_DIR = path.join(ROOT_DIR, "public");
 const OUTPUT_PATH = path.join(OUTPUT_DIR, "search-index.json");
+
+// Route B incremental: build_changed.json (written by build_notes.py) lists the note
+// repos recompiled this run. When present alongside a prior output, repos not in that
+// list reuse their existing blocks instead of being re-parsed. Missing file → full build.
+function loadChangedSet(): { changed: Set<string>; incremental: boolean } {
+  if (!fs.existsSync(CHANGED_PATH)) return { changed: new Set(), incremental: false };
+  try {
+    const data = JSON.parse(fs.readFileSync(CHANGED_PATH, "utf-8"));
+    return { changed: new Set<string>(data.changed_repos ?? []), incremental: true };
+  } catch {
+    return { changed: new Set(), incremental: false };
+  }
+}
 
 const CARD_ENVIRONMENTS = new Set([
   "definition",
@@ -341,7 +355,34 @@ function main() {
   console.log(`[search-index] manifestPath = ${MANIFEST_PATH}`);
   console.log(`[search-index] manifest entries = ${manifest.length}`);
 
+  const { changed, incremental } = loadChangedSet();
+  const existingByRepo = new Map<string, SearchBlock[]>();
+  if (incremental && fs.existsSync(OUTPUT_PATH)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8")) as SearchBlock[];
+      for (const b of existing) {
+        const arr = existingByRepo.get(b.repo) ?? [];
+        arr.push(b);
+        existingByRepo.set(b.repo, arr);
+      }
+    } catch {
+      existingByRepo.clear();
+    }
+  }
+  const canReuse = incremental && existingByRepo.size > 0;
+  console.log(
+    `[search-index] incremental=${incremental} reuse=${canReuse} ` +
+    `changed=[${[...changed].join(", ")}]`
+  );
+
   for (const item of manifest) {
+    if (canReuse && !changed.has(item.repo) && existingByRepo.has(item.repo)) {
+      const reused = existingByRepo.get(item.repo)!;
+      allBlocks.push(...reused);
+      console.log(`[search-index] Reused ${item.title}: ${reused.length} blocks (unchanged)`);
+      continue;
+    }
+
     const absTexPath = path.isAbsolute(item.main_tex)
       ? item.main_tex
       : path.resolve(ROOT_DIR, item.main_tex);
