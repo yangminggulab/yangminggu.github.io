@@ -316,6 +316,93 @@ definition, theorem, example, dxtips
 4. 再考虑把搜索索引按 repo 拆分，实现真正增量构建。
 5. 最后再做 preview hash 复用和预览范围收窄。
 
+## 待办：事件驱动触发（替代 3 小时定时轮询）
+
+### 背景
+
+当前 `.github/workflows/build.yml` 通过 `schedule: cron: '0 */3 * * *'` 每 3 小时轮询一次，进入 workflow 后由 `scripts/build_notes.py` 调 GitHub API 比对 `pushed_at`，无变化就提前退出（`needs_rebuild=false`）。这套增量检测已经存在，但触发仍是轮询，最长有 3 小时延迟。
+
+要做到"dx\* 仓库一 push 就触发"，GitHub 的模型决定了必须有一个"中间人"把信号传到本站仓库。中间人只有两种形态：放在每个源仓库里（notify workflow，维护 N 个文件）或放在仓库外（接收 org webhook 的一个 endpoint）。
+
+### 选定方案：Cloudflare Worker + org webhook
+
+**原理**
+
+1. 在 GitHub org `yangminggulab` 的 Settings → Webhooks 里添加一条 org webhook，事件类型选 `push`，指向 Cloudflare Worker 的 URL。
+2. Cloudflare Worker（~25 行 JS）收到 push 事件后，过滤仓库名以 `dx` 开头，调用本站的 `repository_dispatch`（事件类型 `dx_repo_updated`）。
+3. 本站 `build.yml` 入口改为：
+
+```yaml
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [dx_repo_updated]
+  schedule:
+    - cron: '0 2 * * *'   # 每日凌晨兜底一次，防止 Worker 偶发失败漏更新
+```
+
+4. 同时加并发控制，防止多个 dx\* 仓库短时间连续 push 时并发抢 commit：
+
+```yaml
+concurrency:
+  group: notes-build-main
+  cancel-in-progress: false
+```
+
+**Cloudflare Worker 代码骨架**
+
+```js
+export default {
+  async fetch(request, env) {
+    const payload = await request.json();
+    const repoName = payload?.repository?.name ?? '';
+    if (!repoName.startsWith('dx')) {
+      return new Response('ignored', { status: 200 });
+    }
+    await fetch(
+      'https://api.github.com/repos/yangminggulab/yangminggu.github.io/dispatches',
+      {
+        method: 'POST',
+        headers: {
+          Accept: 'application/vnd.github+json',
+          Authorization: `Bearer ${env.WEBSITE_DISPATCH_TOKEN}`,
+          'User-Agent': 'dx-notifier',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          event_type: 'dx_repo_updated',
+          client_payload: {
+            repo: repoName,
+            sha: payload?.after ?? '',
+            ref: payload?.ref ?? '',
+          },
+        }),
+      }
+    );
+    return new Response('dispatched', { status: 200 });
+  },
+};
+```
+
+**Token 配置**
+
+- `WEBSITE_DISPATCH_TOKEN`：fine-grained PAT，只授权 `yangminggu.github.io` 仓库的 `contents: write`（或用 GitHub App token，不会过期）。
+- 放到 Cloudflare Worker 的 Environment Variables（加密存储），不要硬编码在代码里。
+
+**好处**
+
+- 所有 `dx*` 仓库不需要任何改动，新增仓库也自动覆盖。
+- Cloudflare Workers 免费额度 10 万次/天，完全够用。
+- 现有 `build_notes.py` 的增量检测逻辑不需要改，dispatch 只是替代"闹钟"。
+
+**执行步骤（备忘）**
+
+1. Cloudflare 创建 Worker，粘贴上面骨架代码，配置 `WEBSITE_DISPATCH_TOKEN` 环境变量，部署拿到 URL。
+2. GitHub org Settings → Webhooks → Add webhook，URL 填 Worker 地址，Content type 选 `application/json`，事件选 `Pushes`（或 `Let me select individual events` → `Pushes`）。
+3. 修改本站 `build.yml` 的 `on:` 块，加 `repository_dispatch` + 把 schedule 改成每日兜底。
+4. 加 `concurrency` 块。
+5. 推送后手动 `workflow_dispatch` 验证一次，再在某个 `dx*` 仓库随意 push 一个空 commit，确认本站 workflow 被触发。
+
 ## 参考资料
 
 - GitHub Actions dependency caching 官方文档：https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching
