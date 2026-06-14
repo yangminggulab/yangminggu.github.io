@@ -79,6 +79,11 @@ jobs:
         if: steps.build.outputs.needs_rebuild == 'true'
         run: python3 scripts/render_search_previews.py
 
+      - name: Add pinyin search index
+        id: pinyin
+        if: steps.build.outputs.needs_rebuild == 'true'
+        run: python3 scripts/add_pinyin.py
+
       - name: Build diagnostics
         if: always()
         env:
@@ -86,6 +91,7 @@ jobs:
           STEP_INDEX:  ${{ steps.idx.outcome }}
           STEP_ENRICH: ${{ steps.enrich.outcome }}
           STEP_RENDER: ${{ steps.render.outcome }}
+          STEP_PINYIN: ${{ steps.pinyin.outcome }}
         run: |
           python3 - <<'EOF'
           import json, os
@@ -118,6 +124,7 @@ jobs:
               ("build-search-index.ts",     os.environ.get("STEP_INDEX")  or "—"),
               ("enrich-search-index.ts",    os.environ.get("STEP_ENRICH") or "—"),
               ("render_search_previews.py", os.environ.get("STEP_RENDER") or "—"),
+              ("add_pinyin.py",             os.environ.get("STEP_PINYIN") or "—"),
           ]
           any_failure = any(o == "failure" for _, o in step_rows)
           for name, outcome in step_rows:
