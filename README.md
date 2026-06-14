@@ -48,7 +48,7 @@ yangminggu.github.io
 │       └── render_search_previews.py
 │           ├── 读取 public/search-index.enriched.json 和 build_changed.json
 │           ├── 变动仓库用 PyMuPDF 重新截图，未变动仓库复用旧图
-│           ├── 按 SyncTeX 坐标裁剪定理/定义/例题等区域
+│           ├── 用 pdfLocator 锚点裁剪：有框卡片贴彩色框，无框块裁到下一块
 │           ├── 输出/复用 public/search-previews/*.png 并清理孤儿图
 │           └── 合并生成 public/search-index.previews.json
 │
@@ -103,7 +103,7 @@ dx* 仓库的 LaTeX 源码
 4. 编译产物会被复制到 `pdf/`，同时生成 `books.json` 给首页书架使用，生成 `notes_manifest.json` 给搜索索引脚本使用。
 5. `build-search-index.ts` 读取 `notes_manifest.json`，再打开每本笔记的 `main.tex`，沿着 `\input{}` 和 `\include{}` 递归读取章节文件，把 LaTeX 中的定义、定理、例题、笔记、提示和普通段落抽成结构化 JSON。
 6. `enrich-search-index.ts` 读取基础搜索索引，对每个带有源文件路径和行号的内容块调用 `synctex view`，把“某个 TeX 文件第几行”转换成“PDF 第几页、页面坐标是多少”。
-7. `render_search_previews.py` 读取带坐标的索引，用 PyMuPDF 打开 PDF，按坐标把定义、定理、例题等内容裁剪成 PNG 预览图。
+7. `render_search_previews.py` 读取带坐标的索引，用 PyMuPDF 打开 PDF，按 `pdfLocator` 锚点裁剪：有框卡片（定义/定理/提示等）贴合彩色 tcolorbox 边界，无框块（例题/笔记/注）从标签裁到下一个块，生成 PNG 预览图。
 8. `index.html` 在浏览器中读取最终的 `public/search-index.previews.json`，搜索时展示文本摘要或预览图片，并通过 `books.json` 和 `pdf/` 渲染可打开的 PDF 书架。
 
 ## 运行时和构建时的分工
@@ -165,9 +165,8 @@ dx* 仓库的 LaTeX 源码
 
 输入：
 
-- `public/search-index.enriched.json`：已经带有源文件路径、行号、SyncTeX 路径和 PDF 定位信息的搜索索引。
+- `public/search-index.enriched.json`：已经带有源文件路径、行号和 PDF 定位信息（`pdfLocator`）的搜索索引。
 - `pdf/*.pdf` 或构建目录中的 PDF。
-- 每个笔记仓库编译时产生的 `*.synctex.gz`。
 
 核心逻辑：
 
@@ -175,11 +174,11 @@ dx* 仓库的 LaTeX 源码
 2. 未变动仓库的块（不在变动集合、`id` 命中上一轮 `search-index.previews.json`）直接沿用旧预览条目，对应 PNG 已在 `public/` 中，无需重绘。
 3. 只对适合截图展示的 LaTeX 环境生成预览图，比如 `definition`、`theorem`、`example`、`note`、`remark`、`proposition`、`lemma`、`corollary`、`dxtips`。
 4. 普通段落不截图，而是在索引中标记为文本 fallback，避免生成过多低价值图片。
-5. 对每个可截图块，读取它的 `sourcePath`、`startLine`、`endLine` 和 `synctex`。
-6. 调用 `synctex view`，分别把开始行和结束行映射到 PDF 页码和坐标。
-7. 如果开始行和结束行跨页，或者 SyncTeX 映射失败，就记录失败原因，不强行生成错误图片。
-8. 使用 PyMuPDF 打开 PDF，根据 SyncTeX 坐标计算裁剪矩形。
-9. 按内容类型给裁剪区域加不同的上下 padding，让定义、定理、例题等卡片截图更完整。
+5. 对每个可截图块，读取 enrich 阶段算好的 `pdfLocator`（块 `\begin` 行的 PDF 锚点，直接当 top-down 坐标用，不翻转、不依赖 `endLine`）。
+6. 用 PyMuPDF 检测当前页的彩色 tcolorbox 框（按颜色识别四套主题色边框）。
+7. **有框块**（定义/定理/提示/引理/命题/推论）：锚点落在某个彩色框内，裁该框的精确 bbox 加少量留白。
+8. **无框块**（例题/笔记/注）：从锚点所在的标签行向下，裁到“下一个块的开始”为止——取下一个块锚点、下一个彩色框顶部、高度上限、页面底部中最先出现者。
+9. 找不到合理裁切区域时不强行出图，标记为文本回退。
 10. 把裁剪结果以 PNG 保存到 `public/search-previews/`。
 11. 把每个搜索块对应的 `previewImage` 和 `previewClip` 写回最终索引。
 12. 清理孤儿 PNG：最终索引未引用的图片（来自已删除仓库，或变动仓库重绘后 `id` 改变的旧图）会被删除。
@@ -211,7 +210,7 @@ dx* 仓库的 LaTeX 源码
 | `video/videos.json` | `build_notes.py` | `index.html` | 视频列表，来自 `video/*.mp4`。 |
 | `public/search-index.json` | `build-search-index.ts` | `enrich-search-index.ts` | 基础搜索索引，只包含文本、标题、章节和源文件行号。 |
 | `public/search-index.enriched.json` | `enrich-search-index.ts` | `render_search_previews.py` | 增强搜索索引，加入 PDF 定位信息和调试信息。 |
-| `public/search-index.previews.json` | `render_search_previews.py` | `index.html` | 最终搜索索引，包含文本、定位和预览图路径。 |
+| `public/search-index.previews.json` | `render_search_previews.py` + `add_pinyin.py` | `index.html` | 最终搜索索引，包含文本、定位、预览图路径和拼音字段。 |
 | `public/search-previews/*.png` | `render_search_previews.py` | `index.html` | 搜索结果中的 PDF 局部截图。 |
 
 ## 自动构建流程
@@ -233,6 +232,7 @@ checkout 仓库
   -> npx tsx scripts/build-search-index.ts
   -> npx tsx scripts/enrich-search-index.ts
   -> python3 scripts/render_search_previews.py
+  -> python3 scripts/add_pinyin.py
   -> 输出构建诊断信息
   -> git add 生成物
   -> commit
@@ -337,7 +337,7 @@ Route A 之后，搜索索引、坐标映射、预览图三步仍对全部 12 �
 1. 页面加载时读取 `/books.json`，生成 PDF 书架。
 2. 点击书架中的书，打开 `/pdf/<file>`。
 3. 读取 `/video/videos.json`，展示视频列表和视频弹窗。
-4. 读取 `/public/search-index.previews.json`，把搜索框输入和索引内容做匹配。
+4. 读取 `/public/search-index.previews.json`，把搜索框输入和索引内容做匹配：支持多词任意顺序（AND）、中文拼音首字母/全拼、英文术语拼写容错、前缀匹配，并对输入做防抖、对命中词高亮。
 5. 搜索结果优先展示预览图；如果某个块没有预览图，就回退到文本摘要。
 6. 搜索结果保留 PDF 路径、章节信息和预览信息，方便用户从关键词跳到具体笔记内容。
 

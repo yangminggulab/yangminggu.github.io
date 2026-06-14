@@ -821,94 +821,166 @@
         .replace(/'/g, "&#39;");
     }
 
-    function countOccurrences(text, query) {
-      if (!text || !query) return 0;
-      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const matches = text.toLowerCase().match(new RegExp(escaped, "g"));
-      return matches ? matches.length : 0;
+    // 文本归一化：小写 + 全角转半角（含全角空格），统一中英文 / 全半角输入
+    function normalizeText(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0))
+        .replace(/　/g, " ")
+        .toLowerCase();
     }
 
-    function makeSnippet(content, query, radius = 60) {
+    function escapeRegExp(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function isLatinToken(tok) {
+      return /^[a-z0-9]+$/.test(tok);
+    }
+
+    // 编辑距离是否 ≤ maxDist（逐行剪枝），用于英文术语拼写容错
+    function withinEditDistance(a, b, maxDist) {
+      const la = a.length, lb = b.length;
+      if (Math.abs(la - lb) > maxDist) return false;
+      let prev = Array.from({ length: lb + 1 }, (_, j) => j);
+      for (let i = 1; i <= la; i++) {
+        const cur = [i];
+        let rowBest = i;
+        for (let j = 1; j <= lb; j++) {
+          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+          cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+          if (cur[j] < rowBest) rowBest = cur[j];
+        }
+        if (rowBest > maxDist) return false;
+        prev = cur;
+      }
+      return prev[lb] <= maxDist;
+    }
+
+    // 英文 token 与文本里某个英文词的拼写容错命中（编辑距离 ≤ 1）
+    function latinTypoHit(token, text) {
+      if (token.length < 4) return false;
+      const words = text.match(/[a-z0-9]+/g);
+      if (!words) return false;
+      for (const w of words) {
+        if (Math.abs(w.length - token.length) > 1) continue;
+        if (withinEditDistance(token, w, 1)) return true;
+      }
+      return false;
+    }
+
+    // 围绕首个命中词截取摘要，并高亮所有命中词（多词分别高亮）
+    function makeSnippet(content, tokens, radius = 60) {
       if (!content) return "";
-      const lower = content.toLowerCase();
-      const q = query.toLowerCase();
-      const index = lower.indexOf(q);
+      const norm = normalizeText(content);
 
-      if (index === -1) {
-        return escapeHtml(content.slice(0, radius * 2).trim());
+      let idx = -1, hitLen = 0;
+      for (const tok of tokens) {
+        const i = norm.indexOf(tok);
+        if (i !== -1 && (idx === -1 || i < idx)) { idx = i; hitLen = tok.length; }
       }
 
-      const start = Math.max(0, index - radius);
-      const end = Math.min(content.length, index + q.length + radius);
-      let snippet = content.slice(start, end).trim();
+      let snippet, prefix = false, suffix = false;
+      if (idx === -1) {
+        snippet = content.slice(0, radius * 2).trim();
+      } else {
+        const start = Math.max(0, idx - radius);
+        const end = Math.min(content.length, idx + hitLen + radius);
+        snippet = content.slice(start, end).trim();
+        prefix = start > 0;
+        suffix = end < content.length;
+      }
 
-      if (start > 0) snippet = "..." + snippet;
-      if (end < content.length) snippet += "...";
-
-      const escaped = escapeHtml(snippet);
-      const matchedText = snippet.slice(
-        Math.max(0, index - start),
-        Math.max(0, index - start) + q.length
-      );
-      const safeQuery = escapeHtml(matchedText);
-
-      return escaped.replace(
-        new RegExp(safeQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
-        "<mark>$&</mark>"
-      );
+      // 先在原文上用控制字符占位标记命中词，再转义 HTML，最后替换成 <mark>，
+      // 避免高亮正则误伤转义后产生的 HTML 实体（如把 &amp; 里的 amp 高亮）
+      const alt = tokens
+        .filter(Boolean)
+        .sort((a, b) => b.length - a.length)
+        .map(escapeRegExp)
+        .join("|");
+      const markOpen = String.fromCharCode(1), markClose = String.fromCharCode(2);
+      let marked = snippet;
+      if (alt) {
+        marked = snippet.replace(new RegExp(alt, "ig"), m => markOpen + m + markClose);
+      }
+      const html = escapeHtml(marked)
+        .split(markOpen).join("<mark>")
+        .split(markClose).join("</mark>");
+      return (prefix ? "..." : "") + html + (suffix ? "..." : "");
     }
 
-    function scoreItem(item, query) {
-      const text = (item.text || "").toLowerCase();
-      const blockTitle = (item.blockTitle || "").toLowerCase();
-      const section = (item.section || "").toLowerCase();
-      const subsection = (item.subsection || "").toLowerCase();
-      const kind = (item.kind || "").toLowerCase();
-
-      const textHits = countOccurrences(text, query);
-      const titleHits = countOccurrences(blockTitle, query);
-      const sectionHits = countOccurrences(section, query);
-      const subsectionHits = countOccurrences(subsection, query);
-
-      if (!(textHits > 0 || titleHits > 0 || sectionHits > 0 || subsectionHits > 0)) {
-        return 0;
+    // 单个词在一个块上的最佳命中分；0 表示完全未命中
+    function tokenFieldScore(token, fields) {
+      let best = 0;
+      // 子串匹配（中英文统一走子串，符合 CJK 搜索习惯，天然含前缀匹配）
+      if (fields.title.includes(token)) best = Math.max(best, 100);
+      if (fields.subsection.includes(token)) best = Math.max(best, 60);
+      if (fields.section.includes(token)) best = Math.max(best, 45);
+      if (fields.text.includes(token)) best = Math.max(best, 30);
+      if (best > 0) return best;
+      // 纯字母词：拼音首字母 / 全拼，或英文拼写容错
+      if (isLatinToken(token)) {
+        if (fields.pinyinIni.includes(token)) return 55;
+        if (fields.pinyinFull.includes(token)) return 42;
+        if (latinTypoHit(token, fields.title)
+            || latinTypoHit(token, fields.subsection)
+            || latinTypoHit(token, fields.section)) return 36;
+        if (latinTypoHit(token, fields.text)) return 22;
       }
+      return 0;
+    }
 
+    function scoreItem(item, tokens, normQuery) {
+      const fields = {
+        text: normalizeText(item.text || ""),
+        title: normalizeText(item.blockTitle || item.previewTitle || ""),
+        section: normalizeText(item.section || ""),
+        subsection: normalizeText(item.subsection || ""),
+        pinyinIni: item.pinyinInitials || "",
+        pinyinFull: item.pinyinFull || ""
+      };
+
+      // 多词 AND：每个词都要命中，否则淘汰
       let score = 0;
-
-      if (["definition", "theorem", "lemma", "proposition"].includes(kind)) {
-        score += 40;
-      } else if (["corollary", "example", "remark", "note", "dxtips"].includes(kind)) {
-        score += 22;
+      for (const tok of tokens) {
+        const s = tokenFieldScore(tok, fields);
+        if (s === 0) return 0;
+        score += s;
       }
 
-      if (textHits > 0) score += 28 + textHits * 12;
-      score += titleHits * 8;
-      score += subsectionHits * 6;
-      score += sectionHits * 4;
+      const kind = (item.kind || "").toLowerCase();
+      if (["definition", "theorem", "lemma", "proposition"].includes(kind)) score += 30;
+      else if (["corollary", "example", "remark", "note", "dxtips"].includes(kind)) score += 16;
+
+      // 整个查询作为连续短语命中 → 额外加权（精确短语优先于分散命中）
+      if (normQuery.length >= 2 && tokens.length > 1) {
+        if (fields.title.includes(normQuery)) score += 60;
+        else if (fields.subsection.includes(normQuery) || fields.text.includes(normQuery)) score += 30;
+      }
 
       const len = (item.text || "").length;
-      if (len <= 180) score += 10;
-      else if (len <= 320) score += 6;
-      else if (len >= 1400) score -= 15;
-      else if (len >= 900) score -= 8;
+      if (len <= 180) score += 8;
+      else if (len <= 320) score += 4;
+      else if (len >= 1400) score -= 12;
+      else if (len >= 900) score -= 6;
 
       return score;
     }
 
     function searchNotes(query) {
-      const q = query.trim().toLowerCase();
-      if (!q) return [];
+      const normQuery = normalizeText(query).trim();
+      const tokens = normQuery.split(/\s+/).filter(Boolean);
+      if (!tokens.length) return [];
 
       const sortedResults = searchIndex
         .filter(item => canViewRepo(item.repo))
         .map(item => {
-          const score = scoreItem(item, q);
+          const score = scoreItem(item, tokens, normQuery);
           if (score < 35) return null;
           return {
             ...item,
             score,
-            snippet: makeSnippet(item.text || item.blockTitle || "", q)
+            snippet: makeSnippet(item.text || item.blockTitle || "", tokens)
           };
         })
         .filter(Boolean)
@@ -1044,7 +1116,12 @@
 
       input.addEventListener("focus", () => shell.classList.add("focused"));
       input.addEventListener("blur", () => shell.classList.remove("focused"));
-      input.addEventListener("input", (e) => renderSearchResults(e.target.value));
+      let searchDebounce;
+      input.addEventListener("input", (e) => {
+        const value = e.target.value;
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => renderSearchResults(value), 120);
+      });
 
       document.addEventListener("keydown", (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
