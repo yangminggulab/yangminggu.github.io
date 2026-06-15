@@ -909,36 +909,84 @@
       return (prefix ? "..." : "") + html + (suffix ? "..." : "");
     }
 
+    const FIELD_SCORE = {
+      text: 100,
+      ownTitle: 80,
+      subsection: 45,
+      section: 35,
+      docTitle: 15
+    };
+
+    const PHRASE_SCORE = {
+      text: 50,
+      ownTitle: 35,
+      subsection: 15,
+      section: 15,
+      docTitle: 8
+    };
+
+    const KIND_SCORE = {
+      dxtips: 40,
+      definition: 20,
+      theorem: 20,
+      lemma: 20,
+      proposition: 20,
+      corollary: 12,
+      example: 12,
+      remark: 12,
+      note: 12
+    };
+
+    function hasExplicitBlockTitle(item) {
+      const kind = String(item.kind || "").trim();
+      if (!kind || !item.rawContent) return false;
+      const re = new RegExp("^\\s*\\\\begin\\{" + escapeRegExp(kind) + "\\}\\s*\\[");
+      return re.test(item.rawContent);
+    }
+
+    function buildSearchFields(item) {
+      const title = normalizeText(item.blockTitle || item.previewTitle || "");
+      const section = normalizeText(item.section || "");
+      const subsection = normalizeText(item.subsection || "");
+      const inheritedTitle = title && !hasExplicitBlockTitle(item)
+        && (title === section || title === subsection);
+
+      return {
+        text: normalizeText(item.text || ""),
+        ownTitle: inheritedTitle ? "" : title,
+        section,
+        subsection,
+        docTitle: normalizeText(item.title || item.repo || ""),
+        pinyinIni: item.pinyinInitials || "",
+        pinyinFull: item.pinyinFull || ""
+      };
+    }
+
     // 单个词在一个块上的最佳命中分；0 表示完全未命中
     function tokenFieldScore(token, fields) {
       let best = 0;
       // 子串匹配（中英文统一走子串，符合 CJK 搜索习惯，天然含前缀匹配）
-      if (fields.title.includes(token)) best = Math.max(best, 100);
-      if (fields.subsection.includes(token)) best = Math.max(best, 60);
-      if (fields.section.includes(token)) best = Math.max(best, 45);
-      if (fields.text.includes(token)) best = Math.max(best, 30);
+      if (fields.text.includes(token)) best = Math.max(best, FIELD_SCORE.text);
+      if (fields.ownTitle.includes(token)) best = Math.max(best, FIELD_SCORE.ownTitle);
+      if (fields.subsection.includes(token)) best = Math.max(best, FIELD_SCORE.subsection);
+      if (fields.section.includes(token)) best = Math.max(best, FIELD_SCORE.section);
+      if (fields.docTitle.includes(token)) best = Math.max(best, FIELD_SCORE.docTitle);
       if (best > 0) return best;
       // 纯字母词：拼音首字母 / 全拼，或英文拼写容错
       if (isLatinToken(token)) {
         if (fields.pinyinIni.includes(token)) return 55;
         if (fields.pinyinFull.includes(token)) return 42;
-        if (latinTypoHit(token, fields.title)
+        if (latinTypoHit(token, fields.ownTitle)
             || latinTypoHit(token, fields.subsection)
-            || latinTypoHit(token, fields.section)) return 36;
+            || latinTypoHit(token, fields.section)
+            || latinTypoHit(token, fields.docTitle)) return 36;
         if (latinTypoHit(token, fields.text)) return 22;
       }
       return 0;
     }
 
     function scoreItem(item, tokens, normQuery) {
-      const fields = {
-        text: normalizeText(item.text || ""),
-        title: normalizeText(item.blockTitle || item.previewTitle || ""),
-        section: normalizeText(item.section || ""),
-        subsection: normalizeText(item.subsection || ""),
-        pinyinIni: item.pinyinInitials || "",
-        pinyinFull: item.pinyinFull || ""
-      };
+      const fields = buildSearchFields(item);
 
       // 多词 AND：每个词都要命中，否则淘汰
       let score = 0;
@@ -949,13 +997,18 @@
       }
 
       const kind = (item.kind || "").toLowerCase();
-      if (["definition", "theorem", "lemma", "proposition"].includes(kind)) score += 30;
-      else if (["corollary", "example", "remark", "note", "dxtips"].includes(kind)) score += 16;
+      score += KIND_SCORE[kind] || 0;
 
-      // 整个查询作为连续短语命中 → 额外加权（精确短语优先于分散命中）
-      if (normQuery.length >= 2 && tokens.length > 1) {
-        if (fields.title.includes(normQuery)) score += 60;
-        else if (fields.subsection.includes(normQuery) || fields.text.includes(normQuery)) score += 30;
+      // 整个查询作为连续短语命中 → 额外加权（精确短语优先于分散命中）。
+      // 正文单字命中过泛，不给短语加分；标题/章节单字命中仍然有较强意图。
+      if (normQuery.length >= 2) {
+        if (fields.text.includes(normQuery)) score += PHRASE_SCORE.text;
+      }
+      if (normQuery.length >= 1) {
+        if (fields.ownTitle.includes(normQuery)) score += PHRASE_SCORE.ownTitle;
+        if (fields.subsection.includes(normQuery)) score += PHRASE_SCORE.subsection;
+        if (fields.section.includes(normQuery)) score += PHRASE_SCORE.section;
+        if (fields.docTitle.includes(normQuery)) score += PHRASE_SCORE.docTitle;
       }
 
       const len = (item.text || "").length;
