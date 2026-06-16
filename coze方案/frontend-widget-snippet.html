@@ -1,0 +1,25 @@
+<!--
+  Coze 前端挂件示例。
+
+  当前只是占位 demo，不要直接粘到 index.html 启用。
+  真正启用时，把 src 和初始化参数替换成 Coze 控制台给你的发布代码。
+-->
+
+<button id="cozeStudyAssistantButton" type="button">
+  AI 学习助手
+</button>
+
+<script>
+  window.__COZE_STUDY_ASSISTANT_CONFIG__ = {
+    botName: "数学笔记学习助手",
+    mode: "demo-only",
+    note: "这里替换为 Coze 官方 Web SDK / iframe 发布代码。",
+  };
+
+  document
+    .getElementById("cozeStudyAssistantButton")
+    .addEventListener("click", () => {
+      alert("Coze demo placeholder: 当前方案未启用。");
+    });
+</script>
+
