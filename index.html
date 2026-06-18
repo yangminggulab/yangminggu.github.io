@@ -685,6 +685,7 @@
     let searchIndex = [];
     let visibilityMap = {};
     let isAdmin = localStorage.getItem("isAdmin") === "true";
+    let buildState = {};
 
     function updateAdminBtn() {
       const btn = document.getElementById("adminBtn");
@@ -707,7 +708,7 @@
 
     async function loadVisibility() {
       try {
-        const res = await fetch("/visibility.json");
+        const res = await fetch(`/visibility.json?_=${Date.now()}`);
         if (!res.ok) throw new Error("visibility.json not found");
         visibilityMap = await res.json();
       } catch (error) {
@@ -1107,12 +1108,13 @@
 
     async function loadBooks() {
       const [booksRes, stateRes] = await Promise.all([
-        fetch("/books.json"),
-        fetch("/build_state.json").catch(() => null),
+        fetch(`/books.json?_=${Date.now()}`),
+        fetch(`/build_state.json?_=${Date.now()}`).catch(() => null),
       ]);
       if (!booksRes.ok) throw new Error("books.json not found");
       const books = await booksRes.json();
       const state = stateRes?.ok ? await stateRes.json() : {};
+      buildState = state;
 
       books.sort((a, b) => {
         const ta = state[a.file.replace(/\.pdf$/i, "")] || "";
@@ -1130,7 +1132,9 @@
           const title = book.title || formatTitle(book.file);
           const spine = formatUpperSpine(book.file.replace(/\.pdf$/i, ""));
           const desc = book.desc || "Auto-compiled from LaTeX";
-          const href = `/pdf/${book.file}`;
+          const repo = book.file.replace(/\.pdf$/i, "");
+          const version = state[repo] || Date.now();
+          const href = `/pdf/${book.file}?v=${encodeURIComponent(version)}`;
 
           const a = document.createElement("a");
           a.className = "book-item";
@@ -1154,7 +1158,9 @@
 
     async function loadSearchIndex() {
       try {
-        const res = await fetch("/public/search-index.previews.json");
+        const maxTs = Object.values(buildState).sort().pop() || "";
+        const searchUrl = `/public/search-index.previews.json${maxTs ? `?v=${encodeURIComponent(maxTs)}` : ""}`;
+        const res = await fetch(searchUrl);
         if (!res.ok) throw new Error("search-index.previews.json not found");
         searchIndex = await res.json();
       } catch (error) {
@@ -1353,7 +1359,8 @@
       try {
         updateAdminBtn();
         await loadVisibility();
-        await Promise.all([loadBooks(), loadSearchIndex()]);
+        await loadBooks();
+        await loadSearchIndex();
         bindSearchEvents();
         initHeroCarousel();
       } catch (e) {
