@@ -65056,8 +65056,8 @@
     "content": "\\begin{homework}[1683 | 查询 第5题]\n\\begin{lstlisting}[language=SQL]\n select tweet_id\nfrom Tweets\nwhere length(content) > 15;\n\\end{lstlisting}\n数字符串长度是length\n\\end{homework}",
     "text": "[1683 | 查询 第5题] [language=SQL] select tweet_id from Tweets where length(content) > 15; 数字符串长度是length",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 31,
-    "endLine": 38
+    "startLine": 4,
+    "endLine": 11
   },
   {
     "id": "dx-sql-64",
@@ -65076,8 +65076,8 @@
     "content": "\\begin{homework}[1581 | 连接 第3题]\n\\begin{lstlisting}[language=SQL]\nSELECT customer_id, COUNT(*) AS count_no_trans\nFROM Visits\nWHERE visit_id NOT IN (\n    SELECT visit_id FROM Transactions\n)\nGROUP BY customer_id\n\\end{lstlisting}\n\\begin{dxtips}\n    where not in其实就相当于是减法也就是交集，不是减具体数字的都可以用where not in。想不明白先列式子是谁减去谁\n\\end{dxtips}\n\\end{homework}",
     "text": "[1581 | 连接 第3题] [language=SQL] SELECT customer_id, COUNT(*) AS count_no_trans FROM Visits WHERE visit_id NOT IN ( SELECT visit_id FROM Transactions ) GROUP BY customer_id where not in其实就相当于是减法也就是交集，不是减具体数字的都可以用where not in。想不明白先列式子是谁减去谁",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 41,
-    "endLine": 53
+    "startLine": 14,
+    "endLine": 26
   },
   {
     "id": "dx-sql-65",
@@ -65096,8 +65096,8 @@
     "content": "\\begin{homework}[197 | 连接 第4题]\n\\begin{lstlisting}[language=SQL]\nSELECT w1.id\nFROM Weather w1\nJOIN Weather w2\nON DATEDIFF(w1.recordDate, w2.recordDate) = 1\nWHERE w1.temperature > w2.temperature;\n\\end{lstlisting}\n\\begin{dxtips}[日期题]\n    MySQL 中常用的日期函数有两个：\n\\begin{itemize}\n    \\item \\texttt{DATEDIFF(日期1, 日期2)}：返回日期1 $-$ 日期2的天数差\n    \\item \\texttt{DATE\\_ADD(日期, INTERVAL n DAY)}：在某日期上加 $n$ 天\n\\end{itemize}\n\\end{dxtips}\n\\begin{dxtips}\n    遇到需要自己表里面数据互相操作最好先连成一张表，如果不需要所有都连接就用子查询生成表的几列当成一个表在链接。弄成两个表就好操作了\n\\end{dxtips}\n\\end{homework}",
     "text": "[197 | 连接 第4题] [language=SQL] SELECT w1.id FROM Weather w1 JOIN Weather w2 ON DATEDIFF(w1.recordDate, w2.recordDate) = 1 WHERE w1.temperature > w2.temperature; [日期题] MySQL 中常用的日期函数有两个： DATEDIFF(日期1, 日期2)：返回日期1 日期2的天数差 DATE\\_ADD(日期, INTERVAL n DAY)：在某日期上加 天 遇到需要自己表里面数据互相操作最好先连成一张表，如果不需要所有都连接就用子查询生成表的几列当成一个表在链接。弄成两个表就好操作了",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 55,
-    "endLine": 73
+    "startLine": 28,
+    "endLine": 46
   },
   {
     "id": "dx-sql-66",
@@ -65116,8 +65116,8 @@
     "content": "\\begin{homework}[1661 | 连接 第5题]\n\\begin{lstlisting}[language=SQL]\nSELECT a1.machine_id, ROUND(AVG(a2.timestamp - a1.timestamp), 3) AS processing_time\nFROM Activity AS a1\nJOIN Activity AS a2\nON a1.machine_id = a2.machine_id\nAND a1.process_id = a2.process_id\nAND a1.activity_type <> a2.activity_type\nWHERE a2.activity_type = 'end'\nGROUP BY a1.machine_id;\n\\end{lstlisting}\n\\end{homework}",
     "text": "[1661 | 连接 第5题] [language=SQL] SELECT a1.machine_id, ROUND(AVG(a2.timestamp - a1.timestamp), 3) AS processing_time FROM Activity AS a1 JOIN Activity AS a2 ON a1.machine_id = a2.machine_id AND a1.process_id = a2.process_id AND a1.activity_type <> a2.activity_type WHERE a2.activity_type = 'end' GROUP BY a1.machine_id;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 75,
-    "endLine": 86
+    "startLine": 48,
+    "endLine": 59
   },
   {
     "id": "dx-sql-67",
@@ -65136,8 +65136,8 @@
     "content": "\\begin{definition}[交叉连接（CROSS JOIN）]\n交叉连接返回两张表的笛卡尔积，即左表的每一行与右表的每一行两两组合，结果行数为左表行数乘以右表行数。语法为：\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT * FROM 表A CROSS JOIN 表B;\n\\end{lstlisting}\n例如 \\texttt{Students}（4行）与 \\texttt{Subjects}（3门课）做交叉连接，得到 $4 \\times 3 = 12$ 行，即每个学生与每门课的全部组合。常与 \\texttt{LEFT JOIN} 配合使用，用于生成\"所有可能组合\"后再统计实际数据。\n\\end{definition}",
     "text": "[交叉连接（CROSS JOIN）] 交叉连接返回两张表的笛卡尔积，即左表的每一行与右表的每一行两两组合，结果行数为左表行数乘以右表行数。语法为： [language=SQL, frame=single, backgroundcolor=white] SELECT * FROM 表A CROSS JOIN 表B; 例如 Students（4行）与 Subjects（3门课）做交叉连接，得到 行，即每个学生与每门课的全部组合。常与 LEFT JOIN 配合使用，用于生成\"所有可能组合\"后再统计实际数据。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 88,
-    "endLine": 94
+    "startLine": 61,
+    "endLine": 67
   },
   {
     "id": "dx-sql-68",
@@ -65156,8 +65156,8 @@
     "content": "\\begin{homework}[1280 | 连接 第7题]\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT s.student_id, s.student_name, sub.subject_name,\n       COUNT(e.student_id) AS attended_exams\nFROM Students s\nCROSS JOIN Subjects sub\nLEFT JOIN Examinations e\nON s.student_id = e.student_id\nAND sub.subject_name = e.subject_name\nGROUP BY s.student_id, s.student_name, sub.subject_name\nORDER BY s.student_id, sub.subject_name;\n\\end{lstlisting}\n\\begin{dxtips}\n SELECT 里凡是没有被聚合函数（COUNT、SUM、AVG、MAX、MIN）包裹的列，都必须出现在 GROUP BY 里。因为是要select了我就必须知道他要在那个组里面\n\\end{dxtips}\n\\end{homework}",
     "text": "[1280 | 连接 第7题] [language=SQL, frame=single, backgroundcolor=white] SELECT s.student_id, s.student_name, sub.subject_name, COUNT(e.student_id) AS attended_exams FROM Students s CROSS JOIN Subjects sub LEFT JOIN Examinations e ON s.student_id = e.student_id AND sub.subject_name = e.subject_name GROUP BY s.student_id, s.student_name, sub.subject_name ORDER BY s.student_id, sub.subject_name; SELECT 里凡是没有被聚合函数（COUNT、SUM、AVG、MAX、MIN）包裹的列，都必须出现在 GROUP BY 里。因为是要select了我就必须知道他要在那个组里面",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 96,
-    "endLine": 111
+    "startLine": 69,
+    "endLine": 84
   },
   {
     "id": "dx-sql-69",
@@ -65176,8 +65176,8 @@
     "content": "\\begin{homework}[570 | 连接 第8题]\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT t.name FROM (\n    SELECT e1.name, COUNT(e2.id) AS sum\n    FROM Employee AS e1\n    JOIN Employee AS e2 ON e1.id = e2.managerId\n    GROUP BY e1.id, e1.name  -- {原写法：GROUP BY managerId, e1.name}\n) AS t\nWHERE t.sum >= 5;\n\\end{lstlisting}\n\n\\begin{dxtips}\n    写sql的时候先把最后一步的上一步的表一个长什么样生成对了再进行下一步筛选，如果上一步还复杂就上上步直到出现简单的操作了；\n    HAVING 是专门配合 GROUP BY 用的，用来过滤分组后的聚合结果。规则是：\nWHERE 过滤的是分组前的原始行\nHAVING 过滤的是分组后的聚合值\n\\end{dxtips}\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT e1.name\nFROM Employee AS e1\nJOIN Employee AS e2 ON e1.id = e2.managerId\nGROUP BY e1.id, e1.name\nHAVING COUNT(e2.id) >= 5;\n\\end{lstlisting}\n\\end{homework}",
     "text": "[570 | 连接 第8题] [language=SQL, frame=single, backgroundcolor=white] SELECT t.name FROM ( SELECT e1.name, COUNT(e2.id) AS sum FROM Employee AS e1 JOIN Employee AS e2 ON e1.id = e2.managerId GROUP BY e1.id, e1.name -- 原写法：GROUP BY managerId, e1.name ) AS t WHERE t.sum >= 5; 写sql的时候先把最后一步的上一步的表一个长什么样生成对了再进行下一步筛选，如果上一步还复杂就上上步直到出现简单的操作了； HAVING 是专门配合 GROUP BY 用的，用来过滤分组后的聚合结果。规则是： WHERE 过滤的是分组前的原始行 HAVING 过滤的是分组后的聚合值 [language=SQL, frame=single, backgroundcolor=white] SELECT e1.name FROM Employee AS e1 JOIN Employee AS e2 ON e1.id = e2.managerId GROUP BY e1.id, e1.name HAVING COUNT(e2.id) >= 5;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 113,
-    "endLine": 137
+    "startLine": 86,
+    "endLine": 110
   },
   {
     "id": "dx-sql-70",
@@ -65196,8 +65196,8 @@
     "content": "\\begin{homework}[1661 | 连接 第5题]\n\\begin{dxtips}\n    这题我的想法是自己需要行与行之间做差所以先自链接，链接需要end对start 然后其他的id需要一致。然后需要做差也就是end-start也就是a2-a1需要a2对type是end最后groupby machine_id求和\n\\end{dxtips}\n\\begin{lstlisting}[language=SQL]\nSELECT machine_id,\n       ROUND(AVG(CASE WHEN activity_type = 'end'\n                      THEN timestamp\n                      ELSE -timestamp END), 3) AS processing_time\nFROM Activity\nGROUP BY machine_id;\n\\end{lstlisting}\n\\end{homework}",
     "text": "[1661 | 连接 第5题] 这题我的想法是自己需要行与行之间做差所以先自链接，链接需要end对start 然后其他的id需要一致。然后需要做差也就是end-start也就是a2-a1需要a2对type是end最后groupby machine_id求和 [language=SQL] SELECT machine_id, ROUND(AVG(CASE WHEN activity_type = 'end' THEN timestamp ELSE -timestamp END), 3) AS processing_time FROM Activity GROUP BY machine_id;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 140,
-    "endLine": 152
+    "startLine": 113,
+    "endLine": 125
   },
   {
     "id": "dx-sql-71",
@@ -65216,8 +65216,8 @@
     "content": "\\begin{note}\n\\texttt{CASE WHEN} 是 SQL 中的条件表达式，相当于编程语言中的 \\texttt{if-else}，可用于 \\texttt{SELECT}、\\texttt{WHERE}、\\texttt{ORDER BY} 等子句中。语法为：\n\\begin{lstlisting}[language=SQL]\nCASE WHEN 条件1 THEN 值1\n     WHEN 条件2 THEN 值2\n     ELSE 值3\nEND\n\\end{lstlisting}\n例如在聚合函数中，将 \\texttt{end} 的时间戳取正、\\texttt{start} 的时间戳取负，直接用 \\texttt{AVG} 即可得到平均运行时间：\n\\begin{lstlisting}[language=SQL]\nAVG(CASE WHEN activity_type = 'end'\n         THEN timestamp\n         ELSE -timestamp END)\n\\end{lstlisting}\n\\end{note}",
     "text": "CASE WHEN 是 SQL 中的条件表达式，相当于编程语言中的 if-else，可用于 SELECT、WHERE、ORDER BY 等子句中。语法为： [language=SQL] CASE WHEN 条件1 THEN 值1 WHEN 条件2 THEN 值2 ELSE 值3 END 例如在聚合函数中，将 end 的时间戳取正、start 的时间戳取负，直接用 AVG 即可得到平均运行时间： [language=SQL] AVG(CASE WHEN activity_type = 'end' THEN timestamp ELSE -timestamp END)",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 154,
-    "endLine": 168
+    "startLine": 127,
+    "endLine": 141
   },
   {
     "id": "dx-sql-72",
@@ -65236,8 +65236,8 @@
     "content": "\\begin{dxtips}\n    sql里面的if else语句\n\\end{dxtips}",
     "text": "sql里面的if else语句",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 169,
-    "endLine": 171
+    "startLine": 142,
+    "endLine": 144
   },
   {
     "id": "dx-sql-73",
@@ -65256,8 +65256,8 @@
     "content": "\\begin{homework}[1934 | 连接 第9题]\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT action,\n       CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END AS is_confirmed\nFROM Confirmations;\n\\end{lstlisting}\n\\begin{dxtips}\n    action那行出来就是状态比如说time out或者confirmed。然后这个新的列叫is confirmed里面就全是0和1.然后avg就是求平均数，round（avg，3）就是保留三位小数的平均数。和计算函数一样一般放select ，后面。有case就必须有end\n\\end{dxtips}\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT s.user_id, IFNULL(stat, 0) AS confirmation_rate\nFROM Signups AS s\nLEFT JOIN (\n    SELECT c.user_id, ROUND(AVG(CASE WHEN action = 'confirmed'\n                                     THEN 1 ELSE 0 END), 2) AS stat\n    FROM Confirmations AS c\n    GROUP BY c.user_id\n) AS cs ON s.user_id = cs.user_id;\n\\end{lstlisting}\n\\begin{dxtips}\n    先写子查询表，在用join把signup表和子查询表连起来，要注意的是如果要连必须给新的表起一个名字比如cs，然后ifnull(stat,0)就是给stat位置是null的自动填写是0\n\\end{dxtips}\n\\end{homework}",
     "text": "[1934 | 连接 第9题] [language=SQL, frame=single, backgroundcolor=white] SELECT action, CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END AS is_confirmed FROM Confirmations; action那行出来就是状态比如说time out或者confirmed。然后这个新的列叫is confirmed里面就全是0和1.然后avg就是求平均数，round（avg，3）就是保留三位小数的平均数。和计算函数一样一般放select ，后面。有case就必须有end [language=SQL, frame=single, backgroundcolor=white] SELECT s.user_id, IFNULL(stat, 0) AS confirmation_rate FROM Signups AS s LEFT JOIN ( SELECT c.user_id, ROUND(AVG(CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END), 2) AS stat FROM Confirmations AS c GROUP BY c.user_id ) AS cs ON s.user_id = cs.user_id; 先写子查询表，在用join把signup表和子查询表连起来，要注意的是如果要连必须给新的表起一个名字比如cs，然后ifnull(stat,0)就是给stat位置是null的自动填写是0",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 173,
-    "endLine": 196
+    "startLine": 146,
+    "endLine": 169
   },
   {
     "id": "dx-sql-74",
@@ -65276,8 +65276,8 @@
     "content": "\\begin{homework}[1251 | 聚合函数 第2题]\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT ps.product_id,\n       IFNULL(ROUND(SUM(ps.price * us.units) / SUM(us.units), 2), 0) AS average_price\nFROM UnitsSold AS us\nRIGHT JOIN (SELECT * FROM Prices) AS ps\nON us.product_id = ps.product_id\nAND us.purchase_date BETWEEN ps.start_date AND ps.end_date\nGROUP BY ps.product_id;\n\\end{lstlisting}\n\n\\begin{note}\n相较于初始写法，本题做了三处修改：\n\\begin{itemize}\n    \\item \\texttt{JOIN} 改为 \\texttt{RIGHT JOIN}：以 \\texttt{Prices} 为右表，保留所有产品，即使没有销售记录也会出现在结果中\n    \\item 加上 \\texttt{IFNULL(..., 0)}：\\texttt{RIGHT JOIN} 后没有匹配的产品 \\texttt{average\\_price} 为 \\texttt{NULL}，用 \\texttt{IFNULL} 补0\n    \\item \\texttt{GROUP BY us.product\\_id} 改为 \\texttt{GROUP BY ps.product\\_id}：右表没匹配到的行 \\texttt{us.product\\_id} 为 \\texttt{NULL}，必须按 \\texttt{ps.product\\_id} 分组才能正确输出所有产品\n\\end{itemize}\n\\end{note}\n\\begin{dxtips}\n    select内容一变化group by就必须变\n\\end{dxtips}\n\\end{homework}",
     "text": "[1251 | 聚合函数 第2题] [language=SQL, frame=single, backgroundcolor=white] SELECT ps.product_id, IFNULL(ROUND(SUM(ps.price * us.units) / SUM(us.units), 2), 0) AS average_price FROM UnitsSold AS us RIGHT JOIN (SELECT * FROM Prices) AS ps ON us.product_id = ps.product_id AND us.purchase_date BETWEEN ps.start_date AND ps.end_date GROUP BY ps.product_id; 相较于初始写法，本题做了三处修改： JOIN 改为 RIGHT JOIN：以 Prices 为右表，保留所有产品，即使没有销售记录也会出现在结果中 加上 IFNULL(..., 0)：RIGHT JOIN 后没有匹配的产品 average\\_price 为 NULL，用 IFNULL 补0 GROUP BY us.product\\_id 改为 GROUP BY ps.product\\_id：右表没匹配到的行 us.product\\_id 为 NULL，必须按 ps.product\\_id 分组才能正确输出所有产品 select内容一变化group by就必须变",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 199,
-    "endLine": 221
+    "startLine": 172,
+    "endLine": 194
   },
   {
     "id": "dx-sql-75",
@@ -65296,8 +65296,8 @@
     "content": "\\begin{homework}[1075 | 聚合函数 第3题]\n\\begin{example}\n查询每个项目员工的平均经验年数：\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSELECT p.project_id, ROUND(AVG(e.experience_years), 2) AS average_years\nFROM Project AS p\nLEFT JOIN Employee AS e ON p.employee_id = e.employee_id\nGROUP BY p.project_id;\n\\end{lstlisting}\n\n\\textbf{第一步：LEFT JOIN}，按 \\texttt{employee\\_id} 连接两表，每行变成\"项目id + 员工经验年数\"：\n\\[\n\\begin{array}{c|c}\n\\texttt{project\\_id} & \\texttt{experience\\_years} \\\\\n\\hline\n1 & 3 \\\\\n1 & 2 \\\\\n1 & 1 \\\\\n2 & 3 \\\\\n2 & 2 \\\\\n\\end{array}\n\\]\n\n\\textbf{第二步：GROUP BY project\\_id}，按项目分组：\n\\[\n\\text{project\\_id } 1 \\to [3,\\ 2,\\ 1], \\quad \\text{project\\_id } 2 \\to [3,\\ 2]\n\\]\n\n\\textbf{第三步：AVG}，对每组求平均：\n\\[\n\\text{project\\_id } 1 \\to \\frac{3+2+1}{3} = 2.00, \\quad \\text{project\\_id } 2 \\to \\frac{3+2}{2} = 2.50\n\\]\n\n\\textbf{第四步：ROUND}，保留两位小数输出。\n\\end{example}\n\\begin{dxtips}\n    group by和计算的可以不是一个\n\\end{dxtips}\n\\end{homework}",
     "text": "[1075 | 聚合函数 第3题] 查询每个项目员工的平均经验年数： [language=SQL, frame=single, backgroundcolor=white] SELECT p.project_id, ROUND(AVG(e.experience_years), 2) AS average_years FROM Project AS p LEFT JOIN Employee AS e ON p.employee_id = e.employee_id GROUP BY p.project_id; 第一步：LEFT JOIN，按 employee\\_id 连接两表，每行变成\"项目id + 员工经验年数\"： 第二步：GROUP BY project\\_id，按项目分组： 第三步：AVG，对每组求平均： 第四步：ROUND，保留两位小数输出。 group by和计算的可以不是一个",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 223,
-    "endLine": 261
+    "startLine": 196,
+    "endLine": 234
   },
   {
     "id": "dx-sql-76",
@@ -65316,8 +65316,8 @@
     "content": "\\begin{homework}[1633 | 聚合函数 第4题]\n\\begin{note}[主要是主键有问题]\n本题的三处易错点：\n第一，\\texttt{ROUND} 的位数参数写成 \\texttt{0} 而非 \\texttt{2}，导致结果无小数；\n第二，子查询统计总用户数时用了 \\texttt{COUNT(DISTINCT user\\_name)}，应为 \\texttt{COUNT(user\\_id)}，\\texttt{user\\_name} 不是主键，用错列会导致分母计算错误；\n第三，\\texttt{Register} 表的主键是 \\texttt{(contest\\_id, user\\_id)} 组合，本身不会重复，\\texttt{COUNT} 时无需加 \\texttt{DISTINCT}。\n\\end{note}\n\\begin{dxtips}\n    主键不能是null不能重复可以唯一识别\n\n\\end{dxtips}\n\\end{homework}",
     "text": "[1633 | 聚合函数 第4题] [主要是主键有问题] 本题的三处易错点： 第一，ROUND 的位数参数写成 0 而非 2，导致结果无小数； 第二，子查询统计总用户数时用了 COUNT(DISTINCT user\\_name)，应为 COUNT(user\\_id)，user\\_name 不是主键，用错列会导致分母计算错误； 第三，Register 表的主键是 (contest\\_id, user\\_id) 组合，本身不会重复，COUNT 时无需加 DISTINCT。 主键不能是null不能重复可以唯一识别",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 263,
-    "endLine": 274
+    "startLine": 236,
+    "endLine": 247
   },
   {
     "id": "dx-sql-77",
@@ -65336,8 +65336,8 @@
     "content": "\\begin{homework}[1211 | 聚合函数 第5题]\n\\begin{note}\nMySQL 中，条件表达式（比如 \\texttt{rating < 3}）直接放在数值计算里，会自动返回 \\texttt{1}（真）或 \\texttt{0}（假）。\n\n例如：\n\\begin{lstlisting}[language=SQL]\nSELECT rating < 3 FROM Queries;\n\\end{lstlisting}\n结果就是一列 0 和 1。\n\n所以 \\texttt{AVG(rating < 3)} 等价于：\n\\begin{lstlisting}[language=SQL]\nSUM(CASE WHEN rating < 3 THEN 1 ELSE 0 END) / COUNT(*)\n\\end{lstlisting}\n\n这是 MySQL 特有的行为，标准 SQL 和其他数据库（如 PostgreSQL、SQL Server）不支持，要用 \\texttt{CASE WHEN} 才行。力扣默认 MySQL 所以能用，但面试手写 SQL 最好还是写 \\texttt{CASE WHEN}，更通用。\n\\end{note}\n\\end{homework}",
     "text": "[1211 | 聚合函数 第5题] MySQL 中，条件表达式（比如 rating < 3）直接放在数值计算里，会自动返回 1（真）或 0（假）。 例如： [language=SQL] SELECT rating < 3 FROM Queries; 结果就是一列 0 和 1。 所以 AVG(rating < 3) 等价于： [language=SQL] SUM(CASE WHEN rating < 3 THEN 1 ELSE 0 END) / COUNT(*) 这是 MySQL 特有的行为，标准 SQL 和其他数据库（如 PostgreSQL、SQL Server）不支持，要用 CASE WHEN 才行。力扣默认 MySQL 所以能用，但面试手写 SQL 最好还是写 CASE WHEN，更通用。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 276,
-    "endLine": 293
+    "startLine": 249,
+    "endLine": 266
   },
   {
     "id": "dx-sql-78",
@@ -65356,8 +65356,8 @@
     "content": "\\begin{definition}[DATE\\_FORMAT 函数]\n\\texttt{DATE\\_FORMAT(date, format)} 将日期按指定格式转换为字符串，常用格式符如下：\n\\begin{itemize}\n    \\item \\texttt{\\%Y}：四位年份，如 \\texttt{2019}\n    \\item \\texttt{\\%m}：两位月份，如 \\texttt{01}\n    \\item \\texttt{\\%d}：两位日期，如 \\texttt{07}\n\\end{itemize}\n例如提取年月：\n\\begin{lstlisting}[language=SQL]\nSELECT DATE_FORMAT(trans_date, '%Y-%m') AS month FROM Transactions;\n\\end{lstlisting}\n结果将 \\texttt{2019-01-07} 转换为 \\texttt{2019-01}，常用于按月分组：\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nGROUP BY DATE_FORMAT(trans_date, '%Y-%m')\n\\end{lstlisting}\n\\end{definition}",
     "text": "[DATE\\_FORMAT 函数] DATE\\_FORMAT(date, format) 将日期按指定格式转换为字符串，常用格式符如下： \\%Y：四位年份，如 2019 \\%m：两位月份，如 01 \\%d：两位日期，如 07 例如提取年月： [language=SQL] SELECT DATE_FORMAT(trans_date, ' 结果将 2019-01-07 转换为 2019-01，常用于按月分组： [language=SQL, backgroundcolor=white, frame=single] GROUP BY DATE_FORMAT(trans_date, '",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 295,
-    "endLine": 310
+    "startLine": 268,
+    "endLine": 283
   },
   {
     "id": "dx-sql-79",
@@ -65376,8 +65376,8 @@
     "content": "\\begin{homework}[1193 | 聚合函数 第6题]\n\\begin{lstlisting}[language=SQL]\nSELECT DATE_FORMAT(trans_date, '%Y-%m') AS month,\n       country,\n       COUNT(state) AS trans_count,\n       SUM(amount) AS trans_total_amount,\n       SUM(state = 'approved') AS approved_count,\n       SUM(CASE WHEN state = 'approved' THEN amount ELSE 0 END) AS approved_total_amount\nFROM Transactions\nGROUP BY country, month;\n\\end{lstlisting}\n\\begin{dxtips}\n    sum(state='approved')自动能给state赋值布尔值是是1，不是赋0，然后就可以sum。然后case 后面要跟着when，then 后面也可以写变量名\n\\end{dxtips}\n\\begin{note}\n两者本质不同：\n\\begin{itemize}\n    \\item \\texttt{SUM(state='approved')}：利用 MySQL 把布尔表达式自动转成 0/1，只能用于\\textbf{计数}。\n    \\item \\texttt{SUM(CASE WHEN state='approved' THEN amount ELSE 0 END)}：\\texttt{THEN} 后面跟的是真实字段值 \\texttt{amount}，可以是任意数值，用于\\textbf{按条件求和}。\n\\end{itemize}\n所以不能混用——\\texttt{SUM(state='approved' * amount)} 这种写法是错的，布尔值和字段值是两回事，必须用 \\texttt{CASE WHEN} 才能在条件成立时取字段值。\n\\end{note}\n\\end{homework}",
     "text": "[1193 | 聚合函数 第6题] [language=SQL] SELECT DATE_FORMAT(trans_date, ' country, COUNT(state) AS trans_count, SUM(amount) AS trans_total_amount, SUM(state = 'approved') AS approved_count, SUM(CASE WHEN state = 'approved' THEN amount ELSE 0 END) AS approved_total_amount FROM Transactions GROUP BY country, month; sum(state='approved')自动能给state赋值布尔值是是1，不是赋0，然后就可以sum。然后case 后面要跟着when，then 后面也可以写变量名 两者本质不同： SUM(state='approved')：利用 MySQL 把布尔表达式自动转成 0/1，只能用于计数。 SUM(CASE WHEN state='approved' THEN amount ELSE 0 END)：THEN 后面跟的是真实字段值 amount，可以是任意数值，用于按条件求和。 所以不能混用——SUM(state='approved' * amount) 这种写法是错的，布尔值和字段值是两回事，必须用 CASE WHEN 才能在条件成立时取字段值。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 312,
-    "endLine": 334
+    "startLine": 285,
+    "endLine": 307
   },
   {
     "id": "dx-sql-80",
@@ -65396,8 +65396,8 @@
     "content": "\\begin{definition}[MIN / MAX 函数]\n\\texttt{MIN} 和 \\texttt{MAX} 是聚合函数，可作用于数值、字符串和日期类型。\n\\begin{itemize}\n    \\item \\texttt{MIN(col)}：返回该列的最小值，用于日期时返回最早日期\n    \\item \\texttt{MAX(col)}：返回该列的最大值，用于日期时返回最晚日期\n\\end{itemize}\nMySQL 中日期按 \\texttt{YYYY-MM-DD} 格式存储，从左到右依次比较年、月、日，因此 \\texttt{MIN}、\\texttt{MAX}、\\texttt{>}、\\texttt{<} 对日期均可直接使用。例如：\n\\begin{lstlisting}[language=SQL]\nSELECT customer_id, MIN(order_date) AS first_order_date\nFROM Delivery\nGROUP BY customer_id;\n\\end{lstlisting}\n返回每位顾客最早的下单日期，即首次订单日期。\n\\end{definition}",
     "text": "[MIN / MAX 函数] MIN 和 MAX 是聚合函数，可作用于数值、字符串和日期类型。 MIN(col)：返回该列的最小值，用于日期时返回最早日期 MAX(col)：返回该列的最大值，用于日期时返回最晚日期 MySQL 中日期按 YYYY-MM-DD 格式存储，从左到右依次比较年、月、日，因此 MIN、MAX、>、< 对日期均可直接使用。例如： [language=SQL] SELECT customer_id, MIN(order_date) AS first_order_date FROM Delivery GROUP BY customer_id; 返回每位顾客最早的下单日期，即首次订单日期。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 336,
-    "endLine": 349
+    "startLine": 309,
+    "endLine": 322
   },
   {
     "id": "dx-sql-81",
@@ -65416,8 +65416,8 @@
     "content": "\\begin{homework}[1174 | 聚合函数 第7题]\n\\begin{note}\n\\texttt{WHERE order\\_date IN (子查询)} 中子查询返回的是每个顾客的最早日期，但如果两个不同顾客恰好在同一天下了首次订单，\\texttt{IN} 会把两个人的那天所有订单都选进来，不只是首次订单那一行。更安全的写法是用 \\texttt{(customer\\_id, order\\_date)} 组合匹配：\n\\begin{lstlisting}[language=SQL]\nSELECT ROUND(AVG(order_date = customer_pref_delivery_date) * 100, 2)\n       AS immediate_percentage\nFROM Delivery\nWHERE (customer_id, order_date) IN (\n    SELECT customer_id, MIN(order_date)\n    FROM Delivery\n    GROUP BY customer_id\n);\n\\end{lstlisting}\n\\end{note}\n\n\\begin{lstlisting}[language=SQL]\nSELECT ROUND(AVG(order_date = customer_pref_delivery_date) * 100, 2)\n       AS immediate_percentage\nFROM Delivery\nWHERE (customer_id, order_date) IN (\n    SELECT customer_id, order_date\n    FROM Delivery\n    GROUP BY customer_id\n    HAVING order_date = MIN(order_date)\n);\n\\end{lstlisting}\n\\begin{dxtips}\n    having还是不熟练\n\\end{dxtips}\n\\end{homework}",
     "text": "[1174 | 聚合函数 第7题] WHERE order\\_date IN (子查询) 中子查询返回的是每个顾客的最早日期，但如果两个不同顾客恰好在同一天下了首次订单，IN 会把两个人的那天所有订单都选进来，不只是首次订单那一行。更安全的写法是用 (customer\\_id, order\\_date) 组合匹配： [language=SQL] SELECT ROUND(AVG(order_date = customer_pref_delivery_date) * 100, 2) AS immediate_percentage FROM Delivery WHERE (customer_id, order_date) IN ( SELECT customer_id, MIN(order_date) FROM Delivery GROUP BY customer_id ); [language=SQL] SELECT ROUND(AVG(order_date = customer_pref_delivery_date) * 100, 2) AS immediate_percentage FROM Delivery WHERE (customer_id, order_date) IN ( SELECT customer_id, order_date FROM Delivery GROUP BY customer_id HAVING order_date = MIN(order_date) ); having还是不熟练",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 351,
-    "endLine": 380
+    "startLine": 324,
+    "endLine": 353
   },
   {
     "id": "dx-sql-82",
@@ -65436,8 +65436,8 @@
     "content": "\\begin{definition}[DATE\\_ADD 与 INTERVAL]\n\\texttt{DATE\\_ADD(date, INTERVAL n unit)} 在日期上加上指定时间间隔，常用单位如下：\n\\begin{itemize}\n    \\item \\texttt{DAY}：天，如加一天\n    \\item \\texttt{MONTH}：月，如加一个月\n    \\item \\texttt{YEAR}：年，如加一年\n\\end{itemize}\n\n\\end{definition}",
     "text": "[DATE\\_ADD 与 INTERVAL] DATE\\_ADD(date, INTERVAL n unit) 在日期上加上指定时间间隔，常用单位如下： DAY：天，如加一天 MONTH：月，如加一个月 YEAR：年，如加一年",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 382,
-    "endLine": 390
+    "startLine": 355,
+    "endLine": 363
   },
   {
     "id": "dx-sql-83",
@@ -65456,8 +65456,8 @@
     "content": "\\begin{example}\n    例如在日期上加一天：\n\\begin{lstlisting}[language=SQL]\nSELECT DATE_ADD('2016-03-01', INTERVAL 1 DAY);\n-- 结果：2016-03-02\n\\end{lstlisting}\n也可以用减法：\n\\begin{lstlisting}[language=SQL]\nSELECT DATE_ADD('2016-03-01', INTERVAL -1 DAY);\n-- 结果：2016-02-29\n\\end{lstlisting}\n常用于判断某日期的前后一天是否存在记录：\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nWHERE event_date = DATE_ADD(first_login, INTERVAL 1 DAY)\n\\end{lstlisting}\n\\end{example}",
     "text": "例如在日期上加一天： [language=SQL] SELECT DATE_ADD('2016-03-01', INTERVAL 1 DAY); -- 结果：2016-03-02 也可以用减法： [language=SQL] SELECT DATE_ADD('2016-03-01', INTERVAL -1 DAY); -- 结果：2016-02-29 常用于判断某日期的前后一天是否存在记录： [language=SQL, backgroundcolor=white, frame=single] WHERE event_date = DATE_ADD(first_login, INTERVAL 1 DAY)",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 392,
-    "endLine": 407
+    "startLine": 365,
+    "endLine": 380
   },
   {
     "id": "dx-sql-84",
@@ -65476,8 +65476,8 @@
     "content": "\\begin{homework}[550 | 聚合函数 第8题]\n\\begin{dxtips}\n    \\begin{itemize}\n  \\item 函数名写错了，是 \\texttt{DATE\\_ADD} 不是 \\texttt{add\\_date}。\n  \\item \\texttt{DATE\\_ADD(firstdate, INTERVAL 1 DAY)} 里的 \\texttt{firstdate} 是刚起的别名，但 MySQL 不允许在同一层 \\texttt{SELECT} 里引用刚定义的别名，需要嵌套一层子查询。\n\\end{itemize}\n\\end{dxtips}\n\\begin{lstlisting}[language=SQL]\nSELECT ROUND(\n    COUNT(DISTINCT a1.player_id) / (SELECT COUNT(DISTINCT player_id) FROM Activity),\n    2\n) AS fraction\nFROM Activity AS a1\nJOIN (\n    SELECT player_id, MIN(event_date) AS firstdate\n    FROM Activity\n    GROUP BY player_id\n) AS t ON a1.player_id = t.player_id\nAND a1.event_date = DATE_ADD(t.firstdate, INTERVAL 1 DAY);\n\\end{lstlisting}\n\\begin{dxtips}\n今天的错误是太贪心，想少用子查询。首先应该想明白到底要连接几张表。是这样的，比如最后满足我们要求的只有一个元素，这个需要 \\texttt{COUNT} 没问题，但是一旦进行操作以后最开始的表一定变化了，所以一定需要一个最开始表的子查询，也就是 \\texttt{(SELECT COUNT(DISTINCT player\\_id) FROM Activity)}。除数是一个表，被除数是一个表，求除数再看需要几个表。一个表没法和自己的元素上下判断，所以需要自连接弄成横着的。然后筛选条件一定要写在一起 \\texttt{DATE\\_ADD(t.firstdate, INTERVAL 1 DAY)}，最后再筛选。\n\\end{dxtips}\n\\end{homework}",
     "text": "[550 | 聚合函数 第8题] 函数名写错了，是 DATE\\_ADD 不是 add\\_date。 DATE\\_ADD(firstdate, INTERVAL 1 DAY) 里的 firstdate 是刚起的别名，但 MySQL 不允许在同一层 SELECT 里引用刚定义的别名，需要嵌套一层子查询。 [language=SQL] SELECT ROUND( COUNT(DISTINCT a1.player_id) / (SELECT COUNT(DISTINCT player_id) FROM Activity), 2 ) AS fraction FROM Activity AS a1 JOIN ( SELECT player_id, MIN(event_date) AS firstdate FROM Activity GROUP BY player_id ) AS t ON a1.player_id = t.player_id AND a1.event_date = DATE_ADD(t.firstdate, INTERVAL 1 DAY); 今天的错误是太贪心，想少用子查询。首先应该想明白到底要连接几张表。是这样的，比如最后满足我们要求的只有一个元素，这个需要 COUNT 没问题，但是一旦进行操作以后最开始的表一定变化了，所以一定需要一个最开始表的子查询，也就是 (SELECT COUNT(DISTINCT player\\_id) FROM Activity)。除数是一个表，被除数是一个表，求除数再看需要几个表。一个表没法和自己的元素上下判断，所以需要自连接弄成横着的。然后筛选条件一定要写在一起 DATE\\_ADD(t.firstdate, INTERVAL 1 DAY)，最后再筛选。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 409,
-    "endLine": 432
+    "startLine": 382,
+    "endLine": 405
   },
   {
     "id": "dx-sql-85",
@@ -65496,8 +65496,8 @@
     "content": "\\begin{note}\n\\texttt{GROUP BY product\\_id} 之后每组变成一行，但 \\texttt{sale\\_date} 这一组里有多个值，MySQL 不知道该显示哪一个，所以不允许直接 \\texttt{SELECT}．\\texttt{GROUP BY} 之后 \\texttt{SELECT} 的列只能是 \\texttt{GROUP BY} 里出现的列或聚合函数（\\texttt{MIN}、\\texttt{MAX}、\\texttt{COUNT}、\\texttt{SUM}、\\texttt{AVG}）．\n\\begin{lstlisting}[language=SQL]\nSELECT product_id,\n       COUNT(*) AS 销售次数,\n       MIN(sale_date) AS 最早销售,\n       MAX(sale_date) AS 最晚销售\nFROM Sales\nGROUP BY product_id;\n\\end{lstlisting}\n\\end{note}",
     "text": "GROUP BY product\\_id 之后每组变成一行，但 sale\\_date 这一组里有多个值，MySQL 不知道该显示哪一个，所以不允许直接 SELECT．GROUP BY 之后 SELECT 的列只能是 GROUP BY 里出现的列或聚合函数（MIN、MAX、COUNT、SUM、AVG）． [language=SQL] SELECT product_id, COUNT(*) AS 销售次数, MIN(sale_date) AS 最早销售, MAX(sale_date) AS 最晚销售 FROM Sales GROUP BY product_id;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 434,
-    "endLine": 444
+    "startLine": 407,
+    "endLine": 417
   },
   {
     "id": "dx-sql-86",
@@ -65516,8 +65516,8 @@
     "content": "\\begin{note}\n\\texttt{WHERE} 后面不能带聚合函数，但 \\texttt{HAVING} 可以，因为执行顺序不同：\n\\[\n\\texttt{FROM} \\to \\texttt{WHERE} \\to \\texttt{GROUP BY} \\to \\texttt{HAVING} \\to \\texttt{SELECT}\n\\]\n\\texttt{WHERE} 在 \\texttt{GROUP BY} 之前执行，此时还没有分组，聚合函数根本没算出来，所以不能用．\\texttt{HAVING} 在 \\texttt{GROUP BY} 之后执行，聚合函数已经算好了，所以可以用．\n\\end{note}",
     "text": "WHERE 后面不能带聚合函数，但 HAVING 可以，因为执行顺序不同： WHERE 在 GROUP BY 之前执行，此时还没有分组，聚合函数根本没算出来，所以不能用．HAVING 在 GROUP BY 之后执行，聚合函数已经算好了，所以可以用．",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 446,
-    "endLine": 452
+    "startLine": 419,
+    "endLine": 425
   },
   {
     "id": "dx-sql-87",
@@ -65536,8 +65536,8 @@
     "content": "\\begin{homework}[619 | 排序和分组 第3题]\n\\begin{note}\n\\textbf{聚合函数的作用域是\"组内\"，不是\"全表\"}\n\n一旦有 \\lstinline[language=SQL]|GROUP BY|，所有聚合函数（\\lstinline[language=SQL]|MAX|、\\lstinline[language=SQL]|SUM|、\\lstinline[language=SQL]|COUNT| 等）只在\\textbf{当前组的行}上计算，不跨组。\n\n\\textbf{易错点：} \\lstinline[language=SQL]|GROUP BY num| 之后每组已折叠为一行，组内 \\lstinline[language=SQL]|num| 全部相同，此时 \\lstinline[language=SQL]|MAX(num)| 等于原值，毫无意义。\n\n\\textbf{正确做法：}内层分组过滤，外层跨组聚合。\n\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\n-- 错误：MAX 只在组内算，等于原值\nSELECT MAX(num)\nFROM MyNumbers\nGROUP BY num\nHAVING COUNT(*) < 2;\n\n-- 正确：子查询先得到候选值，外层再取最大\nSELECT MAX(num)\nFROM (\n    SELECT num\n    FROM MyNumbers\n    GROUP BY num\n    HAVING COUNT(*) < 2\n) t;\n\\end{lstlisting}\n\\end{note}\n\\end{homework}",
     "text": "[619 | 排序和分组 第3题] 聚合函数的作用域是\"组内\"，不是\"全表\" 一旦有 |GROUP BY|，所有聚合函数（ |MAX|、 |SUM|、 |COUNT| 等）只在当前组的行上计算，不跨组。 易错点： |GROUP BY num| 之后每组已折叠为一行，组内 |num| 全部相同，此时 |MAX(num)| 等于原值，毫无意义。 正确做法：内层分组过滤，外层跨组聚合。 [language=SQL, backgroundcolor=white, frame=single] -- 错误：MAX 只在组内算，等于原值 SELECT MAX(num) FROM MyNumbers GROUP BY num HAVING COUNT(*) < 2; -- 正确：子查询先得到候选值，外层再取最大 SELECT MAX(num) FROM ( SELECT num FROM MyNumbers GROUP BY num HAVING COUNT(*) < 2 ) t;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 454,
-    "endLine": 481
+    "startLine": 427,
+    "endLine": 454
   },
   {
     "id": "dx-sql-88",
@@ -65556,8 +65556,8 @@
     "content": "\\begin{note}\n\\lstinline[language=SQL]|CASE WHEN| 是 SQL 里的条件判断，相当于 if-else，可放在以下位置：\n\\begin{itemize}\n    \\item \\lstinline[language=SQL]|SELECT| 后面（最常用，生成新列）\n    \\item \\lstinline[language=SQL]|WHERE| 后面（条件筛选）\n    \\item \\lstinline[language=SQL]|ORDER BY| 后面（按条件排序）\n    \\item \\lstinline[language=SQL]|GROUP BY| 后面（按条件分组）\n\\end{itemize}\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nCASE\n    WHEN 条件1 THEN 结果1\n    WHEN 条件2 THEN 结果2\n    ELSE 默认结果\nEND\n\\end{lstlisting}\n\n\\end{note}",
     "text": "|CASE WHEN| 是 SQL 里的条件判断，相当于 if-else，可放在以下位置： |SELECT| 后面（最常用，生成新列） |WHERE| 后面（条件筛选） |ORDER BY| 后面（按条件排序） |GROUP BY| 后面（按条件分组） [language=SQL, backgroundcolor=white, frame=single] CASE WHEN 条件1 THEN 结果1 WHEN 条件2 THEN 结果2 ELSE 默认结果 END",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 484,
-    "endLine": 500
+    "startLine": 457,
+    "endLine": 473
   },
   {
     "id": "dx-sql-89",
@@ -65576,8 +65576,8 @@
     "content": "\\begin{homework}[610 | 高级查询和连接 第3题]\n\\begin{note}\n三角形判断条件等价于最大边小于另外两边之和：\n\\[\n\\text{GREATEST}(x,y,z) < x+y+z - \\text{GREATEST}(x,y,z)\n\\]\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nCASE\n    WHEN GREATEST(x, y, z) < x + y + z - GREATEST(x, y, z)\n    THEN 'Yes'\n    ELSE 'No'\nEND AS triangle\n\\end{lstlisting}\n\\end{note}\n\\begin{note}\n\\lstinline[language=SQL]|MAX|/\\lstinline[language=SQL]|MIN| 是聚合函数，作用于多行之间的比较（跨行），不能用于同一行内多列的比较。\\lstinline[language=SQL]|GREATEST|/\\lstinline[language=SQL]|LEAST| 是标量函数，作用于同一行内多个值之间的比较（跨列）。\n\\end{note}\n\\end{homework}",
     "text": "[610 | 高级查询和连接 第3题] 三角形判断条件等价于最大边小于另外两边之和： [language=SQL, backgroundcolor=white, frame=single] CASE WHEN GREATEST(x, y, z) < x + y + z - GREATEST(x, y, z) THEN 'Yes' ELSE 'No' END AS triangle |MAX|/ |MIN| 是聚合函数，作用于多行之间的比较（跨行），不能用于同一行内多列的比较。 |GREATEST|/ |LEAST| 是标量函数，作用于同一行内多个值之间的比较（跨列）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 502,
-    "endLine": 519
+    "startLine": 475,
+    "endLine": 492
   },
   {
     "id": "dx-sql-90",
@@ -65596,8 +65596,8 @@
     "content": "\\begin{definition}{窗口函数}{}\n窗口函数在保留原表所有行的基础上，对每一行计算其\"窗口\"（周围若干行）内的聚合或排序结果，不像 \\lstinline[language=SQL]|GROUP BY| 那样折叠行。基本语法为：\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\n函数名() OVER (\n    PARTITION BY 分组列   -- 可省略\n    ORDER BY 排序列\n)\n\\end{lstlisting}\n常用窗口函数：\n\\begin{itemize}\n    \\item \\lstinline[language=SQL]|LAG(col, n)|：当前行往上第 $n$ 行的值\n    \\item \\lstinline[language=SQL]|LEAD(col, n)|：当前行往下第 $n$ 行的值\n    \\item \\lstinline[language=SQL]|RANK()|：当前行的排名（并列跳号）\n    \\item \\lstinline[language=SQL]|ROW_NUMBER()|：当前行的行号（不跳号）\n\\end{itemize}\n\\end{definition}",
     "text": "窗口函数 窗口函数在保留原表所有行的基础上，对每一行计算其\"窗口\"（周围若干行）内的聚合或排序结果，不像 |GROUP BY| 那样折叠行。基本语法为： [language=SQL, backgroundcolor=white, frame=single] 函数名() OVER ( PARTITION BY 分组列 -- 可省略 ORDER BY 排序列 ) 常用窗口函数： |LAG(col, n)|：当前行往上第 行的值 |LEAD(col, n)|：当前行往下第 行的值 |RANK()|：当前行的排名（并列跳号） |ROW_NUMBER()|：当前行的行号（不跳号）",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 522,
-    "endLine": 537
+    "startLine": 495,
+    "endLine": 510
   },
   {
     "id": "dx-sql-91",
@@ -65616,8 +65616,8 @@
     "content": "\\begin{note}\n\\texttt{OVER (ORDER BY ...)} 中的排序仅作用于窗口函数的计算过程，相当于一张临时工作视图，不影响最终结果的行顺序。执行流程为：\n\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\n原表（无序）\n  -> OVER (ORDER BY score DESC)  -- 生成临时排序视图，供窗口函数计算\n  -> 窗口函数在临时视图上计算结果\n  -> 结果贴回原表行，按原表顺序输出\n\\end{lstlisting}\n\n\n\\end{note}",
     "text": "OVER (ORDER BY ...) 中的排序仅作用于窗口函数的计算过程，相当于一张临时工作视图，不影响最终结果的行顺序。执行流程为： [language=SQL, backgroundcolor=white, frame=single] 原表（无序） -> OVER (ORDER BY score DESC) -- 生成临时排序视图，供窗口函数计算 -> 窗口函数在临时视图上计算结果 -> 结果贴回原表行，按原表顺序输出",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 538,
-    "endLine": 549
+    "startLine": 511,
+    "endLine": 522
   },
   {
     "id": "dx-sql-92",
@@ -65636,8 +65636,8 @@
     "content": "\\begin{dxtips}\n    窗口函数是自连接的高级替代品，覆盖了自连接的常见用途，同时能表达自连接表达不了的\"相邻行\"语义，性能也更好。\n\\end{dxtips}",
     "text": "窗口函数是自连接的高级替代品，覆盖了自连接的常见用途，同时能表达自连接表达不了的\"相邻行\"语义，性能也更好。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 550,
-    "endLine": 552
+    "startLine": 523,
+    "endLine": 525
   },
   {
     "id": "dx-sql-93",
@@ -65656,8 +65656,8 @@
     "content": "\\begin{note}\n\\texttt{OVER (ORDER BY ...)} 后可跟多列，逗号分隔，规则与普通 \\lstinline[language=SQL]|ORDER BY| 相同。常用窗口函数语义如下：\n\n\\begin{itemize}\n    \\item \\lstinline[language=SQL]|RANK()|：按排序结果给排名，并列则同名次，下一名跳号\n    \\item \\lstinline[language=SQL]|ROW_NUMBER()|：按排序结果给行号，并列也强制不同，严格连续\n    \\item \\lstinline[language=SQL]|LAG(col, n)|：当前行在排序视图中，往上第 $n$ 行的 \\texttt{col} 值；第一行往上无数据则为 \\texttt{NULL}\n    \\item \\lstinline[language=SQL]|LEAD(col, n)|：当前行在排序视图中，往下第 $n$ 行的 \\texttt{col} 值；最后一行往下无数据则为 \\texttt{NULL}\n\\end{itemize}\n\\end{note}",
     "text": "OVER (ORDER BY ...) 后可跟多列，逗号分隔，规则与普通 |ORDER BY| 相同。常用窗口函数语义如下： |RANK()|：按排序结果给排名，并列则同名次，下一名跳号 |ROW_NUMBER()|：按排序结果给行号，并列也强制不同，严格连续 |LAG(col, n)|：当前行在排序视图中，往上第 行的 col 值；第一行往上无数据则为 NULL |LEAD(col, n)|：当前行在排序视图中，往下第 行的 col 值；最后一行往下无数据则为 NULL",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 553,
-    "endLine": 562
+    "startLine": 526,
+    "endLine": 535
   },
   {
     "id": "dx-sql-94",
@@ -65676,8 +65676,8 @@
     "content": "\\begin{dxtips}\n    where在select前面所以不能用select 新造的名字在where里面\n\\end{dxtips}",
     "text": "where在select前面所以不能用select 新造的名字在where里面",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 563,
-    "endLine": 565
+    "startLine": 536,
+    "endLine": 538
   },
   {
     "id": "dx-sql-95",
@@ -65696,8 +65696,8 @@
     "content": "\\begin{homework}[1164 | 高级查询和连接 第5题]\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nselect product_id,new_price from Products where( product_id,change_date) in(select product_id,max(change_date)as new\nfrom Products where change_date < '2019-08-16' group by product_id);\n--然后先把每一个查询需要提供什么想清楚把子查询就留在上面。然后复制来看有没有对齐什么的\nselect distinct p1.product_id,ifnull(p2.new_price,10)as price\nfrom Products p1 left join(\nselect product_id,new_price from Products where( product_id,change_date) in(select product_id,max(change_date)as new\nfrom Products where change_date <= '2019-08-16' group by product_id))as p2\non p1.product_id=p2.product_id\n\\end{lstlisting}\n\\begin{dxtips}\nIN 只匹配日期值，不匹配产品,所以如果两个都要匹配得弄成数组形式。把做好的子查询留在上面方便查看哪里有问题。\n\\end{dxtips}\n\\end{homework}",
     "text": "[1164 | 高级查询和连接 第5题] [language=SQL, backgroundcolor=white, frame=single] select product_id,new_price from Products where( product_id,change_date) in(select product_id,max(change_date)as new from Products where change_date < '2019-08-16' group by product_id); --然后先把每一个查询需要提供什么想清楚把子查询就留在上面。然后复制来看有没有对齐什么的 select distinct p1.product_id,ifnull(p2.new_price,10)as price from Products p1 left join( select product_id,new_price from Products where( product_id,change_date) in(select product_id,max(change_date)as new from Products where change_date <= '2019-08-16' group by product_id))as p2 on p1.product_id=p2.product_id IN 只匹配日期值，不匹配产品,所以如果两个都要匹配得弄成数组形式。把做好的子查询留在上面方便查看哪里有问题。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 567,
-    "endLine": 581
+    "startLine": 540,
+    "endLine": 554
   },
   {
     "id": "dx-sql-96",
@@ -65716,8 +65716,8 @@
     "content": "\\begin{note}\n普通聚合函数加上 \\lstinline[language=SQL]|OVER| 即变为窗口函数，不折叠行，每行保留并附上窗口内的聚合结果。\n\n\\begin{lstlisting}[language=SQL, backgroundcolor=\\color{white}, frame=single]\nSUM()   OVER ()\nAVG()   OVER ()\nMAX()   OVER ()\nMIN()   OVER ()\nCOUNT() OVER ()\n\\end{lstlisting}\n\n例如 \\lstinline[language=SQL]|SUM(weight) OVER (ORDER BY turn)| 表示按 \\lstinline[language=SQL]|turn| 顺序累计求和，每行得到的是\"到当前行为止所有人的体重总和\"。\n\\end{note}",
     "text": "普通聚合函数加上 |OVER| 即变为窗口函数，不折叠行，每行保留并附上窗口内的聚合结果。 [language=SQL, backgroundcolor=white, frame=single] SUM() OVER () AVG() OVER () MAX() OVER () MIN() OVER () COUNT() OVER () 例如 |SUM(weight) OVER (ORDER BY turn)| 表示按 |turn| 顺序累计求和，每行得到的是\"到当前行为止所有人的体重总和\"。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 583,
-    "endLine": 595
+    "startLine": 556,
+    "endLine": 568
   },
   {
     "id": "dx-sql-97",
@@ -65736,8 +65736,8 @@
     "content": "\\begin{definition}[帧子句 Frame Clause]\n帧子句用于在窗口函数中精确定义每一行计算时所参考的行范围，完整语法为：\n\\begin{lstlisting}[language=SQL]\n{ROWS | RANGE | GROUPS} BETWEEN <起点> AND <终点>\n\\end{lstlisting}\n其中起点与终点可取 \\texttt{UNBOUNDED PRECEDING}（分区首行）、\\texttt{N PRECEDING}（前$N$行）、\\texttt{CURRENT ROW}（当前行）、\\texttt{N FOLLOWING}（后$N$行）、\\texttt{UNBOUNDED FOLLOWING}（分区末行）。\n\\end{definition}",
     "text": "[帧子句 Frame Clause] 帧子句用于在窗口函数中精确定义每一行计算时所参考的行范围，完整语法为： [language=SQL] ROWS | RANGE | GROUPS BETWEEN <起点> AND <终点> 其中起点与终点可取 UNBOUNDED PRECEDING（分区首行）、N PRECEDING（前 行）、CURRENT ROW（当前行）、N FOLLOWING（后 行）、UNBOUNDED FOLLOWING（分区末行）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 597,
-    "endLine": 603
+    "startLine": 570,
+    "endLine": 576
   },
   {
     "id": "dx-sql-98",
@@ -65756,8 +65756,8 @@
     "content": "\\begin{homework}[1321 | 高级查询和连接 第11题]\n\\begin{example}\n\\texttt{ROWS}：按物理行数计，计算当前行及其前6行共7行的消费总额。\n\\begin{lstlisting}[language=SQL]\nSUM(amount) OVER (\n    ORDER BY visited_on\n    ROWS BETWEEN 6 PRECEDING AND CURRENT ROW\n)\n\\end{lstlisting}\n\\end{example}\n\n\\begin{example}\n\\texttt{RANGE}：按值范围计，将所有与当前行 \\texttt{visited\\_on} 相同的行视为同一帧，计算当天及前6天的消费总额。\n\\begin{lstlisting}[language=SQL]\nSUM(amount) OVER (\n    ORDER BY visited_on\n    RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW\n)\n\\end{lstlisting}\n\\end{example}\n\n\\begin{example}\n\\texttt{GROUPS}：按组数计，将 \\texttt{ORDER BY} 值相同的行视为一组，计算当前组及前2组的消费总额。\n\\begin{lstlisting}[language=SQL]\nSUM(amount) OVER (\n    ORDER BY visited_on\n    GROUPS BETWEEN 2 PRECEDING AND CURRENT ROW\n)\n\\end{lstlisting}\n\\end{example}\n\\end{homework}",
     "text": "[1321 | 高级查询和连接 第11题] ROWS：按物理行数计，计算当前行及其前6行共7行的消费总额。 [language=SQL] SUM(amount) OVER ( ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW ) RANGE：按值范围计，将所有与当前行 visited\\_on 相同的行视为同一帧，计算当天及前6天的消费总额。 [language=SQL] SUM(amount) OVER ( ORDER BY visited_on RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW ) GROUPS：按组数计，将 ORDER BY 值相同的行视为一组，计算当前组及前2组的消费总额。 [language=SQL] SUM(amount) OVER ( ORDER BY visited_on GROUPS BETWEEN 2 PRECEDING AND CURRENT ROW )",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 605,
-    "endLine": 635
+    "startLine": 578,
+    "endLine": 608
   },
   {
     "id": "dx-sql-99",
@@ -65776,8 +65776,8 @@
     "content": "\\begin{homework}[626 | 高级查询和连接 第9题]\n\\begin{solution}\n按新 $id$ 升序返回每两个连续学生的交换结果。\n\n\\begin{lstlisting}[language=SQL]\nSELECT\n    CASE\n        WHEN id % 2 = 1 AND id = (SELECT MAX(id) FROM Seat) THEN id\n        WHEN id % 2 = 1 THEN id + 1\n        ELSE id - 1\n    END AS id,\n    student\nFROM Seat\nORDER BY id;\n\\end{lstlisting}\n\n\\begin{note}\n\\texttt{CASE WHEN} 按分支顺序逐一判断，匹配即停止，因此第一个条件必须是最特殊的情形。本题中须先排除\"最后一个奇数行\"这一特例，再处理一般奇数行；若将两个条件对调，最后一行会错误地执行 $id+1$，导致结果越界。\n\\end{note}\n\\end{solution}\n\\begin{dxtips}\n    这个题的关键就是通过调整id来调整名单\n\\end{dxtips}\n\\end{homework}",
     "text": "[626 | 高级查询和连接 第9题] 按新 升序返回每两个连续学生的交换结果。 [language=SQL] SELECT CASE WHEN id WHEN id ELSE id - 1 END AS id, student FROM Seat ORDER BY id; CASE WHEN 按分支顺序逐一判断，匹配即停止，因此第一个条件必须是最特殊的情形。本题中须先排除\"最后一个奇数行\"这一特例，再处理一般奇数行；若将两个条件对调，最后一行会错误地执行 ，导致结果越界。 这个题的关键就是通过调整id来调整名单",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 637,
-    "endLine": 660
+    "startLine": 610,
+    "endLine": 633
   },
   {
     "id": "dx-sql-100",
@@ -65796,8 +65796,8 @@
     "content": "\\begin{definition}[PARTITION BY]\n\\texttt{PARTITION BY} 是窗口函数中的分组子句，语法为：\n\\begin{lstlisting}[language=SQL]\n函数名() OVER (PARTITION BY col1, col2, ... ORDER BY col3)\n\\end{lstlisting}\n与 \\texttt{GROUP BY} 的区别在于：\\texttt{GROUP BY} 将多行压缩为一行，而 \\texttt{PARTITION BY} 在保留所有行的前提下，将数据划分为若干分组，窗口函数在每个分组内部独立计算。不指定 \\texttt{PARTITION BY} 时，窗口函数的计算范围为整张表。\n\\end{definition}",
     "text": "[PARTITION BY] PARTITION BY 是窗口函数中的分组子句，语法为： [language=SQL] 函数名() OVER (PARTITION BY col1, col2, ... ORDER BY col3) 与 GROUP BY 的区别在于：GROUP BY 将多行压缩为一行，而 PARTITION BY 在保留所有行的前提下，将数据划分为若干分组，窗口函数在每个分组内部独立计算。不指定 PARTITION BY 时，窗口函数的计算范围为整张表。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 662,
-    "endLine": 668
+    "startLine": 635,
+    "endLine": 641
   },
   {
     "id": "dx-sql-101",
@@ -65816,8 +65816,8 @@
     "content": "\\begin{definition}[DENSE\\_RANK()]\n\\texttt{DENSE\\_RANK()} 是窗口函数，用于在分组内对行进行排名，语法为：\n\\begin{lstlisting}[language=SQL]\nDENSE_RANK() OVER (PARTITION BY col1 ORDER BY col2 DESC)\n\\end{lstlisting}\n与 \\texttt{RANK()} 的区别在于：并列时不跳过后续排名。例如两行并列第2，\\texttt{RANK()} 下一名为第4，\\texttt{DENSE\\_RANK()} 下一名为第3。\n\\end{definition}",
     "text": "[DENSE\\_RANK()] DENSE\\_RANK() 是窗口函数，用于在分组内对行进行排名，语法为： [language=SQL] DENSE_RANK() OVER (PARTITION BY col1 ORDER BY col2 DESC) 与 RANK() 的区别在于：并列时不跳过后续排名。例如两行并列第2，RANK() 下一名为第4，DENSE\\_RANK() 下一名为第3。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 669,
-    "endLine": 675
+    "startLine": 642,
+    "endLine": 648
   },
   {
     "id": "dx-sql-102",
@@ -65836,8 +65836,8 @@
     "content": "\\begin{definition}[\\texttt{UNION ALL}]\n将多个 \\texttt{SELECT} 语句的结果集纵向拼接，要求各子查询的列数与对应列的数据类型一致。\n\\begin{lstlisting}[language=SQL]\nSELECT col1, col2 FROM table1\nUNION ALL\nSELECT col1, col2 FROM table2;\n\\end{lstlisting}\n\\texttt{UNION ALL} 保留所有行（含重复）；\\texttt{UNION} 额外执行去重，性能较差。列名以第一个 \\texttt{SELECT} 为准。\n\\end{definition}",
     "text": "[UNION ALL] 将多个 SELECT 语句的结果集纵向拼接，要求各子查询的列数与对应列的数据类型一致。 [language=SQL] SELECT col1, col2 FROM table1 UNION ALL SELECT col1, col2 FROM table2; UNION ALL 保留所有行（含重复）；UNION 额外执行去重，性能较差。列名以第一个 SELECT 为准。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 678,
-    "endLine": 686
+    "startLine": 651,
+    "endLine": 659
   },
   {
     "id": "dx-sql-103",
@@ -65856,8 +65856,8 @@
     "content": "\\begin{homework}[1907 | 高级查询和连接 第7题]\n\\begin{definition}[\\texttt{LEFT JOIN} 强制保留分类]\n当 \\texttt{GROUP BY} 无法保证所有分类出现时，先用 \\texttt{UNION ALL} 构造枚举模板表作为左表，再 \\texttt{LEFT JOIN} 实际统计结果，缺失分类得到 \\texttt{NULL}，用 \\texttt{COALESCE} 转为 0。\n\\begin{lstlisting}[language=SQL]\nSELECT category, COALESCE(accounts_count, 0) AS accounts_count\nFROM (\n    SELECT 'Low Salary'     AS category UNION ALL\n    SELECT 'Average Salary' AS category UNION ALL\n    SELECT 'High Salary'    AS category\n) AS categories\nLEFT JOIN (\n    SELECT\n        CASE\n            WHEN income < 20000                 THEN 'Low Salary'\n            WHEN income BETWEEN 20000 AND 50000 THEN 'Average Salary'\n            ELSE                                     'High Salary'\n        END AS category,\n        COUNT(*) AS accounts_count\n    FROM Accounts\n    GROUP BY category\n) AS counts USING (category);\n\\end{lstlisting}\n\\end{definition}\n\\end{homework}",
     "text": "[1907 | 高级查询和连接 第7题] [LEFT JOIN 强制保留分类] 当 GROUP BY 无法保证所有分类出现时，先用 UNION ALL 构造枚举模板表作为左表，再 LEFT JOIN 实际统计结果，缺失分类得到 NULL，用 COALESCE 转为 0。 [language=SQL] SELECT category, COALESCE(accounts_count, 0) AS accounts_count FROM ( SELECT 'Low Salary' AS category UNION ALL SELECT 'Average Salary' AS category UNION ALL SELECT 'High Salary' AS category ) AS categories LEFT JOIN ( SELECT CASE WHEN income < 20000 THEN 'Low Salary' WHEN income BETWEEN 20000 AND 50000 THEN 'Average Salary' ELSE 'High Salary' END AS category, COUNT(*) AS accounts_count FROM Accounts GROUP BY category ) AS counts USING (category);",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 690,
-    "endLine": 713
+    "startLine": 663,
+    "endLine": 686
   },
   {
     "id": "dx-sql-104",
@@ -65876,8 +65876,8 @@
     "content": "\\begin{dxtips}\n\\begin{itemize}\n    \\item \\texttt{JOIN}：横着拼，增加列\n    \\item \\texttt{UNION ALL}：竖着拼，增加行\n\\end{itemize}\n\\end{dxtips}",
     "text": "JOIN：横着拼，增加列 UNION ALL：竖着拼，增加行",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 727,
-    "endLine": 732
+    "startLine": 700,
+    "endLine": 705
   },
   {
     "id": "dx-sql-105",
@@ -65896,8 +65896,8 @@
     "content": "\\begin{homework}[602 | 高级查询和连接 第12题]\n    \\begin{note}\n\\texttt{UNION ALL} 的好处是可以通过 \\texttt{SELECT} 的时候重新赋予名字（列名），两个子查询如果赋予相同的名字，两个表的数据就能上下排列，方便计算。\n\n\\begin{lstlisting}[language=SQL]\nSELECT id, SUM(cnt) AS num\nFROM (\n    SELECT requester_id AS id, COUNT(accepter_id) AS cnt\n    FROM RequestAccepted GROUP BY requester_id\n    UNION ALL\n    SELECT accepter_id AS id, COUNT(requester_id) AS cnt\n    FROM RequestAccepted GROUP BY accepter_id\n) AS t\nGROUP BY id\nORDER BY num DESC\nLIMIT 1\n\\end{lstlisting}\n\\end{note}\n\\end{homework}",
     "text": "[602 | 高级查询和连接 第12题] UNION ALL 的好处是可以通过 SELECT 的时候重新赋予名字（列名），两个子查询如果赋予相同的名字，两个表的数据就能上下排列，方便计算。 [language=SQL] SELECT id, SUM(cnt) AS num FROM ( SELECT requester_id AS id, COUNT(accepter_id) AS cnt FROM RequestAccepted GROUP BY requester_id UNION ALL SELECT accepter_id AS id, COUNT(requester_id) AS cnt FROM RequestAccepted GROUP BY accepter_id ) AS t GROUP BY id ORDER BY num DESC LIMIT 1",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 734,
-    "endLine": 752
+    "startLine": 707,
+    "endLine": 725
   },
   {
     "id": "dx-sql-106",
@@ -65916,8 +65916,8 @@
     "content": "子查询就是创造一个池子以前要写a在1，2，3里面选但是用另一个表表里就是1，2，3。就用select from这个表直接返回1，2，3。\n当然作为比较条件也可以是大余小余找第二大的去掉最大的就行。",
     "text": "子查询就是创造一个池子以前要写a在1，2，3里面选但是用另一个表表里就是1，2，3。就用select from这个表直接返回1，2，3。 当然作为比较条件也可以是大余小余找第二大的去掉最大的就行。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 755,
-    "endLine": 756
+    "startLine": 728,
+    "endLine": 729
   },
   {
     "id": "dx-sql-107",
@@ -65936,8 +65936,8 @@
     "content": "\\begin{homework}[176 | 高级字符串函数 第4题]\n\\begin{lstlisting}[language=SQL]\nSELECT MAX(Salary) AS SecondHighestSalary\nFROM Employee\nWHERE Salary < (SELECT MAX(Salary) FROM Employee);\n\\end{lstlisting}\n\\end{homework}",
     "text": "[176 | 高级字符串函数 第4题] [language=SQL] SELECT MAX(Salary) AS SecondHighestSalary FROM Employee WHERE Salary < (SELECT MAX(Salary) FROM Employee);",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 758,
-    "endLine": 764
+    "startLine": 731,
+    "endLine": 737
   },
   {
     "id": "dx-sql-108",
@@ -65956,8 +65956,8 @@
     "content": "\\begin{definition}[SQL 自定义函数]\n自定义函数（User-Defined Function）是用户在数据库中创建的可复用逻辑单元，语法为：\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nCREATE FUNCTION 函数名(参数名 参数类型, ...) RETURNS 返回类型\nBEGIN\n    -- 函数体\n    RETURN 返回值;\nEND\n\\end{lstlisting}\n\n与存储过程的区别在于：函数必须有返回值，且可以直接嵌套在 \\texttt{SELECT} 语句中使用。\n\\end{definition}",
     "text": "[SQL 自定义函数] 自定义函数（User-Defined Function）是用户在数据库中创建的可复用逻辑单元，语法为： [language=SQL, frame=single, backgroundcolor=white] CREATE FUNCTION 函数名(参数名 参数类型, ...) RETURNS 返回类型 BEGIN -- 函数体 RETURN 返回值; END 与存储过程的区别在于：函数必须有返回值，且可以直接嵌套在 SELECT 语句中使用。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 766,
-    "endLine": 778
+    "startLine": 739,
+    "endLine": 751
   },
   {
     "id": "dx-sql-109",
@@ -65976,8 +65976,8 @@
     "content": "\\begin{definition}[SQL 循环]\n循环只能写在存储过程或自定义函数内部，MySQL 提供三种循环结构：\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\n-- 1. LOOP：手动控制退出\nloop1: LOOP\n    IF 条件 THEN LEAVE loop1; END IF;\nEND LOOP;\n\n-- 2. WHILE：先判断条件再执行\nWHILE 条件 DO\n    -- 执行内容\nEND WHILE;\n\n-- 3. REPEAT：先执行再判断，至少执行一次\nREPEAT\n    -- 执行内容\nUNTIL 条件 END REPEAT;\n\\end{lstlisting}\n\n\\end{definition}",
     "text": "[SQL 循环] 循环只能写在存储过程或自定义函数内部，MySQL 提供三种循环结构： [language=SQL, frame=single, backgroundcolor=white] -- 1. LOOP：手动控制退出 loop1: LOOP IF 条件 THEN LEAVE loop1; END IF; END LOOP; -- 2. WHILE：先判断条件再执行 WHILE 条件 DO -- 执行内容 END WHILE; -- 3. REPEAT：先执行再判断，至少执行一次 REPEAT -- 执行内容 UNTIL 条件 END REPEAT;",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 780,
-    "endLine": 800
+    "startLine": 753,
+    "endLine": 773
   },
   {
     "id": "dx-sql-110",
@@ -65996,8 +65996,8 @@
     "content": "\\begin{homework}[177 | 进阶SQL（非SQL50）]\n\\begin{example}*[177第n高薪水]\n    \\begin{lstlisting}[language=SQL]\nCREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT\nBEGIN\n    SET N = N - 1;\n    RETURN (\n        SELECT DISTINCT Salary\n        FROM Employee\n        ORDER BY Salary DESC\n        LIMIT 1 OFFSET N\n    );\nEND\n\\end{lstlisting}\n\\end{example}\n\\end{homework}",
     "text": "[177 | 进阶SQL（非SQL50）] *[177第n高薪水] [language=SQL] CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN SET N = N - 1; RETURN ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET N ); END",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 802,
-    "endLine": 817
+    "startLine": 775,
+    "endLine": 790
   },
   {
     "id": "dx-sql-111",
@@ -66016,8 +66016,8 @@
     "content": "\\begin{homework}[585 | 高级查询和连接 第13题]\n\\begin{lstlisting}[language=SQL]\nSELECT ROUND(SUM(tiv_2016), 2) AS tiv_2016\nFROM Insurance\nWHERE tiv_2015 IN (\n    SELECT tiv_2015\n    FROM Insurance\n    GROUP BY tiv_2015\n    HAVING COUNT(*) > 1)\nAND (lat, lon) IN (\n    SELECT lat, lon\n    FROM Insurance\n    GROUP BY lat, lon\n    HAVING COUNT(*) < 2)\n\\end{lstlisting}\n\\begin{dxtips}\n   只要不是特别简单的筛选，有一个筛选用一个子查询。需要对多列组合 \\texttt{GROUP BY} 时直接 \\texttt{GROUP BY a, b}；但用 \\texttt{WHERE} 筛选多列组合时需要 \\texttt{(a, b) IN (SELECT a, b ...)}。\n\\end{dxtips}\n\\end{homework}",
     "text": "[585 | 高级查询和连接 第13题] [language=SQL] SELECT ROUND(SUM(tiv_2016), 2) AS tiv_2016 FROM Insurance WHERE tiv_2015 IN ( SELECT tiv_2015 FROM Insurance GROUP BY tiv_2015 HAVING COUNT(*) > 1) AND (lat, lon) IN ( SELECT lat, lon FROM Insurance GROUP BY lat, lon HAVING COUNT(*) < 2) 只要不是特别简单的筛选，有一个筛选用一个子查询。需要对多列组合 GROUP BY 时直接 GROUP BY a, b；但用 WHERE 筛选多列组合时需要 (a, b) IN (SELECT a, b ...)。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 819,
-    "endLine": 837
+    "startLine": 792,
+    "endLine": 810
   },
   {
     "id": "dx-sql-112",
@@ -66036,8 +66036,8 @@
     "content": "\\begin{definition}[CONCAT 函数]\n\\texttt{CONCAT(str1, str2, ...)} 将多个字符串首尾连接，返回拼接结果。\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nCONCAT('Hello', ' ', 'World')  -- 结果: 'Hello World'\n\\end{lstlisting}\n\\end{definition}",
     "text": "[CONCAT 函数] CONCAT(str1, str2, ...) 将多个字符串首尾连接，返回拼接结果。 [language=SQL, frame=single, backgroundcolor=white] CONCAT('Hello', ' ', 'World') -- 结果: 'Hello World'",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 840,
-    "endLine": 846
+    "startLine": 813,
+    "endLine": 819
   },
   {
     "id": "dx-sql-113",
@@ -66056,8 +66056,8 @@
     "content": "\\begin{definition}[LEFT 函数]\n\\texttt{LEFT(str, n)} 从字符串左边起取 $n$ 个字符。\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nLEFT('aLiCe', 1)  -- 结果: 'a'\n\\end{lstlisting}\n\\end{definition}",
     "text": "[LEFT 函数] LEFT(str, n) 从字符串左边起取 个字符。 [language=SQL, frame=single, backgroundcolor=white] LEFT('aLiCe', 1) -- 结果: 'a'",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 848,
-    "endLine": 854
+    "startLine": 821,
+    "endLine": 827
   },
   {
     "id": "dx-sql-114",
@@ -66076,8 +66076,8 @@
     "content": "\\begin{definition}[SUBSTRING 函数]\n\\texttt{SUBSTRING(str, pos)} 从第 $pos$ 个字符开始取到末尾（MySQL 下标从 1 开始）。也可写作 \\texttt{SUBSTRING(str, pos, len)}，此时只取 $len$ 个字符。\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nSUBSTRING('aLiCe', 2)     -- 结果: 'LiCe'\nSUBSTRING('aLiCe', 2, 3)  -- 结果: 'LiC'\n\\end{lstlisting}\n\\end{definition}",
     "text": "[SUBSTRING 函数] SUBSTRING(str, pos) 从第 个字符开始取到末尾（MySQL 下标从 1 开始）。也可写作 SUBSTRING(str, pos, len)，此时只取 个字符。 [language=SQL, frame=single, backgroundcolor=white] SUBSTRING('aLiCe', 2) -- 结果: 'LiCe' SUBSTRING('aLiCe', 2, 3) -- 结果: 'LiC'",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 856,
-    "endLine": 863
+    "startLine": 829,
+    "endLine": 836
   },
   {
     "id": "dx-sql-115",
@@ -66096,8 +66096,8 @@
     "content": "\\begin{definition}[UPPER / LOWER 函数]\n\\texttt{UPPER(str)} 将字符串所有字母转为大写；\\texttt{LOWER(str)} 将所有字母转为小写。\n\n\\begin{lstlisting}[language=SQL, frame=single, backgroundcolor=\\color{white}]\nUPPER('aLiCe')  -- 结果: 'ALICE'\nLOWER('aLiCe')  -- 结果: 'alice'\n\\end{lstlisting}\n\\end{definition}",
     "text": "[UPPER / LOWER 函数] UPPER(str) 将字符串所有字母转为大写；LOWER(str) 将所有字母转为小写。 [language=SQL, frame=single, backgroundcolor=white] UPPER('aLiCe') -- 结果: 'ALICE' LOWER('aLiCe') -- 结果: 'alice'",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 865,
-    "endLine": 872
+    "startLine": 838,
+    "endLine": 845
   },
   {
     "id": "dx-sql-116",
@@ -66116,8 +66116,8 @@
     "content": "\\begin{homework}[1667 | 高级字符串函数 第1题]\n\\begin{dxtips}\n    我理解一下这种其实就是如果需要对字符串操作需要先确定范围然后拆分操作完了再拼接回去ledt负责顺序\n    substring负责确定范围，upper Lower负责操作concat负责拼回去\n\\end{dxtips}\n\n\\begin{dxtips}\n    括号多的我们能一行只能一对括号\n\\end{dxtips}\n\\end{homework}",
     "text": "[1667 | 高级字符串函数 第1题] 我理解一下这种其实就是如果需要对字符串操作需要先确定范围然后拆分操作完了再拼接回去ledt负责顺序 substring负责确定范围，upper Lower负责操作concat负责拼回去 括号多的我们能一行只能一对括号",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 874,
-    "endLine": 883
+    "startLine": 847,
+    "endLine": 856
   },
   {
     "id": "dx-sql-117",
@@ -66136,8 +66136,8 @@
     "content": "\\begin{homework}[1527 | 高级字符串函数 第2题]\n\\begin{lstlisting}[language=SQL]\nSELECT patient_id, patient_name, conditions\nFROM Patients\nWHERE conditions LIKE 'DIAB1%'\n   OR conditions LIKE '% DIAB1%';\n\\end{lstlisting}\n\\begin{dxtips}\n   LIKE 后面字符串要加 \\texttt{''}，然后它是标准的检查。\n\n那个发音像的是 \\texttt{SOUNDS LIKE}。\n\n还有开头有 \\texttt{DIAB1} 就是后面 \\texttt{\\%}，如果结尾的话前面需要有空格。\n\\end{dxtips}\n\\end{homework}",
     "text": "[1527 | 高级字符串函数 第2题] [language=SQL] SELECT patient_id, patient_name, conditions FROM Patients WHERE conditions LIKE 'DIAB1 OR conditions LIKE ' LIKE 后面字符串要加 ''，然后它是标准的检查。 那个发音像的是 SOUNDS LIKE。 还有开头有 DIAB1 就是后面 \\%，如果结尾的话前面需要有空格。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 885,
-    "endLine": 899
+    "startLine": 858,
+    "endLine": 872
   },
   {
     "id": "dx-sql-118",
@@ -66156,8 +66156,8 @@
     "content": "\\begin{homework}[196 | 高级字符串函数 第3题]\n\\begin{dxtips}\n    delete就是先select 出要的然后加一个否定的结构\n\\end{dxtips}\n\\begin{note}\n\\begin{lstlisting}[language=SQL]\nDELETE p1\nFROM Person p1, Person p2\nWHERE p1.Email = p2.Email\n  AND p1.Id > p2.Id;\n\\end{lstlisting}\n\n这里的 \\texttt{p1} 不是具体表名，而是 \\texttt{Person} 的别名；\n\\texttt{FROM Person p1, Person p2} 表示把同一张表拿出来看两次：\n\\texttt{Person as p1} 和 \\texttt{Person as p2}。\n\n所以 \\texttt{DELETE p1} 不是删除一个叫 \\texttt{p1} 的表，而是删除\n\\texttt{Person} 表里那些在 \\texttt{p1} 视角下满足条件的行。\n\n可以理解成：\\texttt{p1} 是候选被删除的人，\\texttt{p2} 是用来比较的人。\n\n当满足 \\texttt{p1.Email = p2.Email} 且 \\texttt{p1.Id > p2.Id} 时，\n说明 \\texttt{p1} 这一行邮箱重复，而且 \\texttt{Id} 更大，所以删除 \\texttt{p1}；\n\\texttt{p2} 只是参照物，不删除。\n\\end{note}\n\\begin{dxtips}\n    delete后面只用跟着抽象的表用于确定从那个表删除即可不用具体的列\n\\end{dxtips}\n\\begin{lstlisting}[language=SQL]\nDELETE FROM Person\nWHERE Id NOT IN (\n    SELECT Id\n    FROM (\n        SELECT MIN(Id) AS Id\n        FROM Person\n        GROUP BY Email\n    ) AS t\n);\n\\end{lstlisting}\n\\begin{note}\n\\begin{lstlisting}[language=SQL]\nSELECT Id FROM (...) AS t\n\\end{lstlisting}\n\n相当于先把\"要保留的 \\texttt{Id} 集合\"变成一个临时结果 \\texttt{t}，再让外层 \\texttt{DELETE} 使用它。\n\n简单记：MySQL 里 \\texttt{DELETE} 同一张表时，子查询读自己，通常要再套一层临时表。\n\\end{note}\n\\end{homework}",
     "text": "[196 | 高级字符串函数 第3题] delete就是先select 出要的然后加一个否定的结构 [language=SQL] DELETE p1 FROM Person p1, Person p2 WHERE p1.Email = p2.Email AND p1.Id > p2.Id; 这里的 p1 不是具体表名，而是 Person 的别名； FROM Person p1, Person p2 表示把同一张表拿出来看两次： Person as p1 和 Person as p2。 所以 DELETE p1 不是删除一个叫 p1 的表，而是删除 Person 表里那些在 p1 视角下满足条件的行。 可以理解成：p1 是候选被删除的人，p2 是用来比较的人。 当满足 p1.Email = p2.Email 且 p1.Id > p2.Id 时， 说明 p1 这一行邮箱重复，而且 Id 更大，所以删除 p1； p2 只是参照物，不删除。 delete后面只用跟着抽象的表用于确定从那个表删除即可不用具体的列 [language=SQL] DELETE FROM Person WHERE Id NOT IN ( SELECT Id FROM ( SELECT MIN(Id) AS Id FROM Person GROUP BY Email ) AS t ); [language=SQL] SELECT Id FROM (...) AS t 相当于先把\"要保留的 Id 集合\"变成一个临时结果 t，再让外层 DELETE 使用它。 简单记：MySQL 里 DELETE 同一张表时，子查询读自己，通常要再套一层临时表。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 901,
-    "endLine": 949
+    "startLine": 874,
+    "endLine": 922
   },
   {
     "id": "dx-sql-119",
@@ -66176,8 +66176,8 @@
     "content": "\\begin{homework}[1484 | 高级字符串函数 第5题]\n\\begin{definition}[GROUP\\_CONCAT]\nGROUP\\_CONCAT 是 MySQL 中的字符串聚合函数，用来把同一组中的多行字符串合并成一个字符串。\n\n\\begin{lstlisting}[language=SQL]\nGROUP_CONCAT(DISTINCT product ORDER BY product SEPARATOR ',')\n\\end{lstlisting}\n\n其中：\n\n\\begin{itemize}\n  \\item DISTINCT product：先对 product 去重；\n  \\item ORDER BY product：在拼接之前，按照 product 的字典序排序；\n  \\item SEPARATOR：表示\"分隔符\"，用来指定拼接时每个字符串之间用什么连接；\n  \\item SEPARATOR ','：表示用逗号连接不同的 product。\n\\end{itemize}\n\n所以这句话的意思是：把同一组里的 product 去重后，按字典序排列，再用逗号拼成一个字符串。\n\\end{definition}\n\\begin{dxtips}\n    group_concat就是能把groupby分组以后组里面的字符串起来，如何第一个product的说明连接什么第二个order是按照什么顺序连接，seprator就是用什么分割\n\\end{dxtips}\n\\end{homework}",
     "text": "[1484 | 高级字符串函数 第5题] [GROUP\\_CONCAT] GROUP\\_CONCAT 是 MySQL 中的字符串聚合函数，用来把同一组中的多行字符串合并成一个字符串。 [language=SQL] GROUP_CONCAT(DISTINCT product ORDER BY product SEPARATOR ',') 其中： DISTINCT product：先对 product 去重； ORDER BY product：在拼接之前，按照 product 的字典序排序； SEPARATOR：表示\"分隔符\"，用来指定拼接时每个字符串之间用什么连接； SEPARATOR ','：表示用逗号连接不同的 product。 所以这句话的意思是：把同一组里的 product 去重后，按字典序排列，再用逗号拼成一个字符串。 group_concat就是能把groupby分组以后组里面的字符串起来，如何第一个product的说明连接什么第二个order是按照什么顺序连接，seprator就是用什么分割",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 951,
-    "endLine": 973
+    "startLine": 924,
+    "endLine": 946
   },
   {
     "id": "dx-sql-120",
@@ -66196,8 +66196,228 @@
     "content": "\\begin{homework}[1517 | 高级字符串函数 第7题]\n\\begin{definition}[REGEXP 正则匹配]\nREGEXP 是 SQL 中的正则表达式匹配，用来判断一个字符串是否符合某种模式。\n\n\\begin{lstlisting}[language=SQL]\nREGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\\\.com$'\n\\end{lstlisting}\n\n这句话表示筛选出符合下面格式的邮箱：\n\n\\begin{itemize}\n  \\item REGEXP：使用正则表达式进行匹配；\n  \\item \\verb|^|：表示字符串开头；\n  \\item \\verb|[A-Za-z]|：表示第一个字符必须是字母；\n  \\item \\verb|[A-Za-z0-9_.-]*|：表示后面可以有字母、数字、下划线、点和横杠，出现 0 次或多次；\n  \\item \\verb|@leetcode\\\\.com|：表示必须包含 @leetcode.com，其中点号需要转义；\n  \\item \\verb|$|：表示字符串结尾。\n\\end{itemize}\n\n所以整体意思是：邮箱必须以字母开头，中间可以包含字母、数字、下划线、点和横杠，并且必须以 @leetcode.com 结尾。\n\\end{definition}\n\\end{homework}",
     "text": "[1517 | 高级字符串函数 第7题] [REGEXP 正则匹配] REGEXP 是 SQL 中的正则表达式匹配，用来判断一个字符串是否符合某种模式。 [language=SQL] REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\\\.com |：表示字符串结尾。 所以整体意思是：邮箱必须以字母开头，中间可以包含字母、数字、下划线、点和横杠，并且必须以 @leetcode.com 结尾。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/练习心的.tex",
-    "startLine": 975,
-    "endLine": 996
+    "startLine": 948,
+    "endLine": 969
+  },
+  {
+    "id": "dx-sql-121",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "自链接",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "自链接",
+    "previewType": "example",
+    "previewTitle": "自链接",
+    "rawContent": "\\begin{example}\n用自连接做法，通过 \\texttt{DATEDIFF} 限定严格前一天：\n\n\\begin{lstlisting}[language=SQL]\nSELECT w1.id\nFROM Weather AS w1\nJOIN Weather AS w2\nON DATEDIFF(w1.recordDate, w2.recordDate) = 1\nWHERE w1.Temperature > w2.Temperature;\n\\end{lstlisting}\n\\end{example}",
+    "content": "\\begin{example}\n用自连接做法，通过 \\texttt{DATEDIFF} 限定严格前一天：\n\n\\begin{lstlisting}[language=SQL]\nSELECT w1.id\nFROM Weather AS w1\nJOIN Weather AS w2\nON DATEDIFF(w1.recordDate, w2.recordDate) = 1\nWHERE w1.Temperature > w2.Temperature;\n\\end{lstlisting}\n\\end{example}",
+    "text": "用自连接做法，通过 DATEDIFF 限定严格前一天： [language=SQL] SELECT w1.id FROM Weather AS w1 JOIN Weather AS w2 ON DATEDIFF(w1.recordDate, w2.recordDate) = 1 WHERE w1.Temperature > w2.Temperature;",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 31,
+    "endLine": 41
+  },
+  {
+    "id": "dx-sql-122",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "自链接",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "自链接",
+    "previewType": "note",
+    "previewTitle": "自链接",
+    "rawContent": "\\begin{note}\n\\texttt{LAG} 只取上一行，不管日期实际差了几天，若数据有缺失日期会误判。自连接配合 \\texttt{DATEDIFF} 可以严格限定\"恰好前一天\"，更加健壮。\n\\end{note}",
+    "content": "\\begin{note}\n\\texttt{LAG} 只取上一行，不管日期实际差了几天，若数据有缺失日期会误判。自连接配合 \\texttt{DATEDIFF} 可以严格限定\"恰好前一天\"，更加健壮。\n\\end{note}",
+    "text": "LAG 只取上一行，不管日期实际差了几天，若数据有缺失日期会误判。自连接配合 DATEDIFF 可以严格限定\"恰好前一天\"，更加健壮。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 43,
+    "endLine": 45
+  },
+  {
+    "id": "dx-sql-123",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "自链接",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "自链接",
+    "previewType": "tip",
+    "previewTitle": "自链接",
+    "rawContent": "\\begin{dxtips}\n ON 后面就是普通的条件表达式，不一定要等号，大于小于、函数运算都可以，只要能描述两行之间的关联关系就行。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n ON 后面就是普通的条件表达式，不一定要等号，大于小于、函数运算都可以，只要能描述两行之间的关联关系就行。\n\\end{dxtips}",
+    "text": "ON 后面就是普通的条件表达式，不一定要等号，大于小于、函数运算都可以，只要能描述两行之间的关联关系就行。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 50,
+    "endLine": 52
+  },
+  {
+    "id": "dx-sql-124",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "聚合",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "聚合",
+    "previewType": "tip",
+    "previewTitle": "聚合",
+    "rawContent": "\\begin{dxtips}\n    \n\\textbf{GROUP BY 的本质}\n\n\\texttt{GROUP BY} 内部做了两件事：\n\\begin{enumerate}\n    \\item \\textbf{分组}：把相同键（如 \\texttt{(student\\_id, subject\\_name)}）的行归到一堆\n    \\item \\textbf{循环}：对每一堆执行聚合函数（\\texttt{COUNT}、\\texttt{SUM}、\\texttt{AVG}……）\n\\end{enumerate}\n\n这个「循环」由数据库引擎完成，无需手写。只需声明：\n\\begin{itemize}\n    \\item 按什么分——\\texttt{GROUP BY} 的键\n    \\item 怎么聚合——\\texttt{SELECT} 中的聚合函数\n\\end{itemize}\n\n这也是 SQL 与命令式语言最大的区别：\\textbf{描述你要什么，不描述怎么做}。\n\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    \n\\textbf{GROUP BY 的本质}\n\n\\texttt{GROUP BY} 内部做了两件事：\n\\begin{enumerate}\n    \\item \\textbf{分组}：把相同键（如 \\texttt{(student\\_id, subject\\_name)}）的行归到一堆\n    \\item \\textbf{循环}：对每一堆执行聚合函数（\\texttt{COUNT}、\\texttt{SUM}、\\texttt{AVG}……）\n\\end{enumerate}\n\n这个「循环」由数据库引擎完成，无需手写。只需声明：\n\\begin{itemize}\n    \\item 按什么分——\\texttt{GROUP BY} 的键\n    \\item 怎么聚合——\\texttt{SELECT} 中的聚合函数\n\\end{itemize}\n\n这也是 SQL 与命令式语言最大的区别：\\textbf{描述你要什么，不描述怎么做}。\n\n\\end{dxtips}",
+    "text": "GROUP BY 的本质 GROUP BY 内部做了两件事： 分组：把相同键（如 (student\\_id, subject\\_name)）的行归到一堆 循环：对每一堆执行聚合函数（COUNT、SUM、AVG……） 这个「循环」由数据库引擎完成，无需手写。只需声明： 按什么分——GROUP BY 的键 怎么聚合——SELECT 中的聚合函数 这也是 SQL 与命令式语言最大的区别：描述你要什么，不描述怎么做。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 55,
+    "endLine": 73
+  },
+  {
+    "id": "dx-sql-125",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "聚合",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "聚合",
+    "previewType": "tip",
+    "previewTitle": "聚合",
+    "rawContent": "\\begin{dxtips}\n    count的时候count主值\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    count的时候count主值\n\\end{dxtips}",
+    "text": "count的时候count主值",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 74,
+    "endLine": 76
+  },
+  {
+    "id": "dx-sql-126",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "聚合",
+    "subsection": "",
+    "kind": "solution",
+    "blockTitle": "聚合",
+    "previewType": "solution",
+    "previewTitle": "聚合",
+    "rawContent": "\\begin{solution}\n\\subsection{条件表达式}\n\\begin{lstlisting}[language=SQL]\nSELECT sgn.user_id,\n    ROUND(AVG(CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END), 2)\n        AS confirmation_rate\nFROM signups sgn\nLEFT JOIN confirmations c\n    ON sgn.user_id = c.user_id\nGROUP BY sgn.user_id\n\\end{lstlisting}\n\n\\begin{note}\n用 \\texttt{AVG(CASE WHEN ... THEN 1 ELSE 0 END)} 代替 \\texttt{COUNT/COUNT}：\n\\begin{itemize}\n    \\item \\texttt{confirmed} 的行计为 1，其余计为 0\n    \\item \\texttt{AVG} 直接得到确认率，避免除以 0 的问题\n    \\item 没有任何记录的用户，\\texttt{AVG} 返回 \\texttt{NULL}，可用 \\texttt{IFNULL(..., 0)} 处理\n\\end{itemize}\n\\end{note}\n\\begin{dxtips}\n   对不对条件表达式就是再最后面能起到筛选的作用同时他不会删除行也就是同时能筛选符合条件的和不符合条件的在比值方面尤为突出，特别是加权平均\n\\end{dxtips}\n\\end{solution}",
+    "content": "\\begin{solution}\n\\subsection{条件表达式}\n\\begin{lstlisting}[language=SQL]\nSELECT sgn.user_id,\n    ROUND(AVG(CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END), 2)\n        AS confirmation_rate\nFROM signups sgn\nLEFT JOIN confirmations c\n    ON sgn.user_id = c.user_id\nGROUP BY sgn.user_id\n\\end{lstlisting}\n\n\\begin{note}\n用 \\texttt{AVG(CASE WHEN ... THEN 1 ELSE 0 END)} 代替 \\texttt{COUNT/COUNT}：\n\\begin{itemize}\n    \\item \\texttt{confirmed} 的行计为 1，其余计为 0\n    \\item \\texttt{AVG} 直接得到确认率，避免除以 0 的问题\n    \\item 没有任何记录的用户，\\texttt{AVG} 返回 \\texttt{NULL}，可用 \\texttt{IFNULL(..., 0)} 处理\n\\end{itemize}\n\\end{note}\n\\begin{dxtips}\n   对不对条件表达式就是再最后面能起到筛选的作用同时他不会删除行也就是同时能筛选符合条件的和不符合条件的在比值方面尤为突出，特别是加权平均\n\\end{dxtips}\n\\end{solution}",
+    "text": "条件表达式 [language=SQL] SELECT sgn.user_id, ROUND(AVG(CASE WHEN action = 'confirmed' THEN 1 ELSE 0 END), 2) AS confirmation_rate FROM signups sgn LEFT JOIN confirmations c ON sgn.user_id = c.user_id GROUP BY sgn.user_id 用 AVG(CASE WHEN ... THEN 1 ELSE 0 END) 代替 COUNT/COUNT： confirmed 的行计为 1，其余计为 0 AVG 直接得到确认率，避免除以 0 的问题 没有任何记录的用户，AVG 返回 NULL，可用 IFNULL(..., 0) 处理 对不对条件表达式就是再最后面能起到筛选的作用同时他不会删除行也就是同时能筛选符合条件的和不符合条件的在比值方面尤为突出，特别是加权平均",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 77,
+    "endLine": 100
+  },
+  {
+    "id": "dx-sql-127",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "窗口函数",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "窗口函数",
+    "previewType": "example",
+    "previewTitle": "窗口函数",
+    "rawContent": "\\begin{example}\n查找比前一天温度更高的日期（力扣197）。\n\n使用窗口函数 \\texttt{LAG} 获取前一天温度，再在外层筛选：\n\n\\begin{lstlisting}[language=SQL]\nSELECT id\nFROM (\n    SELECT id,\n           Temperature,\n           LAG(Temperature, 1) OVER (ORDER BY recordDate) AS prev_temp\n    FROM Weather\n) AS t\nWHERE Temperature > prev_temp;\n\\end{lstlisting}\n\n内层子查询产生的临时表结构如下：\n\n\\begin{center}\n\\begin{tabular}{cccc}\n\\hline\nid & recordDate & Temperature & prev\\_temp \\\\\n\\hline\n1 & 2015-01-01 & 10 & NULL \\\\\n2 & 2015-01-02 & 25 & 10 \\\\\n3 & 2015-01-03 & 20 & 25 \\\\\n4 & 2015-01-04 & 30 & 20 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n外层 \\texttt{WHERE Temperature > prev\\_temp} 筛选出 id = 2, 4。\n\\end{example}",
+    "content": "\\begin{example}\n查找比前一天温度更高的日期（力扣197）。\n\n使用窗口函数 \\texttt{LAG} 获取前一天温度，再在外层筛选：\n\n\\begin{lstlisting}[language=SQL]\nSELECT id\nFROM (\n    SELECT id,\n           Temperature,\n           LAG(Temperature, 1) OVER (ORDER BY recordDate) AS prev_temp\n    FROM Weather\n) AS t\nWHERE Temperature > prev_temp;\n\\end{lstlisting}\n\n内层子查询产生的临时表结构如下：\n\n\\begin{center}\n\\begin{tabular}{cccc}\n\\hline\nid & recordDate & Temperature & prev\\_temp \\\\\n\\hline\n1 & 2015-01-01 & 10 & NULL \\\\\n2 & 2015-01-02 & 25 & 10 \\\\\n3 & 2015-01-03 & 20 & 25 \\\\\n4 & 2015-01-04 & 30 & 20 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n外层 \\texttt{WHERE Temperature > prev\\_temp} 筛选出 id = 2, 4。\n\\end{example}",
+    "text": "查找比前一天温度更高的日期（力扣197）。 使用窗口函数 LAG 获取前一天温度，再在外层筛选： [language=SQL] SELECT id FROM ( SELECT id, Temperature, LAG(Temperature, 1) OVER (ORDER BY recordDate) AS prev_temp FROM Weather ) AS t WHERE Temperature > prev_temp; 内层子查询产生的临时表结构如下： cccc id & recordDate & Temperature & prev\\_temp \\\\ 1 & 2015-01-01 & 10 & NULL \\\\ 2 & 2015-01-02 & 25 & 10 \\\\ 3 & 2015-01-03 & 20 & 25 \\\\ 4 & 2015-01-04 & 30 & 20 \\\\ 外层 WHERE Temperature > prev\\_temp 筛选出 id = 2, 4。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 102,
+    "endLine": 134
+  },
+  {
+    "id": "dx-sql-128",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "窗口函数",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "窗口函数",
+    "previewType": "note",
+    "previewTitle": "窗口函数",
+    "rawContent": "\\begin{note}\n\\texttt{LAG(字段, 偏移量) OVER (ORDER BY 排序字段)} 取当前行往前数第 $n$ 行的值，无上一行时自动返回 \\texttt{NULL}。窗口函数不能直接在 \\texttt{WHERE} 中引用，必须套一层子查询后才能筛选。\n\\end{note}",
+    "content": "\\begin{note}\n\\texttt{LAG(字段, 偏移量) OVER (ORDER BY 排序字段)} 取当前行往前数第 $n$ 行的值，无上一行时自动返回 \\texttt{NULL}。窗口函数不能直接在 \\texttt{WHERE} 中引用，必须套一层子查询后才能筛选。\n\\end{note}",
+    "text": "LAG(字段, 偏移量) OVER (ORDER BY 排序字段) 取当前行往前数第 行的值，无上一行时自动返回 NULL。窗口函数不能直接在 WHERE 中引用，必须套一层子查询后才能筛选。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 136,
+    "endLine": 138
+  },
+  {
+    "id": "dx-sql-129",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "窗口函数",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "窗口函数",
+    "previewType": "tip",
+    "previewTitle": "窗口函数",
+    "rawContent": "\\begin{dxtips}\n  本质上窗口函数还是把行之间的问题转化为列之间的问题  \n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n  本质上窗口函数还是把行之间的问题转化为列之间的问题  \n\\end{dxtips}",
+    "text": "本质上窗口函数还是把行之间的问题转化为列之间的问题",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 139,
+    "endLine": 141
+  },
+  {
+    "id": "dx-sql-130",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "窗口函数",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "窗口函数",
+    "previewType": "tip",
+    "previewTitle": "窗口函数",
+    "rawContent": "\\begin{dxtips}\n    由于窗口函数只能放进select和order里面如果最后不想看见他就只能再套一层子查询\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    由于窗口函数只能放进select和order里面如果最后不想看见他就只能再套一层子查询\n\\end{dxtips}",
+    "text": "由于窗口函数只能放进select和order里面如果最后不想看见他就只能再套一层子查询",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 143,
+    "endLine": 145
+  },
+  {
+    "id": "dx-sql-131",
+    "repo": "dx-sql",
+    "title": "Sql",
+    "pdf": "pdf/dx-sql.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/main.synctex.gz",
+    "section": "窗口函数",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "窗口函数",
+    "previewType": "tip",
+    "previewTitle": "窗口函数",
+    "rawContent": "\\begin{dxtips}\n    因为where 比 select 先执行所以外层因为select里面新出的东西不能进where\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    因为where 比 select 先执行所以外层因为select里面新出的东西不能进where\n\\end{dxtips}",
+    "text": "因为where 比 select 先执行所以外层因为select里面新出的东西不能进where",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-sql/核心知识.tex",
+    "startLine": 150,
+    "endLine": 152
   },
   {
     "id": "dx-topology-1",
