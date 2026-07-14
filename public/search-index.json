@@ -47612,15 +47612,35 @@
     "blockTitle": "ump与umvue",
     "previewType": "tip",
     "previewTitle": "ump与umvue",
+    "rawContent": "\\begin{dxtips}\n    所以其实就是关于T（x）单增就换了一个x轴横坐标，如果T（x）等于x ²什么的也是一样的就是映射到T（X）为轴的坐标系，因为在这个坐标系里面所有θ1似然比都是单增的所以在这里面取拒绝域就得从右往左取，取完了拒绝域再解方程把拒绝域映射回标准坐标系\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    所以其实就是关于T（x）单增就换了一个x轴横坐标，如果T（x）等于x ²什么的也是一样的就是映射到T（X）为轴的坐标系，因为在这个坐标系里面所有θ1似然比都是单增的所以在这里面取拒绝域就得从右往左取，取完了拒绝域再解方程把拒绝域映射回标准坐标系\n\\end{dxtips}",
+    "text": "所以其实就是关于T（x）单增就换了一个x轴横坐标，如果T（x）等于x ²什么的也是一样的就是映射到T（X）为轴的坐标系，因为在这个坐标系里面所有θ1似然比都是单增的所以在这里面取拒绝域就得从右往左取，取完了拒绝域再解方程把拒绝域映射回标准坐标系",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/期末笔记.tex",
+    "startLine": 2418,
+    "endLine": 2420
+  },
+  {
+    "id": "dx-Mathematical-Statistics-768",
+    "repo": "dx-Mathematical-Statistics",
+    "title": "Mathematical Statistics",
+    "pdf": "pdf/dx-Mathematical-Statistics.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz",
+    "section": "ump与umvue",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "ump与umvue",
+    "previewType": "tip",
+    "previewTitle": "ump与umvue",
     "rawContent": "\\begin{dxtips}\n    \\textbf{相同点：}两者都依赖完备充分统计量 $T(X)$，且都在指数族中最容易找到——指数族同时保证了完备充分统计量的存在（为 UMVUE 服务）和 MLR 的成立（为 UMP 服务）。\"一致\"（uniform）的含义也相同：对参数空间中所有 $\\theta$ 成立，而非只在某个点最优。\n\n    \\textbf{不同点：}UMVUE 的约束是无偏性，优化目标是方差；UMP 的约束是第一类错误 $\\leq \\alpha$，优化目标是功效 $\\beta(\\theta)$。当 UMP 不存在时（如双侧检验），加上无偏约束得到 UMPU，此时 UMVUE 与 UMPU 完全对称：前者是\"无偏估计中方差最小\"，后者是\"无偏检验中功效最大\"。\n\\end{dxtips}",
     "content": "\\begin{dxtips}\n    \\textbf{相同点：}两者都依赖完备充分统计量 $T(X)$，且都在指数族中最容易找到——指数族同时保证了完备充分统计量的存在（为 UMVUE 服务）和 MLR 的成立（为 UMP 服务）。\"一致\"（uniform）的含义也相同：对参数空间中所有 $\\theta$ 成立，而非只在某个点最优。\n\n    \\textbf{不同点：}UMVUE 的约束是无偏性，优化目标是方差；UMP 的约束是第一类错误 $\\leq \\alpha$，优化目标是功效 $\\beta(\\theta)$。当 UMP 不存在时（如双侧检验），加上无偏约束得到 UMPU，此时 UMVUE 与 UMPU 完全对称：前者是\"无偏估计中方差最小\"，后者是\"无偏检验中功效最大\"。\n\\end{dxtips}",
     "text": "相同点：两者都依赖完备充分统计量 ，且都在指数族中最容易找到——指数族同时保证了完备充分统计量的存在（为 UMVUE 服务）和 MLR 的成立（为 UMP 服务）。\"一致\"（uniform）的含义也相同：对参数空间中所有 成立，而非只在某个点最优。 不同点：UMVUE 的约束是无偏性，优化目标是方差；UMP 的约束是第一类错误 ，优化目标是功效 。当 UMP 不存在时（如双侧检验），加上无偏约束得到 UMPU，此时 UMVUE 与 UMPU 完全对称：前者是\"无偏估计中方差最小\"，后者是\"无偏检验中功效最大\"。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/期末笔记.tex",
-    "startLine": 2432,
-    "endLine": 2436
+    "startLine": 2436,
+    "endLine": 2440
   },
   {
-    "id": "dx-Mathematical-Statistics-768",
+    "id": "dx-Mathematical-Statistics-769",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47636,11 +47656,11 @@
     "content": "\\begin{dxtips}[几何分布就是k次完成一次的概率]\n   \n几何分布的 CDF 推导：提取公因子 $p$，剩余部分为首项 $1$、公比 $(1-p)$ 的等比数列，错位相减后分子为 $1-(1-p)^k$，分母为 $1-(1-p)=p$，与外面的 $p$ 恰好消去：\n$$F(k) = \\sum_{i=1}^{k} p(1-p)^{i-1} = p \\cdot \\frac{1-(1-p)^k}{1-(1-p)} = p \\cdot \\frac{1-(1-p)^k}{p} = 1-(1-p)^k$$\n\n\\end{dxtips}",
     "text": "[几何分布就是k次完成一次的概率] 几何分布的 CDF 推导：提取公因子 ，剩余部分为首项 、公比 的等比数列，错位相减后分子为 ，分母为 ，与外面的 恰好消去：",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/期末笔记.tex",
-    "startLine": 2449,
-    "endLine": 2454
+    "startLine": 2453,
+    "endLine": 2458
   },
   {
-    "id": "dx-Mathematical-Statistics-769",
+    "id": "dx-Mathematical-Statistics-770",
     "repo": "dx-Mathematical-Statistics",
     "title": "Mathematical Statistics",
     "pdf": "pdf/dx-Mathematical-Statistics.pdf",
@@ -47656,8 +47676,8 @@
     "content": "\\begin{note}\n\\textbf{韦布尔分布核心：变换链 $X_i^c \\to \\text{Exp} \\to \\chi^2(2n)$}\n\n设 $X_i \\sim \\text{Weibull}$，密度为\n\\[\nf(x,\\lambda) = \\lambda c\\, x^{c-1} e^{-\\lambda x^c}, \\quad x > 0\n\\]\n其中 $c$ 已知，$\\lambda > 0$。令 $Y_i = X_i^c$，则 $Y_i \\sim \\text{Exp}(\\lambda)$，从而\n\\[\n2\\lambda \\sum_{i=1}^n X_i^c \\sim \\chi^2(2n).\n\\]\n指数分布是韦布尔 $c=1$ 时的特例。\n\n\\textbf{UMP 检验（十一周6）：}似然比关于 $T = \\sum X_i^c$ 单调，拒绝域为 $T > c_0$，临界值\n\\[\nc_0 = \\frac{\\chi^2_\\alpha(2n)}{2\\lambda_0}.\n\\]\n定样本量 $n$：由功效条件 $P_{\\lambda_1}(T > c_0) \\geq 1-\\beta$ 化为\n\\[\n\\chi^2_\\beta(2n) \\leq \\frac{\\lambda_1}{\\lambda_0} \\cdot \\chi^2_\\alpha(2n),\n\\]\n逐步增大 $n$ 查表直到满足。\n\n\\textbf{拟合优度（十二周3）：}Pearson $\\chi^2$ 统计量自由度为\n\\[\nM - 1 - k,\n\\]\n其中 $M$ 为分组数，$k$ 为估计参数个数（两参数韦布尔 $k=2$，故自由度为 $M-3$）。\n\\end{note}",
     "text": "韦布尔分布核心：变换链 设 ，密度为 其中 已知， 。令 ，则 ，从而 指数分布是韦布尔 时的特例。 UMP 检验（十一周6）：似然比关于 单调，拒绝域为 ，临界值 定样本量 ：由功效条件 化为 逐步增大 查表直到满足。 拟合优度（十二周3）：Pearson 统计量自由度为 其中 为分组数， 为估计参数个数（两参数韦布尔 ，故自由度为 ）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/期末笔记.tex",
-    "startLine": 2456,
-    "endLine": 2484
+    "startLine": 2460,
+    "endLine": 2488
   },
   {
     "id": "dx-ML-1",
