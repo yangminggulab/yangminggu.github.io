@@ -48652,9 +48652,9 @@
     "blockTitle": "LDA",
     "previewType": "definition",
     "previewTitle": "LDA",
-    "rawContent": "\\begin{definition}{线性判别分析（LDA）}\n线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。\n设\n\\[\nY\\in\\{1,2,\\ldots,K\\},\\qquad X\\in\\mathbb{R}^p.\n\\]\nLDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵：\n\\[\nX\\mid Y=k \\sim N(\\mu_k,\\Sigma).\n\\]\n其分类规则为：\n\\[\n\\hat{Y}=\\arg\\max_k P(Y=k\\mid X=x).\n\\]\n等价地，LDA 选择使下列判别函数最大的类别：\n\\[\n\\delta_k(x)\n=\nx^T\\Sigma^{-1}\\mu_k\n-\n\\frac{1}{2}\\mu_k^T\\Sigma^{-1}\\mu_k\n+\n\\log \\pi_k.\n\\]\n\\end{definition}",
-    "content": "\\begin{definition}{线性判别分析（LDA）}\n线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。\n设\n\\[\nY\\in\\{1,2,\\ldots,K\\},\\qquad X\\in\\mathbb{R}^p.\n\\]\nLDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵：\n\\[\nX\\mid Y=k \\sim N(\\mu_k,\\Sigma).\n\\]\n其分类规则为：\n\\[\n\\hat{Y}=\\arg\\max_k P(Y=k\\mid X=x).\n\\]\n等价地，LDA 选择使下列判别函数最大的类别：\n\\[\n\\delta_k(x)\n=\nx^T\\Sigma^{-1}\\mu_k\n-\n\\frac{1}{2}\\mu_k^T\\Sigma^{-1}\\mu_k\n+\n\\log \\pi_k.\n\\]\n\\end{definition}",
-    "text": "线性判别分析（LDA） 线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。 设 LDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵： 其分类规则为： 等价地，LDA 选择使下列判别函数最大的类别：",
+    "rawContent": "\\begin{definition}{线性判别分析（LDA）}\n线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。\n设\n\\[\nY\\in\\{1,2,\\ldots,K\\},\\qquad X\\in\\mathbb{R}^p.\n\\]\nLDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵：\n\\[\nX\\mid Y=k \\sim N(\\mu_k,\\Sigma).\n\\]\n其分类规则为：\n\\[\n\\hat{Y}=\\arg\\max_k P(Y=k\\mid X=x).\n\\]\n等价地，LDA 选择使下列判别函数最大的类别：这个其实就是1/2码氏距离然后把相同的项笑掉大牙了然后再加一个先验概率\n\\[\n\\delta_k(x)\n=\nx^T\\Sigma^{-1}\\mu_k\n-\n\\frac{1}{2}\\mu_k^T\\Sigma^{-1}\\mu_k\n+\n\\log \\pi_k.\n\\]\n\\end{definition}",
+    "content": "\\begin{definition}{线性判别分析（LDA）}\n线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。\n设\n\\[\nY\\in\\{1,2,\\ldots,K\\},\\qquad X\\in\\mathbb{R}^p.\n\\]\nLDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵：\n\\[\nX\\mid Y=k \\sim N(\\mu_k,\\Sigma).\n\\]\n其分类规则为：\n\\[\n\\hat{Y}=\\arg\\max_k P(Y=k\\mid X=x).\n\\]\n等价地，LDA 选择使下列判别函数最大的类别：这个其实就是1/2码氏距离然后把相同的项笑掉大牙了然后再加一个先验概率\n\\[\n\\delta_k(x)\n=\nx^T\\Sigma^{-1}\\mu_k\n-\n\\frac{1}{2}\\mu_k^T\\Sigma^{-1}\\mu_k\n+\n\\log \\pi_k.\n\\]\n\\end{definition}",
+    "text": "线性判别分析（LDA） 线性判别分析（Linear Discriminant Analysis, LDA）是一种生成式分类方法。 设 LDA 假设每一类中的特征服从多元正态分布，且各类共享同一个协方差矩阵： 其分类规则为： 等价地，LDA 选择使下列判别函数最大的类别：这个其实就是1/2码氏距离然后把相同的项笑掉大牙了然后再加一个先验概率",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
     "startLine": 639,
     "endLine": 663
@@ -48668,16 +48668,16 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
     "subsection": "LDA",
-    "kind": "note",
+    "kind": "example",
     "blockTitle": "LDA",
-    "previewType": "note",
+    "previewType": "example",
     "previewTitle": "LDA",
-    "rawContent": "\\begin{note}\nLDA 的思想是：先估计每一类中 \\(X\\) 的分布，再用贝叶斯公式反推出\n\\(P(Y=k\\mid X=x)\\)。其中 \\(\\pi_k\\) 是第 \\(k\\) 类的先验概率，\n\\(\\mu_k\\) 是第 \\(k\\) 类的均值，\\(\\Sigma\\) 是共享协方差矩阵。\n\n由于各类共享同一个 \\(\\Sigma\\)，比较不同类别时二次项会抵消，\n所以分类边界是线性的。\n\\end{note}",
-    "content": "\\begin{note}\nLDA 的思想是：先估计每一类中 \\(X\\) 的分布，再用贝叶斯公式反推出\n\\(P(Y=k\\mid X=x)\\)。其中 \\(\\pi_k\\) 是第 \\(k\\) 类的先验概率，\n\\(\\mu_k\\) 是第 \\(k\\) 类的均值，\\(\\Sigma\\) 是共享协方差矩阵。\n\n由于各类共享同一个 \\(\\Sigma\\)，比较不同类别时二次项会抵消，\n所以分类边界是线性的。\n\\end{note}",
-    "text": "LDA 的思想是：先估计每一类中 的分布，再用贝叶斯公式反推出 。其中 是第 类的先验概率， 是第 类的均值， 是共享协方差矩阵。 由于各类共享同一个 ，比较不同类别时二次项会抵消， 所以分类边界是线性的。",
+    "rawContent": "\\begin{example}[LDA 直观例子]\n用身高、体重判断三类人：篮球运动员、普通人、马拉松运动员。\n\nLDA 先估计每类均值 $\\mu_k$ 和共享协方差 $\\Sigma$：\n\n\\[\n\\mu_{\\text{篮球}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix},\\;\n\\mu_{\\text{普通}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix},\\;\n\\mu_{\\text{马拉松}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix}\n\\]\n\n\\[\n\\Sigma = \\begin{pmatrix}\n\\text{Var(身高)} & \\text{Cov(身高,体重)}\\\\\n\\text{Cov(体重,身高)} & \\text{Var(体重)}\n\\end{pmatrix}\n\\]\n\n新样本 $x_0 = (190,\\;88)^\\top$ 来了，LDA 算三类的判别得分：\n\n\\[\n\\delta_k(x_0) = x_0^\\top \\Sigma^{-1}\\mu_k - \\frac12 \\mu_k^\\top \\Sigma^{-1}\\mu_k + \\log\\pi_k\n\\]\n\n判给得分最高的类：$\\hat Y = \\arg\\max_k \\delta_k(x_0)$。\n\n直观理解：$x_0$ 离哪个类的中心最近（经 $\\Sigma^{-1}$ 加权），就分给谁。\n\\end{example}",
+    "content": "\\begin{example}[LDA 直观例子]\n用身高、体重判断三类人：篮球运动员、普通人、马拉松运动员。\n\nLDA 先估计每类均值 $\\mu_k$ 和共享协方差 $\\Sigma$：\n\n\\[\n\\mu_{\\text{篮球}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix},\\;\n\\mu_{\\text{普通}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix},\\;\n\\mu_{\\text{马拉松}} = \\begin{pmatrix}\\text{平均身高}\\\\ \\text{平均体重}\\end{pmatrix}\n\\]\n\n\\[\n\\Sigma = \\begin{pmatrix}\n\\text{Var(身高)} & \\text{Cov(身高,体重)}\\\\\n\\text{Cov(体重,身高)} & \\text{Var(体重)}\n\\end{pmatrix}\n\\]\n\n新样本 $x_0 = (190,\\;88)^\\top$ 来了，LDA 算三类的判别得分：\n\n\\[\n\\delta_k(x_0) = x_0^\\top \\Sigma^{-1}\\mu_k - \\frac12 \\mu_k^\\top \\Sigma^{-1}\\mu_k + \\log\\pi_k\n\\]\n\n判给得分最高的类：$\\hat Y = \\arg\\max_k \\delta_k(x_0)$。\n\n直观理解：$x_0$ 离哪个类的中心最近（经 $\\Sigma^{-1}$ 加权），就分给谁。\n\\end{example}",
+    "text": "[LDA 直观例子] 用身高、体重判断三类人：篮球运动员、普通人、马拉松运动员。 LDA 先估计每类均值 和共享协方差 ： 新样本 来了，LDA 算三类的判别得分： 判给得分最高的类： 。 直观理解： 离哪个类的中心最近（经 加权），就分给谁。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 665,
-    "endLine": 672
+    "startLine": 664,
+    "endLine": 691
   },
   {
     "id": "dx-ML-51",
@@ -48692,12 +48692,12 @@
     "blockTitle": "LDA",
     "previewType": "tip",
     "previewTitle": "LDA",
-    "rawContent": "\\begin{dxtips}\n    线性来自共享协方差矩阵。“共享协方差矩阵”意思是：\n不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。\nx特征向量转置乘协方差矩阵的逆\n\\end{dxtips}",
-    "content": "\\begin{dxtips}\n    线性来自共享协方差矩阵。“共享协方差矩阵”意思是：\n不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。\nx特征向量转置乘协方差矩阵的逆\n\\end{dxtips}",
-    "text": "线性来自共享协方差矩阵。“共享协方差矩阵”意思是： 不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。 x特征向量转置乘协方差矩阵的逆",
+    "rawContent": "\\begin{dxtips}\n    线性来自共享协方差矩阵。“共享协方差矩阵”意思是：\n不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。\nx特征向量转置乘协方差矩阵的逆是消除相关性和方差\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    线性来自共享协方差矩阵。“共享协方差矩阵”意思是：\n不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。\nx特征向量转置乘协方差矩阵的逆是消除相关性和方差\n\\end{dxtips}",
+    "text": "线性来自共享协方差矩阵。“共享协方差矩阵”意思是： 不同类别的特征分布，可以有不同的均值，但假设它们有相同的形状和方向。他的最后得分是样本和k类匹配度+对第k类位置的修正+原本样本中第k类出现的概率。 x特征向量转置乘协方差矩阵的逆是消除相关性和方差",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 673,
-    "endLine": 677
+    "startLine": 708,
+    "endLine": 712
   },
   {
     "id": "dx-ML-52",
@@ -48707,17 +48707,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "马氏距离",
     "kind": "definition",
-    "blockTitle": "LDA",
+    "blockTitle": "马氏距离",
     "previewType": "definition",
-    "previewTitle": "LDA",
+    "previewTitle": "马氏距离",
     "rawContent": "\\begin{definition}{马氏距离}\n设 \\(x\\in\\mathbb{R}^p\\) 是一个样本点，\\(\\mu\\in\\mathbb{R}^p\\) 是中心点，\n\\(\\Sigma\\) 是协方差矩阵。则 \\(x\\) 到 \\(\\mu\\) 的马氏距离定义为\n\\[\nd_M(x,\\mu)\n=\n\\sqrt{(x-\\mu)^T\\Sigma^{-1}(x-\\mu)}.\n\\]\n等价地，平方马氏距离为\n\\[\nd_M^2(x,\\mu)\n=\n(x-\\mu)^T\\Sigma^{-1}(x-\\mu).\n\\]\n\\end{definition}",
     "content": "\\begin{definition}{马氏距离}\n设 \\(x\\in\\mathbb{R}^p\\) 是一个样本点，\\(\\mu\\in\\mathbb{R}^p\\) 是中心点，\n\\(\\Sigma\\) 是协方差矩阵。则 \\(x\\) 到 \\(\\mu\\) 的马氏距离定义为\n\\[\nd_M(x,\\mu)\n=\n\\sqrt{(x-\\mu)^T\\Sigma^{-1}(x-\\mu)}.\n\\]\n等价地，平方马氏距离为\n\\[\nd_M^2(x,\\mu)\n=\n(x-\\mu)^T\\Sigma^{-1}(x-\\mu).\n\\]\n\\end{definition}",
     "text": "马氏距离 设 是一个样本点， 是中心点， 是协方差矩阵。则 到 的马氏距离定义为 等价地，平方马氏距离为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 679,
-    "endLine": 693
+    "startLine": 714,
+    "endLine": 728
   },
   {
     "id": "dx-ML-53",
@@ -48727,17 +48727,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "马氏距离",
     "kind": "note",
-    "blockTitle": "LDA",
+    "blockTitle": "马氏距离",
     "previewType": "note",
-    "previewTitle": "LDA",
-    "rawContent": "\\begin{note}\n马氏距离是在普通距离中加入协方差结构后的距离。普通欧氏距离默认各特征\n尺度相同、彼此独立；马氏距离通过 \\(\\Sigma^{-1}\\) 同时修正特征尺度和相关性。\n\n直观上：\n\\begin{itemize}\n    \\item 方差大的方向，差异较常见，距离被压低；\n    \\item 方差小的方向，差异更异常，距离被放大；\n    \\item 高度相关的特征会被去冗余，避免重复计算同一类信息。\n\\end{itemize}\n\n因此，在 LDA 中，\\(\\Sigma^{-1}\\) 的作用是用数据自身的波动规律来衡量\n样本 \\(x\\) 距离类别中心 \\(\\mu_k\\) 有多远。\n\\end{note}",
-    "content": "\\begin{note}\n马氏距离是在普通距离中加入协方差结构后的距离。普通欧氏距离默认各特征\n尺度相同、彼此独立；马氏距离通过 \\(\\Sigma^{-1}\\) 同时修正特征尺度和相关性。\n\n直观上：\n\\begin{itemize}\n    \\item 方差大的方向，差异较常见，距离被压低；\n    \\item 方差小的方向，差异更异常，距离被放大；\n    \\item 高度相关的特征会被去冗余，避免重复计算同一类信息。\n\\end{itemize}\n\n因此，在 LDA 中，\\(\\Sigma^{-1}\\) 的作用是用数据自身的波动规律来衡量\n样本 \\(x\\) 距离类别中心 \\(\\mu_k\\) 有多远。\n\\end{note}",
-    "text": "马氏距离是在普通距离中加入协方差结构后的距离。普通欧氏距离默认各特征 尺度相同、彼此独立；马氏距离通过 同时修正特征尺度和相关性。 直观上： 方差大的方向，差异较常见，距离被压低； 方差小的方向，差异更异常，距离被放大； 高度相关的特征会被去冗余，避免重复计算同一类信息。 因此，在 LDA 中， 的作用是用数据自身的波动规律来衡量 样本 距离类别中心 有多远。",
+    "previewTitle": "马氏距离",
+    "rawContent": "\\begin{note}\n距离不能只看绝对差多大，还要看这个方向上本来波动大不大、变量之间有没有相关性。\n\n因此，在 LDA 中，\\(\\Sigma^{-1}\\) 的作用是用数据自身的波动规律来衡量\n样本 \\(x\\) 距离类别中心 \\(\\mu_k\\) 有多远。\n\\end{note}",
+    "content": "\\begin{note}\n距离不能只看绝对差多大，还要看这个方向上本来波动大不大、变量之间有没有相关性。\n\n因此，在 LDA 中，\\(\\Sigma^{-1}\\) 的作用是用数据自身的波动规律来衡量\n样本 \\(x\\) 距离类别中心 \\(\\mu_k\\) 有多远。\n\\end{note}",
+    "text": "距离不能只看绝对差多大，还要看这个方向上本来波动大不大、变量之间有没有相关性。 因此，在 LDA 中， 的作用是用数据自身的波动规律来衡量 样本 距离类别中心 有多远。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 695,
-    "endLine": 708
+    "startLine": 730,
+    "endLine": 735
   },
   {
     "id": "dx-ML-54",
@@ -48747,17 +48747,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "马氏距离",
     "kind": "definition",
-    "blockTitle": "LDA",
+    "blockTitle": "马氏距离",
     "previewType": "definition",
-    "previewTitle": "LDA",
+    "previewTitle": "马氏距离",
     "rawContent": "\\begin{definition}{协方差矩阵}\n设 $X = (X_1, \\dots, X_p)^\\top$ 为 $p$ 维随机向量，其协方差矩阵定义为：\n\n\\[\n\\Sigma = \\begin{pmatrix}\n\\text{Var}(X_1) & \\text{Cov}(X_1, X_2) & \\cdots & \\text{Cov}(X_1, X_p) \\\\\n\\text{Cov}(X_2, X_1) & \\text{Var}(X_2) & \\cdots & \\text{Cov}(X_2, X_p) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\text{Cov}(X_p, X_1) & \\text{Cov}(X_p, X_2) & \\cdots & \\text{Var}(X_p)\n\\end{pmatrix}\n\\]\n\n其中每个元素为：\n\n\\[\n\\Sigma_{ij} = \\text{Cov}(X_i, X_j) = \\frac{1}{n-1}\\sum_{k=1}^{n}(x_{ki} - \\bar{x}_i)(x_{kj} - \\bar{x}_j)\n\\]\n\n简言之，协方差矩阵就是把每对特征的协方差算出来，按 $(i,j)$ 位置排成一个 $p \\times p$ 方阵。对角线上是各特征的方差，非对角线上是特征间的协方差。\n\\end{definition}",
     "content": "\\begin{definition}{协方差矩阵}\n设 $X = (X_1, \\dots, X_p)^\\top$ 为 $p$ 维随机向量，其协方差矩阵定义为：\n\n\\[\n\\Sigma = \\begin{pmatrix}\n\\text{Var}(X_1) & \\text{Cov}(X_1, X_2) & \\cdots & \\text{Cov}(X_1, X_p) \\\\\n\\text{Cov}(X_2, X_1) & \\text{Var}(X_2) & \\cdots & \\text{Cov}(X_2, X_p) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\text{Cov}(X_p, X_1) & \\text{Cov}(X_p, X_2) & \\cdots & \\text{Var}(X_p)\n\\end{pmatrix}\n\\]\n\n其中每个元素为：\n\n\\[\n\\Sigma_{ij} = \\text{Cov}(X_i, X_j) = \\frac{1}{n-1}\\sum_{k=1}^{n}(x_{ki} - \\bar{x}_i)(x_{kj} - \\bar{x}_j)\n\\]\n\n简言之，协方差矩阵就是把每对特征的协方差算出来，按 $(i,j)$ 位置排成一个 $p \\times p$ 方阵。对角线上是各特征的方差，非对角线上是特征间的协方差。\n\\end{definition}",
     "text": "协方差矩阵 设 为 维随机向量，其协方差矩阵定义为： 其中每个元素为： 简言之，协方差矩阵就是把每对特征的协方差算出来，按 位置排成一个 方阵。对角线上是各特征的方差，非对角线上是特征间的协方差。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 709,
-    "endLine": 728
+    "startLine": 736,
+    "endLine": 755
   },
   {
     "id": "dx-ML-55",
@@ -48767,17 +48767,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "马氏距离",
     "kind": "dxtips",
-    "blockTitle": "LDA",
+    "blockTitle": "马氏距离",
     "previewType": "tip",
-    "previewTitle": "LDA",
+    "previewTitle": "马氏距离",
     "rawContent": "\\begin{dxtips}[拿到一个矩阵就要分解它]\n协方差矩阵的\\textbf{特征分解}（谱分解）：\n\n\\[\n\\Sigma = Q \\Lambda Q^\\top\n\\]\n\n\\begin{itemize}\n    \\item $Q$：特征向量组成的正交矩阵，表示\\textbf{新坐标系的方向}。在二维情况下，$Q$ 的两列就是椭圆的长轴和短轴方向。\n    \\item $\\Lambda = \\text{diag}(\\lambda_1, \\dots, \\lambda_p)$：特征值组成的对角矩阵，表示\\textbf{各方向上的方差大小}。特征值越大，该方向上的数据波动越大。\n\\end{itemize}\n\n直观理解：$\\Sigma$ 描述了一个 $p$ 维椭球。$Q$ 告诉你这椭球朝哪个方向转，$\\Lambda$ 告诉你在每个方向上的半径（拉伸）有多大。\n\\end{dxtips}",
     "content": "\\begin{dxtips}[拿到一个矩阵就要分解它]\n协方差矩阵的\\textbf{特征分解}（谱分解）：\n\n\\[\n\\Sigma = Q \\Lambda Q^\\top\n\\]\n\n\\begin{itemize}\n    \\item $Q$：特征向量组成的正交矩阵，表示\\textbf{新坐标系的方向}。在二维情况下，$Q$ 的两列就是椭圆的长轴和短轴方向。\n    \\item $\\Lambda = \\text{diag}(\\lambda_1, \\dots, \\lambda_p)$：特征值组成的对角矩阵，表示\\textbf{各方向上的方差大小}。特征值越大，该方向上的数据波动越大。\n\\end{itemize}\n\n直观理解：$\\Sigma$ 描述了一个 $p$ 维椭球。$Q$ 告诉你这椭球朝哪个方向转，$\\Lambda$ 告诉你在每个方向上的半径（拉伸）有多大。\n\\end{dxtips}",
     "text": "[拿到一个矩阵就要分解它] 协方差矩阵的特征分解（谱分解）： ：特征向量组成的正交矩阵，表示新坐标系的方向。在二维情况下， 的两列就是椭圆的长轴和短轴方向。 ：特征值组成的对角矩阵，表示各方向上的方差大小。特征值越大，该方向上的数据波动越大。 直观理解： 描述了一个 维椭球。 告诉你这椭球朝哪个方向转， 告诉你在每个方向上的半径（拉伸）有多大。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 729,
-    "endLine": 742
+    "startLine": 756,
+    "endLine": 769
   },
   {
     "id": "dx-ML-56",
@@ -48787,17 +48787,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "马氏距离",
     "kind": "note",
-    "blockTitle": "LDA",
+    "blockTitle": "马氏距离",
     "previewType": "note",
-    "previewTitle": "LDA",
+    "previewTitle": "马氏距离",
     "rawContent": "\\begin{note}{$\\Sigma^{-1}$ 的加权意义}\n\n\\textbf{特征独立时：}\n\\[\n\\Sigma = \\begin{pmatrix}\\sigma_1^2 & 0\\\\0 & \\sigma_2^2\\end{pmatrix},\\qquad\n\\Sigma^{-1} = \\begin{pmatrix}1/\\sigma_1^2 & 0\\\\0 & 1/\\sigma_2^2\\end{pmatrix}\n\\]\n\\[\nd_M^2(x,\\mu) = \\frac{(x_1-\\mu_1)^2}{\\sigma_1^2} + \\frac{(x_2-\\mu_2)^2}{\\sigma_2^2}\n\\]\n方差大的特征权重小，方差小的特征权重大。\n\n\\textbf{特征相关时：}\n\\[\n\\Sigma = \\begin{pmatrix}\\sigma_1^2 & \\sigma_{12}\\\\\\sigma_{12} & \\sigma_2^2\\end{pmatrix},\\qquad\n\\Sigma^{-1} = \\frac{1}{\\sigma_1^2\\sigma_2^2 - \\sigma_{12}^2}\n\\begin{pmatrix}\\sigma_2^2 & -\\sigma_{12}\\\\-\\sigma_{12} & \\sigma_1^2\\end{pmatrix}\n\\]\n\\[\nd_M^2 = \\frac{1}{1-\\rho^2}\\left[\n\\frac{(x_1-\\mu_1)^2}{\\sigma_1^2} - 2\\rho\\frac{(x_1-\\mu_1)(x_2-\\mu_2)}{\\sigma_1\\sigma_2} + \\frac{(x_2-\\mu_2)^2}{\\sigma_2^2}\n\\right]\n\\]\n其中 $\\rho = \\frac{\\sigma_{12}}{\\sigma_1\\sigma_2}$。$\\Sigma^{-1}$ 不仅按方差加权，还通过协方差结构去除冗余信息。\n\\end{note}",
     "content": "\\begin{note}{$\\Sigma^{-1}$ 的加权意义}\n\n\\textbf{特征独立时：}\n\\[\n\\Sigma = \\begin{pmatrix}\\sigma_1^2 & 0\\\\0 & \\sigma_2^2\\end{pmatrix},\\qquad\n\\Sigma^{-1} = \\begin{pmatrix}1/\\sigma_1^2 & 0\\\\0 & 1/\\sigma_2^2\\end{pmatrix}\n\\]\n\\[\nd_M^2(x,\\mu) = \\frac{(x_1-\\mu_1)^2}{\\sigma_1^2} + \\frac{(x_2-\\mu_2)^2}{\\sigma_2^2}\n\\]\n方差大的特征权重小，方差小的特征权重大。\n\n\\textbf{特征相关时：}\n\\[\n\\Sigma = \\begin{pmatrix}\\sigma_1^2 & \\sigma_{12}\\\\\\sigma_{12} & \\sigma_2^2\\end{pmatrix},\\qquad\n\\Sigma^{-1} = \\frac{1}{\\sigma_1^2\\sigma_2^2 - \\sigma_{12}^2}\n\\begin{pmatrix}\\sigma_2^2 & -\\sigma_{12}\\\\-\\sigma_{12} & \\sigma_1^2\\end{pmatrix}\n\\]\n\\[\nd_M^2 = \\frac{1}{1-\\rho^2}\\left[\n\\frac{(x_1-\\mu_1)^2}{\\sigma_1^2} - 2\\rho\\frac{(x_1-\\mu_1)(x_2-\\mu_2)}{\\sigma_1\\sigma_2} + \\frac{(x_2-\\mu_2)^2}{\\sigma_2^2}\n\\right]\n\\]\n其中 $\\rho = \\frac{\\sigma_{12}}{\\sigma_1\\sigma_2}$。$\\Sigma^{-1}$ 不仅按方差加权，还通过协方差结构去除冗余信息。\n\\end{note}",
     "text": "的加权意义 特征独立时： 方差大的特征权重小，方差小的特征权重大。 特征相关时： 其中 。 不仅按方差加权，还通过协方差结构去除冗余信息。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 743,
-    "endLine": 767
+    "startLine": 770,
+    "endLine": 794
   },
   {
     "id": "dx-ML-57",
@@ -48807,17 +48807,17 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
-    "kind": "definition",
-    "blockTitle": "LDA",
-    "previewType": "definition",
-    "previewTitle": "LDA",
-    "rawContent": "\\begin{definition}[Principal Component Analysis]\n主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。\n\n它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。\n\n另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。\n\n\\end{definition}",
-    "content": "\\begin{definition}[Principal Component Analysis]\n主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。\n\n它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。\n\n另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。\n\n\\end{definition}",
-    "text": "[Principal Component Analysis] 主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。 它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。 另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。",
+    "subsection": "ROC与AUC",
+    "kind": "dxtips",
+    "blockTitle": "ROC与AUC",
+    "previewType": "tip",
+    "previewTitle": "ROC与AUC",
+    "rawContent": "\\begin{dxtips}\n    对于信用卡以及癌症检测抱着宁可错杀一千也不能放走一个的想法需要把原来百分之50可能是坏人我们就判定为坏人现在我们要设置成百分20是坏人我们就判定他是坏人\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    对于信用卡以及癌症检测抱着宁可错杀一千也不能放走一个的想法需要把原来百分之50可能是坏人我们就判定为坏人现在我们要设置成百分20是坏人我们就判定他是坏人\n\\end{dxtips}",
+    "text": "对于信用卡以及癌症检测抱着宁可错杀一千也不能放走一个的想法需要把原来百分之50可能是坏人我们就判定为坏人现在我们要设置成百分20是坏人我们就判定他是坏人",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 771,
-    "endLine": 778
+    "startLine": 799,
+    "endLine": 801
   },
   {
     "id": "dx-ML-58",
@@ -48827,20 +48827,220 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "分类方法",
-    "subsection": "LDA",
+    "subsection": "ROC与AUC",
+    "kind": "definition",
+    "blockTitle": "ROC与AUC",
+    "previewType": "definition",
+    "previewTitle": "ROC与AUC",
+    "rawContent": "\\begin{definition}{ROC 曲线}\n对阈值 $t$，定义 $\\text{TP}(t)=\\sum_i\\mathbbm{1}(s_i\\ge t\\land y_i=1)$，\n$\\text{FP}(t)=\\sum_i\\mathbbm{1}(s_i\\ge t\\land y_i=0)$，则\n\\[\n\\text{TPR}(t)=\\frac{\\text{TP}(t)}{\\text{TP}(t)+\\text{FN}(t)},\\quad\n\\text{FPR}(t)=\\frac{\\text{FP}(t)}{\\text{FP}(t)+\\text{TN}(t)}.\n\\]\n以 $\\text{FPR}(t)$ 为横轴、$\\text{TPR}(t)$ 为纵轴，遍历 $t$ 绘制所得曲线为 \\textbf{ROC 曲线}。\n\\end{definition}",
+    "content": "\\begin{definition}{ROC 曲线}\n对阈值 $t$，定义 $\\text{TP}(t)=\\sum_i\\mathbbm{1}(s_i\\ge t\\land y_i=1)$，\n$\\text{FP}(t)=\\sum_i\\mathbbm{1}(s_i\\ge t\\land y_i=0)$，则\n\\[\n\\text{TPR}(t)=\\frac{\\text{TP}(t)}{\\text{TP}(t)+\\text{FN}(t)},\\quad\n\\text{FPR}(t)=\\frac{\\text{FP}(t)}{\\text{FP}(t)+\\text{TN}(t)}.\n\\]\n以 $\\text{FPR}(t)$ 为横轴、$\\text{TPR}(t)$ 为纵轴，遍历 $t$ 绘制所得曲线为 \\textbf{ROC 曲线}。\n\\end{definition}",
+    "text": "ROC 曲线 对阈值 ，定义 ， ，则 以 为横轴、 为纵轴，遍历 绘制所得曲线为 ROC 曲线。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 806,
+    "endLine": 814
+  },
+  {
+    "id": "dx-ML-59",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "ROC与AUC",
+    "kind": "dxtips",
+    "blockTitle": "ROC与AUC",
+    "previewType": "tip",
+    "previewTitle": "ROC与AUC",
+    "rawContent": "\\begin{dxtips}\nROC 曲线：纵轴是 TPR（灵敏度/逮捕率），横轴是 FPR（1 - 特异性）。也就错杀率\n\n- TPR 就是灵敏度，也就是衡量能不能给坏的都找全了。\n- 特异性是能不能给好人不错杀了。\n- (0,0) 的时候：一个坏人找不到，一个好人不错杀。\n- (1,1) 的时候：好人坏人通杀。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\nROC 曲线：纵轴是 TPR（灵敏度/逮捕率），横轴是 FPR（1 - 特异性）。也就错杀率\n\n- TPR 就是灵敏度，也就是衡量能不能给坏的都找全了。\n- 特异性是能不能给好人不错杀了。\n- (0,0) 的时候：一个坏人找不到，一个好人不错杀。\n- (1,1) 的时候：好人坏人通杀。\n\\end{dxtips}",
+    "text": "ROC 曲线：纵轴是 TPR（灵敏度/逮捕率），横轴是 FPR（1 - 特异性）。也就错杀率 - TPR 就是灵敏度，也就是衡量能不能给坏的都找全了。 - 特异性是能不能给好人不错杀了。 - (0,0) 的时候：一个坏人找不到，一个好人不错杀。 - (1,1) 的时候：好人坏人通杀。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 815,
+    "endLine": 822
+  },
+  {
+    "id": "dx-ML-60",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "ROC与AUC",
+    "kind": "definition",
+    "blockTitle": "ROC与AUC",
+    "previewType": "definition",
+    "previewTitle": "ROC与AUC",
+    "rawContent": "\\begin{definition}{AUC}\n\\textbf{AUC} 是 ROC 曲线下的面积：$\\displaystyle\\text{AUC}=\\int_0^1\\text{TPR}\\big(\\text{FPR}^{-1}(x)\\big)\\,\\mathrm{d}x$。\n等价于随机正样本得分大于随机负样本的概率：$\\text{AUC}=P(s_+>s_-)$。取值范围 $[0.5,1]$。\n\\end{definition}",
+    "content": "\\begin{definition}{AUC}\n\\textbf{AUC} 是 ROC 曲线下的面积：$\\displaystyle\\text{AUC}=\\int_0^1\\text{TPR}\\big(\\text{FPR}^{-1}(x)\\big)\\,\\mathrm{d}x$。\n等价于随机正样本得分大于随机负样本的概率：$\\text{AUC}=P(s_+>s_-)$。取值范围 $[0.5,1]$。\n\\end{definition}",
+    "text": "AUC AUC 是 ROC 曲线下的面积： 。 等价于随机正样本得分大于随机负样本的概率： 。取值范围 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 823,
+    "endLine": 826
+  },
+  {
+    "id": "dx-ML-61",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "ROC与AUC",
+    "kind": "note",
+    "blockTitle": "ROC与AUC",
+    "previewType": "note",
+    "previewTitle": "ROC与AUC",
+    "rawContent": "\\begin{note}\n选哪个阈值完全不影响 AUC。\n\nAUC 衡量的只有一件事：模型的排序能力。\n\\begin{itemize}\n    \\item 不管你在 ROC 曲线上选 (0.1, 0.9) 还是 (0.3, 0.98)，AUC 都是同一个值。\n    \\item 因为 AUC 是整条曲线下的面积，把所有阈值都算进去了。\n    \\item 它只在乎\"癌患者的评分是不是普遍高于正常人\"。\n\\end{itemize}\n\n打个比方：\n\\begin{itemize}\n    \\item \\textbf{AUC} = 高考成绩排名——在全校里你排什么位置（排序能力）。\n    \\item \\textbf{阈值} = 你选择\"多少分算及格\"——这完全由老师（业务方）根据实际情况来定。\n\\end{itemize}\n\nAUC 高只说明模型\"排名排得好\"，但不能告诉你\"切在哪里最好\"——那是业务的事。\n\\end{note}",
+    "content": "\\begin{note}\n选哪个阈值完全不影响 AUC。\n\nAUC 衡量的只有一件事：模型的排序能力。\n\\begin{itemize}\n    \\item 不管你在 ROC 曲线上选 (0.1, 0.9) 还是 (0.3, 0.98)，AUC 都是同一个值。\n    \\item 因为 AUC 是整条曲线下的面积，把所有阈值都算进去了。\n    \\item 它只在乎\"癌患者的评分是不是普遍高于正常人\"。\n\\end{itemize}\n\n打个比方：\n\\begin{itemize}\n    \\item \\textbf{AUC} = 高考成绩排名——在全校里你排什么位置（排序能力）。\n    \\item \\textbf{阈值} = 你选择\"多少分算及格\"——这完全由老师（业务方）根据实际情况来定。\n\\end{itemize}\n\nAUC 高只说明模型\"排名排得好\"，但不能告诉你\"切在哪里最好\"——那是业务的事。\n\\end{note}",
+    "text": "选哪个阈值完全不影响 AUC。 AUC 衡量的只有一件事：模型的排序能力。 不管你在 ROC 曲线上选 (0.1, 0.9) 还是 (0.3, 0.98)，AUC 都是同一个值。 因为 AUC 是整条曲线下的面积，把所有阈值都算进去了。 它只在乎\"癌患者的评分是不是普遍高于正常人\"。 打个比方： AUC = 高考成绩排名——在全校里你排什么位置（排序能力）。 阈值 = 你选择\"多少分算及格\"——这完全由老师（业务方）根据实际情况来定。 AUC 高只说明模型\"排名排得好\"，但不能告诉你\"切在哪里最好\"——那是业务的事。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 827,
+    "endLine": 844
+  },
+  {
+    "id": "dx-ML-62",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "definition",
+    "blockTitle": "QDA",
+    "previewType": "definition",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{definition}{QDA（Quadratic Discriminant Analysis）二次辨别分析}\n设 $x\\mid y=k\\sim\\mathcal{N}(\\mu_k,\\Sigma_k)$，$k=0,1$。贝叶斯决策规则为\n\n\\[\n\\hat{y}(x)=\\arg\\max_k \\delta_k(x),\n\\]\n\n其中判别函数\n\n\\[\n\\delta_k(x)=-\\frac{1}{2}\\log|\\Sigma_k|-\\frac{1}{2}(x-\\mu_k)^\\top\\Sigma_k^{-1}(x-\\mu_k)+\\log\\pi_k.\n\\]\n\n$\\delta_k(x)$ 包含 $x$ 的二次项（因 $\\Sigma_0\\neq\\Sigma_1$），故决策边界为二次曲面。若 $\\Sigma_0=\\Sigma_1$ 则退化为 LDA。\n\\end{definition}",
+    "content": "\\begin{definition}{QDA（Quadratic Discriminant Analysis）二次辨别分析}\n设 $x\\mid y=k\\sim\\mathcal{N}(\\mu_k,\\Sigma_k)$，$k=0,1$。贝叶斯决策规则为\n\n\\[\n\\hat{y}(x)=\\arg\\max_k \\delta_k(x),\n\\]\n\n其中判别函数\n\n\\[\n\\delta_k(x)=-\\frac{1}{2}\\log|\\Sigma_k|-\\frac{1}{2}(x-\\mu_k)^\\top\\Sigma_k^{-1}(x-\\mu_k)+\\log\\pi_k.\n\\]\n\n$\\delta_k(x)$ 包含 $x$ 的二次项（因 $\\Sigma_0\\neq\\Sigma_1$），故决策边界为二次曲面。若 $\\Sigma_0=\\Sigma_1$ 则退化为 LDA。\n\\end{definition}",
+    "text": "QDA（Quadratic Discriminant Analysis）二次辨别分析 设 ， 。贝叶斯决策规则为 其中判别函数 包含 的二次项（因 ），故决策边界为二次曲面。若 则退化为 LDA。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 849,
+    "endLine": 863
+  },
+  {
+    "id": "dx-ML-63",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "dxtips",
+    "blockTitle": "QDA",
+    "previewType": "tip",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{dxtips}\n    相求后验不好求先验乘条件概率密度，然后为了把乘变成+就取了log第一项其实就是概率密度的系数，第二项是exp里面的。第k类的条件密度就是第k类的高斯概率密度\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    相求后验不好求先验乘条件概率密度，然后为了把乘变成+就取了log第一项其实就是概率密度的系数，第二项是exp里面的。第k类的条件密度就是第k类的高斯概率密度\n\\end{dxtips}",
+    "text": "相求后验不好求先验乘条件概率密度，然后为了把乘变成+就取了log第一项其实就是概率密度的系数，第二项是exp里面的。第k类的条件密度就是第k类的高斯概率密度",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 864,
+    "endLine": 866
+  },
+  {
+    "id": "dx-ML-64",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "dxtips",
+    "blockTitle": "QDA",
+    "previewType": "tip",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{dxtips}\n    QDA 的判别函数来自对整个高斯密度取对数。\n    因此指数项中的马氏距离平方会保留下来，\n    而密度前面的归一化系数也会变成对数项，\n    例如 $|\\Sigma_k|^{-1/2}$ 会变成 $-\\frac12\\log|\\Sigma_k|$。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    QDA 的判别函数来自对整个高斯密度取对数。\n    因此指数项中的马氏距离平方会保留下来，\n    而密度前面的归一化系数也会变成对数项，\n    例如 $|\\Sigma_k|^{-1/2}$ 会变成 $-\\frac12\\log|\\Sigma_k|$。\n\\end{dxtips}",
+    "text": "QDA 的判别函数来自对整个高斯密度取对数。 因此指数项中的马氏距离平方会保留下来， 而密度前面的归一化系数也会变成对数项， 例如 会变成 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 872,
+    "endLine": 877
+  },
+  {
+    "id": "dx-ML-65",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "dxtips",
+    "blockTitle": "QDA",
+    "previewType": "tip",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{dxtips}\n    正态分布里面exp里面的东西恰好就是马氏距离乘-1/2\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    正态分布里面exp里面的东西恰好就是马氏距离乘-1/2\n\\end{dxtips}",
+    "text": "正态分布里面exp里面的东西恰好就是马氏距离乘-1/2",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 885,
+    "endLine": 887
+  },
+  {
+    "id": "dx-ML-66",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "definition",
+    "blockTitle": "QDA",
+    "previewType": "definition",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{definition}{朴素贝叶斯（Naive Bayes）}\n对 $x=(x_1,\\dots,x_p)$，贝叶斯定理结合条件独立假设：\n\n\\[\nP(y=k\\mid x)\\propto P(y=k)\\prod_{j=1}^p P(x_j\\mid y=k).\n\\]\n\n\\textbf{朴素假设}：给定 $y$，各特征条件独立。决策规则为\n\n\\[\n\\hat{y}(x)=\\arg\\max_k \\Bigl[\\log P(y=k)+\\sum_{j=1}^p\\log P(x_j\\mid y=k)\\Bigr].\n\\]\n\n$P(x_j\\mid y=k)$ 依特征类型选择高斯分布（连续）、多项分布（计数）或伯努利分布（二值）。\n\\end{definition}",
+    "content": "\\begin{definition}{朴素贝叶斯（Naive Bayes）}\n对 $x=(x_1,\\dots,x_p)$，贝叶斯定理结合条件独立假设：\n\n\\[\nP(y=k\\mid x)\\propto P(y=k)\\prod_{j=1}^p P(x_j\\mid y=k).\n\\]\n\n\\textbf{朴素假设}：给定 $y$，各特征条件独立。决策规则为\n\n\\[\n\\hat{y}(x)=\\arg\\max_k \\Bigl[\\log P(y=k)+\\sum_{j=1}^p\\log P(x_j\\mid y=k)\\Bigr].\n\\]\n\n$P(x_j\\mid y=k)$ 依特征类型选择高斯分布（连续）、多项分布（计数）或伯努利分布（二值）。\n\\end{definition}",
+    "text": "朴素贝叶斯（Naive Bayes） 对 ，贝叶斯定理结合条件独立假设： 朴素假设：给定 ，各特征条件独立。决策规则为 依特征类型选择高斯分布（连续）、多项分布（计数）或伯努利分布（二值）。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 903,
+    "endLine": 917
+  },
+  {
+    "id": "dx-ML-67",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
+    "kind": "definition",
+    "blockTitle": "QDA",
+    "previewType": "definition",
+    "previewTitle": "QDA",
+    "rawContent": "\\begin{definition}[Principal Component Analysis]\n主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。\n\n它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。\n\n另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。\n\n\\end{definition}",
+    "content": "\\begin{definition}[Principal Component Analysis]\n主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。\n\n它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。\n\n另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。\n\n\\end{definition}",
+    "text": "[Principal Component Analysis] 主成分分析（PCA）是一种无监督学习算法，用于降维并识别数据中最具信息量的特征。 它的本质思想是：假设数据关系具有线性结构，并将其投影到一个由正交向量组成的子空间中，使得方差最大化。这样的向量称为主成分，它们决定了数据变化最大（信息量最高）的方向。 另一种等价的理解是：PCA 可以看作一种线性投影，它最小化了原始点与其投影点之间的均方根（RMS）距离。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
+    "startLine": 921,
+    "endLine": 928
+  },
+  {
+    "id": "dx-ML-68",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分类方法",
+    "subsection": "QDA",
     "kind": "paragraph",
-    "blockTitle": "LDA",
+    "blockTitle": "QDA",
     "previewType": "text",
-    "previewTitle": "LDA",
+    "previewTitle": "QDA",
     "rawContent": "首先，特征矩阵需要进行中心化处理，以确保第一主成分对应的是数据的最大变化方向，而不仅仅是平均值。通常，求主成分的方法有两种主要思路：\n第一，协方差矩阵的特征值与特征向量分解。协方差矩阵反映了不同变量之间的线性相关程度。该矩阵的特征向量给出了数据方差最大的方向，而特征值则表示该方向上的方差大小。与某个特征向量对应的特征值刻画了该向量对解释数据方差的贡献。特征值越大，该主成分的重要性就越高。通常，只选择能够解释预设方差比例（如 95\\%）的主成分。",
     "content": "首先，特征矩阵需要进行中心化处理，以确保第一主成分对应的是数据的最大变化方向，而不仅仅是平均值。通常，求主成分的方法有两种主要思路：\n第一，协方差矩阵的特征值与特征向量分解。协方差矩阵反映了不同变量之间的线性相关程度。该矩阵的特征向量给出了数据方差最大的方向，而特征值则表示该方向上的方差大小。与某个特征向量对应的特征值刻画了该向量对解释数据方差的贡献。特征值越大，该主成分的重要性就越高。通常，只选择能够解释预设方差比例（如 95\\%）的主成分。",
     "text": "首先，特征矩阵需要进行中心化处理，以确保第一主成分对应的是数据的最大变化方向，而不仅仅是平均值。通常，求主成分的方法有两种主要思路： 第一，协方差矩阵的特征值与特征向量分解。协方差矩阵反映了不同变量之间的线性相关程度。该矩阵的特征向量给出了数据方差最大的方向，而特征值则表示该方向上的方差大小。与某个特征向量对应的特征值刻画了该向量对解释数据方差的贡献。特征值越大，该主成分的重要性就越高。通常，只选择能够解释预设方差比例（如 95\\%）的主成分。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 782,
-    "endLine": 783
+    "startLine": 932,
+    "endLine": 933
   },
   {
-    "id": "dx-ML-59",
+    "id": "dx-ML-69",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48856,11 +49056,11 @@
     "content": "\\begin{definition}[3.3.1]\n设 $(X_1, X_2, \\ldots, X_n)$ 是 $n$ 维随机变量，若 $E(X_1), E(X_2), \\ldots, E(X_n)$ 存在，则称 \n\\[\n(E(X_1), E(X_2), \\ldots, E(X_n))\n\\]\n为 $(X_1, X_2, \\ldots, X_n)$ 的数学期望，简称期望。  \n\n\\medskip\n固定 $i,j$，若 \n\\[\nE\\bigl([X_i - E(X_i)][X_j - E(X_j)]\\bigr)\n\\]\n存在，则称其为 $X_i$ 与 $X_j$ 的协方差（covariance），记作 $\\mathrm{Cov}(X_i, X_j)$，即\n\\[\n\\mathrm{Cov}(X_i, X_j) = E\\bigl([X_i - E(X_i)][X_j - E(X_j)]\\bigr).\n\\]\n\n\\medskip\n易知，$E(X_i)$ 和 $E(X_j)$ 存在是 $\\mathrm{Cov}(X_i, X_j)$ 存在的必要条件。  \n\n\\medskip\n若对 $i,j = 1,2,\\ldots,n$，所有 $\\mathrm{Cov}(X_i, X_j)$ 均存在，则称 $n$ 阶方阵\n\\[\n\\Sigma = (b_{ij})_{n\\times n}, \\quad b_{ij} = \\mathrm{Cov}(X_i, X_j)\n\\]\n为 $(X_1, X_2, \\ldots, X_n)$ 的协方差矩阵（covariance matrix）。\n\\end{definition}",
     "text": "[3.3.1] 设 是 维随机变量，若 存在，则称 为 的数学期望，简称期望。 固定 ，若 存在，则称其为 与 的协方差（covariance），记作 ，即 易知， 和 存在是 存在的必要条件。 若对 ，所有 均存在，则称 阶方阵 为 的协方差矩阵（covariance matrix）。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 785,
-    "endLine": 811
+    "startLine": 935,
+    "endLine": 961
   },
   {
-    "id": "dx-ML-60",
+    "id": "dx-ML-70",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48876,11 +49076,11 @@
     "content": "\\begin{dxtips}{方差与协方差总结}[PS]\\label{dx:any-construct}\n\n\n\\textbf{1. 定义}  \n\\[\n\\mathrm{Var}(X) = E\\big[(X - E[X])^2\\big], \\qquad\n\\mathrm{Cov}(X,Y) = E\\big[(X - E[X])(Y - E[Y])\\big]\n\\]\n\n\\medskip\n\\textbf{2. 数学关系}  \n\\[\n\\mathrm{Var}(X) = \\mathrm{Cov}(X,X)\n\\]\n方差是协方差的特例。\n\n\\medskip\n\\textbf{3. 性质比较}  \n\n\\begin{tabular}{|c|c|c|}\n\\hline\n性质 & 方差 Var(X) & 协方差 Cov(X,Y) \\\\\\hline\n定义 & 单变量的离散程度 & 两变量的联动程度 \\\\\\hline\n符号 & $\\ge 0$ & 可正、可负、或为 0 \\\\\\hline\n几何意义 & 数据点围绕均值的分布宽度 & 点云的倾斜方向、线性关系 \\\\\\hline\n特殊情况 & $\\mathrm{Var}(X)=0 \\iff X$ 为常数 & $\\mathrm{Cov}(X,Y)=0 \\not\\Rightarrow$ 独立 \\\\\\hline\n\\end{tabular}\n\n\n\\end{dxtips}",
     "text": "方差与协方差总结 [PS]dx:any-construct 1. 定义 2. 数学关系 方差是协方差的特例。 3. 性质比较 |c|c|c| 性质 & 方差 Var(X) & 协方差 Cov(X,Y) \\\\ 定义 & 单变量的离散程度 & 两变量的联动程度 \\\\ 符号 & & 可正、可负、或为 0 \\\\ 几何意义 & 数据点围绕均值的分布宽度 & 点云的倾斜方向、线性关系 \\\\ 特殊情况 & 为常数 & 独立 \\\\",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 814,
-    "endLine": 843
+    "startLine": 964,
+    "endLine": 993
   },
   {
-    "id": "dx-ML-61",
+    "id": "dx-ML-71",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48896,11 +49096,11 @@
     "content": "里面的$ E(\\cdot)$ 就是 期望算子，它的作用就是“取加权平均”。\n情景：两门考试成绩。设三名学生的语文与数学成绩分别为\nA：$X=50,\\,Y=55$，B：$X=60,\\,Y=65$，C：$X=70,\\,Y=75$。",
     "text": "里面的 就是 期望算子，它的作用就是“取加权平均”。 情景：两门考试成绩。设三名学生的语文与数学成绩分别为 A： ，B： ，C： 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 845,
-    "endLine": 847
+    "startLine": 995,
+    "endLine": 997
   },
   {
-    "id": "dx-ML-62",
+    "id": "dx-ML-72",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48916,11 +49116,11 @@
     "content": "结果解读：协方差为正，说明语文高的一般数学也高（正相关）；若为负则一高一低（负相关）；若接近 $0$，则两者几乎无线性关系。\n协方差矩阵就是把所有不同的Xi和Xy的关联性在一个矩阵中记录出来。",
     "text": "结果解读：协方差为正，说明语文高的一般数学也高（正相关）；若为负则一高一低（负相关）；若接近 ，则两者几乎无线性关系。 协方差矩阵就是把所有不同的Xi和Xy的关联性在一个矩阵中记录出来。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 878,
-    "endLine": 879
+    "startLine": 1028,
+    "endLine": 1029
   },
   {
-    "id": "dx-ML-63",
+    "id": "dx-ML-73",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48936,11 +49136,11 @@
     "content": "\\begin{dxtips}\n    进一步来说来说减法是把所有的x轴上的点左移或者右移，Y轴的点上移或者下移，两个合起来的操作就是把坐标系切换成了以他们均值为原点的坐标系。他们的乘积就是每一个坐标和原点围成矩形的面积，加权的方式可以让你觉得哪一部分的重要凸显，比如说我希望进缩小极大偏离平均值的那项对整体的影响我就可以给他加一个小的权重让他生成的矩阵面积缩小。\n \\\\\n\t•\t协方差不仅是“面积”，还是一种 趋势的代数平均。\n\t•\t如果绝大多数点落在“同向象限”（右上、左下），那么平均面积大于 0 → 正相关。\n\t•\t如果大多数点落在“反向象限”（右下、左上），平均面积小于 0 → 负相关。\n\t•\t如果点云分布比较均匀，正负面积互相抵消 → 协方差接近 0。\n\\end{dxtips}",
     "text": "进一步来说来说减法是把所有的x轴上的点左移或者右移，Y轴的点上移或者下移，两个合起来的操作就是把坐标系切换成了以他们均值为原点的坐标系。他们的乘积就是每一个坐标和原点围成矩形的面积，加权的方式可以让你觉得哪一部分的重要凸显，比如说我希望进缩小极大偏离平均值的那项对整体的影响我就可以给他加一个小的权重让他生成的矩阵面积缩小。 \\\\ • 协方差不仅是“面积”，还是一种 趋势的代数平均。 • 如果绝大多数点落在“同向象限”（右上、左下），那么平均面积大于 0 → 正相关。 • 如果大多数点落在“反向象限”（右下、左上），平均面积小于 0 → 负相关。 • 如果点云分布比较均匀，正负面积互相抵消 → 协方差接近 0。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 880,
-    "endLine": 887
+    "startLine": 1030,
+    "endLine": 1037
   },
   {
-    "id": "dx-ML-64",
+    "id": "dx-ML-74",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48956,11 +49156,11 @@
     "content": "协方差的几何意义有助于理解其方向与强度，可参见下列视频：\\url{https://www.bilibili.com/video/BV1UWYfz2EKZ}",
     "text": "协方差的几何意义有助于理解其方向与强度，可参见下列视频：https://www.bilibili.com/video/BV1UWYfz2EKZ",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 888,
-    "endLine": 888
+    "startLine": 1038,
+    "endLine": 1038
   },
   {
-    "id": "dx-ML-65",
+    "id": "dx-ML-75",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48976,11 +49176,11 @@
     "content": "第二，数据矩阵的奇异值分解 (SVD)。奇异值分解将任意矩阵表示为三个矩阵的乘积：左奇异矩阵 $U$、奇异值对角矩阵 $S$、以及右奇异矩阵 $V$。其中，奇异值是协方差矩阵特征值的平方根（这就是为什么需要先对数据做中心化），右奇异矩阵 $V$ 对应于协方差矩阵的特征向量，而左奇异矩阵 $U$ 则是原始数据在主成分上的投影。因此，SVD 也可以提取出主成分，而且无需显式计算协方差矩阵。与特征分解方法相比，这种方式更高效、更数值稳定，尤其是在特征间存在强相关性、导致协方差矩阵条件数较差的情况下。特别地，scikit-learn 的 PCA 实现采用的就是这种方法，不过还结合了一些额外的技巧。",
     "text": "第二，数据矩阵的奇异值分解 (SVD)。奇异值分解将任意矩阵表示为三个矩阵的乘积：左奇异矩阵 、奇异值对角矩阵 、以及右奇异矩阵 。其中，奇异值是协方差矩阵特征值的平方根（这就是为什么需要先对数据做中心化），右奇异矩阵 对应于协方差矩阵的特征向量，而左奇异矩阵 则是原始数据在主成分上的投影。因此，SVD 也可以提取出主成分，而且无需显式计算协方差矩阵。与特征分解方法相比，这种方式更高效、更数值稳定，尤其是在特征间存在强相关性、导致协方差矩阵条件数较差的情况下。特别地，scikit-learn 的 PCA 实现采用的就是这种方法，不过还结合了一些额外的技巧。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 901,
-    "endLine": 901
+    "startLine": 1051,
+    "endLine": 1051
   },
   {
-    "id": "dx-ML-66",
+    "id": "dx-ML-76",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -48996,11 +49196,11 @@
     "content": "\\begin{dxtips}{特征值与奇异值}\n    \n\n奇异值与特征值在定义和几何意义上既有联系又有区别。对于方阵 $A \\in \\mathbb{R}^{n\\times n}$，若存在 $\\lambda$ 使得 $Av=\\lambda v$（$v\\neq 0$），则 $\\lambda$ 称为 $A$ 的特征值；而对于任意矩阵 $A \\in \\mathbb{R}^{m\\times n}$，若存在 $\\sigma$ 使得 $A^{\\mathsf T} A v=\\sigma^2 v$（$v\\neq 0$），则 $\\sigma$ 称为 $A$ 的奇异值，即奇异值是 $A^{\\mathsf T}A$ 的特征值的非负平方根。因此奇异值永远非负，而特征值可能为正或负。进一步地，如果 $A$ 是对称矩阵，则奇异值等于特征值的绝对值。例如 $A=\\begin{bmatrix}-3&0\\\\0&2\\end{bmatrix}$ 的特征值为 $-3,2$，而奇异值为 $3,2$。\\\\在几何意义上，特征值描述了矩阵在某些特定方向上对向量的缩放因子，而奇异值则表示矩阵将单位球拉伸为椭球时的半轴长度，刻画的是整体的伸缩尺度。换句话说，奇异值等于 $A^{\\mathsf T}A$ 的特征值平方根，而在对称矩阵的情形下，奇异值就是特征值的绝对值。\n\\end{dxtips}",
     "text": "特征值与奇异值 奇异值与特征值在定义和几何意义上既有联系又有区别。对于方阵 ，若存在 使得 （ ），则 称为 的特征值；而对于任意矩阵 ，若存在 使得 （ ），则 称为 的奇异值，即奇异值是 的特征值的非负平方根。因此奇异值永远非负，而特征值可能为正或负。进一步地，如果 是对称矩阵，则奇异值等于特征值的绝对值。例如 的特征值为 ，而奇异值为 。\\\\在几何意义上，特征值描述了矩阵在某些特定方向上对向量的缩放因子，而奇异值则表示矩阵将单位球拉伸为椭球时的半轴长度，刻画的是整体的伸缩尺度。换句话说，奇异值等于 的特征值平方根，而在对称矩阵的情形下，奇异值就是特征值的绝对值。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 902,
-    "endLine": 906
+    "startLine": 1052,
+    "endLine": 1056
   },
   {
-    "id": "dx-ML-67",
+    "id": "dx-ML-77",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49016,11 +49216,11 @@
     "content": "一个 $m\\times n$ 的矩阵一共有 $mn$ 个单元，但是一列加一行只有 $m+n$ 个分量。  \n为了快速处理矩阵，往往需要将其转化为分量乘积的形式。简单来说，一个图像可以视为一个大型矩阵。  \n要完美复制它，我们需要 $8mn$ 比特的信息。",
     "text": "一个 的矩阵一共有 个单元，但是一列加一行只有 个分量。 为了快速处理矩阵，往往需要将其转化为分量乘积的形式。简单来说，一个图像可以视为一个大型矩阵。 要完美复制它，我们需要 比特的信息。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 909,
-    "endLine": 911
+    "startLine": 1059,
+    "endLine": 1061
   },
   {
-    "id": "dx-ML-68",
+    "id": "dx-ML-78",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49036,11 +49236,11 @@
     "content": "当压缩做得很好时，你几乎看不出与原始图像的差别。图像的边缘（即灰度的突然改变）是最难压缩的部分。  \n如果每个 $a_{ij}$ 都是无关的随机数字，那么压缩根本不可能成功。我们完全依赖这样的事实：邻近像素通常具有相似的灰度值。  \n当你跨越边缘时，会产生一个突跳。现实世界的图像中边缘无处不在，所以动画相比静止图像更容易压缩。\\\\",
     "text": "当压缩做得很好时，你几乎看不出与原始图像的差别。图像的边缘（即灰度的突然改变）是最难压缩的部分。 如果每个 都是无关的随机数字，那么压缩根本不可能成功。我们完全依赖这样的事实：邻近像素通常具有相似的灰度值。 当你跨越边缘时，会产生一个突跳。现实世界的图像中边缘无处不在，所以动画相比静止图像更容易压缩。\\\\",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 921,
-    "endLine": 923
+    "startLine": 1071,
+    "endLine": 1073
   },
   {
-    "id": "dx-ML-69",
+    "id": "dx-ML-79",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49056,11 +49256,11 @@
     "content": "\\begin{example}[2]\n``“王牌旗'' 法国国旗 $A$，意大利国旗 $A$，德国国旗 $A^{\\mathsf T}$\n\n\\[\nA =\n\\begin{bmatrix}\na & a & c & c & e & e\\\\\na & a & c & c & e & e\\\\\na & a & c & c & e & e\\\\\na & a & c & c & e & e\\\\\na & a & c & c & e & e\\\\\na & a & c & c & e & e\n\\end{bmatrix}\n\\quad\\longrightarrow\\quad\n\\begin{bmatrix}\n1\\\\1\\\\1\\\\1\\\\1\\\\1\n\\end{bmatrix}\n\\begin{bmatrix}\na & a & c & c & e & e\n\\end{bmatrix}\n\\]\n\n国旗有 3 个颜色但是秩还是 $1$。假设这 36 个单元保持秩 $1$ 的模式 $A = u_1 v_1^{\\mathsf T}$，它们甚至可以全部不相同。\n但是当秩变成 $r=2$ 时，我们需要 $u_1 v_1^{\\mathsf T} + u_2 v_2^{\\mathsf T}$。\\textcolor{red}{秩是几就需要几个不线性相关的矩阵，每个矩阵都可以写成行乘列}\n\\end{example}",
     "text": "[2] ``“王牌旗'' 法国国旗 ，意大利国旗 ，德国国旗 国旗有 3 个颜色但是秩还是 。假设这 36 个单元保持秩 的模式 ，它们甚至可以全部不相同。 但是当秩变成 时，我们需要 。red 秩是几就需要几个不线性相关的矩阵，每个矩阵都可以写成行乘列",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 926,
-    "endLine": 950
+    "startLine": 1076,
+    "endLine": 1100
   },
   {
-    "id": "dx-ML-70",
+    "id": "dx-ML-80",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49076,11 +49276,11 @@
     "content": "\\begin{example}[3 嵌入方形]\n\\[\nA=\n\\begin{bmatrix}\n1 & 0\\\\\n1 & 1\n\\end{bmatrix}\n\\quad=\\quad\n\\begin{bmatrix}\n1\\\\1\n\\end{bmatrix}\n\\begin{bmatrix}\n1 & 1\n\\end{bmatrix}\n-\n\\begin{bmatrix}\n1\\\\0\n\\end{bmatrix}\n\\begin{bmatrix}\n0 & 1\n\\end{bmatrix}.\n\\]\n\n$A$ 的 $1$ 与 $0$ 可以是 $1$ 的方块与 $0$ 的方块。秩仍然是 $2$，我们仍然只需要两个项 $u_1 v_1^{\\mathsf T}+u_2 v_2^{\\mathsf T}$。\n一个 $6\\times 6$ 图像可以由 24 个数字压缩而来；一个 $N\\times N$ 图像 ($N^2$ 个数字) 可以压缩成 4 个向量 $u_1,u_2,v_1,v_2$ 的 $4N$ 个数字。\n\n注意：这并不是来自 SVD 的选择！例如 $u_1=(1,1), u_2=(1,0)$ 没有正交；\n$u_1=(1,1)$ 与 $v_2=(0,1)$ 也没有正交。SVD 会保证按照顺序选择秩 $1$ 片段。\n\\end{example}",
     "text": "[3 嵌入方形] 的 与 可以是 的方块与 的方块。秩仍然是 ，我们仍然只需要两个项 。 一个 图像可以由 24 个数字压缩而来；一个 图像 ( 个数字) 可以压缩成 4 个向量 的 个数字。 注意：这并不是来自 SVD 的选择！例如 没有正交； 与 也没有正交。SVD 会保证按照顺序选择秩 片段。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 952,
-    "endLine": 980
+    "startLine": 1102,
+    "endLine": 1130
   },
   {
-    "id": "dx-ML-71",
+    "id": "dx-ML-81",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49096,11 +49296,11 @@
     "content": "\\begin{dxtips}[正交化的好处]\n    \n\n 唯一性：正交基保证分解几乎唯一，不会乱选。\n\\\\ 简洁几何意义：任何矩阵 = 旋转 + 拉伸 + 再旋转。\n\\\\数值稳定：正交基避免冗余，误差不放大。\n\\\\ 最优近似：保留前几个奇异值就得到最小误差的低秩近似。\n\\end{dxtips}",
     "text": "[正交化的好处] 唯一性：正交基保证分解几乎唯一，不会乱选。 \\\\ 简洁几何意义：任何矩阵 = 旋转 + 拉伸 + 再旋转。 \\\\数值稳定：正交基避免冗余，误差不放大。 \\\\ 最优近似：保留前几个奇异值就得到最小误差的低秩近似。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 982,
-    "endLine": 989
+    "startLine": 1132,
+    "endLine": 1139
   },
   {
-    "id": "dx-ML-72",
+    "id": "dx-ML-82",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49116,11 +49316,11 @@
     "content": "\\begin{dxtips}\n    因为特征向量乘一个系数还是特征向量所以要看清到底指的那个，比如这里要求的就是单位化的。单位化的一大好处就是满秩正交矩阵乘自己的转置等于单位矩阵可以消除项。\n\\end{dxtips}",
     "text": "因为特征向量乘一个系数还是特征向量所以要看清到底指的那个，比如这里要求的就是单位化的。单位化的一大好处就是满秩正交矩阵乘自己的转置等于单位矩阵可以消除项。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1025,
-    "endLine": 1027
+    "startLine": 1175,
+    "endLine": 1177
   },
   {
-    "id": "dx-ML-73",
+    "id": "dx-ML-83",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49136,11 +49336,11 @@
     "content": "\\]\n全部除以 $\\sqrt{1+\\sigma_1^2}$。\n\\\\像通常有满秩，但是他们确实\n有低效率的(low effective)秩，这就表示：很多奇异值很小，可以被设定成零。我\n们传输的是低秩的近似\n压缩时我们丢弃小的$\\sigma$ 不会严重损失图像的品质，",
     "text": "\\] 全部除以 。 \\\\像通常有满秩，但是他们确实 有低效率的(low effective)秩，这就表示：很多奇异值很小，可以被设定成零。我 们传输的是低秩的近似 压缩时我们丢弃小的 不会严重损失图像的品质，",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1108,
-    "endLine": 1113
+    "startLine": 1258,
+    "endLine": 1263
   },
   {
-    "id": "dx-ML-74",
+    "id": "dx-ML-84",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49156,11 +49356,11 @@
     "content": "\\begin{dxtips}[对角化的好处]\n    \n\\begin{enumerate}\n  \\item 运算简化：$A^k = P D^k P^{-1}$，复杂矩阵运算化为标量运算。\n  \\item 结构清晰：在特征向量基下，矩阵只表现为伸缩（按特征值缩放）。\n  \\item 理论方便：如解微分方程、研究马尔可夫链，化为一维问题。\n  \\item 易于分析：长期行为由最大特征值主导，可用于近似与压缩。\n\\end{enumerate}\n\\end{dxtips}",
     "text": "[对角化的好处] 运算简化： ，复杂矩阵运算化为标量运算。 结构清晰：在特征向量基下，矩阵只表现为伸缩（按特征值缩放）。 理论方便：如解微分方程、研究马尔可夫链，化为一维问题。 易于分析：长期行为由最大特征值主导，可用于近似与压缩。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1115,
-    "endLine": 1123
+    "startLine": 1265,
+    "endLine": 1273
   },
   {
-    "id": "dx-ML-75",
+    "id": "dx-ML-85",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49176,11 +49376,11 @@
     "content": "奇异值分解是线性代数的一个亮点，A 的任意 mn 矩阵，方形或矩形，它的\n秩是 r。我们会对角化 A，但不是用 X\n1\nAX，X 里面的特征向量有三个大问题：他\n们通常不是正交，不一定有足够的特征向量，而且 Ax = x 要求 A 是方形。A 的\n奇异向量以完美的方式解决了全部的问题。",
     "text": "奇异值分解是线性代数的一个亮点，A 的任意 mn 矩阵，方形或矩形，它的 秩是 r。我们会对角化 A，但不是用 X 1 AX，X 里面的特征向量有三个大问题：他 们通常不是正交，不一定有足够的特征向量，而且 Ax = x 要求 A 是方形。A 的 奇异向量以完美的方式解决了全部的问题。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1124,
-    "endLine": 1129
+    "startLine": 1274,
+    "endLine": 1279
   },
   {
-    "id": "dx-ML-76",
+    "id": "dx-ML-86",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49196,11 +49396,11 @@
     "content": "\\]\n这些 $v$’s 与 $u$’s 负责 $A$ 的行空间与列空间，  \n我们还有 $n-r$ 个 $v$’s 与 $m-r$ 个 $u$’s，分别来自零空间 $N(A)$ 与左零空间 $N(A^{\\mathsf T})$。  \n他们自动与前面 $v$’s 与 $u$’s 正交（因为整个零空间是正交）。  \n我们现在引入 $V$ 与 $U$ 的所有 $v$’s 与 $u$’s，所以矩阵变成方形，我们仍然有 $AV = U\\Sigma$。",
     "text": "\\] 这些 ’s 与 ’s 负责 的行空间与列空间， 我们还有 个 ’s 与 个 ’s，分别来自零空间 与左零空间 。 他们自动与前面 ’s 与 ’s 正交（因为整个零空间是正交）。 我们现在引入 与 的所有 ’s 与 ’s，所以矩阵变成方形，我们仍然有 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1140,
-    "endLine": 1144
+    "startLine": 1290,
+    "endLine": 1294
   },
   {
-    "id": "dx-ML-77",
+    "id": "dx-ML-87",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49216,11 +49416,11 @@
     "content": "新的 $\\Sigma$ 是 $m \\times n$，它就是方程式 (2) 的 $r \\times r$ 矩阵加上 $m-r$ 个额外零行以及 $n-r$ 个零列，  \n真正的改变在于 $U$ 与 $V$ 的形状。这些是方形矩阵且 $V^{-1}=V^{\\mathsf T}$，  \n所以 $AV = U\\Sigma$ 变成 $A = U \\Sigma V^{\\mathsf T}$，这就是奇异值分解。",
     "text": "新的 是 ，它就是方程式 (2) 的 矩阵加上 个额外零行以及 个零列， 真正的改变在于 与 的形状。这些是方形矩阵且 ， 所以 变成 ，这就是奇异值分解。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1161,
-    "endLine": 1163
+    "startLine": 1311,
+    "endLine": 1313
   },
   {
-    "id": "dx-ML-78",
+    "id": "dx-ML-88",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49236,11 +49436,11 @@
     "content": "\\medskip\n\\textbf{解：}  \n矩阵 $A$ 需要具有正交特征向量，才能使得 $X = U = V$。  \n如果 $\\Lambda = \\Sigma$，则 $A$ 还需要满足特征值 $\\lambda \\geq 0$。  \n因此 $A$ 必须是一个正半定（或正定）对称矩阵。",
     "text": "解： 矩阵 需要具有正交特征向量，才能使得 。 如果 ，则 还需要满足特征值 。 因此 必须是一个正半定（或正定）对称矩阵。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1186,
-    "endLine": 1190
+    "startLine": 1336,
+    "endLine": 1340
   },
   {
-    "id": "dx-ML-79",
+    "id": "dx-ML-89",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49256,11 +49456,11 @@
     "content": "\\textbf{3. 结论：}  \n去掉 $A$ 的零行（或零列）不会改变非零奇异值。  \n原因是：零行/零列只会在 $A^{\\mathsf T}A$ 或 $AA^{\\mathsf T}$ 中产生额外的 $0$ 特征值，  \n因此不会影响已有的非零奇异值。",
     "text": "3. 结论： 去掉 的零行（或零列）不会改变非零奇异值。 原因是：零行/零列只会在 或 中产生额外的 特征值， 因此不会影响已有的非零奇异值。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1257,
-    "endLine": 1260
+    "startLine": 1407,
+    "endLine": 1410
   },
   {
-    "id": "dx-ML-80",
+    "id": "dx-ML-90",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49276,11 +49476,11 @@
     "content": "\\begin{proposition}[SVD 的几何意义]\n设矩阵 $A \\in \\mathbb{R}^{m \\times n}$ 的奇异值分解为 \n\\[\nA = U \\Sigma V^{\\mathsf T},\n\\]\n则有以下几何解释：\n\\begin{enumerate}\n  \\item $A$ 可以分解为 \\textbf{旋转–拉伸–旋转} 的组合；\n  \\item $A$ 将单位圆上的向量 $x$ 变换到椭圆上的 $Ax$；\n  \\item $A$ 的算子范数为\n  \\[\n  \\|A\\| = \\sigma_1,\n  \\]\n  其中 $\\sigma_1$ 是最大的奇异值，表示最大的增长因子\n  \\[\n  \\max_{x \\neq 0} \\frac{\\|Ax\\|}{\\|x\\|};\n  \\]\n  \\item $A$ 的极分解为\n  \\[\n  A = QS, \\quad Q = UV^{\\mathsf T}, \\; S = V \\Sigma V^{\\mathsf T};\n  \\]\n  \\item $A$ 的伪逆为\n  \\[\n  A^{+} = V \\Sigma^{+} U^{\\mathsf T},\n  \\]\n  它能将列空间中的 $Ax$ 映射回行空间中的 $x$。\n\\end{enumerate}\n\\end{proposition}",
     "text": "[SVD 的几何意义] 设矩阵 的奇异值分解为 则有以下几何解释： 可以分解为 旋转–拉伸–旋转 的组合； 将单位圆上的向量 变换到椭圆上的 ； 的算子范数为 其中 是最大的奇异值，表示最大的增长因子 的极分解为 的伪逆为 它能将列空间中的 映射回行空间中的 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1261,
-    "endLine": 1288
+    "startLine": 1411,
+    "endLine": 1438
   },
   {
-    "id": "dx-ML-81",
+    "id": "dx-ML-91",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49296,11 +49496,11 @@
     "content": "\\begin{theorem}{基于 SVD 的 PCA 构造过程如下：}\n\n\\begin{enumerate}\n  \\item 首先进行数据中心化，如果没有指定主成分的数量，则主成分数至少在样本数和特征数之间确定；\n  \\item 然后对中心化后的数据矩阵应用奇异值分解（SVD）；\n  \\item 将 \\texttt{svd\\_flip\\_vector} 方法应用于矩阵 $U$，该方法在矩阵 $U$ 的每一列中找到最大模元素，提取其符号，并用这些符号乘以矩阵 $U$，以保证输出结果的确定性；\n  \\item 每个主成分的解释方差计算为相应奇异值平方除以 $n_{\\text{samples}} - 1$。然后根据下式计算变换后的数据，主成分的数量取决于所需的保留数量：\n  \\[\n    X_{\\text{new}} = X \\cdot V = U \\cdot S \\cdot V^T \\cdot V = U \\cdot S\n  \\]\n\\end{enumerate}\n\\end{theorem}",
     "text": "基于 SVD 的 PCA 构造过程如下： 首先进行数据中心化，如果没有指定主成分的数量，则主成分数至少在样本数和特征数之间确定； 然后对中心化后的数据矩阵应用奇异值分解（SVD）； 将 svd\\_flip\\_vector 方法应用于矩阵 ，该方法在矩阵 的每一列中找到最大模元素，提取其符号，并用这些符号乘以矩阵 ，以保证输出结果的确定性； 每个主成分的解释方差计算为相应奇异值平方除以 。然后根据下式计算变换后的数据，主成分的数量取决于所需的保留数量：",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1293,
-    "endLine": 1304
+    "startLine": 1443,
+    "endLine": 1454
   },
   {
-    "id": "dx-ML-82",
+    "id": "dx-ML-92",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49316,11 +49516,11 @@
     "content": "\\begin{theorem}[PCA 的附加特性]\n\\quad\n\n(1) \\textbf{解释方差系数}：每个主成分的解释方差系数可以通过变量 \\texttt{explained\\_variance\\_ratio\\_} 获得，表示数据集在每个主成分轴上的方差比例。\n\n(2) \\textbf{数据恢复}：使用 \\texttt{inverse\\_transform()} 方法进行数据恢复，其本质是对 PCA 投影进行逆变换：\n\\[\nX_{\\text{recovered}} = X_{d-\\text{proj}} W_d^T ,\n\\]\n其中 $W_d^T$ 是前 $d$ 个主成分所组成的矩阵。数据的恢复会存在与丢弃的方差量成比例的损失；原始数据与恢复数据之间的距离平方的平均值称为 \\emph{重构误差}。\n\n(3) \\textbf{增量 PCA}：实现为 \\texttt{IncrementalPCA} 类，允许在处理大规模数据集时更加高效，可以将数据拆分成小块并逐步存储在内存中进行训练。\n\n(4) \\textbf{随机 PCA}：通过设置参数 \\texttt{svd\\_solver='randomized'} 来实现，使用随机算法快速计算近似的 $d$ 个主成分。该方法基于随机投影的假设，即数据在投影到低维子空间时仍能较好地保持其结构和性质。但该方法的精确度可能较低。\n\n(5) \\textbf{核 PCA}：实现为 \\texttt{KernelPCA} 类，允许使用核函数进行复杂的非线性投影。类似于支持向量机 (SVM)，其本质是将原始空间中的非线性问题转化为高维特征空间中的线性边界。\n\\end{theorem}",
     "text": "[PCA 的附加特性] (1) 解释方差系数：每个主成分的解释方差系数可以通过变量 explained\\_variance\\_ratio\\_ 获得，表示数据集在每个主成分轴上的方差比例。 (2) 数据恢复：使用 inverse\\_transform() 方法进行数据恢复，其本质是对 PCA 投影进行逆变换： 其中 是前 个主成分所组成的矩阵。数据的恢复会存在与丢弃的方差量成比例的损失；原始数据与恢复数据之间的距离平方的平均值称为 重构误差。 (3) 增量 PCA：实现为 IncrementalPCA 类，允许在处理大规模数据集时更加高效，可以将数据拆分成小块并逐步存储在内存中进行训练。 (4) 随机 PCA：通过设置参数 svd\\_solver='randomized' 来实现，使用随机算法快速计算近似的 个主成分。该方法基于随机投影的假设，即数据在投影到低维子空间时仍能较好地保持其结构和性质。但该方法的精确度可能较低。 (5) 核 PCA：实现为 KernelPCA 类，允许使用核函数进行复杂的非线性投影。类似于支持向量机 (SVM)，其本质是将原始空间中的非线性问题转化为高维特征空间中的线性边界。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1305,
-    "endLine": 1321
+    "startLine": 1455,
+    "endLine": 1471
   },
   {
-    "id": "dx-ML-83",
+    "id": "dx-ML-93",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49336,11 +49536,11 @@
     "content": "\\begin{theorem}[PCA 的替代方法]\n尽管主成分分析（PCA）是最常用的降维算法之一，但在一些情况下，\n根据数据类型的不同，也存在一些更为合适的替代方法：\n\n\\paragraph{LLE (Locally Linear Embedding)}  \n局部线性嵌入是一种通过邻居点的线性组合来表示每个数据点，\n并在低维空间中恢复这些组合的算法。这样可以保持数据的非线性几何结构，\n在某些对全局性质要求不高的任务中十分有用。\n然而，该方法计算复杂度较高，并且可能对噪声敏感。\n\n\\paragraph{t-SNE (t-Distributed Stochastic Neighbor Embedding)}  \nt-SNE 是一种将高维空间中点之间的相似性转化为概率的算法，\n并试图最小化高维与低维空间中概率分布的差异。t-SNE 在可视化高维数据时非常有效，\n但它可能会扭曲数据的整体结构，因为它只考虑点在原始空间中的局部邻近性，\n而忽略了线性依赖关系。\n\n\\paragraph{UMAP (Uniform Manifold Approximation and Projection)}  \n统一流形近似与投影是一种适用于数据可视化的算法，\n其思想是数据位于某个可以用邻居图近似的同质流形上。\n该方法考虑了数据的整体结构，相比 t-SNE 更能适应不同类型的数据，\n并且在处理噪声与异常值时表现更好。\n\n\\paragraph{Autoencoders}  \n自编码器是一类基于神经网络的模型，通过训练编码器将输入数据转换为低维表示，\n再通过解码器从该表示中恢复原始数据。自编码器不仅可以用于数据压缩与降维，\n还可用于去噪和特征提取等多种任务。\n\\end{theorem}",
     "text": "[PCA 的替代方法] 尽管主成分分析（PCA）是最常用的降维算法之一，但在一些情况下， 根据数据类型的不同，也存在一些更为合适的替代方法： LLE (Locally Linear Embedding) 局部线性嵌入是一种通过邻居点的线性组合来表示每个数据点， 并在低维空间中恢复这些组合的算法。这样可以保持数据的非线性几何结构， 在某些对全局性质要求不高的任务中十分有用。 然而，该方法计算复杂度较高，并且可能对噪声敏感。 t-SNE (t-Distributed Stochastic Neighbor Embedding) t-SNE 是一种将高维空间中点之间的相似性转化为概率的算法， 并试图最小化高维与低维空间中概率分布的差异。t-SNE 在可视化高维数据时非常有效， 但它可能会扭曲数据的整体结构，因为它只考虑点在原始空间中的局部邻近性， 而忽略了线性依赖关系。 UMAP (Uniform Manifold Approximation and Projection) 统一流形近似与投影是一种适用于数据可视化的算法， 其思想是数据位于某个可以用邻居图近似的同质流形上。 该方法考虑了数据的整体结构，相比 t-SNE 更能适应不同类型的数据， 并且在处理噪声与异常值时表现更好。 Autoencoders 自编码器是一类基于神经网络的模型，通过训练编码器将输入数据转换为低维表示， 再通过解码器从该表示中恢复原始数据。自编码器不仅可以用于数据压缩与降维， 还可用于去噪和特征提取等多种任务。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第一章基础理论.tex",
-    "startLine": 1323,
-    "endLine": 1349
+    "startLine": 1473,
+    "endLine": 1499
   },
   {
-    "id": "dx-ML-84",
+    "id": "dx-ML-94",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49360,7 +49560,7 @@
     "endLine": 26
   },
   {
-    "id": "dx-ML-85",
+    "id": "dx-ML-95",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49380,7 +49580,7 @@
     "endLine": 49
   },
   {
-    "id": "dx-ML-86",
+    "id": "dx-ML-96",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49400,7 +49600,7 @@
     "endLine": 57
   },
   {
-    "id": "dx-ML-87",
+    "id": "dx-ML-97",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49420,7 +49620,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-88",
+    "id": "dx-ML-98",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49440,7 +49640,7 @@
     "endLine": 73
   },
   {
-    "id": "dx-ML-89",
+    "id": "dx-ML-99",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49460,7 +49660,7 @@
     "endLine": 114
   },
   {
-    "id": "dx-ML-90",
+    "id": "dx-ML-100",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49480,7 +49680,7 @@
     "endLine": 138
   },
   {
-    "id": "dx-ML-91",
+    "id": "dx-ML-101",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49500,7 +49700,7 @@
     "endLine": 147
   },
   {
-    "id": "dx-ML-92",
+    "id": "dx-ML-102",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49520,7 +49720,7 @@
     "endLine": 162
   },
   {
-    "id": "dx-ML-93",
+    "id": "dx-ML-103",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49540,7 +49740,7 @@
     "endLine": 180
   },
   {
-    "id": "dx-ML-94",
+    "id": "dx-ML-104",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49560,7 +49760,7 @@
     "endLine": 181
   },
   {
-    "id": "dx-ML-95",
+    "id": "dx-ML-105",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49580,7 +49780,7 @@
     "endLine": 184
   },
   {
-    "id": "dx-ML-96",
+    "id": "dx-ML-106",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49600,7 +49800,7 @@
     "endLine": 198
   },
   {
-    "id": "dx-ML-97",
+    "id": "dx-ML-107",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49620,7 +49820,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-ML-98",
+    "id": "dx-ML-108",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49640,7 +49840,7 @@
     "endLine": 231
   },
   {
-    "id": "dx-ML-99",
+    "id": "dx-ML-109",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49660,7 +49860,7 @@
     "endLine": 244
   },
   {
-    "id": "dx-ML-100",
+    "id": "dx-ML-110",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49680,7 +49880,7 @@
     "endLine": 249
   },
   {
-    "id": "dx-ML-101",
+    "id": "dx-ML-111",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49700,7 +49900,7 @@
     "endLine": 253
   },
   {
-    "id": "dx-ML-102",
+    "id": "dx-ML-112",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49720,7 +49920,7 @@
     "endLine": 263
   },
   {
-    "id": "dx-ML-103",
+    "id": "dx-ML-113",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49740,7 +49940,7 @@
     "endLine": 276
   },
   {
-    "id": "dx-ML-104",
+    "id": "dx-ML-114",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49760,7 +49960,7 @@
     "endLine": 279
   },
   {
-    "id": "dx-ML-105",
+    "id": "dx-ML-115",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49780,7 +49980,7 @@
     "endLine": 287
   },
   {
-    "id": "dx-ML-106",
+    "id": "dx-ML-116",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49800,7 +50000,7 @@
     "endLine": 290
   },
   {
-    "id": "dx-ML-107",
+    "id": "dx-ML-117",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49820,7 +50020,7 @@
     "endLine": 301
   },
   {
-    "id": "dx-ML-108",
+    "id": "dx-ML-118",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49840,7 +50040,7 @@
     "endLine": 305
   },
   {
-    "id": "dx-ML-109",
+    "id": "dx-ML-119",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49860,7 +50060,7 @@
     "endLine": 13
   },
   {
-    "id": "dx-ML-110",
+    "id": "dx-ML-120",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49880,7 +50080,7 @@
     "endLine": 33
   },
   {
-    "id": "dx-ML-111",
+    "id": "dx-ML-121",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49900,7 +50100,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-ML-112",
+    "id": "dx-ML-122",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49920,7 +50120,7 @@
     "endLine": 37
   },
   {
-    "id": "dx-ML-113",
+    "id": "dx-ML-123",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49940,7 +50140,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-ML-114",
+    "id": "dx-ML-124",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49960,7 +50160,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-115",
+    "id": "dx-ML-125",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -49980,7 +50180,7 @@
     "endLine": 60
   },
   {
-    "id": "dx-ML-116",
+    "id": "dx-ML-126",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50000,7 +50200,7 @@
     "endLine": 83
   },
   {
-    "id": "dx-ML-117",
+    "id": "dx-ML-127",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50020,7 +50220,7 @@
     "endLine": 125
   },
   {
-    "id": "dx-ML-118",
+    "id": "dx-ML-128",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50040,7 +50240,7 @@
     "endLine": 185
   },
   {
-    "id": "dx-ML-119",
+    "id": "dx-ML-129",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50060,7 +50260,7 @@
     "endLine": 214
   },
   {
-    "id": "dx-ML-120",
+    "id": "dx-ML-130",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50080,7 +50280,7 @@
     "endLine": 224
   },
   {
-    "id": "dx-ML-121",
+    "id": "dx-ML-131",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50100,7 +50300,7 @@
     "endLine": 228
   },
   {
-    "id": "dx-ML-122",
+    "id": "dx-ML-132",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50120,7 +50320,7 @@
     "endLine": 248
   },
   {
-    "id": "dx-ML-123",
+    "id": "dx-ML-133",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50140,7 +50340,7 @@
     "endLine": 275
   },
   {
-    "id": "dx-ML-124",
+    "id": "dx-ML-134",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50160,7 +50360,7 @@
     "endLine": 292
   },
   {
-    "id": "dx-ML-125",
+    "id": "dx-ML-135",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50180,7 +50380,7 @@
     "endLine": 301
   },
   {
-    "id": "dx-ML-126",
+    "id": "dx-ML-136",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50200,7 +50400,7 @@
     "endLine": 305
   },
   {
-    "id": "dx-ML-127",
+    "id": "dx-ML-137",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50220,7 +50420,7 @@
     "endLine": 309
   },
   {
-    "id": "dx-ML-128",
+    "id": "dx-ML-138",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50240,7 +50440,7 @@
     "endLine": 316
   },
   {
-    "id": "dx-ML-129",
+    "id": "dx-ML-139",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50260,7 +50460,7 @@
     "endLine": 397
   },
   {
-    "id": "dx-ML-130",
+    "id": "dx-ML-140",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50280,7 +50480,7 @@
     "endLine": 466
   },
   {
-    "id": "dx-ML-131",
+    "id": "dx-ML-141",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50300,7 +50500,7 @@
     "endLine": 477
   },
   {
-    "id": "dx-ML-132",
+    "id": "dx-ML-142",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50320,7 +50520,7 @@
     "endLine": 480
   },
   {
-    "id": "dx-ML-133",
+    "id": "dx-ML-143",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50340,7 +50540,7 @@
     "endLine": 487
   },
   {
-    "id": "dx-ML-134",
+    "id": "dx-ML-144",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50360,7 +50560,7 @@
     "endLine": 499
   },
   {
-    "id": "dx-ML-135",
+    "id": "dx-ML-145",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50380,7 +50580,7 @@
     "endLine": 506
   },
   {
-    "id": "dx-ML-136",
+    "id": "dx-ML-146",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50400,7 +50600,7 @@
     "endLine": 530
   },
   {
-    "id": "dx-ML-137",
+    "id": "dx-ML-147",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50420,7 +50620,7 @@
     "endLine": 543
   },
   {
-    "id": "dx-ML-138",
+    "id": "dx-ML-148",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50440,7 +50640,7 @@
     "endLine": 565
   },
   {
-    "id": "dx-ML-139",
+    "id": "dx-ML-149",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50460,7 +50660,7 @@
     "endLine": 599
   },
   {
-    "id": "dx-ML-140",
+    "id": "dx-ML-150",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50480,7 +50680,7 @@
     "endLine": 621
   },
   {
-    "id": "dx-ML-141",
+    "id": "dx-ML-151",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50500,7 +50700,7 @@
     "endLine": 633
   },
   {
-    "id": "dx-ML-142",
+    "id": "dx-ML-152",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50520,7 +50720,7 @@
     "endLine": 653
   },
   {
-    "id": "dx-ML-143",
+    "id": "dx-ML-153",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50540,7 +50740,7 @@
     "endLine": 727
   },
   {
-    "id": "dx-ML-144",
+    "id": "dx-ML-154",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50560,7 +50760,7 @@
     "endLine": 730
   },
   {
-    "id": "dx-ML-145",
+    "id": "dx-ML-155",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50580,7 +50780,7 @@
     "endLine": 733
   },
   {
-    "id": "dx-ML-146",
+    "id": "dx-ML-156",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50600,7 +50800,7 @@
     "endLine": 740
   },
   {
-    "id": "dx-ML-147",
+    "id": "dx-ML-157",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50620,7 +50820,7 @@
     "endLine": 1098
   },
   {
-    "id": "dx-ML-148",
+    "id": "dx-ML-158",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50640,7 +50840,7 @@
     "endLine": 1103
   },
   {
-    "id": "dx-ML-149",
+    "id": "dx-ML-159",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50660,7 +50860,7 @@
     "endLine": 1163
   },
   {
-    "id": "dx-ML-150",
+    "id": "dx-ML-160",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50680,7 +50880,7 @@
     "endLine": 1228
   },
   {
-    "id": "dx-ML-151",
+    "id": "dx-ML-161",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50700,7 +50900,7 @@
     "endLine": 1249
   },
   {
-    "id": "dx-ML-152",
+    "id": "dx-ML-162",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50720,7 +50920,7 @@
     "endLine": 1264
   },
   {
-    "id": "dx-ML-153",
+    "id": "dx-ML-163",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50740,7 +50940,7 @@
     "endLine": 1277
   },
   {
-    "id": "dx-ML-154",
+    "id": "dx-ML-164",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50760,7 +50960,7 @@
     "endLine": 1311
   },
   {
-    "id": "dx-ML-155",
+    "id": "dx-ML-165",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50780,7 +50980,7 @@
     "endLine": 1321
   },
   {
-    "id": "dx-ML-156",
+    "id": "dx-ML-166",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50800,7 +51000,7 @@
     "endLine": 21
   },
   {
-    "id": "dx-ML-157",
+    "id": "dx-ML-167",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50820,7 +51020,7 @@
     "endLine": 32
   },
   {
-    "id": "dx-ML-158",
+    "id": "dx-ML-168",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50840,7 +51040,7 @@
     "endLine": 45
   },
   {
-    "id": "dx-ML-159",
+    "id": "dx-ML-169",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50860,7 +51060,7 @@
     "endLine": 52
   },
   {
-    "id": "dx-ML-160",
+    "id": "dx-ML-170",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50880,7 +51080,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-161",
+    "id": "dx-ML-171",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50900,7 +51100,7 @@
     "endLine": 75
   },
   {
-    "id": "dx-ML-162",
+    "id": "dx-ML-172",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50920,7 +51120,7 @@
     "endLine": 82
   },
   {
-    "id": "dx-ML-163",
+    "id": "dx-ML-173",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50940,7 +51140,7 @@
     "endLine": 87
   },
   {
-    "id": "dx-ML-164",
+    "id": "dx-ML-174",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50960,7 +51160,7 @@
     "endLine": 95
   },
   {
-    "id": "dx-ML-165",
+    "id": "dx-ML-175",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -50980,7 +51180,7 @@
     "endLine": 107
   },
   {
-    "id": "dx-ML-166",
+    "id": "dx-ML-176",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51000,7 +51200,7 @@
     "endLine": 111
   },
   {
-    "id": "dx-ML-167",
+    "id": "dx-ML-177",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51020,7 +51220,7 @@
     "endLine": 124
   },
   {
-    "id": "dx-ML-168",
+    "id": "dx-ML-178",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51040,7 +51240,7 @@
     "endLine": 134
   },
   {
-    "id": "dx-ML-169",
+    "id": "dx-ML-179",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51060,7 +51260,7 @@
     "endLine": 142
   },
   {
-    "id": "dx-ML-170",
+    "id": "dx-ML-180",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51080,7 +51280,7 @@
     "endLine": 150
   },
   {
-    "id": "dx-ML-171",
+    "id": "dx-ML-181",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51100,7 +51300,7 @@
     "endLine": 166
   },
   {
-    "id": "dx-ML-172",
+    "id": "dx-ML-182",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51120,7 +51320,7 @@
     "endLine": 173
   },
   {
-    "id": "dx-ML-173",
+    "id": "dx-ML-183",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51140,7 +51340,7 @@
     "endLine": 183
   },
   {
-    "id": "dx-ML-174",
+    "id": "dx-ML-184",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51160,7 +51360,7 @@
     "endLine": 202
   },
   {
-    "id": "dx-ML-175",
+    "id": "dx-ML-185",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51180,7 +51380,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-ML-176",
+    "id": "dx-ML-186",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51200,7 +51400,7 @@
     "endLine": 240
   },
   {
-    "id": "dx-ML-177",
+    "id": "dx-ML-187",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51220,7 +51420,7 @@
     "endLine": 251
   },
   {
-    "id": "dx-ML-178",
+    "id": "dx-ML-188",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51240,7 +51440,7 @@
     "endLine": 261
   },
   {
-    "id": "dx-ML-179",
+    "id": "dx-ML-189",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51260,7 +51460,7 @@
     "endLine": 280
   },
   {
-    "id": "dx-ML-180",
+    "id": "dx-ML-190",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51280,7 +51480,7 @@
     "endLine": 289
   },
   {
-    "id": "dx-ML-181",
+    "id": "dx-ML-191",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51300,7 +51500,7 @@
     "endLine": 293
   },
   {
-    "id": "dx-ML-182",
+    "id": "dx-ML-192",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51320,7 +51520,7 @@
     "endLine": 303
   },
   {
-    "id": "dx-ML-183",
+    "id": "dx-ML-193",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51340,7 +51540,7 @@
     "endLine": 312
   },
   {
-    "id": "dx-ML-184",
+    "id": "dx-ML-194",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51360,7 +51560,7 @@
     "endLine": 318
   },
   {
-    "id": "dx-ML-185",
+    "id": "dx-ML-195",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51380,7 +51580,7 @@
     "endLine": 330
   },
   {
-    "id": "dx-ML-186",
+    "id": "dx-ML-196",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51400,7 +51600,7 @@
     "endLine": 336
   },
   {
-    "id": "dx-ML-187",
+    "id": "dx-ML-197",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51420,7 +51620,7 @@
     "endLine": 340
   },
   {
-    "id": "dx-ML-188",
+    "id": "dx-ML-198",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51440,7 +51640,7 @@
     "endLine": 352
   },
   {
-    "id": "dx-ML-189",
+    "id": "dx-ML-199",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51460,7 +51660,7 @@
     "endLine": 360
   },
   {
-    "id": "dx-ML-190",
+    "id": "dx-ML-200",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51480,7 +51680,7 @@
     "endLine": 378
   },
   {
-    "id": "dx-ML-191",
+    "id": "dx-ML-201",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51500,7 +51700,7 @@
     "endLine": 384
   },
   {
-    "id": "dx-ML-192",
+    "id": "dx-ML-202",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51520,7 +51720,7 @@
     "endLine": 388
   },
   {
-    "id": "dx-ML-193",
+    "id": "dx-ML-203",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51540,7 +51740,7 @@
     "endLine": 400
   },
   {
-    "id": "dx-ML-194",
+    "id": "dx-ML-204",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51560,7 +51760,7 @@
     "endLine": 406
   },
   {
-    "id": "dx-ML-195",
+    "id": "dx-ML-205",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51580,7 +51780,7 @@
     "endLine": 414
   },
   {
-    "id": "dx-ML-196",
+    "id": "dx-ML-206",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51600,7 +51800,7 @@
     "endLine": 420
   },
   {
-    "id": "dx-ML-197",
+    "id": "dx-ML-207",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51620,7 +51820,7 @@
     "endLine": 428
   },
   {
-    "id": "dx-ML-198",
+    "id": "dx-ML-208",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51640,7 +51840,7 @@
     "endLine": 433
   },
   {
-    "id": "dx-ML-199",
+    "id": "dx-ML-209",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51660,7 +51860,7 @@
     "endLine": 442
   },
   {
-    "id": "dx-ML-200",
+    "id": "dx-ML-210",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51680,7 +51880,7 @@
     "endLine": 451
   },
   {
-    "id": "dx-ML-201",
+    "id": "dx-ML-211",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51700,7 +51900,7 @@
     "endLine": 459
   },
   {
-    "id": "dx-ML-202",
+    "id": "dx-ML-212",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51720,7 +51920,7 @@
     "endLine": 466
   },
   {
-    "id": "dx-ML-203",
+    "id": "dx-ML-213",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51740,7 +51940,7 @@
     "endLine": 471
   },
   {
-    "id": "dx-ML-204",
+    "id": "dx-ML-214",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51760,7 +51960,7 @@
     "endLine": 475
   },
   {
-    "id": "dx-ML-205",
+    "id": "dx-ML-215",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51780,7 +51980,7 @@
     "endLine": 481
   },
   {
-    "id": "dx-ML-206",
+    "id": "dx-ML-216",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51800,7 +52000,7 @@
     "endLine": 487
   },
   {
-    "id": "dx-ML-207",
+    "id": "dx-ML-217",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51820,7 +52020,7 @@
     "endLine": 493
   },
   {
-    "id": "dx-ML-208",
+    "id": "dx-ML-218",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51840,7 +52040,7 @@
     "endLine": 496
   },
   {
-    "id": "dx-ML-209",
+    "id": "dx-ML-219",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51860,7 +52060,7 @@
     "endLine": 499
   },
   {
-    "id": "dx-ML-210",
+    "id": "dx-ML-220",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51880,7 +52080,7 @@
     "endLine": 503
   },
   {
-    "id": "dx-ML-211",
+    "id": "dx-ML-221",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51900,7 +52100,7 @@
     "endLine": 509
   },
   {
-    "id": "dx-ML-212",
+    "id": "dx-ML-222",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51920,7 +52120,7 @@
     "endLine": 519
   },
   {
-    "id": "dx-ML-213",
+    "id": "dx-ML-223",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51940,7 +52140,7 @@
     "endLine": 521
   },
   {
-    "id": "dx-ML-214",
+    "id": "dx-ML-224",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51960,7 +52160,7 @@
     "endLine": 523
   },
   {
-    "id": "dx-ML-215",
+    "id": "dx-ML-225",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51980,7 +52180,7 @@
     "endLine": 527
   },
   {
-    "id": "dx-ML-216",
+    "id": "dx-ML-226",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52000,7 +52200,7 @@
     "endLine": 529
   },
   {
-    "id": "dx-ML-217",
+    "id": "dx-ML-227",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52020,7 +52220,7 @@
     "endLine": 531
   },
   {
-    "id": "dx-ML-218",
+    "id": "dx-ML-228",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52040,7 +52240,7 @@
     "endLine": 533
   },
   {
-    "id": "dx-ML-219",
+    "id": "dx-ML-229",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52060,7 +52260,7 @@
     "endLine": 535
   },
   {
-    "id": "dx-ML-220",
+    "id": "dx-ML-230",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52080,7 +52280,7 @@
     "endLine": 539
   },
   {
-    "id": "dx-ML-221",
+    "id": "dx-ML-231",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52100,7 +52300,7 @@
     "endLine": 549
   },
   {
-    "id": "dx-ML-222",
+    "id": "dx-ML-232",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52120,7 +52320,7 @@
     "endLine": 553
   },
   {
-    "id": "dx-ML-223",
+    "id": "dx-ML-233",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52140,7 +52340,7 @@
     "endLine": 555
   },
   {
-    "id": "dx-ML-224",
+    "id": "dx-ML-234",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52160,7 +52360,7 @@
     "endLine": 559
   },
   {
-    "id": "dx-ML-225",
+    "id": "dx-ML-235",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52180,7 +52380,7 @@
     "endLine": 563
   },
   {
-    "id": "dx-ML-226",
+    "id": "dx-ML-236",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52200,7 +52400,7 @@
     "endLine": 567
   },
   {
-    "id": "dx-ML-227",
+    "id": "dx-ML-237",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52220,7 +52420,7 @@
     "endLine": 569
   },
   {
-    "id": "dx-ML-228",
+    "id": "dx-ML-238",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52240,7 +52440,7 @@
     "endLine": 575
   },
   {
-    "id": "dx-ML-229",
+    "id": "dx-ML-239",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52260,7 +52460,7 @@
     "endLine": 577
   },
   {
-    "id": "dx-ML-230",
+    "id": "dx-ML-240",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52280,7 +52480,7 @@
     "endLine": 579
   },
   {
-    "id": "dx-ML-231",
+    "id": "dx-ML-241",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52300,7 +52500,7 @@
     "endLine": 581
   },
   {
-    "id": "dx-ML-232",
+    "id": "dx-ML-242",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52320,7 +52520,7 @@
     "endLine": 585
   },
   {
-    "id": "dx-ML-233",
+    "id": "dx-ML-243",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52340,7 +52540,7 @@
     "endLine": 597
   },
   {
-    "id": "dx-ML-234",
+    "id": "dx-ML-244",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52360,7 +52560,7 @@
     "endLine": 599
   },
   {
-    "id": "dx-ML-235",
+    "id": "dx-ML-245",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52380,7 +52580,7 @@
     "endLine": 603
   },
   {
-    "id": "dx-ML-236",
+    "id": "dx-ML-246",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52400,7 +52600,7 @@
     "endLine": 607
   },
   {
-    "id": "dx-ML-237",
+    "id": "dx-ML-247",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52420,7 +52620,7 @@
     "endLine": 609
   },
   {
-    "id": "dx-ML-238",
+    "id": "dx-ML-248",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52440,7 +52640,7 @@
     "endLine": 611
   },
   {
-    "id": "dx-ML-239",
+    "id": "dx-ML-249",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52460,7 +52660,7 @@
     "endLine": 615
   },
   {
-    "id": "dx-ML-240",
+    "id": "dx-ML-250",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52480,7 +52680,7 @@
     "endLine": 617
   },
   {
-    "id": "dx-ML-241",
+    "id": "dx-ML-251",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52500,7 +52700,7 @@
     "endLine": 621
   },
   {
-    "id": "dx-ML-242",
+    "id": "dx-ML-252",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52520,7 +52720,7 @@
     "endLine": 623
   },
   {
-    "id": "dx-ML-243",
+    "id": "dx-ML-253",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52540,7 +52740,7 @@
     "endLine": 627
   },
   {
-    "id": "dx-ML-244",
+    "id": "dx-ML-254",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52560,7 +52760,7 @@
     "endLine": 629
   },
   {
-    "id": "dx-ML-245",
+    "id": "dx-ML-255",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52580,7 +52780,7 @@
     "endLine": 633
   },
   {
-    "id": "dx-ML-246",
+    "id": "dx-ML-256",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52600,7 +52800,7 @@
     "endLine": 635
   },
   {
-    "id": "dx-ML-247",
+    "id": "dx-ML-257",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52620,7 +52820,7 @@
     "endLine": 637
   },
   {
-    "id": "dx-ML-248",
+    "id": "dx-ML-258",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52640,7 +52840,7 @@
     "endLine": 641
   },
   {
-    "id": "dx-ML-249",
+    "id": "dx-ML-259",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52660,7 +52860,7 @@
     "endLine": 643
   },
   {
-    "id": "dx-ML-250",
+    "id": "dx-ML-260",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52680,7 +52880,7 @@
     "endLine": 645
   },
   {
-    "id": "dx-ML-251",
+    "id": "dx-ML-261",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52700,7 +52900,7 @@
     "endLine": 647
   },
   {
-    "id": "dx-ML-252",
+    "id": "dx-ML-262",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52720,7 +52920,7 @@
     "endLine": 649
   },
   {
-    "id": "dx-ML-253",
+    "id": "dx-ML-263",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52740,7 +52940,7 @@
     "endLine": 651
   },
   {
-    "id": "dx-ML-254",
+    "id": "dx-ML-264",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52760,7 +52960,7 @@
     "endLine": 662
   },
   {
-    "id": "dx-ML-255",
+    "id": "dx-ML-265",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52780,7 +52980,7 @@
     "endLine": 664
   },
   {
-    "id": "dx-ML-256",
+    "id": "dx-ML-266",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52800,7 +53000,7 @@
     "endLine": 673
   },
   {
-    "id": "dx-ML-257",
+    "id": "dx-ML-267",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52820,7 +53020,7 @@
     "endLine": 676
   },
   {
-    "id": "dx-ML-258",
+    "id": "dx-ML-268",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52840,7 +53040,7 @@
     "endLine": 704
   },
   {
-    "id": "dx-ML-259",
+    "id": "dx-ML-269",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52860,7 +53060,7 @@
     "endLine": 726
   },
   {
-    "id": "dx-ML-260",
+    "id": "dx-ML-270",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52880,7 +53080,7 @@
     "endLine": 732
   },
   {
-    "id": "dx-ML-261",
+    "id": "dx-ML-271",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52900,7 +53100,7 @@
     "endLine": 740
   },
   {
-    "id": "dx-ML-262",
+    "id": "dx-ML-272",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52920,7 +53120,7 @@
     "endLine": 747
   },
   {
-    "id": "dx-ML-263",
+    "id": "dx-ML-273",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52940,7 +53140,7 @@
     "endLine": 754
   },
   {
-    "id": "dx-ML-264",
+    "id": "dx-ML-274",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52960,7 +53160,7 @@
     "endLine": 762
   },
   {
-    "id": "dx-ML-265",
+    "id": "dx-ML-275",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52980,7 +53180,7 @@
     "endLine": 772
   },
   {
-    "id": "dx-ML-266",
+    "id": "dx-ML-276",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53000,7 +53200,7 @@
     "endLine": 796
   },
   {
-    "id": "dx-ML-267",
+    "id": "dx-ML-277",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53020,7 +53220,7 @@
     "endLine": 811
   },
   {
-    "id": "dx-ML-268",
+    "id": "dx-ML-278",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53040,7 +53240,7 @@
     "endLine": 823
   },
   {
-    "id": "dx-ML-269",
+    "id": "dx-ML-279",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53060,7 +53260,7 @@
     "endLine": 839
   },
   {
-    "id": "dx-ML-270",
+    "id": "dx-ML-280",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53080,7 +53280,7 @@
     "endLine": 853
   },
   {
-    "id": "dx-ML-271",
+    "id": "dx-ML-281",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53100,7 +53300,7 @@
     "endLine": 863
   },
   {
-    "id": "dx-ML-272",
+    "id": "dx-ML-282",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53120,7 +53320,7 @@
     "endLine": 873
   },
   {
-    "id": "dx-ML-273",
+    "id": "dx-ML-283",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53140,7 +53340,7 @@
     "endLine": 876
   },
   {
-    "id": "dx-ML-274",
+    "id": "dx-ML-284",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53160,7 +53360,7 @@
     "endLine": 886
   },
   {
-    "id": "dx-ML-275",
+    "id": "dx-ML-285",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53180,7 +53380,7 @@
     "endLine": 897
   },
   {
-    "id": "dx-ML-276",
+    "id": "dx-ML-286",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53200,7 +53400,7 @@
     "endLine": 910
   },
   {
-    "id": "dx-ML-277",
+    "id": "dx-ML-287",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53220,7 +53420,7 @@
     "endLine": 922
   },
   {
-    "id": "dx-ML-278",
+    "id": "dx-ML-288",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53240,7 +53440,7 @@
     "endLine": 939
   },
   {
-    "id": "dx-ML-279",
+    "id": "dx-ML-289",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53260,7 +53460,7 @@
     "endLine": 961
   },
   {
-    "id": "dx-ML-280",
+    "id": "dx-ML-290",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53280,7 +53480,7 @@
     "endLine": 971
   },
   {
-    "id": "dx-ML-281",
+    "id": "dx-ML-291",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53300,7 +53500,7 @@
     "endLine": 986
   },
   {
-    "id": "dx-ML-282",
+    "id": "dx-ML-292",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53320,7 +53520,7 @@
     "endLine": 997
   },
   {
-    "id": "dx-ML-283",
+    "id": "dx-ML-293",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53340,7 +53540,7 @@
     "endLine": 1009
   },
   {
-    "id": "dx-ML-284",
+    "id": "dx-ML-294",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53360,7 +53560,7 @@
     "endLine": 1017
   },
   {
-    "id": "dx-ML-285",
+    "id": "dx-ML-295",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53380,7 +53580,7 @@
     "endLine": 1031
   },
   {
-    "id": "dx-ML-286",
+    "id": "dx-ML-296",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53400,7 +53600,7 @@
     "endLine": 1043
   },
   {
-    "id": "dx-ML-287",
+    "id": "dx-ML-297",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53420,7 +53620,7 @@
     "endLine": 1056
   },
   {
-    "id": "dx-ML-288",
+    "id": "dx-ML-298",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53440,7 +53640,7 @@
     "endLine": 1062
   },
   {
-    "id": "dx-ML-289",
+    "id": "dx-ML-299",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53460,7 +53660,7 @@
     "endLine": 1071
   },
   {
-    "id": "dx-ML-290",
+    "id": "dx-ML-300",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53480,7 +53680,7 @@
     "endLine": 1085
   },
   {
-    "id": "dx-ML-291",
+    "id": "dx-ML-301",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53500,7 +53700,7 @@
     "endLine": 1097
   },
   {
-    "id": "dx-ML-292",
+    "id": "dx-ML-302",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53520,7 +53720,7 @@
     "endLine": 1103
   },
   {
-    "id": "dx-ML-293",
+    "id": "dx-ML-303",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53540,7 +53740,7 @@
     "endLine": 1110
   },
   {
-    "id": "dx-ML-294",
+    "id": "dx-ML-304",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53560,7 +53760,7 @@
     "endLine": 1116
   },
   {
-    "id": "dx-ML-295",
+    "id": "dx-ML-305",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53580,7 +53780,7 @@
     "endLine": 1127
   },
   {
-    "id": "dx-ML-296",
+    "id": "dx-ML-306",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53600,7 +53800,7 @@
     "endLine": 1133
   },
   {
-    "id": "dx-ML-297",
+    "id": "dx-ML-307",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53620,7 +53820,7 @@
     "endLine": 1142
   },
   {
-    "id": "dx-ML-298",
+    "id": "dx-ML-308",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53640,7 +53840,7 @@
     "endLine": 1148
   },
   {
-    "id": "dx-ML-299",
+    "id": "dx-ML-309",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53660,7 +53860,7 @@
     "endLine": 9
   },
   {
-    "id": "dx-ML-300",
+    "id": "dx-ML-310",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53680,7 +53880,7 @@
     "endLine": 18
   },
   {
-    "id": "dx-ML-301",
+    "id": "dx-ML-311",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53700,7 +53900,7 @@
     "endLine": 31
   },
   {
-    "id": "dx-ML-302",
+    "id": "dx-ML-312",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53720,7 +53920,7 @@
     "endLine": 35
   },
   {
-    "id": "dx-ML-303",
+    "id": "dx-ML-313",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53740,7 +53940,7 @@
     "endLine": 46
   },
   {
-    "id": "dx-ML-304",
+    "id": "dx-ML-314",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53760,7 +53960,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-ML-305",
+    "id": "dx-ML-315",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53780,7 +53980,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-306",
+    "id": "dx-ML-316",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53800,7 +54000,7 @@
     "endLine": 70
   },
   {
-    "id": "dx-ML-307",
+    "id": "dx-ML-317",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53820,7 +54020,7 @@
     "endLine": 78
   },
   {
-    "id": "dx-ML-308",
+    "id": "dx-ML-318",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53840,7 +54040,7 @@
     "endLine": 83
   },
   {
-    "id": "dx-ML-309",
+    "id": "dx-ML-319",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53860,7 +54060,7 @@
     "endLine": 87
   },
   {
-    "id": "dx-ML-310",
+    "id": "dx-ML-320",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53880,7 +54080,7 @@
     "endLine": 97
   },
   {
-    "id": "dx-ML-311",
+    "id": "dx-ML-321",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53900,7 +54100,7 @@
     "endLine": 103
   },
   {
-    "id": "dx-ML-312",
+    "id": "dx-ML-322",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53920,7 +54120,7 @@
     "endLine": 106
   },
   {
-    "id": "dx-ML-313",
+    "id": "dx-ML-323",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53940,7 +54140,7 @@
     "endLine": 113
   },
   {
-    "id": "dx-ML-314",
+    "id": "dx-ML-324",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53960,7 +54160,7 @@
     "endLine": 22
   },
   {
-    "id": "dx-ML-315",
+    "id": "dx-ML-325",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53980,7 +54180,7 @@
     "endLine": 25
   },
   {
-    "id": "dx-ML-316",
+    "id": "dx-ML-326",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54000,7 +54200,7 @@
     "endLine": 37
   },
   {
-    "id": "dx-ML-317",
+    "id": "dx-ML-327",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54020,7 +54220,7 @@
     "endLine": 50
   },
   {
-    "id": "dx-ML-318",
+    "id": "dx-ML-328",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54040,7 +54240,7 @@
     "endLine": 62
   },
   {
-    "id": "dx-ML-319",
+    "id": "dx-ML-329",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54060,7 +54260,7 @@
     "endLine": 75
   },
   {
-    "id": "dx-ML-320",
+    "id": "dx-ML-330",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54080,7 +54280,7 @@
     "endLine": 97
   },
   {
-    "id": "dx-ML-321",
+    "id": "dx-ML-331",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54100,7 +54300,7 @@
     "endLine": 101
   },
   {
-    "id": "dx-ML-322",
+    "id": "dx-ML-332",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54120,7 +54320,7 @@
     "endLine": 135
   },
   {
-    "id": "dx-ML-323",
+    "id": "dx-ML-333",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54140,7 +54340,7 @@
     "endLine": 141
   },
   {
-    "id": "dx-ML-324",
+    "id": "dx-ML-334",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54160,7 +54360,7 @@
     "endLine": 154
   },
   {
-    "id": "dx-ML-325",
+    "id": "dx-ML-335",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54180,7 +54380,7 @@
     "endLine": 174
   },
   {
-    "id": "dx-ML-326",
+    "id": "dx-ML-336",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54200,7 +54400,7 @@
     "endLine": 177
   },
   {
-    "id": "dx-ML-327",
+    "id": "dx-ML-337",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54220,7 +54420,7 @@
     "endLine": 17
   },
   {
-    "id": "dx-ML-328",
+    "id": "dx-ML-338",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54240,7 +54440,7 @@
     "endLine": 25
   },
   {
-    "id": "dx-ML-329",
+    "id": "dx-ML-339",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54260,7 +54460,7 @@
     "endLine": 28
   },
   {
-    "id": "dx-ML-330",
+    "id": "dx-ML-340",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54280,7 +54480,7 @@
     "endLine": 40
   },
   {
-    "id": "dx-ML-331",
+    "id": "dx-ML-341",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54300,7 +54500,7 @@
     "endLine": 43
   },
   {
-    "id": "dx-ML-332",
+    "id": "dx-ML-342",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54320,7 +54520,7 @@
     "endLine": 47
   },
   {
-    "id": "dx-ML-333",
+    "id": "dx-ML-343",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54340,7 +54540,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-ML-334",
+    "id": "dx-ML-344",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54360,7 +54560,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-335",
+    "id": "dx-ML-345",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54380,7 +54580,7 @@
     "endLine": 66
   },
   {
-    "id": "dx-ML-336",
+    "id": "dx-ML-346",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54400,7 +54600,7 @@
     "endLine": 77
   },
   {
-    "id": "dx-ML-337",
+    "id": "dx-ML-347",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
