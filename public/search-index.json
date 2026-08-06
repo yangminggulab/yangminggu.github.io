@@ -50988,19 +50988,79 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "boosting提升法",
     "subsection": "LightGBM",
+    "kind": "paragraph",
+    "blockTitle": "LightGBM",
+    "previewType": "text",
+    "previewTitle": "LightGBM",
+    "rawContent": "\\dirtree{%\n.1 A/B Test 四件事.\n.2 1. 让两组可比.\n.3 随机分流.\n.3 对照组 / 实验组.\n.3 排除混杂变量.\n.3 选择随机化单位.\n.3 核心：除了实验改动，其他都尽量一样.\n.2 2. 定义要比较什么.\n.3 核心指标 / OEC.\n.3 业务指标.\n.3 诊断指标.\n.3 护栏指标.\n.3 核心：差异必须落在有业务意义的指标上.\n.2 3. 判断差异是否可信.\n.3 p-value.\n.3 置信区间.\n.3 样本量.\n.3 power.\n.3 方差 / 标准误.\n.3 A/A test.\n.3 SRM.\n.3 核心：这个差异是实验效果，还是随机波动 / 数据问题？.\n.2 4. 决定是否上线.\n.3 收益是否足够大.\n.3 护栏是否受损.\n.3 是否需要灰度放量.\n.3 是否需要继续实验.\n.3 核心：A/B test 的终点是产品决策.\n}",
+    "content": "\\dirtree{%\n.1 A/B Test 四件事.\n.2 1. 让两组可比.\n.3 随机分流.\n.3 对照组 / 实验组.\n.3 排除混杂变量.\n.3 选择随机化单位.\n.3 核心：除了实验改动，其他都尽量一样.\n.2 2. 定义要比较什么.\n.3 核心指标 / OEC.\n.3 业务指标.\n.3 诊断指标.\n.3 护栏指标.\n.3 核心：差异必须落在有业务意义的指标上.\n.2 3. 判断差异是否可信.\n.3 p-value.\n.3 置信区间.\n.3 样本量.\n.3 power.\n.3 方差 / 标准误.\n.3 A/A test.\n.3 SRM.\n.3 核心：这个差异是实验效果，还是随机波动 / 数据问题？.\n.2 4. 决定是否上线.\n.3 收益是否足够大.\n.3 护栏是否受损.\n.3 是否需要灰度放量.\n.3 是否需要继续实验.\n.3 核心：A/B test 的终点是产品决策.\n}",
+    "text": ".1 A/B Test 四件事. .2 1. 让两组可比. .3 随机分流. .3 对照组 / 实验组. .3 排除混杂变量. .3 选择随机化单位. .3 核心：除了实验改动，其他都尽量一样. .2 2. 定义要比较什么. .3 核心指标 / OEC. .3 业务指标. .3 诊断指标. .3 护栏指标. .3 核心：差异必须落在有业务意义的指标上. .2 3. 判断差异是否可信. .3 p-value. .3 置信区间. .3 样本量. .3 power. .3 方差 / 标准误. .3 A/A test. .3 SRM. .3 核心：这个差异是实验效果，还是随机波动 / 数据问题？. .2 4. 决定是否上线. .3 收益是否足够大. .3 护栏是否受损. .3 是否需要灰度放量. .3 是否需要继续实验. .3 核心：A/B test 的终点是产品决策.",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 3,
+    "endLine": 32
+  },
+  {
+    "id": "dx-ML-167",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "LightGBM",
+    "kind": "paragraph",
+    "blockTitle": "LightGBM",
+    "previewType": "text",
+    "previewTitle": "LightGBM",
+    "rawContent": "\\dirtree{%\n.1 Trustworthy Online Controlled Experiments：用线上随机实验判断产品/算法/策略改动是否真的有效.\n.2 0 基础工具层：不是目的，是后面能力的弹药.\n.3 随机化与因果推断.\n.4 要点：通过随机分组，让实验组和对照组可比，从而判断因果影响.\n.3 实验指标体系.\n.4 要点：知道用什么指标判断实验成功，以及用什么指标防止副作用.\n.3 统计推断基础.\n.4 要点：理解均值、方差、置信区间、p-value、统计功效、样本量.\n.3 实验数据基础.\n.4 要点：理解日志、埋点、分流、实验单元、指标口径和数据质量.\n}",
+    "content": "\\dirtree{%\n.1 Trustworthy Online Controlled Experiments：用线上随机实验判断产品/算法/策略改动是否真的有效.\n.2 0 基础工具层：不是目的，是后面能力的弹药.\n.3 随机化与因果推断.\n.4 要点：通过随机分组，让实验组和对照组可比，从而判断因果影响.\n.3 实验指标体系.\n.4 要点：知道用什么指标判断实验成功，以及用什么指标防止副作用.\n.3 统计推断基础.\n.4 要点：理解均值、方差、置信区间、p-value、统计功效、样本量.\n.3 实验数据基础.\n.4 要点：理解日志、埋点、分流、实验单元、指标口径和数据质量.\n}",
+    "text": ".1 Trustworthy Online Controlled Experiments：用线上随机实验判断产品/算法/策略改动是否真的有效. .2 0 基础工具层：不是目的，是后面能力的弹药. .3 随机化与因果推断. .4 要点：通过随机分组，让实验组和对照组可比，从而判断因果影响. .3 实验指标体系. .4 要点：知道用什么指标判断实验成功，以及用什么指标防止副作用. .3 统计推断基础. .4 要点：理解均值、方差、置信区间、p-value、统计功效、样本量. .3 实验数据基础. .4 要点：理解日志、埋点、分流、实验单元、指标口径和数据质量.",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 35,
+    "endLine": 46
+  },
+  {
+    "id": "dx-ML-168",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "LightGBM",
     "kind": "definition",
     "blockTitle": "LightGBM",
     "previewType": "definition",
     "previewTitle": "LightGBM",
-    "rawContent": "\\begin{definition}[正交单位向量组]\n向量组 $\\bm q_1,\\ldots,\\bm q_n$ 是\\emph{正交单位}，若\n$$\n\\bm q_i^{\\mathsf T}\\bm q_j=\n\\begin{cases}\n0,& i\\ne j \\quad\\text{（正交向量）},\\\\[2pt]\n1,& i=j \\quad\\text{（单位向量：}\\lVert \\bm q_i\\rVert=1\\text{）}.\n\\end{cases}\n$$\n一个有正交列的矩阵都将被记为特征字母 $Q$。\n\\end{definition}",
-    "content": "\\begin{definition}[正交单位向量组]\n向量组 $\\bm q_1,\\ldots,\\bm q_n$ 是\\emph{正交单位}，若\n$$\n\\bm q_i^{\\mathsf T}\\bm q_j=\n\\begin{cases}\n0,& i\\ne j \\quad\\text{（正交向量）},\\\\[2pt]\n1,& i=j \\quad\\text{（单位向量：}\\lVert \\bm q_i\\rVert=1\\text{）}.\n\\end{cases}\n$$\n一个有正交列的矩阵都将被记为特征字母 $Q$。\n\\end{definition}",
-    "text": "[正交单位向量组] 向量组 是正交单位，若 一个有正交列的矩阵都将被记为特征字母 。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 3,
-    "endLine": 13
+    "rawContent": "\\begin{definition}[综合评估标准]\n综合评估标准（Overall Evaluation Criterion, OEC）是实验目标的定量测量。\n\\end{definition}",
+    "content": "\\begin{definition}[综合评估标准]\n综合评估标准（Overall Evaluation Criterion, OEC）是实验目标的定量测量。\n\\end{definition}",
+    "text": "[综合评估标准] 综合评估标准（Overall Evaluation Criterion, OEC）是实验目标的定量测量。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 47,
+    "endLine": 49
   },
   {
-    "id": "dx-ML-167",
+    "id": "dx-ML-169",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "LightGBM",
+    "kind": "definition",
+    "blockTitle": "LightGBM",
+    "previewType": "definition",
+    "previewTitle": "LightGBM",
+    "rawContent": "\\begin{definition}[多臂老虎机]\n多臂老虎机（Multi-Armed Bandit, MAB）是一类序贯决策问题：在每一轮中，决策者需要从多个可选方案（arms）中选择一个执行，并观察该方案带来的随机奖励。由于每个方案的真实收益分布未知，决策者需要在\\textbf{探索}（尝试不同方案以学习其收益）和\\textbf{利用}（选择当前估计收益最高的方案以获得回报）之间进行权衡，目标是在整个实验过程中最大化累计奖励，或等价地最小化累计遗憾（regret）。\n\\end{definition}",
+    "content": "\\begin{definition}[多臂老虎机]\n多臂老虎机（Multi-Armed Bandit, MAB）是一类序贯决策问题：在每一轮中，决策者需要从多个可选方案（arms）中选择一个执行，并观察该方案带来的随机奖励。由于每个方案的真实收益分布未知，决策者需要在\\textbf{探索}（尝试不同方案以学习其收益）和\\textbf{利用}（选择当前估计收益最高的方案以获得回报）之间进行权衡，目标是在整个实验过程中最大化累计奖励，或等价地最小化累计遗憾（regret）。\n\\end{definition}",
+    "text": "[多臂老虎机] 多臂老虎机（Multi-Armed Bandit, MAB）是一类序贯决策问题：在每一轮中，决策者需要从多个可选方案（arms）中选择一个执行，并观察该方案带来的随机奖励。由于每个方案的真实收益分布未知，决策者需要在探索（尝试不同方案以学习其收益）和利用（选择当前估计收益最高的方案以获得回报）之间进行权衡，目标是在整个实验过程中最大化累计奖励，或等价地最小化累计遗憾（regret）。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 50,
+    "endLine": 52
+  },
+  {
+    "id": "dx-ML-170",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51012,72 +51072,12 @@
     "blockTitle": "LightGBM",
     "previewType": "tip",
     "previewTitle": "LightGBM",
-    "rawContent": "\\begin{dxtips}[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段\n    \n\\end{dxtips}",
-    "content": "\\begin{dxtips}[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段\n    \n\\end{dxtips}",
-    "text": "[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 31,
-    "endLine": 33
-  },
-  {
-    "id": "dx-ML-168",
-    "repo": "dx-ML",
-    "title": "Ml",
-    "pdf": "pdf/dx-ML.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "boosting提升法",
-    "subsection": "LightGBM",
-    "kind": "paragraph",
-    "blockTitle": "LightGBM",
-    "previewType": "text",
-    "previewTitle": "LightGBM",
-    "rawContent": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
-    "content": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
-    "text": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 34,
-    "endLine": 34
-  },
-  {
-    "id": "dx-ML-169",
-    "repo": "dx-ML",
-    "title": "Ml",
-    "pdf": "pdf/dx-ML.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "boosting提升法",
-    "subsection": "LightGBM",
-    "kind": "paragraph",
-    "blockTitle": "LightGBM",
-    "previewType": "text",
-    "previewTitle": "LightGBM",
-    "rawContent": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。\n置换矩阵都是正交矩阵",
-    "content": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。\n置换矩阵都是正交矩阵",
-    "text": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。 置换矩阵都是正交矩阵",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 36,
-    "endLine": 37
-  },
-  {
-    "id": "dx-ML-170",
-    "repo": "dx-ML",
-    "title": "Ml",
-    "pdf": "pdf/dx-ML.pdf",
-    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
-    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "boosting提升法",
-    "subsection": "LightGBM",
-    "kind": "example",
-    "blockTitle": "LightGBM",
-    "previewType": "example",
-    "previewTitle": "LightGBM",
-    "rawContent": "\\begin{example}[反射]\n若 $u$ 是任意的单位向量，令\n\\[\nQ = I - 2uu^{\\mathsf T}.\n\\]\n注意 $uu^{\\mathsf T}$ 是一个矩阵，而 $u^{\\mathsf T}u$ 是一个数字。由于 $\\lVert u \\rVert^2 = 1$，可得\n\n\\[\nQ^{\\mathsf T} = I - 2uu^{\\mathsf T} = Q, \\qquad \nQ^{\\mathsf T}Q = I - 4uu^{\\mathsf T} + 4uu^{\\mathsf T}uu^{\\mathsf T} = I. \\tag{2}\n\\]\n\n因此，反射矩阵 $I-2uu^{\\mathsf T}$ 对称而且正交。如果把它平方，你会得到单位矩阵：\n\\[\nQ^2 = Q^{\\mathsf T}Q = I.\n\\]\n\n这意味着通过镜子反射两次会回到原始状态，就好像 $(-1)^2=1$ 一样。注意在式 (2) 的 $4uu^{\\mathsf T}uu^{\\mathsf T}$ 中，利用了 $u^{\\mathsf T}u=1$。\n\\end{example}",
-    "content": "\\begin{example}[反射]\n若 $u$ 是任意的单位向量，令\n\\[\nQ = I - 2uu^{\\mathsf T}.\n\\]\n注意 $uu^{\\mathsf T}$ 是一个矩阵，而 $u^{\\mathsf T}u$ 是一个数字。由于 $\\lVert u \\rVert^2 = 1$，可得\n\n\\[\nQ^{\\mathsf T} = I - 2uu^{\\mathsf T} = Q, \\qquad \nQ^{\\mathsf T}Q = I - 4uu^{\\mathsf T} + 4uu^{\\mathsf T}uu^{\\mathsf T} = I. \\tag{2}\n\\]\n\n因此，反射矩阵 $I-2uu^{\\mathsf T}$ 对称而且正交。如果把它平方，你会得到单位矩阵：\n\\[\nQ^2 = Q^{\\mathsf T}Q = I.\n\\]\n\n这意味着通过镜子反射两次会回到原始状态，就好像 $(-1)^2=1$ 一样。注意在式 (2) 的 $4uu^{\\mathsf T}uu^{\\mathsf T}$ 中，利用了 $u^{\\mathsf T}u=1$。\n\\end{example}",
-    "text": "[反射] 若 是任意的单位向量，令 注意 是一个矩阵，而 是一个数字。由于 ，可得 因此，反射矩阵 对称而且正交。如果把它平方，你会得到单位矩阵： 这意味着通过镜子反射两次会回到原始状态，就好像 一样。注意在式 (2) 的 中，利用了 。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 38,
-    "endLine": 56
+    "rawContent": "\\begin{dxtips}\n    统计里面p值一半都用于否定假设\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    统计里面p值一半都用于否定假设\n\\end{dxtips}",
+    "text": "统计里面p值一半都用于否定假设",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 62,
+    "endLine": 64
   },
   {
     "id": "dx-ML-171",
@@ -51092,12 +51092,12 @@
     "blockTitle": "LightGBM",
     "previewType": "tip",
     "previewTitle": "LightGBM",
-    "rawContent": "\\begin{dxtips}\n    正交矩阵还能避免求逆矩阵的麻烦。\n\\end{dxtips}",
-    "content": "\\begin{dxtips}\n    正交矩阵还能避免求逆矩阵的麻烦。\n\\end{dxtips}",
-    "text": "正交矩阵还能避免求逆矩阵的麻烦。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 57,
-    "endLine": 59
+    "rawContent": "\\begin{dxtips}\n    影响选取用户数量多少都考虑，这个核心思想就是控制变量，确保无关变量不要影响实验\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    影响选取用户数量多少都考虑，这个核心思想就是控制变量，确保无关变量不要影响实验\n\\end{dxtips}",
+    "text": "影响选取用户数量多少都考虑，这个核心思想就是控制变量，确保无关变量不要影响实验",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 65,
+    "endLine": 67
   },
   {
     "id": "dx-ML-172",
@@ -51108,16 +51108,16 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "boosting提升法",
     "subsection": "LightGBM",
-    "kind": "paragraph",
+    "kind": "definition",
     "blockTitle": "LightGBM",
-    "previewType": "text",
+    "previewType": "definition",
     "previewTitle": "LightGBM",
-    "rawContent": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
-    "content": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
-    "text": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
-    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
-    "startLine": 60,
-    "endLine": 60
+    "rawContent": "\\begin{definition} [魏特曼定理]\n    数据异常往往是做错了\n\\end{definition}",
+    "content": "\\begin{definition} [魏特曼定理]\n    数据异常往往是做错了\n\\end{definition}",
+    "text": "[魏特曼定理] 数据异常往往是做错了",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 77,
+    "endLine": 79
   },
   {
     "id": "dx-ML-173",
@@ -51127,11 +51127,311 @@
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
     "section": "boosting提升法",
-    "subsection": "LightGBM",
+    "subsection": "辛普森悖论",
+    "kind": "example",
+    "blockTitle": "辛普森悖论",
+    "previewType": "example",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{example}[辛普森悖论]\n比较旧版本 A 和新版本 B 的转化率。用户分为新用户和老用户。\n\n\\begin{center}\n\\begin{tabular}{c|cc}\n\\hline\n用户类型 & A 组 & B 组 \\\\\n\\hline\n新用户 & $10/100=10\\%$ & $110/1000=11\\%$ \\\\\n老用户 & $720/900=80\\%$ & $81/100=81\\%$ \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n分组内看，B 都比 A 好：\n\\[\n11\\%>10\\%, \\qquad 81\\%>80\\%.\n\\]\n\n但合并后：\n\\[\nA:\\quad \\frac{10+720}{100+900}\n= \\frac{730}{1000}\n= 73\\%,\n\\]\n\\[\nB:\\quad \\frac{110+81}{1000+100}\n= \\frac{191}{1100}\n\\approx 17.4\\%.\n\\]\n\n所以总体上反而是\n\\[\nA>B.\n\\]\n\n原因是 A 组老用户占比高，而 B 组新用户占比高。老用户本来就更容易转化，因此直接合并会让总体平均被用户结构扭曲。\n\n这说明：在 A/B Test 中，如果两组人群结构不平衡，只比较总体指标可能得到错误结论。\n\\end{example}",
+    "content": "\\begin{example}[辛普森悖论]\n比较旧版本 A 和新版本 B 的转化率。用户分为新用户和老用户。\n\n\\begin{center}\n\\begin{tabular}{c|cc}\n\\hline\n用户类型 & A 组 & B 组 \\\\\n\\hline\n新用户 & $10/100=10\\%$ & $110/1000=11\\%$ \\\\\n老用户 & $720/900=80\\%$ & $81/100=81\\%$ \\\\\n\\hline\n\\end{tabular}\n\\end{center}\n\n分组内看，B 都比 A 好：\n\\[\n11\\%>10\\%, \\qquad 81\\%>80\\%.\n\\]\n\n但合并后：\n\\[\nA:\\quad \\frac{10+720}{100+900}\n= \\frac{730}{1000}\n= 73\\%,\n\\]\n\\[\nB:\\quad \\frac{110+81}{1000+100}\n= \\frac{191}{1100}\n\\approx 17.4\\%.\n\\]\n\n所以总体上反而是\n\\[\nA>B.\n\\]\n\n原因是 A 组老用户占比高，而 B 组新用户占比高。老用户本来就更容易转化，因此直接合并会让总体平均被用户结构扭曲。\n\n这说明：在 A/B Test 中，如果两组人群结构不平衡，只比较总体指标可能得到错误结论。\n\\end{example}",
+    "text": "[辛普森悖论] 比较旧版本 A 和新版本 B 的转化率。用户分为新用户和老用户。 c|cc 用户类型 & A 组 & B 组 \\\\ 新用户 & & \\\\ 老用户 & & \\\\ 分组内看，B 都比 A 好： 但合并后： 所以总体上反而是 原因是 A 组老用户占比高，而 B 组新用户占比高。老用户本来就更容易转化，因此直接合并会让总体平均被用户结构扭曲。 这说明：在 A/B Test 中，如果两组人群结构不平衡，只比较总体指标可能得到错误结论。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 81,
+    "endLine": 120
+  },
+  {
+    "id": "dx-ML-174",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "dxtips",
+    "blockTitle": "辛普森悖论",
+    "previewType": "tip",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{dxtips}\n    也就是辛普森悖论要求我们求这个指标的时候用人群加权过后的平均值而不是直接求平均。因为就是老用户转化率都高，但是A组的老客户人数多，B组老客户人数少，所以在新客户转化率相差不大的情况下，A组的转化率总人数就多\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    也就是辛普森悖论要求我们求这个指标的时候用人群加权过后的平均值而不是直接求平均。因为就是老用户转化率都高，但是A组的老客户人数多，B组老客户人数少，所以在新客户转化率相差不大的情况下，A组的转化率总人数就多\n\\end{dxtips}",
+    "text": "也就是辛普森悖论要求我们求这个指标的时候用人群加权过后的平均值而不是直接求平均。因为就是老用户转化率都高，但是A组的老客户人数多，B组老客户人数少，所以在新客户转化率相差不大的情况下，A组的转化率总人数就多",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 121,
+    "endLine": 123
+  },
+  {
+    "id": "dx-ML-175",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "definition",
+    "blockTitle": "辛普森悖论",
+    "previewType": "definition",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{definition}[目标指标]\n目标指标也称为成功指标或北极星指标，是组织最终关心的核心结果。\n它回答的是：产品为什么存在，组织的成功是什么样的。\n目标指标通常与组织使命直接相关，用来刻画长期、全局、最终的业务成功。\n例如，用户长期留存、总观看时长、平台交易额、用户满意度等都可以作为目标指标。\n\\end{definition}",
+    "content": "\\begin{definition}[目标指标]\n目标指标也称为成功指标或北极星指标，是组织最终关心的核心结果。\n它回答的是：产品为什么存在，组织的成功是什么样的。\n目标指标通常与组织使命直接相关，用来刻画长期、全局、最终的业务成功。\n例如，用户长期留存、总观看时长、平台交易额、用户满意度等都可以作为目标指标。\n\\end{definition}",
+    "text": "[目标指标] 目标指标也称为成功指标或北极星指标，是组织最终关心的核心结果。 它回答的是：产品为什么存在，组织的成功是什么样的。 目标指标通常与组织使命直接相关，用来刻画长期、全局、最终的业务成功。 例如，用户长期留存、总观看时长、平台交易额、用户满意度等都可以作为目标指标。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 125,
+    "endLine": 130
+  },
+  {
+    "id": "dx-ML-176",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "definition",
+    "blockTitle": "辛普森悖论",
+    "previewType": "definition",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{definition}[驱动指标]\n驱动指标是能够影响目标指标的中间指标，也可以理解为目标指标的可操作分解。\n它回答的是：哪些用户行为或业务过程会推动最终成功。\n驱动指标通常比目标指标更短期、更敏感，因此常用于实验分析和产品迭代。\n例如，点击率、完播率、互动率、人均使用时长等都可以作为驱动指标。\n\\end{definition}",
+    "content": "\\begin{definition}[驱动指标]\n驱动指标是能够影响目标指标的中间指标，也可以理解为目标指标的可操作分解。\n它回答的是：哪些用户行为或业务过程会推动最终成功。\n驱动指标通常比目标指标更短期、更敏感，因此常用于实验分析和产品迭代。\n例如，点击率、完播率、互动率、人均使用时长等都可以作为驱动指标。\n\\end{definition}",
+    "text": "[驱动指标] 驱动指标是能够影响目标指标的中间指标，也可以理解为目标指标的可操作分解。 它回答的是：哪些用户行为或业务过程会推动最终成功。 驱动指标通常比目标指标更短期、更敏感，因此常用于实验分析和产品迭代。 例如，点击率、完播率、互动率、人均使用时长等都可以作为驱动指标。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 132,
+    "endLine": 137
+  },
+  {
+    "id": "dx-ML-177",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "definition",
+    "blockTitle": "辛普森悖论",
+    "previewType": "definition",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{definition}[护栏指标]\n护栏指标是用来防止实验或策略带来负面影响的约束性指标。\n它回答的是：在优化目标指标或驱动指标时，哪些底线不能被破坏。\n护栏指标不一定要求显著提升，但通常要求不能显著下降。\n例如，崩溃率、延迟、投诉率、取消关注率、内容低质率等都可以作为护栏指标。\n\\end{definition}",
+    "content": "\\begin{definition}[护栏指标]\n护栏指标是用来防止实验或策略带来负面影响的约束性指标。\n它回答的是：在优化目标指标或驱动指标时，哪些底线不能被破坏。\n护栏指标不一定要求显著提升，但通常要求不能显著下降。\n例如，崩溃率、延迟、投诉率、取消关注率、内容低质率等都可以作为护栏指标。\n\\end{definition}",
+    "text": "[护栏指标] 护栏指标是用来防止实验或策略带来负面影响的约束性指标。 它回答的是：在优化目标指标或驱动指标时，哪些底线不能被破坏。 护栏指标不一定要求显著提升，但通常要求不能显著下降。 例如，崩溃率、延迟、投诉率、取消关注率、内容低质率等都可以作为护栏指标。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 139,
+    "endLine": 144
+  },
+  {
+    "id": "dx-ML-178",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "example",
+    "blockTitle": "辛普森悖论",
+    "previewType": "example",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{example}[短视频推荐场景]\n假设一个短视频平台希望通过推荐系统提升用户体验。\n\n此时，目标指标可以设为用户总观看时长或长期留存率，因为它们反映了平台最终希望提升的核心结果。\n\n驱动指标可以包括点击率、完播率、单次播放时长和互动率，因为这些用户行为会直接影响总观看时长和留存。\n\n护栏指标可以包括投诉率、取消关注率、低质内容曝光率和应用崩溃率，因为即使推荐策略提升了观看时长，也不能以牺牲内容质量、用户体验或系统稳定性为代价。\n\\end{example}",
+    "content": "\\begin{example}[短视频推荐场景]\n假设一个短视频平台希望通过推荐系统提升用户体验。\n\n此时，目标指标可以设为用户总观看时长或长期留存率，因为它们反映了平台最终希望提升的核心结果。\n\n驱动指标可以包括点击率、完播率、单次播放时长和互动率，因为这些用户行为会直接影响总观看时长和留存。\n\n护栏指标可以包括投诉率、取消关注率、低质内容曝光率和应用崩溃率，因为即使推荐策略提升了观看时长，也不能以牺牲内容质量、用户体验或系统稳定性为代价。\n\\end{example}",
+    "text": "[短视频推荐场景] 假设一个短视频平台希望通过推荐系统提升用户体验。 此时，目标指标可以设为用户总观看时长或长期留存率，因为它们反映了平台最终希望提升的核心结果。 驱动指标可以包括点击率、完播率、单次播放时长和互动率，因为这些用户行为会直接影响总观看时长和留存。 护栏指标可以包括投诉率、取消关注率、低质内容曝光率和应用崩溃率，因为即使推荐策略提升了观看时长，也不能以牺牲内容质量、用户体验或系统稳定性为代价。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 145,
+    "endLine": 153
+  },
+  {
+    "id": "dx-ML-179",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "definition",
+    "blockTitle": "辛普森悖论",
+    "previewType": "definition",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{definition}[OEC]\nOEC（Overall Evaluation Criterion，整体评价准则）是 A/B 实验中用来判断实验方案是否成功的总体评价指标。\n它通常由一个或多个核心指标组成，用来把产品目标转化为可量化、可比较的实验判断标准。\n\n在实验决策中，OEC 回答的是：\n如果实验组和对照组相比发生了变化，我们应该根据什么标准判断这个变化是否值得上线。\n\\end{definition}",
+    "content": "\\begin{definition}[OEC]\nOEC（Overall Evaluation Criterion，整体评价准则）是 A/B 实验中用来判断实验方案是否成功的总体评价指标。\n它通常由一个或多个核心指标组成，用来把产品目标转化为可量化、可比较的实验判断标准。\n\n在实验决策中，OEC 回答的是：\n如果实验组和对照组相比发生了变化，我们应该根据什么标准判断这个变化是否值得上线。\n\\end{definition}",
+    "text": "[OEC] OEC（Overall Evaluation Criterion，整体评价准则）是 A/B 实验中用来判断实验方案是否成功的总体评价指标。 它通常由一个或多个核心指标组成，用来把产品目标转化为可量化、可比较的实验判断标准。 在实验决策中，OEC 回答的是： 如果实验组和对照组相比发生了变化，我们应该根据什么标准判断这个变化是否值得上线。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 154,
+    "endLine": 160
+  },
+  {
+    "id": "dx-ML-180",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "dxtips",
+    "blockTitle": "辛普森悖论",
+    "previewType": "tip",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{dxtips}\n    也就是设计很多指标每一个指标都有一定的权重\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    也就是设计很多指标每一个指标都有一定的权重\n\\end{dxtips}",
+    "text": "也就是设计很多指标每一个指标都有一定的权重",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/第三章AB实验.tex",
+    "startLine": 161,
+    "endLine": 163
+  },
+  {
+    "id": "dx-ML-181",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "definition",
+    "blockTitle": "辛普森悖论",
+    "previewType": "definition",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{definition}[正交单位向量组]\n向量组 $\\bm q_1,\\ldots,\\bm q_n$ 是\\emph{正交单位}，若\n$$\n\\bm q_i^{\\mathsf T}\\bm q_j=\n\\begin{cases}\n0,& i\\ne j \\quad\\text{（正交向量）},\\\\[2pt]\n1,& i=j \\quad\\text{（单位向量：}\\lVert \\bm q_i\\rVert=1\\text{）}.\n\\end{cases}\n$$\n一个有正交列的矩阵都将被记为特征字母 $Q$。\n\\end{definition}",
+    "content": "\\begin{definition}[正交单位向量组]\n向量组 $\\bm q_1,\\ldots,\\bm q_n$ 是\\emph{正交单位}，若\n$$\n\\bm q_i^{\\mathsf T}\\bm q_j=\n\\begin{cases}\n0,& i\\ne j \\quad\\text{（正交向量）},\\\\[2pt]\n1,& i=j \\quad\\text{（单位向量：}\\lVert \\bm q_i\\rVert=1\\text{）}.\n\\end{cases}\n$$\n一个有正交列的矩阵都将被记为特征字母 $Q$。\n\\end{definition}",
+    "text": "[正交单位向量组] 向量组 是正交单位，若 一个有正交列的矩阵都将被记为特征字母 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 3,
+    "endLine": 13
+  },
+  {
+    "id": "dx-ML-182",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "dxtips",
+    "blockTitle": "辛普森悖论",
+    "previewType": "tip",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{dxtips}[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段\n    \n\\end{dxtips}",
+    "content": "\\begin{dxtips}[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段\n    \n\\end{dxtips}",
+    "text": "[正交化的好处需要牢记]只有弄清楚了我们分解的目的才能聚焦在分解的手段",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 31,
+    "endLine": 33
+  },
+  {
+    "id": "dx-ML-183",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "paragraph",
+    "blockTitle": "辛普森悖论",
+    "previewType": "text",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
+    "content": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
+    "text": "一个 置换矩阵 是一个方阵，它的每一行、每一列里都有 且仅有一个元素是 1，其余元素全是 0。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 34,
+    "endLine": 34
+  },
+  {
+    "id": "dx-ML-184",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "paragraph",
+    "blockTitle": "辛普森悖论",
+    "previewType": "text",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。\n置换矩阵都是正交矩阵",
+    "content": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。\n置换矩阵都是正交矩阵",
+    "text": "换句话说，置换矩阵是单位矩阵 I 的行或列经过某种 重新排列（permutation） 得到的矩阵。 置换矩阵都是正交矩阵",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 36,
+    "endLine": 37
+  },
+  {
+    "id": "dx-ML-185",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "example",
+    "blockTitle": "辛普森悖论",
+    "previewType": "example",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{example}[反射]\n若 $u$ 是任意的单位向量，令\n\\[\nQ = I - 2uu^{\\mathsf T}.\n\\]\n注意 $uu^{\\mathsf T}$ 是一个矩阵，而 $u^{\\mathsf T}u$ 是一个数字。由于 $\\lVert u \\rVert^2 = 1$，可得\n\n\\[\nQ^{\\mathsf T} = I - 2uu^{\\mathsf T} = Q, \\qquad \nQ^{\\mathsf T}Q = I - 4uu^{\\mathsf T} + 4uu^{\\mathsf T}uu^{\\mathsf T} = I. \\tag{2}\n\\]\n\n因此，反射矩阵 $I-2uu^{\\mathsf T}$ 对称而且正交。如果把它平方，你会得到单位矩阵：\n\\[\nQ^2 = Q^{\\mathsf T}Q = I.\n\\]\n\n这意味着通过镜子反射两次会回到原始状态，就好像 $(-1)^2=1$ 一样。注意在式 (2) 的 $4uu^{\\mathsf T}uu^{\\mathsf T}$ 中，利用了 $u^{\\mathsf T}u=1$。\n\\end{example}",
+    "content": "\\begin{example}[反射]\n若 $u$ 是任意的单位向量，令\n\\[\nQ = I - 2uu^{\\mathsf T}.\n\\]\n注意 $uu^{\\mathsf T}$ 是一个矩阵，而 $u^{\\mathsf T}u$ 是一个数字。由于 $\\lVert u \\rVert^2 = 1$，可得\n\n\\[\nQ^{\\mathsf T} = I - 2uu^{\\mathsf T} = Q, \\qquad \nQ^{\\mathsf T}Q = I - 4uu^{\\mathsf T} + 4uu^{\\mathsf T}uu^{\\mathsf T} = I. \\tag{2}\n\\]\n\n因此，反射矩阵 $I-2uu^{\\mathsf T}$ 对称而且正交。如果把它平方，你会得到单位矩阵：\n\\[\nQ^2 = Q^{\\mathsf T}Q = I.\n\\]\n\n这意味着通过镜子反射两次会回到原始状态，就好像 $(-1)^2=1$ 一样。注意在式 (2) 的 $4uu^{\\mathsf T}uu^{\\mathsf T}$ 中，利用了 $u^{\\mathsf T}u=1$。\n\\end{example}",
+    "text": "[反射] 若 是任意的单位向量，令 注意 是一个矩阵，而 是一个数字。由于 ，可得 因此，反射矩阵 对称而且正交。如果把它平方，你会得到单位矩阵： 这意味着通过镜子反射两次会回到原始状态，就好像 一样。注意在式 (2) 的 中，利用了 。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 38,
+    "endLine": 56
+  },
+  {
+    "id": "dx-ML-186",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "dxtips",
+    "blockTitle": "辛普森悖论",
+    "previewType": "tip",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "\\begin{dxtips}\n    正交矩阵还能避免求逆矩阵的麻烦。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    正交矩阵还能避免求逆矩阵的麻烦。\n\\end{dxtips}",
+    "text": "正交矩阵还能避免求逆矩阵的麻烦。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 57,
+    "endLine": 59
+  },
+  {
+    "id": "dx-ML-187",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
+    "kind": "paragraph",
+    "blockTitle": "辛普森悖论",
+    "previewType": "text",
+    "previewTitle": "辛普森悖论",
+    "rawContent": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
+    "content": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
+    "text": "旋转会保有每个向量的长度，反射(reflections)也是，置换(permutations)也是，用任何正交矩阵去乘也一样——长度与角度没有改变。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/信工所.tex",
+    "startLine": 60,
+    "endLine": 60
+  },
+  {
+    "id": "dx-ML-188",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "boosting提升法",
+    "subsection": "辛普森悖论",
     "kind": "theorem",
-    "blockTitle": "LightGBM",
+    "blockTitle": "辛普森悖论",
     "previewType": "theorem",
-    "previewTitle": "LightGBM",
+    "previewTitle": "辛普森悖论",
     "rawContent": "\\begin{theorem}[正交矩阵保持长度与内积]\n若 $Q$ 有正交单位列（即 $Q^{\\mathsf T}Q = I$），它会保持向量的长度不变：  \n\\[\n\\text{对于每个向量 } x, \\quad \\lVert Qx \\rVert = \\lVert x \\rVert. \\tag{3}\n\\]\n\n同时，$Q$ 也会保持点积：\n\\[\n(Qx)^{\\mathsf T}(Qy) \\;=\\; x^{\\mathsf T} Q^{\\mathsf T} Q y \\;=\\; x^{\\mathsf T} y .\n\\]\n\n这只应用了 $Q^{\\mathsf T}Q = I$！\n\\end{theorem}",
     "content": "\\begin{theorem}[正交矩阵保持长度与内积]\n若 $Q$ 有正交单位列（即 $Q^{\\mathsf T}Q = I$），它会保持向量的长度不变：  \n\\[\n\\text{对于每个向量 } x, \\quad \\lVert Qx \\rVert = \\lVert x \\rVert. \\tag{3}\n\\]\n\n同时，$Q$ 也会保持点积：\n\\[\n(Qx)^{\\mathsf T}(Qy) \\;=\\; x^{\\mathsf T} Q^{\\mathsf T} Q y \\;=\\; x^{\\mathsf T} y .\n\\]\n\n这只应用了 $Q^{\\mathsf T}Q = I$！\n\\end{theorem}",
     "text": "[正交矩阵保持长度与内积] 若 有正交单位列（即 ），它会保持向量的长度不变： 同时， 也会保持点积： 这只应用了 ！",
@@ -51140,7 +51440,7 @@
     "endLine": 83
   },
   {
-    "id": "dx-ML-174",
+    "id": "dx-ML-189",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51160,7 +51460,7 @@
     "endLine": 125
   },
   {
-    "id": "dx-ML-175",
+    "id": "dx-ML-190",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51180,7 +51480,7 @@
     "endLine": 185
   },
   {
-    "id": "dx-ML-176",
+    "id": "dx-ML-191",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51200,7 +51500,7 @@
     "endLine": 214
   },
   {
-    "id": "dx-ML-177",
+    "id": "dx-ML-192",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51220,7 +51520,7 @@
     "endLine": 224
   },
   {
-    "id": "dx-ML-178",
+    "id": "dx-ML-193",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51240,7 +51540,7 @@
     "endLine": 228
   },
   {
-    "id": "dx-ML-179",
+    "id": "dx-ML-194",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51260,7 +51560,7 @@
     "endLine": 248
   },
   {
-    "id": "dx-ML-180",
+    "id": "dx-ML-195",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51280,7 +51580,7 @@
     "endLine": 275
   },
   {
-    "id": "dx-ML-181",
+    "id": "dx-ML-196",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51300,7 +51600,7 @@
     "endLine": 292
   },
   {
-    "id": "dx-ML-182",
+    "id": "dx-ML-197",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51320,7 +51620,7 @@
     "endLine": 301
   },
   {
-    "id": "dx-ML-183",
+    "id": "dx-ML-198",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51340,7 +51640,7 @@
     "endLine": 305
   },
   {
-    "id": "dx-ML-184",
+    "id": "dx-ML-199",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51360,7 +51660,7 @@
     "endLine": 309
   },
   {
-    "id": "dx-ML-185",
+    "id": "dx-ML-200",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51380,7 +51680,7 @@
     "endLine": 316
   },
   {
-    "id": "dx-ML-186",
+    "id": "dx-ML-201",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51400,7 +51700,7 @@
     "endLine": 397
   },
   {
-    "id": "dx-ML-187",
+    "id": "dx-ML-202",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51420,7 +51720,7 @@
     "endLine": 466
   },
   {
-    "id": "dx-ML-188",
+    "id": "dx-ML-203",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51440,7 +51740,7 @@
     "endLine": 477
   },
   {
-    "id": "dx-ML-189",
+    "id": "dx-ML-204",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51460,7 +51760,7 @@
     "endLine": 480
   },
   {
-    "id": "dx-ML-190",
+    "id": "dx-ML-205",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51480,7 +51780,7 @@
     "endLine": 487
   },
   {
-    "id": "dx-ML-191",
+    "id": "dx-ML-206",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51500,7 +51800,7 @@
     "endLine": 499
   },
   {
-    "id": "dx-ML-192",
+    "id": "dx-ML-207",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51520,7 +51820,7 @@
     "endLine": 506
   },
   {
-    "id": "dx-ML-193",
+    "id": "dx-ML-208",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51540,7 +51840,7 @@
     "endLine": 530
   },
   {
-    "id": "dx-ML-194",
+    "id": "dx-ML-209",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51560,7 +51860,7 @@
     "endLine": 543
   },
   {
-    "id": "dx-ML-195",
+    "id": "dx-ML-210",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51580,7 +51880,7 @@
     "endLine": 565
   },
   {
-    "id": "dx-ML-196",
+    "id": "dx-ML-211",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51600,7 +51900,7 @@
     "endLine": 599
   },
   {
-    "id": "dx-ML-197",
+    "id": "dx-ML-212",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51620,7 +51920,7 @@
     "endLine": 621
   },
   {
-    "id": "dx-ML-198",
+    "id": "dx-ML-213",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51640,7 +51940,7 @@
     "endLine": 633
   },
   {
-    "id": "dx-ML-199",
+    "id": "dx-ML-214",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51660,7 +51960,7 @@
     "endLine": 653
   },
   {
-    "id": "dx-ML-200",
+    "id": "dx-ML-215",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51680,7 +51980,7 @@
     "endLine": 727
   },
   {
-    "id": "dx-ML-201",
+    "id": "dx-ML-216",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51700,7 +52000,7 @@
     "endLine": 730
   },
   {
-    "id": "dx-ML-202",
+    "id": "dx-ML-217",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51720,7 +52020,7 @@
     "endLine": 733
   },
   {
-    "id": "dx-ML-203",
+    "id": "dx-ML-218",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51740,7 +52040,7 @@
     "endLine": 740
   },
   {
-    "id": "dx-ML-204",
+    "id": "dx-ML-219",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51760,7 +52060,7 @@
     "endLine": 1098
   },
   {
-    "id": "dx-ML-205",
+    "id": "dx-ML-220",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51780,7 +52080,7 @@
     "endLine": 1103
   },
   {
-    "id": "dx-ML-206",
+    "id": "dx-ML-221",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51800,7 +52100,7 @@
     "endLine": 1163
   },
   {
-    "id": "dx-ML-207",
+    "id": "dx-ML-222",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51820,7 +52120,7 @@
     "endLine": 1228
   },
   {
-    "id": "dx-ML-208",
+    "id": "dx-ML-223",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51840,7 +52140,7 @@
     "endLine": 1249
   },
   {
-    "id": "dx-ML-209",
+    "id": "dx-ML-224",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51860,7 +52160,7 @@
     "endLine": 1264
   },
   {
-    "id": "dx-ML-210",
+    "id": "dx-ML-225",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51880,7 +52180,7 @@
     "endLine": 1277
   },
   {
-    "id": "dx-ML-211",
+    "id": "dx-ML-226",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51900,7 +52200,7 @@
     "endLine": 1311
   },
   {
-    "id": "dx-ML-212",
+    "id": "dx-ML-227",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51920,7 +52220,7 @@
     "endLine": 1321
   },
   {
-    "id": "dx-ML-213",
+    "id": "dx-ML-228",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51940,7 +52240,7 @@
     "endLine": 21
   },
   {
-    "id": "dx-ML-214",
+    "id": "dx-ML-229",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51960,7 +52260,7 @@
     "endLine": 32
   },
   {
-    "id": "dx-ML-215",
+    "id": "dx-ML-230",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -51980,7 +52280,7 @@
     "endLine": 45
   },
   {
-    "id": "dx-ML-216",
+    "id": "dx-ML-231",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52000,7 +52300,7 @@
     "endLine": 52
   },
   {
-    "id": "dx-ML-217",
+    "id": "dx-ML-232",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52020,7 +52320,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-218",
+    "id": "dx-ML-233",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52040,7 +52340,7 @@
     "endLine": 75
   },
   {
-    "id": "dx-ML-219",
+    "id": "dx-ML-234",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52060,7 +52360,7 @@
     "endLine": 82
   },
   {
-    "id": "dx-ML-220",
+    "id": "dx-ML-235",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52080,7 +52380,7 @@
     "endLine": 87
   },
   {
-    "id": "dx-ML-221",
+    "id": "dx-ML-236",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52100,7 +52400,7 @@
     "endLine": 95
   },
   {
-    "id": "dx-ML-222",
+    "id": "dx-ML-237",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52120,7 +52420,7 @@
     "endLine": 107
   },
   {
-    "id": "dx-ML-223",
+    "id": "dx-ML-238",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52140,7 +52440,7 @@
     "endLine": 111
   },
   {
-    "id": "dx-ML-224",
+    "id": "dx-ML-239",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52160,7 +52460,7 @@
     "endLine": 124
   },
   {
-    "id": "dx-ML-225",
+    "id": "dx-ML-240",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52180,7 +52480,7 @@
     "endLine": 134
   },
   {
-    "id": "dx-ML-226",
+    "id": "dx-ML-241",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52200,7 +52500,7 @@
     "endLine": 142
   },
   {
-    "id": "dx-ML-227",
+    "id": "dx-ML-242",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52220,7 +52520,7 @@
     "endLine": 150
   },
   {
-    "id": "dx-ML-228",
+    "id": "dx-ML-243",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52240,7 +52540,7 @@
     "endLine": 166
   },
   {
-    "id": "dx-ML-229",
+    "id": "dx-ML-244",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52260,7 +52560,7 @@
     "endLine": 173
   },
   {
-    "id": "dx-ML-230",
+    "id": "dx-ML-245",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52280,7 +52580,7 @@
     "endLine": 183
   },
   {
-    "id": "dx-ML-231",
+    "id": "dx-ML-246",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52300,7 +52600,7 @@
     "endLine": 202
   },
   {
-    "id": "dx-ML-232",
+    "id": "dx-ML-247",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52320,7 +52620,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-ML-233",
+    "id": "dx-ML-248",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52340,7 +52640,7 @@
     "endLine": 240
   },
   {
-    "id": "dx-ML-234",
+    "id": "dx-ML-249",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52360,7 +52660,7 @@
     "endLine": 251
   },
   {
-    "id": "dx-ML-235",
+    "id": "dx-ML-250",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52380,7 +52680,7 @@
     "endLine": 261
   },
   {
-    "id": "dx-ML-236",
+    "id": "dx-ML-251",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52400,7 +52700,7 @@
     "endLine": 280
   },
   {
-    "id": "dx-ML-237",
+    "id": "dx-ML-252",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52420,7 +52720,7 @@
     "endLine": 289
   },
   {
-    "id": "dx-ML-238",
+    "id": "dx-ML-253",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52440,7 +52740,7 @@
     "endLine": 293
   },
   {
-    "id": "dx-ML-239",
+    "id": "dx-ML-254",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52460,7 +52760,7 @@
     "endLine": 303
   },
   {
-    "id": "dx-ML-240",
+    "id": "dx-ML-255",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52480,7 +52780,7 @@
     "endLine": 312
   },
   {
-    "id": "dx-ML-241",
+    "id": "dx-ML-256",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52500,7 +52800,7 @@
     "endLine": 318
   },
   {
-    "id": "dx-ML-242",
+    "id": "dx-ML-257",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52520,7 +52820,7 @@
     "endLine": 330
   },
   {
-    "id": "dx-ML-243",
+    "id": "dx-ML-258",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52540,7 +52840,7 @@
     "endLine": 336
   },
   {
-    "id": "dx-ML-244",
+    "id": "dx-ML-259",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52560,7 +52860,7 @@
     "endLine": 340
   },
   {
-    "id": "dx-ML-245",
+    "id": "dx-ML-260",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52580,7 +52880,7 @@
     "endLine": 352
   },
   {
-    "id": "dx-ML-246",
+    "id": "dx-ML-261",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52600,7 +52900,7 @@
     "endLine": 360
   },
   {
-    "id": "dx-ML-247",
+    "id": "dx-ML-262",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52620,7 +52920,7 @@
     "endLine": 378
   },
   {
-    "id": "dx-ML-248",
+    "id": "dx-ML-263",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52640,7 +52940,7 @@
     "endLine": 384
   },
   {
-    "id": "dx-ML-249",
+    "id": "dx-ML-264",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52660,7 +52960,7 @@
     "endLine": 388
   },
   {
-    "id": "dx-ML-250",
+    "id": "dx-ML-265",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52680,7 +52980,7 @@
     "endLine": 400
   },
   {
-    "id": "dx-ML-251",
+    "id": "dx-ML-266",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52700,7 +53000,7 @@
     "endLine": 406
   },
   {
-    "id": "dx-ML-252",
+    "id": "dx-ML-267",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52720,7 +53020,7 @@
     "endLine": 414
   },
   {
-    "id": "dx-ML-253",
+    "id": "dx-ML-268",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52740,7 +53040,7 @@
     "endLine": 420
   },
   {
-    "id": "dx-ML-254",
+    "id": "dx-ML-269",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52760,7 +53060,7 @@
     "endLine": 428
   },
   {
-    "id": "dx-ML-255",
+    "id": "dx-ML-270",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52780,7 +53080,7 @@
     "endLine": 433
   },
   {
-    "id": "dx-ML-256",
+    "id": "dx-ML-271",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52800,7 +53100,7 @@
     "endLine": 442
   },
   {
-    "id": "dx-ML-257",
+    "id": "dx-ML-272",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52820,7 +53120,7 @@
     "endLine": 451
   },
   {
-    "id": "dx-ML-258",
+    "id": "dx-ML-273",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52840,7 +53140,7 @@
     "endLine": 459
   },
   {
-    "id": "dx-ML-259",
+    "id": "dx-ML-274",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52860,7 +53160,7 @@
     "endLine": 466
   },
   {
-    "id": "dx-ML-260",
+    "id": "dx-ML-275",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52880,7 +53180,7 @@
     "endLine": 471
   },
   {
-    "id": "dx-ML-261",
+    "id": "dx-ML-276",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52900,7 +53200,7 @@
     "endLine": 475
   },
   {
-    "id": "dx-ML-262",
+    "id": "dx-ML-277",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52920,7 +53220,7 @@
     "endLine": 481
   },
   {
-    "id": "dx-ML-263",
+    "id": "dx-ML-278",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52940,7 +53240,7 @@
     "endLine": 487
   },
   {
-    "id": "dx-ML-264",
+    "id": "dx-ML-279",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52960,7 +53260,7 @@
     "endLine": 493
   },
   {
-    "id": "dx-ML-265",
+    "id": "dx-ML-280",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -52980,7 +53280,7 @@
     "endLine": 496
   },
   {
-    "id": "dx-ML-266",
+    "id": "dx-ML-281",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53000,7 +53300,7 @@
     "endLine": 499
   },
   {
-    "id": "dx-ML-267",
+    "id": "dx-ML-282",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53020,7 +53320,7 @@
     "endLine": 503
   },
   {
-    "id": "dx-ML-268",
+    "id": "dx-ML-283",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53040,7 +53340,7 @@
     "endLine": 509
   },
   {
-    "id": "dx-ML-269",
+    "id": "dx-ML-284",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53060,7 +53360,7 @@
     "endLine": 519
   },
   {
-    "id": "dx-ML-270",
+    "id": "dx-ML-285",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53080,7 +53380,7 @@
     "endLine": 521
   },
   {
-    "id": "dx-ML-271",
+    "id": "dx-ML-286",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53100,7 +53400,7 @@
     "endLine": 523
   },
   {
-    "id": "dx-ML-272",
+    "id": "dx-ML-287",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53120,7 +53420,7 @@
     "endLine": 527
   },
   {
-    "id": "dx-ML-273",
+    "id": "dx-ML-288",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53140,7 +53440,7 @@
     "endLine": 529
   },
   {
-    "id": "dx-ML-274",
+    "id": "dx-ML-289",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53160,7 +53460,7 @@
     "endLine": 531
   },
   {
-    "id": "dx-ML-275",
+    "id": "dx-ML-290",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53180,7 +53480,7 @@
     "endLine": 533
   },
   {
-    "id": "dx-ML-276",
+    "id": "dx-ML-291",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53200,7 +53500,7 @@
     "endLine": 535
   },
   {
-    "id": "dx-ML-277",
+    "id": "dx-ML-292",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53220,7 +53520,7 @@
     "endLine": 539
   },
   {
-    "id": "dx-ML-278",
+    "id": "dx-ML-293",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53240,7 +53540,7 @@
     "endLine": 549
   },
   {
-    "id": "dx-ML-279",
+    "id": "dx-ML-294",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53260,7 +53560,7 @@
     "endLine": 553
   },
   {
-    "id": "dx-ML-280",
+    "id": "dx-ML-295",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53280,7 +53580,7 @@
     "endLine": 555
   },
   {
-    "id": "dx-ML-281",
+    "id": "dx-ML-296",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53300,7 +53600,7 @@
     "endLine": 559
   },
   {
-    "id": "dx-ML-282",
+    "id": "dx-ML-297",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53320,7 +53620,7 @@
     "endLine": 563
   },
   {
-    "id": "dx-ML-283",
+    "id": "dx-ML-298",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53340,7 +53640,7 @@
     "endLine": 567
   },
   {
-    "id": "dx-ML-284",
+    "id": "dx-ML-299",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53360,7 +53660,7 @@
     "endLine": 569
   },
   {
-    "id": "dx-ML-285",
+    "id": "dx-ML-300",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53380,7 +53680,7 @@
     "endLine": 575
   },
   {
-    "id": "dx-ML-286",
+    "id": "dx-ML-301",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53400,7 +53700,7 @@
     "endLine": 577
   },
   {
-    "id": "dx-ML-287",
+    "id": "dx-ML-302",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53420,7 +53720,7 @@
     "endLine": 579
   },
   {
-    "id": "dx-ML-288",
+    "id": "dx-ML-303",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53440,7 +53740,7 @@
     "endLine": 581
   },
   {
-    "id": "dx-ML-289",
+    "id": "dx-ML-304",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53460,7 +53760,7 @@
     "endLine": 585
   },
   {
-    "id": "dx-ML-290",
+    "id": "dx-ML-305",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53480,7 +53780,7 @@
     "endLine": 597
   },
   {
-    "id": "dx-ML-291",
+    "id": "dx-ML-306",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53500,7 +53800,7 @@
     "endLine": 599
   },
   {
-    "id": "dx-ML-292",
+    "id": "dx-ML-307",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53520,7 +53820,7 @@
     "endLine": 603
   },
   {
-    "id": "dx-ML-293",
+    "id": "dx-ML-308",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53540,7 +53840,7 @@
     "endLine": 607
   },
   {
-    "id": "dx-ML-294",
+    "id": "dx-ML-309",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53560,7 +53860,7 @@
     "endLine": 609
   },
   {
-    "id": "dx-ML-295",
+    "id": "dx-ML-310",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53580,7 +53880,7 @@
     "endLine": 611
   },
   {
-    "id": "dx-ML-296",
+    "id": "dx-ML-311",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53600,7 +53900,7 @@
     "endLine": 615
   },
   {
-    "id": "dx-ML-297",
+    "id": "dx-ML-312",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53620,7 +53920,7 @@
     "endLine": 617
   },
   {
-    "id": "dx-ML-298",
+    "id": "dx-ML-313",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53640,7 +53940,7 @@
     "endLine": 621
   },
   {
-    "id": "dx-ML-299",
+    "id": "dx-ML-314",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53660,7 +53960,7 @@
     "endLine": 623
   },
   {
-    "id": "dx-ML-300",
+    "id": "dx-ML-315",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53680,7 +53980,7 @@
     "endLine": 627
   },
   {
-    "id": "dx-ML-301",
+    "id": "dx-ML-316",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53700,7 +54000,7 @@
     "endLine": 629
   },
   {
-    "id": "dx-ML-302",
+    "id": "dx-ML-317",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53720,7 +54020,7 @@
     "endLine": 633
   },
   {
-    "id": "dx-ML-303",
+    "id": "dx-ML-318",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53740,7 +54040,7 @@
     "endLine": 635
   },
   {
-    "id": "dx-ML-304",
+    "id": "dx-ML-319",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53760,7 +54060,7 @@
     "endLine": 637
   },
   {
-    "id": "dx-ML-305",
+    "id": "dx-ML-320",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53780,7 +54080,7 @@
     "endLine": 641
   },
   {
-    "id": "dx-ML-306",
+    "id": "dx-ML-321",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53800,7 +54100,7 @@
     "endLine": 643
   },
   {
-    "id": "dx-ML-307",
+    "id": "dx-ML-322",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53820,7 +54120,7 @@
     "endLine": 645
   },
   {
-    "id": "dx-ML-308",
+    "id": "dx-ML-323",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53840,7 +54140,7 @@
     "endLine": 647
   },
   {
-    "id": "dx-ML-309",
+    "id": "dx-ML-324",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53860,7 +54160,7 @@
     "endLine": 649
   },
   {
-    "id": "dx-ML-310",
+    "id": "dx-ML-325",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53880,7 +54180,7 @@
     "endLine": 651
   },
   {
-    "id": "dx-ML-311",
+    "id": "dx-ML-326",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53900,7 +54200,7 @@
     "endLine": 662
   },
   {
-    "id": "dx-ML-312",
+    "id": "dx-ML-327",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53920,7 +54220,7 @@
     "endLine": 664
   },
   {
-    "id": "dx-ML-313",
+    "id": "dx-ML-328",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53940,7 +54240,7 @@
     "endLine": 673
   },
   {
-    "id": "dx-ML-314",
+    "id": "dx-ML-329",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53960,7 +54260,7 @@
     "endLine": 676
   },
   {
-    "id": "dx-ML-315",
+    "id": "dx-ML-330",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -53980,7 +54280,7 @@
     "endLine": 704
   },
   {
-    "id": "dx-ML-316",
+    "id": "dx-ML-331",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54000,7 +54300,7 @@
     "endLine": 726
   },
   {
-    "id": "dx-ML-317",
+    "id": "dx-ML-332",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54020,7 +54320,7 @@
     "endLine": 732
   },
   {
-    "id": "dx-ML-318",
+    "id": "dx-ML-333",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54040,7 +54340,7 @@
     "endLine": 740
   },
   {
-    "id": "dx-ML-319",
+    "id": "dx-ML-334",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54060,7 +54360,7 @@
     "endLine": 747
   },
   {
-    "id": "dx-ML-320",
+    "id": "dx-ML-335",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54080,7 +54380,7 @@
     "endLine": 754
   },
   {
-    "id": "dx-ML-321",
+    "id": "dx-ML-336",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54100,7 +54400,7 @@
     "endLine": 762
   },
   {
-    "id": "dx-ML-322",
+    "id": "dx-ML-337",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54120,7 +54420,7 @@
     "endLine": 772
   },
   {
-    "id": "dx-ML-323",
+    "id": "dx-ML-338",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54140,7 +54440,7 @@
     "endLine": 796
   },
   {
-    "id": "dx-ML-324",
+    "id": "dx-ML-339",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54160,7 +54460,7 @@
     "endLine": 811
   },
   {
-    "id": "dx-ML-325",
+    "id": "dx-ML-340",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54180,7 +54480,7 @@
     "endLine": 823
   },
   {
-    "id": "dx-ML-326",
+    "id": "dx-ML-341",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54200,7 +54500,7 @@
     "endLine": 839
   },
   {
-    "id": "dx-ML-327",
+    "id": "dx-ML-342",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54220,7 +54520,7 @@
     "endLine": 853
   },
   {
-    "id": "dx-ML-328",
+    "id": "dx-ML-343",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54240,7 +54540,7 @@
     "endLine": 863
   },
   {
-    "id": "dx-ML-329",
+    "id": "dx-ML-344",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54260,7 +54560,7 @@
     "endLine": 873
   },
   {
-    "id": "dx-ML-330",
+    "id": "dx-ML-345",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54280,7 +54580,7 @@
     "endLine": 876
   },
   {
-    "id": "dx-ML-331",
+    "id": "dx-ML-346",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54300,7 +54600,7 @@
     "endLine": 886
   },
   {
-    "id": "dx-ML-332",
+    "id": "dx-ML-347",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54320,7 +54620,7 @@
     "endLine": 897
   },
   {
-    "id": "dx-ML-333",
+    "id": "dx-ML-348",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54340,7 +54640,7 @@
     "endLine": 910
   },
   {
-    "id": "dx-ML-334",
+    "id": "dx-ML-349",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54360,7 +54660,7 @@
     "endLine": 922
   },
   {
-    "id": "dx-ML-335",
+    "id": "dx-ML-350",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54380,7 +54680,7 @@
     "endLine": 939
   },
   {
-    "id": "dx-ML-336",
+    "id": "dx-ML-351",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54400,7 +54700,7 @@
     "endLine": 961
   },
   {
-    "id": "dx-ML-337",
+    "id": "dx-ML-352",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54420,7 +54720,7 @@
     "endLine": 971
   },
   {
-    "id": "dx-ML-338",
+    "id": "dx-ML-353",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54440,7 +54740,7 @@
     "endLine": 986
   },
   {
-    "id": "dx-ML-339",
+    "id": "dx-ML-354",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54460,7 +54760,7 @@
     "endLine": 997
   },
   {
-    "id": "dx-ML-340",
+    "id": "dx-ML-355",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54480,7 +54780,7 @@
     "endLine": 1009
   },
   {
-    "id": "dx-ML-341",
+    "id": "dx-ML-356",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54500,7 +54800,7 @@
     "endLine": 1017
   },
   {
-    "id": "dx-ML-342",
+    "id": "dx-ML-357",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54520,7 +54820,7 @@
     "endLine": 1031
   },
   {
-    "id": "dx-ML-343",
+    "id": "dx-ML-358",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54540,7 +54840,7 @@
     "endLine": 1043
   },
   {
-    "id": "dx-ML-344",
+    "id": "dx-ML-359",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54560,7 +54860,7 @@
     "endLine": 1056
   },
   {
-    "id": "dx-ML-345",
+    "id": "dx-ML-360",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54580,7 +54880,7 @@
     "endLine": 1062
   },
   {
-    "id": "dx-ML-346",
+    "id": "dx-ML-361",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54600,7 +54900,7 @@
     "endLine": 1071
   },
   {
-    "id": "dx-ML-347",
+    "id": "dx-ML-362",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54620,7 +54920,7 @@
     "endLine": 1085
   },
   {
-    "id": "dx-ML-348",
+    "id": "dx-ML-363",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54640,7 +54940,7 @@
     "endLine": 1097
   },
   {
-    "id": "dx-ML-349",
+    "id": "dx-ML-364",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54660,7 +54960,7 @@
     "endLine": 1103
   },
   {
-    "id": "dx-ML-350",
+    "id": "dx-ML-365",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54680,7 +54980,7 @@
     "endLine": 1110
   },
   {
-    "id": "dx-ML-351",
+    "id": "dx-ML-366",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54700,7 +55000,7 @@
     "endLine": 1116
   },
   {
-    "id": "dx-ML-352",
+    "id": "dx-ML-367",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54720,7 +55020,7 @@
     "endLine": 1127
   },
   {
-    "id": "dx-ML-353",
+    "id": "dx-ML-368",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54740,7 +55040,7 @@
     "endLine": 1133
   },
   {
-    "id": "dx-ML-354",
+    "id": "dx-ML-369",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54760,7 +55060,7 @@
     "endLine": 1142
   },
   {
-    "id": "dx-ML-355",
+    "id": "dx-ML-370",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54780,7 +55080,7 @@
     "endLine": 1148
   },
   {
-    "id": "dx-ML-356",
+    "id": "dx-ML-371",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54800,7 +55100,7 @@
     "endLine": 1156
   },
   {
-    "id": "dx-ML-357",
+    "id": "dx-ML-372",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54820,7 +55120,7 @@
     "endLine": 1317
   },
   {
-    "id": "dx-ML-358",
+    "id": "dx-ML-373",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54840,7 +55140,7 @@
     "endLine": 1352
   },
   {
-    "id": "dx-ML-359",
+    "id": "dx-ML-374",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54860,7 +55160,7 @@
     "endLine": 1377
   },
   {
-    "id": "dx-ML-360",
+    "id": "dx-ML-375",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54880,7 +55180,7 @@
     "endLine": 1444
   },
   {
-    "id": "dx-ML-361",
+    "id": "dx-ML-376",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54900,7 +55200,7 @@
     "endLine": 1465
   },
   {
-    "id": "dx-ML-362",
+    "id": "dx-ML-377",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54920,7 +55220,7 @@
     "endLine": 1485
   },
   {
-    "id": "dx-ML-363",
+    "id": "dx-ML-378",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54940,7 +55240,7 @@
     "endLine": 1493
   },
   {
-    "id": "dx-ML-364",
+    "id": "dx-ML-379",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54960,7 +55260,7 @@
     "endLine": 1500
   },
   {
-    "id": "dx-ML-365",
+    "id": "dx-ML-380",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -54980,7 +55280,7 @@
     "endLine": 1503
   },
   {
-    "id": "dx-ML-366",
+    "id": "dx-ML-381",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55000,7 +55300,7 @@
     "endLine": 1525
   },
   {
-    "id": "dx-ML-367",
+    "id": "dx-ML-382",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55020,7 +55320,7 @@
     "endLine": 1608
   },
   {
-    "id": "dx-ML-368",
+    "id": "dx-ML-383",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55040,7 +55340,7 @@
     "endLine": 1616
   },
   {
-    "id": "dx-ML-369",
+    "id": "dx-ML-384",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55060,7 +55360,7 @@
     "endLine": 1623
   },
   {
-    "id": "dx-ML-370",
+    "id": "dx-ML-385",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55080,7 +55380,7 @@
     "endLine": 1634
   },
   {
-    "id": "dx-ML-371",
+    "id": "dx-ML-386",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55100,7 +55400,7 @@
     "endLine": 1647
   },
   {
-    "id": "dx-ML-372",
+    "id": "dx-ML-387",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55120,7 +55420,7 @@
     "endLine": 1655
   },
   {
-    "id": "dx-ML-373",
+    "id": "dx-ML-388",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55140,7 +55440,7 @@
     "endLine": 1661
   },
   {
-    "id": "dx-ML-374",
+    "id": "dx-ML-389",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55160,7 +55460,7 @@
     "endLine": 1667
   },
   {
-    "id": "dx-ML-375",
+    "id": "dx-ML-390",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55180,7 +55480,7 @@
     "endLine": 1673
   },
   {
-    "id": "dx-ML-376",
+    "id": "dx-ML-391",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55200,7 +55500,7 @@
     "endLine": 1681
   },
   {
-    "id": "dx-ML-377",
+    "id": "dx-ML-392",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55220,7 +55520,7 @@
     "endLine": 1687
   },
   {
-    "id": "dx-ML-378",
+    "id": "dx-ML-393",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55240,7 +55540,7 @@
     "endLine": 1692
   },
   {
-    "id": "dx-ML-379",
+    "id": "dx-ML-394",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55260,7 +55560,7 @@
     "endLine": 1697
   },
   {
-    "id": "dx-ML-380",
+    "id": "dx-ML-395",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55280,7 +55580,7 @@
     "endLine": 1703
   },
   {
-    "id": "dx-ML-381",
+    "id": "dx-ML-396",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55300,7 +55600,7 @@
     "endLine": 1708
   },
   {
-    "id": "dx-ML-382",
+    "id": "dx-ML-397",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55320,7 +55620,7 @@
     "endLine": 1714
   },
   {
-    "id": "dx-ML-383",
+    "id": "dx-ML-398",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55340,7 +55640,7 @@
     "endLine": 1716
   },
   {
-    "id": "dx-ML-384",
+    "id": "dx-ML-399",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55360,7 +55660,7 @@
     "endLine": 1722
   },
   {
-    "id": "dx-ML-385",
+    "id": "dx-ML-400",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55380,7 +55680,7 @@
     "endLine": 1803
   },
   {
-    "id": "dx-ML-386",
+    "id": "dx-ML-401",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55400,7 +55700,7 @@
     "endLine": 1842
   },
   {
-    "id": "dx-ML-387",
+    "id": "dx-ML-402",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55420,7 +55720,7 @@
     "endLine": 1858
   },
   {
-    "id": "dx-ML-388",
+    "id": "dx-ML-403",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55440,7 +55740,7 @@
     "endLine": 1921
   },
   {
-    "id": "dx-ML-389",
+    "id": "dx-ML-404",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55460,7 +55760,7 @@
     "endLine": 1927
   },
   {
-    "id": "dx-ML-390",
+    "id": "dx-ML-405",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55480,7 +55780,7 @@
     "endLine": 1935
   },
   {
-    "id": "dx-ML-391",
+    "id": "dx-ML-406",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55500,7 +55800,7 @@
     "endLine": 1942
   },
   {
-    "id": "dx-ML-392",
+    "id": "dx-ML-407",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55520,7 +55820,7 @@
     "endLine": 1948
   },
   {
-    "id": "dx-ML-393",
+    "id": "dx-ML-408",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55540,7 +55840,7 @@
     "endLine": 1955
   },
   {
-    "id": "dx-ML-394",
+    "id": "dx-ML-409",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55560,7 +55860,7 @@
     "endLine": 1959
   },
   {
-    "id": "dx-ML-395",
+    "id": "dx-ML-410",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55580,7 +55880,7 @@
     "endLine": 1964
   },
   {
-    "id": "dx-ML-396",
+    "id": "dx-ML-411",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55600,7 +55900,7 @@
     "endLine": 1971
   },
   {
-    "id": "dx-ML-397",
+    "id": "dx-ML-412",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55620,7 +55920,7 @@
     "endLine": 1974
   },
   {
-    "id": "dx-ML-398",
+    "id": "dx-ML-413",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55640,7 +55940,7 @@
     "endLine": 1982
   },
   {
-    "id": "dx-ML-399",
+    "id": "dx-ML-414",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55660,7 +55960,7 @@
     "endLine": 1987
   },
   {
-    "id": "dx-ML-400",
+    "id": "dx-ML-415",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55680,7 +55980,7 @@
     "endLine": 1993
   },
   {
-    "id": "dx-ML-401",
+    "id": "dx-ML-416",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55700,7 +56000,7 @@
     "endLine": 2021
   },
   {
-    "id": "dx-ML-402",
+    "id": "dx-ML-417",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55720,7 +56020,7 @@
     "endLine": 2027
   },
   {
-    "id": "dx-ML-403",
+    "id": "dx-ML-418",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55740,7 +56040,7 @@
     "endLine": 2032
   },
   {
-    "id": "dx-ML-404",
+    "id": "dx-ML-419",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55760,7 +56060,7 @@
     "endLine": 2037
   },
   {
-    "id": "dx-ML-405",
+    "id": "dx-ML-420",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55780,7 +56080,7 @@
     "endLine": 2041
   },
   {
-    "id": "dx-ML-406",
+    "id": "dx-ML-421",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55800,7 +56100,7 @@
     "endLine": 2047
   },
   {
-    "id": "dx-ML-407",
+    "id": "dx-ML-422",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55820,7 +56120,7 @@
     "endLine": 2053
   },
   {
-    "id": "dx-ML-408",
+    "id": "dx-ML-423",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55840,7 +56140,7 @@
     "endLine": 2059
   },
   {
-    "id": "dx-ML-409",
+    "id": "dx-ML-424",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55860,7 +56160,7 @@
     "endLine": 2065
   },
   {
-    "id": "dx-ML-410",
+    "id": "dx-ML-425",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55880,7 +56180,7 @@
     "endLine": 2068
   },
   {
-    "id": "dx-ML-411",
+    "id": "dx-ML-426",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55900,7 +56200,7 @@
     "endLine": 2076
   },
   {
-    "id": "dx-ML-412",
+    "id": "dx-ML-427",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55920,7 +56220,7 @@
     "endLine": 2086
   },
   {
-    "id": "dx-ML-413",
+    "id": "dx-ML-428",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55940,7 +56240,7 @@
     "endLine": 9
   },
   {
-    "id": "dx-ML-414",
+    "id": "dx-ML-429",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55960,7 +56260,7 @@
     "endLine": 18
   },
   {
-    "id": "dx-ML-415",
+    "id": "dx-ML-430",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -55980,7 +56280,7 @@
     "endLine": 31
   },
   {
-    "id": "dx-ML-416",
+    "id": "dx-ML-431",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56000,7 +56300,7 @@
     "endLine": 35
   },
   {
-    "id": "dx-ML-417",
+    "id": "dx-ML-432",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56020,7 +56320,7 @@
     "endLine": 46
   },
   {
-    "id": "dx-ML-418",
+    "id": "dx-ML-433",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56040,7 +56340,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-ML-419",
+    "id": "dx-ML-434",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56060,7 +56360,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-420",
+    "id": "dx-ML-435",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56080,7 +56380,7 @@
     "endLine": 70
   },
   {
-    "id": "dx-ML-421",
+    "id": "dx-ML-436",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56100,7 +56400,7 @@
     "endLine": 78
   },
   {
-    "id": "dx-ML-422",
+    "id": "dx-ML-437",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56120,7 +56420,7 @@
     "endLine": 83
   },
   {
-    "id": "dx-ML-423",
+    "id": "dx-ML-438",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56140,7 +56440,7 @@
     "endLine": 87
   },
   {
-    "id": "dx-ML-424",
+    "id": "dx-ML-439",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56160,7 +56460,7 @@
     "endLine": 97
   },
   {
-    "id": "dx-ML-425",
+    "id": "dx-ML-440",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56180,7 +56480,7 @@
     "endLine": 103
   },
   {
-    "id": "dx-ML-426",
+    "id": "dx-ML-441",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56200,7 +56500,7 @@
     "endLine": 106
   },
   {
-    "id": "dx-ML-427",
+    "id": "dx-ML-442",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56220,18 +56520,438 @@
     "endLine": 113
   },
   {
-    "id": "dx-ML-428",
+    "id": "dx-ML-443",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[用户级分流]\n用户级分流是指以 $user\\_id$ 作为实验单位，将用户稳定分配到对照组或实验组。\n\n在推荐、增长、Feed 流、Push 等长期影响用户体验的场景中，通常优先使用用户级分流。\n\n其核心原因是：同一个用户应当在整个实验周期内持续接受同一种策略，避免跨组污染。\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & hash(user_i) \\bmod 100 < 50, \\\\\ntreatment, & hash(user_i) \\bmod 100 \\geq 50.\n\\end{cases}\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[用户级分流]\n用户级分流是指以 $user\\_id$ 作为实验单位，将用户稳定分配到对照组或实验组。\n\n在推荐、增长、Feed 流、Push 等长期影响用户体验的场景中，通常优先使用用户级分流。\n\n其核心原因是：同一个用户应当在整个实验周期内持续接受同一种策略，避免跨组污染。\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & hash(user_i) \\bmod 100 < 50, \\\\\ntreatment, & hash(user_i) \\bmod 100 \\geq 50.\n\\end{cases}\n\\]\n\\end{theorem}",
+    "text": "[用户级分流] 用户级分流是指以 作为实验单位，将用户稳定分配到对照组或实验组。 在推荐、增长、Feed 流、Push 等长期影响用户体验的场景中，通常优先使用用户级分流。 其核心原因是：同一个用户应当在整个实验周期内持续接受同一种策略，避免跨组污染。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 117,
+    "endLine": 130
+  },
+  {
+    "id": "dx-ML-444",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "分流",
+    "previewType": "note",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{note}\n    哈希分流能保证稳定和随机，但有限样本下仍可能出现关键人群比例不均衡，比如实验组高活跃用户偏多。这个时候实验差异可能混入用户结构差异。所以我会在实验前后检查 SRM 和关键协变量均衡，比如新老用户、活跃度、设备、地域。如果某些关键变量很重要，可以进一步用分层随机分流，或者在分析阶段做分层分析和协变量调整。\n\\end{note}",
+    "content": "\\begin{note}\n    哈希分流能保证稳定和随机，但有限样本下仍可能出现关键人群比例不均衡，比如实验组高活跃用户偏多。这个时候实验差异可能混入用户结构差异。所以我会在实验前后检查 SRM 和关键协变量均衡，比如新老用户、活跃度、设备、地域。如果某些关键变量很重要，可以进一步用分层随机分流，或者在分析阶段做分层分析和协变量调整。\n\\end{note}",
+    "text": "哈希分流能保证稳定和随机，但有限样本下仍可能出现关键人群比例不均衡，比如实验组高活跃用户偏多。这个时候实验差异可能混入用户结构差异。所以我会在实验前后检查 SRM 和关键协变量均衡，比如新老用户、活跃度、设备、地域。如果某些关键变量很重要，可以进一步用分层随机分流，或者在分析阶段做分层分析和协变量调整。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 131,
+    "endLine": 133
+  },
+  {
+    "id": "dx-ML-445",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "分流",
+    "previewType": "tip",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{dxtips}\n    我们的哈希分流的缺点是不是就是可能随机分的但是分的时候某一个类型的人偏多。哈希分流的优点是可复现、可溯源、近似随机，而且能保证同一个用户稳定在同一组。对于模型对比来说，这很重要，因为我们希望控制组持续使用旧模型，实验组持续使用新模型，避免同一个用户来回切换策略造成污染。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    我们的哈希分流的缺点是不是就是可能随机分的但是分的时候某一个类型的人偏多。哈希分流的优点是可复现、可溯源、近似随机，而且能保证同一个用户稳定在同一组。对于模型对比来说，这很重要，因为我们希望控制组持续使用旧模型，实验组持续使用新模型，避免同一个用户来回切换策略造成污染。\n\\end{dxtips}",
+    "text": "我们的哈希分流的缺点是不是就是可能随机分的但是分的时候某一个类型的人偏多。哈希分流的优点是可复现、可溯源、近似随机，而且能保证同一个用户稳定在同一组。对于模型对比来说，这很重要，因为我们希望控制组持续使用旧模型，实验组持续使用新模型，避免同一个用户来回切换策略造成污染。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 134,
+    "endLine": 136
+  },
+  {
+    "id": "dx-ML-446",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[设备级分流]\n设备级分流是指以 $device\\_id$ 作为实验单位，将设备分配到不同实验组。\n\n这种方式适合未登录用户、新用户冷启动、App 端功能实验等场景。\n\n其局限是：同一用户可能拥有多个设备，因此可能在不同设备上进入不同实验组。\n\\[\ngroup_i = f(device\\_id_i)\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[设备级分流]\n设备级分流是指以 $device\\_id$ 作为实验单位，将设备分配到不同实验组。\n\n这种方式适合未登录用户、新用户冷启动、App 端功能实验等场景。\n\n其局限是：同一用户可能拥有多个设备，因此可能在不同设备上进入不同实验组。\n\\[\ngroup_i = f(device\\_id_i)\n\\]\n\\end{theorem}",
+    "text": "[设备级分流] 设备级分流是指以 作为实验单位，将设备分配到不同实验组。 这种方式适合未登录用户、新用户冷启动、App 端功能实验等场景。 其局限是：同一用户可能拥有多个设备，因此可能在不同设备上进入不同实验组。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 137,
+    "endLine": 146
+  },
+  {
+    "id": "dx-ML-447",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[会话级分流]\n会话级分流是指以 $session\\_id$ 作为实验单位，将一次访问或一次会话分配到实验组。\n\n这种方式适合搜索结果页、单次访问体验、临时页面策略等短周期场景。\n\n其局限是：同一用户在不同会话中可能看到不同策略，因此不适合长期推荐策略实验。\n\\[\ngroup_i = f(session\\_id_i)\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[会话级分流]\n会话级分流是指以 $session\\_id$ 作为实验单位，将一次访问或一次会话分配到实验组。\n\n这种方式适合搜索结果页、单次访问体验、临时页面策略等短周期场景。\n\n其局限是：同一用户在不同会话中可能看到不同策略，因此不适合长期推荐策略实验。\n\\[\ngroup_i = f(session\\_id_i)\n\\]\n\\end{theorem}",
+    "text": "[会话级分流] 会话级分流是指以 作为实验单位，将一次访问或一次会话分配到实验组。 这种方式适合搜索结果页、单次访问体验、临时页面策略等短周期场景。 其局限是：同一用户在不同会话中可能看到不同策略，因此不适合长期推荐策略实验。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 160,
+    "endLine": 169
+  },
+  {
+    "id": "dx-ML-448",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[曝光级分流]\n曝光级分流是指以 $impression\\_id$ 或 $request\\_id$ 作为实验单位，对每一次曝光或请求进行分组。\n\n这种方式适合广告创意轮播、单次请求级排序实验、极短期策略测试。\n\n其风险是：同一用户可能同时接触对照组和实验组策略，导致用户体验污染；同时曝光样本之间并不完全独立，容易造成统计显著性被高估。\n\\[\ngroup_i = f(impression\\_id_i)\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[曝光级分流]\n曝光级分流是指以 $impression\\_id$ 或 $request\\_id$ 作为实验单位，对每一次曝光或请求进行分组。\n\n这种方式适合广告创意轮播、单次请求级排序实验、极短期策略测试。\n\n其风险是：同一用户可能同时接触对照组和实验组策略，导致用户体验污染；同时曝光样本之间并不完全独立，容易造成统计显著性被高估。\n\\[\ngroup_i = f(impression\\_id_i)\n\\]\n\\end{theorem}",
+    "text": "[曝光级分流] 曝光级分流是指以 或 作为实验单位，对每一次曝光或请求进行分组。 这种方式适合广告创意轮播、单次请求级排序实验、极短期策略测试。 其风险是：同一用户可能同时接触对照组和实验组策略，导致用户体验污染；同时曝光样本之间并不完全独立，容易造成统计显著性被高估。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 171,
+    "endLine": 180
+  },
+  {
+    "id": "dx-ML-449",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[地域级分流]\n地域级分流是指以城市、省份、国家等地理单位作为实验单位。\n\n这种方式适合区域运营、本地生活、物流履约、城市活动或政策类实验。\n\n其局限是：地域之间本身差异较大，不一定满足随机性；同时样本单位较少，容易受到节假日、天气、城市事件等外部因素影响。\n\\[\ngroup_i = f(region_i)\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[地域级分流]\n地域级分流是指以城市、省份、国家等地理单位作为实验单位。\n\n这种方式适合区域运营、本地生活、物流履约、城市活动或政策类实验。\n\n其局限是：地域之间本身差异较大，不一定满足随机性；同时样本单位较少，容易受到节假日、天气、城市事件等外部因素影响。\n\\[\ngroup_i = f(region_i)\n\\]\n\\end{theorem}",
+    "text": "[地域级分流] 地域级分流是指以城市、省份、国家等地理单位作为实验单位。 这种方式适合区域运营、本地生活、物流履约、城市活动或政策类实验。 其局限是：地域之间本身差异较大，不一定满足随机性；同时样本单位较少，容易受到节假日、天气、城市事件等外部因素影响。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 182,
+    "endLine": 191
+  },
+  {
+    "id": "dx-ML-450",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[集群级分流]\n集群级分流是指以学校、公司、社区、社交网络簇、创作者群体等 cluster 作为实验单位。\n\n这种方式适合存在强网络效应或强干扰效应的实验，例如社交关系链、内容生态、创作者侧分发策略。\n\n其优点是可以减少不同实验组之间的相互影响；缺点是有效样本量下降、方差变大、统计分析更复杂。\n\\[\ngroup_i = f(cluster_i)\n\\]\n\\end{theorem}",
+    "content": "\\begin{theorem}[集群级分流]\n集群级分流是指以学校、公司、社区、社交网络簇、创作者群体等 cluster 作为实验单位。\n\n这种方式适合存在强网络效应或强干扰效应的实验，例如社交关系链、内容生态、创作者侧分发策略。\n\n其优点是可以减少不同实验组之间的相互影响；缺点是有效样本量下降、方差变大、统计分析更复杂。\n\\[\ngroup_i = f(cluster_i)\n\\]\n\\end{theorem}",
+    "text": "[集群级分流] 集群级分流是指以学校、公司、社区、社交网络簇、创作者群体等 cluster 作为实验单位。 这种方式适合存在强网络效应或强干扰效应的实验，例如社交关系链、内容生态、创作者侧分发策略。 其优点是可以减少不同实验组之间的相互影响；缺点是有效样本量下降、方差变大、统计分析更复杂。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 193,
+    "endLine": 202
+  },
+  {
+    "id": "dx-ML-451",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[随机分流]\n随机分流是指直接用随机数将实验单位分配到不同实验组。\n\n如果实验单位为用户，则可以写作：\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & U_i < p, \\\\\ntreatment, & U_i \\geq p,\n\\end{cases}\n\\quad U_i \\sim Uniform(0,1)\n\\]\n\n其中 $p$ 是对照组流量比例。\n\n随机分流的优点是简单直接；缺点是如果没有稳定键，同一个用户在不同时间可能被分到不同组。\n\\end{theorem}",
+    "content": "\\begin{theorem}[随机分流]\n随机分流是指直接用随机数将实验单位分配到不同实验组。\n\n如果实验单位为用户，则可以写作：\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & U_i < p, \\\\\ntreatment, & U_i \\geq p,\n\\end{cases}\n\\quad U_i \\sim Uniform(0,1)\n\\]\n\n其中 $p$ 是对照组流量比例。\n\n随机分流的优点是简单直接；缺点是如果没有稳定键，同一个用户在不同时间可能被分到不同组。\n\\end{theorem}",
+    "text": "[随机分流] 随机分流是指直接用随机数将实验单位分配到不同实验组。 如果实验单位为用户，则可以写作： 其中 是对照组流量比例。 随机分流的优点是简单直接；缺点是如果没有稳定键，同一个用户在不同时间可能被分到不同组。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 204,
+    "endLine": 220
+  },
+  {
+    "id": "dx-ML-452",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[哈希分流]\n哈希分流是指使用实验单位 ID 和实验 ID 计算哈希值，再根据哈希桶分配实验组。\n\n工业界常用形式为：\n\\[\nbucket_i = hash(user_i, experiment\\_id) \\bmod 100\n\\]\n\n例如：\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & 0 \\leq bucket_i < 50, \\\\\ntreatment, & 50 \\leq bucket_i < 100.\n\\end{cases}\n\\]\n\n哈希分流的优点是稳定、可复现、易于扩展到灰度比例，并且适合多实验并行管理。\n\\end{theorem}",
+    "content": "\\begin{theorem}[哈希分流]\n哈希分流是指使用实验单位 ID 和实验 ID 计算哈希值，再根据哈希桶分配实验组。\n\n工业界常用形式为：\n\\[\nbucket_i = hash(user_i, experiment\\_id) \\bmod 100\n\\]\n\n例如：\n\\[\ngroup_i =\n\\begin{cases}\ncontrol, & 0 \\leq bucket_i < 50, \\\\\ntreatment, & 50 \\leq bucket_i < 100.\n\\end{cases}\n\\]\n\n哈希分流的优点是稳定、可复现、易于扩展到灰度比例，并且适合多实验并行管理。\n\\end{theorem}",
+    "text": "[哈希分流] 哈希分流是指使用实验单位 ID 和实验 ID 计算哈希值，再根据哈希桶分配实验组。 工业界常用形式为： 例如： 哈希分流的优点是稳定、可复现、易于扩展到灰度比例，并且适合多实验并行管理。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 222,
+    "endLine": 240
+  },
+  {
+    "id": "dx-ML-453",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[分层随机分流]\n分层随机分流是指先按照关键特征将样本划分为若干层，再在每一层内部进行随机分流。\n\n例如按照用户活跃度 $S_i$ 分层：\n\\[\nS_i \\in \\{low, medium, high\\}\n\\]\n\n然后在每个分层 $s$ 内部分流：\n\\[\nP(group_i = treatment \\mid S_i = s) = p\n\\]\n\n这种方式可以保证新老用户、高低活跃用户、不同端类型等关键人群在实验组和对照组中更加均衡，从而降低方差，提高实验可信度。\n\\end{theorem}",
+    "content": "\\begin{theorem}[分层随机分流]\n分层随机分流是指先按照关键特征将样本划分为若干层，再在每一层内部进行随机分流。\n\n例如按照用户活跃度 $S_i$ 分层：\n\\[\nS_i \\in \\{low, medium, high\\}\n\\]\n\n然后在每个分层 $s$ 内部分流：\n\\[\nP(group_i = treatment \\mid S_i = s) = p\n\\]\n\n这种方式可以保证新老用户、高低活跃用户、不同端类型等关键人群在实验组和对照组中更加均衡，从而降低方差，提高实验可信度。\n\\end{theorem}",
+    "text": "[分层随机分流] 分层随机分流是指先按照关键特征将样本划分为若干层，再在每一层内部进行随机分流。 例如按照用户活跃度 分层： 然后在每个分层 内部分流： 这种方式可以保证新老用户、高低活跃用户、不同端类型等关键人群在实验组和对照组中更加均衡，从而降低方差，提高实验可信度。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 242,
+    "endLine": 256
+  },
+  {
+    "id": "dx-ML-454",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[灰度分流]\n灰度分流是指先让一小部分流量进入实验组，观察核心指标和护栏指标稳定后，再逐步扩大流量比例。\n\n常见节奏为：\n\\[\n1\\% \\rightarrow 5\\% \\rightarrow 10\\% \\rightarrow 30\\% \\rightarrow 50\\%\n\\]\n\n灰度分流适合风险较高的新功能、新模型或新推荐策略。它的目的不是单纯估计效果，而是控制上线风险。\n\\end{theorem}",
+    "content": "\\begin{theorem}[灰度分流]\n灰度分流是指先让一小部分流量进入实验组，观察核心指标和护栏指标稳定后，再逐步扩大流量比例。\n\n常见节奏为：\n\\[\n1\\% \\rightarrow 5\\% \\rightarrow 10\\% \\rightarrow 30\\% \\rightarrow 50\\%\n\\]\n\n灰度分流适合风险较高的新功能、新模型或新推荐策略。它的目的不是单纯估计效果，而是控制上线风险。\n\\end{theorem}",
+    "text": "[灰度分流] 灰度分流是指先让一小部分流量进入实验组，观察核心指标和护栏指标稳定后，再逐步扩大流量比例。 常见节奏为： 灰度分流适合风险较高的新功能、新模型或新推荐策略。它的目的不是单纯估计效果，而是控制上线风险。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 258,
+    "endLine": 267
+  },
+  {
+    "id": "dx-ML-455",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "theorem",
+    "blockTitle": "分流",
+    "previewType": "theorem",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{theorem}[白名单分流]\n白名单分流是指指定一批用户、员工、测试账号或特定人群进入实验组。\n\n设白名单集合为 $W$，则：\n\\[\ngroup_i =\n\\begin{cases}\ntreatment, & user_i \\in W, \\\\\ncontrol, & user_i \\notin W.\n\\end{cases}\n\\]\n\n白名单分流适合内部测试、功能冒烟、小范围验证，但由于样本不是随机抽取，通常不能作为正式 ABTest 效果评估的依据。\n\\end{theorem}",
+    "content": "\\begin{theorem}[白名单分流]\n白名单分流是指指定一批用户、员工、测试账号或特定人群进入实验组。\n\n设白名单集合为 $W$，则：\n\\[\ngroup_i =\n\\begin{cases}\ntreatment, & user_i \\in W, \\\\\ncontrol, & user_i \\notin W.\n\\end{cases}\n\\]\n\n白名单分流适合内部测试、功能冒烟、小范围验证，但由于样本不是随机抽取，通常不能作为正式 ABTest 效果评估的依据。\n\\end{theorem}",
+    "text": "[白名单分流] 白名单分流是指指定一批用户、员工、测试账号或特定人群进入实验组。 设白名单集合为 ，则： 白名单分流适合内部测试、功能冒烟、小范围验证，但由于样本不是随机抽取，通常不能作为正式 ABTest 效果评估的依据。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 269,
+    "endLine": 282
+  },
+  {
+    "id": "dx-ML-456",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{definition}[用户级指标聚合]\n用户级指标聚合是指在分流后，将原始行为明细按\n\\[\n(group\\_name,\\ user\\_id)\n\\]\n聚合，把多条播放记录转化为每个用户一行的实验指标。\n\n设用户 $i$ 的行为记录集合为 $\\mathcal{D}_i$，则用户级指标为：\n\\[\nM_i = f(\\mathcal{D}_i)\n\\]\n\n例如用户完播率：\n\\[\ncompletion\\_rate_i\n=\n\\frac{\n\\sum_{j \\in \\mathcal{D}_i}\n\\mathbf{1}(play\\_duration_{ij} \\geq video\\_duration_{ij})\n}{\n\\sum_{j \\in \\mathcal{D}_i}\n\\mathbf{1}(play\\_duration_{ij} > 0)\n}\n\\]\n\n其目的，是让每个用户作为一个实验样本，再比较实验组与对照组的平均表现。\n\\end{definition}",
+    "content": "\\begin{definition}[用户级指标聚合]\n用户级指标聚合是指在分流后，将原始行为明细按\n\\[\n(group\\_name,\\ user\\_id)\n\\]\n聚合，把多条播放记录转化为每个用户一行的实验指标。\n\n设用户 $i$ 的行为记录集合为 $\\mathcal{D}_i$，则用户级指标为：\n\\[\nM_i = f(\\mathcal{D}_i)\n\\]\n\n例如用户完播率：\n\\[\ncompletion\\_rate_i\n=\n\\frac{\n\\sum_{j \\in \\mathcal{D}_i}\n\\mathbf{1}(play\\_duration_{ij} \\geq video\\_duration_{ij})\n}{\n\\sum_{j \\in \\mathcal{D}_i}\n\\mathbf{1}(play\\_duration_{ij} > 0)\n}\n\\]\n\n其目的，是让每个用户作为一个实验样本，再比较实验组与对照组的平均表现。\n\\end{definition}",
+    "text": "[用户级指标聚合] 用户级指标聚合是指在分流后，将原始行为明细按 聚合，把多条播放记录转化为每个用户一行的实验指标。 设用户 的行为记录集合为 ，则用户级指标为： 例如用户完播率： 其目的，是让每个用户作为一个实验样本，再比较实验组与对照组的平均表现。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 289,
+    "endLine": 315
+  },
+  {
+    "id": "dx-ML-457",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "分流",
+    "previewType": "example",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{example}[两层指标聚合]\n本项目的 ABTest 指标聚合分为两层。\n\n第一层，先按实验组和用户聚合：\n\\[\nGROUP\\ BY\\ (group\\_name,\\ user\\_id)\n\\]\n\n例如，对每个用户计算完播率：\n\\[\ncompletion\\_rate_i\n=\n\\frac{complete\\_cnt_i}{play\\_cnt_i}\n\\]\n\n第二层，再按实验组计算组内平均：\n\\[\n\\bar{M}_{g}\n=\n\\frac{1}{n_g}\n\\sum_{i:g_i=g} M_i,\n\\quad\ng \\in \\{control,\\ treatment\\}\n\\]\n\n最终比较实验组和对照组的均值差异：\n\\[\n\\bar{M}_{treatment} - \\bar{M}_{control}\n\\]\n\n也就是：先给每个用户算成绩，再比较两组用户的平均成绩。\n\\end{example}",
+    "content": "\\begin{example}[两层指标聚合]\n本项目的 ABTest 指标聚合分为两层。\n\n第一层，先按实验组和用户聚合：\n\\[\nGROUP\\ BY\\ (group\\_name,\\ user\\_id)\n\\]\n\n例如，对每个用户计算完播率：\n\\[\ncompletion\\_rate_i\n=\n\\frac{complete\\_cnt_i}{play\\_cnt_i}\n\\]\n\n第二层，再按实验组计算组内平均：\n\\[\n\\bar{M}_{g}\n=\n\\frac{1}{n_g}\n\\sum_{i:g_i=g} M_i,\n\\quad\ng \\in \\{control,\\ treatment\\}\n\\]\n\n最终比较实验组和对照组的均值差异：\n\\[\n\\bar{M}_{treatment} - \\bar{M}_{control}\n\\]\n\n也就是：先给每个用户算成绩，再比较两组用户的平均成绩。\n\\end{example}",
+    "text": "[两层指标聚合] 本项目的 ABTest 指标聚合分为两层。 第一层，先按实验组和用户聚合： 例如，对每个用户计算完播率： 第二层，再按实验组计算组内平均： 最终比较实验组和对照组的均值差异： 也就是：先给每个用户算成绩，再比较两组用户的平均成绩。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 316,
+    "endLine": 347
+  },
+  {
+    "id": "dx-ML-458",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "分流",
+    "previewType": "example",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{example}[曝光级重复放大问题]\n如果直接使用曝光级数据进行比较，高活跃用户会因为产生更多曝光记录而被重复计入样本。\n\n例如，用户 $i$ 产生 $100$ 条曝光，用户 $k$ 只产生 $1$ 条曝光，则在曝光级分析中，用户 $i$ 的权重约为用户 $k$ 的 $100$ 倍。\n\n但在用户级分流的 ABTest 中，实验单位是用户。因此，更合理的做法是先将曝光记录聚合到用户级，使每个用户先形成一个指标：\n\\[\nM_i = f(\\mathcal{D}_i)\n\\]\n\n再比较实验组和对照组的用户级平均表现：\n\\[\n\\bar{M}_{treatment} - \\bar{M}_{control}\n\\]\n\n这样可以避免高活跃用户因曝光次数更多而过度影响实验结论。\n\\end{example}",
+    "content": "\\begin{example}[曝光级重复放大问题]\n如果直接使用曝光级数据进行比较，高活跃用户会因为产生更多曝光记录而被重复计入样本。\n\n例如，用户 $i$ 产生 $100$ 条曝光，用户 $k$ 只产生 $1$ 条曝光，则在曝光级分析中，用户 $i$ 的权重约为用户 $k$ 的 $100$ 倍。\n\n但在用户级分流的 ABTest 中，实验单位是用户。因此，更合理的做法是先将曝光记录聚合到用户级，使每个用户先形成一个指标：\n\\[\nM_i = f(\\mathcal{D}_i)\n\\]\n\n再比较实验组和对照组的用户级平均表现：\n\\[\n\\bar{M}_{treatment} - \\bar{M}_{control}\n\\]\n\n这样可以避免高活跃用户因曝光次数更多而过度影响实验结论。\n\\end{example}",
+    "text": "[曝光级重复放大问题] 如果直接使用曝光级数据进行比较，高活跃用户会因为产生更多曝光记录而被重复计入样本。 例如，用户 产生 条曝光，用户 只产生 条曝光，则在曝光级分析中，用户 的权重约为用户 的 倍。 但在用户级分流的 ABTest 中，实验单位是用户。因此，更合理的做法是先将曝光记录聚合到用户级，使每个用户先形成一个指标： 再比较实验组和对照组的用户级平均表现： 这样可以避免高活跃用户因曝光次数更多而过度影响实验结论。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 386,
+    "endLine": 402
+  },
+  {
+    "id": "dx-ML-459",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "分流",
+    "previewType": "tip",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{dxtips}\n    这里假设的就是H0 μ1-μ2=0\n    也就是正态分布以原点为对称轴，用实际的 $\n    \\bar X_1-\\bar X_2\n    $算出后看看落在正态分布的那个点上，这个其实能第一看看在不在拒绝域，第二能算p值看看是不是显著。用体验是总体方差不知道所以用样本方差s，(n-1)s/σ²符合卡方分布，自由度是n-1，然后变成标准卡方分布就又把n-1干掉了。上面是标准正态分布。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n    这里假设的就是H0 μ1-μ2=0\n    也就是正态分布以原点为对称轴，用实际的 $\n    \\bar X_1-\\bar X_2\n    $算出后看看落在正态分布的那个点上，这个其实能第一看看在不在拒绝域，第二能算p值看看是不是显著。用体验是总体方差不知道所以用样本方差s，(n-1)s/σ²符合卡方分布，自由度是n-1，然后变成标准卡方分布就又把n-1干掉了。上面是标准正态分布。\n\\end{dxtips}",
+    "text": "这里假设的就是H0 μ1-μ2=0 也就是正态分布以原点为对称轴，用实际的 算出后看看落在正态分布的那个点上，这个其实能第一看看在不在拒绝域，第二能算p值看看是不是显著。用体验是总体方差不知道所以用样本方差s，(n-1)s/σ²符合卡方分布，自由度是n-1，然后变成标准卡方分布就又把n-1干掉了。上面是标准正态分布。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 403,
+    "endLine": 408
+  },
+  {
+    "id": "dx-ML-460",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "definition",
+    "blockTitle": "分流",
+    "previewType": "definition",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{definition}[Welch t-test]\nWelch t-test 是一种用于比较两个独立样本均值是否相等的双样本 $t$ 检验。与普通双样本 $t$ 检验不同，Welch t-test 不要求两组总体方差相等，即允许 $\\sigma_1^2 \\neq \\sigma_2^2$。\n\n设两组样本均值、样本方差和样本量分别为 $\\bar X_1,s_1^2,n_1$ 与 $\\bar X_2,s_2^2,n_2$，其检验统计量为\n\\[\nt=\\frac{\\bar X_1-\\bar X_2}{\\sqrt{\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}}}.\n\\]\n\n因此，Welch t-test 适用于两组样本方差可能不相等的均值比较问题。\n\\end{definition}",
+    "content": "\\begin{definition}[Welch t-test]\nWelch t-test 是一种用于比较两个独立样本均值是否相等的双样本 $t$ 检验。与普通双样本 $t$ 检验不同，Welch t-test 不要求两组总体方差相等，即允许 $\\sigma_1^2 \\neq \\sigma_2^2$。\n\n设两组样本均值、样本方差和样本量分别为 $\\bar X_1,s_1^2,n_1$ 与 $\\bar X_2,s_2^2,n_2$，其检验统计量为\n\\[\nt=\\frac{\\bar X_1-\\bar X_2}{\\sqrt{\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}}}.\n\\]\n\n因此，Welch t-test 适用于两组样本方差可能不相等的均值比较问题。\n\\end{definition}",
+    "text": "[Welch t-test] Welch t-test 是一种用于比较两个独立样本均值是否相等的双样本 检验。与普通双样本 检验不同，Welch t-test 不要求两组总体方差相等，即允许 。 设两组样本均值、样本方差和样本量分别为 与 ，其检验统计量为 因此，Welch t-test 适用于两组样本方差可能不相等的均值比较问题。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 442,
+    "endLine": 451
+  },
+  {
+    "id": "dx-ML-461",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "note",
+    "blockTitle": "分流",
+    "previewType": "note",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{note}[分层分析与辛普森悖论]\n分层分析的目的，是检查整体实验结论是否在不同用户群体中仍然成立。\n\n若只看整体均值，可能出现辛普森悖论：整体上实验组优于对照组，但在某些分层中实验组并不占优，甚至更差。\n\n因此，在 ABTest 中需要按关键变量（如用户活跃度、新老用户、设备类型等）做分层分析，判断策略效果是否稳定，以及是否伤害了某些用户群体。\n\\end{note}",
+    "content": "\\begin{note}[分层分析与辛普森悖论]\n分层分析的目的，是检查整体实验结论是否在不同用户群体中仍然成立。\n\n若只看整体均值，可能出现辛普森悖论：整体上实验组优于对照组，但在某些分层中实验组并不占优，甚至更差。\n\n因此，在 ABTest 中需要按关键变量（如用户活跃度、新老用户、设备类型等）做分层分析，判断策略效果是否稳定，以及是否伤害了某些用户群体。\n\\end{note}",
+    "text": "[分层分析与辛普森悖论] 分层分析的目的，是检查整体实验结论是否在不同用户群体中仍然成立。 若只看整体均值，可能出现辛普森悖论：整体上实验组优于对照组，但在某些分层中实验组并不占优，甚至更差。 因此，在 ABTest 中需要按关键变量（如用户活跃度、新老用户、设备类型等）做分层分析，判断策略效果是否稳定，以及是否伤害了某些用户群体。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 452,
+    "endLine": 458
+  },
+  {
+    "id": "dx-ML-462",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "分流",
+    "previewType": "example",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{example}[分层分析中的异质性效果]\n整体结果显示：\n\\[\n\\bar{M}_{\\text{实}} > \\bar{M}_{\\text{对}}\n\\]\n似乎说明实验组策略优于对照组。\n\n但按用户活跃度分层后，可能得到：\n\\[\n\\begin{array}{c|c}\n\\text{用户分层} & \\text{实验效果} \\\\\n\\hline\n\\text{高活跃用户} & \\text{实验组更好} \\\\\n\\text{中活跃用户} & \\text{实验组与对照组差不多} \\\\\n\\text{低活跃用户} & \\text{实验组更差}\n\\end{array}\n\\]\n\n这说明整体提升可能主要来自高活跃用户，而低活跃用户反而被新策略伤害。因此，ABTest 不能只看整体均值，还需要结合分层结果判断策略是否稳定。\n\\end{example}",
+    "content": "\\begin{example}[分层分析中的异质性效果]\n整体结果显示：\n\\[\n\\bar{M}_{\\text{实}} > \\bar{M}_{\\text{对}}\n\\]\n似乎说明实验组策略优于对照组。\n\n但按用户活跃度分层后，可能得到：\n\\[\n\\begin{array}{c|c}\n\\text{用户分层} & \\text{实验效果} \\\\\n\\hline\n\\text{高活跃用户} & \\text{实验组更好} \\\\\n\\text{中活跃用户} & \\text{实验组与对照组差不多} \\\\\n\\text{低活跃用户} & \\text{实验组更差}\n\\end{array}\n\\]\n\n这说明整体提升可能主要来自高活跃用户，而低活跃用户反而被新策略伤害。因此，ABTest 不能只看整体均值，还需要结合分层结果判断策略是否稳定。\n\\end{example}",
+    "text": "[分层分析中的异质性效果] 整体结果显示： 似乎说明实验组策略优于对照组。 但按用户活跃度分层后，可能得到： 这说明整体提升可能主要来自高活跃用户，而低活跃用户反而被新策略伤害。因此，ABTest 不能只看整体均值，还需要结合分层结果判断策略是否稳定。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 459,
+    "endLine": 478
+  },
+  {
+    "id": "dx-ML-463",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "definition",
+    "blockTitle": "分流",
+    "previewType": "definition",
+    "previewTitle": "分流",
+    "rawContent": "\\begin{definition}[ABTest 结果解读]\nABTest 结果解读是指在完成统计检验和分层分析后，将统计结果转化为业务结论。\n\n结果解读主要关注四个方面：\n\\begin{enumerate}\n    \\item \\textbf{方向：}实验组指标是高于还是低于对照组，即判断\n    \\[\n    \\bar{M}_{\\text{实}}-\\bar{M}_{\\text{对}}\n    \\]\n    的正负。\n\n    \\item \\textbf{显著性：}差异是否达到统计显著，例如是否满足\n    \\[\n    p < 0.05.\n    \\]\n\n    \\item \\textbf{业务大小：}即使统计显著，也要判断 lift 是否足够大，是否具有实际业务价值。\n\n    \\item \\textbf{分层稳定性：}检查不同用户分层中的效果是否一致，避免整体提升但某些关键人群受损。\n\\end{enumerate}\n\n因此，结果解读的目的不是单纯判断 $p$ 值，而是回答：实验是否真的带来了值得推进的业务提升。\n\\end{definition}",
+    "content": "\\begin{definition}[ABTest 结果解读]\nABTest 结果解读是指在完成统计检验和分层分析后，将统计结果转化为业务结论。\n\n结果解读主要关注四个方面：\n\\begin{enumerate}\n    \\item \\textbf{方向：}实验组指标是高于还是低于对照组，即判断\n    \\[\n    \\bar{M}_{\\text{实}}-\\bar{M}_{\\text{对}}\n    \\]\n    的正负。\n\n    \\item \\textbf{显著性：}差异是否达到统计显著，例如是否满足\n    \\[\n    p < 0.05.\n    \\]\n\n    \\item \\textbf{业务大小：}即使统计显著，也要判断 lift 是否足够大，是否具有实际业务价值。\n\n    \\item \\textbf{分层稳定性：}检查不同用户分层中的效果是否一致，避免整体提升但某些关键人群受损。\n\\end{enumerate}\n\n因此，结果解读的目的不是单纯判断 $p$ 值，而是回答：实验是否真的带来了值得推进的业务提升。\n\\end{definition}",
+    "text": "[ABTest 结果解读] ABTest 结果解读是指在完成统计检验和分层分析后，将统计结果转化为业务结论。 结果解读主要关注四个方面： 方向：实验组指标是高于还是低于对照组，即判断 的正负。 显著性：差异是否达到统计显著，例如是否满足 业务大小：即使统计显著，也要判断 lift 是否足够大，是否具有实际业务价值。 分层稳定性：检查不同用户分层中的效果是否一致，避免整体提升但某些关键人群受损。 因此，结果解读的目的不是单纯判断 值，而是回答：实验是否真的带来了值得推进的业务提升。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/快手项目.tex",
+    "startLine": 479,
+    "endLine": 501
+  },
+  {
+    "id": "dx-ML-464",
+    "repo": "dx-ML",
+    "title": "Ml",
+    "pdf": "pdf/dx-ML.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
+    "section": "分流",
+    "subsection": "",
+    "kind": "definition",
+    "blockTitle": "分流",
+    "previewType": "definition",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[广告投放核心指标]\n\n\\textbf{点击率 CTR}（Click-Through Rate）：\n$$\\text{CTR} = \\frac{\\text{点击数}}{\\text{展示数}}$$\n\n\\textbf{单次点击成本 CPC}（Cost Per Click）：\n$$\\text{CPC} = \\frac{\\text{花费}}{\\text{点击数}}$$\n\n\\textbf{千次展示成本 CPM}（Cost Per Mille）：\n$$\\text{CPM} = \\frac{\\text{花费}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{投资回报率 ROI}（Return on Investment）：\n$$\\text{ROI} = \\frac{\\text{收入} - \\text{成本}}{\\text{成本}}$$\n\n\\textbf{广告支出回报 ROAS}（Return on Ad Spend）：\n$$\\text{ROAS} = \\frac{\\text{广告收入}}{\\text{广告花费}}$$\n\n\\textbf{单次安装成本 CPI}（Cost Per Install）：\n$$\\text{CPI} = \\frac{\\text{花费}}{\\text{安装数}}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[广告投放核心指标]\n\n\\textbf{点击率 CTR}（Click-Through Rate）：\n$$\\text{CTR} = \\frac{\\text{点击数}}{\\text{展示数}}$$\n\n\\textbf{单次点击成本 CPC}（Cost Per Click）：\n$$\\text{CPC} = \\frac{\\text{花费}}{\\text{点击数}}$$\n\n\\textbf{千次展示成本 CPM}（Cost Per Mille）：\n$$\\text{CPM} = \\frac{\\text{花费}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{投资回报率 ROI}（Return on Investment）：\n$$\\text{ROI} = \\frac{\\text{收入} - \\text{成本}}{\\text{成本}}$$\n\n\\textbf{广告支出回报 ROAS}（Return on Ad Spend）：\n$$\\text{ROAS} = \\frac{\\text{广告收入}}{\\text{广告花费}}$$\n\n\\textbf{单次安装成本 CPI}（Cost Per Install）：\n$$\\text{CPI} = \\frac{\\text{花费}}{\\text{安装数}}$$\n\n\\end{definition}",
     "text": "[广告投放核心指标] 点击率 CTR（Click-Through Rate）： 单次点击成本 CPC（Cost Per Click）： 千次展示成本 CPM（Cost Per Mille）： 投资回报率 ROI（Return on Investment）： 广告支出回报 ROAS（Return on Ad Spend）： 单次安装成本 CPI（Cost Per Install）：",
@@ -56240,18 +56960,18 @@
     "endLine": 22
   },
   {
-    "id": "dx-ML-429",
+    "id": "dx-ML-465",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "dxtips",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "tip",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{dxtips}\n    p都是per就是前面除以后面当分母。\n\\end{dxtips}",
     "content": "\\begin{dxtips}\n    p都是per就是前面除以后面当分母。\n\\end{dxtips}",
     "text": "p都是per就是前面除以后面当分母。",
@@ -56260,18 +56980,18 @@
     "endLine": 25
   },
   {
-    "id": "dx-ML-430",
+    "id": "dx-ML-466",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[转化漏斗类指标]\n\n\\textbf{转化率 CVR}（Conversion Rate）：\n$$\\text{CVR} = \\frac{\\text{转化数}}{\\text{点击数}}$$\n\n\\textbf{千次展示安装数 IPM}（Installs Per Mille）：\n$$\\text{IPM} = \\frac{\\text{安装数}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{第N日留存率}（Day N Retention Rate）：\n$$\\text{Retention}_N = \\frac{\\text{第}N\\text{天仍活跃用户数}}{\\text{首日新增用户数}}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[转化漏斗类指标]\n\n\\textbf{转化率 CVR}（Conversion Rate）：\n$$\\text{CVR} = \\frac{\\text{转化数}}{\\text{点击数}}$$\n\n\\textbf{千次展示安装数 IPM}（Installs Per Mille）：\n$$\\text{IPM} = \\frac{\\text{安装数}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{第N日留存率}（Day N Retention Rate）：\n$$\\text{Retention}_N = \\frac{\\text{第}N\\text{天仍活跃用户数}}{\\text{首日新增用户数}}$$\n\n\\end{definition}",
     "text": "[转化漏斗类指标] 转化率 CVR（Conversion Rate）： 千次展示安装数 IPM（Installs Per Mille）： 第N日留存率（Day N Retention Rate）：",
@@ -56280,18 +57000,18 @@
     "endLine": 37
   },
   {
-    "id": "dx-ML-431",
+    "id": "dx-ML-467",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[预算与出价类指标]\n\n\\textbf{日预算消耗率}（Daily Budget Consumption Rate）：\n$$\\text{消耗率} = \\frac{\\text{实际消耗}}{\\text{计划预算}}$$\n\n\\textbf{有效千次展示收益 eCPM}（Effective Cost Per Mille）：\n$$\\text{eCPM} = \\frac{\\text{总收入}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{出价反推}（Bid Estimation）：\n$$\\text{出价} = \\text{目标CPI} \\times \\text{预期CVR}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[预算与出价类指标]\n\n\\textbf{日预算消耗率}（Daily Budget Consumption Rate）：\n$$\\text{消耗率} = \\frac{\\text{实际消耗}}{\\text{计划预算}}$$\n\n\\textbf{有效千次展示收益 eCPM}（Effective Cost Per Mille）：\n$$\\text{eCPM} = \\frac{\\text{总收入}}{\\text{展示数}} \\times 1000$$\n\n\\textbf{出价反推}（Bid Estimation）：\n$$\\text{出价} = \\text{目标CPI} \\times \\text{预期CVR}$$\n\n\\end{definition}",
     "text": "[预算与出价类指标] 日预算消耗率（Daily Budget Consumption Rate）： 有效千次展示收益 eCPM（Effective Cost Per Mille）： 出价反推（Bid Estimation）：",
@@ -56300,18 +57020,18 @@
     "endLine": 50
   },
   {
-    "id": "dx-ML-432",
+    "id": "dx-ML-468",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[用户价值类指标]\n\n\\textbf{用户生命周期价值 LTV}（Lifetime Value）：\n$$\\text{LTV} = \\text{ARPU} \\times \\text{平均生命周期}$$\n\n\\textbf{每用户平均收入 ARPU}（Average Revenue Per User）：\n$$\\text{ARPU} = \\frac{\\text{总收入}}{\\text{活跃用户数}}$$\n\n\\textbf{ROI回收判断准则}：当 $\\text{LTV} > \\text{CPI}$ 时，该渠道具备投放价值。\n\n\\end{definition}",
     "content": "\\begin{definition}[用户价值类指标]\n\n\\textbf{用户生命周期价值 LTV}（Lifetime Value）：\n$$\\text{LTV} = \\text{ARPU} \\times \\text{平均生命周期}$$\n\n\\textbf{每用户平均收入 ARPU}（Average Revenue Per User）：\n$$\\text{ARPU} = \\frac{\\text{总收入}}{\\text{活跃用户数}}$$\n\n\\textbf{ROI回收判断准则}：当 $\\text{LTV} > \\text{CPI}$ 时，该渠道具备投放价值。\n\n\\end{definition}",
     "text": "[用户价值类指标] 用户生命周期价值 LTV（Lifetime Value）： 每用户平均收入 ARPU（Average Revenue Per User）： ROI回收判断准则：当 时，该渠道具备投放价值。",
@@ -56320,18 +57040,18 @@
     "endLine": 62
   },
   {
-    "id": "dx-ML-433",
+    "id": "dx-ML-469",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[效果对比类指标]\n\n\\textbf{同比增长率}（Year-over-Year Growth Rate，YoY）：\n$$\\text{YoY} = \\frac{\\text{本期} - \\text{同期}}{\\text{同期}}$$\n\n\\textbf{环比增长率}（Month-over-Month Growth Rate，MoM）：\n$$\\text{MoM} = \\frac{\\text{本期} - \\text{上期}}{\\text{上期}}$$\n\n\\textbf{渠道占比}（Channel Share）：\n$$\\text{Channel Share} = \\frac{\\text{某渠道花费}}{\\text{总花费}}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[效果对比类指标]\n\n\\textbf{同比增长率}（Year-over-Year Growth Rate，YoY）：\n$$\\text{YoY} = \\frac{\\text{本期} - \\text{同期}}{\\text{同期}}$$\n\n\\textbf{环比增长率}（Month-over-Month Growth Rate，MoM）：\n$$\\text{MoM} = \\frac{\\text{本期} - \\text{上期}}{\\text{上期}}$$\n\n\\textbf{渠道占比}（Channel Share）：\n$$\\text{Channel Share} = \\frac{\\text{某渠道花费}}{\\text{总花费}}$$\n\n\\end{definition}",
     "text": "[效果对比类指标] 同比增长率（Year-over-Year Growth Rate，YoY）： 环比增长率（Month-over-Month Growth Rate，MoM）： 渠道占比（Channel Share）：",
@@ -56340,18 +57060,18 @@
     "endLine": 75
   },
   {
-    "id": "dx-ML-434",
+    "id": "dx-ML-470",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "note",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "note",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{note}[广告投放漏斗归因一览]\n\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{lll}\n\\hline\n\\textbf{漏斗层级} & \\textbf{核心指标} & \\textbf{出问题找谁} \\\\\n\\hline\n曝光 $\\to$ 点击 & CTR（Click-Through Rate，点击率） & 素材组/定向策略 \\\\\n点击 $\\to$ 完播 & VTR（View-Through Rate，完播率） & 视频内容质量 \\\\\n\\multirow{2}{*}{完播 $\\to$ 安装} & CVR（Conversion Rate，转化率） & \\multirow{2}{*}{落地页、游戏包体} \\\\\n & IPM（Installs Per Mille，千次展示安装数） & \\\\\n\\multirow{2}{*}{安装 $\\to$ 付费} & 付费转化率（Payment Conversion Rate） & \\multirow{2}{*}{人群质量、游戏内设计} \\\\\n & ARPU（Average Revenue Per User，每用户平均收入） & \\\\\n\\multirow{2}{*}{整体盈利} & ROAS（Return on Ad Spend，广告支出回报） & \\multirow{2}{*}{投放策略} \\\\\n & LTV/CPI（Lifetime Value，用户生命周期价值 / Cost Per Install，单次安装成本） & \\\\\n\\hline\n\\end{tabular}\n\\end{table}\n\n\\end{note}",
     "content": "\\begin{note}[广告投放漏斗归因一览]\n\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{lll}\n\\hline\n\\textbf{漏斗层级} & \\textbf{核心指标} & \\textbf{出问题找谁} \\\\\n\\hline\n曝光 $\\to$ 点击 & CTR（Click-Through Rate，点击率） & 素材组/定向策略 \\\\\n点击 $\\to$ 完播 & VTR（View-Through Rate，完播率） & 视频内容质量 \\\\\n\\multirow{2}{*}{完播 $\\to$ 安装} & CVR（Conversion Rate，转化率） & \\multirow{2}{*}{落地页、游戏包体} \\\\\n & IPM（Installs Per Mille，千次展示安装数） & \\\\\n\\multirow{2}{*}{安装 $\\to$ 付费} & 付费转化率（Payment Conversion Rate） & \\multirow{2}{*}{人群质量、游戏内设计} \\\\\n & ARPU（Average Revenue Per User，每用户平均收入） & \\\\\n\\multirow{2}{*}{整体盈利} & ROAS（Return on Ad Spend，广告支出回报） & \\multirow{2}{*}{投放策略} \\\\\n & LTV/CPI（Lifetime Value，用户生命周期价值 / Cost Per Install，单次安装成本） & \\\\\n\\hline\n\\end{tabular}\n\\end{table}\n\n\\end{note}",
     "text": "[广告投放漏斗归因一览] [h] lll 漏斗层级 & 核心指标 & 出问题找谁 \\\\ 曝光 点击 & CTR（Click-Through Rate，点击率） & 素材组/定向策略 \\\\ 点击 完播 & VTR（View-Through Rate，完播率） & 视频内容质量 \\\\ 2 * 完播 安装 & CVR（Conversion Rate，转化率） & 2 * 落地页、游戏包体 \\\\ & IPM（Installs Per Mille，千次展示安装数） & \\\\ 2 * 安装 付费 & 付费转化率（Payment Conversion Rate） & 2 * 人群质量、游戏内设计 \\\\ & ARPU（Average Revenue Per User，每用户平均收入） & \\\\ 2 * 整体盈利 & ROAS（Return on Ad Spend，广告支出回报） & 2 * 投放策略 \\\\ & LTV/CPI（Lifetime Value，用户生命周期价值 / Cost Per Install，单次安装成本） & \\\\",
@@ -56360,18 +57080,18 @@
     "endLine": 97
   },
   {
-    "id": "dx-ML-435",
+    "id": "dx-ML-471",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "dxtips",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "tip",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{dxtips}\n    OK你按照我这个方式再梳理一下，我可不可以这样理解我们投放广告会经过，挑选用户，用户经过点击，观看，下载，付费四个过程大部分指标就是看这个些的。点击率低可能封面不好看，完播率低可能是内容不精彩，完播率也高但是下载不高可能是下载麻烦，落地页不好看，下载率高但是付费少可能是人群有问题对吗\n\\end{dxtips}",
     "content": "\\begin{dxtips}\n    OK你按照我这个方式再梳理一下，我可不可以这样理解我们投放广告会经过，挑选用户，用户经过点击，观看，下载，付费四个过程大部分指标就是看这个些的。点击率低可能封面不好看，完播率低可能是内容不精彩，完播率也高但是下载不高可能是下载麻烦，落地页不好看，下载率高但是付费少可能是人群有问题对吗\n\\end{dxtips}",
     "text": "OK你按照我这个方式再梳理一下，我可不可以这样理解我们投放广告会经过，挑选用户，用户经过点击，观看，下载，付费四个过程大部分指标就是看这个些的。点击率低可能封面不好看，完播率低可能是内容不精彩，完播率也高但是下载不高可能是下载麻烦，落地页不好看，下载率高但是付费少可能是人群有问题对吗",
@@ -56380,18 +57100,18 @@
     "endLine": 101
   },
   {
-    "id": "dx-ML-436",
+    "id": "dx-ML-472",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "note",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "note",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{note}[广告分析常用工具]\n\n\\textbf{一、网站/产品流量分析}\n\n\\begin{itemize}\n    \\item \\textbf{Google Analytics 4（GA4）}：看用户来源、访问、转化、留存，用于理解网站和 App 整体表现。\n    \\item \\textbf{Microsoft Clarity}：看热力图、用户录屏、页面点击行为，免费行为分析工具。\n\\end{itemize}\n\n对应岗位：数据分析、增长分析、产品分析、网站运营分析。\n\n\\textbf{二、广告投放分析}\n\n\\begin{itemize}\n    \\item \\textbf{Meta Ads Manager}（即 Facebook / Instagram 广告后台）：查看 Campaign、Ad Set、Ad 层级的数据表现。\n    \\item \\textbf{Google Ads + GA4}：看广告带来的点击、转化、ROI。\n    \\item \\textbf{国内对应工具}：巨量引擎、腾讯广告、快手磁力引擎、百度营销。\n\\end{itemize}\n\n对应岗位：广告投放、商业化数据分析、增长运营、效果广告优化师。\n\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{ll}\n\\hline\n\\textbf{分析对象} & \\textbf{代表工具} \\\\\n\\hline\n广告投放效果 & Meta Ads Manager、Google Ads \\\\\n用户行为分析 & GA4、Microsoft Clarity \\\\\n\\hline\n\\end{tabular}\n\\end{table}\n\n\\end{note}",
     "content": "\\begin{note}[广告分析常用工具]\n\n\\textbf{一、网站/产品流量分析}\n\n\\begin{itemize}\n    \\item \\textbf{Google Analytics 4（GA4）}：看用户来源、访问、转化、留存，用于理解网站和 App 整体表现。\n    \\item \\textbf{Microsoft Clarity}：看热力图、用户录屏、页面点击行为，免费行为分析工具。\n\\end{itemize}\n\n对应岗位：数据分析、增长分析、产品分析、网站运营分析。\n\n\\textbf{二、广告投放分析}\n\n\\begin{itemize}\n    \\item \\textbf{Meta Ads Manager}（即 Facebook / Instagram 广告后台）：查看 Campaign、Ad Set、Ad 层级的数据表现。\n    \\item \\textbf{Google Ads + GA4}：看广告带来的点击、转化、ROI。\n    \\item \\textbf{国内对应工具}：巨量引擎、腾讯广告、快手磁力引擎、百度营销。\n\\end{itemize}\n\n对应岗位：广告投放、商业化数据分析、增长运营、效果广告优化师。\n\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{ll}\n\\hline\n\\textbf{分析对象} & \\textbf{代表工具} \\\\\n\\hline\n广告投放效果 & Meta Ads Manager、Google Ads \\\\\n用户行为分析 & GA4、Microsoft Clarity \\\\\n\\hline\n\\end{tabular}\n\\end{table}\n\n\\end{note}",
     "text": "[广告分析常用工具] 一、网站/产品流量分析 Google Analytics 4（GA4）：看用户来源、访问、转化、留存，用于理解网站和 App 整体表现。 Microsoft Clarity：看热力图、用户录屏、页面点击行为，免费行为分析工具。 对应岗位：数据分析、增长分析、产品分析、网站运营分析。 二、广告投放分析 Meta Ads Manager（即 Facebook / Instagram 广告后台）：查看 Campaign、Ad Set、Ad 层级的数据表现。 Google Ads + GA4：看广告带来的点击、转化、ROI。 国内对应工具：巨量引擎、腾讯广告、快手磁力引擎、百度营销。 对应岗位：广告投放、商业化数据分析、增长运营、效果广告优化师。 [h] ll 分析对象 & 代表工具 \\\\ 广告投放效果 & Meta Ads Manager、Google Ads \\\\ 用户行为分析 & GA4、Microsoft Clarity \\\\",
@@ -56400,18 +57120,18 @@
     "endLine": 135
   },
   {
-    "id": "dx-ML-437",
+    "id": "dx-ML-473",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[付费转化率]\n\n\\textbf{付费转化率 PCR}（Payment Conversion Rate）：\n$$\\text{PCR} = \\frac{\\text{付费用户数}}{\\text{安装数}}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[付费转化率]\n\n\\textbf{付费转化率 PCR}（Payment Conversion Rate）：\n$$\\text{PCR} = \\frac{\\text{付费用户数}}{\\text{安装数}}$$\n\n\\end{definition}",
     "text": "[付费转化率] 付费转化率 PCR（Payment Conversion Rate）：",
@@ -56420,18 +57140,18 @@
     "endLine": 141
   },
   {
-    "id": "dx-ML-438",
+    "id": "dx-ML-474",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "definition",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "definition",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{definition}[广告转化概率分解]\n\n广告系统的核心目标是预估用户最终付费的概率，\n按漏斗结构分解为三层条件概率的连乘：\n\n$$p(\\text{付费}) = p(\\text{点击}|\\text{曝光}) \n\\times p(\\text{安装}|\\text{点击}) \n\\times p(\\text{付费}|\\text{安装})$$\n\n即：\n$$p(\\text{付费}) = \\text{CTR} \\times \\text{CVR} \\times \\text{PCR}$$\n\n\\end{definition}",
     "content": "\\begin{definition}[广告转化概率分解]\n\n广告系统的核心目标是预估用户最终付费的概率，\n按漏斗结构分解为三层条件概率的连乘：\n\n$$p(\\text{付费}) = p(\\text{点击}|\\text{曝光}) \n\\times p(\\text{安装}|\\text{点击}) \n\\times p(\\text{付费}|\\text{安装})$$\n\n即：\n$$p(\\text{付费}) = \\text{CTR} \\times \\text{CVR} \\times \\text{PCR}$$\n\n\\end{definition}",
     "text": "[广告转化概率分解] 广告系统的核心目标是预估用户最终付费的概率， 按漏斗结构分解为三层条件概率的连乘： 即：",
@@ -56440,18 +57160,18 @@
     "endLine": 154
   },
   {
-    "id": "dx-ML-439",
+    "id": "dx-ML-475",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "note",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "note",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{note}[对数似然与数值稳定性]\n\n模型训练时采用\\textbf{对数似然损失}（Log Loss）：\n\n$$\\mathcal{L} = -\\sum \\left[ y \\log \\hat{p} \n+ (1-y)\\log(1-\\hat{p}) \\right]$$\n\n其中 $y \\in \\{0,1\\}$ 为真实标签，$\\hat{p}$ 为模型预测概率。\n\n将概率连乘转化为对数累加：\n\n$$\\log(p_1 \\times p_2 \\times p_3) \n= \\log p_1 + \\log p_2 + \\log p_3$$\n\n这样做的原因是避免\\textbf{数值下溢}问题：\n多个小概率直接连乘会趋近于零，\n超出计算机浮点数的表示范围。\n\n\\end{note}",
     "content": "\\begin{note}[对数似然与数值稳定性]\n\n模型训练时采用\\textbf{对数似然损失}（Log Loss）：\n\n$$\\mathcal{L} = -\\sum \\left[ y \\log \\hat{p} \n+ (1-y)\\log(1-\\hat{p}) \\right]$$\n\n其中 $y \\in \\{0,1\\}$ 为真实标签，$\\hat{p}$ 为模型预测概率。\n\n将概率连乘转化为对数累加：\n\n$$\\log(p_1 \\times p_2 \\times p_3) \n= \\log p_1 + \\log p_2 + \\log p_3$$\n\n这样做的原因是避免\\textbf{数值下溢}问题：\n多个小概率直接连乘会趋近于零，\n超出计算机浮点数的表示范围。\n\n\\end{note}",
     "text": "[对数似然与数值稳定性] 模型训练时采用对数似然损失（Log Loss）： 其中 为真实标签， 为模型预测概率。 将概率连乘转化为对数累加： 这样做的原因是避免数值下溢问题： 多个小概率直接连乘会趋近于零， 超出计算机浮点数的表示范围。",
@@ -56460,18 +57180,18 @@
     "endLine": 174
   },
   {
-    "id": "dx-ML-440",
+    "id": "dx-ML-476",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-ML/main.synctex.gz",
-    "section": "BPR模型",
-    "subsection": "WBPR",
+    "section": "分流",
+    "subsection": "",
     "kind": "dxtips",
-    "blockTitle": "WBPR",
+    "blockTitle": "分流",
     "previewType": "tip",
-    "previewTitle": "WBPR",
+    "previewTitle": "分流",
     "rawContent": "\\begin{dxtips}\n    cpi是为数不多比一大\n\\end{dxtips}",
     "content": "\\begin{dxtips}\n    cpi是为数不多比一大\n\\end{dxtips}",
     "text": "cpi是为数不多比一大",
@@ -56480,7 +57200,7 @@
     "endLine": 177
   },
   {
-    "id": "dx-ML-441",
+    "id": "dx-ML-477",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56500,7 +57220,7 @@
     "endLine": 17
   },
   {
-    "id": "dx-ML-442",
+    "id": "dx-ML-478",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56520,7 +57240,7 @@
     "endLine": 25
   },
   {
-    "id": "dx-ML-443",
+    "id": "dx-ML-479",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56540,7 +57260,7 @@
     "endLine": 28
   },
   {
-    "id": "dx-ML-444",
+    "id": "dx-ML-480",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56560,7 +57280,7 @@
     "endLine": 40
   },
   {
-    "id": "dx-ML-445",
+    "id": "dx-ML-481",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56580,7 +57300,7 @@
     "endLine": 43
   },
   {
-    "id": "dx-ML-446",
+    "id": "dx-ML-482",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56600,7 +57320,7 @@
     "endLine": 47
   },
   {
-    "id": "dx-ML-447",
+    "id": "dx-ML-483",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56620,7 +57340,7 @@
     "endLine": 56
   },
   {
-    "id": "dx-ML-448",
+    "id": "dx-ML-484",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56640,7 +57360,7 @@
     "endLine": 59
   },
   {
-    "id": "dx-ML-449",
+    "id": "dx-ML-485",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56660,7 +57380,7 @@
     "endLine": 66
   },
   {
-    "id": "dx-ML-450",
+    "id": "dx-ML-486",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -56680,7 +57400,7 @@
     "endLine": 77
   },
   {
-    "id": "dx-ML-451",
+    "id": "dx-ML-487",
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
