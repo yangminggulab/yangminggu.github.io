@@ -14,6 +14,13 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Abstract-Algebra/main.synctex.gz"
   },
   {
+    "repo": "dx-AP",
+    "title": "Ap",
+    "pdf": "pdf/dx-AP.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-AP/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-AP/main.synctex.gz"
+  },
+  {
     "repo": "dx-complex-analysis",
     "title": "Complex Analysis",
     "pdf": "pdf/dx-complex-analysis.pdf",

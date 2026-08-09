@@ -1,23 +1,27 @@
 [
   {
-    "file": "video/1.mp4",
-    "name": "1.mp4"
+    "file": "video/Fatou引理.mp4",
+    "name": "Fatou引理.mp4"
   },
   {
-    "file": "video/2.mp4",
-    "name": "2.mp4"
-  },
-  {
-    "file": "video/3.mp4",
-    "name": "3.mp4"
-  },
-  {
-    "file": "video/4.mp4",
-    "name": "4.mp4"
+    "file": "video/np与ump检验.mp4",
+    "name": "np与ump检验.mp4"
   },
   {
     "file": "video/三种边界条件.mp4",
     "name": "三种边界条件.mp4"
+  },
+  {
+    "file": "video/二元函数的测度与一元函数积分的关系.mp4",
+    "name": "二元函数的测度与一元函数积分的关系.mp4"
+  },
+  {
+    "file": "video/假设检验.mp4",
+    "name": "假设检验.mp4"
+  },
+  {
+    "file": "video/割线与辐角函数.mp4",
+    "name": "割线与辐角函数.mp4"
   },
   {
     "file": "video/协方差的意义.mp4",
@@ -52,7 +56,15 @@
     "name": "特征线.mp4"
   },
   {
+    "file": "video/积分的分布表达.mp4",
+    "name": "积分的分布表达.mp4"
+  },
+  {
     "file": "video/罗宾边界条件补充.mp4",
     "name": "罗宾边界条件补充.mp4"
+  },
+  {
+    "file": "video/连续三要素.mp4",
+    "name": "连续三要素.mp4"
   }
 ]
