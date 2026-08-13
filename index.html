@@ -603,20 +603,7 @@
 
     <div class="hero-wrap">
       <div class="hero-carousel" id="heroCarousel">
-        <div class="hero-track" id="heroTrack">
-          <div class="hero-slide">
-            <video src="video/1.mp4" muted playsinline preload="auto"></video>
-          </div>
-          <div class="hero-slide">
-            <video src="video/2.mp4" muted playsinline preload="auto"></video>
-          </div>
-          <div class="hero-slide">
-            <video src="video/3.mp4" muted playsinline preload="auto"></video>
-          </div>
-          <div class="hero-slide">
-            <video src="video/4.mp4" muted playsinline preload="auto"></video>
-          </div>
-        </div>
+        <div class="hero-track" id="heroTrack"></div>
       </div>
       <div class="hero-dots" id="heroDots"></div>
     </div>
@@ -736,6 +723,31 @@
 
     let videosLoaded = false;
     let videoData = [];
+    let videoDataPromise = null;
+
+    async function loadVideoData() {
+      if (videoData.length) return videoData;
+
+      if (!videoDataPromise) {
+        videoDataPromise = fetch("video/videos.json")
+          .then(resp => {
+            if (!resp.ok) throw new Error(`videos.json ${resp.status}`);
+            return resp.json();
+          })
+          .then(data => {
+            videoData = Array.isArray(data)
+              ? data.filter(v => v && v.file)
+              : [];
+            return videoData;
+          })
+          .catch(error => {
+            videoDataPromise = null;
+            throw error;
+          });
+      }
+
+      return videoDataPromise;
+    }
 
     async function openVideoGallery() {
       const modal = document.getElementById("videoModal");
@@ -746,8 +758,7 @@
 
       if (!videosLoaded) {
         try {
-          const resp = await fetch("video/videos.json");
-          videoData = await resp.json();
+          videoData = await loadVideoData();
           grid.innerHTML = videoData.map((v, i) => `
             <div class="video-card" onclick="openVideoViewer(${i})">
               <div class="video-thumb-wrap">
@@ -1190,6 +1201,77 @@
       });
     }
 
+    function getHeroDateKey() {
+      return new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Shanghai",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).format(new Date());
+    }
+
+    function hashString(str) {
+      let hash = 2166136261;
+      for (let i = 0; i < str.length; i++) {
+        hash ^= str.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+      }
+      return hash >>> 0;
+    }
+
+    function createSeededRandom(seed) {
+      let value = seed || 1;
+      return function seededRandom() {
+        value = Math.imul(value, 1664525) + 1013904223;
+        return ((value >>> 0) / 4294967296);
+      };
+    }
+
+    function pickDailyVideos(list, count) {
+      const shuffled = [...list];
+      const seedText = `${getHeroDateKey()}|${shuffled.map(v => v.file).join("|")}`;
+      const random = createSeededRandom(hashString(seedText));
+
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+
+      return shuffled.slice(0, count);
+    }
+
+    async function loadHeroVideos() {
+      const track = document.getElementById("heroTrack");
+      if (!track) return false;
+
+      try {
+        const videos = await loadVideoData();
+        const heroVideos = pickDailyVideos(videos, Math.min(4, videos.length));
+
+        track.innerHTML = "";
+        heroVideos.forEach(item => {
+          const slide = document.createElement("div");
+          slide.className = "hero-slide";
+
+          const video = document.createElement("video");
+          video.src = item.file;
+          video.muted = true;
+          video.playsInline = true;
+          video.preload = "auto";
+          video.setAttribute("muted", "");
+          video.setAttribute("playsinline", "");
+
+          slide.appendChild(video);
+          track.appendChild(slide);
+        });
+
+        return heroVideos.length > 0;
+      } catch (error) {
+        console.error("[hero] failed to load videos.json", error);
+        return false;
+      }
+    }
+
     function initHeroCarousel() {
       const track = document.getElementById("heroTrack");
       const dotsWrap = document.getElementById("heroDots");
@@ -1301,6 +1383,9 @@
 
         video.addEventListener("error", () => {
           console.error(`[hero] video ${i + 1} failed`);
+          if (i === current) {
+            goTo(current + 1);
+          }
         });
       });
 
@@ -1362,7 +1447,8 @@
         await loadBooks();
         await loadSearchIndex();
         bindSearchEvents();
-        initHeroCarousel();
+        const hasHeroVideos = await loadHeroVideos();
+        if (hasHeroVideos) initHeroCarousel();
       } catch (e) {
         console.error("[init] failed", e);
       }
