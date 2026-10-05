@@ -28,6 +28,13 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-complex-analysis/main.synctex.gz"
   },
   {
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz"
+  },
+  {
     "repo": "dx-functional-analysis",
     "title": "Functional Analysis",
     "pdf": "pdf/dx-functional-analysis.pdf",
