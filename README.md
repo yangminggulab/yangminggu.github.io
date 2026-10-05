@@ -149,6 +149,8 @@ dx* 仓库的 LaTeX 源码
 15. 清理已经不存在的仓库对应的孤儿 PDF。
 16. 扫描 `video/*.mp4`，生成 `video/videos.json`。
 
+扫描到有 `main.tex` 的新笔记仓库时，若创建时间在北京时间 **2026 年 10 月 1 日起**，自动向 `visibility.json` 添加 `"仓库名": false`。确认可以展示后删除该条目即可；程序用已有的 `build_state.json` 和 `notes_manifest.json` 判断是否首次扫描，已扫描的笔记不会再次自动隐藏。`visibility.json` 会由构建工作流自动提交。
+
 输出：
 
 - `temp_repos/`：构建时拉取的 `dx*` 仓库副本。

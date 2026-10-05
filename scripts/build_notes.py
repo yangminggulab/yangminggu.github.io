@@ -17,6 +17,7 @@ STATE_FILE = BASE_DIR / "build_state.json"
 NONNOTE_FILE = BASE_DIR / "build_nonnotes.json"
 MANIFEST_FILE = BASE_DIR / "notes_manifest.json"
 BOOKS_FILE = BASE_DIR / "books.json"
+VISIBILITY_FILE = BASE_DIR / "visibility.json"
 # Per-run signal listing which note repos were (re)compiled, consumed by the three
 # downstream index/preview scripts to rebuild only those repos (Route B incremental).
 CHANGED_FILE = BASE_DIR / "build_changed.json"
@@ -36,6 +37,9 @@ def load_state(path):
 # tracks dx* repos that have no main.tex. Both map repo name -> pushed_at.
 state = load_state(STATE_FILE)
 nonnotes = load_state(NONNOTE_FILE)
+visibility = load_state(VISIBILITY_FILE)
+# The existing manifest also remembers notes whose PDF compilation failed.
+known_notes = set(state) | {item["repo"] for item in load_state(MANIFEST_FILE)}
 
 
 def write_github_output(needs_rebuild: bool):
@@ -154,6 +158,14 @@ for repo in dx_repos:
         continue
 
     note_names.add(name)
+
+    # GitHub created_at is UTC; this cutoff is 2026-10-01 00:00 in Shanghai.
+    if name not in known_notes and name not in visibility and repo["created_at"] >= "2026-09-30T16:00:00Z":
+        visibility[name] = False
+        with open(VISIBILITY_FILE, "w", encoding="utf-8") as f:
+            json.dump(visibility, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        print("  -> first scan: hidden in visibility.json pending manual review")
 
     print("  -> main.tex candidates:")
     for p in main_candidates:
