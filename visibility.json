@@ -6,5 +6,7 @@
   "dx-Abstract-Algebra": false,
   "dx-agi-benchmark": false,
   "dx-AP": false,
-  "dx-Differential-Geometry": false
+  "dx-Differential-Geometry": false,
+  "dx-Matrix-Computations": false,
+  "dx-Regression-Analysis": false
 }

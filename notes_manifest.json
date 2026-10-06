@@ -49,6 +49,13 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Mathematical-Statistics/main.synctex.gz"
   },
   {
+    "repo": "dx-Matrix-Computations",
+    "title": "Matrix Computations",
+    "pdf": "pdf/dx-Matrix-Computations.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Matrix-Computations/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Matrix-Computations/main.synctex.gz"
+  },
+  {
     "repo": "dx-ML",
     "title": "Ml",
     "pdf": "pdf/dx-ML.pdf",
@@ -82,6 +89,13 @@
     "pdf": "pdf/dx-real-analysis.pdf",
     "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-real-analysis/main.tex",
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-real-analysis/main.synctex.gz"
+  },
+  {
+    "repo": "dx-Regression-Analysis",
+    "title": "Regression Analysis",
+    "pdf": "pdf/dx-Regression-Analysis.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Regression-Analysis/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Regression-Analysis/main.synctex.gz"
   },
   {
     "repo": "dx-sql",

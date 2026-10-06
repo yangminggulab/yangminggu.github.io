@@ -42,6 +42,12 @@
     "desc": "Auto-compiled from LaTeX"
   },
   {
+    "file": "dx-Matrix-Computations.pdf",
+    "title": "Matrix Computations",
+    "subtitle": "",
+    "desc": "Auto-compiled from LaTeX"
+  },
+  {
     "file": "dx-ML.pdf",
     "title": "Ml",
     "subtitle": "",
@@ -68,6 +74,12 @@
   {
     "file": "dx-real-analysis.pdf",
     "title": "Real Analysis",
+    "subtitle": "",
+    "desc": "Auto-compiled from LaTeX"
+  },
+  {
+    "file": "dx-Regression-Analysis.pdf",
+    "title": "Regression Analysis",
     "subtitle": "",
     "desc": "Auto-compiled from LaTeX"
   },
