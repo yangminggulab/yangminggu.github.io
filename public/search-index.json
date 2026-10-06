@@ -26488,6 +26488,126 @@
     "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
     "section": "曲线的曲率和 Frenet 标架",
     "subsection": "",
+    "kind": "note",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "note",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{note}\n    当 $s$ 是弧长参数时，一阶导数恰好就是单位切向量：\n\\[\n\\boldsymbol r'(s)=\\boldsymbol\\alpha(s).\n\\]\n再对弧长 $s$ 求导，得到\n\\[\n\\boldsymbol r''(s)=\\frac{d\\boldsymbol\\alpha}{ds}.\n\\]\n因此，二阶导向量表示单位切向量沿曲线的变化率，\n而曲率是这个变化向量的模长：\n\\[\n\\kappa(s)\n=\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|\n=\\|\\boldsymbol r''(s)\\|.\n\\]\n\\end{note}",
+    "content": "\\begin{note}\n    当 $s$ 是弧长参数时，一阶导数恰好就是单位切向量：\n\\[\n\\boldsymbol r'(s)=\\boldsymbol\\alpha(s).\n\\]\n再对弧长 $s$ 求导，得到\n\\[\n\\boldsymbol r''(s)=\\frac{d\\boldsymbol\\alpha}{ds}.\n\\]\n因此，二阶导向量表示单位切向量沿曲线的变化率，\n而曲率是这个变化向量的模长：\n\\[\n\\kappa(s)\n=\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|\n=\\|\\boldsymbol r''(s)\\|.\n\\]\n\\end{note}",
+    "text": "当 是弧长参数时，一阶导数恰好就是单位切向量： 再对弧长 求导，得到 因此，二阶导向量表示单位切向量沿曲线的变化率， 而曲率是这个变化向量的模长：",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 74,
+    "endLine": 90
+  },
+  {
+    "id": "dx-Differential-Geometry-29",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "tip",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{dxtips}[曲率是单位切向量对弧长的变化率的大小]\n  k读作卡帕。\n  曲率衡量的是曲线在某一点弯曲的程度：沿曲线每走单位长度，切线方向改变得有多快。\n弯得越急，曲率越大；直线的曲率为 \\(0\\)。半径为 \\(R\\) 的圆，曲率为 \\(1/R\\)，所以圆越小，曲率越大。\n\\end{dxtips}",
+    "content": "\\begin{dxtips}[曲率是单位切向量对弧长的变化率的大小]\n  k读作卡帕。\n  曲率衡量的是曲线在某一点弯曲的程度：沿曲线每走单位长度，切线方向改变得有多快。\n弯得越急，曲率越大；直线的曲率为 \\(0\\)。半径为 \\(R\\) 的圆，曲率为 \\(1/R\\)，所以圆越小，曲率越大。\n\\end{dxtips}",
+    "text": "[曲率是单位切向量对弧长的变化率的大小] k读作卡帕。 曲率衡量的是曲线在某一点弯曲的程度：沿曲线每走单位长度，切线方向改变得有多快。 弯得越急，曲率越大；直线的曲率为 。半径为 的圆，曲率为 ，所以圆越小，曲率越大。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 91,
+    "endLine": 95
+  },
+  {
+    "id": "dx-Differential-Geometry-30",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "example",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{example}\n设平面曲线以弧长 $s$ 为参数，$\\theta(s)$ 为切线方向角，\n则单位切向量为\n\\[\n\\boldsymbol\\alpha(s)=(\\cos\\theta(s),\\sin\\theta(s)).\n\\]\n因此\n\\[\n\\frac{d\\boldsymbol\\alpha}{ds}\n=\\frac{d\\theta}{ds}(-\\sin\\theta,\\cos\\theta),\n\\qquad\n\\kappa(s)=\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|\n=\\left|\\frac{d\\theta}{ds}\\right|.\n\\]\n即曲率等于切线方向角对弧长的变化率的绝对值。\n\\end{example}",
+    "content": "\\begin{example}\n设平面曲线以弧长 $s$ 为参数，$\\theta(s)$ 为切线方向角，\n则单位切向量为\n\\[\n\\boldsymbol\\alpha(s)=(\\cos\\theta(s),\\sin\\theta(s)).\n\\]\n因此\n\\[\n\\frac{d\\boldsymbol\\alpha}{ds}\n=\\frac{d\\theta}{ds}(-\\sin\\theta,\\cos\\theta),\n\\qquad\n\\kappa(s)=\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|\n=\\left|\\frac{d\\theta}{ds}\\right|.\n\\]\n即曲率等于切线方向角对弧长的变化率的绝对值。\n\\end{example}",
+    "text": "设平面曲线以弧长 为参数， 为切线方向角， 则单位切向量为 因此 即曲率等于切线方向角对弧长的变化率的绝对值。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 97,
+    "endLine": 112
+  },
+  {
+    "id": "dx-Differential-Geometry-31",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
+    "kind": "definition",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "definition",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{definition}{曲率的计算公式}{curvature-formula}\n设 $\\boldsymbol r(t)$ 是一条二阶连续可微的正则参数曲线，\n即 $\\boldsymbol r'(t)\\neq\\boldsymbol 0$，其曲率为\n\\[\n\\kappa(t)=\n\\frac{\\lVert\\boldsymbol r'(t)\\times\\boldsymbol r''(t)\\rVert}\n{\\lVert\\boldsymbol r'(t)\\rVert^3}.\n\\]\n特别地，若 $s$ 为弧长参数，则\n\\[\n\\kappa(s)=\\lVert\\boldsymbol r''(s)\\rVert.\n\\]\n\\end{definition}",
+    "content": "\\begin{definition}{曲率的计算公式}{curvature-formula}\n设 $\\boldsymbol r(t)$ 是一条二阶连续可微的正则参数曲线，\n即 $\\boldsymbol r'(t)\\neq\\boldsymbol 0$，其曲率为\n\\[\n\\kappa(t)=\n\\frac{\\lVert\\boldsymbol r'(t)\\times\\boldsymbol r''(t)\\rVert}\n{\\lVert\\boldsymbol r'(t)\\rVert^3}.\n\\]\n特别地，若 $s$ 为弧长参数，则\n\\[\n\\kappa(s)=\\lVert\\boldsymbol r''(s)\\rVert.\n\\]\n\\end{definition}",
+    "text": "曲率的计算公式 curvature-formula 设 是一条二阶连续可微的正则参数曲线， 即 ，其曲率为 特别地，若 为弧长参数，则",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 113,
+    "endLine": 125
+  },
+  {
+    "id": "dx-Differential-Geometry-32",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
+    "kind": "dxtips",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "tip",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{dxtips}\n   其实我们想求的就是 $\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|$，但是由于我们不方便直接得到 $\\frac{d\\boldsymbol\\alpha}{ds}$，而我们能求的是对 $\\boldsymbol r(t)$ 求导。$\\boldsymbol r(t)$ 的导数其实就是速度大小乘以单位切向量，即 $\\boldsymbol r'(t)=v\\boldsymbol\\alpha$，于是我们得到了 $\\boldsymbol\\alpha$。\n\n然后，为了出现 $\\frac{d\\boldsymbol\\alpha}{ds}$，我们再次对 $\\boldsymbol r'(t)$ 求导，出现了 $\\boldsymbol r''(t)=v'\\boldsymbol\\alpha+v^2\\frac{d\\boldsymbol\\alpha}{ds}$。这里需要注意的就是 $\\frac{ds}{dt}=v$，这个要记住。\n\n然后，为了消除 $v'\\boldsymbol\\alpha$，也就是把速度大小变化的影响去掉，我们叉乘一阶导数和二阶导数也就是利用$\\boldsymbol\\alpha$ 与 $\\frac{d\\boldsymbol\\alpha}{ds}$ 垂直，得到 $\\boldsymbol r'\\times\\boldsymbol r''=v^3\\boldsymbol\\alpha\\times\\frac{d\\boldsymbol\\alpha}{ds}$。$\\|\\boldsymbol r'\\times\\boldsymbol r''\\|=v^3\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|$。\n\n由于上面多了一个系数 $v^3$，所以要除以 $v^3$。又因为 $v=\\|\\boldsymbol r'(t)\\|$，因为$\\alpha$的模长是1\n\\end{dxtips}",
+    "content": "\\begin{dxtips}\n   其实我们想求的就是 $\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|$，但是由于我们不方便直接得到 $\\frac{d\\boldsymbol\\alpha}{ds}$，而我们能求的是对 $\\boldsymbol r(t)$ 求导。$\\boldsymbol r(t)$ 的导数其实就是速度大小乘以单位切向量，即 $\\boldsymbol r'(t)=v\\boldsymbol\\alpha$，于是我们得到了 $\\boldsymbol\\alpha$。\n\n然后，为了出现 $\\frac{d\\boldsymbol\\alpha}{ds}$，我们再次对 $\\boldsymbol r'(t)$ 求导，出现了 $\\boldsymbol r''(t)=v'\\boldsymbol\\alpha+v^2\\frac{d\\boldsymbol\\alpha}{ds}$。这里需要注意的就是 $\\frac{ds}{dt}=v$，这个要记住。\n\n然后，为了消除 $v'\\boldsymbol\\alpha$，也就是把速度大小变化的影响去掉，我们叉乘一阶导数和二阶导数也就是利用$\\boldsymbol\\alpha$ 与 $\\frac{d\\boldsymbol\\alpha}{ds}$ 垂直，得到 $\\boldsymbol r'\\times\\boldsymbol r''=v^3\\boldsymbol\\alpha\\times\\frac{d\\boldsymbol\\alpha}{ds}$。$\\|\\boldsymbol r'\\times\\boldsymbol r''\\|=v^3\\left\\|\\frac{d\\boldsymbol\\alpha}{ds}\\right\\|$。\n\n由于上面多了一个系数 $v^3$，所以要除以 $v^3$。又因为 $v=\\|\\boldsymbol r'(t)\\|$，因为$\\alpha$的模长是1\n\\end{dxtips}",
+    "text": "其实我们想求的就是 ，但是由于我们不方便直接得到 ，而我们能求的是对 求导。 的导数其实就是速度大小乘以单位切向量，即 ，于是我们得到了 。 然后，为了出现 ，我们再次对 求导，出现了 。这里需要注意的就是 ，这个要记住。 然后，为了消除 ，也就是把速度大小变化的影响去掉，我们叉乘一阶导数和二阶导数也就是利用 与 垂直，得到 。 。 由于上面多了一个系数 ，所以要除以 。又因为 ，因为 的模长是1",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 126,
+    "endLine": 134
+  },
+  {
+    "id": "dx-Differential-Geometry-33",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
+    "kind": "example",
+    "blockTitle": "曲线的曲率和 Frenet 标架",
+    "previewType": "example",
+    "previewTitle": "曲线的曲率和 Frenet 标架",
+    "rawContent": "\\begin{example}\n一般参数 $t$ 下，二阶导数同时包含速度大小和方向的变化，而曲率只衡量方向变化。记 $v=\\|\\boldsymbol r'(t)\\|=\\frac{ds}{dt}$，则 $\\boldsymbol r'=v\\boldsymbol\\alpha$。由链式法则，\n\\[\n\\boldsymbol r''\n=v'\\boldsymbol\\alpha\n+v\\frac{d\\boldsymbol\\alpha}{ds}\\frac{ds}{dt}\n=v'\\boldsymbol\\alpha+v^2\\frac{d\\boldsymbol\\alpha}{ds}.\n\\]\n其中，$v'\\boldsymbol\\alpha$ 表示速度大小的变化，$v^2\\frac{d\\boldsymbol\\alpha}{ds}$ 表示方向变化。因为 $\\|\\boldsymbol\\alpha\\|=1$，所以 $\\boldsymbol\\alpha\\cdot\\frac{d\\boldsymbol\\alpha}{ds}=0$，即第二部分垂直于切线。\n\n将 $\\boldsymbol r'$ 与 $\\boldsymbol r''$ 叉乘，平行于切线的部分被消去，得到 $\\boldsymbol r'\\times\\boldsymbol r''=v^3\\boldsymbol\\alpha\\times\\frac{d\\boldsymbol\\alpha}{ds}$。由于右侧两个向量垂直，且 $\\|\\boldsymbol\\alpha\\|=1$，取模长得 $\\|\\boldsymbol r'\\times\\boldsymbol r''\\|=v^3\\kappa$，因此\n\\[\n\\kappa(t)=\n\\frac{\\|\\boldsymbol r'(t)\\times\\boldsymbol r''(t)\\|}\n{\\|\\boldsymbol r'(t)\\|^3}.\n\\]\n\n$\\boldsymbol r$ 表示位置，$\\boldsymbol r'$ 表示前进的方向和快慢，$\\boldsymbol r''$ 表示它们的变化，其中垂直于切线的部分反映弯曲。计算曲率只需一阶、二阶导数；研究曲率变化和挠率时会用到三阶导数。\n\\end{example}",
+    "content": "\\begin{example}\n一般参数 $t$ 下，二阶导数同时包含速度大小和方向的变化，而曲率只衡量方向变化。记 $v=\\|\\boldsymbol r'(t)\\|=\\frac{ds}{dt}$，则 $\\boldsymbol r'=v\\boldsymbol\\alpha$。由链式法则，\n\\[\n\\boldsymbol r''\n=v'\\boldsymbol\\alpha\n+v\\frac{d\\boldsymbol\\alpha}{ds}\\frac{ds}{dt}\n=v'\\boldsymbol\\alpha+v^2\\frac{d\\boldsymbol\\alpha}{ds}.\n\\]\n其中，$v'\\boldsymbol\\alpha$ 表示速度大小的变化，$v^2\\frac{d\\boldsymbol\\alpha}{ds}$ 表示方向变化。因为 $\\|\\boldsymbol\\alpha\\|=1$，所以 $\\boldsymbol\\alpha\\cdot\\frac{d\\boldsymbol\\alpha}{ds}=0$，即第二部分垂直于切线。\n\n将 $\\boldsymbol r'$ 与 $\\boldsymbol r''$ 叉乘，平行于切线的部分被消去，得到 $\\boldsymbol r'\\times\\boldsymbol r''=v^3\\boldsymbol\\alpha\\times\\frac{d\\boldsymbol\\alpha}{ds}$。由于右侧两个向量垂直，且 $\\|\\boldsymbol\\alpha\\|=1$，取模长得 $\\|\\boldsymbol r'\\times\\boldsymbol r''\\|=v^3\\kappa$，因此\n\\[\n\\kappa(t)=\n\\frac{\\|\\boldsymbol r'(t)\\times\\boldsymbol r''(t)\\|}\n{\\|\\boldsymbol r'(t)\\|^3}.\n\\]\n\n$\\boldsymbol r$ 表示位置，$\\boldsymbol r'$ 表示前进的方向和快慢，$\\boldsymbol r''$ 表示它们的变化，其中垂直于切线的部分反映弯曲。计算曲率只需一阶、二阶导数；研究曲率变化和挠率时会用到三阶导数。\n\\end{example}",
+    "text": "一般参数 下，二阶导数同时包含速度大小和方向的变化，而曲率只衡量方向变化。记 ，则 。由链式法则， 其中， 表示速度大小的变化， 表示方向变化。因为 ，所以 ，即第二部分垂直于切线。 将 与 叉乘，平行于切线的部分被消去，得到 。由于右侧两个向量垂直，且 ，取模长得 ，因此 表示位置， 表示前进的方向和快慢， 表示它们的变化，其中垂直于切线的部分反映弯曲。计算曲率只需一阶、二阶导数；研究曲率变化和挠率时会用到三阶导数。",
+    "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
+    "startLine": 135,
+    "endLine": 153
+  },
+  {
+    "id": "dx-Differential-Geometry-34",
+    "repo": "dx-Differential-Geometry",
+    "title": "Differential Geometry",
+    "pdf": "pdf/dx-Differential-Geometry.pdf",
+    "main_tex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.tex",
+    "synctex": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/main.synctex.gz",
+    "section": "曲线的曲率和 Frenet 标架",
+    "subsection": "",
     "kind": "theorem",
     "blockTitle": "曲线的曲率和 Frenet 标架",
     "previewType": "theorem",
@@ -26496,11 +26616,11 @@
     "content": "\\begin{theorem}{直线的曲率判别}{dg-2-thm-3-2}\n曲线 \\(C\\) 是一条直线当且仅当它的曲率 \\(\\kappa(s) \\equiv 0\\).\n\\end{theorem}",
     "text": "直线的曲率判别 dg-2-thm-3-2 曲线 是一条直线当且仅当它的曲率 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 76,
-    "endLine": 78
+    "startLine": 155,
+    "endLine": 157
   },
   {
-    "id": "dx-Differential-Geometry-29",
+    "id": "dx-Differential-Geometry-35",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26516,11 +26636,11 @@
     "content": "\\begin{definition}{切线像}{tangent-indicatrix}\n把曲线的单位切向量 $\\vect\\alpha(s)$ 平行移动到同一个原点，\n其端点描出的曲线称为原曲线的切线像，参数方程为\n\\[\n\\tilde{\\vect r}(s)=\\vect\\alpha(s),\\qquad\n\\dd\\tilde s=\\kappa(s)\\dd s.\n\\]\n\\end{definition}",
     "text": "切线像 tangent-indicatrix 把曲线的单位切向量 平行移动到同一个原点， 其端点描出的曲线称为原曲线的切线像，参数方程为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 81,
-    "endLine": 88
+    "startLine": 160,
+    "endLine": 167
   },
   {
-    "id": "dx-Differential-Geometry-30",
+    "id": "dx-Differential-Geometry-36",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26536,11 +26656,11 @@
     "content": "\\begin{definition}{主法向量、次法向量与 Frenet 标架}{frenet-frame}\n设 $s$ 为弧长参数。在 $\\kappa(s)>0$ 的点，定义\n\\[\n\\vect\\alpha(s)=\\vect r'(s),\\qquad\n\\vect\\beta(s)=\\frac{\\vect r''(s)}{|\\vect r''(s)|},\\qquad\n\\vect\\gamma(s)=\\vect\\alpha(s)\\times\\vect\\beta(s).\n\\]\n$\\vect\\beta$ 称为主法向量，$\\vect\\gamma$ 称为次法向量。\n右手单位正交标架 $\\{\\vect r(s);\\vect\\alpha(s),\\vect\\beta(s),\\vect\\gamma(s)\\}$\n称为曲线的 Frenet 标架。\n\\end{definition}",
     "text": "主法向量、次法向量与 Frenet 标架 frenet-frame 设 为弧长参数。在 的点，定义 称为主法向量， 称为次法向量。 右手单位正交标架 称为曲线的 Frenet 标架。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 91,
-    "endLine": 101
+    "startLine": 170,
+    "endLine": 180
   },
   {
-    "id": "dx-Differential-Geometry-31",
+    "id": "dx-Differential-Geometry-37",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26556,11 +26676,11 @@
     "content": "\\begin{definition}{Frenet 标架的三条轴与三个坐标面}{frenet-planes}\nFrenet 标架的三条轴分别称为切线、主法线、次法线，方程分别为\n\\[\n\\vect X=\\vect r(s)+u\\vect\\alpha(s),\\quad\n\\vect X=\\vect r(s)+u\\vect\\beta(s),\\quad\n\\vect X=\\vect r(s)+u\\vect\\gamma(s).\n\\]\n法平面、从切平面、密切平面的方程分别为\n\\[\n\\begin{aligned}\n(\\vect X-\\vect r(s))\\cdot\\vect\\alpha(s)&=0,\\\\\n(\\vect X-\\vect r(s))\\cdot\\vect\\beta(s)&=0,\\\\\n(\\vect X-\\vect r(s))\\cdot\\vect\\gamma(s)&=0.\n\\end{aligned}\n\\]\n\\end{definition}",
     "text": "Frenet 标架的三条轴与三个坐标面 frenet-planes Frenet 标架的三条轴分别称为切线、主法线、次法线，方程分别为 法平面、从切平面、密切平面的方程分别为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 104,
-    "endLine": 119
+    "startLine": 183,
+    "endLine": 198
   },
   {
-    "id": "dx-Differential-Geometry-32",
+    "id": "dx-Differential-Geometry-38",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26576,11 +26696,11 @@
     "content": "\\begin{proposition}{任意参数下的曲率与 Frenet 标架}{general-frenet}\n设 $\\vect r=\\vect r(t)$ 为正则参数曲线，并且 $\\vect r'\\times\\vect r''\\neq\\vect0$，则\n\\[\n\\begin{aligned}\n\\kappa(t)&=\\frac{|\\vect r'(t)\\times\\vect r''(t)|}{|\\vect r'(t)|^3},\\\\\n\\vect\\alpha(t)&=\\frac{\\vect r'(t)}{|\\vect r'(t)|},\\\\\n\\vect\\gamma(t)&=\\frac{\\vect r'(t)\\times\\vect r''(t)}{|\\vect r'(t)\\times\\vect r''(t)|},\\\\\n\\vect\\beta(t)&=\\vect\\gamma(t)\\times\\vect\\alpha(t).\n\\end{aligned}\n\\]\n\\end{proposition}",
     "text": "任意参数下的曲率与 Frenet 标架 general-frenet 设 为正则参数曲线，并且 ，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 122,
-    "endLine": 132
+    "startLine": 201,
+    "endLine": 211
   },
   {
-    "id": "dx-Differential-Geometry-33",
+    "id": "dx-Differential-Geometry-39",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26596,11 +26716,11 @@
     "content": "\\begin{definition}{挠率}{dg-2-def-4-1}\n设  \\(\\beta(s)\\)  和  \\(\\gamma(s)\\)  分别是曲线 C 的主法向量和次法向量，其中 s 是曲线的弧长参数，则  \\(\\tau(s) = -\\gamma'(s) \\cdot \\beta(s)\\)  称为曲线 C 的挠率.\n\\end{definition}",
     "text": "挠率 dg-2-def-4-1 设 和 分别是曲线 C 的主法向量和次法向量，其中 s 是曲线的弧长参数，则 称为曲线 C 的挠率.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 137,
-    "endLine": 139
+    "startLine": 216,
+    "endLine": 218
   },
   {
-    "id": "dx-Differential-Geometry-34",
+    "id": "dx-Differential-Geometry-40",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26616,11 +26736,11 @@
     "content": "\\begin{theorem}{平面曲线的挠率判别}{dg-2-thm-4-1}\n设曲线 C 不是直线, 则它是平面曲线当且仅当它的挠率为零.\n\\end{theorem}",
     "text": "平面曲线的挠率判别 dg-2-thm-4-1 设曲线 C 不是直线, 则它是平面曲线当且仅当它的挠率为零.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 142,
-    "endLine": 144
+    "startLine": 221,
+    "endLine": 223
   },
   {
-    "id": "dx-Differential-Geometry-35",
+    "id": "dx-Differential-Geometry-41",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26636,11 +26756,11 @@
     "content": "\\begin{proposition}{Frenet 公式}{frenet-formulas}\n设 $s$ 为弧长参数，$\\kappa(s)>0$，则\n\\[\n\\begin{cases}\n\\vect r'=\\vect\\alpha,\\\\\n\\vect\\alpha'=\\kappa\\vect\\beta,\\\\\n\\vect\\beta'=-\\kappa\\vect\\alpha+\\tau\\vect\\gamma,\\\\\n\\vect\\gamma'=-\\tau\\vect\\beta.\n\\end{cases}\n\\]\n等价的矩阵形式为\n\\[\n\\begin{pmatrix}\\vect\\alpha'\\\\\\vect\\beta'\\\\\\vect\\gamma'\\end{pmatrix}\n=\\begin{pmatrix}0&\\kappa&0\\\\-\\kappa&0&\\tau\\\\0&-\\tau&0\\end{pmatrix}\n\\begin{pmatrix}\\vect\\alpha\\\\\\vect\\beta\\\\\\vect\\gamma\\end{pmatrix}.\n\\]\n\\end{proposition}",
     "text": "Frenet 公式 frenet-formulas 设 为弧长参数， ，则 等价的矩阵形式为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 147,
-    "endLine": 163
+    "startLine": 226,
+    "endLine": 242
   },
   {
-    "id": "dx-Differential-Geometry-36",
+    "id": "dx-Differential-Geometry-42",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26656,11 +26776,11 @@
     "content": "\\begin{theorem}{球面曲线的必要条件}{dg-2-thm-4-2}\n设曲线 \\(r = r(s)\\) 的曲率 \\(\\kappa(s)\\) 和挠率 \\(\\tau(s)\\) 都不为零, \\(s\\) 是弧长参数. 如果该曲线落在一个球面上, 则它的曲率和挠率必满足关系式\\par\n\n\\begin{equation*}\n\\left(\\frac {1}{\\kappa (s)}\\right) ^ {2} + \\left(\\frac {1}{\\tau (s)} \\frac {\\mathrm{d}}{\\mathrm{d} s} \\left(\\frac {1}{\\kappa (s)}\\right)\\right) ^ {2} = \\text {\\text{常数}}.\n\\end{equation*}\n\\end{theorem}",
     "text": "球面曲线的必要条件 dg-2-thm-4-2 设曲线 的曲率 和挠率 都不为零, 是弧长参数. 如果该曲线落在一个球面上, 则它的曲率和挠率必满足关系式 ( 1 (s) ) ^ 2 + ( 1 (s) d d s ( 1 (s) ) ) ^ 2 = 常数 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 166,
-    "endLine": 172
+    "startLine": 245,
+    "endLine": 251
   },
   {
-    "id": "dx-Differential-Geometry-37",
+    "id": "dx-Differential-Geometry-43",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26676,11 +26796,11 @@
     "content": "\\begin{proposition}{球面曲线满足的微分关系}{spherical-differential}\n设曲线以 $s$ 为弧长参数、落在球面上，且 $\\kappa\\tau\\neq0$，则\n\\[\n\\frac{\\tau(s)}{\\kappa(s)}+\n\\frac{\\dd}{\\dd s}\\left[\n\\frac1{\\tau(s)}\\frac{\\dd}{\\dd s}\\left(\\frac1{\\kappa(s)}\\right)\\right]=0.\n\\]\n\\end{proposition}",
     "text": "球面曲线满足的微分关系 spherical-differential 设曲线以 为弧长参数、落在球面上，且 ，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 175,
-    "endLine": 182
+    "startLine": 254,
+    "endLine": 261
   },
   {
-    "id": "dx-Differential-Geometry-38",
+    "id": "dx-Differential-Geometry-44",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26696,11 +26816,11 @@
     "content": "\\begin{proposition}{挠率的计算公式}{torsion-formula}\n当 $\\vect r'\\times\\vect r''\\neq\\vect0$ 时，\n\\[\n\\tau(t)=\\frac{(\\vect r'(t),\\vect r''(t),\\vect r'''(t))}\n{|\\vect r'(t)\\times\\vect r''(t)|^2}.\n\\]\n若 $s$ 为弧长参数，则\n\\[\n\\tau(s)=\\frac{(\\vect r'(s),\\vect r''(s),\\vect r'''(s))}{|\\vect r''(s)|^2}.\n\\]\n\\end{proposition}",
     "text": "挠率的计算公式 torsion-formula 当 时， 若 为弧长参数，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 185,
-    "endLine": 195
+    "startLine": 264,
+    "endLine": 274
   },
   {
-    "id": "dx-Differential-Geometry-39",
+    "id": "dx-Differential-Geometry-45",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26716,11 +26836,11 @@
     "content": "\\begin{theorem}{平面曲线的混合积判别}{dg-2-thm-4-3}\n曲线 \\(r = r(t)\\) 是一条平面曲线的充分必要条件是\\par\n\n\\begin{equation*}\n(\\boldsymbol {r} ^ {\\prime} (t), \\boldsymbol {r} ^ {\\prime \\prime} (t), \\boldsymbol {r} ^ {\\prime \\prime \\prime} (t)) \\equiv 0.\n\\end{equation*}\n\\end{theorem}",
     "text": "平面曲线的混合积判别 dg-2-thm-4-3 曲线 是一条平面曲线的充分必要条件是 ( r ^ (t), r ^ (t), r ^ (t)) 0.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 198,
-    "endLine": 204
+    "startLine": 277,
+    "endLine": 283
   },
   {
-    "id": "dx-Differential-Geometry-40",
+    "id": "dx-Differential-Geometry-46",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26736,11 +26856,11 @@
     "content": "\\begin{theorem}{曲线的唯一性}{dg-2-thm-5-1}\n设  \\(\\boldsymbol{r} = \\boldsymbol{r}_{1}(s)\\)  和  \\(\\boldsymbol{r} = \\boldsymbol{r}_{2}(s)\\)  是  \\(E^{3}\\)  中两条以弧长 s 为参数的正则参数曲线, 如果它们的曲率处处不为零, 并且它们的曲率和挠率分别相等, 即  \\(\\kappa_{1}(s) = \\kappa_{2}(s)\\) ,  \\(\\tau_{1}(s) = \\tau_{2}(s)\\) , 则有  \\(E^{3}\\)  中的一个刚体运动  \\(\\sigma\\) , 它把曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{1}(s)\\)  变为曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{2}(s)\\) .\n\\end{theorem}",
     "text": "曲线的唯一性 dg-2-thm-5-1 设 和 是 中两条以弧长 s 为参数的正则参数曲线, 如果它们的曲率处处不为零, 并且它们的曲率和挠率分别相等, 即 , , 则有 中的一个刚体运动 , 它把曲线 变为曲线 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 209,
-    "endLine": 211
+    "startLine": 288,
+    "endLine": 290
   },
   {
-    "id": "dx-Differential-Geometry-41",
+    "id": "dx-Differential-Geometry-47",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26756,11 +26876,11 @@
     "content": "\\begin{theorem}{一般参数下曲线的唯一性}{dg-2-thm-5-2}\n设 \\(r = r_1(t)\\) 和 \\(r = r_2(u)\\) 是 \\(E^3\\) 中两条正则参数曲线, 它们的曲率处处不为零. 如果存在三次以上的连续可微函数 \\(u = \\lambda(t), \\lambda'(t) \\neq 0\\), 使得这两条曲线的弧长函数、曲率函数和挠率函数之间有关系式\\par\n\n\\begin{equation*}\ns _ {1} (t) = s _ {2} (\\lambda (t)), \\quad \\kappa_ {1} (t) = \\kappa_ {2} (\\lambda (t)), \\quad \\tau_ {1} (t) = \\tau_ {2} (\\lambda (t)),\n\\end{equation*}\n\n则有  \\(E^{3}\\)  中的一个刚体运动  \\(\\sigma\\) ，它把曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{1}(t)\\)  变为曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{2}(u)\\) ，即曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{2}(\\lambda(t))\\)  是曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}_{1}(t)\\)  在刚体运动  \\(\\sigma\\)  下的像.\n\\end{theorem}",
     "text": "一般参数下曲线的唯一性 dg-2-thm-5-2 设 和 是 中两条正则参数曲线, 它们的曲率处处不为零. 如果存在三次以上的连续可微函数 , 使得这两条曲线的弧长函数、曲率函数和挠率函数之间有关系式 s _ 1 (t) = s _ 2 ( (t)), _ 1 (t) = _ 2 ( (t)), _ 1 (t) = _ 2 ( (t)), 则有 中的一个刚体运动 ，它把曲线 变为曲线 ，即曲线 是曲线 在刚体运动 下的像.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 214,
-    "endLine": 222
+    "startLine": 293,
+    "endLine": 301
   },
   {
-    "id": "dx-Differential-Geometry-42",
+    "id": "dx-Differential-Geometry-48",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26776,11 +26896,11 @@
     "content": "\\begin{theorem}{曲线论基本定理}{dg-2-thm-5-3}\n设  \\(\\kappa(s), \\tau(s)\\)  是在区间  \\([a, b]\\)  上两个任意给定的连续可微函数，并且  \\(\\kappa(s) > 0\\) ，则在空间  \\(E^{3}\\)  中存在正则参数曲线  \\(\\boldsymbol{r} = \\boldsymbol{r}(s), a \\leqslant s \\leqslant b\\) ，以 s 为弧长参数，以给定的函数  \\(\\kappa(s), \\tau(s)\\)  为它的曲率和挠率，且这样的曲线在空间  \\(E^{3}\\)  中是完全确定的，其差异至多为曲线在空间中的位置不同.\n\\end{theorem}",
     "text": "曲线论基本定理 dg-2-thm-5-3 设 是在区间 上两个任意给定的连续可微函数，并且 ，则在空间 中存在正则参数曲线 ，以 s 为弧长参数，以给定的函数 为它的曲率和挠率，且这样的曲线在空间 中是完全确定的，其差异至多为曲线在空间中的位置不同.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 225,
-    "endLine": 227
+    "startLine": 304,
+    "endLine": 306
   },
   {
-    "id": "dx-Differential-Geometry-43",
+    "id": "dx-Differential-Geometry-49",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26796,11 +26916,11 @@
     "content": "\\begin{definition}{曲线的内在方程}{intrinsic-equations}\n把曲线的曲率与挠率表示为弧长的函数\n\\[\n\\kappa=\\kappa(s)>0,\\qquad\\tau=\\tau(s),\n\\]\n称为曲线的内在方程，或自然方程。\n\\end{definition}",
     "text": "曲线的内在方程 intrinsic-equations 把曲线的曲率与挠率表示为弧长的函数 称为曲线的内在方程，或自然方程。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 230,
-    "endLine": 236
+    "startLine": 309,
+    "endLine": 315
   },
   {
-    "id": "dx-Differential-Geometry-44",
+    "id": "dx-Differential-Geometry-50",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26816,11 +26936,11 @@
     "content": "\\begin{proposition}{曲线在一点的标准展开}{standard-expansion}\n设 $s$ 为弧长参数，在 $s=0$ 处取 Frenet 标架为坐标标架。\n记 $\\kappa_0=\\kappa(0)$、$\\kappa_0'=\\kappa'(0)$、$\\tau_0=\\tau(0)$，则\n\\[\n\\begin{cases}\nx(s)=s-\\dfrac{\\kappa_0^2}{6}s^3+o(s^3),\\\\[4pt]\ny(s)=\\dfrac{\\kappa_0}{2}s^2+\\dfrac{\\kappa_0'}{6}s^3+o(s^3),\\\\[4pt]\nz(s)=\\dfrac{\\kappa_0\\tau_0}{6}s^3+o(s^3).\n\\end{cases}\n\\]\n\\end{proposition}",
     "text": "曲线在一点的标准展开 standard-expansion 设 为弧长参数，在 处取 Frenet 标架为坐标标架。 记 、 、 ，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 241,
-    "endLine": 251
+    "startLine": 320,
+    "endLine": 330
   },
   {
-    "id": "dx-Differential-Geometry-45",
+    "id": "dx-Differential-Geometry-51",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26836,11 +26956,11 @@
     "content": "\\begin{definition}{曲线在一点的近似曲线}{approximate-curve}\n在上述坐标标架下，当 $\\kappa_0\\tau_0\\neq0$ 时，曲线\n\\[\n\\tilde{\\vect r}(s)=\\left(s,\\frac{\\kappa_0}{2}s^2,\n\\frac{\\kappa_0\\tau_0}{6}s^3\\right)\n\\]\n称为原曲线在 $s=0$ 处的近似曲线。\n\\end{definition}",
     "text": "曲线在一点的近似曲线 approximate-curve 在上述坐标标架下，当 时，曲线 称为原曲线在 处的近似曲线。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 254,
-    "endLine": 261
+    "startLine": 333,
+    "endLine": 340
   },
   {
-    "id": "dx-Differential-Geometry-46",
+    "id": "dx-Differential-Geometry-52",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26856,11 +26976,11 @@
     "content": "\\begin{definition}{曲线的切触阶}{contact-order}\n设两曲线 $C_1,C_2$ 相交于 $p_0$。在两曲线上取距 $p_0$ 的有向弧长均为\n$\\Delta s$ 的点 $p_1,p_2$。若有正整数 $n$，使得\n\\[\n\\lim_{\\Delta s\\to0}\\frac{|p_1p_2|}{(\\Delta s)^n}=0,\\qquad\n\\lim_{\\Delta s\\to0}\\frac{|p_1p_2|}{(\\Delta s)^{n+1}}\\neq0,\n\\]\n则称两曲线在 $p_0$ 处有 $n$ 阶切触。\n\\end{definition}",
     "text": "曲线的切触阶 contact-order 设两曲线 相交于 。在两曲线上取距 的有向弧长均为 的点 。若有正整数 ，使得 则称两曲线在 处有 阶切触。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 264,
-    "endLine": 272
+    "startLine": 343,
+    "endLine": 351
   },
   {
-    "id": "dx-Differential-Geometry-47",
+    "id": "dx-Differential-Geometry-53",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26876,11 +26996,11 @@
     "content": "\\begin{theorem}{切触阶的导数判别}{dg-2-thm-6-1}\n设曲线 \\(r_1(s)\\) 和 \\(r_2(s)\\) 都以 \\(s\\) 为它们的弧长参数, 且 \\(r_1(0) = r_2(0)\\), 则它们在 \\(s = 0\\) 处有 \\(n\\) 阶切触的充分必要条件是\\par\n\n\\begin{equation*}\n\\boldsymbol {r} _ {1} ^ {(i)} (0) = \\boldsymbol {r} _ {2} ^ {(i)} (0), \\quad \\forall 1 \\leqslant i \\leqslant n; \\quad \\boldsymbol {r} _ {1} ^ {(n + 1)} (0) \\neq \\boldsymbol {r} _ {2} ^ {(n + 1)} (0).\n\\end{equation*}\n\\end{theorem}",
     "text": "切触阶的导数判别 dg-2-thm-6-1 设曲线 和 都以 为它们的弧长参数, 且 , 则它们在 处有 阶切触的充分必要条件是 r _ 1 ^ (i) (0) = r _ 2 ^ (i) (0), 1 i n; r _ 1 ^ (n + 1) (0) r _ 2 ^ (n + 1) (0).",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 275,
-    "endLine": 281
+    "startLine": 354,
+    "endLine": 360
   },
   {
-    "id": "dx-Differential-Geometry-48",
+    "id": "dx-Differential-Geometry-54",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26896,11 +27016,11 @@
     "content": "\\begin{corollary}{二阶以上切触}{second-order-contact}\n两条相交的正则曲线在交点处有二阶以上切触的充分必要条件是，\n两条曲线相切、有相同的有向密切平面和相同的曲率。\n\\end{corollary}",
     "text": "二阶以上切触 second-order-contact 两条相交的正则曲线在交点处有二阶以上切触的充分必要条件是， 两条曲线相切、有相同的有向密切平面和相同的曲率。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 284,
-    "endLine": 287
+    "startLine": 363,
+    "endLine": 366
   },
   {
-    "id": "dx-Differential-Geometry-49",
+    "id": "dx-Differential-Geometry-55",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26916,11 +27036,11 @@
     "content": "\\begin{definition}{曲率圆、曲率中心与曲率半径}{osculating-circle}\n在 $\\kappa(s_0)>0$ 的点，位于密切平面内、以\n\\[\n\\vect r(s_0)+\\frac{\\vect\\beta(s_0)}{\\kappa(s_0)}\n\\]\n为中心、以 $1/\\kappa(s_0)$ 为半径的圆称为曲率圆。\n其圆心称为曲率中心，半径称为曲率半径。\n\\end{definition}",
     "text": "曲率圆、曲率中心与曲率半径 osculating-circle 在 的点，位于密切平面内、以 为中心、以 为半径的圆称为曲率圆。 其圆心称为曲率中心，半径称为曲率半径。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 290,
-    "endLine": 297
+    "startLine": 369,
+    "endLine": 376
   },
   {
-    "id": "dx-Differential-Geometry-50",
+    "id": "dx-Differential-Geometry-56",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26936,11 +27056,11 @@
     "content": "\\begin{theorem}{密切球面的球心与半径}{dg-2-thm-6-2}\nC: r = r(s) 是曲率和挠率都不为零的正则参数曲线, s 是弧长参数, 则在 s 处与曲线 C 有 3 阶以上切触的球面  \\(\\Sigma\\)  的球心是\\par\n\n\\begin{equation*}\n\\boldsymbol {r} (s) + \\frac {1}{\\kappa (s)} \\beta (s) + \\frac {1}{\\tau (s)} \\left(\\frac {1}{\\kappa (s)}\\right) ^ {\\prime} \\gamma (s),\n\\end{equation*}\n\n半径是\\par\n\n\\begin{equation*}\n\\sqrt {\\left(\\frac {1}{\\kappa (s)}\\right) ^ {2} + \\left(\\frac {1}{\\tau (s)} \\left(\\frac {1}{\\kappa (s)}\\right) ^ {\\prime}\\right) ^ {2}}.\n\\end{equation*}\n\\end{theorem}",
     "text": "密切球面的球心与半径 dg-2-thm-6-2 C: r = r(s) 是曲率和挠率都不为零的正则参数曲线, s 是弧长参数, 则在 s 处与曲线 C 有 3 阶以上切触的球面 的球心是 r (s) + 1 (s) (s) + 1 (s) ( 1 (s) ) ^ (s), 半径是 ( 1 (s) ) ^ 2 + ( 1 (s) ( 1 (s) ) ^ ) ^ 2 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 300,
-    "endLine": 312
+    "startLine": 379,
+    "endLine": 391
   },
   {
-    "id": "dx-Differential-Geometry-51",
+    "id": "dx-Differential-Geometry-57",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26956,11 +27076,11 @@
     "content": "\\begin{definition}{密切球面与曲率轴}{osculating-sphere}\n与曲线在一点具有三阶以上切触的球面称为密切球面。\n经过曲率中心、垂直于密切平面的直线称为曲率轴，其方程为\n\\[\n\\vect X=\\vect r(s)+\\frac1{\\kappa(s)}\\vect\\beta(s)+\\lambda\\vect\\gamma(s).\n\\]\n\\end{definition}",
     "text": "密切球面与曲率轴 osculating-sphere 与曲线在一点具有三阶以上切触的球面称为密切球面。 经过曲率中心、垂直于密切平面的直线称为曲率轴，其方程为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 315,
-    "endLine": 321
+    "startLine": 394,
+    "endLine": 400
   },
   {
-    "id": "dx-Differential-Geometry-52",
+    "id": "dx-Differential-Geometry-58",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26976,11 +27096,11 @@
     "content": "\\begin{definition}{Bertrand 曲线偶}{dg-2-def-7-1}\n如果在互不重合的曲线  \\(C_{1}\\)  和  \\(C_{2}\\)  之间存在一个对应，使得它们在每一对对应点有公共的主法线，则称这两条曲线为 Bertrand 曲线偶，其中每一条曲线称为另外一条曲线的侣线，或共轭曲线.\n\\end{definition}",
     "text": "Bertrand 曲线偶 dg-2-def-7-1 如果在互不重合的曲线 和 之间存在一个对应，使得它们在每一对对应点有公共的主法线，则称这两条曲线为 Bertrand 曲线偶，其中每一条曲线称为另外一条曲线的侣线，或共轭曲线.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 326,
-    "endLine": 328
+    "startLine": 405,
+    "endLine": 407
   },
   {
-    "id": "dx-Differential-Geometry-53",
+    "id": "dx-Differential-Geometry-59",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -26996,11 +27116,11 @@
     "content": "\\begin{theorem}{Bertrand 曲线偶的距离与夹角}{dg-2-thm-7-1}\n设曲线  \\(C_{1}\\)  和  \\(C_{2}\\)  是 Bertrand 曲线偶, 则  \\(C_{1}\\)  和  \\(C_{2}\\)  的对应点之间的距离是常数, 并且  \\(C_{1}\\)  和  \\(C_{2}\\)  在对应点的切线成定角.\n\\end{theorem}",
     "text": "Bertrand 曲线偶的距离与夹角 dg-2-thm-7-1 设曲线 和 是 Bertrand 曲线偶, 则 和 的对应点之间的距离是常数, 并且 和 在对应点的切线成定角.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 331,
-    "endLine": 333
+    "startLine": 410,
+    "endLine": 412
   },
   {
-    "id": "dx-Differential-Geometry-54",
+    "id": "dx-Differential-Geometry-60",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27016,11 +27136,11 @@
     "content": "\\begin{theorem}{Bertrand 曲线的判别}{dg-2-thm-7-2}\n设正则参数曲线 C 的曲率  \\(\\kappa\\)  和挠率  \\(\\tau\\)  都不是零, 则存在另一条正则参数曲线  \\(C_{1}\\) , 使得曲线  \\(C_{1}\\)  和 C 成为 Bertrand 曲线偶的充分必要条件是, 存在常数  \\(\\lambda \\neq 0\\)  和  \\(\\mu\\) , 使得\\par\n\n\\[\n\\lambda \\kappa + \\mu \\tau = 1.\n\\]\n\\end{theorem}",
     "text": "Bertrand 曲线的判别 dg-2-thm-7-2 设正则参数曲线 C 的曲率 和挠率 都不是零, 则存在另一条正则参数曲线 , 使得曲线 和 C 成为 Bertrand 曲线偶的充分必要条件是, 存在常数 和 , 使得",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 336,
-    "endLine": 342
+    "startLine": 415,
+    "endLine": 421
   },
   {
-    "id": "dx-Differential-Geometry-55",
+    "id": "dx-Differential-Geometry-61",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27036,11 +27156,11 @@
     "content": "\\begin{definition}{渐伸线与渐缩线}{dg-2-def-7-2}\n如果在曲线  \\(C_{1}\\)  和  \\(C_{2}\\)  之间存在一个对应, 使得曲线  \\(C_{1}\\)  在任意一点的切线恰好是曲线  \\(C_{2}\\)  在对应点的法线, 则称曲线  \\(C_{2}\\)  是  \\(C_{1}\\)  的渐伸线, 同时称曲线  \\(C_{1}\\)  是  \\(C_{2}\\)  的渐缩线 .\n\\end{definition}",
     "text": "渐伸线与渐缩线 dg-2-def-7-2 如果在曲线 和 之间存在一个对应, 使得曲线 在任意一点的切线恰好是曲线 在对应点的法线, 则称曲线 是 的渐伸线, 同时称曲线 是 的渐缩线 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 345,
-    "endLine": 347
+    "startLine": 424,
+    "endLine": 426
   },
   {
-    "id": "dx-Differential-Geometry-56",
+    "id": "dx-Differential-Geometry-62",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27056,11 +27176,11 @@
     "content": "\\begin{theorem}{渐伸线的参数方程}{dg-2-thm-7-3}\n设正则参数曲线 \\(C\\) 的参数方程是 \\(\\boldsymbol{r}(s), s\\) 是弧长参数，则 \\(C\\) 的渐伸线的参数方程是\\par\n\n\\begin{equation*}\n\\boldsymbol {r} = \\boldsymbol {r} (s) + (c - s) \\boldsymbol {\\alpha} (s),\n\\end{equation*}\n\n其中 c 是任意的常数.\n\\end{theorem}",
     "text": "渐伸线的参数方程 dg-2-thm-7-3 设正则参数曲线 的参数方程是 是弧长参数，则 的渐伸线的参数方程是 r = r (s) + (c - s) (s), 其中 c 是任意的常数.",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 350,
-    "endLine": 358
+    "startLine": 429,
+    "endLine": 437
   },
   {
-    "id": "dx-Differential-Geometry-57",
+    "id": "dx-Differential-Geometry-63",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27076,11 +27196,11 @@
     "content": "\\begin{theorem}{渐缩线的参数方程}{dg-2-thm-7-4}\n设正则参数曲线 \\(C\\) 的参数方程是 \\(\\boldsymbol{r}(s), s\\) 是弧长参数, 则 \\(C\\) 的渐缩线的参数方程是\\par\n\n\\begin{equation*}\n\\boldsymbol {r} = \\boldsymbol {r} (s) + \\frac {1}{\\kappa (s)} \\boldsymbol {\\beta} (s) - \\frac {1}{\\kappa (s)} \\left(\\tan \\int \\tau (s) \\mathrm{d} s\\right) \\boldsymbol {\\gamma} (s).\n\\end{equation*}\n\\end{theorem}",
     "text": "渐缩线的参数方程 dg-2-thm-7-4 设正则参数曲线 的参数方程是 是弧长参数, 则 的渐缩线的参数方程是 r = r (s) + 1 (s) (s) - 1 (s) ( (s) d s ) (s).",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 361,
-    "endLine": 367
+    "startLine": 440,
+    "endLine": 446
   },
   {
-    "id": "dx-Differential-Geometry-58",
+    "id": "dx-Differential-Geometry-64",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27096,11 +27216,11 @@
     "content": "\\begin{definition}{平面曲线的 Frenet 标架与相对曲率}{plane-frenet}\n设有向平面内的曲线为 $\\vect r(s)=(x(s),y(s))$，$s$ 是弧长参数。定义\n\\[\n\\vect\\alpha(s)=(x'(s),y'(s)),\\qquad\n\\vect\\beta(s)=(-y'(s),x'(s)).\n\\]\n$\\{\\vect r(s);\\vect\\alpha(s),\\vect\\beta(s)\\}$ 称为平面曲线的 Frenet 标架。\n相对曲率定义为\n\\[\n\\kappa_r(s)=\\vect\\alpha'(s)\\cdot\\vect\\beta(s)\n=x'(s)y''(s)-x''(s)y'(s),\\qquad\\kappa(s)=|\\kappa_r(s)|.\n\\]\n\\end{definition}",
     "text": "平面曲线的 Frenet 标架与相对曲率 plane-frenet 设有向平面内的曲线为 ， 是弧长参数。定义 称为平面曲线的 Frenet 标架。 相对曲率定义为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 372,
-    "endLine": 384
+    "startLine": 451,
+    "endLine": 463
   },
   {
-    "id": "dx-Differential-Geometry-59",
+    "id": "dx-Differential-Geometry-65",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27116,11 +27236,11 @@
     "content": "\\begin{proposition}{平面曲线的 Frenet 公式与方向角}{plane-formulas}\n\\[\n\\vect r'=\\vect\\alpha,\\qquad\n\\vect\\alpha'=\\kappa_r\\vect\\beta,\\qquad\n\\vect\\beta'=-\\kappa_r\\vect\\alpha.\n\\]\n若 $\\theta(s)$ 为单位切向量与 $x$ 轴正向所成方向角的连续分支，则\n\\[\n\\vect\\alpha=(\\cos\\theta,\\sin\\theta),\\qquad\n\\vect\\beta=(-\\sin\\theta,\\cos\\theta),\\qquad\n\\kappa_r(s)=\\frac{\\dd\\theta}{\\dd s}.\n\\]\n\\end{proposition}",
     "text": "平面曲线的 Frenet 公式与方向角 plane-formulas 若 为单位切向量与 轴正向所成方向角的连续分支，则",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 387,
-    "endLine": 399
+    "startLine": 466,
+    "endLine": 478
   },
   {
-    "id": "dx-Differential-Geometry-60",
+    "id": "dx-Differential-Geometry-66",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27136,11 +27256,11 @@
     "content": "\\begin{proposition}{平面曲线的相对曲率与重建公式}{plane-reconstruction}\n对任意正则参数 $t$，\n\\[\n\\kappa_r(t)=\\frac{x'(t)y''(t)-x''(t)y'(t)}\n{\\bigl(x'(t)^2+y'(t)^2\\bigr)^{3/2}}.\n\\]\n给定相对曲率 $\\kappa_r(s)$ 后，\n\\[\n\\begin{aligned}\n\\theta(s)&=\\theta(s_0)+\\int_{s_0}^s\\kappa_r(u)\\dd u,\\\\\nx(s)&=x(s_0)+\\int_{s_0}^s\\cos\\theta(u)\\dd u,\\\\\ny(s)&=y(s_0)+\\int_{s_0}^s\\sin\\theta(u)\\dd u.\n\\end{aligned}\n\\]\n\\end{proposition}",
     "text": "平面曲线的相对曲率与重建公式 plane-reconstruction 对任意正则参数 ， 给定相对曲率 后，",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 402,
-    "endLine": 416
+    "startLine": 481,
+    "endLine": 495
   },
   {
-    "id": "dx-Differential-Geometry-61",
+    "id": "dx-Differential-Geometry-67",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27156,11 +27276,11 @@
     "content": "\\begin{proposition}{平面曲线的曲率中心与渐缩线}{plane-evolute}\n在 $\\kappa_r(s)\\neq0$ 的点，曲率中心轨迹（渐缩线）的参数方程为\n\\[\n\\vect r_1(s)=\\vect r(s)+\\frac{\\vect\\beta(s)}{\\kappa_r(s)}.\n\\]\n\\end{proposition}",
     "text": "平面曲线的曲率中心与渐缩线 plane-evolute 在 的点，曲率中心轨迹（渐缩线）的参数方程为",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 419,
-    "endLine": 424
+    "startLine": 498,
+    "endLine": 503
   },
   {
-    "id": "dx-Differential-Geometry-62",
+    "id": "dx-Differential-Geometry-68",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27176,11 +27296,11 @@
     "content": "\\begin{definition}{光滑闭曲线、分段光滑闭曲线与简单闭曲线}{closed-curve}\n若 $\\vect r(s)$ 在 $a\\leq s\\leq b$ 上光滑，且\n\\[\n\\vect r(b)=\\vect r(a),\\qquad\n\\vect r'(b)=\\vect r'(a),\\qquad\n\\vect r''(b)=\\vect r''(a),\n\\]\n则称其为光滑闭曲线。由若干段光滑曲线首尾相接而成、满足\n$\\vect r(b)=\\vect r(a)$ 的曲线称为分段光滑闭曲线。\n若闭曲线还满足\n\\[\n\\vect r(s_1)\\neq\\vect r(s_2),\\qquad a\\leq s_1<s_2<b,\n\\]\n则称其为简单闭曲线。\n\\end{definition}",
     "text": "光滑闭曲线、分段光滑闭曲线与简单闭曲线 closed-curve 若 在 上光滑，且 则称其为光滑闭曲线。由若干段光滑曲线首尾相接而成、满足 的曲线称为分段光滑闭曲线。 若闭曲线还满足 则称其为简单闭曲线。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 427,
-    "endLine": 441
+    "startLine": 506,
+    "endLine": 520
   },
   {
-    "id": "dx-Differential-Geometry-63",
+    "id": "dx-Differential-Geometry-69",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27196,11 +27316,11 @@
     "content": "\\begin{definition}{旋转指标}{rotation-index}\n设 $C$ 是连续可微的正则闭曲线，$\\theta(s)$ 为其方向角的连续分支。\n旋转指标定义为\n\\[\ni(C)=\\frac{\\theta(b)-\\theta(a)}{2\\pi}\\in\\mathbb Z.\n\\]\n对于光滑闭曲线，\n\\[\ni(C)=\\frac1{2\\pi}\\int_a^b\\kappa_r(s)\\dd s.\n\\]\n\\end{definition}",
     "text": "旋转指标 rotation-index 设 是连续可微的正则闭曲线， 为其方向角的连续分支。 旋转指标定义为 对于光滑闭曲线，",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 444,
-    "endLine": 454
+    "startLine": 523,
+    "endLine": 533
   },
   {
-    "id": "dx-Differential-Geometry-64",
+    "id": "dx-Differential-Geometry-70",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27216,11 +27336,11 @@
     "content": "\\begin{theorem}{简单闭曲线的旋转指标}{dg-2-thm-8-1}\n若 \\(C\\) 是平面 \\(E^2\\) 上一条连续可微的简单闭曲线, 则它的旋转指标 \\(i(C) = \\pm 1\\).\n\\end{theorem}",
     "text": "简单闭曲线的旋转指标 dg-2-thm-8-1 若 是平面 上一条连续可微的简单闭曲线, 则它的旋转指标 .",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 457,
-    "endLine": 459
+    "startLine": 536,
+    "endLine": 538
   },
   {
-    "id": "dx-Differential-Geometry-65",
+    "id": "dx-Differential-Geometry-71",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27236,11 +27356,11 @@
     "content": "\\begin{proposition}{分段光滑简单闭曲线的总转角}{piecewise-turning}\n设 $\\theta_i$ 为各角点处的有向外角，$-\\pi<\\theta_i<\\pi$，则\n\\[\n\\theta(b)-\\theta(a)=\\int_a^b\\kappa_r(s)\\dd s+\\sum_i\\theta_i.\n\\]\n分段连续可微简单闭曲线的旋转指标仍为 $\\pm1$。\n\\end{proposition}",
     "text": "分段光滑简单闭曲线的总转角 piecewise-turning 设 为各角点处的有向外角， ，则 分段连续可微简单闭曲线的旋转指标仍为 。",
     "sourcePath": "/__w/yangminggu.github.io/yangminggu.github.io/temp_repos/dx-Differential-Geometry/第二章.tex",
-    "startLine": 462,
-    "endLine": 468
+    "startLine": 541,
+    "endLine": 547
   },
   {
-    "id": "dx-Differential-Geometry-66",
+    "id": "dx-Differential-Geometry-72",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27260,7 +27380,7 @@
     "endLine": 13
   },
   {
-    "id": "dx-Differential-Geometry-67",
+    "id": "dx-Differential-Geometry-73",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27280,7 +27400,7 @@
     "endLine": 24
   },
   {
-    "id": "dx-Differential-Geometry-68",
+    "id": "dx-Differential-Geometry-74",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27300,7 +27420,7 @@
     "endLine": 34
   },
   {
-    "id": "dx-Differential-Geometry-69",
+    "id": "dx-Differential-Geometry-75",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27320,7 +27440,7 @@
     "endLine": 51
   },
   {
-    "id": "dx-Differential-Geometry-70",
+    "id": "dx-Differential-Geometry-76",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27340,7 +27460,7 @@
     "endLine": 62
   },
   {
-    "id": "dx-Differential-Geometry-71",
+    "id": "dx-Differential-Geometry-77",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27360,7 +27480,7 @@
     "endLine": 72
   },
   {
-    "id": "dx-Differential-Geometry-72",
+    "id": "dx-Differential-Geometry-78",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27380,7 +27500,7 @@
     "endLine": 82
   },
   {
-    "id": "dx-Differential-Geometry-73",
+    "id": "dx-Differential-Geometry-79",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27400,7 +27520,7 @@
     "endLine": 95
   },
   {
-    "id": "dx-Differential-Geometry-74",
+    "id": "dx-Differential-Geometry-80",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27420,7 +27540,7 @@
     "endLine": 111
   },
   {
-    "id": "dx-Differential-Geometry-75",
+    "id": "dx-Differential-Geometry-81",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27440,7 +27560,7 @@
     "endLine": 118
   },
   {
-    "id": "dx-Differential-Geometry-76",
+    "id": "dx-Differential-Geometry-82",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27460,7 +27580,7 @@
     "endLine": 130
   },
   {
-    "id": "dx-Differential-Geometry-77",
+    "id": "dx-Differential-Geometry-83",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27480,7 +27600,7 @@
     "endLine": 144
   },
   {
-    "id": "dx-Differential-Geometry-78",
+    "id": "dx-Differential-Geometry-84",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27500,7 +27620,7 @@
     "endLine": 151
   },
   {
-    "id": "dx-Differential-Geometry-79",
+    "id": "dx-Differential-Geometry-85",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27520,7 +27640,7 @@
     "endLine": 172
   },
   {
-    "id": "dx-Differential-Geometry-80",
+    "id": "dx-Differential-Geometry-86",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27540,7 +27660,7 @@
     "endLine": 186
   },
   {
-    "id": "dx-Differential-Geometry-81",
+    "id": "dx-Differential-Geometry-87",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27560,7 +27680,7 @@
     "endLine": 202
   },
   {
-    "id": "dx-Differential-Geometry-82",
+    "id": "dx-Differential-Geometry-88",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27580,7 +27700,7 @@
     "endLine": 207
   },
   {
-    "id": "dx-Differential-Geometry-83",
+    "id": "dx-Differential-Geometry-89",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27600,7 +27720,7 @@
     "endLine": 219
   },
   {
-    "id": "dx-Differential-Geometry-84",
+    "id": "dx-Differential-Geometry-90",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27620,7 +27740,7 @@
     "endLine": 229
   },
   {
-    "id": "dx-Differential-Geometry-85",
+    "id": "dx-Differential-Geometry-91",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27640,7 +27760,7 @@
     "endLine": 246
   },
   {
-    "id": "dx-Differential-Geometry-86",
+    "id": "dx-Differential-Geometry-92",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27660,7 +27780,7 @@
     "endLine": 251
   },
   {
-    "id": "dx-Differential-Geometry-87",
+    "id": "dx-Differential-Geometry-93",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27680,7 +27800,7 @@
     "endLine": 256
   },
   {
-    "id": "dx-Differential-Geometry-88",
+    "id": "dx-Differential-Geometry-94",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27700,7 +27820,7 @@
     "endLine": 272
   },
   {
-    "id": "dx-Differential-Geometry-89",
+    "id": "dx-Differential-Geometry-95",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27720,7 +27840,7 @@
     "endLine": 285
   },
   {
-    "id": "dx-Differential-Geometry-90",
+    "id": "dx-Differential-Geometry-96",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27740,7 +27860,7 @@
     "endLine": 296
   },
   {
-    "id": "dx-Differential-Geometry-91",
+    "id": "dx-Differential-Geometry-97",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27760,7 +27880,7 @@
     "endLine": 302
   },
   {
-    "id": "dx-Differential-Geometry-92",
+    "id": "dx-Differential-Geometry-98",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27780,7 +27900,7 @@
     "endLine": 318
   },
   {
-    "id": "dx-Differential-Geometry-93",
+    "id": "dx-Differential-Geometry-99",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27800,7 +27920,7 @@
     "endLine": 323
   },
   {
-    "id": "dx-Differential-Geometry-94",
+    "id": "dx-Differential-Geometry-100",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27820,7 +27940,7 @@
     "endLine": 331
   },
   {
-    "id": "dx-Differential-Geometry-95",
+    "id": "dx-Differential-Geometry-101",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27840,7 +27960,7 @@
     "endLine": 340
   },
   {
-    "id": "dx-Differential-Geometry-96",
+    "id": "dx-Differential-Geometry-102",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27860,7 +27980,7 @@
     "endLine": 354
   },
   {
-    "id": "dx-Differential-Geometry-97",
+    "id": "dx-Differential-Geometry-103",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27880,7 +28000,7 @@
     "endLine": 365
   },
   {
-    "id": "dx-Differential-Geometry-98",
+    "id": "dx-Differential-Geometry-104",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27900,7 +28020,7 @@
     "endLine": 376
   },
   {
-    "id": "dx-Differential-Geometry-99",
+    "id": "dx-Differential-Geometry-105",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27920,7 +28040,7 @@
     "endLine": 391
   },
   {
-    "id": "dx-Differential-Geometry-100",
+    "id": "dx-Differential-Geometry-106",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27940,7 +28060,7 @@
     "endLine": 396
   },
   {
-    "id": "dx-Differential-Geometry-101",
+    "id": "dx-Differential-Geometry-107",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27960,7 +28080,7 @@
     "endLine": 405
   },
   {
-    "id": "dx-Differential-Geometry-102",
+    "id": "dx-Differential-Geometry-108",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -27980,7 +28100,7 @@
     "endLine": 412
   },
   {
-    "id": "dx-Differential-Geometry-103",
+    "id": "dx-Differential-Geometry-109",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28000,7 +28120,7 @@
     "endLine": 421
   },
   {
-    "id": "dx-Differential-Geometry-104",
+    "id": "dx-Differential-Geometry-110",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28020,7 +28140,7 @@
     "endLine": 426
   },
   {
-    "id": "dx-Differential-Geometry-105",
+    "id": "dx-Differential-Geometry-111",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28040,7 +28160,7 @@
     "endLine": 431
   },
   {
-    "id": "dx-Differential-Geometry-106",
+    "id": "dx-Differential-Geometry-112",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28060,7 +28180,7 @@
     "endLine": 436
   },
   {
-    "id": "dx-Differential-Geometry-107",
+    "id": "dx-Differential-Geometry-113",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28080,7 +28200,7 @@
     "endLine": 450
   },
   {
-    "id": "dx-Differential-Geometry-108",
+    "id": "dx-Differential-Geometry-114",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28100,7 +28220,7 @@
     "endLine": 459
   },
   {
-    "id": "dx-Differential-Geometry-109",
+    "id": "dx-Differential-Geometry-115",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28120,7 +28240,7 @@
     "endLine": 27
   },
   {
-    "id": "dx-Differential-Geometry-110",
+    "id": "dx-Differential-Geometry-116",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28140,7 +28260,7 @@
     "endLine": 86
   },
   {
-    "id": "dx-Differential-Geometry-111",
+    "id": "dx-Differential-Geometry-117",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28160,7 +28280,7 @@
     "endLine": 90
   },
   {
-    "id": "dx-Differential-Geometry-112",
+    "id": "dx-Differential-Geometry-118",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28180,7 +28300,7 @@
     "endLine": 101
   },
   {
-    "id": "dx-Differential-Geometry-113",
+    "id": "dx-Differential-Geometry-119",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28200,7 +28320,7 @@
     "endLine": 137
   },
   {
-    "id": "dx-Differential-Geometry-114",
+    "id": "dx-Differential-Geometry-120",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28220,7 +28340,7 @@
     "endLine": 141
   },
   {
-    "id": "dx-Differential-Geometry-115",
+    "id": "dx-Differential-Geometry-121",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28240,7 +28360,7 @@
     "endLine": 154
   },
   {
-    "id": "dx-Differential-Geometry-116",
+    "id": "dx-Differential-Geometry-122",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28260,7 +28380,7 @@
     "endLine": 202
   },
   {
-    "id": "dx-Differential-Geometry-117",
+    "id": "dx-Differential-Geometry-123",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28280,7 +28400,7 @@
     "endLine": 206
   },
   {
-    "id": "dx-Differential-Geometry-118",
+    "id": "dx-Differential-Geometry-124",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28300,7 +28420,7 @@
     "endLine": 220
   },
   {
-    "id": "dx-Differential-Geometry-119",
+    "id": "dx-Differential-Geometry-125",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28320,7 +28440,7 @@
     "endLine": 261
   },
   {
-    "id": "dx-Differential-Geometry-120",
+    "id": "dx-Differential-Geometry-126",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28340,7 +28460,7 @@
     "endLine": 268
   },
   {
-    "id": "dx-Differential-Geometry-121",
+    "id": "dx-Differential-Geometry-127",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28360,7 +28480,7 @@
     "endLine": 278
   },
   {
-    "id": "dx-Differential-Geometry-122",
+    "id": "dx-Differential-Geometry-128",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28380,7 +28500,7 @@
     "endLine": 316
   },
   {
-    "id": "dx-Differential-Geometry-123",
+    "id": "dx-Differential-Geometry-129",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28400,7 +28520,7 @@
     "endLine": 322
   },
   {
-    "id": "dx-Differential-Geometry-124",
+    "id": "dx-Differential-Geometry-130",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28420,7 +28540,7 @@
     "endLine": 336
   },
   {
-    "id": "dx-Differential-Geometry-125",
+    "id": "dx-Differential-Geometry-131",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
@@ -28440,7 +28560,7 @@
     "endLine": 371
   },
   {
-    "id": "dx-Differential-Geometry-126",
+    "id": "dx-Differential-Geometry-132",
     "repo": "dx-Differential-Geometry",
     "title": "Differential Geometry",
     "pdf": "pdf/dx-Differential-Geometry.pdf",
